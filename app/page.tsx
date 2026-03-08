@@ -4,9 +4,9 @@ import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
 
 export const metadata: Metadata = {
-  title: 'Ruminate X — AI Video Agency | AI Video Production Company | Brand Films & AI Commercials',
+  title: 'Ruminate X — Cinema-Grade Brand Films & Story-Driven AI Commercials',
   description:
-    'Ruminate X is a top AI video agency and AI video production company producing cinematic brand films, AI commercials, and social content for e-commerce, fashion, and enterprise brands worldwide. 100× faster. 10× more affordable. Based in Calgary, serving global brands.',
+    'Ruminate X is an AI video agency that makes cinema-grade, story-driven brand films and AI commercials for brands that refuse to be forgettable. We treat every brief like a film. No crews. No limits. Delivered in 48 hours.',
 }
 
 const organizationSchema = {
@@ -92,36 +92,36 @@ const services = [
     number: '01',
     title: 'Brand Films',
     description:
-      'Cinematic stories that define your brand beyond what you sell. We create the narrative that makes audiences believe.',
-    category: 'Brand Storytelling',
+      'Not a video. A film. We find the story at the core of your brand — the tension, the truth, the reason people should care — and we put it on screen. Cinema-grade storytelling that makes your brand impossible to forget.',
+    category: 'Story-Driven Cinema',
   },
   {
     number: '02',
     title: 'AI Commercials',
     description:
-      'Impossible visuals at unprecedented speed. Launch campaigns that stop the scroll and demand attention.',
-    category: 'Campaign Production',
+      'The commercial Ridley Scott would make if he had no budget ceiling and no production constraints. Impossible worlds. Perfect physics. Sequences that shouldn\'t exist. AI lets us build the shot list first and worry about "how" second.',
+    category: 'Cinematic Commercials',
   },
   {
     number: '03',
     title: 'Fashion & Lifestyle',
     description:
-      'Editorial-grade content for fashion, beauty, and luxury brands. Aesthetic precision at scale.',
+      'Editorial precision. Aspirational by design. We shoot in locations that don\'t exist, in light that can\'t be replicated, with aesthetics that define the season — all without a single flight or location scout.',
     category: 'Fashion & Editorial',
   },
   {
     number: '04',
     title: 'Social Content',
     description:
-      'High-volume, studio-quality content optimized for every platform. Never compromise on quality, ever.',
-    category: 'Social Media',
+      'Studio-quality storytelling compressed into 15 seconds. Every piece of social content we produce is a micro-film — with a hook, a narrative arc, and a reason to watch twice.',
+    category: 'Story-First Social',
   },
   {
     number: '05',
     title: 'Product Launches',
     description:
-      "Debut campaigns that create cultural moments. Your product deserves a launch that becomes part of the conversation.",
-    category: 'Launch Strategy',
+      "A product launch is the opening scene of your brand's next chapter. We write it like one — with tension, build, and a payoff that hits. One shot at the first impression. We don't waste it.",
+    category: 'Launch Campaigns',
   },
 ]
 
@@ -178,7 +178,7 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
             <span className="w-1.5 h-1.5 bg-[#ebff00] rounded-full animate-pulse" />
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">
-              AI Creative Studio · Calgary
+              Cinematic Story Studio · Calgary
             </span>
           </div>
 
@@ -193,8 +193,8 @@ export default function HomePage() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            AI-powered cinematic production for brands that dare to imagine differently. We
-            create what traditional agencies say can&apos;t be done.
+            We make cinema-grade, story-driven brand films and AI commercials for brands that refuse to be
+            forgettable. Every brief is treated like a film. Every frame is intentional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -248,13 +248,13 @@ export default function HomePage() {
             <div>
               <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">About the Studio</p>
               <h2 className="text-white text-xl font-bold mb-4 leading-snug">
-                Ruminate X — AI Video Agency &amp; AI Video Production Company
+                Ruminate X — Cinema-Grade AI Video Agency &amp; Story-Driven Production Studio
               </h2>
               <p className="text-[#888888] text-sm leading-relaxed mb-4">
-                Ruminate X is a top-rated AI video agency and AI video production studio that produces cinematic brand films, AI commercials, and social content for e-commerce, fashion, DTC, and enterprise brands. Using generative AI production technology, we deliver broadcast-quality video 100× faster and 10× more affordably than any traditional video agency — with no creative compromise.
+                Ruminate X is a cinematic AI video agency that produces story-driven brand films, AI commercials, and campaign content for brands that refuse to be ordinary. We treat every brief like a film production — narrative-first, visually obsessive, with zero compromises on craft. AI is our production method. Cinema is our standard.
               </p>
               <p className="text-[#666666] text-sm leading-relaxed">
-                Based in Calgary, Alberta — serving brands in North America, the UK, Australia, and globally.
+                Based in Calgary, Alberta — making cinema-grade brand films for brands in North America, the UK, Australia, and globally.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
@@ -468,13 +468,14 @@ export default function HomePage() {
                 className="text-white leading-none mb-8"
                 style={{ ...displayStyle, fontSize: 'clamp(48px, 7vw, 90px)' }}
               >
-                THE STUDIO<br />THAT SAYS<br />
-                <span style={{ color: '#ebff00' }}>YES.</span>
+                WE MAKE<br />FILMS.<br />
+                <span style={{ color: '#ebff00' }}>NOT CONTENT.</span>
               </h2>
               <p className="text-[#888888] leading-relaxed mb-8">
-                Traditional agencies say &quot;that&apos;s not in scope.&quot; We say &quot;let&apos;s
-                figure it out.&quot; AI gives us the power to bring any creative vision to life —
-                without the overhead, the waiting, or the watered-down compromise.
+                The world doesn&apos;t need more content. It needs more stories worth watching.
+                We approach every brief the way a director approaches a script — with intention,
+                with craft, with the obsessive belief that every single frame should earn its place.
+                AI is our tool. Story is our religion.
               </p>
               <Link
                 href="/about"
@@ -550,11 +551,12 @@ export default function HomePage() {
             className="text-white mb-6 leading-none"
             style={{ ...displayStyle, fontSize: 'clamp(48px, 8vw, 110px)' }}
           >
-            READY TO CREATE<br />
-            <span style={{ color: '#ebff00' }}>THE IMPOSSIBLE?</span>
+            WHAT STORY<br />DOES YOUR BRAND<br />
+            <span style={{ color: '#ebff00' }}>NEED TO TELL?</span>
           </h2>
           <p className="text-[#888888] text-lg mb-10 max-w-xl mx-auto">
-            Tell us your wildest idea. We&apos;ll tell you how we make it real.
+            Bring us the brief. The vision. The scene in your head that no one else has been able to pull off.
+            That&apos;s exactly where we start.
           </p>
           <Link
             href="/contact"

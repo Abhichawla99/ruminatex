@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About | AI Creative Studio Based in Calgary, Serving Brands Worldwide',
+  title: 'About | Ruminate X — Cinematic Story Studio Making Films for Brands',
   description:
-    "Ruminate X is an AI creative studio based in Calgary, Canada, producing cinematic brand content for brands worldwide. No idea is impossible — we say yes when others say it can't be done.",
+    "Ruminate X is a cinematic story studio based in Calgary. We make films for brands — story-driven brand films, AI commercials, and campaign content that treats every brief with the seriousness of a feature production.",
   keywords: [
     'AI creative studio Calgary',
     'AI video production Canada',
@@ -17,28 +17,28 @@ const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const values = [
   {
-    title: 'No Limits',
-    description: "We approach every brief by asking 'what if?' instead of 'can we?' Constraints are starting points for creativity, not stopping points.",
+    title: 'Story First',
+    description: "Before the shot list, before the format, before the platform — the story. Every project starts with the narrative truth your brand needs to tell. If the story isn't right, nothing else matters.",
   },
   {
-    title: 'Cinema First',
-    description: "We never use AI as a shortcut at the expense of quality. Every frame should feel intentional, crafted, and cinematic — regardless of how it was made.",
+    title: 'Every Frame Earned',
+    description: "We don't render filler. Every single frame in every film we produce exists because it earns its place — it advances the story, creates the feeling, or lands the moment. Cinema is not a style. It's a standard.",
   },
   {
-    title: 'Brand Truth',
-    description: "Great content doesn't just look good — it says something real about your brand. We dig deep to understand the truth your brand needs to tell.",
+    title: 'The Impossible Shot',
+    description: "The scene you thought was out of reach — the location that doesn't exist, the physics that can't be filmed, the aesthetic that costs a million dollars — that's our starting point. We build the shot list first and solve the 'how' second.",
   },
   {
-    title: 'Speed Matters',
-    description: 'The market moves fast. We move faster. AI allows us to move at the speed of culture without sacrificing craft.',
+    title: 'Craft at Speed',
+    description: "The best creative work takes time. We disagree. AI has collapsed the gap between idea and execution. We move at the speed of culture without ever moving away from craft.",
   },
   {
-    title: 'Global Perspective',
-    description: 'From Calgary, we see the whole world. Our work is informed by global creative trends, cultural moments, and the best creative work happening anywhere.',
+    title: 'No Compromise',
+    description: "Traditional agencies compromise. Budgets force cuts. Crews have limits. Schedules slip. We operate without those constraints — which means the version you imagined is the version that gets made.",
   },
   {
-    title: 'Results-Obsessed',
-    description: "Beautiful content that doesn't perform is decoration. Every piece we create is designed to achieve measurable outcomes for your brand.",
+    title: 'The Audience Decides',
+    description: "Beautiful films that don't move people are screensavers. Every story we tell is designed to create a specific feeling in a specific viewer at a specific moment. That's not art direction — that's craft.",
   },
 ]
 
@@ -71,28 +71,31 @@ export default function AboutPage() {
                 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 75px)' }}
                 className="text-white leading-none mb-8"
               >
-                WE BELIEVE NO<br />IDEA SHOULD STAY<br />
-                <span style={{ color: '#ebff00' }}>IMAGINARY.</span>
+                WE MAKE FILMS<br />FOR BRANDS.<br />
+                <span style={{ color: '#ebff00' }}>FULL STOP.</span>
               </h2>
             </div>
             <div className="space-y-6 text-[#888888] leading-relaxed">
               <p>
-                Ruminate X was born from a frustration. Too many brands had powerful, cinematic
-                visions for their content — but traditional production agencies told them it was
-                too expensive, too complex, or simply impossible. The ideas died in boardrooms.
+                There is a scene in every brand&apos;s story that has never been put on screen.
+                The one that would make people actually feel something. The one that would make
+                them stop, rewatch, and share it without being asked. That scene exists. It just
+                hasn&apos;t been made yet.
               </p>
               <p>
-                We built Ruminate X to change that. By harnessing the power of AI-driven
-                production tools alongside cinematic storytelling craft, we can now make real
-                what was once only imagined.
+                Ruminate X was built to make that scene. We are a cinematic story studio — not
+                a content factory, not an ad agency, not a video vendor. We approach every brief
+                the way a director approaches a script: with obsessive attention to narrative,
+                to emotion, to the exact frame where everything clicks.
               </p>
               <p>
-                Based in Calgary, Canada — but built for the world. We work with brands from
-                New York to Dubai, London to Los Angeles. Great creative knows no borders.
+                AI gives us the production capability to execute any shot list imaginable.
+                But capability without craft is just noise. Story is what separates a film from
+                a file. We bring both.
               </p>
               <p>
-                Our singular promise: when you come to us with an idea, no matter how ambitious,
-                our answer will always start with &quot;yes, here&apos;s how.&quot;
+                Based in Calgary. Making cinema for brands in New York, London, Dubai, Los Angeles,
+                and everywhere a great story deserves to be told.
               </p>
             </div>
           </div>
@@ -165,8 +168,8 @@ export default function AboutPage() {
             style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }}
             className="text-white leading-none mb-6"
           >
-            LET&apos;S BUILD<br />
-            <span style={{ color: '#ebff00' }}>SOMETHING REAL.</span>
+            BRING US<br />THE SCENE.<br />
+            <span style={{ color: '#ebff00' }}>WE&apos;LL MAKE IT.</span>
           </h2>
           <Link
             href="/contact"
