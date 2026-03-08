@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  other: {
+    'theme-color': '#080808',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -86,6 +89,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${inter.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <meta name="theme-color" content="#080808" />
+      </head>
       <body className="bg-[#080808] text-white antialiased" style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
         <Navigation />
         <main>{children}</main>
