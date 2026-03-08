@@ -20,7 +20,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-6 mt-6">
               <a
-                href="https://instagram.com/ruminatex"
+                href="https://instagram.com/ruminate__x"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#666666] hover:text-[#ebff00] transition-colors text-xs uppercase tracking-widest"

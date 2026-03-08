@@ -25,7 +25,7 @@ const organizationSchema = {
   },
   areaServed: 'Worldwide',
   sameAs: [
-    'https://instagram.com/ruminatex',
+    'https://instagram.com/ruminate__x',
     'https://linkedin.com/company/ruminatex',
   ],
 }
