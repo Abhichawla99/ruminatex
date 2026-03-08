@@ -170,4 +170,14 @@ export const locations: Location[] = [
     industries: ['Technology & Startups', 'E-Commerce', 'Fashion', 'Media', 'Finance', 'Consumer Tech'],
     keywords: ['AI video production agency Berlin', 'brand video Berlin Germany', 'AI creative studio Berlin', 'cinematic brand film Berlin'],
   },
+  {
+    city: 'Paris',
+    slug: 'paris',
+    country: 'France',
+    region: 'Europe',
+    description: "The world's premier luxury and fashion capital — where brand excellence and creative vision define global standards.",
+    marketContext: "Paris is the undisputed center of global fashion, luxury, and premium brand culture. LVMH, Hermès, Chanel, and hundreds of the world's most prestigious brands have their headquarters here. The city's influence on global brand aesthetics, storytelling, and creativity is unmatched. Paris brands demand — and set — the highest creative standards on earth.",
+    industries: ['Luxury', 'Fashion', 'Beauty', 'Hospitality', 'Technology', 'Gastronomy'],
+    keywords: ['AI video production Paris', 'brand video agency Paris', 'AI creative studio France', 'luxury brand film Paris', 'cinematic production Paris'],
+  },
 ]
