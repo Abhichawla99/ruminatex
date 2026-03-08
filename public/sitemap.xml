@@ -251,6 +251,72 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Comparison Pages -->
+  <url>
+    <loc>https://ruminatex.com/comparison/ai-agency-vs-traditional-agency</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/comparison/freelance-vs-ai-video</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Segment Pages -->
+  <url>
+    <loc>https://ruminatex.com/ai-video-production-small-business</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/ai-video-production-agencies</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/ai-video-production-youtube-creators</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/ai-video-production-nonprofits</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/guides/why-traditional-video-agencies-are-expensive</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Country / Market Pages -->
+  <url>
+    <loc>https://ruminatex.com/markets/ai-video-production-canada</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/markets/ai-video-production-uk</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ruminatex.com/markets/ai-video-production-australia</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://ruminatex.com/blog</loc>
