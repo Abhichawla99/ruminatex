@@ -267,7 +267,7 @@ export default function Page() {
                 <tr className="bg-green-100 font-bold">
                   <td className="border border-slate-300 p-4">AI voiceovers (all 140+ languages)</td>
                   <td className="border border-slate-300 p-4">$5–$50</td>
-                  <td className="border border-slate-300 p-4">< 1 hour</td>
+                  <td className="border border-slate-300 p-4">&lt; 1 hour</td>
                   <td className="border border-slate-300 p-4">140+</td>
                 </tr>
               </tbody>
