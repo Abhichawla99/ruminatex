@@ -39,11 +39,18 @@ export default function ContactPage() {
             <div>
               <h3 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">Direct Contact</h3>
               <a
-                href="mailto:hello@ruminatex.com"
+                href="mailto:abhi@paperkites.co"
                 style={{ ...displayStyle, fontSize: '28px' }}
                 className="text-white hover:text-[#ebff00] transition-colors block"
               >
-                hello@ruminatex.com
+                abhi@paperkites.co
+              </a>
+              <a
+                href="tel:+15878049266"
+                style={{ ...displayStyle, fontSize: '22px' }}
+                className="text-[#888888] hover:text-[#ebff00] transition-colors block mt-2"
+              >
+                +1 (587) 804-9266
               </a>
             </div>
 

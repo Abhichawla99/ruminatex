@@ -16,7 +16,8 @@ const organizationSchema = {
   url: 'https://ruminatex.com',
   description:
     'AI-powered creative studio producing cinematic brand films, commercials, and creative content for brands worldwide.',
-  email: 'hello@ruminatex.com',
+  email: 'abhi@paperkites.co',
+  telephone: '+15878049266',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Calgary',

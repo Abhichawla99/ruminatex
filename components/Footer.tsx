@@ -65,10 +65,16 @@ export default function Footer() {
             <h3 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-6">Contact</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hello@ruminatex.com"
+                href="mailto:abhi@paperkites.co"
                 className="text-sm text-[#888888] hover:text-white transition-colors"
               >
-                hello@ruminatex.com
+                abhi@paperkites.co
+              </a>
+              <a
+                href="tel:+15878049266"
+                className="text-sm text-[#888888] hover:text-white transition-colors"
+              >
+                +1 (587) 804-9266
               </a>
               <p className="text-sm text-[#888888]">Calgary, Alberta, Canada</p>
               <p className="text-sm text-[#888888]">Serving clients worldwide</p>

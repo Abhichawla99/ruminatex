@@ -29,7 +29,7 @@ export default function ContactForm() {
       .join('\n')
 
     window.open(
-      `mailto:hello@ruminatex.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      `mailto:abhi@paperkites.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     )
     setSubmitted(true)
   }
