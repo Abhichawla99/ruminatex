@@ -235,7 +235,7 @@ export default function Page() {
                 <li>• Monthly cost for 10 product demos: $5K–$8K</li>
                 <li>• Additional monthly revenue from demo video: $650K</li>
                 <li className="text-green-600 font-bold pt-2">• ROI: 8,000%+</li>
-                <li className="text-green-600 font-bold">• Payback period: < 1 day</li>
+                <li className="text-green-600 font-bold">• Payback period: &lt; 1 day</li>
               </ul>
             </div>
           </div>

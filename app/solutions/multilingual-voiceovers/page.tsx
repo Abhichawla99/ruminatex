@@ -74,7 +74,7 @@ export default function Page() {
                 <ul className="space-y-2 text-slate-700">
                   <li>• 1 language: $0.50–$5</li>
                   <li>• 140+ languages: Same cost</li>
-                  <li>• Timeline: < 1 hour</li>
+                  <li>• Timeline: &lt; 1 hour</li>
                   <li>• Support every major language</li>
                   <li>• Instant delivery</li>
                 </ul>
