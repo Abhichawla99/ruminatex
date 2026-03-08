@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Ruminate X' }],
   creator: 'Ruminate X',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
