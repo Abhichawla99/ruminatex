@@ -184,11 +184,11 @@ export default async function CityPage({ params }: Props) {
             style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }}
             className="text-white leading-none mb-6"
           >
-            {location.city.toUpperCase()} BRANDS —<br />
-            <span style={{ color: '#ebff00' }}>LET&apos;S BUILD.</span>
+            {location.city.toUpperCase()} —<br />
+            <span style={{ color: '#ebff00' }}>BRING US THE SCENE.</span>
           </h2>
           <p className="text-[#888888] mb-8">
-            Tell us your vision. We&apos;ll make it real, no matter where you are.
+            Tell us the story your brand has been trying to tell. We make films for brands in {location.city} — and everywhere a great story deserves to be told.
           </p>
           <Link
             href="/contact"

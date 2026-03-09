@@ -28,10 +28,10 @@ export default function HealthcarePage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Healthcare & Life Sciences</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>HEALTHCARE<br />BRANDS</span>
+            THE SCIENCE<br />MADE<br /><span style={{ color: '#ebff00' }}>CINEMATIC.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Complex science deserves compelling storytelling. We create cinematic brand content for healthcare organizations, pharma companies, and health tech brands that need to communicate — and be believed.
+            Complex science. Compelling storytelling. The story inside the molecule, the patient journey that words alone can&apos;t tell, the technology that works better when you can see it — we make the invisible visible, and we make it feel real.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

@@ -1,320 +1,295 @@
-import { Metadata } from "next";
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Professional Voiceovers in 140+ Languages in Under 1 Hour",
-  description: "Get AI-generated professional voiceovers in 140+ languages and accents. Create multilingual video content in under 1 hour.",
+  title: 'Professional Voiceovers in 140+ Languages in Under 1 Hour | Ruminate X',
+  description: 'Get AI-generated professional voiceovers in 140+ languages and accents. Create multilingual video content in under 1 hour.',
   openGraph: {
-    title: "Multilingual AI Voiceovers | Ruminate X",
-    description: "Professional voiceovers in 140+ languages generated in minutes.",
+    title: 'Multilingual AI Voiceovers | Ruminate X',
+    description: 'Professional voiceovers in 140+ languages generated in minutes.',
   },
-};
+}
+
+const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="text-5xl font-bold mb-6 text-slate-900">
-          Professional Voiceovers in 140+ Languages in Under 1 Hour
+    <>
+      {/* Hero */}
+      <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Solutions / Multilingual</p>
+        <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 10vw, 130px)' }} className="text-white leading-none mb-6">
+          140+ LANGUAGES.<br />ONE HOUR.<br /><span style={{ color: '#ebff00' }}>ZERO VOICE ACTORS.</span>
         </h1>
-        <p className="text-xl text-slate-600 mb-12">
-          Eliminate expensive voice actors. Get natural-sounding professional voiceovers in 140+ languages and regional accents—instantly. Perfect for global companies localizing content without breaking budget.
+        <p className="text-[#888888] text-lg max-w-2xl">
+          Eliminate expensive voice actors. Get natural-sounding professional voiceovers in 140+ languages and regional accents instantly. Global content without the global budget.
         </p>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">The Voiceover Problem for Global Companies</h2>
-          <p className="text-lg text-slate-700 mb-6">
-            Creating multilingual content traditionally required hiring voice actors in every language:
-          </p>
-          <ul className="space-y-4 text-lg text-slate-700">
-            <li className="flex items-start">
-              <span className="text-red-500 font-bold mr-4">✗</span>
-              <span><strong>$500–$2,000 per language</strong> for professional voice actors</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-red-500 font-bold mr-4">✗</span>
-              <span>Recording studio time: $100–$500/hour</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-red-500 font-bold mr-4">✗</span>
-              <span>Scheduling coordination across time zones</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-red-500 font-bold mr-4">✗</span>
-              <span>Weeks to localize content to multiple languages</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-red-500 font-bold mr-4">✗</span>
-              <span>Can't support all languages you want to reach (cost prohibitive)</span>
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">AI Voiceover Solution: Instant Multilingual Content</h2>
-
-          <p className="text-lg text-slate-700 mb-8">
-            AI voiceovers deliver professional, natural-sounding voiceovers in seconds:
-          </p>
-
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-bold mb-6 text-slate-900">Traditional Voiceover Production vs. AI</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-bold mb-4 text-red-600">Voice Actor Approach</h4>
-                <ul className="space-y-2 text-slate-700">
-                  <li>• 1 language: $500–$2,000</li>
-                  <li>• 10 languages: $5,000–$20,000</li>
-                  <li>• Timeline: 2–4 weeks</li>
-                  <li>• Limited language options</li>
-                  <li>• Studio time & logistics</li>
-                </ul>
+      {/* The Problem */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Traditional Way</p>
+              <h2 style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 56px)' }} className="text-white leading-none mb-8">
+                GLOBAL CONTENT USED TO BE EXPENSIVE
+              </h2>
+              <div className="space-y-4">
+                {[
+                  ['$500–$2,000 per language', 'for professional voice actors'],
+                  ['$100–$500/hour', 'in recording studio time'],
+                  ['Weeks of coordination', 'across time zones and schedules'],
+                  ['Limited language support', 'cost-prohibitive beyond 3–5 languages'],
+                  ['No ability to scale', 'each new language is a new project from scratch'],
+                ].map(([bold, rest]) => (
+                  <div key={bold} className="flex gap-4 border-b border-[#1a1a1a] pb-4">
+                    <span className="text-[#333333] font-bold text-sm mt-1">—</span>
+                    <p className="text-[#888888]"><span className="text-white font-bold">{bold}</span> {rest}</p>
+                  </div>
+                ))}
               </div>
-              <div>
-                <h4 className="font-bold mb-4 text-green-600">AI Voiceover</h4>
-                <ul className="space-y-2 text-slate-700">
-                  <li>• 1 language: $0.50–$5</li>
-                  <li>• 140+ languages: Same cost</li>
-                  <li>• Timeline: &lt; 1 hour</li>
-                  <li>• Support every major language</li>
-                  <li>• Instant delivery</li>
-                </ul>
+            </div>
+            <div>
+              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The AI Way</p>
+              <h2 style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 56px)' }} className="text-white leading-none mb-8">
+                NOW IT TAKES UNDER AN HOUR
+              </h2>
+              <div className="border border-[#1a1a1a] p-8">
+                <div className="grid grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <p className="text-[#666666] text-xs uppercase tracking-[0.2em] mb-2">Voice Actor Approach</p>
+                    <div className="space-y-2 text-[#888888] text-sm">
+                      <p>1 language: $500–$2,000</p>
+                      <p>10 languages: $5,000–$20,000</p>
+                      <p>Timeline: 2–4 weeks</p>
+                      <p>Limited options</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-[#666666] text-xs uppercase tracking-[0.2em] mb-2">AI Voiceover</p>
+                    <div className="space-y-2 text-[#888888] text-sm">
+                      <p>1 language: <span className="text-[#ebff00]">$0.50–$5</span></p>
+                      <p>140+ languages: <span className="text-[#ebff00]">Same cost</span></p>
+                      <p>Timeline: <span className="text-[#ebff00]">&lt; 1 hour</span></p>
+                      <p><span className="text-[#ebff00]">Every major language</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div className="border-t border-[#1a1a1a] pt-6">
+                  <p style={{ ...displayStyle, fontSize: '32px' }} className="text-[#ebff00] leading-none">99% SAVINGS.</p>
+                  <p style={{ ...displayStyle, fontSize: '32px' }} className="text-white leading-none">95% FASTER.</p>
+                  <p style={{ ...displayStyle, fontSize: '32px' }} className="text-white leading-none">UNLIMITED REACH.</p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <p className="text-lg text-slate-700 bg-green-50 p-6 rounded-lg">
-            <strong>Cost reduction:</strong> 99% savings. <strong>Speed improvement:</strong> 95% faster. <strong>Language support:</strong> Unlimited.
-          </p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">140+ Languages & Regional Accents</h2>
-
-          <p className="text-lg text-slate-700 mb-8">
-            AI voice technology supports the world's major languages and regional variations:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-bold mb-4 text-slate-900">Top Languages (with accents)</h4>
-              <ul className="space-y-1 text-slate-700 text-sm">
-                <li>• <strong>English:</strong> US, UK, Australian, Indian</li>
-                <li>• <strong>Spanish:</strong> Spain, Mexico, Argentina</li>
-                <li>• <strong>Chinese:</strong> Mandarin, Cantonese</li>
-                <li>• <strong>French:</strong> France, Canadian, African</li>
-                <li>• <strong>German:</strong> Germany, Austria, Swiss</li>
-                <li>• <strong>Arabic:</strong> Modern Standard, Egyptian, Gulf</li>
-                <li>• <strong>Portuguese:</strong> Brazil, Portugal</li>
-                <li>• <strong>Japanese, Korean, Russian, Italian, Dutch</strong></li>
-              </ul>
+      {/* Language Support */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Coverage</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 70px)' }} className="text-white leading-none mb-16">
+            140+ LANGUAGES & REGIONAL ACCENTS
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1a1a1a]">
+            <div className="bg-[#080808] p-8">
+              <h3 className="text-[#888888] text-xs uppercase tracking-[0.2em] mb-6">Top Languages (with accents)</h3>
+              <div className="space-y-3 text-sm">
+                {[
+                  ['English', 'US, UK, Australian, Indian'],
+                  ['Spanish', 'Spain, Mexico, Argentina'],
+                  ['Chinese', 'Mandarin, Cantonese'],
+                  ['French', 'France, Canadian, African'],
+                  ['German', 'Germany, Austria, Swiss'],
+                  ['Arabic', 'Modern Standard, Egyptian, Gulf'],
+                  ['Portuguese', 'Brazil, Portugal'],
+                  ['Japanese, Korean, Russian, Italian, Dutch', ''],
+                ].map(([lang, accents]) => (
+                  <div key={lang} className="flex justify-between">
+                    <span className="text-white">{lang}</span>
+                    {accents && <span className="text-[#666666]">{accents}</span>}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div>
-              <h4 className="font-bold mb-4 text-slate-900">Additional Supported Languages</h4>
-              <ul className="space-y-1 text-slate-700 text-sm">
-                <li>• Polish, Turkish, Swedish, Norwegian, Danish, Finnish</li>
-                <li>• Thai, Vietnamese, Indonesian, Filipino, Malay</li>
-                <li>• Hindi, Tamil, Telugu, Marathi, Bengali, Urdu</li>
-                <li>• Greek, Romanian, Czech, Hungarian, Croatian</li>
-                <li>• Hebrew, Farsi, Pashto, Urdu, Afrikaans, Icelandic</li>
-                <li>• And 90+ more languages</li>
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-lg text-slate-700 bg-blue-50 p-6 rounded-lg mt-8">
-            <strong>Total:</strong> 140+ languages with natural-sounding native speakers and regional accents. Whatever your global audience speaks, we can localize for them.
-          </p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">3-Step Process: Text to Voiceover in Minutes</h2>
-
-          <div className="space-y-8">
-            <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Step 1: Write Your Script (5 Minutes)</h3>
-              <p className="text-slate-700">
-                Write your script in English or any language. AI will preserve meaning and tone when translating.
-              </p>
-              <p className="text-slate-600 mt-2">Tip: Keep sentences shorter for better pronunciation.</p>
-            </div>
-
-            <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Step 2: Select Languages & Voices (5 Minutes)</h3>
-              <p className="text-slate-700 mb-4">
-                Choose from multiple voice options per language (male, female, age variations):
-              </p>
-              <ul className="space-y-2 text-slate-700">
-                <li>• English (US Female, Male, British Male)</li>
-                <li>• Spanish (Mexico Female, Spain Male)</li>
-                <li>• French (Canada Female, France Male)</li>
-                <li>• Generate for all 140+ languages at once</li>
-              </ul>
-              <p className="text-slate-600 mt-2">Pro tip: Use the same voice actor across languages for brand consistency.</p>
-            </div>
-
-            <div className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500">
-              <h3 className="text-2xl font-bold mb-4 text-slate-900">Step 3: Generate & Download (30 Seconds)</h3>
-              <p className="text-slate-700 mb-4">
-                AI generates professional voiceovers instantly:
-              </p>
-              <ul className="space-y-2 text-slate-700">
-                <li>• Natural-sounding pronunciation</li>
-                <li>• Proper intonation and pacing</li>
-                <li>• Professional audio quality (studio-grade)</li>
-                <li>• Download as MP3, WAV, or ready for video sync</li>
-              </ul>
-              <p className="text-slate-600 mt-2">Result: 140+ language voiceovers ready to use, all created in minutes.</p>
+            <div className="bg-[#080808] p-8">
+              <h3 className="text-[#888888] text-xs uppercase tracking-[0.2em] mb-6">Additional Languages</h3>
+              <div className="space-y-2 text-[#666666] text-sm">
+                <p>Polish, Turkish, Swedish, Norwegian, Danish, Finnish</p>
+                <p>Thai, Vietnamese, Indonesian, Filipino, Malay</p>
+                <p>Hindi, Tamil, Telugu, Marathi, Bengali, Urdu</p>
+                <p>Greek, Romanian, Czech, Hungarian, Croatian</p>
+                <p>Hebrew, Farsi, Pashto, Afrikaans, Icelandic</p>
+                <p className="text-[#888888] mt-4 font-bold">And 90+ more languages.</p>
+              </div>
+              <div className="mt-8 border-t border-[#1a1a1a] pt-6">
+                <p className="text-[#888888] text-sm">Whatever your global audience speaks, we can localize for them. Same cost, same timeline, same quality.</p>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Real-World Use Cases</h2>
-
-          <div className="space-y-6">
-            <div className="bg-slate-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 text-slate-900">Global SaaS Company</h4>
-              <p className="text-slate-700">
-                <strong>Goal:</strong> Launch product in 15 markets simultaneously | <strong>Solution:</strong> Create video once, generate voiceovers in 15 languages in 30 minutes | <strong>Result:</strong> Same production day launch across all markets
-              </p>
-            </div>
-
-            <div className="bg-slate-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 text-slate-900">Ecommerce Business</h4>
-              <p className="text-slate-700">
-                <strong>Goal:</strong> Create product videos for US, EU, and Asia markets | <strong>Solution:</strong> Single video with voiceovers in English, Spanish, French, German, Japanese, Chinese | <strong>Result:</strong> Reach 3 billion people with one video asset
-              </p>
-            </div>
-
-            <div className="bg-slate-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 text-slate-900">Educational Platform</h4>
-              <p className="text-slate-700">
-                <strong>Goal:</strong> Create course content in 50 languages | <strong>Solution:</strong> Record course once, generate 50 voiceovers automatically | <strong>Result:</strong> Eliminate translation bottleneck, launch globally in weeks
-              </p>
-            </div>
-
-            <div className="bg-slate-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold mb-2 text-slate-900">Corporate Training</h4>
-              <p className="text-slate-700">
-                <strong>Goal:</strong> Localize training for 30+ country operations | <strong>Solution:</strong> Create voiceovers in all regional languages automatically | <strong>Result:</strong> Every employee gets training in their native language
-              </p>
-            </div>
+      {/* 3-Step Process */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Process</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 70px)' }} className="text-white leading-none mb-16">
+            TEXT TO VOICEOVER IN MINUTES
+          </h2>
+          <div className="space-y-0">
+            {[
+              {
+                step: '01',
+                title: 'Write Your Script',
+                time: '5 minutes',
+                body: 'Write your script in English or any language. AI preserves meaning and tone when translating. Keep sentences shorter for better pronunciation.',
+              },
+              {
+                step: '02',
+                title: 'Select Languages & Voices',
+                time: '5 minutes',
+                body: 'Choose from multiple voice options per language — male, female, age variations. English (US Female, British Male), Spanish (Mexico, Spain), French (Canada, France). Generate for all 140+ languages at once.',
+              },
+              {
+                step: '03',
+                title: 'Generate & Download',
+                time: '30 seconds',
+                body: 'AI generates professional voiceovers instantly with natural-sounding pronunciation, proper intonation, and studio-grade audio quality. Download as MP3, WAV, or sync directly to video.',
+              },
+            ].map(({ step, title, time, body }) => (
+              <div key={step} className="border-t border-[#1a1a1a] py-10 grid grid-cols-1 md:grid-cols-[100px_1fr_200px] gap-8 items-start">
+                <span style={{ ...displayStyle, fontSize: '72px' }} className="text-[#333333] leading-none">{step}</span>
+                <div>
+                  <h3 className="text-white text-2xl font-bold mb-3">{title}</h3>
+                  <p className="text-[#888888]">{body}</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-1">Time</p>
+                  <p className="text-white font-bold">{time}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Voice Quality: AI vs. Human Voice Actors</h2>
-
-          <p className="text-lg text-slate-700 mb-8">
-            Modern AI voices are nearly indistinguishable from human voice actors:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-slate-900">AI Voice Advantages</h3>
-              <ul className="space-y-2 text-slate-700">
-                <li>✓ Natural-sounding pronunciation</li>
-                <li>✓ Perfect intonation and pacing</li>
-                <li>✓ No background noise or studio artifacts</li>
-                <li>✓ Consistent across all recordings</li>
-                <li>✓ Instant delivery (no scheduling delays)</li>
-                <li>✓ Infinitely tweakable (pitch, speed, tone)</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-slate-900">Better Than Human Actors</h3>
-              <ul className="space-y-2 text-slate-700">
-                <li>✓ No artistic ego or take disagreements</li>
-                <li>✓ Perfect consistency across 1–1000 videos</li>
-                <li>✓ No licensing or royalty issues</li>
-                <li>✓ Works 24/7 (no availability conflicts)</li>
-                <li>✓ Professional quality, $0 overhead</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Cost Comparison: Global Localization</h2>
-
-          <p className="text-lg text-slate-700 mb-8">
-            Traditional voiceover production vs. AI voiceovers for a 3-minute corporate video:
-          </p>
-
-          <div className="overflow-x-auto mb-8">
-            <table className="w-full border-collapse border border-slate-300">
-              <thead className="bg-slate-100">
-                <tr>
-                  <th className="border border-slate-300 p-4 text-left font-bold">Approach</th>
-                  <th className="border border-slate-300 p-4 text-left font-bold">Cost</th>
-                  <th className="border border-slate-300 p-4 text-left font-bold">Timeline</th>
-                  <th className="border border-slate-300 p-4 text-left font-bold">Languages</th>
+      {/* Cost Comparison Table */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Numbers</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 70px)' }} className="text-white leading-none mb-4">
+            GLOBAL LOCALIZATION COST COMPARISON
+          </h2>
+          <p className="text-[#888888] mb-12">3-minute corporate video. Traditional vs. AI.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-[#1a1a1a]">
+                  <th className="text-left text-[#666666] text-xs uppercase tracking-[0.2em] py-4 pr-8">Approach</th>
+                  <th className="text-left text-[#666666] text-xs uppercase tracking-[0.2em] py-4 pr-8">Cost</th>
+                  <th className="text-left text-[#666666] text-xs uppercase tracking-[0.2em] py-4 pr-8">Timeline</th>
+                  <th className="text-left text-[#666666] text-xs uppercase tracking-[0.2em] py-4">Languages</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="hover:bg-slate-50">
-                  <td className="border border-slate-300 p-4">1 English voice actor</td>
-                  <td className="border border-slate-300 p-4">$500–$1,500</td>
-                  <td className="border border-slate-300 p-4">3–5 days</td>
-                  <td className="border border-slate-300 p-4">1</td>
+                <tr className="border-b border-[#1a1a1a]">
+                  <td className="py-5 pr-8 text-[#888888]">1 English voice actor</td>
+                  <td className="py-5 pr-8 text-[#888888]">$500–$1,500</td>
+                  <td className="py-5 pr-8 text-[#888888]">3–5 days</td>
+                  <td className="py-5 text-[#888888]">1</td>
                 </tr>
-                <tr className="hover:bg-slate-50">
-                  <td className="border border-slate-300 p-4">10 language voice actors</td>
-                  <td className="border border-slate-300 p-4">$5,000–$15,000</td>
-                  <td className="border border-slate-300 p-4">2–4 weeks</td>
-                  <td className="border border-slate-300 p-4">10</td>
+                <tr className="border-b border-[#1a1a1a]">
+                  <td className="py-5 pr-8 text-[#888888]">10 language voice actors</td>
+                  <td className="py-5 pr-8 text-[#888888]">$5,000–$15,000</td>
+                  <td className="py-5 pr-8 text-[#888888]">2–4 weeks</td>
+                  <td className="py-5 text-[#888888]">10</td>
                 </tr>
-                <tr className="bg-green-100 font-bold">
-                  <td className="border border-slate-300 p-4">AI voiceovers (all 140+ languages)</td>
-                  <td className="border border-slate-300 p-4">$5–$50</td>
-                  <td className="border border-slate-300 p-4">&lt; 1 hour</td>
-                  <td className="border border-slate-300 p-4">140+</td>
+                <tr className="border-b border-[#1a1a1a]">
+                  <td className="py-5 pr-8 text-white font-bold">AI voiceovers (all 140+ languages)</td>
+                  <td className="py-5 pr-8 text-[#ebff00] font-bold">$5–$50</td>
+                  <td className="py-5 pr-8 text-[#ebff00] font-bold">&lt; 1 hour</td>
+                  <td className="py-5 text-[#ebff00] font-bold">140+</td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
 
-          <p className="text-lg text-slate-700 bg-green-50 p-6 rounded-lg">
-            <strong>Savings:</strong> 99% cost reduction. <strong>Speed:</strong> 140x faster. <strong>Reach:</strong> From 1 language to 140+ languages at the same cost.
-          </p>
-        </section>
-
-        <section className="mb-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-12 rounded-lg">
-          <h2 className="text-3xl font-bold mb-6">Ready to Go Global with AI Voiceovers?</h2>
-          <p className="text-lg mb-8">
-            Create professional voiceovers in 140+ languages instantly. No voice actors. No studios. No delays.
-          </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition">
-            Create Your First Multilingual Video
-          </button>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">FAQ: AI Voiceovers</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Do AI voiceovers sound robotic?</h3>
-              <p className="text-slate-700">No. Modern AI voices sound natural and human-like. Most people can't tell the difference.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Can I customize voice characteristics?</h3>
-              <p className="text-slate-700">Yes. Adjust pitch, speed, emphasis, and tone. Choose male/female voices, different accents, and age variations.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">What if my language isn't listed?</h3>
-              <p className="text-slate-700">We support 140+ languages. If your language isn't listed, we can add it. Contact us with your language needs.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">Can I use AI voiceovers for commercial projects?</h3>
-              <p className="text-slate-700">Absolutely. Full commercial rights included. Use in ads, products, presentations—anywhere you need.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-2 text-slate-900">How is audio quality?</h3>
-              <p className="text-slate-700">Studio-grade audio quality. 48kHz sample rate, 24-bit depth. Professional broadcast standard.</p>
-            </div>
+      {/* Use Cases */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Real-World Use Cases</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 70px)' }} className="text-white leading-none mb-16">
+            WHO USES THIS
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1a1a1a]">
+            {[
+              {
+                label: 'Global SaaS Company',
+                detail: 'Launch in 15 markets simultaneously. Create video once, generate 15 voiceovers in 30 minutes. Same production day across all markets.',
+              },
+              {
+                label: 'Ecommerce Business',
+                detail: 'Single video with voiceovers in English, Spanish, French, German, Japanese, Chinese. Reach 3 billion people with one asset.',
+              },
+              {
+                label: 'Educational Platform',
+                detail: 'Record course once. Generate 50 voiceovers automatically. Eliminate the translation bottleneck and launch globally in weeks.',
+              },
+              {
+                label: 'Corporate Training',
+                detail: 'Localize training for 30+ country operations. Every employee gets training in their native language.',
+              },
+            ].map(({ label, detail }) => (
+              <div key={label} className="bg-[#080808] p-8">
+                <h3 className="text-white font-bold mb-3">{label}</h3>
+                <p className="text-[#666666] text-sm">{detail}</p>
+              </div>
+            ))}
           </div>
-        </section>
-      </div>
-    </main>
-  );
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">FAQ</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 70px)' }} className="text-white leading-none mb-16">
+            AI VOICEOVERS
+          </h2>
+          <div className="space-y-0">
+            {[
+              { q: 'Do AI voiceovers sound robotic?', a: 'No. Modern AI voices sound natural and human-like. Most people cannot tell the difference.' },
+              { q: 'Can I customize voice characteristics?', a: 'Yes. Adjust pitch, speed, emphasis, and tone. Choose male/female voices, different accents, and age variations.' },
+              { q: 'Can I use AI voiceovers for commercial projects?', a: 'Absolutely. Full commercial rights included. Use in ads, products, presentations — anywhere you need.' },
+              { q: 'What is the audio quality?', a: 'Studio-grade audio quality. 48kHz sample rate, 24-bit depth. Professional broadcast standard.' },
+            ].map(({ q, a }) => (
+              <div key={q} className="border-t border-[#1a1a1a] py-8">
+                <h3 className="text-white font-bold mb-3">{q}</h3>
+                <p className="text-[#888888]">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-[#1a1a1a] py-24 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-6">
+            GO GLOBAL.<br /><span style={{ color: '#ebff00' }}>GO TODAY.</span>
+          </h2>
+          <p className="text-[#888888] mb-10">Professional voiceovers in 140+ languages. No voice actors. No studios. No delays.</p>
+          <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">
+            Create Your First Multilingual Video
+          </Link>
+        </div>
+      </section>
+    </>
+  )
 }

@@ -28,10 +28,10 @@ export default function RealEstatePage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Real Estate & Property</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>REAL ESTATE<br />BRANDS</span>
+            THE LOCATION<br />THAT DOESN&apos;T<br /><span style={{ color: '#ebff00' }}>EXIST YET.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Sell the vision before the concrete is poured. Cinematic AI-generated property films that move buyers, attract investors, and elevate any development above the competition.
+            Sell the vision before the concrete is poured. The scene that shows buyers exactly what they&apos;re walking into — before a single wall goes up. AI builds the world your development will become, and we film it with the drama it deserves.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

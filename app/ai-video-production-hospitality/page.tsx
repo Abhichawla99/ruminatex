@@ -28,10 +28,10 @@ export default function HospitalityPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Hospitality & Travel</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>HOSPITALITY<br />BRANDS</span>
+            THE DESTINATION<br />BEFORE YOU<br /><span style={{ color: '#ebff00' }}>ARRIVE.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Every destination tells a story. We create cinematic AI-powered brand content for hotels, resorts, and travel brands that brings any place — and any vision — to life.
+            The best hotel film you&apos;ve ever seen made you book the trip before you finished watching. That specific feeling — of a place, of an experience, of what your life could feel like for those days — is what we create. Every destination. Any vision. No crew required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

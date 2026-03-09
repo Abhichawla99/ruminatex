@@ -38,12 +38,11 @@ export default function FashionPage() {
             style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }}
             className="text-white leading-none mb-8 max-w-5xl"
           >
-            AI VIDEO FOR<br />
-            <span style={{ color: '#ebff00' }}>FASHION &<br />LUXURY BRANDS</span>
+            THE SHOOT<br />THAT DOESN&apos;T<br />
+            <span style={{ color: '#ebff00' }}>NEED A LOCATION.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Editorial-grade cinematic content for brands that demand aesthetic excellence. Any
-            environment. Any aesthetic. Any vision — executed with precision.
+            The best fashion film you&apos;ve ever seen probably cost a small fortune in locations, travel, and light you could never recreate. We reproduce that feeling — that specific quality of editorial desire — without a single flight. AI gives us every location, every light, every aesthetic in existence. We bring the eye.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -143,11 +142,11 @@ export default function FashionPage() {
       <section className="border-t border-[#1a1a1a] py-24 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-6">
-            YOUR AESTHETIC.<br />
-            <span style={{ color: '#ebff00' }}>ELEVATED.</span>
+            TELL US THE<br />FRAME YOU SEE.<br />
+            <span style={{ color: '#ebff00' }}>WE&apos;LL BUILD IT.</span>
           </h2>
           <p className="text-[#888888] mb-8">
-            Tell us about your brand and what you want to create. We&apos;ll show you what&apos;s possible.
+            The obsession with texture, movement, and the single frame that makes someone stop scrolling — that&apos;s not AI. That&apos;s craft. We bring both.
           </p>
           <Link
             href="/contact"

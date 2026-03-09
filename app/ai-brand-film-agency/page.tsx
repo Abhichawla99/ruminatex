@@ -2,18 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Brand Film Agency | Cinematic Brand Films | Ruminate X',
-  description: "Ruminate X is a leading AI brand film agency. We create cinematic brand stories for ambitious brands — at 70% lower cost and 10× faster than traditional production.",
+  title: 'Brand Film Production | Cinematic Story Studio | Ruminate X',
+  description: "There is a scene in every brand's story that has never been put on screen. Ruminate X finds it and makes it. Cinematic brand films, story-driven production, no compromises.",
   keywords: ['AI brand film agency', 'AI brand film production', 'cinematic AI brand video', 'brand film company AI', 'AI-generated brand films', 'AI brand storytelling agency'],
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const process = [
-  { step: '01', title: 'Discovery & Brief', desc: 'We start with your brand, your story, and the emotional truth you want to communicate. Deep strategic alignment before a single frame is conceived.' },
-  { step: '02', title: 'Creative Development', desc: 'Concept, script, storyboard, and visual direction. You see and approve the creative vision before production begins.' },
-  { step: '03', title: 'AI Production', desc: 'Our production team brings the concept to life using the most advanced AI tools available. Cinematic quality — built frame by frame.' },
-  { step: '04', title: 'Post & Delivery', desc: 'Color, sound design, music, and final polish. Delivered in every format you need for every channel.' },
+  { step: '01', title: 'The Brief', desc: 'Tell us the story your brand has never been able to put on screen. The feeling you want to create. The scene in your head that no production company has pulled off. That\'s where we start.' },
+  { step: '02', title: 'The Script', desc: 'Every great film starts with a great script. We write the narrative arc, the visual language, the emotional throughline — before a single frame is conceived. Story first. Always.' },
+  { step: '03', title: 'The Shoot', desc: 'AI becomes our director of photography, our location scout, our VFX team. We execute the shot list with cinema-grade precision — no constraints, no compromises, no impossible shots.' },
+  { step: '04', title: 'The Cut', desc: 'We edit like a film editor — for rhythm, for emotion, for the exact moment the music and the image and the idea collide. What you receive is a finished film, not a draft.' },
 ]
 
 const formats = [
@@ -37,10 +37,10 @@ export default function BrandFilmAgencyPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">AI Brand Film Agency</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            THE AI<br />BRAND FILM<br /><span style={{ color: '#ebff00' }}>AGENCY.</span>
+            YOUR BRAND<br />HAS ONE TRUE<br /><span style={{ color: '#ebff00' }}>STORY.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            Your brand has a story worth telling at cinematic scale. We are the agency that makes it happen — using AI to achieve visual quality that traditional production charges ten times more for, in a fraction of the time.
+            There is a scene in every brand&apos;s story that has never been put on screen. The one that would make people actually feel something. The one that would make them stop, rewatch, and share without being asked. We make that scene.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start Your Brand Film</Link>
@@ -99,9 +99,9 @@ export default function BrandFilmAgencyPage() {
       <section className="border-t border-[#1a1a1a] py-24 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            YOUR BRAND FILM<br /><span style={{ color: '#ebff00' }}>STARTS HERE.</span>
+            BRING US<br />THE SCENE.<br /><span style={{ color: '#ebff00' }}>WE&apos;LL MAKE IT.</span>
           </h2>
-          <p className="text-[#888888] mb-8">Tell us your story. We&apos;ll tell you how we make it cinematic.</p>
+          <p className="text-[#888888] mb-8">Tell us the story your brand has been trying to tell. We start with the narrative — and we don&apos;t stop until the film is right.</p>
           <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
         </div>
       </section>

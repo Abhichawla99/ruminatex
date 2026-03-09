@@ -146,7 +146,7 @@ export default function ServicesPage() {
             THE PROCESS
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            [
+            {[
               { step: '01', title: 'The Brief', description: "Tell us the story you want to tell. The feeling you want to create. The scene in your head that no one else has been able to pull off. That's where we start — not with formats or deliverables, but with the idea." },
               { step: '02', title: 'The Script', description: 'Every great film starts with a great script. We write the narrative arc, the visual language, the emotional throughline — before a single frame is rendered. Story first. Always.' },
               { step: '03', title: 'The Shoot', description: 'This is where AI becomes our director of photography, our location scout, our VFX team. We execute the shot list with cinema-grade precision — no constraints, no compromises.' },

@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact | Start Your AI Video Project',
+  title: 'Contact | Bring Us the Scene — Ruminate X Cinematic Story Studio',
   description:
-    'Ready to create the impossible? Get in touch with Ruminate X — AI-powered cinematic production for brands worldwide. Tell us your vision.',
+    'Tell us the story your brand has been trying to tell. The impossible shot. The scene in your head. Ruminate X is a cinematic story studio based in Calgary — we make films for brands worldwide.',
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
@@ -14,15 +14,15 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Get In Touch</p>
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Bring Us the Scene</p>
         <h1
           style={{ ...displayStyle, fontSize: 'clamp(60px, 12vw, 150px)' }}
           className="text-white leading-none mb-6"
         >
-          LET&apos;S TALK
+          LET&apos;S MAKE<br />YOUR FILM.
         </h1>
         <p className="text-[#888888] text-lg max-w-xl">
-          Tell us about your brand, your vision, and your wildest idea. We&apos;re ready to say yes.
+          Tell us the scene in your head — the one that&apos;s never been put on screen. The shot you thought was impossible. We start there.
         </p>
       </section>
 
@@ -61,20 +61,20 @@ export default function ContactPage() {
             </div>
 
             <div className="border-t border-[#1a1a1a] pt-10">
-              <h3 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">We Work With</h3>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">Films We Make</h3>
               <div className="space-y-2 text-sm text-[#888888]">
-                <p>E-Commerce & DTC Brands</p>
-                <p>Startups & Tech Companies</p>
-                <p>Enterprise & Fortune 500</p>
-                <p>Fashion & Luxury Brands</p>
-                <p>Retail & Consumer Products</p>
+                <p>Brand Films & Founder Stories</p>
+                <p>AI Commercials & Campaign Films</p>
+                <p>Fashion & Luxury Editorials</p>
+                <p>Product Launch Films</p>
+                <p>Social Content — Story-First</p>
               </div>
             </div>
 
             <div className="border border-[#1a1a1a] p-6">
-              <p style={{ ...displayStyle, fontSize: '32px', color: '#ebff00' }}>24–48 HRS</p>
+              <p style={{ ...displayStyle, fontSize: '32px', color: '#ebff00' }}>THE BRIEF<br />STARTS HERE.</p>
               <p className="text-sm text-[#888888] mt-2">
-                Average response time. We take every inquiry seriously.
+                Every great film starts with a story. Tell us yours — no idea too ambitious, no shot too impossible.
               </p>
             </div>
           </div>

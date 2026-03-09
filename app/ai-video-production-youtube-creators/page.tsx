@@ -1,97 +1,84 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "AI Video Production for YouTube Creators: Scale Your Channel Faster",
-  description: "YouTube creators use AI video production to publish more, grow faster, and spend less time editing. Scale from 1 video/week to daily uploads.",
-};
+  title: 'AI Video Production for YouTube Creators | Scale Without Burning Out | Ruminate X',
+  description:
+    'YouTube creators use cinematic AI production to publish more, grow faster, and stop spending every hour in the edit. Scale your channel without scaling your workload.',
+  keywords: ['AI video production YouTube', 'YouTube creator video production', 'AI YouTube content', 'creator video agency', 'YouTube channel AI production'],
+}
 
-export default function Page() {
+const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+
+export default function YouTubeCreatorsPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">Creators & YouTube</p>
-        <h1 className="text-5xl font-bold mb-6 text-slate-900">
-          AI Video Production for YouTube Creators: Scale Your Channel Faster
-        </h1>
-        <p className="text-xl text-slate-600 mb-12">
-          The YouTube algorithm rewards consistency. AI lets you publish more, spend less time editing, and focus on what only you can do — the ideas.
-        </p>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">The Creator Bottleneck</h2>
-          <div className="bg-red-50 p-8 rounded-lg mb-6">
-            <p className="text-lg text-slate-700">
-              Most creators have great ideas but can't produce fast enough. Editing a single 10-minute YouTube video takes 4–10 hours. Add scripting, thumbnail design, and promotion — and you're spending more time on production than creation.
-            </p>
+    <>
+      <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#ebff00 1px, transparent 1px), linear-gradient(90deg, #ebff00 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+          <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
+            <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Creators & YouTube</span>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
+            THE IDEAS<br />ARE YOURS.<br /><span style={{ color: '#ebff00' }}>LET US FILM THEM.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
+            You got into creating because you had something to say. Not to spend 40 hours a week in post-production. AI handles the production. You handle the idea — the only part that actually matters.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
+            <Link href="/work" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Our Work</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { stat: "4–10hrs", label: "to edit 1 video" },
-              { stat: "2–3x", label: "more videos = faster growth" },
-              { stat: "70%", label: "of creator time is production" },
-              { stat: "AI", label: "cuts production time by 80%" },
+              { stat: '4–10hrs', label: 'Average time to edit one 10-minute video' },
+              { stat: '2–3×', label: 'More uploads = significantly faster growth' },
+              { stat: '80%', label: 'Of production time reclaimed with AI' },
+              { stat: '4K', label: 'Cinema quality on every upload' },
             ].map(({ stat, label }) => (
-              <div key={label} className="bg-slate-50 p-4 rounded-lg">
-                <p className="text-2xl font-bold text-blue-600">{stat}</p>
-                <p className="text-sm text-slate-600">{label}</p>
+              <div key={label} className="text-center">
+                <p style={{ ...displayStyle, fontSize: 'clamp(28px, 3.5vw, 48px)', color: '#ebff00' }}>{stat}</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">What AI Does for Your Channel</h2>
-          <div className="space-y-6">
-            {[
-              { title: "Turn long-form into Shorts automatically", desc: "1 YouTube video → 10–20 TikTok/Shorts clips. Captioned, optimized, ready to post.", link: "/guides/social-media-video-shorts" },
-              { title: "Auto-captions for every video", desc: "Captions increase YouTube watch time by 40% and improve search ranking. AI generates them in minutes.", link: "/guides/video-captions-ai-subtitles" },
-              { title: "Create faceless educational content", desc: "Script-driven educational videos with professional voiceover and visuals — no filming required.", link: "/guides/how-to-create-explainer-videos-with-ai" },
-              { title: "Produce explainer & tutorial videos", desc: "AI generates tutorial-style content from your script with matching screen recordings and voiceover.", link: "/guides/screen-recording-automated-demos" },
-              { title: "Multilingual versions of every video", desc: "Expand to Spanish, Portuguese, French, or any of 140+ language audiences at no extra cost.", link: "/solutions/multilingual-voiceovers" },
-            ].map(({ title, desc, link }) => (
-              <div key={title} className="border-l-4 border-blue-500 pl-6 py-2">
-                <h3 className="font-bold text-slate-900 mb-1">
-                  <Link href={link} className="hover:text-blue-600">{title} →</Link>
-                </h3>
-                <p className="text-slate-600 text-sm">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What We Build</p>
+        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">EVERY FORMAT.<br />SAME CRAFT.</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { title: 'Cinematic Intros & Openers', desc: 'The first 10 seconds decide everything. A cinema-grade channel opener that communicates your brand identity before a word is spoken.' },
+            { title: 'B-Roll & Visual Sequences', desc: 'The visuals that elevate your talking-head content into something worth watching. Any scene, any environment, any aesthetic.' },
+            { title: 'YouTube Shorts', desc: 'High-impact short-form content that drives subscribers and expands reach — story-first, even in 60 seconds.' },
+            { title: 'Sponsor Integration Films', desc: 'Sponsored segments that feel like part of the story, not interruptions. AI-produced content that sponsors actually want to be part of.' },
+            { title: 'Channel Trailer', desc: 'The first thing a new visitor sees. The film that tells them exactly who you are and why they should subscribe — in under 90 seconds.' },
+            { title: 'Series Titles & Branding', desc: 'Cinematic title sequences for your series and recurring segments. The visual identity that makes your channel feel like a show.' },
+          ].map(({ title, desc }) => (
+            <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
+              <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
+              <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Best Channel Types for AI Production</h2>
-          <div className="flex flex-wrap gap-3">
-            {["Education & Tutorials", "Finance & Investing", "Tech Reviews", "Health & Wellness", "Business & Entrepreneurship", "Marketing", "SaaS & Software", "Real Estate", "Personal Finance", "Productivity", "AI & Technology", "History & Documentaries"].map(type => (
-              <span key={type} className="px-4 py-2 border border-slate-200 text-slate-700 text-sm rounded-full">{type}</span>
-            ))}
-          </div>
-          <p className="text-slate-600 text-sm mt-4">AI production works best for knowledge-based, educational, and professional content — the highest-RPM niches on YouTube.</p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Related Resources</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { href: "/guides/social-media-video-shorts", label: "Auto-Create YouTube Shorts" },
-              { href: "/guides/video-captions-ai-subtitles", label: "AI Captions for SEO" },
-              { href: "/solutions/multilingual-voiceovers", label: "Go Global with 140+ Languages" },
-              { href: "/guides/video-marketing-strategy-ai", label: "Content Calendar Strategy" },
-              { href: "/solutions/fast-explainer-videos", label: "48-Hour Video Production" },
-              { href: "/contact", label: "Scale Your Channel" },
-            ].map(({ href, label }) => (
-              <Link key={href} href={href} className="block border border-slate-200 p-4 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition text-slate-700 font-medium">→ {label}</Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-slate-900 text-white p-12 rounded-lg">
-          <h2 className="text-3xl font-bold mb-4">Stop Spending 80% of Your Time Editing</h2>
-          <p className="text-slate-300 mb-8">Focus on ideas and storytelling. Let AI handle the production. Your channel will thank you.</p>
-          <Link href="/contact" className="inline-block bg-[#ebff00] text-slate-900 px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-yellow-300 transition">Start Creating Faster</Link>
-        </section>
-      </div>
-    </main>
-  );
+      <section className="border-t border-[#1a1a1a] py-24 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-6">
+            SPEND MORE TIME<br />ON THE IDEA.<br /><span style={{ color: '#ebff00' }}>WE HANDLE THE REST.</span>
+          </h2>
+          <p className="text-[#888888] mb-8">Tell us what you&apos;re creating. We&apos;ll show you what it looks like when the production matches the vision.</p>
+          <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
+        </div>
+      </section>
+    </>
+  )
 }

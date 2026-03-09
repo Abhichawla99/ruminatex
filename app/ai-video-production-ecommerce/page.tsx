@@ -65,12 +65,11 @@ export default function EcommercePage() {
             style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }}
             className="text-white leading-none mb-8 max-w-5xl"
           >
-            AI VIDEO<br />PRODUCTION FOR<br />
-            <span style={{ color: '#ebff00' }}>E-COMMERCE<br />BRANDS</span>
+            EVERY PRODUCT<br />HAS ONE<br />
+            <span style={{ color: '#ebff00' }}>TRUE STORY.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Scale your video content without scaling your budget. Studio-quality brand films,
-            product videos, and social content — at 70% lower cost than traditional agencies.
+            Most e-commerce video describes the product. Great e-commerce video makes people feel something about it. We are a cinematic story studio — we don&apos;t make product content, we make films that turn browsers into believers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

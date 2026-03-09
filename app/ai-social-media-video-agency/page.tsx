@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Social Media Video Agency | TikTok, Reels & YouTube | Ruminate X',
-  description: 'Studio-quality AI social media video production for brands. TikTok, Instagram Reels, YouTube Shorts — high-volume, cinematic social content at a fraction of traditional agency costs.',
+  title: 'Social Content — A Micro-Film Every Time | Ruminate X',
+  description: 'We refuse to make filler content. Every piece of social content we produce is built around a story. Fifteen seconds is a story. Sixty seconds is a film. We treat them the same.',
   keywords: ['AI social media video agency', 'AI social content production', 'AI video for Instagram', 'AI TikTok video agency', 'social video production AI', 'AI Reels production'],
 }
 
@@ -28,10 +28,10 @@ export default function SocialMediaVideoAgencyPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Social Media Video</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            AI SOCIAL<br />MEDIA VIDEO<br /><span style={{ color: '#ebff00' }}>AGENCY.</span>
+            A MICRO-FILM.<br />EVERY SINGLE<br /><span style={{ color: '#ebff00' }}>TIME.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            The social feed never stops. Neither do we. High-volume, studio-quality AI social video content for TikTok, Reels, YouTube Shorts, and every platform your brand lives on.
+            We refuse to make filler content. Every piece of social content we produce is built around a story — a hook that earns attention, a middle that builds tension or desire, an ending that lands. Fifteen seconds is a story. Sixty seconds is a film. We treat them both with the same seriousness, because your audience does too.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

@@ -28,10 +28,10 @@ export default function LuxuryPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Luxury & Premium Brands</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>LUXURY<br />BRANDS</span>
+            NO COMPROMISE.<br />NO LIMITS.<br /><span style={{ color: '#ebff00' }}>NO BUDGET<br />CEILING.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Aesthetic precision. Cinematic excellence. AI production has crossed the threshold where the best luxury brands in the world are paying attention — and acting on it.
+            Traditional agencies compromise. Budgets force cuts. Crews have limits. Schedules slip. We operate without those constraints — which means the version you imagined is the version that gets made. For brands where the aesthetic is everything, that matters.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

@@ -28,10 +28,10 @@ export default function AutomotivePage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Automotive & Mobility</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>AUTOMOTIVE<br />BRANDS</span>
+            THE SHOT NO<br />CAMERA CREW<br /><span style={{ color: '#ebff00' }}>CAN ACCESS.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Automotive commercials are the most visually demanding content in advertising. AI production now delivers impossible shots — the angles, the speeds, the environments no camera crew can access — at a fraction of traditional production costs.
+            The angle underneath the chassis at 120mph. The interior reveal from inside a molecule of the paint. The desert road that exists nowhere on earth. These are our starting points — not our complications. AI production makes the impossible automotive shot the default.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

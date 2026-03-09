@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Commercial Production Agency | TV & Digital Commercials | Ruminate X',
-  description: 'AI-powered commercial production for TV, digital, and social. Impossible visuals, cinematic quality, 70% lower cost than traditional commercial production agencies.',
+  title: 'AI Commercials & Campaign Films | The Impossible Shot | Ruminate X',
+  description: 'The commercial that should have cost $300K and taken three months. We start with the impossible shot. Cinematic AI commercial production for brands that refuse to be ordinary.',
   keywords: ['AI commercial production', 'AI TV commercial', 'AI ad production agency', 'AI-generated commercials', 'automated commercial video', 'AI commercial agency'],
 }
 
@@ -28,10 +28,10 @@ export default function CommercialProductionPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Commercial Production</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            AI<br />COMMERCIAL<br /><span style={{ color: '#ebff00' }}>PRODUCTION.</span>
+            THE SHOT<br />YOU THOUGHT<br /><span style={{ color: '#ebff00' }}>WAS IMPOSSIBLE.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            Commercials that stop the scroll, own the room, and move the market. AI production delivers the visual impossibility that traditional commercial shoots charge $500K for — in 2–3 weeks, at a fraction of the cost.
+            Picture the commercial that&apos;s been in your head since the brief dropped — the one your last production company said would cost $300K and take three months. We start there. We write the shot list first and figure out &apos;how&apos; second. Always.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Brief Your Commercial</Link>
@@ -105,9 +105,9 @@ export default function CommercialProductionPage() {
       <section className="border-t border-[#1a1a1a] py-24 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            THE COMMERCIAL<br /><span style={{ color: '#ebff00' }}>YOU ALWAYS<br />WANTED.</span>
+            WHAT&apos;S THE<br />IMPOSSIBLE SHOT?<br /><span style={{ color: '#ebff00' }}>DESCRIBE IT.</span>
           </h2>
-          <p className="text-[#888888] mb-8">Tell us the impossible shot. We&apos;ll show you how it gets made.</p>
+          <p className="text-[#888888] mb-8">Every commercial we make starts with the shot the client thought was out of reach. Tell us yours. The impossible is where we begin.</p>
           <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
         </div>
       </section>

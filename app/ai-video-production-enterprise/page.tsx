@@ -37,13 +37,11 @@ export default function EnterprisePage() {
             style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }}
             className="text-white leading-none mb-8 max-w-5xl"
           >
-            AI VIDEO FOR<br />
-            <span style={{ color: '#ebff00' }}>ENTERPRISE<br />BRANDS</span>
+            THE GLOBAL<br />CAMPAIGN YOU<br />
+            <span style={{ color: '#ebff00' }}>IMAGINED.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Enterprise-grade quality. AI speed and flexibility. Cinematic brand content that
-            scales across global markets without the overhead of traditional large-agency
-            relationships.
+            The version you imagined — before the budget forced the cuts, before the agency recommended the safer option, before the timeline compressed your vision. That version is the one we make. For enterprise brands that refuse to let the production process compromise the idea.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

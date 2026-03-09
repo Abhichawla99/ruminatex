@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Product Video Agency | Product Videos & Launch Films | Ruminate X',
-  description: 'AI-powered product video production for e-commerce brands, DTC companies, and product marketers. Studio-quality product films at 70% lower cost — delivered in 2–3 weeks.',
+  title: 'Product Launch Films | Opening Scene. Make It Count. | Ruminate X',
+  description: 'A launch is an act one. The scene that establishes the world and makes the audience lean forward. We write it, we shoot it, and we make sure it hits. Every product deserves a real film.',
   keywords: ['AI product video agency', 'AI product video production', 'AI product demo video', 'product launch video AI', 'AI generated product video', 'product video agency'],
 }
 
@@ -28,10 +28,10 @@ export default function ProductVideoAgencyPage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Product Video Agency</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            AI PRODUCT<br />VIDEO<br /><span style={{ color: '#ebff00' }}>AGENCY.</span>
+            OPENING SCENE.<br />MAKE IT<br /><span style={{ color: '#ebff00' }}>COUNT.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            Your product deserves a film that does it justice. We create cinematic AI-powered product videos that communicate value, build desire, and drive conversions — at a cost and speed that makes sense for any brand at any stage.
+            A launch is an act one. The scene that establishes the world, introduces the protagonist, and makes the audience lean forward. We write the shot list, we build the film, and we make sure it hits. From the teaser that builds anticipation to the hero film that delivers the payoff.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

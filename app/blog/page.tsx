@@ -29,7 +29,7 @@ export default function BlogPage() {
           THE BLOG
         </h1>
         <p className="text-[#888888] text-lg max-w-xl">
-          Industry insights, brand strategy, and everything you need to know about AI video production.
+          Film theory. Brand strategy. The craft behind the shot. Essays on storytelling, cinema, and what it actually takes to make something worth watching.
         </p>
       </section>
 

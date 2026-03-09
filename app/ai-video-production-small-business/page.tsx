@@ -1,118 +1,119 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "AI Video Production for Small Business: Compete with the Big Brands",
-  description: "Small businesses get broadcast-quality video content at startup prices. AI video production levels the playing field against bigger competitors.",
-};
+  title: 'AI Video Production for Small Business | Compete at Cinema Level | Ruminate X',
+  description:
+    'Small businesses get cinema-grade brand films and commercials at prices that make sense. Your bigger competitor has the budget — you have the story. We make the film that wins.',
+  keywords: ['AI video production small business', 'small business brand film', 'affordable brand video production', 'AI video for local business', 'small business commercial production'],
+}
 
-export default function Page() {
+const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+
+const useCases = [
+  { title: 'Brand Films', desc: 'The film that explains not just what you do — but why you do it, why it matters, and why a customer should choose you over anyone else.' },
+  { title: 'Product & Service Videos', desc: 'Show exactly what you offer with the clarity and visual quality that turns consideration into conviction. No explaining required.' },
+  { title: 'Social Content', desc: 'A consistent presence on the platforms where your customers live — without a content team, without a studio, without the cost.' },
+  { title: 'Launch Campaigns', desc: 'New product. New location. New offer. The launch film that gives you one shot to make a first impression that sticks.' },
+  { title: 'Testimonial Films', desc: 'Real customer stories, told with the craft of a documentary. Not talking-head reviews — cinematic case studies that build trust.' },
+  { title: 'Brand Anthem', desc: 'The 30-second film that captures what you stand for. The one that runs before everything else, that plays at every touchpoint.' },
+]
+
+export default function SmallBusinessPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">Small Business</p>
-        <h1 className="text-5xl font-bold mb-6 text-slate-900">
-          AI Video Production for Small Business: Compete with the Big Brands
-        </h1>
-        <p className="text-xl text-slate-600 mb-12">
-          Your competitor with a $500K marketing budget has video everywhere. You don't. AI levels the playing field — broadcast-quality video at prices any small business can afford.
-        </p>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">The Small Business Video Problem</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-red-50 border border-red-200 p-6 rounded-lg">
-              <h3 className="font-bold text-xl mb-4 text-red-700">The Old Reality</h3>
-              <ul className="space-y-2 text-slate-700 text-sm">
-                <li>✗ Video production: $5,000–$15,000/video</li>
-                <li>✗ Affordable only for big brands</li>
-                <li>✗ 3–6 weeks to produce one video</li>
-                <li>✗ Can't update when messaging changes</li>
-                <li>✗ Stuck with text and images while competitors run video ads</li>
-              </ul>
-            </div>
-            <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
-              <h3 className="font-bold text-xl mb-4 text-green-700">The AI Reality</h3>
-              <ul className="space-y-2 text-slate-700 text-sm">
-                <li>✓ Video production: $300–$1,500/video</li>
-                <li>✓ Every business can afford it</li>
-                <li>✓ 24–48 hours to deliver</li>
-                <li>✓ Update messaging anytime, free</li>
-                <li>✓ Same video quality as Nike, Apple, and Amazon</li>
-              </ul>
-            </div>
+    <>
+      <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#ebff00 1px, transparent 1px), linear-gradient(90deg, #ebff00 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+          <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
+            <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Small Business</span>
           </div>
-        </section>
+          <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
+            YOUR STORY<br />IS WORTH<br /><span style={{ color: '#ebff00' }}>A REAL FILM.</span>
+          </h1>
+          <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
+            Your competitor with a $500K marketing budget has video everywhere. The advantage they have is not the story — it&apos;s the access to production. AI closes that gap. Cinema-grade brand films and commercials at prices built for businesses that are building something real.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
+            <Link href="/work" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Our Work</Link>
+          </div>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Video Types Small Businesses Need Most</h2>
-          <div className="space-y-6">
+      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { type: "Website Hero Video", desc: "Replace your homepage static image with a 30–60 second brand video. Increases time-on-site by 88%.", link: "/ai-brand-film-agency" },
-              { type: "Google & Facebook Ads", desc: "Video ads outperform image ads 3x. Run 15-second video ads that compete with national brands.", link: "/ai-commercial-production" },
-              { type: "Product Explainer", desc: "Show exactly what your product or service does. Reduce customer questions and increase conversion.", link: "/solutions/fast-explainer-videos" },
-              { type: "Google Business Profile Video", desc: "Businesses with video get 2x more engagement on Google Maps listings.", link: "/use-cases/saas-video-production" },
-              { type: "Social Media Content", desc: "Stay top-of-mind with weekly video content on Instagram, TikTok, and Facebook.", link: "/ai-social-media-video-agency" },
-              { type: "Customer Testimonial Videos", desc: "Turn text reviews into compelling video testimonials that build trust instantly.", link: "/solutions/professional-product-demo" },
-            ].map(({ type, desc, link }) => (
-              <div key={type} className="border-l-4 border-blue-500 pl-6 py-2">
-                <h3 className="font-bold text-slate-900 mb-1">
-                  <Link href={link} className="hover:text-blue-600 transition">{type} →</Link>
-                </h3>
-                <p className="text-slate-600 text-sm">{desc}</p>
+              { stat: '70%', label: 'Lower cost than traditional video production' },
+              { stat: '2–3 wks', label: 'From brief to finished film' },
+              { stat: '4K', label: 'Cinema quality on every project' },
+              { stat: '∞', label: 'Creative possibilities, no limits' },
+            ].map(({ stat, label }) => (
+              <div key={label} className="text-center">
+                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
+                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">Industries We Serve</h2>
-          <div className="flex flex-wrap gap-3">
-            {["Restaurants", "Retail Shops", "Law Firms", "Dental & Medical", "Real Estate Agents", "Contractors", "Salons & Spas", "Fitness Studios", "Local Services", "Non-profits", "Coaches & Consultants", "Online Stores"].map(i => (
-              <span key={i} className="px-4 py-2 border border-slate-200 text-slate-700 text-sm rounded-full hover:border-blue-500 cursor-default">{i}</span>
-            ))}
+      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Films We Make</p>
+        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">EVERY BUSINESS<br />HAS A STORY</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {useCases.map(({ title, desc }) => (
+            <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
+              <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
+              <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Level Playing Field</p>
+              <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-8">
+                YOU DON&apos;T NEED<br />THEIR BUDGET.<br />YOU NEED THE STORY.
+              </h2>
+              <p className="text-[#888888] leading-relaxed mb-6">
+                The big brands have money. But the best stories don&apos;t come from money — they come from knowing exactly who you are and why what you do matters. AI gives you the production firepower. You already have the story.
+              </p>
+              <p className="text-[#888888] leading-relaxed">
+                We start with your brand. Your reason for existing. The thing that makes your customers come back. Then we build the shot list around that truth.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                { title: 'STORY FIRST', desc: 'Every film we make starts with understanding your brand deeply — before a single frame is conceived.' },
+                { title: 'NO TEMPLATES', desc: "Your film is built from scratch for your brand. We don't have a small business template. We have a process." },
+                { title: 'CINEMA QUALITY', desc: 'The same standard we apply to global brands applies to every project we take. Quality is not a tier — it\'s our baseline.' },
+              ].map(({ title, desc }) => (
+                <div key={title} className="border border-[#1a1a1a] p-6">
+                  <h3 style={{ ...displayStyle, fontSize: '22px', color: '#ebff00' }} className="mb-2">{title}</h3>
+                  <p className="text-[#666666] text-sm">{desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">What $500 Gets You</h2>
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg">
-            <p className="text-lg text-slate-700 mb-4">With a traditional agency, $500 buys you a phone consultation and maybe a rough quote.</p>
-            <p className="text-lg font-bold text-slate-900 mb-4">With Ruminate X, $500 gets you:</p>
-            <ul className="space-y-2 text-slate-700">
-              <li>✓ 60–90 second brand video</li>
-              <li>✓ Professional AI voiceover</li>
-              <li>✓ Custom branding (logo, colors, fonts)</li>
-              <li>✓ Captions for social media</li>
-              <li>✓ Multiple format exports (landscape + vertical)</li>
-              <li>✓ Unlimited revisions</li>
-              <li>✓ Delivered in 48 hours</li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">More to Explore</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { href: "/roi-calculator", label: "Calculate Your ROI" },
-              { href: "/solutions/cut-video-production-costs", label: "See the Cost Savings" },
-              { href: "/guides/how-to-create-explainer-videos-with-ai", label: "How AI Video Works" },
-              { href: "/comparison/ai-agency-vs-traditional-agency", label: "AI vs Traditional Agency" },
-              { href: "/faq-ai-video-production", label: "Common Questions" },
-              { href: "/contact", label: "Get a Quote" },
-            ].map(({ href, label }) => (
-              <Link key={href} href={href} className="block border border-slate-200 p-4 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition text-slate-700 font-medium">→ {label}</Link>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-slate-900 text-white p-12 rounded-lg">
-          <h2 className="text-3xl font-bold mb-4">Small Business Pricing That Actually Makes Sense</h2>
-          <p className="text-slate-300 mb-8">Professional video content without agency pricing. Built for businesses that are hungry to grow.</p>
-          <Link href="/contact" className="inline-block bg-[#ebff00] text-slate-900 px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-yellow-300 transition">Start a Project</Link>
-        </section>
-      </div>
-    </main>
-  );
+      <section className="border-t border-[#1a1a1a] py-24 text-center">
+        <div className="max-w-2xl mx-auto px-6">
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-6">
+            TELL US YOUR STORY.<br /><span style={{ color: '#ebff00' }}>WE&apos;LL MAKE THE FILM.</span>
+          </h2>
+          <p className="text-[#888888] mb-8">
+            No idea too ambitious. No budget too small to start a conversation. We&apos;ll find the story — and find the way to tell it.
+          </p>
+          <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
+        </div>
+      </section>
+    </>
+  )
 }

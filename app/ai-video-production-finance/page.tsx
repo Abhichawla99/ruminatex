@@ -28,10 +28,10 @@ export default function FinancePage() {
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">Finance & Fintech</span>
           </div>
           <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }} className="text-white leading-none mb-8 max-w-5xl">
-            AI VIDEO<br />PRODUCTION FOR<br /><span style={{ color: '#ebff00' }}>FINANCE &<br />FINTECH</span>
+            THE STORY<br />THAT MOVES<br /><span style={{ color: '#ebff00' }}>CAPITAL.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Build the trust that moves capital. Investor-grade brand films and content for financial services companies that understand the value of premium storytelling.
+            Trust is built by the stories people tell about you. Investor-grade brand films for financial services companies that understand the value of the right narrative — told with the precision and credibility the industry demands.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>

@@ -1,9 +1,12 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "FAQ: Common Questions About AI Video Production",
   description: "Answers to frequently asked questions about AI-generated video production. Quality, cost, limitations, and more.",
 };
+
+const displayStyle = { fontFamily: "var(--font-bebas-neue), sans-serif" };
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -24,111 +27,120 @@ const faqSchema = {
   ],
 };
 
+const faqs = [
+  {
+    q: "Is AI video quality really as good as professional production?",
+    a: "Yes. Modern AI generates broadcast-quality video that rivals professional studios. Voiceovers sound natural, visuals are crisp, and branding is seamless. The only limitation is live-action filming (actors, real locations).",
+  },
+  {
+    q: "Can I copyright AI-generated videos?",
+    a: "Yes. You own the copyright to videos you create with AI tools. You can use them commercially, sell them, or repurpose them.",
+  },
+  {
+    q: "How much does AI video production cost?",
+    a: "Platforms range from free (Canva) to $500+/month (enterprise). Most businesses use $30–$100/month subscriptions for unlimited video generation.",
+  },
+  {
+    q: "Do AI voiceovers sound robotic?",
+    a: "No. AI voices now sound natural and human-like. Most people can't distinguish them from real voice actors. Tone, pacing, and emphasis are customizable.",
+  },
+  {
+    q: "How long does it take to create a video?",
+    a: "Script to final video: 24–48 hours. The AI generation itself takes 15 minutes to 2 hours depending on video length.",
+  },
+  {
+    q: "Can I get unlimited revisions?",
+    a: "Yes. With subscription-based platforms, revisions are free and unlimited. Change the script, regenerate the video at no cost.",
+  },
+  {
+    q: "What if my language isn't supported?",
+    a: "AI video tools support 140+ languages. If your language isn't available, most platforms can add it. Contact support for custom language requests.",
+  },
+  {
+    q: "Can I use AI video for commercials and ads?",
+    a: "Yes. Full commercial rights are included. Use in ads, TV, cinema, and anywhere else. No royalty or licensing issues.",
+  },
+  {
+    q: "Do I need any technical skills?",
+    a: "No. Most AI video tools are designed for non-technical users. Drag-and-drop interfaces make it easy for anyone to create videos.",
+  },
+  {
+    q: "What are the limitations of AI video?",
+    a: "Main limitations: Can't film live action or real-world locations, can't capture specific real-world events, limited to pre-made stock footage and animations. Best for explainers, demos, training, and marketing videos.",
+  },
+  {
+    q: "Can I integrate AI video into my workflow?",
+    a: "Yes. Most platforms integrate with Zapier, Slack, CMS tools, and offer APIs for custom integrations. Automate video generation as part of your workflow.",
+  },
+  {
+    q: "Is it ethical to use AI-generated video?",
+    a: "Yes. Disclose when using AI if required by regulation (e.g., deepfakes). For business videos, explainers, and marketing — no disclosure needed. Use responsibly and don't impersonate real people.",
+  },
+];
+
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <h1 className="text-5xl font-bold mb-6 text-slate-900">
-          FAQ: Common Questions About AI Video Production
+
+      {/* Hero */}
+      <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Every Frame Answered</p>
+        <h1
+          style={{ ...displayStyle, fontSize: "clamp(50px, 10vw, 130px)" }}
+          className="text-white leading-none mb-6"
+        >
+          AI VIDEO<br />
+          <span style={{ color: "#ebff00" }}>QUESTIONS</span><br />
+          ANSWERED.
         </h1>
-        <p className="text-xl text-slate-600 mb-12">
-          Answers to the most common questions about AI-generated video production.
+        <p className="text-[#888888] text-xl max-w-2xl leading-relaxed mt-8">
+          Answers to the most common questions about AI-generated video production. No spin. No upsell. Just the brief.
         </p>
+      </section>
 
-        <section className="mb-16 space-y-8">
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Is AI video quality really as good as professional production?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. Modern AI generates broadcast-quality video that rivals professional studios. Voiceovers sound natural, visuals are crisp, and branding is seamless. The only limitation is live-action filming (actors, real locations).
-            </p>
+      {/* FAQ List */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="space-y-0">
+            {faqs.map(({ q, a }, i) => (
+              <div key={i} className="border-b border-[#1a1a1a] py-10 group">
+                <h3
+                  style={displayStyle}
+                  className="text-white text-xl md:text-2xl tracking-wide mb-4 group-hover:text-[#ebff00] transition-colors"
+                >
+                  {q.toUpperCase()}
+                </h3>
+                <p className="text-[#888888] leading-relaxed max-w-3xl">{a}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Can I copyright AI-generated videos?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. You own the copyright to videos you create with AI tools. You can use them commercially, sell them, or repurpose them.
-            </p>
+      {/* Still Have Questions */}
+      <section className="border-t border-[#1a1a1a] py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2
+            style={{ ...displayStyle, fontSize: "clamp(40px, 7vw, 90px)" }}
+            className="text-white leading-none mb-6"
+          >
+            STILL HAVE<br />
+            <span style={{ color: "#ebff00" }}>QUESTIONS?</span>
+          </h2>
+          <p className="text-[#888888] text-lg mb-10 max-w-xl">
+            The brief is always open. Tell us what you're working on and we'll tell you exactly what AI production can do for it.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact" className="bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors inline-block text-center">
+              Contact Us
+            </Link>
+            <Link href="/comparison/ai-agency-vs-traditional-agency" className="border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors inline-block text-center">
+              AI vs Traditional Agency
+            </Link>
           </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">How much does AI video production cost?</h3>
-            <p className="text-lg text-slate-700">
-              Platforms range from free (Canva) to $500+/month (enterprise). Most businesses use $30–$100/month subscriptions for unlimited video generation.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Do AI voiceovers sound robotic?</h3>
-            <p className="text-lg text-slate-700">
-              No. AI voices now sound natural and human-like. Most people can't distinguish them from real voice actors. Tone, pacing, and emphasis are customizable.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">How long does it take to create a video?</h3>
-            <p className="text-lg text-slate-700">
-              Script to final video: 24–48 hours. The AI generation itself takes 15 minutes to 2 hours depending on video length.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Can I get unlimited revisions?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. With subscription-based platforms, revisions are free and unlimited. Change the script, regenerate the video at no cost.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">What if my language isn't supported?</h3>
-            <p className="text-lg text-slate-700">
-              AI video tools support 140+ languages. If your language isn't available, most platforms can add it. Contact support for custom language requests.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Can I use AI video for commercials and ads?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. Full commercial rights are included. Use in ads, TV, cinema, and anywhere else. No royalty or licensing issues.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Do I need any technical skills?</h3>
-            <p className="text-lg text-slate-700">
-              No. Most AI video tools are designed for non-technical users. Drag-and-drop interfaces make it easy for anyone to create videos.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">What are the limitations of AI video?</h3>
-            <p className="text-lg text-slate-700">
-              Main limitations: Can't film live action or real-world locations, can't capture specific real-world events, limited to pre-made stock footage and animations. Best for explainers, demos, training, and marketing videos.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Can I integrate AI video into my workflow?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. Most platforms integrate with Zapier, Slack, CMS tools, and offer APIs for custom integrations. Automate video generation as part of your workflow.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold mb-3 text-slate-900">Is it ethical to use AI-generated video?</h3>
-            <p className="text-lg text-slate-700">
-              Yes. Disclose when using AI if required by regulation (e.g., deepfakes). For business videos, explainers, and marketing—no disclosure needed. Use responsibly and don't impersonate real people.
-            </p>
-          </div>
-        </section>
-
-        <section className="mb-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-12 rounded-lg">
-          <h2 className="text-3xl font-bold mb-6">Still Have Questions?</h2>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition">
-            Contact Support
-          </button>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

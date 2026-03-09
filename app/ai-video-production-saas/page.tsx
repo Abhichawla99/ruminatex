@@ -37,13 +37,11 @@ export default function SaaSPage() {
             style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }}
             className="text-white leading-none mb-8 max-w-5xl"
           >
-            AI VIDEO FOR<br />
-            <span style={{ color: '#ebff00' }}>TECH STARTUPS<br />& SAAS BRANDS</span>
+            CRAFT AT<br />
+            <span style={{ color: '#ebff00' }}>STARTUP<br />SPEED.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Move at startup speed without sacrificing the brand story that drives growth.
-            Cinematic brand films, product videos, and campaign content — built for the pace
-            of tech.
+            The best creative work takes time. We disagree. AI has collapsed the gap between idea and execution. We move at the speed of culture — without ever moving away from craft. For tech companies that need the brand story told now, not in three months.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link

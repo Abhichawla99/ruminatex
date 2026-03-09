@@ -4,12 +4,12 @@ import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
 
 export const metadata: Metadata = {
-  title: 'Our Work | AI Brand Films & Commercial Production Portfolio',
+  title: 'Our Work | Cinema-Grade Brand Films & AI Commercials | Ruminate X',
   description:
-    "Explore Ruminate X's portfolio of AI-powered brand films, commercials, fashion content, and social media productions for e-commerce, fashion, and enterprise brands.",
+    "The reel. Cinematic brand films, AI commercials, fashion editorials, and story-driven campaign content — every frame earned. Ruminate X is a cinematic story studio that makes films for brands.",
   openGraph: {
     title: 'Our Work | Ruminate X',
-    description: 'AI-powered cinematic content portfolio — brand films, commercials, fashion, and more.',
+    description: 'Cinema-grade brand films and AI commercials — every frame earned, every story real.',
   },
 }
 
@@ -20,15 +20,15 @@ export default function WorkPage() {
     <>
       {/* Hero */}
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Portfolio</p>
+        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Reel</p>
         <h1
           style={{ ...displayStyle, fontSize: 'clamp(60px, 12vw, 150px)' }}
           className="text-white leading-none mb-6"
         >
-          OUR<br />WORK
+          THE<br />FILMS.
         </h1>
         <p className="text-[#888888] text-lg max-w-xl">
-          Every project is proof that no creative vision is off the table. Explore our work.
+          Every frame earned. Every story real. These are the films we&apos;ve made for brands that refused to be ordinary.
         </p>
       </section>
 
@@ -91,11 +91,11 @@ export default function WorkPage() {
       <section className="border-t border-[#1a1a1a] py-24 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            SEEN ENOUGH?<br />
-            <span style={{ color: '#ebff00' }}>LET&apos;S TALK.</span>
+            READY TO MAKE<br />
+            <span style={{ color: '#ebff00' }}>YOUR FILM?</span>
           </h2>
           <p className="text-[#888888] mb-8">
-            Your brand deserves content this good. Let&apos;s make something unforgettable together.
+            Tell us the scene in your head — the one your brand has been trying to tell. We start with story. Always.
           </p>
           <Link
             href="/contact"
