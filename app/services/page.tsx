@@ -21,6 +21,7 @@ const services = [
   {
     number: '01',
     title: 'Brand Films',
+    href: '/ai-brand-film-agency',
     tagline: 'Your brand has one true story. We find it.',
     description:
       "Most brands are defined by what they sell. Great brands are defined by what they believe. A brand film is not a product showcase — it's a declaration. We dig into the tension at the heart of your brand, the reason you exist beyond revenue, the thing that makes your people get out of bed. Then we put it on screen with the craft of a feature film and the precision of a 30-second spot. The result is the single most powerful piece of marketing you will ever create.",
@@ -31,6 +32,7 @@ const services = [
   {
     number: '02',
     title: 'AI Commercials',
+    href: '/ai-commercial-production',
     tagline: 'The commercial that shouldn\'t be possible. It is.',
     description:
       "Picture the shot. The one that's been in your head since the brief dropped — the one your last production company said would cost $300K and take three months. We start there. AI removes every physical constraint that traditionally stood between a great idea and a great frame. Impossible environments. Perfect product physics. Sequences that bend reality without breaking believability. We write the shot list first. We figure out 'how' second. Always.",
@@ -41,6 +43,7 @@ const services = [
   {
     number: '03',
     title: 'Fashion & Lifestyle',
+    href: '/ai-video-production-fashion',
     tagline: 'The shoot that doesn\'t need a location.',
     description:
       "The best fashion film you've ever seen probably cost a small fortune in locations, travel, talent, and light you could never recreate. We reproduce that feeling — that specific quality of editorial desire — without a single flight. AI gives us access to every location, every light, every aesthetic in existence. What we bring is the eye. The obsession with texture, movement, and the single frame that makes someone stop scrolling and start wanting.",
@@ -51,6 +54,7 @@ const services = [
   {
     number: '04',
     title: 'Social Content',
+    href: '/ai-social-media-video-agency',
     tagline: 'A micro-film. Every single time.',
     description:
       "We refuse to make filler content. Every piece of social content we produce is built around a story — a hook that earns attention, a middle that builds tension or desire, an ending that lands. Fifteen seconds is a story. Sixty seconds is a film. We treat them both with the same seriousness, because your audience does too. High volume. No shortcuts. No templates.",
@@ -61,6 +65,7 @@ const services = [
   {
     number: '05',
     title: 'Product Launches',
+    href: '/ai-product-video-agency',
     tagline: 'Opening scene. Make it count.',
     description:
       "A launch is an act one. The scene that establishes the world, introduces the protagonist, and makes the audience lean forward. We write it, we shoot it, and we make sure it hits. From the teaser that builds dread and anticipation, to the hero film that delivers the payoff, to the post-launch content that keeps the story moving — we own the entire narrative arc of your launch.",
@@ -70,9 +75,37 @@ const services = [
   },
 ]
 
+const serviceHubSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ruminate X AI Video Production Services',
+  itemListElement: services.map((service, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `https://ruminatex.com${service.href}`,
+    item: {
+      '@type': 'Service',
+      name: service.title,
+      description: service.description,
+      provider: {
+        '@type': 'Organization',
+        name: 'Ruminate X',
+        url: 'https://ruminatex.com',
+      },
+      areaServed: 'Worldwide',
+      serviceType: service.title,
+    },
+  })),
+}
+
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceHubSchema) }}
+      />
+
       {/* Hero */}
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What We Do</p>
@@ -82,8 +115,8 @@ export default function ServicesPage() {
         >
           SERVICES
         </h1>
-        <p className="text-[#888888] text-lg max-w-xl">
-          We don&apos;t make content. We make films. Every service starts with a story, ends with a frame you can&apos;t look away from, and is built on the belief that your brand deserves cinema — not templates.
+        <p className="text-[#888888] text-lg max-w-3xl leading-relaxed">
+          Ruminate X offers AI video production services for brands that need cinema-grade brand films, AI commercials, product videos, fashion campaigns, and story-driven social content without the cost and drag of traditional production. If you&apos;re comparing video production services, this page shows what we make, who each service fits best, and where to go next based on your campaign intent.
         </p>
       </section>
 
@@ -102,13 +135,22 @@ export default function ServicesPage() {
                     {service.title}
                   </h2>
                   <p className="text-[#ebff00] text-sm italic mb-6">{service.tagline}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-8">
                     {service.categories.map((cat) => (
                       <span key={cat} className="text-xs uppercase tracking-[0.15em] px-3 py-1 border border-[#1a1a1a] text-[#666666]">
                         {cat}
                       </span>
                     ))}
                   </div>
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-[#ebff00] hover:text-white transition-colors"
+                  >
+                    Explore {service.title}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </div>
 
                 {/* Right */}
@@ -128,13 +170,70 @@ export default function ServicesPage() {
                     </div>
                     <div>
                       <h4 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">Ideal For</h4>
-                      <p className="text-sm text-[#888888] leading-relaxed">{service.idealFor}</p>
+                      <p className="text-sm text-[#888888] leading-relaxed mb-6">{service.idealFor}</p>
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#ebff00] transition-colors"
+                      >
+                        Visit the dedicated {service.title.toLowerCase()} page
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Service path chooser */}
+      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Choose the Right Path</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 72px)' }} className="text-white leading-none mb-6">
+            START WITH THE
+            <br />
+            RIGHT SERVICE PAGE
+          </h2>
+          <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-12">
+            Different search intents need different landing pages. If you&apos;re looking for a cinematic brand film agency, AI commercial production, product video support, or social-first creative, use the page below that matches the job you need done.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {[
+              {
+                href: '/ai-brand-film-agency',
+                title: 'Brand Film Agency',
+                copy: 'For companies searching for a cinematic brand film partner with narrative depth.',
+              },
+              {
+                href: '/ai-commercial-production',
+                title: 'AI Commercial Production',
+                copy: 'For campaign teams comparing commercial production options, speed, and creative range.',
+              },
+              {
+                href: '/ai-product-video-agency',
+                title: 'Product Video Agency',
+                copy: 'For launches, demos, and product storytelling built to improve clarity and conversion.',
+              },
+              {
+                href: '/ai-social-media-video-agency',
+                title: 'Social Video Agency',
+                copy: 'For brands that need repeatable, story-led social video without template fatigue.',
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="border border-[#1a1a1a] p-6 hover:border-[#ebff00]/40 hover:bg-[#0b0b0b] transition-colors"
+              >
+                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-[#888888] leading-relaxed">{item.copy}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
