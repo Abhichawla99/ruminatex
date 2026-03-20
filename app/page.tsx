@@ -146,6 +146,65 @@ const valueProps = [
   },
 ]
 
+const intentPaths = [
+  {
+    href: '/ai-video-production-agencies',
+    eyebrow: 'Commercial Intent',
+    title: 'AI video production agency',
+    description:
+      'A strong starting point for brands comparing agencies, capabilities, process, and fit.',
+  },
+  {
+    href: '/ai-brand-film-agency',
+    eyebrow: 'Service Intent',
+    title: 'Brand film agency',
+    description:
+      'For teams looking for cinematic brand storytelling, founder films, and brand-defining creative.',
+  },
+  {
+    href: '/ai-commercial-production',
+    eyebrow: 'Service Intent',
+    title: 'AI commercial production',
+    description:
+      'For campaign teams that need ads, hero spots, and concept-driven commercial production.',
+  },
+  {
+    href: '/ai-product-video-agency',
+    eyebrow: 'Conversion Intent',
+    title: 'Product video agency',
+    description:
+      'For launches, demos, and product storytelling built to improve clarity, demand, and conversion.',
+  },
+  {
+    href: '/video-production-calgary',
+    eyebrow: 'Local Intent',
+    title: 'Video production Calgary',
+    description:
+      'For Calgary businesses searching for a local video production company with premium creative execution.',
+  },
+  {
+    href: '/best-video-production-company-calgary',
+    eyebrow: 'Comparison Intent',
+    title: 'Best video production company Calgary',
+    description:
+      'For buyers comparing top Calgary video production partners and evaluating who to shortlist.',
+  },
+  {
+    href: '/affordable-video-production-calgary',
+    eyebrow: 'Pricing Intent',
+    title: 'Affordable video production Calgary',
+    description:
+      'For brands balancing creative ambition with budget and looking for cost-efficient production options.',
+  },
+  {
+    href: '/comparison/ai-agency-vs-traditional-agency',
+    eyebrow: 'Research Intent',
+    title: 'AI agency vs traditional agency',
+    description:
+      'For decision-makers weighing speed, cost, process, and creative tradeoffs before choosing a model.',
+  },
+]
+
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 export default function HomePage() {
@@ -531,6 +590,52 @@ export default function HomePage() {
               >
                 {industry}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SEARCH INTENT HUB ───────────────────────────────────── */}
+      <section className="py-24 border-t border-[#1a1a1a] bg-[#050505]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-14">
+            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Start With the Right Page</p>
+            <h2
+              className="text-white leading-none mb-6"
+              style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 84px)' }}
+            >
+              PICK THE PATH
+              <br />
+              THAT MATCHES
+              <br />
+              YOUR SEARCH
+            </h2>
+            <p className="text-[#888888] text-lg leading-relaxed">
+              Different buyers arrive with different intent — agency research, commercial production,
+              Calgary-local vendor searches, pricing questions, or service-specific needs. These are the
+              strongest pages to start with depending on the job you need done.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {intentPaths.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group border border-[#1a1a1a] bg-[#080808] p-6 hover:border-[#ebff00]/40 hover:bg-[#0b0b0b] transition-colors duration-200"
+              >
+                <p className="text-[#ebff00] text-[11px] uppercase tracking-[0.25em] mb-3">{item.eyebrow}</p>
+                <h3 className="text-white text-xl font-semibold leading-snug mb-3 group-hover:text-[#ebff00] transition-colors duration-200">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[#888888] leading-relaxed mb-6">{item.description}</p>
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80 group-hover:text-[#ebff00] transition-colors duration-200">
+                  Explore page
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
