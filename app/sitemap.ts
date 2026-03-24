@@ -67,6 +67,7 @@ const staticRoutes: StaticRoute[] = [
 
   { path: '/ai-video-production-small-business', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/ai-video-production-agencies', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/ai-ugc-reels', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/ai-video-production-youtube-creators', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/ai-video-production-nonprofits', changeFrequency: 'monthly', priority: 0.7 },
 
