@@ -80,6 +80,7 @@ const staticRoutes: StaticRoute[] = [
   { path: '/ai-reel-creation', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/ai-video-strategy', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/ai-creative-studio', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/ai-generated-brand-content', changeFrequency: 'monthly', priority: 0.8 },
 
   { path: '/markets/ai-video-production-canada', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/markets/ai-video-production-uk', changeFrequency: 'monthly', priority: 0.8 },
