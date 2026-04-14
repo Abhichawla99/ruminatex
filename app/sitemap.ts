@@ -90,6 +90,7 @@ const staticRoutes: StaticRoute[] = [
   { path: '/ai-visual-content-for-companies', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/ai-explainer-videos', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/ai-video-for-startups', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/ai-testimonial-videos', changeFrequency: 'monthly', priority: 0.8 },
 
   { path: '/markets/ai-video-production-canada', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/markets/ai-video-production-uk', changeFrequency: 'monthly', priority: 0.8 },
