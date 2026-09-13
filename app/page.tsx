@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': ['Organization', 'ProfessionalService'],
-  '@id': 'https://ruminatex.com/#organization',
+  '@id': 'https://www.ruminatex.com/#organization',
   name: 'Ruminate X',
   alternateName: ['Ruminate X AI Video Agency', 'Ruminate X AI Video Production Studio'],
-  url: 'https://ruminatex.com',
-  logo: 'https://ruminatex.com/favicon.svg',
+  url: 'https://www.ruminatex.com',
+  logo: 'https://www.ruminatex.com/favicon.svg',
   description:
     'Ruminate X is a leading AI video agency and AI video production company specializing in cinematic brand films, AI commercials, product videos, and social content for e-commerce, fashion, DTC, and enterprise brands worldwide. We produce broadcast-quality AI video 100× faster and 10× more affordable than traditional video agencies.',
   slogan: 'No idea is impossible.',
@@ -69,9 +69,19 @@ const organizationSchema = {
     ],
   },
   sameAs: [
+    'https://www.ruminatex.com',
     'https://instagram.com/ruminate__x',
     'https://linkedin.com/company/ruminatex',
+    'https://www.100creatives.com',
+    'https://dialsheet.io',
+    'https://aifilmcontests.com',
+    'https://github.com/Abhichawla99',
   ],
+  founder: {
+    '@type': 'Person',
+    name: 'Abhi Chawla',
+    jobTitle: 'Founder',
+  },
 }
 
 const tickerItems = [

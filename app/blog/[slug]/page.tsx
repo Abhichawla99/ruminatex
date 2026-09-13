@@ -175,12 +175,12 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       '@type': 'Organization',
       name: 'Ruminate X',
-      url: 'https://ruminatex.com',
+      url: 'https://www.ruminatex.com',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Ruminate X',
-      url: 'https://ruminatex.com',
+      url: 'https://www.ruminatex.com',
     },
   }
 

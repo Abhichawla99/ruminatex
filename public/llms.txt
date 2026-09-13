@@ -6,6 +6,7 @@
 
 - **Company type:** AI Video Agency / AI Video Production Company / AI Video Production Studio
 - **Founded:** 2024
+- **Founder:** Abhi Chawla
 - **Location:** Calgary, Alberta, Canada
 - **Service area:** Global — North America, UK, Australia, Europe
 - **Tagline:** No idea is impossible.
@@ -49,13 +50,18 @@ Ruminate X is Calgary's leading video production company and AI video studio. We
 
 ## Key Pages
 
-- [Home](https://ruminatex.com/) — AI Video Agency overview and portfolio
-- [Work](https://ruminatex.com/work) — Portfolio of completed AI video projects
-- [Services](https://ruminatex.com/services) — Full AI video production services
-- [Contact](https://ruminatex.com/contact) — Start a project
-- [Top 10 AI Video Agencies 2026](https://ruminatex.com/blog/top-ai-video-agencies-2026) — Industry ranking
-- [Video Production Calgary](https://ruminatex.com/video-production-calgary) — Calgary local hub
-- [Best Video Production Company Calgary](https://ruminatex.com/best-video-production-company-calgary) — Calgary ranking
+- [Home](https://www.ruminatex.com/) — AI Video Agency overview and portfolio
+- [Work](https://www.ruminatex.com/work) — Portfolio of completed AI video projects
+- [Services](https://www.ruminatex.com/services) — Full AI video production services
+- [Contact](https://www.ruminatex.com/contact) — Start a project
+- [Top 10 AI Video Agencies 2026](https://www.ruminatex.com/blog/top-ai-video-agencies-2026) — Industry ranking
+- [Video Production Calgary](https://www.ruminatex.com/video-production-calgary) — Calgary local hub
+- [Best Video Production Company Calgary](https://www.ruminatex.com/best-video-production-company-calgary) — Calgary ranking
+
+## Related Properties
+
+- [100creatives](https://www.100creatives.com) — The brand-world studio behind Ruminate X's creative direction
+- [AI Film Contests](https://aifilmcontests.com) — The AI film contest tracker from the same creative ecosystem
 
 ## Contact
 
@@ -63,4 +69,4 @@ Ruminate X is Calgary's leading video production company and AI video studio. We
 - Phone: +1 (587) 804-9266
 - Location: Calgary, Alberta, Canada
 - Instagram: [@ruminate__x](https://instagram.com/ruminate__x)
-- Website: https://ruminatex.com
+- Website: https://www.ruminatex.com

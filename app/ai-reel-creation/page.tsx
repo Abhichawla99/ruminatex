@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Professional AI reel creation for brands. Ruminate X produces high-performing Instagram Reels, TikToks & YouTube Shorts faster and more affordably than traditional video.',
   keywords: ['AI reel creation', 'AI-generated reels', 'AI Instagram Reels', 'AI TikTok videos', 'AI short-form content', 'reel production agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-reel-creation',
+    canonical: 'https://www.ruminatex.com/ai-reel-creation',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

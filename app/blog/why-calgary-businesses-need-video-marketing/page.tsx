@@ -17,7 +17,7 @@ const articleSchema = {
   headline: "Why Every Calgary Business Needs Video Marketing in 2025",
   description: "Video marketing stats and Calgary market insights for local businesses.",
   author: { "@type": "Organization", name: "Ruminate X" },
-  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://ruminatex.com" },
+  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://www.ruminatex.com" },
   datePublished: "2026-03-08",
   dateModified: "2026-03-08",
 };

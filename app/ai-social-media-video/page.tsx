@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create high-performing AI social media video content at scale. Ruminate X produces platform-native video for Instagram, TikTok, LinkedIn, and more.',
   keywords: ['AI social media video', 'AI video for social media', 'social media video production', 'AI video content', 'social media video agency', 'AI video creation'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-social-media-video',
+    canonical: 'https://www.ruminatex.com/ai-social-media-video',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Social Media Video Production',

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Deliver personalized AI video content for every audience segment. Ruminate X creates custom video variants at scale — faster, cheaper, and more relevant.',
   keywords: ['AI video personalization', 'personalized video content', 'AI personalized ads', 'dynamic video personalization', 'custom AI video', 'video personalization agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-personalization',
+    canonical: 'https://www.ruminatex.com/ai-video-personalization',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

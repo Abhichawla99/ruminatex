@@ -99,7 +99,7 @@ const blogIndexSchema = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Ruminate X Blog',
-  url: 'https://ruminatex.com/blog',
+  url: 'https://www.ruminatex.com/blog',
   description:
     'Guides, comparisons, pricing articles, and strategy resources about AI video production, Calgary video production, and brand storytelling.',
   hasPart: [
@@ -107,13 +107,13 @@ const blogIndexSchema = {
       '@type': 'Article',
       position: index + 1,
       headline: item.title,
-      url: `https://ruminatex.com${item.href}`,
+      url: `https://www.ruminatex.com${item.href}`,
     })),
     ...blogPosts.map((post, index) => ({
       '@type': 'Article',
       position: featuredResources.length + index + 1,
       headline: post.title,
-      url: `https://ruminatex.com/blog/${post.slug}`,
+      url: `https://www.ruminatex.com/blog/${post.slug}`,
     })),
   ],
 }

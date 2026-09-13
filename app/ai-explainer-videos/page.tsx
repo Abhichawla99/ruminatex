@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create professional AI explainer videos that simplify complex ideas. Ruminate X delivers polished explainer content faster and more affordably than traditional production.',
   keywords: ['AI explainer videos', 'AI-generated explainer videos', 'explainer video agency', 'AI video explainers', 'automated explainer production', 'explainer video company'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-explainer-videos',
+    canonical: 'https://www.ruminatex.com/ai-explainer-videos',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

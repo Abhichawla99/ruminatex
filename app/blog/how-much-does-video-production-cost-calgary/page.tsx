@@ -17,7 +17,7 @@ const articleSchema = {
   headline: "How Much Does Video Production Cost in Calgary? (2025 Guide)",
   description: "Complete guide to video production costs in Calgary for 2025.",
   author: { "@type": "Organization", name: "Ruminate X" },
-  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://ruminatex.com" },
+  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://www.ruminatex.com" },
   datePublished: "2026-03-08",
   dateModified: "2026-03-08",
 };

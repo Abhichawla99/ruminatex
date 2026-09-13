@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "AI Video Production Agency | Ruminate X",
     description:
       "Cinematic AI commercials, brand films, launch videos, and social content for ambitious brands.",
-    url: "https://ruminatex.com/ai-video-production-agencies",
+    url: "https://www.ruminatex.com/ai-video-production-agencies",
   },
 };
 
@@ -127,13 +127,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://ruminatex.com/",
+      item: "https://www.ruminatex.com/",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "AI Video Production Agency",
-      item: "https://ruminatex.com/ai-video-production-agencies",
+      item: "https://www.ruminatex.com/ai-video-production-agencies",
     },
   ],
 };
@@ -141,20 +141,20 @@ const breadcrumbSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://ruminatex.com/ai-video-production-agencies#service",
+  "@id": "https://www.ruminatex.com/ai-video-production-agencies#service",
   name: "AI Video Production Agency",
   serviceType: "AI video production services",
   provider: {
     "@type": "Organization",
     name: "Ruminate X",
-    url: "https://ruminatex.com",
+    url: "https://www.ruminatex.com",
   },
   areaServed: "Worldwide",
   description:
     "Ruminate X is an AI video production agency creating cinematic commercials, brand films, product videos, and social creative for ambitious brands.",
   offers: {
     "@type": "Offer",
-    url: "https://ruminatex.com/contact",
+    url: "https://www.ruminatex.com/contact",
   },
 };
 

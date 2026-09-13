@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create AI generated brand content at scale. Ruminate X delivers on-brand videos, visuals, and creative assets faster and more affordably than traditional agencies.',
   keywords: ['AI generated brand content', 'AI brand content creation', 'AI-powered brand visuals', 'automated brand content', 'AI content for brands', 'AI brand content agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-generated-brand-content',
+    canonical: 'https://www.ruminatex.com/ai-generated-brand-content',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Content Production',

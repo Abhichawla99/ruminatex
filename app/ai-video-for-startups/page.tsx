@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI-powered video production built for startups. Get launch videos, pitch decks, product demos & social content fast — without the agency price tag.',
   keywords: ['AI video for startups', 'startup video production', 'AI video agency for startups', 'affordable startup videos', 'AI product demo video', 'startup launch video'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-for-startups',
+    canonical: 'https://www.ruminatex.com/ai-video-for-startups',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

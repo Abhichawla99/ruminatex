@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI-powered video production for restaurants. Menu showcases, social reels, promo videos & UGC-style content — delivered fast and at a fraction of traditional cost.',
   keywords: ['AI video for restaurants', 'restaurant video production', 'AI restaurant marketing', 'restaurant promo videos', 'AI food video', 'restaurant social media video'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-for-restaurants',
+    canonical: 'https://www.ruminatex.com/ai-video-for-restaurants',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

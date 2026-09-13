@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Build an AI video strategy that drives results. Ruminate X helps brands plan, produce, and scale video content with AI-powered workflows.',
   keywords: ['AI video strategy', 'AI video marketing strategy', 'video content strategy AI', 'AI-powered video planning', 'video production strategy', 'AI video roadmap'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-strategy',
+    canonical: 'https://www.ruminatex.com/ai-video-strategy',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Strategy & Production',

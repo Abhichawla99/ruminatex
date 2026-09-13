@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ruminate X is an AI content creation agency producing video, UGC, and brand visuals at scale. Faster turnarounds, lower costs, enterprise-quality output.',
   keywords: ['AI content creation agency', 'AI content agency', 'AI-powered content creation', 'AI brand content agency', 'scalable content production', 'AI video content agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-content-creation-agency',
+    canonical: 'https://www.ruminatex.com/ai-content-creation-agency',
   },
 }
 
@@ -14,11 +14,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Ruminate X',
-  url: 'https://ruminatex.com',
+  url: 'https://www.ruminatex.com',
   description: 'AI content creation agency producing video, UGC reels, brand visuals, and automated content workflows for companies worldwide.',
   serviceType: 'AI Content Creation Agency',
   areaServed: 'Worldwide',
-  sameAs: ['https://ruminatex.com'],
+  sameAs: ['https://www.ruminatex.com'],
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }

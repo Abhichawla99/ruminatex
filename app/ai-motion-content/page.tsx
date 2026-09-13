@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create scroll-stopping AI motion content for your brand. Ruminate X delivers animated videos, motion graphics, and kinetic visuals at scale.',
   keywords: ['AI motion content', 'AI motion graphics', 'animated brand content', 'AI kinetic video', 'motion design AI', 'AI animated video production'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-motion-content',
+    canonical: 'https://www.ruminatex.com/ai-motion-content',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Motion Content Production',

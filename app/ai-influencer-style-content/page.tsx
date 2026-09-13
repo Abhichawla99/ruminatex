@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Get authentic influencer-style video content powered by AI. Ruminate X produces UGC-style reels, talking-head videos & creator content for brands at scale.',
   keywords: ['AI influencer style content', 'AI UGC content', 'influencer-style video production', 'AI creator content', 'synthetic influencer video', 'AI talking head videos'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-influencer-style-content',
+    canonical: 'https://www.ruminatex.com/ai-influencer-style-content',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

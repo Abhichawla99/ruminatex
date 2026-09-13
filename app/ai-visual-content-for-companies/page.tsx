@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI visual content for companies that need stunning brand imagery, video, and motion graphics at scale. Ruminate X delivers fast, on-brand visual assets.',
   keywords: ['AI visual content for companies', 'AI visual content creation', 'AI brand visuals', 'visual content agency AI', 'AI imagery for business', 'corporate visual content AI'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-visual-content-for-companies',
+    canonical: 'https://www.ruminatex.com/ai-visual-content-for-companies',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Visual Content Production',

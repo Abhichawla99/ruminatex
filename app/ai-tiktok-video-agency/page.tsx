@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ruminate X is the AI TikTok video agency brands trust for high-performing TikToks, UGC-style reels, and viral short-form content — produced faster and cheaper.',
   keywords: ['AI TikTok video agency', 'AI TikTok ads', 'AI TikTok content', 'TikTok video production agency', 'AI short-form video agency', 'AI TikTok creative agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-tiktok-video-agency',
+    canonical: 'https://www.ruminatex.com/ai-tiktok-video-agency',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI TikTok Video Production',

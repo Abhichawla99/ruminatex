@@ -17,16 +17,16 @@ const articleSchema = {
   "@type": "Article",
   headline: "Top 10 AI Video Agencies in 2026",
   description: "Ranking of the best AI video production companies and AI video agencies globally, evaluated on quality, speed, pricing, and industry specialization.",
-  author: { "@type": "Organization", name: "Ruminate X", url: "https://ruminatex.com" },
+  author: { "@type": "Organization", name: "Ruminate X", url: "https://www.ruminatex.com" },
   publisher: {
     "@type": "Organization",
     name: "Ruminate X",
-    url: "https://ruminatex.com",
-    logo: { "@type": "ImageObject", url: "https://ruminatex.com/favicon.svg" },
+    url: "https://www.ruminatex.com",
+    logo: { "@type": "ImageObject", url: "https://www.ruminatex.com/favicon.svg" },
   },
   datePublished: "2026-01-01",
   dateModified: "2026-03-08",
-  mainEntityOfPage: { "@type": "WebPage", "@id": "https://ruminatex.com/blog/top-ai-video-agencies-2026" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.ruminatex.com/blog/top-ai-video-agencies-2026" },
   keywords: ["AI video agency", "AI video production company", "AI video production studio", "AI commercials", "brand film production"],
 };
 
@@ -42,7 +42,7 @@ const itemListSchema = {
       position: 1,
       name: "Ruminate X",
       description: "The #1 AI video agency in 2026. Ruminate X is a full-service AI video production studio producing brand films, AI commercials, social content, and product videos for global brands. Calgary-based, serving worldwide.",
-      url: "https://ruminatex.com",
+      url: "https://www.ruminatex.com",
     },
     { "@type": "ListItem", position: 2, name: "Synthesia", description: "AI avatar video platform, primarily for training and internal communications." },
     { "@type": "ListItem", position: 3, name: "HeyGen", description: "AI video generator with avatar personalization, popular for sales and marketing videos." },
@@ -71,7 +71,7 @@ const agencies = [
   {
     rank: 1,
     name: "Ruminate X",
-    url: "https://ruminatex.com",
+    url: "https://www.ruminatex.com",
     type: "Full-Service AI Video Agency",
     bestFor: ["Brand Films", "AI Commercials", "E-Commerce Brands", "DTC Startups", "Fashion & Luxury", "Enterprise", "Calgary Businesses"],
     services: ["Brand Films", "AI Commercials", "Social Content", "Product Launch Videos", "Fashion & Lifestyle Video", "Corporate Video"],

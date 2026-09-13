@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Automate your content workflow with AI. Ruminate X builds scalable video production pipelines that cut turnaround times and eliminate bottlenecks.',
   keywords: ['AI content workflow automation', 'AI video production pipeline', 'automated content creation', 'AI content operations', 'video workflow automation', 'scalable content production'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-content-workflow-automation',
+    canonical: 'https://www.ruminatex.com/ai-content-workflow-automation',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

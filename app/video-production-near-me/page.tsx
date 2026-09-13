@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://ruminatex.com/video-production-near-me",
+  "@id": "https://www.ruminatex.com/video-production-near-me",
   name: "Ruminate X — Video Production Near Me (Calgary)",
   description: "AI-powered video production studio in Calgary, Alberta. Serving all of YYC and surrounding areas.",
-  url: "https://ruminatex.com/video-production-near-me",
+  url: "https://www.ruminatex.com/video-production-near-me",
   telephone: "+15878049266",
   email: "abhi@paperkites.co",
   address: {

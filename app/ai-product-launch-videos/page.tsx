@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI product launch videos that ship in days, not months. Hero films, teaser reels, launch ads, and demo content — produced at AI speed for modern brands.',
   keywords: ['AI product launch videos', 'AI launch video agency', 'AI product teaser videos', 'AI product reveal video', 'AI launch day content', 'AI product launch ads'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-product-launch-videos',
+    canonical: 'https://www.ruminatex.com/ai-product-launch-videos',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   serviceType: 'AI Video Production',
   areaServed: 'Worldwide',

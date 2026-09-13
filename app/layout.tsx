@@ -19,7 +19,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ruminatex.com'),
+  metadataBase: new URL('https://www.ruminatex.com'),
   title: {
     default: 'Ruminate X | AI Video Production Agency | Cinematic Brand Films',
     template: '%s | Ruminate X',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
     siteName: 'Ruminate X',
     title: 'Ruminate X | AI Video Production Agency | Cinematic Brand Films',
     description:

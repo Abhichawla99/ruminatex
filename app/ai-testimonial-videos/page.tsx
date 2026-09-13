@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI testimonial videos that turn customer stories into scroll-stopping social proof. Ruminate X produces authentic, on-brand testimonial content fast.',
   keywords: ['AI testimonial videos', 'AI customer testimonial video', 'AI-powered testimonial production', 'testimonial video agency', 'AI case study videos', 'customer story video production'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-testimonial-videos',
+    canonical: 'https://www.ruminatex.com/ai-testimonial-videos',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Testimonial Video Production',

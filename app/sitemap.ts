@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog'
 import { locations } from '@/lib/locations'
 
-const siteUrl = 'https://ruminatex.com'
+const siteUrl = 'https://www.ruminatex.com'
 const lastModified = new Date('2026-03-17T17:30:00.000Z')
 
 type SitemapPriority = 0.6 | 0.7 | 0.8 | 0.9 | 1

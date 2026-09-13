@@ -41,7 +41,7 @@ export default async function CityPage({ params }: Props) {
     provider: {
       '@type': 'Organization',
       name: 'Ruminate X',
-      url: 'https://ruminatex.com',
+      url: 'https://www.ruminatex.com',
     },
     serviceType: 'AI Video Production',
     description: `AI-powered cinematic brand video production serving ${location.city} brands.`,

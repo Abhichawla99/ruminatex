@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Repurpose long-form video into short clips, reels, ads & social posts with AI. Ruminate X multiplies your content output without multiplying your budget.',
   keywords: ['AI video content repurposing', 'video repurposing service', 'repurpose video content', 'AI content repurposing', 'video content multiplication', 'AI video clips'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-content-repurposing',
+    canonical: 'https://www.ruminatex.com/ai-video-content-repurposing',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

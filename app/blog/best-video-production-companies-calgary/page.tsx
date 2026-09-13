@@ -17,7 +17,7 @@ const articleSchema = {
   headline: "Best Video Production Companies in Calgary 2025",
   description: "Comparing Calgary's top video production companies on price, speed, and quality.",
   author: { "@type": "Organization", name: "Ruminate X" },
-  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://ruminatex.com" },
+  publisher: { "@type": "Organization", name: "Ruminate X", url: "https://www.ruminatex.com" },
   datePublished: "2026-03-08",
   dateModified: "2026-03-08",
 };

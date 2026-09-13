@@ -26,7 +26,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Ruminate X — Calgary's Best Video Production Company",
   description: "Calgary's top-rated AI video production studio. Broadcast-quality brand films, commercials, and social content.",
-  url: "https://ruminatex.com/best-video-production-company-calgary",
+  url: "https://www.ruminatex.com/best-video-production-company-calgary",
   telephone: "+15878049266",
   email: "abhi@paperkites.co",
   address: { "@type": "PostalAddress", addressLocality: "Calgary", addressRegion: "AB", addressCountry: "CA" },

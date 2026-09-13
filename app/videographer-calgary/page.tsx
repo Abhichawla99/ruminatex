@@ -16,7 +16,7 @@ const schema = {
   "@type": "LocalBusiness",
   name: "Ruminate X — Videographer Calgary",
   description: "AI-powered video production for Calgary businesses. Better results than a freelance videographer, at lower cost.",
-  url: "https://ruminatex.com/videographer-calgary",
+  url: "https://www.ruminatex.com/videographer-calgary",
   telephone: "+15878049266",
   address: { "@type": "PostalAddress", addressLocality: "Calgary", addressRegion: "AB", addressCountry: "CA" },
   geo: { "@type": "GeoCoordinates", latitude: "51.0447", longitude: "-114.0719" },

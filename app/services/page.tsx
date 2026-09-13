@@ -82,7 +82,7 @@ const serviceHubSchema = {
   itemListElement: services.map((service, index) => ({
     '@type': 'ListItem',
     position: index + 1,
-    url: `https://ruminatex.com${service.href}`,
+    url: `https://www.ruminatex.com${service.href}`,
     item: {
       '@type': 'Service',
       name: service.title,
@@ -90,7 +90,7 @@ const serviceHubSchema = {
       provider: {
         '@type': 'Organization',
         name: 'Ruminate X',
-        url: 'https://ruminatex.com',
+        url: 'https://www.ruminatex.com',
       },
       areaServed: 'Worldwide',
       serviceType: service.title,

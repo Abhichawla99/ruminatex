@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create high-performing AI short form video content at scale. Ruminate X produces TikToks, Reels, and YouTube Shorts that stop the scroll and drive results.',
   keywords: ['AI short form video', 'AI reels production', 'AI TikTok videos', 'AI YouTube Shorts', 'short form video agency', 'AI vertical video content'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-short-form-video',
+    canonical: 'https://www.ruminatex.com/ai-short-form-video',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

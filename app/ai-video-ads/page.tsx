@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create scroll-stopping AI video ads for Meta, YouTube, TikTok & LinkedIn. Ruminate X delivers high-converting ad creatives faster and at a fraction of the cost.',
   keywords: ['AI video ads', 'AI-generated video ads', 'AI ad creatives', 'AI video advertising', 'automated video ad production', 'AI video ads agency'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-ads',
+    canonical: 'https://www.ruminatex.com/ai-video-ads',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',

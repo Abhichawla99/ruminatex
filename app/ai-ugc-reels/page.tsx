@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'AI UGC reels that look real, convert like crazy, and ship in days — not weeks. Ruminate X builds scroll-stopping user-generated content at scale for modern brands.',
   keywords: ['AI UGC reels', 'AI-generated UGC content', 'AI UGC video agency', 'AI user generated content reels', 'AI UGC ads', 'UGC style AI video'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-ugc-reels',
+    canonical: 'https://www.ruminatex.com/ai-ugc-reels',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   serviceType: 'AI Video Production',
   areaServed: 'Worldwide',

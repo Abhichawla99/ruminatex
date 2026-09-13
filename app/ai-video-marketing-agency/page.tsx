@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ruminate X is an AI video marketing agency that combines creative strategy with AI production to deliver scroll-stopping video campaigns — fast.',
   keywords: ['AI video marketing agency', 'AI video marketing', 'video marketing agency AI', 'AI-powered video marketing', 'AI video campaign agency', 'video marketing automation'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-video-marketing-agency',
+    canonical: 'https://www.ruminatex.com/ai-video-marketing-agency',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Marketing',

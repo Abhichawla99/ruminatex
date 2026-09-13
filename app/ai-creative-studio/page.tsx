@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Ruminate X is your AI creative studio — producing brand films, UGC reels, ads, and visual content at speed and scale with human creative direction.',
   keywords: ['AI creative studio', 'AI video studio', 'AI content studio', 'AI-powered creative agency', 'AI video production studio', 'creative studio AI'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-creative-studio',
+    canonical: 'https://www.ruminatex.com/ai-creative-studio',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Creative Production',

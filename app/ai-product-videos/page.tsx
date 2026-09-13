@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Create stunning AI product videos that showcase features, drive conversions, and scale across platforms. Ruminate X delivers product video production faster.',
   keywords: ['AI product videos', 'AI product video production', 'product demo videos', 'AI-generated product videos', 'product showcase videos', 'ecommerce product videos'],
   alternates: {
-    canonical: 'https://ruminatex.com/ai-product-videos',
+    canonical: 'https://www.ruminatex.com/ai-product-videos',
   },
 }
 
@@ -18,7 +18,7 @@ const jsonLd = {
   provider: {
     '@type': 'Organization',
     name: 'Ruminate X',
-    url: 'https://ruminatex.com',
+    url: 'https://www.ruminatex.com',
   },
   areaServed: 'Worldwide',
   serviceType: 'AI Video Production',
