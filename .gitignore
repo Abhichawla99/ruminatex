@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SEO routine: private playbook and ledger (this repo is public), and its build worktree
+/references/
+/.worktrees/

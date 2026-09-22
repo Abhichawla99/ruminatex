@@ -7,6 +7,12 @@ export interface PortfolioItem {
   description: string
   featured: boolean
   tags: string[]
+  /** From the YouTube watch page ("uploadDate"). VideoObject schema needs it. */
+  uploadDate?: string
+  /** From the YouTube watch page ("lengthSeconds"). */
+  durationSeconds?: number
+  /** 'client' only once Abhi confirms it was paid client work. Pages call a film client work only when this says so. */
+  kind?: 'client' | 'spec' | 'original'
 }
 
 export const portfolioItems: PortfolioItem[] = [
@@ -19,6 +25,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'An AI short film celebrating gratitude for everyone who makes the Calgary Stampede possible.',
     featured: true,
     tags: ['Brand Film', 'Cinematic', 'Cultural'],
+    uploadDate: '2026-03-07T15:54:09-08:00',
+    durationSeconds: 56,
   },
   {
     id: '2',
@@ -29,6 +37,9 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'A cinematic AI short film capturing the raw passion and beauty of trail running.',
     featured: true,
     tags: ['Brand Film', 'Lifestyle', 'AI Production'],
+    uploadDate: '2026-03-07T18:10:07-08:00',
+    durationSeconds: 96,
+    kind: 'original',
   },
   {
     id: '3',
@@ -39,6 +50,9 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'A cinematic spec commercial for Keen Footwear — bold visuals, outdoor soul.',
     featured: true,
     tags: ['Commercial', 'Footwear', 'Outdoor'],
+    uploadDate: '2026-03-07T18:12:19-08:00',
+    durationSeconds: 32,
+    kind: 'spec',
   },
   {
     id: '4',
@@ -49,6 +63,8 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Scroll-stopping AI short film for Keen Hiking Shoes — built for the trail.',
     featured: true,
     tags: ['Social Content', 'Footwear', 'Short Film'],
+    uploadDate: '2026-03-07T18:14:37-08:00',
+    durationSeconds: 42,
   },
 ]
 

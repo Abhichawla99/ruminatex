@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog'
 import { locations } from '@/lib/locations'
+import { SEO_PAGES } from '@/lib/seo/pages'
 
 const siteUrl = 'https://www.ruminatex.com'
 const lastModified = new Date('2026-03-17T17:30:00.000Z')
@@ -158,12 +159,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const seoUpdated = new Map(SEO_PAGES.map((page) => [page.path, new Date(`${page.updated}T12:00:00Z`)]))
+
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${siteUrl}${route.path}`,
-    lastModified,
+    lastModified: seoUpdated.get(route.path) ?? lastModified,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }))
 
-  return [...staticEntries, ...locationRoutes, ...blogRoutes]
+  const listed = new Set<string>(staticRoutes.map((route) => route.path))
+  const seoEntries: MetadataRoute.Sitemap = SEO_PAGES.filter((page) => !listed.has(page.path)).map((page) => ({
+    url: `${siteUrl}${page.path}`,
+    lastModified: new Date(`${page.updated}T12:00:00Z`),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  return [...staticEntries, ...seoEntries, ...locationRoutes, ...blogRoutes]
 }
