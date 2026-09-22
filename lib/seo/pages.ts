@@ -17,4 +17,21 @@ export type SeoPage = {
   updated: string
 }
 
-export const SEO_PAGES: SeoPage[] = []
+export const SEO_PAGES: SeoPage[] = [
+  {
+    path: '/how-we-make-an-ai-brand-film',
+    title: 'How We Make an AI Brand Film: Brief to Final Cut',
+    question: 'how are AI brand films made',
+    kind: 'guide',
+    published: '2026-09-14',
+    updated: '2026-09-22',
+  },
+  {
+    path: '/ai-video-production-agencies',
+    title: 'AI Video Production Agency: How to Hire One',
+    question: 'ai video production agency: what am I hiring and how do I pick one',
+    kind: 'service',
+    published: '2026-03-08',
+    updated: '2026-09-22',
+  },
+]

@@ -78,6 +78,7 @@ export default function CommercialProductionPage() {
             <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-8">WHAT MAKES AI<br />COMMERCIAL<br />PRODUCTION<br />DIFFERENT</h2>
             <p className="text-[#888888] leading-relaxed mb-6">Traditional commercial production is constrained by physics, budget, and logistics. Every impossible shot requires specialists, permits, equipment, and weeks of coordination. AI removes every one of those constraints.</p>
             <p className="text-[#888888] leading-relaxed">The commercial you could never afford to make, the shot your director said was impossible, the environment that doesn&apos;t exist — all of it is now achievable on a realistic marketing budget.</p>
+            <p className="text-[#888888] leading-relaxed mt-6">If you are comparing studios before you brief one, <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">how to hire an AI video production agency</Link> lists the shots to ask for in a reel (a face turning, a hand on the product, a logo on screen) and the seven questions to ask before you sign.</p>
           </div>
           <div className="space-y-4">
             {[

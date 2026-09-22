@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { FOUNDER, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
   title: 'About | Ruminate X — Cinematic Story Studio Making Films for Brands',
@@ -14,6 +15,16 @@ export const metadata: Metadata = {
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+
+const founderSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': FOUNDER.id,
+  name: FOUNDER.name,
+  jobTitle: FOUNDER.jobTitle,
+  url: FOUNDER.url,
+  worksFor: { '@id': SITE.orgId },
+}
 
 const values = [
   {
@@ -98,6 +109,35 @@ export default function AboutPage() {
                 and everywhere a great story deserves to be told.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section id="founder" className="border-t border-[#1a1a1a] py-24">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }} />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div>
+            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Founder</p>
+            <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 75px)' }} className="text-white leading-none">
+              {FOUNDER.name}
+            </h2>
+          </div>
+          <div className="space-y-6 text-[#888888] leading-relaxed">
+            <p>
+              {FOUNDER.name} founded {SITE.name} in {SITE.city} in {SITE.foundingYear}, and writes the studio&apos;s guides on
+              how AI brand films and commercials get made. {PRODUCTION.summary}
+            </p>
+            <p>
+              The same creative group runs{' '}
+              {RELATED.map((r, i) => (
+                <span key={r.name}>
+                  {i > 0 && ' and '}
+                  <a href={r.url} className="text-[#ebff00] hover:underline" rel="noopener">{r.name}</a>, {r.role}
+                </span>
+              ))}
+              . To talk about a film, email <a href={`mailto:${SITE.email}`} className="text-[#ebff00] hover:underline">{SITE.email}</a>.
+            </p>
           </div>
         </div>
       </section>

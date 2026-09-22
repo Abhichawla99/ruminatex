@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
+import { FOUNDER, SITE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
   title: 'Ruminate X — Cinema-Grade Brand Films & Story-Driven AI Commercials',
   description:
-    'Ruminate X is an AI video agency that makes cinema-grade, story-driven brand films and AI commercials for brands that refuse to be forgettable. We treat every brief like a film. No crews. No limits. Delivered in 48 hours.',
+    'Ruminate X is an AI video agency that makes cinema-grade, story-driven brand films and AI commercials for brands that refuse to be forgettable. We treat every brief like a film. No crews. No limits.',
 }
 
 const organizationSchema = {
@@ -18,7 +19,7 @@ const organizationSchema = {
   url: 'https://www.ruminatex.com',
   logo: 'https://www.ruminatex.com/favicon.svg',
   description:
-    'Ruminate X is a leading AI video agency and AI video production company specializing in cinematic brand films, AI commercials, product videos, and social content for e-commerce, fashion, DTC, and enterprise brands worldwide. We produce broadcast-quality AI video 100× faster and 10× more affordable than traditional video agencies.',
+    'Ruminate X is an AI film studio in Calgary, Canada, that makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame it delivers is made with generative AI. There are no film crews, sets or location shoots.',
   slogan: 'No idea is impossible.',
   email: 'abhi@paperkites.co',
   telephone: '+15878049266',
@@ -68,19 +69,14 @@ const organizationSchema = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fashion & Lifestyle Video', description: 'Editorial AI video for fashion and luxury brands' } },
     ],
   },
-  sameAs: [
-    'https://www.ruminatex.com',
-    'https://instagram.com/ruminate__x',
-    'https://linkedin.com/company/ruminatex',
-    'https://www.100creatives.com',
-    'https://dialsheet.io',
-    'https://aifilmcontests.com',
-    'https://github.com/Abhichawla99',
-  ],
+  // sameAs lists only Ruminate X's own profiles. Sibling studios are linked in copy, not here.
+  sameAs: [SITE.instagram],
   founder: {
     '@type': 'Person',
-    name: 'Abhi Chawla',
-    jobTitle: 'Founder',
+    '@id': FOUNDER.id,
+    name: FOUNDER.name,
+    jobTitle: FOUNDER.jobTitle,
+    url: FOUNDER.url,
   },
 }
 

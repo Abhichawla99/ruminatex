@@ -82,6 +82,9 @@ export default function Page() {
             <p className="text-[#888888] text-lg leading-relaxed">
               For <strong className="text-[#ebff00]">90% of business video needs</strong> — brand films, product demos, explainers, social content, training, commercials — an AI video agency delivers equal or better quality at <strong className="text-[#ebff00]">10–20x lower cost</strong> and <strong className="text-[#ebff00]">10x faster</strong>. Traditional agencies are built for a world that no longer exists.
             </p>
+            <p className="text-[#888888] text-lg leading-relaxed mt-6">
+              If you have decided to hire one, <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">how to hire an AI video production agency</Link> covers what moves the price, what still breaks in AI footage, who owns the film, and the questions to ask before you sign.
+            </p>
           </div>
         </div>
       </section>

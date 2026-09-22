@@ -1,398 +1,250 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import Link from 'next/link'
+import {
+  Guide,
+  GuideAnswer,
+  GuideCta,
+  GuideFaq,
+  GuideFilm,
+  GuideFit,
+  GuideHero,
+  GuideRelated,
+  GuideSection,
+  GuideTable,
+  guideMetadata,
+} from '@/components/guide/Guide'
+import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
-export const metadata: Metadata = {
-  title: "AI Video Production Agency | Cinematic AI Commercials & Brand Films",
+const PAGE = {
+  path: '/ai-video-production-agencies',
+  title: 'AI Video Production Agency: How to Hire One',
   description:
-    "Looking for an AI video production agency? Ruminate X creates cinematic AI commercials, brand films, product videos, and social content for brands that need premium creative without traditional production drag.",
+    'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
+  published: '2026-03-08',
+  updated: '2026-09-22',
   keywords: [
-    "AI video production agency",
-    "AI video production agencies",
-    "AI commercial production agency",
-    "AI brand film agency",
-    "AI product video agency",
-    "AI social media video agency",
+    'ai video production agency',
+    'ai video production company',
+    'ai video agency',
+    'ai video production companies',
+    'ai video production agencies',
+    'best ai video production agency',
+    'ai video agency pricing',
   ],
-  openGraph: {
-    title: "AI Video Production Agency | Ruminate X",
-    description:
-      "Cinematic AI commercials, brand films, launch videos, and social content for ambitious brands.",
-    url: "https://www.ruminatex.com/ai-video-production-agencies",
-  },
-};
+}
 
-const displayStyle = { fontFamily: "var(--font-bebas-neue), sans-serif" };
+const studio = SITE.name
+const offerList = OFFERS.map((o) => o.name.toLowerCase()).join(', ')
+const hundred = RELATED.find((r) => r.name === '100creatives')!
 
-const evaluationPoints = [
+const FAQS = [
   {
-    title: "Creative standard",
-    copy:
-      "Most AI video production agencies can generate clips. Very few can build a real campaign narrative, visual system, and editorial standard that feels premium from first frame to final cut.",
+    q: 'What does an AI video production agency do?',
+    a: 'An AI video production agency takes a brief and delivers a finished film: concept, script, storyboards, the generated shots, edit, sound, color grade and the cuts for each platform. The client never touches an AI tool. The difference from a traditional production company is that the footage is generated instead of filmed, so there is no crew, set or location.',
   },
   {
-    title: "Speed without generic output",
-    copy:
-      "Fast delivery only matters if the work still feels considered. The right AI video agency shortens production timelines without giving you template-looking creative.",
+    q: 'How much does it cost to produce an AI video with an agency?',
+    a: `Agencies price by the film, and the price moves with length, the number of distinct scenes, how exactly a real product or person has to be reproduced, the number of versions and languages, and how many review rounds your legal or medical team needs. ${studio} quotes each project from the brief and does not publish a price list. A self-serve AI tool costs far less, but you do the directing, generating and editing yourself.`,
   },
   {
-    title: "Commercial usefulness",
-    copy:
-      "A strong agency should know when to make a hero brand film, when to build a conversion-focused product video, and when to create social content built for repeatable distribution.",
+    q: 'What is the difference between an AI video agency and an AI video tool?',
+    a: 'A tool such as Runway, Veo, Kling, Sora, HeyGen or Synthesia gives you a generator and leaves the film to you. An agency gives you the finished film and takes responsibility for it: it writes, directs, reruns the shots that fail, edits, adds sound and grades. Hire a tool if you have an editor with time; hire an agency if you need a finished commercial or brand film on a deadline.',
   },
   {
-    title: "Production flexibility",
-    copy:
-      "The best AI production partners can scale from one launch film to ongoing ad creative, multilingual versions, product variations, and cross-channel campaign assets.",
+    q: 'Who owns a video made by an AI video production agency?',
+    a: 'Your contract decides what the agency transfers to you, so it should assign the final film and license any music and voice. Copyright itself is less settled: the US Copyright Office concluded in January 2025 that prompts alone do not make someone the author of AI output, while human work such as the script, the selection and arrangement of shots, and the edit can be protected. This is not legal advice; ask your own lawyer.',
   },
-];
+  {
+    q: 'Will an AI-made commercial look like AI?',
+    a: 'It can, and the weak points are known: faces that drift between shots, hands, product packaging, logos, on-screen text and continuity from one shot to the next. A good agency regenerates those shots until they hold, and composites the real logo, label and type in the edit instead of trusting the generator to draw them. Ask to see those shots in their reel before you hire.',
+  },
+  {
+    q: 'When should a company not hire an AI video production agency?',
+    a: 'When the film needs real people on camera (your own staff, a real doctor, a customer speaking for themselves), when it is documentary or event coverage, when the budget only fits a self-serve tool, or when your audience is likely to reject visibly AI-made content. A traditional production company or a tool will serve those better.',
+  },
+]
 
-const servicePaths = [
-  {
-    title: "AI Brand Film Agency",
-    href: "/ai-brand-film-agency",
-    desc: "For companies that need a cinematic brand story, not just another promo video.",
-  },
-  {
-    title: "AI Commercial Production",
-    href: "/ai-commercial-production",
-    desc: "For paid campaigns, launch films, and high-impact commercials built to look expensive.",
-  },
-  {
-    title: "AI Product Video Agency",
-    href: "/ai-product-video-agency",
-    desc: "For demos, launch assets, feature storytelling, and conversion-focused product creative.",
-  },
-  {
-    title: "AI Social Media Video Agency",
-    href: "/ai-social-media-video-agency",
-    desc: "For brands that need repeatable short-form creative without sacrificing story or polish.",
-  },
-];
-
-const useCases = [
-  "Launch campaigns that need a hero film plus cutdowns",
-  "E-commerce brands that want premium ads without premium production drag",
-  "Product marketing teams that need demos, explainers, and feature reveals",
-  "Creative teams testing multiple angles, hooks, and visual concepts quickly",
-  "Brands expanding into multilingual campaigns and regional variations",
-  "Agencies that need a white-label production partner behind the scenes",
-];
-
-const faqItems = [
-  {
-    question: "What does an AI video production agency do?",
-    answer:
-      "An AI video production agency plans, scripts, designs, and delivers video campaigns using AI-assisted production workflows instead of traditional crews, locations, and long post-production timelines. The best agencies still lead with strategy, storytelling, editing, and brand taste — AI is the production engine, not the creative substitute.",
-  },
-  {
-    question: "When should a brand hire an AI video production agency instead of a traditional production company?",
-    answer:
-      "An AI video production agency is a strong fit when you need speed, creative flexibility, multiple versions, or cinematic output without the cost and scheduling drag of a traditional shoot. Traditional production still makes sense for some live-action scenarios, but many commercial, product, social, and launch briefs now perform better with an AI-native workflow.",
-  },
-  {
-    question: "How do I choose between AI video production agencies?",
-    answer:
-      "Compare agencies on creative quality, narrative thinking, consistency, editing polish, speed, revision flexibility, and their ability to support your actual campaign goals. Avoid choosing only on price. The cheapest AI video agency often produces the most replaceable work.",
-  },
-  {
-    question: "What kinds of videos can Ruminate X create?",
-    answer:
-      "Ruminate X produces cinematic brand films, AI commercials, product videos, launch assets, social media campaigns, multilingual voiceover content, and supporting creative for e-commerce, SaaS, fashion, hospitality, real estate, and other growth-focused brands.",
-  },
-  {
-    question: "Do you work directly with brands and with agencies?",
-    answer:
-      "Yes. We work directly with in-house marketing teams and founders, and we also support agencies that need a white-label AI video production partner for client delivery.",
-  },
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.ruminatex.com/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "AI Video Production Agency",
-      item: "https://www.ruminatex.com/ai-video-production-agencies",
-    },
-  ],
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://www.ruminatex.com/ai-video-production-agencies#service",
-  name: "AI Video Production Agency",
-  serviceType: "AI video production services",
-  provider: {
-    "@type": "Organization",
-    name: "Ruminate X",
-    url: "https://www.ruminatex.com",
-  },
-  areaServed: "Worldwide",
-  description:
-    "Ruminate X is an AI video production agency creating cinematic commercials, brand films, product videos, and social creative for ambitious brands.",
-  offers: {
-    "@type": "Offer",
-    url: "https://www.ruminatex.com/contact",
-  },
-};
+export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    <Guide page={PAGE} faqs={FAQS} films={['LYA3Do3KEN0', 'Zytga7zsShI']}>
+      <GuideHero
+        eyebrow="Hiring an AI video production agency"
+        title="AI video production agency: what you are hiring"
+        dek="For the marketing lead, founder or agency producer who has decided to try AI for a commercial or brand film and needs to pick who makes it."
+        updated={PAGE.updated}
       />
 
-      <main className="min-h-screen">
-        <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">
-            AI Video Production Agency
-          </p>
-          <h1
-            style={{ ...displayStyle, fontSize: "clamp(50px, 10vw, 130px)" }}
-            className="text-white leading-none mb-6"
-          >
-            CINEMATIC AI VIDEO
-            <br />
-            <span style={{ color: "#ebff00" }}>FOR BRANDS</span>
-            <br />
-            THAT NEED TO MOVE.
-          </h1>
-          <p className="text-[#888888] text-xl max-w-3xl leading-relaxed mt-8">
-            If you&apos;re comparing AI video production agencies, start here: Ruminate X creates
-            cinematic brand films, AI commercials, product videos, and social content for brands
-            that need premium creative quality without the cost, drag, and constraints of
-            traditional production.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <Link
-              href="/contact"
-              className="bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors inline-block text-center"
-            >
-              Start a Project
-            </Link>
-            <Link
-              href="/work"
-              className="border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors inline-block text-center"
-            >
-              See Our Work
-            </Link>
-          </div>
-        </section>
+      <GuideAnswer>
+        <p>
+          An AI video production agency writes, directs and delivers a finished film whose footage is generated with AI
+          instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
+          shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
+          finished commercial or brand film and have no time or editor to make it with a tool yourself. Hire someone else
+          when the film needs real people on camera.
+        </p>
+      </GuideAnswer>
 
-        <section className="border-t border-[#1a1a1a] py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What to look for</p>
-              <h2
-                style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 64px)" }}
-                className="text-white leading-none mb-6"
-              >
-                NOT ALL AI VIDEO
-                <br />
-                AGENCIES ARE BUILT
-                <br />
-                THE SAME.
-              </h2>
-              <p className="text-[#888888] text-lg leading-relaxed max-w-2xl">
-                Search results for AI video production agencies are filling up fast, but the market is
-                split between cheap prompt vendors and real creative partners. If the goal is serious
-                brand growth, you need the second type.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {evaluationPoints.map((item) => (
-                <div
-                  key={item.title}
-                  className="border border-[#1a1a1a] p-6 hover:border-[#ebff00]/20 transition-colors"
-                >
-                  <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-[#888888] text-sm leading-relaxed">{item.copy}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      <GuideSection eyebrow="Three kinds of company" title="Agency, tool or production company">
+        <p>
+          The search results for &quot;ai video production company&quot; mix three different things, and they are priced and
+          staffed differently.
+        </p>
+        <GuideTable
+          caption="How the three options differ for a brand buyer. Compiled by Ruminate X from the companies ranking for these searches, September 2026."
+          head={['', 'AI video tool', 'AI video production agency', 'Production company that added AI']}
+          rows={[
+            ['Examples', 'Runway, Veo, Kling, Sora, HeyGen, Synthesia', `Studios such as ${studio}`, 'Traditional crews offering AI shots or AI post'],
+            ['What you get', 'A generator and a subscription', 'A finished film, cut for each platform', 'A shoot, with some shots generated or extended'],
+            ['Who directs', 'You', 'The agency', 'The production company'],
+            ['Real people on camera', 'Avatars only', 'No, or disclosed AI presenters', 'Yes'],
+            ['Where it fits', 'Volume social, drafts, internal video', 'Commercials and brand films without a shoot', 'Films that need real people or places'],
+          ]}
+        />
+        <p>
+          {PRODUCTION.summary} That makes {studio} the middle column: it makes {offerList}.
+        </p>
+      </GuideSection>
 
-        <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Why Ruminate X</p>
-            <h2
-              style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 72px)" }}
-              className="text-white leading-none mb-8"
-            >
-              THE AI VIDEO AGENCY
-              <br />
-              FOR AMBITIOUS BRANDS.
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-              {[
-                ["Cinema-grade creative", "We build work that feels directed, edited, and intentionally art-led — not mass generated."],
-                ["Fast commercial output", "Launch films, ad variations, social cutdowns, and product storytelling without the normal production lag."],
-                ["Built for conversion and brand", "We care about visual taste and business outcomes at the same time."],
-              ].map(([title, copy]) => (
-                <div key={title} className="border border-[#1a1a1a] p-6">
-                  <h3 className="text-white font-semibold mb-2">{title}</h3>
-                  <p className="text-sm text-[#888888] leading-relaxed">{copy}</p>
-                </div>
-              ))}
-            </div>
-            <p className="text-[#888888] text-lg leading-relaxed max-w-4xl">
-              Ruminate X is the right fit when you want a team that can think like strategists,
-              write like copywriters, design like art directors, and execute like a modern AI-native
-              production studio. We create work for launches, campaigns, product storytelling, and
-              always-on content systems — without turning your brand into generic AI sludge.
-            </p>
-          </div>
-        </section>
+      <GuideSection eyebrow="The work" title="What an AI video agency does that a generator does not" alt>
+        <p>
+          A generator returns a few seconds of footage per prompt, and many takes are unusable. The agency&apos;s job is
+          everything that turns a pile of takes into a film a brand can air. At {studio} the order is fixed:
+        </p>
+        <ol>
+          <li>
+            <strong>Brief.</strong> The product, the audience, the one message and where the film will run. Nothing is
+            generated until the brief is approved.
+          </li>
+          <li>
+            <strong>Brand world.</strong> Palette, light, texture, camera language and casting, locked before the first
+            frame so shot 40 matches shot 4. <a href={hundred.url}>{hundred.name}</a>, {hundred.role}, leads this stage.
+          </li>
+          <li>
+            <strong>Script and boards.</strong> Every shot gets framing, movement and duration on paper. Most of the
+            quality is decided here.
+          </li>
+          <li>
+            <strong>Generation passes.</strong> Each shot is generated, checked against the board and regenerated.
+            Faces, hands, product details and brand colors get the most passes.
+          </li>
+          <li>
+            <strong>Edit, sound, grade.</strong> The takes are cut to the script, then sound, music and voice go in and
+            one grade pulls the shots into one film.
+          </li>
+          <li>
+            <strong>Delivery.</strong> A master and the cuts each platform needs.
+          </li>
+        </ol>
+        <p>
+          The full pipeline, stage by stage, is on{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+        </p>
+      </GuideSection>
 
-        <section className="border-t border-[#1a1a1a] py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Service paths</p>
-            <h2
-              style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 64px)" }}
-              className="text-white leading-none mb-6"
-            >
-              START WITH THE PAGE
-              <br />
-              THAT MATCHES YOUR INTENT.
-            </h2>
-            <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-12">
-              Strong SEO starts with intent match. If you&apos;re looking for a specific kind of AI
-              video production agency, use the route below that best fits the job.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {servicePaths.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="border border-[#1a1a1a] p-6 hover:border-[#ebff00]/30 hover:bg-[#0d0d0d] transition-colors"
-                >
-                  <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-[#888888] leading-relaxed">{item.desc}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+      <GuideSection eyebrow="The weak points" title="What still breaks in AI footage, and what a good agency does about it">
+        <GuideTable
+          caption="Where generated footage fails most often, and the fix to expect from an agency. These are the same points the Ruminate X pipeline gives extra generation passes."
+          head={['Problem', 'What you see', 'What the agency should do']}
+          rows={[
+            ['Faces', 'A character looks slightly different from shot to shot', 'Lock the character in the brand-world stage and regenerate every shot that drifts'],
+            ['Hands', 'Extra fingers, hands that merge with the product', 'Board around hands where possible; rerun the rest'],
+            ['Your product and packaging', 'A label that is almost right, a bottle the wrong shape', 'Start from real product images and correct or composite the pack in the edit'],
+            ['Logos and on-screen text', 'Warped letters, invented words', 'Add the real logo and all type in the edit, never trust the generator to draw them'],
+            ['Continuity', 'Light, wardrobe or props change between cuts', 'Fix them in the boards and the grade; regenerate what cannot be graded out'],
+          ]}
+        />
+        <p>
+          When you review an agency&apos;s reel, look for exactly these shots. A reel of landscapes and slow pushes says
+          little about how they will handle your pack shot.
+        </p>
+        <GuideFilm
+          id="LYA3Do3KEN0"
+          caption="The Love of Trail Running, an original Ruminate X film (not client work). Watch the runners' faces and footing across cuts."
+        />
+      </GuideSection>
 
-        <section className="border-t border-[#1a1a1a] py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Best use cases</p>
-              <h2
-                style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 64px)" }}
-                className="text-white leading-none mb-6"
-              >
-                WHEN AN AI VIDEO
-                <br />
-                AGENCY MAKES SENSE.
-              </h2>
-              <p className="text-[#888888] text-lg leading-relaxed">
-                AI production is especially valuable when a campaign needs range, speed, testing
-                flexibility, or premium visuals that would otherwise be slowed down by physical
-                production constraints.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              {useCases.map((item) => (
-                <div key={item} className="border border-[#1a1a1a] p-5 text-[#888888] text-sm leading-relaxed">
-                  <span className="text-[#ebff00] mr-2">→</span>
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      <GuideSection eyebrow="Price" title="AI video agency pricing: what moves the number" alt>
+        <p>
+          Agencies in this category rarely publish price lists, and {studio} quotes each film from the brief. The number
+          moves with:
+        </p>
+        <ul>
+          <li>length, and how many distinct scenes and characters the film has;</li>
+          <li>how exactly a real product, place or person has to be reproduced;</li>
+          <li>versions: cutdowns, aspect ratios, languages, A/B hooks;</li>
+          <li>review rounds, which run longer in pharma, medical and financial work where MLR or compliance signs off;</li>
+          <li>music and voice licensing.</li>
+        </ul>
+        <p>
+          If a quote is far below the others, ask what it leaves out. The usual answers are the brand-world stage, the
+          reruns on faces and product, and a real sound mix. For a side-by-side with a traditional shoot, read{' '}
+          <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
+        </p>
+      </GuideSection>
 
-        <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-          <div className="max-w-5xl mx-auto px-6 lg:px-8">
-            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">FAQ</p>
-            <h2
-              style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 64px)" }}
-              className="text-white leading-none mb-10"
-            >
-              AI VIDEO PRODUCTION
-              <br />
-              AGENCIES: COMMON QUESTIONS.
-            </h2>
-            <div className="space-y-8">
-              {faqItems.map((item) => (
-                <div key={item.question} className="border-b border-[#1a1a1a] pb-8 last:border-b-0">
-                  <h3 className="text-white font-semibold text-lg mb-3">{item.question}</h3>
-                  <p className="text-[#888888] leading-relaxed">{item.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+      <GuideSection eyebrow="Rights" title="Who owns the film">
+        <p>
+          Two separate questions. First, what the contract transfers: the final film, the project files, and licenses for
+          music, voice and any stock. Get that in writing. Second, whether copyright protects the film at all. The{' '}
+          <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">
+            US Copyright Office&apos;s January 2025 report on copyrightability
+          </a>{' '}
+          concluded that prompts alone do not give enough human control to make someone the author of AI output, and that
+          human work visible in the result (a script, the creative selection and arrangement of shots, creative edits) can
+          be protected. Checked September 2026.
+        </p>
+        <p>
+          This is not legal advice. Your own lawyer, and in regulated industries your MLR or compliance team, decides what
+          the film can say and how it is used.
+        </p>
+      </GuideSection>
 
-        <section className="border-t border-[#1a1a1a] py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="border border-[#1a1a1a] p-10 md:p-12">
-              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">For agencies too</p>
-              <h2
-                style={{ ...displayStyle, fontSize: "clamp(36px, 5vw, 64px)" }}
-                className="text-white leading-none mb-6"
-              >
-                NEED A WHITE-LABEL
-                <br />
-                PRODUCTION PARTNER?
-              </h2>
-              <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-8">
-                We also work behind the scenes for marketing and creative agencies that want to sell
-                premium video services without hiring a production team. If that&apos;s your use case,
-                contact us and we&apos;ll scope the partnership around your client workflow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors inline-block text-center"
-                >
-                  Talk About a Partnership
-                </Link>
-                <Link
-                  href="/roi-calculator"
-                  className="border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors inline-block text-center"
-                >
-                  Calculate ROI
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  );
+      <GuideSection eyebrow="Before you sign" title="Seven questions to ask an AI video production company" alt>
+        <ol>
+          <li>Show me a shot from your reel where a face turns, a hand holds a product, and a logo is on screen.</li>
+          <li>Which parts of the film are made by people (script, boards, edit, sound) and which are generated?</li>
+          <li>Do the licenses on the AI models you use allow commercial use of the output?</li>
+          <li>What happens when a shot will not come out right: do you regenerate, composite or change the board?</li>
+          <li>What do you deliver: master, cutdowns, aspect ratios, captions, project files?</li>
+          <li>How many review rounds are included, and how do you handle legal or medical review?</li>
+          <li>Will the film be labelled as AI-made where the platform or the law requires it, and who does that?</li>
+        </ol>
+        <GuideFilm
+          id="Zytga7zsShI"
+          caption="Keen Footwear spec ad by Ruminate X (spec work, not commissioned). A product film where the shoe has to stay the same shoe in every shot."
+        />
+      </GuideSection>
+
+      <GuideFit
+        title="Is Ruminate X the right AI video agency for you?"
+        hire={[
+          'A brand or marketing manager who needs a commercial or brand film without a shoot.',
+          'A pharma, pharmacy, lab or medical marketer who needs a cinematic film and has an MLR process for the claims.',
+          'An agency producer who needs an AI production partner for a client film.',
+          'A founder who wants an about-us or company film that looks like a film.',
+        ]}
+        instead={[
+          'Your film needs your own staff, a real doctor or a real customer on camera: hire a traditional production company.',
+          'You need documentary or event coverage: hire a crew.',
+          'Your budget fits a subscription, not a studio: use Runway, Veo, Kling, Sora, HeyGen or Synthesia yourself.',
+          'Your audience is likely to reject visibly AI-made content: film it.',
+        ]}
+      />
+
+      <GuideFaq faqs={FAQS} />
+
+      <GuideRelated
+        links={[
+          { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'Each stage of the pipeline, from brief to delivery.' },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'If what you need is an ad for TV, streaming or social.' },
+          { href: '/ai-brand-film-agency', title: 'AI brand films', note: 'If what you need is a film about what your brand stands for.' },
+          { href: '/ai-video-production-healthcare', title: 'AI video for healthcare', note: 'For pharma, pharmacy, lab and medical marketers.' },
+          { href: '/work', title: 'The work', note: 'Films Ruminate X has made.' },
+        ]}
+      />
+
+      <GuideCta />
+    </Guide>
+  )
 }

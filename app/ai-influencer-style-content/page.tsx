@@ -35,9 +35,9 @@ const benefits = [
 
 const useCases = [
   { title: 'UGC-Style Ad Creatives', desc: 'Authentic-feeling video ads designed to blend into social feeds. Built for Meta, TikTok, and YouTube Shorts campaigns where native content outperforms polished brand spots by two to five times.' },
-  { title: 'Product Reviews & Unboxings', desc: 'AI-produced review-style videos that walk viewers through product features, benefits, and use cases — with the casual energy of a real creator sharing their experience.' },
+  { title: 'Product Reviews & Unboxings', desc: 'Review-style videos that walk viewers through product features and use cases, presented by a disclosed AI presenter. Any customer review in the video is a real one, used with permission.' },
   { title: 'Talking-Head Explainers', desc: 'Direct-to-camera style videos that explain your product, answer common questions, or deliver thought leadership — produced at the pace your content calendar actually demands.' },
-  { title: 'Social Proof & Testimonials', desc: 'Testimonial-style video content that communicates real customer outcomes in a format audiences trust. Ideal for landing pages, retargeting campaigns, and email sequences.' },
+  { title: 'Social Proof & Testimonials', desc: 'Testimonial-style videos built from real customer reviews and outcomes, used with permission and with AI use disclosed. For landing pages, retargeting campaigns and email sequences.' },
   { title: 'Platform-Specific Reels', desc: 'Vertical-first influencer-style reels optimized for Instagram, TikTok, and YouTube Shorts. Each version is tailored to platform-specific pacing, caption styles, and engagement patterns.' },
   { title: 'Multi-Persona Campaigns', desc: 'Different audiences respond to different voices. AI lets you produce the same message through multiple personas — varying tone, style, and presentation to match each segment.' },
 ]

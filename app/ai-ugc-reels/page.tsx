@@ -27,11 +27,11 @@ const jsonLd = {
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const formats = [
-  { title: 'Testimonial-Style Reels', desc: 'AI avatars or voice-matched personas delivering real-sounding product testimonials — no actors, no booking, no waiting.' },
-  { title: 'Unboxing & First Impression', desc: 'The moment your product is pulled from the box — recreated at scale with authentic energy and genuine-feeling reactions.' },
+  { title: 'Testimonial-Style Reels', desc: 'Built from real reviews your customers gave you permission to use, with the AI-made presenter disclosed. An AI persona never claims to have used the product.' },
+  { title: 'Unboxing & First Impression', desc: 'The moment your product comes out of the box, shown as a product demo, with no invented customer reactions.' },
   { title: 'Tutorial & How-To UGC', desc: 'Short, punchy tutorial reels showing your product in action. Built to educate and convert in under 60 seconds.' },
   { title: 'Hook-First Ad Reels', desc: 'Performance-focused UGC reels engineered around a single hook — designed to stop the scroll in the first two frames.' },
-  { title: 'Comparison & Review', desc: 'Before-and-after, competitor comparisons, and honest-feeling review content your media buyer will love testing.' },
+  { title: 'Comparison & Review', desc: 'Before-and-after and side-by-side comparisons your media buyer can test, with any review quoted from a real customer who agreed to it.' },
   { title: 'Creator-Style Lifestyle Reels', desc: 'AI-generated lifestyle content that looks like it came from your top-performing creator — every time, at any volume.' },
 ]
 
