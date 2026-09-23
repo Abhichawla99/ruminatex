@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/services' },
   title: 'Services | Cinema-Grade Brand Films, AI Commercials & Story-Driven Production',
   description:
     "Ruminate X makes cinema-grade brand films, AI commercials, and story-driven campaign content for brands that refuse to be ordinary. Every brief is treated like a film. Every frame is earned.",

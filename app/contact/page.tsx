@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/contact' },
   title: 'Contact | Bring Us the Scene — Ruminate X Cinematic Story Studio',
   description:
     'Tell us the story your brand has been trying to tell. The impossible shot. The scene in your head. Ruminate X is a cinematic story studio based in Calgary — we make films for brands worldwide.',

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/best-video-production-company-calgary' },
   title: "Best Video Production Company Calgary 2025 | #1 Rated | Ruminate X",
   description: "Looking for the best video production company in Calgary? Ruminate X is Calgary's top-rated AI video studio — broadcast quality, 48-hour delivery, from $500. Compare Calgary agencies. Call (587) 804-9266.",
   keywords: ["best video production company Calgary", "top video production Calgary", "best video agency Calgary", "Calgary video production company reviews", "#1 video production Calgary"],

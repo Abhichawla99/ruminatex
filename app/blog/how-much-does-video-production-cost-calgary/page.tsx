@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/blog/how-much-does-video-production-cost-calgary' },
   title: "How Much Does Video Production Cost in Calgary? (2025 Price Guide)",
   description: "Complete guide to video production costs in Calgary in 2025. Brand films, commercials, social media videos — real prices from Calgary agencies vs AI production. Updated March 2025.",
   keywords: ["video production cost Calgary", "how much does video production cost Calgary", "Calgary video production prices", "video production rates Calgary 2025"],

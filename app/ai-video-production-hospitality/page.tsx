@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-hospitality' },
   title: 'AI Video Production for Hospitality & Travel Brands | Ruminate X',
   description: 'Cinematic AI-powered brand films for hotels, resorts, travel brands, and tourism boards. Bring any destination to life — without flying a production crew there.',
   keywords: ['AI video production hospitality', 'hotel brand video agency', 'travel video production AI', 'luxury hotel video content', 'hospitality marketing video', 'resort brand film AI'],

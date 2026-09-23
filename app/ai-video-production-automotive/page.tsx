@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-automotive' },
   title: 'AI Video Production for Automotive Brands | Ruminate X',
   description: 'Cinematic AI-powered brand films and commercials for automotive brands, EV startups, and mobility companies. Impossible shots. Cinematic quality. A fraction of the cost.',
   keywords: ['AI video production automotive', 'automotive brand film agency', 'car commercial AI production', 'EV brand video', 'auto manufacturer video content', 'electric vehicle brand film'],

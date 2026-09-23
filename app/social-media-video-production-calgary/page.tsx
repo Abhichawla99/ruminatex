@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/social-media-video-production-calgary' },
   title: "Social Media Video Production Calgary | TikTok, Instagram, YouTube | Ruminate X",
   description: "Social media video production in Calgary. TikTok, Instagram Reels, YouTube Shorts, and Facebook video from $400. AI-powered content that grows Calgary brands. Call (587) 804-9266.",
   keywords: ["social media video production Calgary", "Calgary TikTok video", "Instagram Reels Calgary", "YouTube video Calgary", "social media content Calgary"],

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-real-estate' },
   title: "Real Estate Video Production Calgary | Property Tours & Marketing | Ruminate X",
   description: "Real estate video production in Calgary. Property tours, listing videos, and agent brand content from $500. AI-powered, delivered fast. Serving Calgary realtors and developers. Call (587) 804-9266.",
   keywords: ["real estate video production Calgary", "Calgary property video", "real estate video Calgary", "Calgary listing video", "property tour Calgary video"],

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-social-media-video-agency' },
   title: 'Social Content — A Micro-Film Every Time | Ruminate X',
   description: 'We refuse to make filler content. Every piece of social content we produce is built around a story. Fifteen seconds is a story. Sixty seconds is a film. We treat them the same.',
   keywords: ['AI social media video agency', 'AI social content production', 'AI video for Instagram', 'AI TikTok video agency', 'social video production AI', 'AI Reels production'],

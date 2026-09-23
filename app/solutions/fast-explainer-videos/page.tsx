@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/solutions/fast-explainer-videos' },
   title: 'Explainer Videos in 48 Hours Without a Film Crew | Ruminate X',
   description: 'Create professional explainer videos in 48 hours without hiring a film crew. AI-powered video production cuts production time from weeks to days.',
   openGraph: {

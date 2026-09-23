@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/markets/ai-video-production-uk' },
   title: "AI Video Production UK: Cinematic Brand Content for British Brands",
   description: "AI video production for UK brands. Serving London, Manchester, Birmingham, Edinburgh and beyond with broadcast-quality video at 80% less than UK agency rates.",
 };

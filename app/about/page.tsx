@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { FOUNDER, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/about' },
   title: 'About | Ruminate X — Cinematic Story Studio Making Films for Brands',
   description:
     "Ruminate X is a cinematic story studio based in Calgary. We make films for brands — story-driven brand films, AI commercials, and campaign content that treats every brief with the seriousness of a feature production.",

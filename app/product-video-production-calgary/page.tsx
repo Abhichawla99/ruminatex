@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/product-video-production-calgary' },
   title: "Product Video Production Calgary | Product Demos & Explainers | Ruminate X",
   description: "Product video production in Calgary. AI-powered product demos, explainers, and showcase videos from $500. Drive more sales with video. Call (587) 804-9266.",
   keywords: ["product video production Calgary", "Calgary product demo video", "product explainer Calgary", "ecommerce video Calgary", "product showcase Calgary"],

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/solutions/multilingual-voiceovers' },
   title: 'Professional Voiceovers in 140+ Languages in Under 1 Hour | Ruminate X',
   description: 'Get AI-generated professional voiceovers in 140+ languages and accents. Create multilingual video content in under 1 hour.',
   openGraph: {

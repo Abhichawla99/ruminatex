@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/blog/best-video-production-companies-calgary' },
   title: "Best Video Production Companies in Calgary 2025 | Honest Comparison",
   description: "Comparing the best video production companies in Calgary in 2025. Prices, turnaround times, quality, and who wins. Updated March 2025. See why Ruminate X leads the pack.",
   keywords: ["best video production companies Calgary", "top video production Calgary", "Calgary video agency comparison", "video production company reviews Calgary 2025"],

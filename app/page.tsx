@@ -5,6 +5,7 @@ import VideoModal from '@/components/VideoModal'
 import { FOUNDER, SITE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/' },
   title: 'Ruminate X — Cinema-Grade Brand Films & Story-Driven AI Commercials',
   description:
     'Ruminate X is an AI video agency that makes cinema-grade, story-driven brand films and AI commercials for brands that refuse to be forgettable. We treat every brief like a film. No crews. No limits.',

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-nw-calgary' },
   title: "Video Production NW Calgary | North West Calgary Video | Ruminate X",
   description: "Video production for NW Calgary businesses. Professional brand films, social media content, and marketing videos for Tuscany, Rocky Ridge, Nolan Hill, and all NW Calgary. From $500. Call (587) 804-9266.",
   keywords: ["video production NW Calgary", "north west Calgary video", "Tuscany video production Calgary", "NW Calgary video company", "video production northwest Calgary"],

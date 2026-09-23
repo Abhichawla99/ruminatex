@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-real-estate' },
   title: 'AI Video Production for Real Estate Brands | Ruminate X',
   description: 'Cinematic AI-powered video production for luxury real estate developers, proptech companies, and hospitality real estate brands. Architectural films that sell.',
   keywords: ['AI video production real estate', 'real estate brand video agency', 'property video production AI', 'luxury real estate video', 'proptech video agency', 'architectural film production'],

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-oil-gas' },
   title: "Oil & Gas Video Production Calgary | Energy Sector Corporate Video | Ruminate X",
   description: "Video production for Calgary's oil & gas industry. Corporate videos, safety training, brand films, and investor content for energy companies. AI-powered, from $600. Call (587) 804-9266.",
   keywords: ["oil gas video production Calgary", "Calgary energy sector video", "oil and gas corporate video Calgary", "petroleum industry video Calgary", "energy company video Calgary"],

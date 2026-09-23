@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-finance' },
   title: "Finance Video Production Calgary | Financial Services Video | Ruminate X",
   description: "Video production for Calgary financial services firms, wealth managers, accountants, and insurance companies. Brand films, explainers, and investor content. From $700. Call (587) 804-9266.",
   keywords: ["finance video production Calgary", "financial services video Calgary", "Calgary wealth management video", "accounting firm video Calgary", "investment video Calgary"],

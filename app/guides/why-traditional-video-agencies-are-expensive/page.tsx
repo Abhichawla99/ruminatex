@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/guides/why-traditional-video-agencies-are-expensive' },
   title: 'Why Traditional Video Agencies Are So Expensive (And What To Do Instead) | Ruminate X',
   description: 'The real reason video agencies charge $10K–$100K per video — and how AI production delivers the same quality for 90% less. A full cost breakdown.',
   openGraph: {

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-downtown-calgary' },
   title: "Video Production Downtown Calgary | Corporate & Brand Video | Ruminate X",
   description: "Video production for Downtown Calgary businesses. Corporate videos, brand films, and professional content for YYC's business core. From $500, delivered in 48 hours. Call (587) 804-9266.",
   keywords: ["video production downtown Calgary", "downtown Calgary video", "Calgary CBD video production", "video company downtown Calgary", "Stephen Avenue video production"],

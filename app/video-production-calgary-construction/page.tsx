@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-construction' },
   title: "Construction Video Production Calgary | Builder & Contractor Video | Ruminate X",
   description: "Video production for Calgary construction companies, builders, and contractors. Project showcases, brand films, safety training, and recruitment videos. From $600. Call (587) 804-9266.",
   keywords: ["construction video production Calgary", "Calgary builder video", "contractor video Calgary", "construction company video Calgary", "home builder video Calgary"],

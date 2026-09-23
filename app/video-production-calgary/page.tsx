@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary' },
   title: "Video Production Calgary | AI-Powered Brand Films & Commercials | Ruminate X",
   description: "Calgary's #1 AI video production studio. Brand films, commercials, product videos & social content. Based in Calgary, serving YYC brands with broadcast-quality video from $500.",
   keywords: ["video production Calgary", "Calgary video production company", "video production company Calgary", "Calgary video agency", "corporate video Calgary", "brand film Calgary", "commercial video production Calgary", "AI video production Calgary"],

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/comparison/freelance-vs-ai-video' },
   title: "Hire a Freelance Video Editor vs AI Production: Which Is Better?",
   description: "Compare freelance video editors vs AI video production on cost, speed, quality, and scalability. The data-driven answer for solopreneurs and SMBs.",
 };

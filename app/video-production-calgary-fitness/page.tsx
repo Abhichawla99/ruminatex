@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-fitness' },
   title: "Fitness & Gym Video Production Calgary | Health & Wellness Video | Ruminate X",
   description: "Video production for Calgary gyms, fitness studios, personal trainers, and wellness brands. Social media content, brand videos, and class promos from $400. Call (587) 804-9266.",
   keywords: ["fitness video production Calgary", "gym video Calgary", "personal trainer video Calgary", "Calgary fitness marketing video", "yoga studio video Calgary"],

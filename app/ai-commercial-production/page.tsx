@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-commercial-production' },
   title: 'AI Commercials & Campaign Films | The Impossible Shot | Ruminate X',
   description: 'The commercial that should have cost $300K and taken three months. We start with the impossible shot. Cinematic AI commercial production for brands that refuse to be ordinary.',
   keywords: ['AI commercial production', 'AI TV commercial', 'AI ad production agency', 'AI-generated commercials', 'automated commercial video', 'AI commercial agency'],

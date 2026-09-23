@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-airdrie' },
   title: "Video Production Airdrie | Professional Video for Airdrie Businesses | Ruminate X",
   description: "Video production for Airdrie businesses. Professional brand films, social media content, and promotional videos for Airdrie and North Calgary. From $500. Call (587) 804-9266.",
   keywords: ["video production Airdrie", "Airdrie video production", "Airdrie business video", "video company Airdrie Alberta", "Airdrie marketing video"],

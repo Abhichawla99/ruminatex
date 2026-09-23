@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-healthcare' },
   title: 'AI Video Production for Healthcare & Pharma Brands | Ruminate X',
   description: 'AI-powered cinematic brand films for healthcare systems, pharma companies, medical devices, and health tech brands. Complex science. Compelling storytelling.',
   keywords: ['AI video production healthcare', 'healthcare brand video agency', 'medical marketing video AI', 'pharma video production', 'health tech video agency', 'medical device brand film'],

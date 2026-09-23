@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-nonprofit' },
   title: "Non-Profit Video Production Calgary | Charity & NGO Video | Ruminate X",
   description: "Affordable video production for Calgary non-profits, charities, and social enterprises. Impact stories, fundraising videos, and donor campaigns from $400. Special rates available. Call (587) 804-9266.",
   keywords: ["nonprofit video production Calgary", "charity video Calgary", "non-profit video Calgary", "fundraising video Calgary", "NGO video production Calgary"],

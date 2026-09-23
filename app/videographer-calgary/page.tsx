@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/videographer-calgary' },
   title: "Videographer Calgary | Better Than Freelance, Cheaper Than Agency | Ruminate X",
   description: "Looking for a videographer in Calgary? Ruminate X delivers better results than a freelance videographer at a fraction of the cost — no scheduling, no weather delays, 48-hour delivery. From $500. Call (587) 804-9266.",
   keywords: ["videographer Calgary", "Calgary videographer", "freelance videographer Calgary", "hire videographer Calgary", "video creator Calgary"],

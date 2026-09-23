@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-retail' },
   title: "Retail Video Production Calgary | In-Store & E-Commerce Video | Ruminate X",
   description: "Video production for Calgary retail brands. Product videos, store promos, e-commerce content, and social media ads. AI-powered, from $400. Serving all Calgary retailers. Call (587) 804-9266.",
   keywords: ["retail video production Calgary", "Calgary retail video", "store video Calgary", "ecommerce video Calgary", "retail marketing video Calgary"],

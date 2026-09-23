@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-automotive' },
   title: "Automotive Video Production Calgary | Car Dealership & Auto Video | Ruminate X",
   description: "Video production for Calgary car dealerships, auto services, and automotive brands. Vehicle showcases, dealership promos, and service videos. From $500. Call (587) 804-9266.",
   keywords: ["automotive video production Calgary", "car dealership video Calgary", "auto video Calgary", "vehicle video Calgary", "car commercial Calgary"],

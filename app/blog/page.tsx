@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { blogPosts } from '@/lib/blog'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/blog' },
   title: 'Blog | AI Video Production Guides, Pricing & Strategy',
   description:
     'Explore Ruminate X guides on AI video production, pricing, agency comparisons, Calgary video production, and brand video strategy for high-intent buyers and modern marketing teams.',

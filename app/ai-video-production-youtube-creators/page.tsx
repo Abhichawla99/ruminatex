@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-youtube-creators' },
   title: 'AI Video Production for YouTube Creators | Scale Without Burning Out | Ruminate X',
   description:
     'YouTube creators use cinematic AI production to publish more, grow faster, and stop spending every hour in the edit. Scale your channel without scaling your workload.',

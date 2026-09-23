@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-ecommerce' },
   title: 'AI Video Production for E-Commerce & DTC Brands | Ruminate X',
   description:
     "Scale your e-commerce brand's video content with AI-powered cinematic production. Brand films, product videos, social content, and ad campaigns — at 70% lower cost than traditional agencies.",

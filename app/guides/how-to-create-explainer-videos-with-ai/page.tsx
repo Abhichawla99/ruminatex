@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/guides/how-to-create-explainer-videos-with-ai' },
   title: 'How to Create AI Explainer Videos: Complete 6-Step Guide | Ruminate X',
   description: 'Step-by-step guide to creating explainer videos with AI. Learn the complete process from script to publish with examples.',
 }

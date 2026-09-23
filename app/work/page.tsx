@@ -4,6 +4,7 @@ import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/work' },
   title: 'Our Work | Cinema-Grade Brand Films & AI Commercials | Ruminate X',
   description:
     "The reel. Cinematic brand films, AI commercials, fashion editorials, and story-driven campaign content — every frame earned. Ruminate X is a cinematic story studio that makes films for brands.",

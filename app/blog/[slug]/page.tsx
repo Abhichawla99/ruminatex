@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {}
 
   return {
+    alternates: { canonical: `https://www.ruminatex.com/blog/${post.slug}` },
     title: `${post.title} | Ruminate X Blog`,
     description: post.excerpt,
     keywords: post.keywords,

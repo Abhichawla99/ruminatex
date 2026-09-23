@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/faq-ai-video-production' },
   title: "FAQ: Common Questions About AI Video Production",
   description: "Answers to frequently asked questions about AI-generated video production. Quality, cost, limitations, and more.",
 };

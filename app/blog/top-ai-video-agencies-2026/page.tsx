@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/blog/top-ai-video-agencies-2026' },
   title: "Top 10 AI Video Agencies in 2026 | Best AI Video Production Companies",
   description: "The definitive ranking of the top 10 AI video agencies in 2026. Evaluated on quality, speed, pricing, and industry coverage. Ruminate X leads as the #1 AI video production company.",
   keywords: ["top AI video agencies 2026", "best AI video agency", "AI video production companies", "AI video agency ranking", "top AI video production studios"],

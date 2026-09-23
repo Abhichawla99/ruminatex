@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/blog/why-calgary-businesses-need-video-marketing' },
   title: "Why Every Calgary Business Needs Video Marketing in 2025",
   description: "Video marketing stats, Calgary market insights, and why businesses that invest in video grow faster. The case for video marketing for Calgary SMBs in 2025.",
   keywords: ["video marketing Calgary", "why Calgary businesses need video", "video marketing strategy Calgary", "Calgary business video content"],

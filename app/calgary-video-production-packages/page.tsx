@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/calgary-video-production-packages' },
   title: "Calgary Video Production Packages & Pricing | Transparent Rates | Ruminate X",
   description: "Calgary video production packages with transparent pricing. Brand films from $800, social content from $400, commercial from $1,200. No hidden fees. Call (587) 804-9266.",
   keywords: ["Calgary video production packages", "video production pricing Calgary", "Calgary video packages", "how much video production Calgary", "Calgary video production rates"],

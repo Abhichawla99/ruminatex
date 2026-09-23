@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-product-video-agency' },
   title: 'Product Launch Films | Opening Scene. Make It Count. | Ruminate X',
   description: 'A launch is an act one. The scene that establishes the world and makes the audience lean forward. We write it, we shoot it, and we make sure it hits. Every product deserves a real film.',
   keywords: ['AI product video agency', 'AI product video production', 'AI product demo video', 'product launch video AI', 'AI generated product video', 'product video agency'],

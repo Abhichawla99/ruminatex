@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/solutions/professional-product-demo' },
   title: 'Professional Product Demo Videos Without a Hollywood Budget | Ruminate X',
   description: 'Create professional product demos for SaaS, ecommerce, and enterprise software without Hollywood production budgets. AI-powered in hours.',
   openGraph: {

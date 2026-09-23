@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/roi-calculator' },
   title: "AI Video Production ROI Calculator: See Your Potential Savings",
   description: "Interactive calculator to see your potential savings with AI video production. Input your costs and see savings instantly.",
 };

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-healthcare' },
   title: "Healthcare Video Production Calgary | Medical & Health Videos | Ruminate X",
   description: "Healthcare video production in Calgary. Patient education, clinic brand films, health system communications, and medical explainers. AI-powered, from $600. Call (587) 804-9266.",
   keywords: ["healthcare video production Calgary", "Calgary medical video", "health clinic video Calgary", "patient education video Calgary", "medical marketing video Calgary"],

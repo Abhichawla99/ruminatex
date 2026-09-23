@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/corporate-video-production-calgary' },
   title: "Corporate Video Production Calgary | Business Video Content | Ruminate X",
   description: "Corporate video production in Calgary. Internal comms, training videos, executive messages, investor relations, and brand videos for Calgary corporations. From $600. Call (587) 804-9266.",
   keywords: ["corporate video production Calgary", "Calgary corporate video", "business video production Calgary", "corporate communications video Calgary", "Calgary executive video"],

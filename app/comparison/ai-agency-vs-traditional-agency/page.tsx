@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency' },
   title: "AI Video Agency vs Traditional Video Agency: The Real Difference",
   description: "Honest comparison of AI video agencies vs traditional production companies. Cost, speed, quality, scalability — every dimension covered.",
   openGraph: {

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-small-business' },
   title: "Small Business Video Production Calgary | Affordable Video for Local Business | Ruminate X",
   description: "Video production for Calgary small businesses. Professional video content from $500 that competes with big brands. AI-powered, fast delivery. Serving all Calgary small businesses. Call (587) 804-9266.",
   keywords: ["small business video production Calgary", "Calgary small business video", "affordable video Calgary", "local business video Calgary", "Calgary SMB video production"],

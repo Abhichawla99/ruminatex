@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-near-me' },
   title: "Video Production Near Me Calgary | Local Video Studio | Ruminate X",
   description: "Looking for video production near you in Calgary? Ruminate X is Calgary's local AI video studio. Professional video from $500, delivered in 48 hours. Call (587) 804-9266.",
   keywords: ["video production near me Calgary", "video production near me", "local video production Calgary", "Calgary video studio near me", "video company near me Calgary"],

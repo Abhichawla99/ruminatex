@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/use-cases/real-estate-video-tours' },
   title: 'Real Estate Video Tours: Automated Property Walkthrough Videos | Ruminate X',
   description: 'Create professional property walkthrough videos automatically. Photos → video tour in minutes. 95% faster than traditional videographers.',
 }

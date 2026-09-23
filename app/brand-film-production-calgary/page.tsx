@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/brand-film-production-calgary' },
   title: "Brand Film Production Calgary | Cinematic Brand Stories | Ruminate X",
   description: "Calgary brand film production that tells your story. Cinematic, AI-powered brand films for Calgary businesses from $800. Delivered in 48 hours. Call (587) 804-9266.",
   keywords: ["brand film production Calgary", "Calgary brand video", "brand film Calgary", "corporate brand film Calgary", "brand storytelling Calgary"],

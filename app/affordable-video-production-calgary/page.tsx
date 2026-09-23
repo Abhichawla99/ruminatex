@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/affordable-video-production-calgary' },
   title: "Affordable Video Production Calgary | Professional Video from $500 | Ruminate X",
   description: "Affordable video production in Calgary. Professional, broadcast-quality video from $500. 80–95% less than traditional Calgary video agencies. AI-powered, 48-hour delivery. Call (587) 804-9266.",
   keywords: ["affordable video production Calgary", "cheap video production Calgary", "budget video production Calgary", "low cost video Calgary", "inexpensive video production Calgary"],

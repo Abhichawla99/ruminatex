@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-legal' },
   title: "Legal Video Production Calgary | Law Firm Brand Videos | Ruminate X",
   description: "Video production for Calgary law firms and legal professionals. Brand films, practice area videos, attorney profiles, and client education content. From $700. Call (587) 804-9266.",
   keywords: ["legal video production Calgary", "law firm video Calgary", "lawyer brand video Calgary", "Calgary attorney video", "legal marketing video Calgary"],

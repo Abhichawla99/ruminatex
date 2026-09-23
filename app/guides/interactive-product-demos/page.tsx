@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/guides/interactive-product-demos' },
   title: 'Interactive Product Demo Videos for SaaS: Convert More Demos | Ruminate X',
   description: 'Create interactive product demo videos that increase conversion 2.3x. Reduce demo request friction.',
 }

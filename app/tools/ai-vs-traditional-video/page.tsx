@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/tools/ai-vs-traditional-video' },
   title: 'AI Video Production vs. Traditional Videography: Complete Comparison | Ruminate X',
   description: 'Compare AI video production to traditional videography. Detailed cost breakdown, timeline, and quality comparison for 2026.',
   openGraph: {

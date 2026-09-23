@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/commercial-video-production-calgary' },
   title: "Commercial Video Production Calgary | TV & Digital Ads | Ruminate X",
   description: "Calgary commercial video production for TV, digital, and social ads. AI-powered commercials from $600. Delivered in 48 hours. Serving all Calgary businesses. Call (587) 804-9266.",
   keywords: ["commercial video production Calgary", "Calgary commercial video", "TV commercial Calgary", "digital ad production Calgary", "Calgary video commercial"],

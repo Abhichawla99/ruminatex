@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/markets/ai-video-production-canada' },
   title: "AI Video Production Canada: Calgary Studio, Nationwide Reach",
   description: "Canada's AI video production agency. Based in Calgary, serving Toronto, Vancouver, Montreal, Ottawa, and every Canadian market with broadcast-quality video.",
 };

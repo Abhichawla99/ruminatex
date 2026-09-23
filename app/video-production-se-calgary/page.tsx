@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-se-calgary' },
   title: "Video Production SE Calgary | South East Calgary Video | Ruminate X",
   description: "Video production for SE Calgary businesses. Professional brand films, social media content, and marketing videos for McKenzie Towne, Mahogany, Cranston, and all SE Calgary communities. From $500. Call (587) 804-9266.",
   keywords: ["video production SE Calgary", "south east Calgary video", "McKenzie Towne video production", "Mahogany video Calgary", "SE Calgary video company"],

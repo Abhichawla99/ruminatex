@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/solutions/cut-video-production-costs' },
   title: 'Cut Video Production Costs by 80% While Improving Quality | Ruminate X',
   description: 'Reduce video production costs from $5K–$50K to $500–$3K per video using AI. Save 80% while maintaining broadcast quality.',
   openGraph: {

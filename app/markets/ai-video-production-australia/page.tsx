@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/markets/ai-video-production-australia' },
   title: "AI Video Production Australia: Broadcast-Quality for Aussie Brands",
   description: "AI video production for Australian brands. Serving Sydney, Melbourne, Brisbane, Perth and beyond. 80% less than Australian agency rates, delivered in 48 hours.",
 };

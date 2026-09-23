@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-finance' },
   title: 'AI Video Production for Finance & Fintech Brands | Ruminate X',
   description: 'Cinematic AI brand films for financial services companies, fintech startups, banks, and investment firms. Build trust at scale with investor-grade video content.',
   keywords: ['AI video production finance', 'fintech video production agency', 'financial services brand video', 'AI explainer video finance', 'banking brand video', 'investment firm video content'],

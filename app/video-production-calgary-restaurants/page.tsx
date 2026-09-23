@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/video-production-calgary-restaurants' },
   title: "Restaurant Video Production Calgary | Food & Hospitality Video | Ruminate X",
   description: "Restaurant video production in Calgary. Food videos, promo videos, social media content for Calgary restaurants and hospitality businesses. From $400. Call (587) 804-9266.",
   keywords: ["restaurant video production Calgary", "Calgary food video", "restaurant promo video Calgary", "food photography video Calgary", "hospitality video Calgary"],

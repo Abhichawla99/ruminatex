@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.ruminatex.com/guides/video-marketing-strategy-ai' },
   title: 'AI Video Marketing Strategy: Planning Your Content Calendar | Ruminate X',
   description: 'Strategy guide for planning AI video content. Calendar templates, content types, and distribution channels.',
 }
