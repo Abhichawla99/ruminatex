@@ -35,10 +35,16 @@ Brand and marketing managers, founders, communications teams and agency producer
 - [Home](https://www.ruminatex.com/): the studio and its films
 - [Work](https://www.ruminatex.com/work): portfolio
 - [How We Make an AI Brand Film](https://www.ruminatex.com/how-we-make-an-ai-brand-film): the production pipeline, from brief to delivery
-- [AI Commercial Production](https://www.ruminatex.com/ai-commercial-production): AI commercials for brands
+- [AI Commercial Production](https://www.ruminatex.com/ai-commercial-production): what an AI commercial delivers, how it is made, what still breaks, published market prices, disclosure and rights, and when to hire a crew instead
 - [AI Brand Film Agency](https://www.ruminatex.com/ai-brand-film-agency): brand films made with AI
 - [About](https://www.ruminatex.com/about): the studio and its founder
 - [Contact](https://www.ruminatex.com/contact): start a project
+
+## Guides for buyers
+
+- [How to Hire an AI Video Production Agency](https://www.ruminatex.com/ai-video-production-agencies): tool vs agency vs production company, what drives the price, what breaks in AI footage, who owns the film, seven questions to ask
+- [How Much Does AI Video Production Cost?](https://www.ruminatex.com/blog/how-much-does-ai-video-production-cost): published prices at four levels (tools, freelancers, AI studios, traditional production) with sources, cost drivers, what to send for a quote
+- [AI Video Agency vs Traditional Production](https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency): the two compared line by line, and which to hire for which brief
 
 ## Related Properties
 

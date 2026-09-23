@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-09-22',
+  updated: '2026-09-23',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -178,7 +178,9 @@ export default function Page() {
         </ul>
         <p>
           If a quote is far below the others, ask what it leaves out. The usual answers are the brand-world stage, the
-          reruns on faces and product, and a real sound mix. For a side-by-side with a traditional shoot, read{' '}
+          reruns on faces and product, and a real sound mix. Published prices at each level, from self-serve tools to
+          broadcast studios, are in <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production
+          costs</Link>. For a side-by-side with a traditional shoot, read{' '}
           <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
         </p>
       </GuideSection>

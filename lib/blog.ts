@@ -7,6 +7,8 @@ export interface BlogPost {
   category: string
   keywords: string[]
   content: string
+  /** The post has its own route under app/blog/<slug>/ (built with the page kit); the [slug] template skips it. */
+  ownPage?: boolean
 }
 
 export const blogPosts: BlogPost[] = [
@@ -410,108 +412,14 @@ AI video production represents the single biggest shift in content production si
   },
   {
     slug: 'how-much-does-ai-video-production-cost',
-    title: 'How Much Does AI Video Production Cost? 2026 Pricing Guide',
-    excerpt: 'A comprehensive, honest breakdown of AI video production costs — including price ranges, what affects the cost, and how it compares to traditional video production agencies.',
+    title: 'How Much Does AI Video Production Cost?',
+    excerpt: 'What AI video production costs at each level, from self-serve tools to studios, with published prices and their sources, and what drives the number.',
     date: '2026-02-22',
-    readTime: '7 min read',
+    readTime: '8 min read',
     category: 'Pricing',
-    keywords: ['how much does AI video production cost', 'AI video production pricing', 'cost of AI brand film', 'AI commercial production budget', 'AI video agency rates 2026'],
-    content: `
-## How Much Does AI Video Production Cost?
-
-The honest answer: significantly less than traditional video production — and the gap is widening every year.
-
-AI video production typically costs **60–90% less** than equivalent traditional production. A hero brand film that would cost $50,000–$100,000 at a traditional agency can be produced for $8,000–$20,000 with AI production. A commercial that traditionally runs $150,000–$500,000 can be achieved for $15,000–$60,000.
-
-Here is a detailed breakdown.
-
-## AI Video Production Pricing by Content Type
-
-### Brand Films (60–180 seconds)
-- **Traditional agency:** $30,000–$100,000+
-- **AI production:** $8,000–$25,000
-- **Savings:** 70–80%
-
-Brand films require the most creative development investment — concept, script, storyboard, and visual direction — which accounts for a significant portion of the cost regardless of production method.
-
-### Commercials (15–60 seconds)
-- **Traditional agency:** $50,000–$500,000+
-- **AI production:** $6,000–$40,000
-- **Savings:** 75–90%
-
-Commercial production sees the largest cost differential because traditional production involves the most expensive physical infrastructure — studios, locations, talent, equipment.
-
-### Product Launch Videos
-- **Traditional agency:** $20,000–$60,000
-- **AI production:** $5,000–$18,000
-- **Savings:** 70–75%
-
-### Social Content Series (10 pieces)
-- **Traditional agency:** $20,000–$50,000
-- **AI production:** $4,000–$12,000
-- **Savings:** 65–75%
-
-### Full Campaign Suite (hero film + social cuts + ad variations)
-- **Traditional agency:** $60,000–$200,000+
-- **AI production:** $12,000–$45,000
-- **Savings:** 75–80%
-
-## What Determines the Cost of AI Video Production?
-
-Several factors affect where your project falls within these ranges:
-
-### 1. Creative Complexity
-A cinematic brand film with a detailed narrative concept, multiple scenes, and a developed visual world costs more than a straightforward product video. The creative development phase — concept, script, and direction — is a significant cost component in any production.
-
-### 2. Length and Format
-Longer videos require more production time. A 3-minute brand documentary costs more than a 60-second commercial. Multi-format deliveries (16:9 + 9:16 + 1:1) add cost but are generally more efficient when done in the same production cycle.
-
-### 3. Visual Ambition
-Highly complex environments, intricate visual effects, and extremely detailed scenarios require more production time than simpler visual setups. Most requests fall in the middle range — cinematic but not requiring extraordinarily complex generation.
-
-### 4. Revision Rounds
-Standard engagements include 2–3 revision rounds. Projects with extensive stakeholder review processes or frequent brief changes typically involve additional costs.
-
-### 5. Delivery Timeline
-Rush projects (under 2 weeks) typically carry a premium. Standard 2–3 week timelines are the most cost-efficient.
-
-## What's Included in AI Video Production Costs?
-
-At Ruminate X, our project pricing includes:
-
-- **Creative development:** Concept, script, storyboard, and visual direction
-- **Production:** All AI generation, compositing, and visual development
-- **Post-production:** Color grading, sound design, and music licensing
-- **2–3 revision rounds** at key production milestones
-- **Final delivery** in all required formats and resolutions
-
-## Hidden Costs to Watch For
-
-Not all AI production pricing is equivalent. Watch for:
-
-- **Revision limits:** Some agencies charge per revision after the first. Ask upfront.
-- **Music licensing:** Ensure music is licensed for your intended use (broadcast, digital, social)
-- **Usage rights:** Confirm you receive full ownership of the final deliverables
-- **Rush fees:** If speed is critical, ask whether there are expedite costs
-
-## Is AI Video Production Right for My Budget?
-
-A useful rule of thumb: if your traditional production budget is $10,000 or more, AI production will likely deliver better results at the same budget — or equivalent results at significantly lower cost.
-
-For brands with budgets below $5,000, expectations need to be calibrated carefully. Meaningful creative development and cinematic production quality have a floor cost.
-
-## How to Get an Accurate Quote
-
-The most accurate pricing comes from a project brief. Key information to share:
-
-- Content type (brand film, commercial, social content, etc.)
-- Approximate length
-- Visual concept or reference (if available)
-- Timeline requirements
-- Distribution channels
-
-[Request a custom quote for your project →](/contact)
-    `,
+    keywords: ['how much does ai video production cost', 'ai video production cost', 'ai video agency pricing'],
+    content: '',
+    ownPage: true,
   },
   {
     slug: 'ai-vs-traditional-video-production',

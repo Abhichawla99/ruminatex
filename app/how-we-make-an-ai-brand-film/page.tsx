@@ -148,7 +148,7 @@ export default function HowWeMakeAIBrandFilmPage() {
             Ruminate X quotes each film from the brief. The price is set by length, the number of scenes, how exactly a real product has to be reproduced, the number of versions and languages, and how many review rounds your team needs.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            There is no shoot to pay for: no crew, no location, no permits. Every creative stage above still happens, in-house, on our pipeline.
+            There is no shoot to pay for: no crew, no location, no permits. Every creative stage above still happens, in-house, on our pipeline. For what AI films cost across the market, from tools to broadcast studios, read <Link href="/blog/how-much-does-ai-video-production-cost" className="text-[#ebff00] hover:underline">how much AI video production costs</Link>.
           </p>
         </div>
       </section>
