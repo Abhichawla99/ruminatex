@@ -152,14 +152,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const seoUpdated = new Map(SEO_PAGES.map((page) => [page.path, new Date(`${page.updated}T12:00:00Z`)]))
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: seoUpdated.get(`/blog/${post.slug}`) ?? new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
-
-  const seoUpdated = new Map(SEO_PAGES.map((page) => [page.path, new Date(`${page.updated}T12:00:00Z`)]))
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: `${siteUrl}${route.path}`,
@@ -168,7 +168,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route.priority,
   }))
 
-  const listed = new Set<string>(staticRoutes.map((route) => route.path))
+  const listed = new Set<string>([...staticRoutes.map((route) => route.path), ...blogPosts.map((post) => `/blog/${post.slug}`)])
   const seoEntries: MetadataRoute.Sitemap = SEO_PAGES.filter((page) => !listed.has(page.path)).map((page) => ({
     url: `${siteUrl}${page.path}`,
     lastModified: new Date(`${page.updated}T12:00:00Z`),
