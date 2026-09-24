@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What AI video production costs in 2026 at each level, from self-serve tools to studios, with published prices and their sources, what drives the number, and how much cheaper it is than a traditional agency.',
   published: '2026-02-22',
-  updated: '2026-09-23',
+  updated: '2026-09-24',
   keywords: [
     'how much does ai video production cost',
     'ai video production cost',
@@ -139,6 +139,8 @@ export default function Page() {
         </ul>
         <p>
           A 30 second spot for a pharma brand with three review rounds saves less than a lifestyle film for a shoe brand.
+          The questions MLR reviewers ask about AI footage are on{' '}
+          <Link href="/ai-video-production-healthcare">AI video for pharma and healthcare marketing</Link>.
           For the full side-by-side, read <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
         </p>
       </GuideSection>
@@ -187,7 +189,10 @@ export default function Page() {
 
       <GuideSection eyebrow="Getting a quote" title="What to send to get an accurate AI video quote">
         <ol>
-          <li>What the film is: a commercial, a brand film, an about-us film, a product film.</li>
+          <li>
+            What the film is: a commercial, a <Link href="/ai-brand-film-agency">brand film</Link>, an about-us film, a
+            product film.
+          </li>
           <li>Length, and the cutdowns and aspect ratios you need.</li>
           <li>Where it runs: social only, paid digital, streaming, broadcast, which countries.</li>
           <li>Whether a real product, place or person has to appear exactly, with the files.</li>

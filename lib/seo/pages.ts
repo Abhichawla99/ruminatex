@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring and how do I pick one',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-23',
+    updated: '2026-09-24',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production: how is an AI commercial made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-09-23',
+    updated: '2026-09-24',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -48,7 +48,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does ai video production cost',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-09-23',
+    updated: '2026-09-24',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -57,5 +57,21 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'comparison',
     published: '2026-03-08',
     updated: '2026-09-23',
+  },
+  {
+    path: '/ai-brand-film-agency',
+    title: 'AI Brand Film Production for Companies',
+    question: 'ai brand film: what is it, how is it made and what does it cost',
+    kind: 'service',
+    published: '2026-03-07',
+    updated: '2026-09-24',
+  },
+  {
+    path: '/ai-video-production-healthcare',
+    title: 'AI Video for Pharma and Healthcare Marketing',
+    question: 'can pharma, pharmacy, lab and medical companies use AI video, and what will MLR ask',
+    kind: 'industry',
+    published: '2026-03-07',
+    updated: '2026-09-24',
   },
 ]

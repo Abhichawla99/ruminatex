@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-09-23',
+  updated: '2026-09-24',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -80,7 +80,7 @@ export default function Page() {
           An AI video production agency writes, directs and delivers a finished film whose footage is generated with AI
           instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
-          finished commercial or brand film and have no time or editor to make it with a tool yourself. Hire someone else
+          finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
           when the film needs real people on camera.
         </p>
       </GuideAnswer>
@@ -173,7 +173,11 @@ export default function Page() {
           <li>length, and how many distinct scenes and characters the film has;</li>
           <li>how exactly a real product, place or person has to be reproduced;</li>
           <li>versions: cutdowns, aspect ratios, languages, A/B hooks;</li>
-          <li>review rounds, which run longer in pharma, medical and financial work where MLR or compliance signs off;</li>
+          <li>
+            review rounds, which run longer in{' '}
+            <Link href="/ai-video-production-healthcare">pharma and medical work</Link> and financial work, where MLR or
+            compliance signs off;
+          </li>
           <li>music and voice licensing.</li>
         </ul>
         <p>

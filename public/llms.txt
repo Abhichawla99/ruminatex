@@ -36,7 +36,7 @@ Brand and marketing managers, founders, communications teams and agency producer
 - [Work](https://www.ruminatex.com/work): portfolio
 - [How We Make an AI Brand Film](https://www.ruminatex.com/how-we-make-an-ai-brand-film): the production pipeline, from brief to delivery
 - [AI Commercial Production](https://www.ruminatex.com/ai-commercial-production): what an AI commercial delivers, how it is made, what still breaks, published market prices, disclosure and rights, and when to hire a crew instead
-- [AI Brand Film Agency](https://www.ruminatex.com/ai-brand-film-agency): brand films made with AI
+- [AI Brand Film Production](https://www.ruminatex.com/ai-brand-film-agency): what an AI brand film is, how it is made, what breaks in longer AI films, filmed and AI brand film prices with sources, rights, and when to film real people instead
 - [About](https://www.ruminatex.com/about): the studio and its founder
 - [Contact](https://www.ruminatex.com/contact): start a project
 
@@ -44,6 +44,7 @@ Brand and marketing managers, founders, communications teams and agency producer
 
 - [How to Hire an AI Video Production Agency](https://www.ruminatex.com/ai-video-production-agencies): tool vs agency vs production company, what drives the price, what breaks in AI footage, who owns the film, seven questions to ask
 - [How Much Does AI Video Production Cost?](https://www.ruminatex.com/blog/how-much-does-ai-video-production-cost): published prices at four levels (tools, freelancers, AI studios, traditional production) with sources, cost drivers, what to send for a quote
+- [AI Video for Pharma and Healthcare Marketing](https://www.ruminatex.com/ai-video-production-healthcare): uses in pharma, pharmacy, labs and medical, what MLR reviewers ask about AI footage, the US (21 CFR 202.1) and Canadian (C.01.044, PAAB) rules that shape a drug ad, what breaks in AI medical imagery
 - [AI Video Agency vs Traditional Production](https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency): the two compared line by line, and which to hire for which brief
 
 ## Related Properties

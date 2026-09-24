@@ -1,111 +1,265 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  Guide,
+  GuideAnswer,
+  GuideCta,
+  GuideFaq,
+  GuideFilm,
+  GuideFit,
+  GuideHero,
+  GuideRelated,
+  GuideSection,
+  GuideTable,
+  guideMetadata,
+} from '@/components/guide/Guide'
+import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
-export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.ruminatex.com/ai-brand-film-agency' },
-  title: 'Brand Film Production | Cinematic Story Studio | Ruminate X',
-  description: "There is a scene in every brand's story that has never been put on screen. Ruminate X finds it and makes it. Cinematic brand films, story-driven production, no compromises.",
-  keywords: ['AI brand film agency', 'AI brand film production', 'cinematic AI brand video', 'brand film company AI', 'AI-generated brand films', 'AI brand storytelling agency'],
+const PAGE = {
+  path: '/ai-brand-film-agency',
+  title: 'AI Brand Film Production for Companies',
+  description:
+    'What an AI brand film is, how one gets made without a shoot, what brand films cost with AI and with a crew, what still breaks, who owns it, and when a company should film real people instead.',
+  published: '2026-03-07',
+  updated: '2026-09-24',
+  keywords: [
+    'ai brand film',
+    'ai brand film production company',
+    'ai cinematic video production',
+    'ai marketing film production',
+    'ai filmmaking agency',
+    'ai video agency for brands',
+    'how much does a brand film cost',
+  ],
 }
 
-const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+const studio = SITE.name
+const brandFilm = OFFERS.find((o) => o.key === 'brand-film')!
+const aboutUs = OFFERS.find((o) => o.key === 'about-us')!
+const hundred = RELATED.find((r) => r.name === '100creatives')!
 
-const process = [
-  { step: '01', title: 'The Brief', desc: 'Tell us the story your brand has never been able to put on screen. The feeling you want to create. The scene in your head that no production company has pulled off. That\'s where we start.' },
-  { step: '02', title: 'The Script', desc: 'Every great film starts with a great script. We write the narrative arc, the visual language, the emotional throughline — before a single frame is conceived. Story first. Always.' },
-  { step: '03', title: 'The Shoot', desc: 'AI becomes our director of photography, our location scout, our VFX team. We execute the shot list with cinema-grade precision — no constraints, no compromises, no impossible shots.' },
-  { step: '04', title: 'The Cut', desc: 'We edit like a film editor — for rhythm, for emotion, for the exact moment the music and the image and the idea collide. What you receive is a finished film, not a draft.' },
+const FAQS = [
+  {
+    q: 'What is an AI brand film?',
+    a: 'An AI brand film is a story-driven film about what a brand stands for, usually 60 seconds to a few minutes long, in which the footage is generated with AI instead of filmed. People still write it, design how it looks, choose and fix every shot, and edit, score and grade it. Ruminate X makes brand films this way: every frame is generated, with no crew, set or location shoot.',
+  },
+  {
+    q: 'Which famous brands are using AI for brand films?',
+    a: 'One public example is Moncler. The agency R/GA made an experimental film for Moncler with Google\'s Veo video model in four weeks, and it was unveiled at Cannes Lions in 2025 (R/GA, August 2025). Moncler did not publish a budget, and few brands do.',
+  },
+  {
+    q: 'How much does a brand film cost?',
+    a: 'Filmed brand videos from US production companies are published at USD 10,000 to 25,000 for a lean one-day shoot, 25,000 to 75,000 for one to three shoot days, and 75,000 to 200,000 or more for multi-location films with actors (Argus HD, August 2026). AI studios publish lower figures, from about USD 3,500 for a 60-second cinematic AI film (Gisteo, via Versely, September 2026). Ruminate X quotes each brand film from the brief.',
+  },
+  {
+    q: 'What does an AI brand film production company actually do?',
+    a: 'It turns a brief into a finished film: the idea and script, a fixed look for the brand world, boards for every shot, many generation passes per shot, then edit, voice, music, sound design, grade and the versions each channel needs. A tool gives you clips; the production company decides which clips are good enough and fixes the ones that are not.',
+  },
+  {
+    q: 'Is it legal to make a brand film with AI?',
+    a: 'Yes, but check three things with your lawyer. The model and music licenses must allow commercial use; the film must not copy a real person\'s likeness or another company\'s work without permission; and platforms such as YouTube ask for disclosure when realistic content is made with AI. Copyright in the result depends on the human work in it (US Copyright Office, January 2025). This is not legal advice.',
+  },
+  {
+    q: 'When should a company not make its brand film with AI?',
+    a: 'When the story depends on real people being themselves: your founder speaking, your staff at work, a real customer or patient. Also when the film documents a real place or event, or when your audience is likely to reject a visibly AI-made film. A documentary or corporate production company is the right hire for those; Ruminate X is not.',
+  },
 ]
 
-const formats = [
-  { title: 'Hero Brand Films', desc: '60–180 second cinematic brand narratives. The film that defines who you are.' },
-  { title: 'Documentary-Style Films', desc: 'Founder stories, company missions, and cultural narratives told with the craft of documentary filmmaking.' },
-  { title: 'Campaign Films', desc: 'Conceptual brand films that anchor a full campaign — with cutdowns, social variations, and ad formats.' },
-  { title: 'Product Story Films', desc: 'The story behind your product — its origin, its purpose, the people it serves.' },
-  { title: 'Culture & Recruitment Films', desc: 'Who you are as a company. The film that makes the best people in your industry want to work for you.' },
-  { title: 'Annual & Milestone Films', desc: 'Brand anniversary films, year-in-review films, and milestone celebration content built to last.' },
-]
+export const metadata = guideMetadata(PAGE)
 
-export default function BrandFilmAgencyPage() {
+export default function Page() {
   return (
-    <>
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#ebff00 1px, transparent 1px), linear-gradient(90deg, #ebff00 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#ebff00] rounded-full blur-[300px] opacity-[0.03]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
-            <span className="w-1.5 h-1.5 bg-[#ebff00] rounded-full animate-pulse" />
-            <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">AI Brand Film Agency</span>
-          </div>
-          <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            YOUR BRAND<br />HAS ONE TRUE<br /><span style={{ color: '#ebff00' }}>STORY.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            There is a scene in every brand&apos;s story that has never been put on screen. The one that would make people actually feel something. The one that would make them stop, rewatch, and share without being asked. We make that scene.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start Your Brand Film</Link>
-            <Link href="/work" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Our Work</Link>
-          </div>
-        </div>
-      </section>
+    <Guide page={PAGE} faqs={FAQS} films={['LYA3Do3KEN0', 'd-s9SxA4Klk']}>
+      <GuideHero
+        eyebrow="AI brand film production"
+        title="AI brand film production: your story, made without a shoot"
+        dek="For the brand or marketing lead, founder or comms head who wants a cinematic film about what the company stands for, and wants to know what an AI-made one involves before briefing a studio."
+        updated={PAGE.updated}
+      />
 
-      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { stat: '70%', label: 'Less than traditional brand film agencies' },
-              { stat: '2–3 wks', label: 'From brief to final delivery' },
-              { stat: '∞', label: 'Creative possibilities' },
-              { stat: '4K', label: 'Cinematic quality, always' },
-            ].map(({ stat, label }) => (
-              <div key={label} className="text-center">
-                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideAnswer>
+        <p>
+          An AI brand film tells the story of what a company stands for, and every shot in it is generated with AI instead
+          of filmed. A studio still writes it, fixes the look of the brand world before anything is generated, reruns every
+          shot where a face, a hand or the product drifts, then edits, scores and grades it. AI suits brand films built on
+          a made world: landscapes, metaphors, period scenes, places you could never afford to shoot. It does not suit a
+          film that needs your own people on camera.
+        </p>
+      </GuideAnswer>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Brand Film Formats</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">EVERY TYPE OF<br />BRAND FILM</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {formats.map(({ title, desc }) => (
-            <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
-              <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
-              <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GuideSection eyebrow="The format" title="What a brand film is for, and how it differs from an ad">
+        <p>
+          A commercial sells one product to one audience in 15 to 60 seconds. A brand film is longer and slower, and it
+          sells the company: why it exists, what it believes, what it feels like to buy from it or work for it. Companies
+          play it on the homepage, at the top of a launch, at an all-hands or conference, in recruiting, and cut it down
+          for paid social.
+        </p>
+        <p>
+          {studio} makes {brandFilm.name.toLowerCase()}, {brandFilm.plain}, and {aboutUs.name.toLowerCase()},{' '}
+          {aboutUs.plain}. {PRODUCTION.summary} Because nothing has to be filmed, the film can go where a shoot budget
+          cannot: a mountain at dawn, a factory in 1920, the inside of a cell.
+        </p>
+        <GuideFilm
+          id="LYA3Do3KEN0"
+          caption="The Love of Trail Running, an original Ruminate X film (not client work). 96 seconds, every shot generated, no location shoot."
+        />
+      </GuideSection>
 
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Our Process</p>
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">HOW WE BUILD<br />YOUR BRAND FILM</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map(({ step, title, desc }) => (
-              <div key={step} className="border border-[#1a1a1a] p-8">
-                <p style={{ ...displayStyle, fontSize: '64px', color: '#1a1a1a' }} className="mb-4">{step}</p>
-                <h3 style={{ ...displayStyle, fontSize: '24px', color: '#ebff00' }} className="mb-3">{title}</h3>
-                <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="How it is made" title="How an AI brand film gets made" alt>
+        <ol>
+          <li>
+            <strong>Brief.</strong> What the company stands for, who the film is for, where it will play, how long it can
+            run, and the one feeling the viewer should leave with. Nothing is generated before this is agreed.
+          </li>
+          <li>
+            <strong>Brand world.</strong> Palette, light, lenses, casting, wardrobe and texture, decided before the first
+            frame so the last shot matches the first. <a href={hundred.url}>{hundred.name}</a>, {hundred.role}, leads
+            this stage.
+          </li>
+          <li>
+            <strong>Script and boards.</strong> A 90-second film can run to dozens of shots. Each gets a board with framing,
+            movement and length, and the voiceover or music is timed against them.
+          </li>
+          <li>
+            <strong>Generation passes.</strong> Each shot is generated, checked against its board and generated again. Many
+            takes are thrown away. Faces, hands and the product get the most passes.
+          </li>
+          <li>
+            <strong>Edit, sound, grade.</strong> The cut is built for pace and feeling, then voice, score and sound design
+            go in, and one grade ties the shots together.
+          </li>
+          <li>
+            <strong>Versions.</strong> The master, cutdowns for paid social, and the aspect ratios each channel needs.
+          </li>
+        </ol>
+        <p>
+          The same pipeline with more detail on each stage is on{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+        </p>
+      </GuideSection>
 
-      <section className="border-t border-[#1a1a1a] py-24 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            BRING US<br />THE SCENE.<br /><span style={{ color: '#ebff00' }}>WE&apos;LL MAKE IT.</span>
-          </h2>
-          <p className="text-[#888888] mb-8">Tell us the story your brand has been trying to tell. We start with the narrative — and we don&apos;t stop until the film is right.</p>
-          <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
-        </div>
-      </section>
-    </>
+      <GuideSection eyebrow="The weak points" title="What breaks in a longer AI film">
+        <p>
+          A brand film runs two to six times longer than a 30-second ad, so the weak points of generated footage show up
+          more often:
+        </p>
+        <GuideTable
+          caption="Where generated footage fails in brand films, and the fix to expect. These are the shots the Ruminate X pipeline gives extra generation passes."
+          head={['Problem', 'Why it matters in a brand film', 'The fix']}
+          rows={[
+            ['The same character across 30 shots', 'The hero looks like a different person by the second minute', 'Fix the casting in the brand-world stage; regenerate every shot that drifts'],
+            ['Faces holding emotion', 'Brand films lean on close-ups; stiff or uncanny faces break the mood', 'Board wider shots where the story allows; rerun close-ups until they hold'],
+            ['Hands and objects', 'Extra fingers, a cup that melts into a hand', 'Stage the action around hands; composite or rerun the rest'],
+            ['Logo and on-screen text', 'Warped letters on your own name', 'Set the logo and all type in the edit from your brand files'],
+            ['Continuity of place and light', 'The room, weather or time of day changes between cuts', 'Lock them in the boards; grade the shots together; regenerate what cannot be graded out'],
+          ]}
+        />
+        <p>
+          Ask any studio for a finished film longer than 60 seconds, and watch whether the main character still looks like
+          the same person at the end.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Price" title="How much a brand film costs, filmed or made with AI" alt>
+        <p>
+          Filmed brand films are priced by shoot days, crew, locations and cast. AI brand films are priced by length,
+          the number of distinct scenes, how exactly real people, places or products have to be reproduced, and review
+          rounds.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Filmed tiers from{' '}
+              <a href="https://argushd.com/how-much-does-a-brand-video-cost/">Argus HD, &ldquo;How Much Does a Brand Video Cost in 2026?&rdquo;</a>{' '}
+              (August 2026, a San Francisco production company). The AI figure is Gisteo&apos;s published price as
+              compiled by{' '}
+              <a href="https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost">Versely</a> (September 2026).
+              Checked September 2026. Ruminate X does not publish a price list.
+            </>
+          }
+          head={['What was bought', 'Published price (USD)', 'What it includes']}
+          rows={[
+            ['Filmed brand video, entry level', '10,000 to 25,000', 'One shoot day, small crew, one or two people on camera, one or two deliverables'],
+            ['Filmed brand video, mid-range', '25,000 to 75,000', 'One to three shoot days, multi-camera, more polished post-production'],
+            ['Filmed brand film, premium', '75,000 to 200,000 and up', 'Two to five shoot days, several locations, actors, custom music'],
+            ['60-second cinematic AI film', '3,500 and up', 'Generated footage, edit and sound; scope set per project'],
+          ]}
+        />
+        <p>
+          {studio} quotes each brand film from the brief. What moves the number: running time and the number of scenes;
+          recurring characters that must stay consistent; your product or a real place reproduced exactly; how many
+          cutdowns, ratios and languages you need; and review rounds, which run longer when legal, medical or MLR teams
+          sign off. The four price tiers for AI video, and what each buys, are in{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="An example" title="Which brands are using AI for brand films">
+        <p>
+          The best-known case is Moncler. Google asked the agency R/GA for an ad that could only exist with AI, and{' '}
+          <a href="https://rga.com/news/rga-used-ai-for-impossible-ad">
+            R/GA used Google&apos;s Veo model to make an experimental film with Moncler in four weeks
+          </a>
+          , unveiled at Cannes Lions (R/GA, August 2025). No budget was published.
+        </p>
+        <p>
+          The film, titled From the Mountains to the City, shows a made world rather than real employees or customers. That is the
+          brief AI brand film production handles best today.
+        </p>
+        <GuideFilm
+          id="d-s9SxA4Klk"
+          caption="Calgary Stampede 2026 by Ruminate X: an AI short film celebrating gratitude for everyone who makes the Calgary Stampede possible."
+        />
+      </GuideSection>
+
+      <GuideSection eyebrow="Rights and labels" title="Who owns an AI brand film" alt>
+        <p>
+          <strong>Rights.</strong> Your contract decides what transfers to you: the film, the cutdowns, the project files,
+          and licenses for music and voice. Ask whether the video models used allow commercial use. Whether copyright
+          protects the film is a separate question. The{' '}
+          <a href="https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf">
+            US Copyright Office&apos;s January 2025 report
+          </a>{' '}
+          concluded that prompts alone do not make someone the author of AI output, while human work visible in the film,
+          such as the script and the selection and arrangement of shots, can be protected.
+        </p>
+        <p>
+          <strong>Labels.</strong>{' '}
+          <a href="https://support.google.com/youtube/answer/14328491">YouTube&apos;s policy</a> asks for disclosure when
+          realistic content is made or meaningfully altered with AI, and exempts clearly unrealistic content such as
+          animation or fantasy. Other platforms and broadcasters set their own rules. Checked September 2026.
+        </p>
+        <p>This is not legal advice. Your lawyer decides what the film needs.</p>
+      </GuideSection>
+
+      <GuideFit
+        title="Should Ruminate X make your brand film?"
+        hire={[
+          'A brand or marketing lead who needs a cinematic film about what the company stands for, with no budget or calendar for a multi-location shoot.',
+          'A consumer brand whose story works as a made world: landscapes, metaphor, history, the product in places it has never been.',
+          'A pharma, lab or medical company that needs a brand film showing science no camera can film, with an MLR process for the claims.',
+          'An agency producer who needs an AI production partner for a client brand film.',
+        ]}
+        instead={[
+          'The film is your founder, staff or customers speaking as themselves: hire a documentary or corporate production company.',
+          'The film records a real event, site or product demo: film it.',
+          'You need a short explainer or talking-head update this week: a self-serve tool such as HeyGen or Synthesia costs less.',
+          'Your audience is likely to reject a visibly AI-made film: film it with a crew.',
+        ]}
+      />
+
+      <GuideFaq faqs={FAQS} />
+
+      <GuideRelated
+        links={[
+          { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline, stage by stage.' },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'When you need a 15 to 60 second ad rather than a brand film.' },
+          { href: '/blog/how-much-does-ai-video-production-cost', title: 'How much AI video production costs', note: 'Published prices at four levels and what each buys.' },
+          { href: '/ai-video-production-healthcare', title: 'AI video for pharma, labs and medical', note: 'Brand films and ads that go through MLR review.' },
+          { href: '/work', title: 'The work', note: 'Films Ruminate X has made.' },
+        ]}
+      />
+
+      <GuideCta title="Tell us the story" body="Send what the company stands for, who the film is for, where it will play and when you need it." />
+    </Guide>
   )
 }
