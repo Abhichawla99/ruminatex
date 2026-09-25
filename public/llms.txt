@@ -42,9 +42,12 @@ Brand and marketing managers, founders, communications teams and agency producer
 
 ## Guides for buyers
 
+All guides, grouped by question: https://www.ruminatex.com/guides
+
 - [How to Hire an AI Video Production Agency](https://www.ruminatex.com/ai-video-production-agencies): tool vs agency vs production company, what drives the price, what breaks in AI footage, who owns the film, seven questions to ask
 - [How Much Does AI Video Production Cost?](https://www.ruminatex.com/blog/how-much-does-ai-video-production-cost): published prices at four levels (tools, freelancers, AI studios, traditional production) with sources, cost drivers, what to send for a quote
 - [AI Video for Pharma and Healthcare Marketing](https://www.ruminatex.com/ai-video-production-healthcare): uses in pharma, pharmacy, labs and medical, what MLR reviewers ask about AI footage, the US (21 CFR 202.1) and Canadian (C.01.044, PAAB) rules that shape a drug ad, what breaks in AI medical imagery
+- [AI Video Production in Calgary and Canada](https://www.ruminatex.com/markets/ai-video-production-canada): what an AI-only studio in Calgary makes, published Canadian AI commercial prices, the Quebec French rule for ads (Charter s.58), Ad Standards preclearance categories, Canadian copyright on AI output, and when to hire a local crew instead
 - [AI Video Agency vs Traditional Production](https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency): the two compared line by line, and which to hire for which brief
 - [AI Video Character Consistency for Brands](https://www.ruminatex.com/guides/ai-video-character-consistency): why faces drift between AI shots, the character sheet, reference features in the main video models, consent and disclosure rules for synthetic people, and keeping one person across a film and its campaign photos
 - [First and Last Frame AI Video for Commercials](https://www.ruminatex.com/guides/first-frame-last-frame-ai-video): how image-to-video starts a shot from an approved still, what each video model supports, what makes a clean first frame, and what a still costs next to a second of video

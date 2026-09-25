@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How an AI commercial gets made without a shoot: what you get, what it costs and why, what still breaks in AI footage, the disclosure and rights questions, and when a brand should hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-09-24',
+  updated: '2026-09-25',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -29,6 +29,7 @@ const PAGE = {
     'ai commercial agency',
     'ai tv commercials',
     'how much does an ai commercial cost',
+    'do actors get paid for ai commercials',
   ],
 }
 
@@ -56,6 +57,10 @@ const FAQS = [
   {
     q: 'Do AI commercials have to be labelled as AI?',
     a: "It depends on the platform, the country and what the ad shows. YouTube requires creators to disclose realistic content made or meaningfully altered with AI, and exempts clearly unrealistic content such as animation or fantasy scenes (YouTube Help, checked September 2026). Ad platforms and broadcasters set their own rules. Your legal team decides for your ad; this is not legal advice.",
+  },
+  {
+    q: 'Do actors get paid for AI commercials?',
+    a: 'When a real performer\'s likeness is used, yes. Under the SAG-AFTRA 2025 Commercials Contract (ratified May 2025), a union performer must consent before a digital replica of them is created and give informed consent, based on a reasonably specific description of the use, before it is used; generating a performance with the replica pays 1.5 times the session fee plus the applicable holding and use fees (SAG-AFTRA, checked September 2026). A character generated from scratch is not a replica of anyone, though the contract also has terms on synthetic performers for producers who have signed it. If your brief needs a real actor or spokesperson, their consent and contract come first. This is not legal advice.',
   },
   {
     q: 'When should a brand not make its commercial with AI?',
@@ -158,7 +163,9 @@ export default function Page() {
         />
         <p>
           Ask any AI commercial production company to show you these shots from past work. A reel of slow drone moves
-          tells you little about how your pack shot will hold up.
+          tells you little about how your pack shot will hold up. Our guides on{' '}
+          <Link href="/guides/ai-commercial-product-accuracy">keeping the product and label accurate</Link> and the{' '}
+          <Link href="/guides/ai-video-quality-control">checks to run before an AI ad airs</Link> go through each row.
         </p>
       </GuideSection>
 
@@ -231,6 +238,12 @@ export default function Page() {
           result, such as the script and the selection and arrangement of shots, can be protected.
         </p>
         <p>
+          <strong>Actors and likeness.</strong> A real person&apos;s face or voice needs their consent. Under the 
+          <a href="https://www.sagaftra.org/contracts-industry-resources/commercials/2025-commercials-contracts">SAG-AFTRA 2025 Commercials Contract</a>, a union performer consents before a digital replica
+          is made and before each use, and a performance generated from the replica pays 1.5 times the session fee plus
+          holding and use fees. A character generated from scratch is not anyone&apos;s replica. Checked September 2026.
+        </p>
+        <p>
           This is not legal advice. Your lawyer, and in pharma, medical and financial work your MLR or compliance team,
           decides what the ad can say and how it is labelled.
         </p>
@@ -260,7 +273,7 @@ export default function Page() {
           { href: '/ai-video-production-agencies', title: 'How to hire an AI video production agency', note: 'Seven questions to ask before you sign.' },
           { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline stage by stage.' },
           { href: '/ai-video-production-healthcare', title: 'AI video for healthcare', note: 'For pharma, pharmacy, lab and medical marketers.' },
-          { href: '/work', title: 'The work', note: 'Films Ruminate X has made.' },
+          { href: '/guides', title: 'Guides for brands buying AI film', note: 'Budgets, deliverables, product accuracy and quality control, one question per guide.' },
         ]}
       />
 

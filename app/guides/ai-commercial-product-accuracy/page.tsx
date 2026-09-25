@@ -72,11 +72,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS} films={['Zytga7zsShI']}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL} films={['Zytga7zsShI']}>
       <GuideHero
         eyebrow="Product accuracy"
         title="Product and label accuracy in AI commercials"

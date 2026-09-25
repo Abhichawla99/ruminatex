@@ -63,11 +63,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL}>
       <GuideHero
         eyebrow="Visual DNA"
         title="Brand visual DNA: the look brief for an AI film and its photos"

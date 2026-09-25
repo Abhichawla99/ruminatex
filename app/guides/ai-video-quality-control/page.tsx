@@ -74,11 +74,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL}>
       <GuideHero
         eyebrow="Quality control"
         title="AI video quality control: the checks before an AI commercial airs"

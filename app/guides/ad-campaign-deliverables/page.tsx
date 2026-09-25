@@ -75,11 +75,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL}>
       <GuideHero
         eyebrow="Deliverables"
         title="Ad campaign deliverables: every film, cutdown and still, by channel"

@@ -67,11 +67,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS} films={['zJgXuxFGU0U']}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL} films={['zJgXuxFGU0U']}>
       <GuideHero
         eyebrow="Video vs static"
         title="Video vs static ads: run both, from one world"

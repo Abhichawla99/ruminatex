@@ -42,6 +42,7 @@ const staticRoutes: StaticRoute[] = [
   { path: '/solutions/professional-product-demo', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/solutions/multilingual-voiceovers', changeFrequency: 'monthly', priority: 0.8 },
 
+  { path: '/guides', changeFrequency: 'weekly', priority: 0.8 },
   { path: '/guides/how-to-create-explainer-videos-with-ai', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/guides/video-captions-ai-subtitles', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/guides/social-media-video-shorts', changeFrequency: 'monthly', priority: 0.7 },

@@ -70,11 +70,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL}>
       <GuideHero
         eyebrow="Character consistency"
         title="Character consistency in AI video: one face in every shot and every photo"

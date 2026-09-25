@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-09-24',
+  updated: '2026-09-25',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -156,7 +156,10 @@ export default function Page() {
         />
         <p>
           When you review an agency&apos;s reel, look for exactly these shots. A reel of landscapes and slow pushes says
-          little about how they will handle your pack shot.
+          little about how they will handle your pack shot. How a studio keeps one face steady across a film is in our
+          guide to <Link href="/guides/ai-video-character-consistency">AI video character consistency</Link>. If you are
+          hiring in Canada, our page on <Link href="/markets/ai-video-production-canada">AI video production in Calgary
+          and Canada</Link> covers Canadian prices, the Quebec French rule and ad preclearance.
         </p>
         <GuideFilm
           id="LYA3Do3KEN0"
@@ -246,7 +249,7 @@ export default function Page() {
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'If what you need is an ad for TV, streaming or social.' },
           { href: '/ai-brand-film-agency', title: 'AI brand films', note: 'If what you need is a film about what your brand stands for.' },
           { href: '/ai-video-production-healthcare', title: 'AI video for healthcare', note: 'For pharma, pharmacy, lab and medical marketers.' },
-          { href: '/work', title: 'The work', note: 'Films Ruminate X has made.' },
+          { href: '/guides', title: 'Guides for brands buying AI film', note: 'Budgets, deliverables, product accuracy and quality control, one question per guide.' },
         ]}
       />
 

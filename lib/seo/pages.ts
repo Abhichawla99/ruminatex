@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring and how do I pick one',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-24',
+    updated: '2026-09-25',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production: how is an AI commercial made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-09-24',
+    updated: '2026-09-25',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -48,7 +48,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does ai video production cost',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-09-24',
+    updated: '2026-09-25',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -153,5 +153,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-09-24',
     updated: '2026-09-24',
+  },
+  {
+    path: '/markets/ai-video-production-canada',
+    title: 'AI Video Production in Calgary and Canada',
+    question: 'ai video production calgary: who makes AI films here, what it costs in Canada and which Canadian ad rules apply',
+    kind: 'service',
+    published: '2026-03-08',
+    updated: '2026-09-25',
   },
 ]

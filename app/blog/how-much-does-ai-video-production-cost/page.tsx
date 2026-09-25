@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What AI video production costs in 2026 at each level, from self-serve tools to studios, with published prices and their sources, what drives the number, and how much cheaper it is than a traditional agency.',
   published: '2026-02-22',
-  updated: '2026-09-24',
+  updated: '2026-09-25',
   keywords: [
     'how much does ai video production cost',
     'ai video production cost',
@@ -203,7 +203,11 @@ export default function Page() {
           Two quotes built from the same list can be compared line by line. If one is far below the others, ask what it
           leaves out: usually the reruns on faces and product, the sound mix, or the licenses. The{' '}
           <Link href="/ai-video-production-agencies">guide to hiring an AI video production agency</Link> has the seven
-          questions to ask before you sign.
+          questions to ask before you sign. To lay the lines out before you ask, use our{' '}
+          <Link href="/guides/commercial-production-budget-template">commercial production budget template</Link>, and
+          the <Link href="/guides/ad-campaign-deliverables">list of deliverables each channel needs</Link>. The rest of
+          our <Link href="/guides">guides for brands buying AI film</Link> cover the look, product accuracy and quality
+          control.
         </p>
       </GuideSection>
 

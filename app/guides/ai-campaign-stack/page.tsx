@@ -80,11 +80,17 @@ const FAQS = [
   },
 ]
 
+const TRAIL = [
+  { name: 'Home', path: '/' },
+  { name: 'Guides', path: '/guides' },
+  { name: PAGE.title, path: PAGE.path },
+]
+
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide page={PAGE} faqs={FAQS} trail={TRAIL}>
       <GuideHero
         eyebrow="The stack"
         title="The AI campaign stack: what makes the film and the stills"
