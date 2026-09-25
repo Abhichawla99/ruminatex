@@ -139,8 +139,8 @@ export default function Page() {
           .
         </p>
         <p>
-          People are the expensive part of any AI set. On that surf job a usable photo took {surf.perKeeper} renders; on a
-          gummy supplement ad with no person in it, {gummy.perKeeper}.
+          On that surf job, where one person had to look the same in the studio, on a cliff and in the sea, a usable photo
+          took {surf.perKeeper} renders; on a gummy supplement ad with no person in it, {gummy.perKeeper}.
         </p>
       </GuideSection>
 
