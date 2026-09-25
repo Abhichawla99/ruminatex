@@ -75,6 +75,16 @@ Brand and marketing managers, founders, communications teams and agency producer
 - [6-Step Video Production Process](https://www.ruminatex.com/guides/6-step-video-production-process)
 - [AI Video Marketing Strategy](https://www.ruminatex.com/guides/video-marketing-strategy-ai)
 - [Screen Recording and Automated Demos](https://www.ruminatex.com/guides/screen-recording-automated-demos)
+- [AI Video Character Consistency for Brands](https://www.ruminatex.com/guides/ai-video-character-consistency): keeping one person across AI shots and campaign photos, the character sheet, consent and disclosure
+- [First and Last Frame AI Video for Commercials](https://www.ruminatex.com/guides/first-frame-last-frame-ai-video): starting AI shots from approved stills, model support, clean first frames, costs
+- [Brand World Building for AI Film and Photos](https://www.ruminatex.com/guides/brand-world-building): the world bible and the order that keeps an AI film and its photos in one world
+- [Brand Visual DNA: The Look Brief for AI Film](https://www.ruminatex.com/guides/brand-visual-dna): the photo and film fields of a visual DNA, and how to pull it from your own films
+- [Product and Label Accuracy in AI Commercials](https://www.ruminatex.com/guides/ai-commercial-product-accuracy): why products drift in AI video, the fixes, the rules, and the reference pack to send
+- [Commercial Production Budget Template for AI](https://www.ruminatex.com/guides/commercial-production-budget-template): budget lines for an AI film plus campaign stills, with a worked example and sources
+- [AI Campaign Stack: Tools Behind Film and Stills](https://www.ruminatex.com/guides/ai-campaign-stack): the layers and tools of an AI campaign, with published prices
+- [Ad Campaign Deliverables: Film and Stills](https://www.ruminatex.com/guides/ad-campaign-deliverables): the films, cutdowns and stills each channel needs, with official specs
+- [Video vs Static Ads: Where AI Film Fits](https://www.ruminatex.com/guides/video-vs-static-ads): what the evidence says, and how to split a budget between film and stills
+- [AI Video Quality Control Before It Airs](https://www.ruminatex.com/guides/ai-video-quality-control): the checklist an AI commercial and its stills pass before release
 
 ### Comparisons
 - [AI vs Traditional Video Production](https://www.ruminatex.com/tools/ai-vs-traditional-video)
