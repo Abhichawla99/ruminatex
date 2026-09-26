@@ -24,7 +24,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how are AI brand films made',
     kind: 'guide',
     published: '2026-09-14',
-    updated: '2026-09-22',
+    updated: '2026-09-26',
   },
   {
     path: '/ai-video-production-agencies',
@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring and how do I pick one',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-25',
+    updated: '2026-09-26',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production: how is an AI commercial made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-09-25',
+    updated: '2026-09-26',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -48,7 +48,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does ai video production cost',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-09-25',
+    updated: '2026-09-26',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -64,7 +64,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai brand film: what is it, how is it made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-09-24',
+    updated: '2026-09-26',
   },
   {
     path: '/ai-video-production-healthcare',
@@ -161,5 +161,21 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'service',
     published: '2026-03-08',
     updated: '2026-09-25',
+  },
+  {
+    path: '/ai-video-production-enterprise',
+    title: 'AI Corporate Video Production for Companies',
+    question: 'ai corporate video production: which company videos can be made with AI, and what do they cost',
+    kind: 'service',
+    published: '2026-03-08',
+    updated: '2026-09-26',
+  },
+  {
+    path: '/guides/brands-using-ai-commercials',
+    title: 'Brands Using AI Commercials: What Happened',
+    question: 'what companies are using AI in their commercials, and how did audiences react',
+    kind: 'guide',
+    published: '2026-09-26',
+    updated: '2026-09-26',
   },
 ]

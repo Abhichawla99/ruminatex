@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI brand film is, how one gets made without a shoot, what brand films cost with AI and with a crew, what still breaks, who owns it, and when a company should film real people instead.',
   published: '2026-03-07',
-  updated: '2026-09-24',
+  updated: '2026-09-26',
   keywords: [
     'ai brand film',
     'ai brand film production company',
@@ -96,7 +96,8 @@ export default function Page() {
         <p>
           {studio} makes {brandFilm.name.toLowerCase()}, {brandFilm.plain}, and {aboutUs.name.toLowerCase()},{' '}
           {aboutUs.plain}. {PRODUCTION.summary} Because nothing has to be filmed, the film can go where a shoot budget
-          cannot: a mountain at dawn, a factory in 1920, the inside of a cell.
+          cannot: a mountain at dawn, a factory in 1920, the inside of a cell. Which company films AI can make, and which
+          need your staff on camera, is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
         </p>
         <GuideFilm
           id="LYA3Do3KEN0"
@@ -203,7 +204,9 @@ export default function Page() {
         </p>
         <p>
           The film, titled From the Mountains to the City, shows a made world rather than real employees or customers. That is the
-          brief AI brand film production handles best today.
+          brief AI brand film production handles best today. Coca-Cola, Toys&quot;R&quot;Us, Kalshi and McDonald&apos;s
+          have also released AI ads; what each cost in time and how audiences took them is in{' '}
+          <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
         </p>
         <GuideFilm
           id="d-s9SxA4Klk"

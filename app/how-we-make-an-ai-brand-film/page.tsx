@@ -91,7 +91,7 @@ export default function HowWeMakeAIBrandFilmPage() {
             Ruminate X produces brand films with generative AI and a creative director&apos;s hand on every frame. The pipeline has six stages: brief, brand world, script and boards, generation passes, edit and sound, delivery. There are no shoots, no crews, and no location permits.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            Every frame is reviewed by a human editor before delivery. World-building, boards, and the edit decide the quality, which is why we spend most of our time there. The full service overview lives on our <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand film agency</Link> page. If you are still choosing a studio, read <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">how to hire an AI video production agency</Link>.
+            Every frame is reviewed by a human editor before delivery. World-building, boards, and the edit decide the quality, which is why we spend most of our time there. The full service overview lives on our <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand film agency</Link> page. If you are still choosing a studio, read <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">how to hire an AI video production agency</Link>. The same pipeline makes about-us and company films; which of those need a camera instead is on <Link href="/ai-video-production-enterprise" className="text-[#ebff00] hover:underline">AI corporate video production</Link>.
           </p>
         </div>
       </section>

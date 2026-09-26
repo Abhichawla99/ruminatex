@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-09-25',
+  updated: '2026-09-26',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -81,7 +81,8 @@ export default function Page() {
           instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
           finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
-          when the film needs real people on camera.
+          when the film needs real people on camera. For company films, which ones AI can make and which need your staff
+          on camera is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
         </p>
       </GuideAnswer>
 

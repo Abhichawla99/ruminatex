@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What AI video production costs in 2026 at each level, from self-serve tools to studios, with published prices and their sources, what drives the number, and how much cheaper it is than a traditional agency.',
   published: '2026-02-22',
-  updated: '2026-09-25',
+  updated: '2026-09-26',
   keywords: [
     'how much does ai video production cost',
     'ai video production cost',
@@ -121,7 +121,9 @@ export default function Page() {
           <a href={LEMONLIGHT}>Lemonlight</a> says an expert-led 30 second AI video costs roughly 60% less {/* claims-ok: Lemonlight's published claim, linked here */} than traditional
           production at equivalent quality. The director of Kalshi&apos;s NBA Finals ad, made with Veo 3 for about $2,000 in
           two days, <a href={KALSHI}>told Mashable</a> it was 95 percent cheaper than a traditional ad. Both are the
-          makers&apos; own figures.
+          makers&apos; own figures. The production company behind McDonald&apos;s Netherlands&apos; AI Christmas ad said
+          the opposite for its job: ten people, five weeks, more hours than a shoot (see{' '}
+          <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>).
         </p>
         <p>The saving is real where the money in a shoot goes to physical things:</p>
         <ul>

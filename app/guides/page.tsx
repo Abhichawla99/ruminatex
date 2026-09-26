@@ -27,6 +27,7 @@ const SHELVES: { title: string; note: string; paths: string[] }[] = [
       '/ai-video-production-agencies',
       '/comparison/ai-agency-vs-traditional-agency',
       '/how-we-make-an-ai-brand-film',
+      '/guides/brands-using-ai-commercials',
     ],
   },
   {
