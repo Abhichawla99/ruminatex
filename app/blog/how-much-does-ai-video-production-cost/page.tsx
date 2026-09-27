@@ -132,6 +132,10 @@ export default function Page() {
           <li>on-camera talent and their usage fees;</li>
           <li>reshoots when a shot does not work.</li>
         </ul>
+        <p>
+          For what those lines cost in one city, our <Link href="/affordable-video-production-calgary">Calgary video
+          production cost guide</Link> lists the day rates and package prices Calgary companies publish.
+        </p>
         <p>It is smaller where the money goes to people and paperwork, which AI does not remove:</p>
         <ul>
           <li>the idea, the script and the boards;</li>

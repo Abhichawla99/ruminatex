@@ -249,7 +249,10 @@ export default function Page() {
           'An agency producer who needs an AI production partner for a client company film.',
         ]}
         instead={[
-          'Your staff, executive or customers speak as themselves: hire a corporate video production company with a crew.',
+          <>
+            Your staff, executive or customers speak as themselves: hire a corporate video production company with a crew
+            (in Calgary, see <Link href="/best-video-production-company-calgary">how to choose a Calgary video production company</Link>).
+          </>,
           'You need event coverage, a site tour or a real product demo: film it.',
           'You need dozens of training or policy videos: a self-serve avatar tool such as Synthesia or HeyGen costs less.',
           'Your staff or customers are likely to reject a visibly AI-made film: film it.',

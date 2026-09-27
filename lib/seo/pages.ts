@@ -178,4 +178,20 @@ export const SEO_PAGES: SeoPage[] = [
     published: '2026-09-26',
     updated: '2026-09-26',
   },
+  {
+    path: '/best-video-production-company-calgary',
+    title: 'Calgary Video Production Company: How to Choose',
+    question: 'video production calgary: how do I choose a Calgary video production company, crew or AI studio',
+    kind: 'guide',
+    published: '2026-03-08',
+    updated: '2026-09-27',
+  },
+  {
+    path: '/affordable-video-production-calgary',
+    title: 'Video Production Cost in Calgary: Real Prices',
+    question: 'how much does video production cost in calgary',
+    kind: 'guide',
+    published: '2026-03-08',
+    updated: '2026-09-27',
+  },
 ]

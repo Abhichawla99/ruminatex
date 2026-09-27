@@ -203,7 +203,12 @@ export default function Page() {
           'You need several cutdowns and ratios from one idea for TV, YouTube and social.',
         ]}
         instead={[
-          'Your own staff, a real customer or a real clinician has to appear and speak as themselves. Hire a Calgary production company with a crew.',
+          <>
+            Your own staff, a real customer or a real clinician has to appear and speak as themselves. Hire a Calgary
+            production company with a crew; our guide to{' '}
+            <Link href="/best-video-production-company-calgary">choosing a Calgary video production company</Link> lists
+            published local prices and what a real quote includes.
+          </>,
           'You need coverage of a real event, such as a Stampede party or a conference. That is a camera job.',
           'Your budget fits a self-serve tool (Runway, Veo, Kling, Sora, HeyGen, Synthesia) and you have someone to run it.',
           'The campaign is French-first for Quebec and the idea has to be written in French from the start. A Montreal agency that writes in French will serve it better.',
