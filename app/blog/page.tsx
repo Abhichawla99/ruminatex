@@ -36,9 +36,9 @@ const featuredResources = [
   },
   {
     href: '/blog/best-video-production-companies-calgary',
-    title: 'Best Video Production Companies in Calgary',
+    title: 'Video Production Companies in Calgary: A List',
     description:
-      'A shortlist-style article for Calgary buyers researching local production partners.',
+      'Calgary video production companies by type, which ones publish prices, and which offer AI video.',
     type: 'Local Comparison',
   },
   {

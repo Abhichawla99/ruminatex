@@ -117,7 +117,7 @@ export default function Page() {
               {[
                 { href: "/video-production-calgary", label: "Video Production Calgary Hub" },
                 { href: "/blog/how-much-does-video-production-cost-calgary", label: "Video Production Cost in Calgary" },
-                { href: "/blog/best-video-production-companies-calgary", label: "Best Calgary Video Companies" },
+                { href: "/blog/best-video-production-companies-calgary", label: "Video Production Companies in Calgary" },
                 { href: "/affordable-video-production-calgary", label: "Affordable Video Production Calgary" },
                 { href: "/roi-calculator", label: "Calculate Your Video ROI" },
                 { href: "/contact", label: "Start Your Calgary Video Project" },

@@ -56,7 +56,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video vs traditional video production: which should my brand hire',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-09-23',
+    updated: '2026-09-28',
   },
   {
     path: '/ai-brand-film-agency',
@@ -193,5 +193,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-03-08',
     updated: '2026-09-27',
+  },
+  {
+    path: '/blog/best-video-production-companies-calgary',
+    title: 'Video Production Companies in Calgary: A List',
+    question: 'video production companies calgary: who are they, what does each make, and which publish prices or offer AI video',
+    kind: 'guide',
+    published: '2026-03-08',
+    updated: '2026-09-28',
   },
 ]

@@ -20,9 +20,11 @@ const PAGE = {
   description:
     'An AI video agency against a traditional production company for a brand film or commercial: what you pay for, what changes when you need a revision, where AI footage still fails, and which one to hire for which job.',
   published: '2026-03-08',
-  updated: '2026-09-23',
+  updated: '2026-09-28',
   keywords: [
     'ai video vs traditional video',
+    'how much cheaper is ai video production vs agency',
+    'ai video agency pricing',
     'ai video agency vs traditional agency',
     'ai vs traditional video production',
     'benefits of ai video platforms over professional video production agencies',
@@ -33,6 +35,10 @@ const PAGE = {
 
 const studio = SITE.name
 const LEMONLIGHT = 'https://www.lemonlight.com/blog/ai-video-production-cost/'
+const ADMIRAL = 'https://admiral.media/ai-creative-agency-pricing'
+const INVIDEO = 'https://invideo.io/faq/ai-film-production-vs-traditional-film-production-cost/'
+const PROMOMOTIONS = 'https://promomotions.com/blog/ai-video-ads-vs-agency-cost-comparison'
+const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost'
 
 const FAQS = [
   {
@@ -42,6 +48,10 @@ const FAQS = [
   {
     q: 'Is AI video production cheaper than a traditional agency?',
     a: 'Usually, because an AI film has no crew days, locations, travel, talent fees or reshoots. Lemonlight puts traditional production at about $15,000 to $50,000 or more per video (March 2026). The script, edit, sound, licensing and legal or MLR review still cost the same kind of money, so the saving is smaller on short films with heavy review. Ruminate X quotes each film from the brief.',
+  },
+  {
+    q: 'How much cheaper is AI video production vs an agency?',
+    a: 'Compared finished film to finished film, Lemonlight prices a polished 30 second AI video from USD 5,000 and puts that at about 60% below traditional production of the same quality, which it prices at USD 15,000 to 50,000 or more per video (March 2026). The bigger savings you see quoted, up to 99% or hundreds of times cheaper, compare a tool subscription or a do-it-yourself production with a filmed commercial. The script, edit, sound, licences and legal or MLR review cost about the same either way. Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), linked on this page
   },
   {
     q: 'Are AI-generated videos good enough for a brand?',
@@ -114,6 +124,31 @@ export default function Page() {
           That is why the saving is largest on films with many locations or an expensive look, and smallest on short films
           that go through several review rounds. For the published prices at each level, from self-serve tools to
           broadcast studios, read <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+        </p>
+
+        <h3>How much cheaper is AI video production vs an agency?</h3>
+        <p>
+          The percentages published online range from about 60% to &quot;250x&quot;, and they measure different things. Before
+          you use one in a budget, check two things: what sits on the AI side (a software subscription, a performance ad
+          variant, or a finished film from a studio) and who is selling it.
+        </p>
+        <GuideTable
+          caption="Published AI-versus-agency cost claims, read September 28, 2026. Each links to its source. Ruminate X publishes no price; it quotes each film from the brief."
+          head={['Source', 'What it says', 'What it actually compares', 'What the source sells']}
+          rows={[
+            [<a key="l" href={LEMONLIGHT}>Lemonlight, March 2026</a>, 'AI video from USD 5,000 for a polished 30 second video, about 60% below traditional at USD 15,000 to 50,000+', 'A finished film against a finished film of the same quality', 'Video production, AI and filmed'], // claims-ok: Lemonlight AI video production cost guide, linked
+            [<a key="a" href={ADMIRAL}>Admiral Media, February 2026</a>, '70-90% cheaper; traditional USD 5,000 to 30,000 per asset; AI about EUR 200 per asset on a EUR 4,000 to 21,500 monthly retainer', 'High-volume performance ad variants against one-off filmed assets', 'AI performance creative'], // claims-ok: Admiral Media AI creative agency pricing (Feb 2026), linked
+            [<a key="i" href={INVIDEO}>invideo, July 2026</a>, 'Productions made with its tool cost USD 750 to 5,000 all-in, against USD 100,000 to 500,000 for a filmed two minute commercial: up to 99.7% less', "A tool user's own production against a traditional figure with no named source", 'An AI video tool'],
+            [<a key="p" href={PROMOMOTIONS}>PromoMotions, December 2025</a>, 'At one video a month, AI tools are 250x cheaper; a basic agency project costs USD 2,000 to 10,000', 'A monthly subscription against a finished agency video', 'An AI ad tool'], // claims-ok: PromoMotions AI video ads vs agency (Dec 2025), linked
+            [<a key="v" href={VERSELY}>Versely, September 2026</a>, 'Studio list prices: USD 2,500 for a hero spot (ArcaneWiz), USD 3,500 for a 60 second cinematic film (Gisteo), GBP 15,000 to 45,000 for a broadcast asset (Myth Labs)', 'AI studio prices, no comparison', 'An AI studio directory and studio'],
+          ]}
+        />
+        <p>
+          For a brand film or a commercial, the like-for-like line is the first one: a studio&apos;s finished film against a
+          production company&apos;s finished film. The large multiples leave out the work a marketing team pays for either way:
+          the concept and script, reruns of the shots that fail, the edit, the sound mix, music and voice licences, and your
+          legal or MLR review. If a quote from an AI studio looks like a tool subscription, ask which of those lines it
+          covers.
         </p>
       </GuideSection>
 

@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     q: 'What is the average cost of video production?',
-    a: 'There is no useful single average, because a one-person interview and a crewed commercial are different jobs. In Calgary, the published middle is a two to three minute corporate or brand video at $6,000 to $15,000 CAD (DCFOTOFILM, July 2026), and Studio Spero says most of its corporate projects fall between $3,000 and $15,000. On Clutch, the most common hourly rate listed by Calgary video firms is $100 to $149.', // claims-ok: DCFOTOFILM, Studio Spero corporate FAQ and Clutch Calgary list, all linked on this page
+    a: 'There is no useful single average, because a one-person interview and a crewed commercial are different jobs. In Calgary, the published middle is a two to three minute corporate or brand video at $6,000 to $15,000 CAD (DCFOTOFILM, July 2026), and Studio Spero says most of its corporate projects fall between $3,000 and $15,000. On Clutch, Calgary video firms list hourly rates from $50-$99 to $200-$300.', // claims-ok: DCFOTOFILM, Studio Spero corporate FAQ and Clutch Calgary list, all linked on this page
   },
   {
     q: 'How much does a 2 minute video cost?',
@@ -109,8 +109,8 @@ export default function Page() {
         />
         <p>
           Two wider checks agree with the table. <a href={VIDEOKINGS}>Video Kings</a> put a Calgary corporate
-          videographer at $1,500 to $12,000 per project and $100 to $300 an hour (April 2024), and the most common hourly {/* claims-ok: Video Kings guide, linked in this sentence */}
-          rate on <a href={CLUTCH}>Clutch&apos;s Calgary list</a> is $100 to $149, with minimum project sizes of $1,000 to {/* claims-ok: Clutch Calgary list, linked on this line */}
+          videographer at $1,500 to $12,000 per project and $100 to $300 an hour (April 2024), and firms on {/* claims-ok: Video Kings guide, linked in this sentence */}
+          <a href={CLUTCH}>Clutch&apos;s Calgary list</a> show hourly rates from $50-$99 to $200-$300, with minimum project sizes of $1,000 to {/* claims-ok: Clutch Calgary list, linked on this line */}
           $10,000 and up (September 2026).
         </p>
       </GuideSection>

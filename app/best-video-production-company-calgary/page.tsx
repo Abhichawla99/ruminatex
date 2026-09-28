@@ -127,7 +127,7 @@ export default function Page() {
             [<a key="r" href={RINGTAIL}>Ring Tail Films</a>, '$550 half day, $1,000 full day, $250 an hour', 'Freelance videographer with equipment; corporate videos typically $1,500 to $2,000'], // claims-ok: Ring Tail Films rates page, linked in this row
             [<a key="v" href={VINC}>V Strategies</a>, '$4,995', 'Done In A Day package: project management, shoot, edit and music'], // claims-ok: V Strategies Done In A Day page, linked in this row
             [<a key="s" href={SPERO}>Studio Spero</a>, '$3,000 to $15,000', 'Where most of its corporate projects fall, per its FAQ'], // claims-ok: Studio Spero corporate page, linked in this row
-            [<a key="c" href={CLUTCH}>Clutch, Calgary list</a>, '$100 to $149 an hour; minimums from $1,000 to $10,000+', 'Most common hourly rate and minimum project sizes listed by Calgary firms'], // claims-ok: Clutch Calgary video production list, linked in this row
+            [<a key="c" href={CLUTCH}>Clutch, Calgary list</a>, '$50-$99 to $200-$300 an hour; minimums from $1,000 to $10,000+', 'Hourly rates and minimum project sizes listed by Calgary firms'], // claims-ok: Clutch Calgary video production list, linked in this row
           ]}
           caption="Checked on each source page in September 2026. Currency is Canadian dollars where the source says so; Ring Tail, V Strategies, Studio Spero and Clutch do not state it."
         />
@@ -152,7 +152,9 @@ export default function Page() {
         <p>
           <strong>Read reviews where the company does not write them.</strong> Google reviews and{' '}
           <a href={CLUTCH}>Clutch</a> are harder to fake than a testimonial
-          block on a company&apos;s own site. Read the three-star ones; they say what went wrong.
+          block on a company&apos;s own site. Read the three-star ones; they say what went wrong. Our{' '}
+          <Link href="/blog/best-video-production-companies-calgary">list of video production companies in Calgary</Link>{' '}
+          sorts local firms by type and notes which publish prices.
         </p>
         <p>
           <strong>Ask about AI, whoever you hire.</strong> Ask whether any shots or voices will be generated, which ones, whether the tools&apos; licences allow commercial use, and who owns the result.
