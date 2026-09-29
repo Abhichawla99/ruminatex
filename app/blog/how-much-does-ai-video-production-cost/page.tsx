@@ -21,13 +21,15 @@ const PAGE = {
   description:
     'What AI video production costs in 2026 at each level, from self-serve tools to studios, with published prices and their sources, what drives the number, and how much cheaper it is than a traditional agency.',
   published: '2026-02-22',
-  updated: '2026-09-26',
+  updated: '2026-09-29',
   keywords: [
     'how much does ai video production cost',
     'ai video production cost',
     'how much does it cost to make an ai video',
     'ai video agency pricing',
     'ai video production agency pricing',
+    'ai video agency pricing per month',
+    'how much does an ai video subscription cost',
     'how much cheaper is ai video production vs agency',
     'ai video cost',
   ],
@@ -39,6 +41,9 @@ const trail = film('LYA3Do3KEN0')
 const LEMONLIGHT = 'https://www.lemonlight.com/blog/ai-video-production-cost/'
 const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost'
 const KALSHI = 'https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-150507375.html'
+const MAW = 'https://mawaistudios.com/'
+const SUPERSIDE = 'https://www.superside.com/pricing'
+const KNOWLIFY = 'https://knowlify.com/articles/explainer-video-agency-cost-guide'
 
 const FAQS = [
   {
@@ -56,6 +61,10 @@ const FAQS = [
   {
     q: 'How much does a 2 minute AI video cost?',
     a: 'More than a 30 second one, though not four times as much. A longer film has more distinct scenes to generate and more runtime to edit, mix and grade, while the brief, the brand world and the casting are paid for once. As one published example, Gisteo lists AI avatar video at USD 1,000 for the first 30 seconds plus USD 500 for each extra 30 seconds (via Versely, September 2026), which works out to USD 2,500 for two minutes.',
+  },
+  {
+    q: 'How much does an AI video subscription cost?',
+    a: 'Two different things go by that name. A self-serve AI video tool costs about $20 to $300 a month (Lemonlight, March 2026), and you make the videos yourself. An agency retainer or subscription buys finished work each month: MAW AI Studios lists a retainer from USD 3,000 a month for 4 to 8 assets, and Superside\'s creative subscriptions start at a USD 15,000 monthly minimum on an annual term (both checked September 2026). Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), MAW AI Studios and Superside pricing pages, all linked on this page
   },
   {
     q: 'What makes an AI video production quote go up?',
@@ -151,7 +160,37 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Doing it yourself" title="What an AI video costs when you make it yourself">
+      <GuideSection eyebrow="Agency pricing" title="AI video agency pricing: per video, per campaign or per month">
+        <p>
+          AI video agencies publish prices in three shapes: a price per video, a price per campaign, and a monthly fee
+          for a set amount of work. The figures below are each company&apos;s own, read on its site in September 2026.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Sources: <a href={MAW}>MAW AI Studios</a> packages, <a href={KNOWLIFY}>Knowlify</a> (May 2026, which sells
+              the first tier it describes) and <a href={SUPERSIDE}>Superside pricing</a>. USD. Checked September 2026.
+            </>
+          }
+          head={['How they charge', 'Published price', 'What it buys', 'Who publishes it']}
+          rows={[
+            ['Per video', 'From 1,500', 'One 15 to 60 second commercial', 'MAW AI Studios (Spark)'],
+            ['Per project', '1,000 to 8,000', 'One finished video, delivered in days', 'Knowlify Studio'],
+            ['Per campaign', 'From 5,000', 'A hero film plus 30, 15 and 6 second cutdowns', 'MAW AI Studios (Ignite)'],
+            ['Monthly retainer', 'From 3,000 a month', '4 to 8 assets a month', 'MAW AI Studios (Genesis)'],
+            ['Creative subscription', '15,000 a month minimum, annual term', 'Design, video and photo production for a team', 'Superside'],
+          ]}
+        />
+        <p>
+          Knowlify puts AI video agencies at $500 to $8,000 {/* claims-ok: Knowlify explainer video agency cost guide (May 2026), linked in the table caption */} for a 60 to 90 second explainer, against $5,000 to $15,000
+          at a mid-market studio and $15,000 to $50,000 at a premium agency. A single launch fits a per-video or campaign
+          price. A monthly fee only pays off when you will use the volume every month: ask what counts as one asset, how
+          many revision rounds each one gets, whether unused budget rolls over (Superside&apos;s Flex plan rolls it for
+          up to three months), and how long the music and voice licenses run.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Doing it yourself" title="What an AI video costs when you make it yourself" alt>
         <p>
           A tool subscription is the smallest line. The larger ones are generations you throw away and hours. The
           director of the Kalshi ad reported 300 to 400 generations to get 15 usable clips, and he has more than 15 years
@@ -169,7 +208,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="What moves the number" title="What drives the price of an AI brand film or commercial" alt>
+      <GuideSection eyebrow="What moves the number" title="What drives the price of an AI brand film or commercial">
         <GuideTable
           caption="The cost drivers Ruminate X prices from, in the order they usually matter."
           head={['Driver', 'Why it costs more']}
@@ -193,7 +232,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Getting a quote" title="What to send to get an accurate AI video quote">
+      <GuideSection eyebrow="Getting a quote" title="What to send to get an accurate AI video quote" alt>
         <ol>
           <li>
             What the film is: a commercial, a <Link href="/ai-brand-film-agency">brand film</Link>, an about-us film, a

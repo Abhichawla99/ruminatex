@@ -16,16 +16,19 @@ import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-commercial-production',
-  title: 'AI Commercial Production for Brands',
+  title: 'AI Commercial Production Company for Brands',
   description:
-    'How an AI commercial gets made without a shoot: what you get, what it costs and why, what still breaks in AI footage, the disclosure and rights questions, and when a brand should hire a crew instead.',
+    'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-09-26',
+  updated: '2026-09-29',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
     'ai-driven commercial production',
     'ai vfx for commercial production',
+    'best ai commercial production company',
+    'ai film production company',
+    'can i use ai videos for commercial use',
     'ai commercial agency',
     'ai tv commercials',
     'how much does an ai commercial cost',
@@ -48,7 +51,15 @@ const FAQS = [
   },
   {
     q: 'How much does an AI commercial cost?',
-    a: 'Published prices in September 2026 run from about USD 500 for a single social spot from small AI studios, to USD 2,500 to 3,500 for a 15 to 60 second hero or cinematic spot, to GBP 15,000 to 45,000 for a broadcast asset from specialist studios (compiled by Versely, September 2026). Ruminate X quotes each commercial from the brief. Length, the number of scenes, how exactly your product has to be reproduced, versions and review rounds move the number.',
+    a: 'Published prices in September 2026 run from USD 1,500 for a single 15 to 60 second commercial from MAW AI Studios (its own site), through USD 2,500 to 3,500 for a hero or cinematic spot, to GBP 15,000 to 45,000 for a broadcast asset from specialist studios (compiled by Versely, September 2026). Ruminate X quotes each commercial from the brief. Length, the number of scenes, how exactly your product has to be reproduced, versions and review rounds move the number.',
+  },
+  {
+    q: 'Is there an AI film production studio?',
+    a: `Yes. AI-native studios make films and commercials in which every shot is generated, while people write, direct, edit and finish them. Secret Level, which calls itself an AI-native entertainment studio, made Coca-Cola's 2024 and 2025 holiday ads (NBC News, November 2024; The Hollywood Reporter, November 2025). ${studio} is an AI film studio in ${SITE.city} that makes brand films and AI commercials this way. Production companies such as Synima work across traditional, hybrid and AI production, filming what needs filming.`,
+  },
+  {
+    q: 'Can I use AI videos for commercial use?',
+    a: 'Usually, but it depends on the tool and the plan. Runway, for example, says content made with it is yours to use "without any non-commercial restrictions" (Runway Help, checked September 2026); other generators set different terms for free and paid plans. The footage also must not copy someone else\'s work, face or trademark. When a studio makes your ad, ask it to list the tools it used and confirm in writing that their terms allow commercial use. This is not legal advice.',
   },
   {
     q: 'What does an AI commercial production company deliver?',
@@ -113,7 +124,55 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="How it is made" title="How an AI commercial gets made, shot by shot" alt>
+
+      <GuideSection eyebrow="Who to hire" title="How to choose an AI commercial production company" alt>
+        <p>
+          Three kinds of company answer to &quot;AI commercial production company&quot;, and they sell different
+          things. Decide which one your ad needs before you compare quotes.
+        </p>
+        <GuideTable
+          caption="Descriptions quoted from each company's own site or Google listing, read September 2026. Ruminate X is the first kind."
+          head={['Kind of company', 'What you get', 'Examples, in their words', 'Hire it when']}
+          rows={[
+            [
+              'AI-native studio',
+              'Every shot generated; script, boards, edit, sound and grade done by people',
+              'Secret Level, "an AI-native entertainment studio" (Coca-Cola holiday ads, 2024 and 2025)',
+              'The idea works as a made world and nobody real has to appear',
+            ],
+            [
+              'Production company with AI',
+              'A crew films what must be real; AI adds shots, sets or effects',
+              'Synima, "traditional, hybrid, and AI video production"; Tiger House Films, AI workflows "for commercials"',
+              'You need your people, store or athlete on camera plus a few impossible shots',
+            ],
+            [
+              'Self-serve generator',
+              'A tool; you or your editor direct, rerun and finish every shot',
+              'Runway, Veo, Kling, Sora',
+              'You have an editor with time and the ad can take a few rough shots',
+            ],
+          ]}
+        />
+        <p>Whichever kind you shortlist, five questions separate the ones who can deliver your ad:</p>
+        <ol>
+          <li>Show me a shot from past work where a face turns, a hand holds the product and a logo is on screen.</li>
+          <li>Which parts do people do: the script, the boards, the edit, the sound, the grade?</li>
+          <li>
+            Which models made the footage, do their terms allow commercial use, and who gets the project files?
+          </li>
+          <li>What exactly is delivered: the master, which cutdowns, which ratios, captions, music and voice licenses?</li>
+          <li>How many review rounds are in the quote, and who signs off on claims?</li>
+        </ol>
+        <p>
+          For the full checklist when hiring any AI studio, see{' '}
+          <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>. For eight brands
+          that already ran AI commercials, and how audiences took them, see{' '}
+          <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="How it is made" title="How an AI commercial gets made, shot by shot">
         <ol>
           <li>
             <strong>Brief.</strong> The product, the audience, the one thing the viewer should remember, the channels
@@ -145,7 +204,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title="What still breaks in an AI commercial">
+      <GuideSection eyebrow="The weak points" title="What still breaks in an AI commercial" alt>
         <p>
           Generators are good at light, weather, landscapes and camera moves that would need a crane or a helicopter.
           They are still unreliable at the things a commercial lives on:
@@ -169,7 +228,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Price" title="How much an AI commercial costs" alt>
+      <GuideSection eyebrow="Price" title="How much an AI commercial costs">
         <p>
           Published prices for AI commercials cover a wide range, because the word covers everything from a one-person
           social spot to a broadcast campaign:
@@ -177,7 +236,8 @@ export default function Page() {
         <GuideTable
           caption={
             <>
-              Figures are the studios&apos; own published prices, as compiled by{' '}
+              Figures are the studios&apos; own published prices: MAW from{' '}
+              <a href="https://mawaistudios.com/">its own site</a>, the rest as compiled by{' '}
               <a href="https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost">Versely</a> (September 2026),
               and the Kalshi figure as{' '}
               <a href="https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-150507375.html">reported by Mashable</a>{' '}
@@ -187,7 +247,7 @@ export default function Page() {
           }
           head={['What was bought', 'Published price', 'Source']}
           rows={[
-            ['One 15 to 60 second social spot, small AI studio', 'USD 500 and up', 'MAW AI Studios, via Versely'],
+            ['One 15 to 60 second commercial, small AI studio', 'From USD 1,500', 'MAW AI Studios, own site'],
             ['One 15 to 60 second hero spot', 'USD 2,500 and up', 'ArcaneWiz, via Versely'],
             ['60 second cinematic AI film', 'USD 3,500 and up', 'Gisteo, via Versely'],
             ['Single-market broadcast AI commercial', 'GBP 15,000 to 45,000 per asset', 'Myth Labs, via Versely'],
@@ -199,13 +259,14 @@ export default function Page() {
           scenes; how exactly your product, a place or a character has to be reproduced; how many cutdowns, ratios,
           languages and hooks you need; and review rounds, which run longer when a legal, medical or MLR team signs off
           on claims. The full breakdown, with what each price tier buys, is in{' '}
-          <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>. Kalshi is
+          <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>, along with
+          how AI video agencies price retainers and subscriptions. Kalshi is
           one of eight AI ads, from Coca-Cola to McDonald&apos;s, whose time, team and audience reaction are compared in{' '}
           <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="AI in a live-action ad" title="AI VFX for commercial production">
+      <GuideSection eyebrow="AI in a live-action ad" title="AI VFX for commercial production" alt>
         <p>
           Some searches for AI commercial production come from teams who are filming anyway and want AI for a few shots:
           a set extension, a crowd, a product that transforms. That is AI VFX inside a live-action shoot, and it is a
@@ -222,7 +283,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Labels and rights" title="Disclosure and who owns the ad" alt>
+      <GuideSection eyebrow="Labels and rights" title="Disclosure and who owns the ad">
         <p>
           <strong>Labels.</strong>{' '}
           <a href="https://support.google.com/youtube/answer/14328491">YouTube&apos;s policy</a> asks creators to disclose

@@ -82,7 +82,9 @@ export default function Page() {
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
           finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
           when the film needs real people on camera. For company films, which ones AI can make and which need your staff
-          on camera is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
+          on camera is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>. If what
+          you need is an ad, <Link href="/ai-commercial-production">AI commercial production</Link> covers how to choose
+          an AI commercial production company and what the ad costs.
         </p>
       </GuideAnswer>
 
@@ -188,7 +190,7 @@ export default function Page() {
           If a quote is far below the others, ask what it leaves out. The usual answers are the brand-world stage, the
           reruns on faces and product, and a real sound mix. Published prices at each level, from self-serve tools to
           broadcast studios, are in <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production
-          costs</Link>. For a side-by-side with a traditional shoot, read{' '}
+          costs</Link>, including how agencies charge: per video, per campaign or by the month. For a side-by-side with a traditional shoot, read{' '}
           <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
         </p>
       </GuideSection>

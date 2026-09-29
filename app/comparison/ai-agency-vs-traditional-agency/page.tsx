@@ -124,6 +124,8 @@ export default function Page() {
           That is why the saving is largest on films with many locations or an expensive look, and smallest on short films
           that go through several review rounds. For the published prices at each level, from self-serve tools to
           broadcast studios, read <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+          It also sets out AI video agency pricing by the video, the campaign and the month, from a USD 1,500 single
+          commercial to a USD 15,000 monthly subscription minimum. {/* claims-ok: MAW AI Studios and Superside pricing pages, linked on the cost page */}
         </p>
 
         <h3>How much cheaper is AI video production vs an agency?</h3>
