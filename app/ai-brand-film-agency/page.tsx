@@ -223,7 +223,8 @@ export default function Page() {
             US Copyright Office&apos;s January 2025 report
           </a>{' '}
           concluded that prompts alone do not make someone the author of AI output, while human work visible in the film,
-          such as the script and the selection and arrangement of shots, can be protected.
+          such as the script and the selection and arrangement of shots, can be protected. Who owns an AI brand film under
+          the video tools&apos; terms, and in Canada, is covered in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
         </p>
         <p>
           <strong>Labels.</strong>{' '}

@@ -202,4 +202,28 @@ export const SEO_PAGES: SeoPage[] = [
     published: '2026-03-08',
     updated: '2026-09-28',
   },
+  {
+    path: '/faq-ai-video-production',
+    title: 'AI Video Production FAQ: Rights, Cost, Quality',
+    question: 'can I use and copyright an AI video, is it legal, what does it cost and is it good enough',
+    kind: 'guide',
+    published: '2026-03-08',
+    updated: '2026-09-30',
+  },
+  {
+    path: '/ai-avatar-videos',
+    title: 'AI Avatar Video Production for Companies',
+    question: 'ai avatar video production company: when should a company use an AI avatar or spokesperson video, what does it cost, and tool or studio',
+    kind: 'service',
+    published: '2026-09-30',
+    updated: '2026-09-30',
+  },
+  {
+    path: '/guides/who-owns-ai-video',
+    title: 'Who Owns an AI Video? Copyright for Brands',
+    question: 'who owns the rights to an AI-generated commercial or brand film, and can it be copyrighted',
+    kind: 'guide',
+    published: '2026-09-30',
+    updated: '2026-09-30',
+  },
 ]

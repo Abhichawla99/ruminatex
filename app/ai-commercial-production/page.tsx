@@ -298,13 +298,15 @@ export default function Page() {
             US Copyright Office&apos;s January 2025 report
           </a>{' '}
           concluded that prompts alone do not make someone the author of AI output, while human work visible in the
-          result, such as the script and the selection and arrangement of shots, can be protected.
+          result, such as the script and the selection and arrangement of shots, can be protected. The contract clauses
+          that decide who owns an AI commercial are in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
         </p>
         <p>
           <strong>Actors and likeness.</strong> A real person&apos;s face or voice needs their consent. Under the 
           <a href="https://www.sagaftra.org/contracts-industry-resources/commercials/2025-commercials-contracts">SAG-AFTRA 2025 Commercials Contract</a>, a union performer consents before a digital replica
           is made and before each use, and a performance generated from the replica pays 1.5 times the session fee plus
           holding and use fees. A character generated from scratch is not anyone&apos;s replica. Checked September 2026.
+          For a generated presenter or spokesperson, see <Link href="/ai-avatar-videos">AI avatar video production</Link>.
         </p>
         <p>
           This is not legal advice. Your lawyer, and in pharma, medical and financial work your MLR or compliance team,

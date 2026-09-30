@@ -196,7 +196,8 @@ export default function Page() {
       <GuideSection eyebrow="Presenters" title="AI avatars and presenters in company videos" alt>
         <p>
           An avatar video puts a generated presenter on screen reading your script. Companies use them for onboarding,
-          policy updates and multi-language versions of the same message. Three rules keep them out of trouble:
+          policy updates and multi-language versions of the same message. Tool prices, consent rules and the disclosure
+          laws are in <Link href="/ai-avatar-videos">AI avatar video production</Link>. Three rules keep them out of trouble:
         </p>
         <ul>
           <li>

@@ -33,7 +33,7 @@ Ads for TV, streaming, web and social.
 A film that introduces a company, its mission or its work.
 
 ### Avatar videos
-A presenter or spokesperson video made with AI.
+A presenter or spokesperson video made with AI. Page: https://www.ruminatex.com/ai-avatar-videos
 
 ### UGC-style ads
 Ads in the style of creator videos.
@@ -65,9 +65,12 @@ Brand and marketing managers, founders, communications teams and agency producer
 - [AI Commercial Production Company](https://www.ruminatex.com/ai-commercial-production): how to choose an AI commercial production company, what an AI commercial delivers, what still breaks, published market prices, disclosure and rights
 - [AI Brand Film Production](https://www.ruminatex.com/ai-brand-film-agency): what an AI brand film is, how it is made, what breaks, filmed and AI prices with sources, rights, when to film instead
 - [AI Video for Pharma and Healthcare Marketing](https://www.ruminatex.com/ai-video-production-healthcare): uses, what MLR reviewers ask about AI footage, US and Canadian drug-ad rules, what breaks in AI medical imagery
+- [AI Avatar Video Production for Companies](https://www.ruminatex.com/ai-avatar-videos): avatar kinds, tool prices, consent and disclosure rules for AI presenters
 - [Services](https://www.ruminatex.com/services)
 
 ### Guides
+- [Who Owns an AI Video? Copyright for Brands](https://www.ruminatex.com/guides/who-owns-ai-video): US Copyright Office and court position, video model terms on output ownership, Canada, studio contract clauses
+- [AI Video Production FAQ](https://www.ruminatex.com/faq-ai-video-production): commercial use, copyright, legality, cost and quality
 - [How to Create AI Explainer Videos](https://www.ruminatex.com/guides/how-to-create-explainer-videos-with-ai)
 - [Video Captions and Subtitles](https://www.ruminatex.com/guides/video-captions-ai-subtitles)
 - [Social Media Video Shorts](https://www.ruminatex.com/guides/social-media-video-shorts)

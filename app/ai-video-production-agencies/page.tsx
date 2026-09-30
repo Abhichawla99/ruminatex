@@ -204,7 +204,8 @@ export default function Page() {
           </a>{' '}
           concluded that prompts alone do not give enough human control to make someone the author of AI output, and that
           human work visible in the result (a script, the creative selection and arrangement of shots, creative edits) can
-          be protected. Checked September 2026.
+          be protected. Checked September 2026. What the video tools&apos; own terms say, and the ownership clauses to
+          ask for, are in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
         </p>
         <p>
           This is not legal advice. Your own lawyer, and in regulated industries your MLR or compliance team, decides what

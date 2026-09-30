@@ -28,6 +28,8 @@ const SHELVES: { title: string; note: string; paths: string[] }[] = [
       '/comparison/ai-agency-vs-traditional-agency',
       '/how-we-make-an-ai-brand-film',
       '/guides/brands-using-ai-commercials',
+      '/guides/who-owns-ai-video',
+      '/faq-ai-video-production',
     ],
   },
   {
