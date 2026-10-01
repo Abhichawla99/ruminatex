@@ -310,7 +310,9 @@ export default function Page() {
         </p>
         <p>
           This is not legal advice. Your lawyer, and in pharma, medical and financial work your MLR or compliance team,
-          decides what the ad can say and how it is labelled.
+          decides what the ad can say and how it is labelled. For drug brands, the FDA rules that bite hardest on
+          generated footage, and the two AI drug campaigns so far, are in{' '}
+          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
       </GuideSection>
 

@@ -69,10 +69,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-healthcare',
     title: 'AI Video for Pharma and Healthcare Marketing',
-    question: 'can pharma, pharmacy, lab and medical companies use AI video, and what will MLR ask',
+    question: 'can pharma, pharmacy, lab and medical companies use AI video, what will MLR ask, and what are the FDA rules for prescription drug TV and video ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-09-24',
+    updated: '2026-10-01',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -225,5 +225,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-09-30',
     updated: '2026-09-30',
+  },
+  {
+    path: '/guides/ai-pharma-commercials',
+    title: 'AI Pharma Commercials: Who Has Made Them',
+    question: 'which pharma companies have made AI-generated commercials, is the saphnelo ad AI, and can drug ads use AI actors',
+    kind: 'guide',
+    published: '2026-10-01',
+    updated: '2026-10-01',
   },
 ]

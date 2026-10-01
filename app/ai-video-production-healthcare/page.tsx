@@ -19,10 +19,13 @@ const PAGE = {
   description:
     'How pharma, pharmacy, lab and medical companies use AI-made brand films and ads, what MLR reviewers ask about AI footage, the US and Canadian drug-ad rules that shape a video, and when to film real clinicians instead.',
   published: '2026-03-07',
-  updated: '2026-09-24',
+  updated: '2026-10-01',
   keywords: [
     'ai video for pharma marketing',
     'ai video production healthcare',
+    'pharmaceutical video production company',
+    'fda rules for prescription drug tv ads',
+    'isi in pharma video ads',
     'can i use ai to make a marketing video',
     'ai medical animation',
     'medical ai video',
@@ -37,6 +40,12 @@ const healthBuyers = BUYERS.filter((b) => /pharma|labs|medical/.test(b)).join(',
 const CFR = 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202/section-202.1'
 const CANADA_RX = 'https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870/section-C.01.044.html'
 const HC_ADS = 'https://www.canada.ca/en/health-canada/services/drugs-health-products/regulatory-requirements-advertising.html'
+const CCN_RULE = 'https://www.govinfo.gov/content/pkg/FR-2023-11-21/pdf/2023-25428.pdf'
+const RISK_GUIDANCE = 'https://www.fda.gov/media/76269/download'
+const LINZESS = 'https://www.fda.gov/media/188750/download'
+const VONJO = 'https://www.fda.gov/media/191036/download'
+const FDA_SEPT = 'https://www.fda.gov/news-events/press-announcements/fda-launches-crackdown-deceptive-drug-advertising'
+const AGENDA = 'https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0910-AJ14'
 
 const FAQS = [
   {
@@ -52,8 +61,16 @@ const FAQS = [
     a: 'Platform rules apply: YouTube asks for disclosure when realistic content is made or meaningfully altered with AI (YouTube Help, checked September 2026). Beyond that, whether an AI-generated person who looks like a patient or clinician needs a super on screen is a question for your MLR team and counsel. A label stops viewers reading a realistic generated doctor as a real one.',
   },
   {
-    q: 'What does FDA require in a TV drug ad, and does AI change it?',
-    a: 'For prescription drug ads shown to consumers on TV, 21 CFR 202.1(e)(1)(ii) requires the major statement of side effects and contraindications to be presented in a clear, conspicuous and neutral manner: understandable language, audio as clear as the rest of the ad, the text shown on screen at the same time as the audio, and no visuals or sounds that interfere with it. AI does not change the rule, but generated visuals behind the major statement must not distract from it.',
+    q: "What are the FDA's rules for prescription drug ads?",
+    a: 'A consumer TV or video ad for a prescription drug must state the major side effects and contraindications (the major statement) and keep a fair balance between benefit and risk information (21 CFR 202.1). Since November 20, 2024 the major statement must be in plain language, spoken and shown as on-screen text at the same time, easy to read, and free of sounds or visuals likely to interfere with understanding it. The rules apply the same way to AI-generated footage. This is not legal or regulatory advice.',
+  },
+  {
+    q: 'What does "ISI" mean in pharma?',
+    a: 'ISI stands for Important Safety Information, the industry name for the block of risk information that runs with a drug ad or sits below it on a web page. FDA regulations do not use the term; they require a major statement of side effects and contraindications in broadcast ads and a brief summary of risks, and FDA\'s 2009 draft guidance on presenting risk information explains how to show it without distraction. In a video, the ISI is typeset in the edit from MLR-approved copy.',
+  },
+  {
+    q: 'Are pharmaceutical commercials going to be banned?',
+    a: 'No ban has been proposed. In September 2025 a presidential memorandum told HHS to increase the risk information drug ads must carry, and FDA sent letters to drug companies about misleading ads. FDA\'s regulatory agenda lists a proposed rule, planned for December 2026, that would require broadcast drug ads to carry the full risk information inside the ad instead of pointing to a website or phone number. FDA\'s own summary says it is not a ban (reginfo.gov, RIN 0910-AJ14, checked October 2026).',
   },
   {
     q: 'Can Canadian pharma companies run consumer video ads for prescription drugs?',
@@ -171,7 +188,47 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title="What breaks in AI medical imagery" alt>
+      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads" alt>
+        <p>
+          A video ad for a prescription drug carries three things the creative has to make room for, whether the pictures
+          are filmed or generated:
+        </p>
+        <ul>
+          <li>
+            <strong>The major statement.</strong> The major side effects and contraindications, spoken in the ad. Under
+            the 2023 final rule (<a href={CCN_RULE}>88 FR 80958</a>, compliance date November 20, 2024) it must use
+            consumer-friendly language, run as audio and on-screen text at the same time, be easy to read, and have no
+            audio or visual elements likely to interfere with comprehension.
+          </li>
+          <li>
+            <strong>Fair balance.</strong> Risk information has to be weighed fairly against the benefit claims across the
+            whole ad, not only in the major statement (21 CFR 202.1(e)(5)).
+          </li>
+          <li>
+            <strong>The ISI.</strong> Important Safety Information is the industry name for the risk block that runs with
+            or below the ad. FDA&apos;s <a href={RISK_GUIDANCE}>2009 draft guidance on presenting risk information</a>{' '}
+            names &ldquo;busy scenes, frequent scene changes, moving camera angles&rdquo; as things that can pull attention
+            from risk information.
+          </li>
+        </ul>
+        <p>
+          FDA enforces the distraction standard. On September 9, 2025 it announced about 100 cease-and-desist letters
+          and thousands of letters warning drug companies to remove misleading ads (<a href={FDA_SEPT}>FDA</a>), and posted untitled letters over TV
+          ads, among them one about Linzess that cited &ldquo;frequent scene changes and compelling and attention-grabbing
+          visuals&rdquo; (<a href={LINZESS}>letter</a>). A February 2026 letter about Vonjo cited attention-grabbing
+          visuals, frequent scene changes and background music (<a href={VONJO}>letter</a>). FDA&apos;s{' '}
+          <a href={AGENDA}>regulatory agenda</a> also lists a proposed rule, planned for December 2026, to require the
+          full risk information inside every broadcast ad.
+        </p>
+        <p>
+          For an AI film, that means the shots under the major statement are chosen to sit still, the ISI is typeset from
+          approved copy rather than generated, and the edit leaves time for a risk section that may get longer. Which drug
+          brands have already run AI-made ads, and why they used animals instead of patients, is on{' '}
+          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="The weak points" title="What breaks in AI medical imagery">
         <GuideTable
           caption="Where generated footage fails in pharma and medical work, and the fix to expect. These are the shots the Ruminate X pipeline gives extra generation passes and checks against the client's references."
           head={['Problem', 'Why it matters here', 'The fix']}
@@ -205,6 +262,7 @@ export default function Page() {
 
       <GuideRelated
         links={[
+          { href: '/guides/ai-pharma-commercials', title: 'AI pharma commercials', note: 'Breztri, Descovy and the Puppramin spec ad, and the FDA rules behind them.' },
           { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What a brand film is, what it costs, and when to film instead.' },
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'How a 15 to 60 second AI ad gets made, and what breaks.' },
           { href: '/blog/how-much-does-ai-video-production-cost', title: 'How much AI video production costs', note: 'Published prices, and why review rounds add cost.' },

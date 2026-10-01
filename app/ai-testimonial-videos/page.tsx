@@ -75,24 +75,6 @@ export default function AITestimonialVideosPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { stat: '5x', label: 'More testimonial output per quarter' },
-              { stat: '72h', label: 'From interview to first hero cut' },
-              { stat: '8+', label: 'Platform-native variants per story' },
-              { stat: '0', label: 'Film crews flown on location' },
-            ].map(({ stat, label }) => (
-              <div key={label} className="text-center">
-                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What Are AI Testimonial Videos?</p>
         <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">REAL STORIES.<br />CINEMATIC<br />PRODUCTION.</h2>

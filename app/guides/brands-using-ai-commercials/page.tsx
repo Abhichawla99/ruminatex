@@ -199,7 +199,9 @@ export default function Page() {
         <ul>
           <li>
             <strong>Realistic people carry the most risk.</strong> The two harshest reactions, Coca-Cola 2024 and
-            McDonald&apos;s 2025, were ads full of generated people. Coca-Cola&apos;s own fix was to show animals.
+            McDonald&apos;s 2025, were ads full of generated people. Coca-Cola&apos;s own fix was to show animals, and
+            the first drug brands to run AI ads, AstraZeneca and Gilead, did the same (see{' '}
+            <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>).
           </li>
           <li>
             <strong>Sentiment raises the stakes.</strong> Holiday ads from brands people grew up with are judged on warmth.
