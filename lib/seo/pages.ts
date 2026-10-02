@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring and how do I pick one',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-26',
+    updated: '2026-10-02',
   },
   {
     path: '/ai-commercial-production',
@@ -53,10 +53,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
     title: 'AI Video Agency vs Traditional Production',
-    question: 'ai video vs traditional video production: which should my brand hire',
+    question: 'ai video vs traditional video production: which should my brand hire, and when should a brand hire an AI video production partner',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-09-28',
+    updated: '2026-10-02',
   },
   {
     path: '/ai-brand-film-agency',

@@ -20,9 +20,12 @@ const PAGE = {
   description:
     'An AI video agency against a traditional production company for a brand film or commercial: what you pay for, what changes when you need a revision, where AI footage still fails, and which one to hire for which job.',
   published: '2026-03-08',
-  updated: '2026-09-28',
+  updated: '2026-10-02',
   keywords: [
     'ai video vs traditional video',
+    'when should a brand hire an ai video production partner',
+    'is it better to use ai or hire a production company',
+    'should i use ai to produce a brand film instead of hiring a video production company',
     'how much cheaper is ai video production vs agency',
     'ai video agency pricing',
     'ai video agency vs traditional agency',
@@ -66,6 +69,14 @@ const FAQS = [
     a: 'Changing a shot in an AI film means regenerating that shot and re-editing, with no crew to rebook, so late changes cost less than a reshoot. Changes to the script or the brand world ripple through many shots and still take real time. Agree the number of review rounds before production starts, whichever kind of company you hire.',
   },
   {
+    q: 'When should a brand hire an AI video production partner?',
+    a: 'When the film will run under the brand, nobody in-house has the days to generate, rerun, edit and mix every shot, no real person has to appear, and the claims need legal, compliance or MLR sign-off. If the video is internal or a draft and someone on staff already edits, a tool such as Runway, Veo, Kling or Sora is enough. If a real person or a real event is the point of the film, hire a production company. Ruminate X is an AI-only studio for the first case.',
+  },
+  {
+    q: 'Should I use AI to produce a brand film instead of hiring a video production company?',
+    a: 'Use AI when the brand film tells its story through a made world: mood, place, product or a concept. Hire a video production company when the story depends on real people, such as your founder, your team or customers speaking for themselves. In an AI brand film the palette, light, casting and camera language have to be fixed before generation starts, or the film drifts from shot to shot.',
+  },
+  {
     q: 'When should a brand hire a traditional production company instead of an AI agency?',
     a: 'When the film needs your founder, staff, real customers or a real clinician on camera; when it records something that happens, such as an event, a factory line or a store opening; when you are already filming and only want a few AI shots; or when your audience is likely to reject visibly AI-made work.',
   },
@@ -93,7 +104,52 @@ export default function Page() {
         </p>
       </GuideAnswer>
 
-      <GuideSection eyebrow="Side by side" title="AI video vs traditional video production, line by line">
+      <GuideSection eyebrow="Tool, studio or crew" title="When should a brand hire an AI video production partner?">
+        <p>
+          A brand that wants an AI-made film has three choices: make it in-house with a generator such as Runway, Veo,
+          Kling or Sora; hire an AI studio that delivers the finished film; or hire a production company that films and
+          adds AI shots. Hire an AI video production partner when all four of these are true:
+        </p>
+        <ul>
+          <li>
+            The film will run under your brand, in paid media or on your homepage, where a drifting face or a misspelled
+            label costs more than the studio does.
+          </li>
+          <li>
+            Nobody on your team has the days to generate, review and rerun every shot, then edit, mix and grade. A
+            30-second spot can mean dozens of shots, and many need several generations before they hold.
+          </li>
+          <li>No real person has to appear: not your founder, a customer speaking for themselves, or a real clinician.</li>
+          <li>
+            Claims, safety lines or product details have to pass legal, compliance or MLR review, and you want one company
+            answerable for every frame.
+          </li>
+        </ul>
+        <p>
+          Make it yourself with a tool when the video is internal, a draft, or high-volume social where speed matters more
+          than polish, and someone on staff already edits. Hire a production company when a real person or a real event is
+          the point of the film. If you have decided on a partner, the seven questions to ask before you sign are on{' '}
+          <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>.
+        </p>
+        <h3>Is it better to use AI or hire a production company?</h3>
+        <p>
+          It depends on what has to be on screen. If the film&apos;s world can be made, such as a product in a place you
+          could not afford to shoot, a concept or a lifestyle world, AI costs less and lets you change shots late without
+          rebooking a crew. If a person or a place has to be real, a production company is the better buy, and AI belongs
+          in its post-production. What each option costs, with published numbers, is further down this page.
+        </p>
+        <h3>Should I use AI to produce a brand film instead of hiring a video production company?</h3>
+        <p>
+          Ask whether the story is about a world or about people. Brand films built on mood, place and product, like the
+          trail running film at the end of this page, can be generated whole. Brand films built on your team, your
+          customers or your founder telling the story need a camera. If you go the AI route, the brand world (palette,
+          light, casting, camera language) has to be locked before generation, or a two-minute film drifts; how{' '}
+          {studio} does that is in <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>, and
+          what a brand film costs either way is on <Link href="/ai-brand-film-agency">AI brand film production</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Side by side" title="AI video vs traditional video production, line by line" alt>
         <GuideTable
           caption="How the two kinds of company differ on a commercial or brand film, from the Ruminate X pipeline and the traditional production process. No turnaround figures: both depend on the brief and on your review rounds."
           head={['', 'Traditional production company', 'AI video agency']}
@@ -113,7 +169,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Cost" title="Is AI cheaper than a traditional agency?" alt>
+      <GuideSection eyebrow="Cost" title="Is AI cheaper than a traditional agency?">
         <p>
           Usually. <a href={LEMONLIGHT}>Lemonlight</a> puts traditional production at about $15,000 to $50,000 or more per
           video (March 2026), for a full crew, physical locations and post-production. An AI film has no crew days,
@@ -154,7 +210,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Quality" title="Are AI-generated videos good enough?">
+      <GuideSection eyebrow="Quality" title="Are AI-generated videos good enough?" alt>
         <p>
           Generated footage is strong at light, weather, landscapes, scale and camera moves that would need a crane, a
           drone team or a set build. It is still weak at the details a brand checks first: the same face across 20 shots,
@@ -172,7 +228,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Which to hire" title="Which one fits which job" alt>
+      <GuideSection eyebrow="Which to hire" title="Which one fits which job">
         <GuideTable
           caption="Ruminate X's view of which kind of company fits common brand briefs."
           head={['The brief', 'Hire', 'Why']}
@@ -188,7 +244,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Made, not recorded" title="What an all-AI film looks like">
+      <GuideSection eyebrow="Made, not recorded" title="What an all-AI film looks like" alt>
         <p>
           The film below has several runners, trails and changes of light, and no location shoot. A traditional version
           would have needed a crew in several places over several days.

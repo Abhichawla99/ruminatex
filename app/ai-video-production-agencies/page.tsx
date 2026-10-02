@@ -20,12 +20,15 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-09-26',
+  updated: '2026-10-02',
   keywords: [
     'ai video production agency',
     'ai video production company',
     'ai video agency',
+    'ai media production company',
     'ai video production companies',
+    'ai video production services',
+    'ai media production agency',
     'ai video production agencies',
     'best ai video production agency',
     'ai video agency pricing',
@@ -48,6 +51,14 @@ const FAQS = [
   {
     q: 'What is the difference between an AI video agency and an AI video tool?',
     a: 'A tool such as Runway, Veo, Kling, Sora, HeyGen or Synthesia gives you a generator and leaves the film to you. An agency gives you the finished film and takes responsibility for it: it writes, directs, reruns the shots that fail, edits, adds sound and grades. Hire a tool if you have an editor with time; hire an agency if you need a finished commercial or brand film on a deadline.',
+  },
+  {
+    q: 'What is an AI media production company?',
+    a: `It is another name for an AI video production company or AI production studio: a company that delivers finished video made partly or wholly with generative AI. The label does not tell you how much of the film is generated, so ask whether the company also films, who writes and edits, and what you receive at the end. ${studio} generates every frame and does no filming.`,
+  },
+  {
+    q: 'What are some good AI video production companies?',
+    a: `It depends on whether your film needs real people on camera. AI-native studios such as Secret Level, The Dor Brothers and 351 Studio generate the footage. Production companies such as Synima, American Movie Company and Tiger House Films film and also work with AI. ${studio} is an AI-only studio in ${SITE.city}. Judge any of them by a shot in their reel where a face turns, a hand holds a product and a logo is on screen.`,
   },
   {
     q: 'Who owns a video made by an AI video production agency?',
@@ -77,7 +88,7 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          An AI video production agency writes, directs and delivers a finished film whose footage is generated with AI
+          An AI video production agency, also sold as an AI media production company or AI video production services, writes, directs and delivers a finished film whose footage is generated with AI
           instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
           finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
@@ -106,6 +117,35 @@ export default function Page() {
         />
         <p>
           {PRODUCTION.summary} That makes {studio} the middle column: it makes {offerList}.
+        </p>
+        <h3>The companies you will find when you search</h3>
+        <p>
+          Searches for an AI media production company, an AI production studio or AI video production services return
+          the same mix. These are the companies Google US showed on the first page for &quot;ai media production
+          company&quot; on October 2, 2026, sorted by kind and described from their own sites. We compete with all of them,
+          so read the table as a map of the options.
+        </p>
+        <GuideTable
+          caption="Each company as it describes itself on its own site, read October 2026. Sorted by kind of company, not by quality."
+          head={['Company', 'Kind', 'What it says it makes']}
+          rows={[
+            ['Secret Level', 'AI-native studio', 'Films, series and brand worlds; its site shows work for Coca-Cola and Raising Cane\'s'],
+            ['The Dor Brothers', 'AI-native studio', 'Music videos, commercials, viral videos and films'],
+            ['351 Studio', 'AI video agency', 'Marketing videos, brand stories, product explainers, social content and commercials, plus AI post-production'],
+            [studio, 'AI-only studio', `${offerList}; based in ${SITE.city}`],
+            ['Synima', 'Production company: traditional, hybrid and AI', 'Full-service production, with offices in London, New York, Los Angeles and Amsterdam'],
+            ['American Movie Company', 'New York production company that added AI', 'AI video alongside filmed production; says most AI projects are delivered in 7 to 21 days'],
+            ['Tiger House Films', 'Los Angeles production company with an AI workflow', 'Commercial content for brands and agencies, filmed and AI-driven'],
+          ]}
+        />
+        <p>
+          If your film needs real people on camera, start with the production companies that also film. If no one has to
+          appear and you want the film finished for you, compare the AI-native studios on the seven questions further
+          down. Listicles such as{' '}
+          <a href="https://www.superside.com/blog/ai-video-production-companies">Superside&apos;s list of AI video production companies</a>{' '}
+          mix studios with self-serve tools such as Runway, Colossyan and Animoto, so check which kind each entry is before you
+          shortlist it. Whether to hire anyone at all, or make the film yourself, is on{' '}
+          <Link href="/comparison/ai-agency-vs-traditional-agency">AI video agency vs traditional production</Link>.
         </p>
       </GuideSection>
 
