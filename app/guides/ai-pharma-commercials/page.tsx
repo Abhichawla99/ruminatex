@@ -296,7 +296,11 @@ export default function Page() {
         instead={[
           'The ad needs real patients telling their own story: film them with a medical production company.',
           'A real clinician has to speak on camera: film it.',
-          'The visual must match published data exactly, such as a mechanism of action figure: hire a 3D medical animation studio.',
+          <>
+            The visual must match published data exactly, such as a mechanism of action figure: hire a 3D medical
+            animation studio (where <Link href="/guides/ai-medical-animation">AI medical animation</Link> fits and where it
+            does not).
+          </>,
           'Your reviewers will not approve generated people and the idea depends on them: film it.',
         ]}
       />

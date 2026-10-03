@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-10-02',
+  updated: '2026-10-03',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -32,6 +32,7 @@ const PAGE = {
     'ai video production agencies',
     'best ai video production agency',
     'ai video agency pricing',
+    'hire ai-native production house for campaigns',
   ],
 }
 
@@ -59,6 +60,10 @@ const FAQS = [
   {
     q: 'What are some good AI video production companies?',
     a: `It depends on whether your film needs real people on camera. AI-native studios such as Secret Level, The Dor Brothers and 351 Studio generate the footage. Production companies such as Synima, American Movie Company and Tiger House Films film and also work with AI. ${studio} is an AI-only studio in ${SITE.city}. Judge any of them by a shot in their reel where a face turns, a hand holds a product and a logo is on screen.`,
+  },
+  {
+    q: 'How do I hire an AI-native production house for campaigns?',
+    a: `Brief it on everything the campaign needs: the hero film, the cutdowns and aspect ratios for each channel, any stills, the markets and languages, and how many review rounds your legal or medical team needs. An AI-native production house generates the footage instead of filming it, so ask to see a campaign in its reel where the same character, product and logo hold across every cut. ${studio} is an AI-native studio in ${SITE.city}; it quotes campaigns from the brief.`,
   },
   {
     q: 'Who owns a video made by an AI video production agency?',

@@ -19,7 +19,7 @@ const PAGE = {
   description:
     'How pharma, pharmacy, lab and medical companies use AI-made brand films and ads, what MLR reviewers ask about AI footage, the US and Canadian drug-ad rules that shape a video, and when to film real clinicians instead.',
   published: '2026-03-07',
-  updated: '2026-10-01',
+  updated: '2026-10-03',
   keywords: [
     'ai video for pharma marketing',
     'ai video production healthcare',
@@ -27,7 +27,6 @@ const PAGE = {
     'fda rules for prescription drug tv ads',
     'isi in pharma video ads',
     'can i use ai to make a marketing video',
-    'ai medical animation',
     'medical ai video',
     'ai doctor video',
     'pharma video production',
@@ -116,7 +115,9 @@ export default function Page() {
           <li>
             <strong>Science visuals.</strong> A mechanism of action, a cell, an assay, a device working inside the body.
             AI suits science visuals where the look matters more than exact molecular structure; for a figure that has to
-            match published data exactly, a 3D medical animator is safer.
+            match published data exactly, a 3D medical animator is safer. Which jobs{' '}
+            <Link href="/guides/ai-medical-animation">AI medical animation</Link> can do, and what a mechanism of action
+            animation costs from a 3D studio, is in its own guide.
           </li>
           <li>
             <strong>Pharmacy and service ads.</strong> Consumer ads for a pharmacy, clinic or lab service, where the

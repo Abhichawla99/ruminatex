@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring and how do I pick one',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-02',
+    updated: '2026-10-03',
   },
   {
     path: '/ai-commercial-production',
@@ -72,7 +72,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'can pharma, pharmacy, lab and medical companies use AI video, what will MLR ask, and what are the FDA rules for prescription drug TV and video ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-10-01',
+    updated: '2026-10-03',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -233,5 +233,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-10-01',
     updated: '2026-10-01',
+  },
+  {
+    path: '/guides/ai-medical-animation',
+    title: 'AI Medical Animation for Pharma and Labs',
+    question: 'can ai make medical animation, what does a mechanism of action animation cost, and when should pharma hire a 3D medical animation studio instead',
+    kind: 'guide',
+    published: '2026-10-03',
+    updated: '2026-10-03',
   },
 ]
