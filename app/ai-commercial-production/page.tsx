@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-09-29',
+  updated: '2026-10-04',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -116,7 +116,10 @@ export default function Page() {
         <p>
           Agree the list before production starts. The generated footage is the cheap part to repeat; every extra
           version still needs an edit, a mix and a check. If what you need is a longer film about the company rather than
-          one product, read <Link href="/ai-brand-film-agency">AI brand film production</Link>.
+          one product, read <Link href="/ai-brand-film-agency">AI brand film production</Link>. If the test is a run of
+          creator-style ads rather than one spot, the costs and disclosure rules are in{' '}
+          <Link href="/ai-ugc-reels">AI UGC ads</Link>; for a product launch without a story, see{' '}
+          <Link href="/ai-product-videos">AI product video production</Link>.
         </p>
         <GuideFilm
           id="Zytga7zsShI"

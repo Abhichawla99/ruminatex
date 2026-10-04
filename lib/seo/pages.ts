@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, how an AI commercial is made and what it costs',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-09-29',
+    updated: '2026-10-04',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -241,5 +241,21 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-10-03',
     updated: '2026-10-03',
+  },
+  {
+    path: '/ai-ugc-reels',
+    title: 'AI UGC Ads Agency for Brands',
+    question: 'ai ugc ads agency: what AI UGC ads cost, are they legal, and do you have to disclose an AI ad',
+    kind: 'service',
+    published: '2026-03-08',
+    updated: '2026-10-04',
+  },
+  {
+    path: '/ai-product-videos',
+    title: 'AI Product Video Production for Brands',
+    question: 'how much does a product video cost, and which AI can make product videos',
+    kind: 'service',
+    published: '2026-03-08',
+    updated: '2026-10-04',
   },
 ]

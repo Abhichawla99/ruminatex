@@ -194,7 +194,8 @@ export default function Page() {
           Consented avatars of your own staff are still labelled on YouTube and TikTok when they look real. For regulated
           categories (pharma, medical, financial) your review team decides how a presenter is labelled; the questions
           reviewers ask about AI footage are on <Link href="/ai-video-production-healthcare">AI video for pharma and
-          healthcare</Link>.
+          healthcare</Link>. The same rules applied to creator-style ads, with what they cost, are on{' '}
+          <Link href="/ai-ugc-reels">AI UGC ads</Link>.
         </p>
       </GuideSection>
 

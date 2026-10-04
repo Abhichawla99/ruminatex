@@ -1,183 +1,223 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  Guide,
+  GuideAnswer,
+  GuideCta,
+  GuideFaq,
+  GuideFilm,
+  GuideFit,
+  GuideHero,
+  GuideRelated,
+  GuideSection,
+  GuideTable,
+  film,
+  guideMetadata,
+} from '@/components/guide/Guide'
+import { OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
 
-export const metadata: Metadata = {
-  title: 'AI Product Videos | Scalable Product Video Production | Ruminate X',
-  description: 'Create stunning AI product videos that showcase features, drive conversions, and scale across platforms. Ruminate X delivers product video production faster.',
-  keywords: ['AI product videos', 'AI product video production', 'product demo videos', 'AI-generated product videos', 'product showcase videos', 'ecommerce product videos'],
-  alternates: {
-    canonical: 'https://www.ruminatex.com/ai-product-videos',
-  },
+const PAGE = {
+  path: '/ai-product-videos',
+  title: 'AI Product Video Production for Brands',
+  description:
+    'What an AI product video is, what product videos cost filmed, in 3D or made with AI, which AI tools make product videos, where generated product shots go wrong, and the one rule for product demos.',
+  published: '2026-03-08',
+  updated: '2026-10-04',
+  keywords: [
+    'ai product video production',
+    'ai product videos',
+    'how much does a product video cost',
+    'which ai can make product videos',
+    'best ai product video production',
+    'how much do ai video creators cost',
+  ],
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'AI Product Videos',
-  description: 'AI-powered product video production that showcases features, builds desire, and drives conversions — at scale and speed traditional production cannot match.',
-  provider: {
-    '@type': 'Organization',
-    name: 'Ruminate X',
-    url: 'https://www.ruminatex.com',
+const studio = SITE.name
+const visuals = OFFERS.find((o) => o.key === 'product-visuals')!
+const spec = film('Zytga7zsShI')
+
+const BLARE = 'https://blaremedia.net/product-video-cost/'
+const CREATIFY_PRICING = 'https://creatify.ai/pricing'
+const COLGATE = 'https://www.law.cornell.edu/supremecourt/text/380/374'
+
+const FAQS = [
+  {
+    q: 'How much does a product video cost?',
+    a: 'Filmed, BLARE Media\'s September 2026 guide puts an ecommerce or catalogue product video at USD 1,000 to 7,000, a marketplace listing video at 500 to 7,000, 3D product visualization at 5,000 to 50,000 or more, and a launch film with talent at 10,000 to 200,000 or more. An AI product-ad tool such as Creatify costs USD 39 or 99 a month for credits. Ruminate X prices AI product films per film, from the brief.',
   },
-  areaServed: 'Worldwide',
-  serviceType: 'AI Video Production',
-}
-
-const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
-
-const benefits = [
-  { title: 'Launch-Day Ready', desc: 'New SKU dropping next week? AI product video production delivers polished hero videos, lifestyle clips, and feature breakdowns in days — not the weeks a traditional shoot demands. Your product hits the market with video from day one.' },
-  { title: 'Infinite Variations', desc: 'One product, dozens of audiences. AI lets you generate unique versions for every platform, demographic, and use case — different angles, different messaging, different music — without rebooking a studio for each variation.' },
-  { title: 'Consistent Brand Quality', desc: 'Every frame matches your brand guidelines. AI pipelines lock in lighting, color grading, typography, and motion style so that your hundredth product video looks as polished and on-brand as your first.' },
-  { title: 'Lower Cost per Video', desc: 'Traditional product shoots require studios, lighting rigs, camera operators, and post-production timelines. AI product video production removes those fixed costs and lets you invest in volume and creative testing instead.' },
+  {
+    q: 'Which AI can make product videos?',
+    a: 'Two kinds of tool. Product-ad tools (Creatify, Topview, HeyGen\'s product video tool) turn a product link or photos into a template ad with a presenter. General video models (Runway, Google Veo, Kling) animate a product photo used as the first frame, which gives more control over the shot and more failures to fix. Neither reliably keeps small label text sharp, so a studio such as Ruminate X sets the label and logo from the brand\'s own artwork in the edit.',
+  },
+  {
+    q: 'How much do AI video creators cost?',
+    a: 'It depends who does the work. A self-serve tool is a monthly subscription (Creatify lists USD 39 and 99 a month, October 2026) and your team writes, directs and fixes the shots. A freelancer or an AI studio prices per video or per film, by length, the number of shots, versions and revision rounds. Published prices across tools, freelancers, AI studios and film crews are on Ruminate X\'s AI video production cost page.',
+  },
+  {
+    q: 'Can AI show my product working in an ad?',
+    a: 'Only if the ad does not pass the generated shot off as proof. In FTC v. Colgate-Palmolive (1965) the US Supreme Court held that an undisclosed mock-up in a TV demonstration was a deceptive practice even though the product claim itself was true. A generated shot of a stain lifting or a cream smoothing skin is a mock-up; show it as illustration, disclose it, or film the real result. This is not legal advice.',
+  },
+  {
+    q: 'What is the best AI product video production for a brand launch?',
+    a: 'Judge it on one shot: your real product, held in a hand, turning, with the label readable in the last frame. If a studio or tool can show that from your own pack files, the rest is direction and taste. Ruminate X makes AI product films and cinematic launch spots this way, and tells brands to film instead when texture, fit or a real result is what sells the product.',
+  },
 ]
 
-const useCases = [
-  { title: 'Ecommerce PDP Videos', desc: 'Hero videos for product detail pages that show the item in context, highlight key features, and reduce return rates by giving shoppers a realistic preview before they buy.' },
-  { title: 'Social Commerce Clips', desc: 'Short, scroll-stopping product videos built for Instagram Shopping, TikTok Shop, and Pinterest — formatted natively for each platform and designed to convert in under fifteen seconds.' },
-  { title: 'Product Launch Teasers', desc: 'Build anticipation before a drop with cinematic teaser videos that reveal just enough to generate excitement — then follow up with full feature reveals on launch day.' },
-  { title: 'Feature Highlight Reels', desc: 'Isolate individual product features in focused video segments. Perfect for paid media, email campaigns, and landing pages where you need to communicate one benefit clearly.' },
-  { title: 'Comparison & Demo Videos', desc: 'Side-by-side comparisons and hands-on demo videos that help prospects understand what makes your product different — and why it is worth the investment.' },
-  { title: 'Catalog-Scale Production', desc: 'Need video for fifty, a hundred, or a thousand SKUs? AI-powered batch production creates consistent, high-quality product videos across your entire catalog without linear cost scaling.' },
-]
+export const metadata = guideMetadata(PAGE)
 
-const process = [
-  { step: '01', title: 'Product Brief', desc: 'Share your product details, brand guidelines, hero features, and target audience. We build a creative brief tailored to where and how your product videos will be used.' },
-  { step: '02', title: 'Creative Direction', desc: 'Our team develops visual concepts — camera angles, environments, motion treatments, and messaging hierarchy. You approve the direction before production begins.' },
-  { step: '03', title: 'AI Production', desc: 'We generate product visuals, motion sequences, transitions, and post-production elements using our AI pipeline. Human creatives review every frame for quality and brand consistency.' },
-  { step: '04', title: 'Delivery & Variants', desc: 'You receive finished product videos in every format and aspect ratio your channels require — plus variant sets optimized for A/B testing across paid and organic placements.' },
-]
-
-export default function AIProductVideosPage() {
+export default function Page() {
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    <Guide page={PAGE} faqs={FAQS} films={[spec.youtubeId]}>
+      <GuideHero
+        eyebrow="AI product videos"
+        title="AI product video production: launch films and product ads without a shoot"
+        dek="For the brand or ecommerce manager with a product launch, a new SKU or a tired product page, who wants to know what a product video costs, which AI tools make one, and what goes wrong when the product is generated."
+        updated={PAGE.updated}
+      />
 
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#ebff00 1px, transparent 1px), linear-gradient(90deg, #ebff00 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#ebff00] rounded-full blur-[300px] opacity-[0.03]" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
-            <span className="w-1.5 h-1.5 bg-[#ebff00] rounded-full animate-pulse" />
-            <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">AI Product Videos</span>
-          </div>
-          <h1 style={{ ...displayStyle, fontSize: 'clamp(52px, 12vw, 160px)' }} className="text-white leading-none mb-8 max-w-6xl">
-            AI PRODUCT VIDEOS<br />THAT SELL<br /><span style={{ color: '#ebff00' }}>ON SIGHT.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            Your product deserves more than a static image on a white background. Ruminate X creates AI-powered product videos that showcase features, build desire, and drive conversions — at the speed and scale that modern commerce demands. From hero videos to catalog-wide production, we turn your entire product line into a visual sales engine.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Get Product Videos</Link>
-            <Link href="/work" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Our Work</Link>
-          </div>
-        </div>
-      </section>
+      <GuideAnswer>
+        <p>
+          An AI product video puts your product in generated scenes, motion and light, with the product, label and logo taken
+          from your own files. Filmed, a product page video costs USD 1,000 to 7,000 and 3D visualization 5,000 to 50,000 or
+          more (BLARE Media, September 2026). A product-ad tool costs USD 39 to 99 a month. AI suits launch spots, social cuts
+          and settings you cannot afford to shoot. Film instead when texture, fit or a real result is what sells the product.
+        </p>
+      </GuideAnswer>
 
-      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { stat: '1,000+', label: 'Product videos delivered' },
-              { stat: '3–5 days', label: 'Average turnaround time' },
-              { stat: '80%', label: 'Cost reduction vs. studio shoots' },
-              { stat: '100+', label: 'SKUs per production sprint' },
-            ].map(({ stat, label }) => (
-              <div key={label} className="text-center">
-                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="Price" title="How much does a product video cost?">
+        <GuideTable
+          caption={
+            <>
+              Filmed and 3D ranges from <a href={BLARE}>BLARE Media&apos;s product video cost guide</a> (September 14,
+              2026), a production company&apos;s own figures; tool prices from <a href={CREATIFY_PRICING}>Creatify</a>. Read
+              October 4, 2026. USD.
+            </>
+          }
+          head={['Kind of product video', 'Published price', 'What drives it']}
+          rows={[
+            ['UGC-style review or testimonial (filmed)', '200 to 2,000', 'A creator, a phone and a script'],
+            ['Ecommerce or catalogue showcase (filmed)', '1,000 to 7,000', 'Discounts for several SKUs on one shoot day'],
+            ['Amazon or marketplace listing video (filmed)', '500 to 7,000', 'The platform\'s format and length limits'],
+            ['3D animation or product visualization', '5,000 to 50,000+', 'Model complexity and render time'],
+            ['Launch film with narrative and talent (filmed)', '10,000 to 200,000+', 'Casting, locations and story'],
+            ['AI product-ad tool (Creatify Starter / Pro)', '39 or 99 a month for credits', 'Your team writes, directs and fixes the shots'],
+          ]}
+        />
+        <p>
+          An AI product film from a studio sits beside the 3D and launch-film rows in what it can show (any setting, any
+          light, the product in motion) and is priced by the same things: running time, number of shots, versions and
+          review rounds. {studio} quotes each film from the brief. Published AI studio prices are in{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+        </p>
+      </GuideSection>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What Are AI Product Videos?</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">YOUR PRODUCTS<br />IN MOTION</h2>
-        <div className="max-w-3xl">
-          <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            AI product videos are professionally produced video content that brings your products to life using artificial intelligence — directed by experienced creatives who understand commerce, conversion, and storytelling. These are not auto-generated slideshows or stock footage montages. At Ruminate X, AI product videos mean cinematic product reveals, dynamic feature callouts, and polished motion design that makes people want to buy.
-          </p>
-          <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            The fundamental challenge of product video has always been scale. A traditional studio shoot produces beautiful results for one or two hero SKUs, but falls apart when you need video across an entire catalog. AI changes that equation completely. Our production pipeline generates product videos at catalog scale while maintaining the visual quality and brand consistency that premium brands require.
-          </p>
-          <p className="text-[#888888] text-lg leading-relaxed">
-            Every ecommerce marketer knows the data: product pages with video convert at significantly higher rates than those without. Shoppers who watch product videos are more confident in their purchase decisions, return products less frequently, and spend more per order. The only thing that has held brands back from putting video on every product page is the cost and time of traditional production. AI product videos eliminate that bottleneck entirely.
-          </p>
-        </div>
-      </section>
+      <GuideSection eyebrow="Tools" title="Which AI can make product videos?" alt>
+        <GuideTable
+          caption="The two kinds of AI tool brands use for product video, and where each stops, in Ruminate X's experience of the tools."
+          head={['Kind', 'Examples', 'Good for', 'Where it stops']}
+          rows={[
+            ['Product-ad tools', 'Creatify, Topview, HeyGen product video', 'Fast template ads from a product link, often with a stock presenter', 'Every brand on the tool gets the same templates and faces'],
+            ['General video models', 'Runway, Google Veo, Kling', 'Cinematic shots that start from your product photo as the first frame', 'Labels warp, the pack changes shape between shots, hands fail'],
+            ['A studio using both', 'Ruminate X and other AI studios', 'Launch films and campaigns where the product has to be exact in every cut', 'Costs more per film than a subscription'],
+          ]}
+        />
+        <p>
+          Starting a shot from an approved still is the most reliable way to keep a product right; how it works is in{' '}
+          <Link href="/guides/first-frame-last-frame-ai-video">first and last frame AI video</Link>.
+        </p>
+      </GuideSection>
 
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Why AI for Product Video</p>
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">THE COMMERCE<br />ADVANTAGE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map(({ title, desc }) => (
-              <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
-                <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
-                <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="Where it breaks" title="Where generated product shots go wrong">
+        <GuideTable
+          caption="The failures that show up in AI product footage, and the fix for each."
+          head={['Problem', 'What it looks like', 'Fix']}
+          rows={[
+            ['Label text', 'Letters melt, the brand name is misspelled, small print turns to noise', 'Set the label from your artwork in the edit; never generate type'],
+            ['Pack shape and colour', 'The bottle grows taller across shots, the red shifts to orange', 'Lock the product to reference stills and check every shot against the real pack'],
+            ['Hands and use', 'Fingers pass through the cap, the grip changes between cuts', 'Rerun the shot, or cut to an insert where hands are not needed'],
+            ['Physics', 'Liquid pours upward, foam behaves like smoke', 'Simplify the action or show the result, not the process'],
+            ['Logo', 'A near-copy of your logo with the proportions wrong', 'Composite your vector logo in the edit'],
+          ]}
+        />
+        <p>
+          The full method for keeping a product, label and logo exact is in{' '}
+          <Link href="/guides/ai-commercial-product-accuracy">product and label accuracy in AI commercials</Link>. The checks
+          a film goes through before delivery are in <Link href="/guides/ai-video-quality-control">AI video quality
+          control</Link>.
+        </p>
+      </GuideSection>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Use Cases</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">PRODUCT VIDEO<br />FOR EVERY CHANNEL</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map(({ title, desc }) => (
-            <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
-              <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
-              <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GuideSection eyebrow="The rule" title="Showing the product working: the mock-up rule" alt>
+        <p>
+          In <a href={COLGATE}>FTC v. Colgate-Palmolive</a> (US Supreme Court, April 5, 1965), a shaving cream commercial
+          showed sandpaper being shaved; the &ldquo;sandpaper&rdquo; was sand on plexiglass. The Court held the undisclosed
+          mock-up was a material deceptive practice, separate from whether the cream worked. A generated shot of a product
+          doing its job is a mock-up by definition. Use it for mood, scale and setting, label it as illustration when it
+          shows a result, and film the real result when the result is the claim. Your legal team decides for each ad; this
+          is not legal advice.
+        </p>
+      </GuideSection>
 
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Our Process</p>
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">FROM PRODUCT<br />TO POLISHED VIDEO</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map(({ step, title, desc }) => (
-              <div key={step} className="border border-[#1a1a1a] p-8">
-                <p style={{ ...displayStyle, fontSize: '64px', color: '#1a1a1a' }} className="mb-4">{step}</p>
-                <h3 style={{ ...displayStyle, fontSize: '24px', color: '#ebff00' }} className="mb-3">{title}</h3>
-                <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="How it is made" title="How a studio makes an AI product film">
+        <ol>
+          <li>
+            <strong>Brief and pack files.</strong> The product, the launch or channel, the claims legal has approved, and the
+            real artwork: label files, logo vectors, pack photos from several angles.
+          </li>
+          <li>
+            <strong>Look and boards.</strong> Settings, light and camera moves agreed as stills before any motion, so the
+            product is approved in frame first.
+          </li>
+          <li>
+            <strong>Generation.</strong> Shots started from the approved stills, checked for pack shape, colour, hands and
+            physics, and rerun until they hold.
+          </li>
+          <li>
+            <strong>Edit and finish.</strong> Label, logo and on-screen text set from your files, sound, grade, and the
+            ratios and lengths each placement needs.
+          </li>
+        </ol>
+        <GuideFilm
+          id={spec.youtubeId}
+          caption={`${spec.client} spec ad: a ${spec.durationSeconds}-second spec commercial by ${studio}, made without a shoot. Spec work, not client work.`}
+        />
+        <p>
+          {studio} makes {visuals.name.toLowerCase()}, {visuals.plain}. {PRODUCTION.summary} The full pipeline is in{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+        </p>
+      </GuideSection>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">How We&apos;re Different</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">NOT A TEMPLATE.<br />A PRODUCTION TEAM.</h2>
-        <div className="max-w-3xl">
-          <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            DIY product video tools give you a timeline editor and a library of generic transitions. Ruminate X is a full-service creative agency that happens to be powered by AI. You get a dedicated team that understands product marketing, a creative brief built around your brand and your audience, and videos engineered to convert — not just fill space on a product page.
-          </p>
-          <p className="text-[#888888] text-lg leading-relaxed">
-            We built our AI production pipeline specifically for commerce. That means proprietary workflows for product visualization, feature callout sequencing, lifestyle context generation, and multi-format delivery. The AI handles scale and speed. Our creatives handle strategy and storytelling. The result is <Link href="/ai-video-ads" className="text-[#ebff00] hover:underline">AI video ads</Link> and product content that outperforms what either humans or machines could produce alone — whether you need one hero video or a thousand across your full <Link href="/ai-video-production-ecommerce" className="text-[#ebff00] hover:underline">ecommerce catalog</Link>.
-          </p>
-        </div>
-      </section>
+      <GuideFit
+        title="Should Ruminate X make your product video?"
+        hire={[
+          'A brand launching a product that wants a cinematic launch spot in settings a shoot could not reach on the budget.',
+          'An ecommerce team that needs the same product in several worlds, seasons or ratios for ads and social.',
+          'A brand that also needs UGC-style ads or a brand film in the same look, so the launch reads as one campaign.',
+        ]}
+        instead={[
+          'Texture, fit or colour accuracy is what sells it (apparel on a body, cosmetics swatches, food close-ups): shoot it.',
+          'The ad proves the product works (cleaning, skincare results, performance): film the real result.',
+          'You need plain white-background videos for hundreds of SKUs: a product studio with a turntable is faster and cheaper.',
+          'You want a quick template ad from a product link: a product-ad tool on a monthly plan.',
+        ]}
+      />
 
-      <section className="border-t border-[#1a1a1a] py-24 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            YOUR PRODUCTS<br />DESERVE VIDEO<br /><span style={{ color: '#ebff00' }}>THAT CONVERTS.</span>
-          </h2>
-          <p className="text-[#888888] mb-8">Tell us about your product line and your goals. We&apos;ll show you how AI product videos can transform your conversion rates — and deliver a concept within the week.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
-            <Link href="/" className="inline-flex items-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">Back to Home</Link>
-          </div>
-        </div>
-      </section>
-    </>
+      <GuideFaq faqs={FAQS} />
+
+      <GuideRelated
+        links={[
+          { href: '/guides/ai-commercial-product-accuracy', title: 'Product and label accuracy', note: 'Keeping the pack, label and logo right in generated shots.' },
+          { href: '/ai-ugc-reels', title: 'AI UGC ads', note: 'Creator-style product ads, what they cost and what must be disclosed.' },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'When the product video is a full commercial with cutdowns.' },
+          { href: '/guides/first-frame-last-frame-ai-video', title: 'First and last frame AI video', note: 'Starting each shot from an approved product still.' },
+          { href: '/blog/how-much-does-ai-video-production-cost', title: 'AI video production cost', note: 'Published prices from tools, freelancers, AI studios and crews.' },
+        ]}
+      />
+
+      <GuideCta
+        title="Tell us about the product"
+        body="Send the product, the launch date or channel, the pack files you have, and the settings you want it seen in."
+      />
+    </Guide>
   )
 }

@@ -172,7 +172,9 @@ export default function Page() {
         <p>
           {PRODUCTION.summary} In the {studio} pipeline the product gets extra generation passes, and the real logo,
           label and on-screen text are added in the edit from the brand&apos;s files. More on how an AI commercial is
-          made, and what else breaks, is on <Link href="/ai-commercial-production">AI commercial production</Link>.
+          made, and what else breaks, is on <Link href="/ai-commercial-production">AI commercial production</Link>. What a
+          product video costs filmed, in 3D or made with AI is on <Link href="/ai-product-videos">AI product video
+          production</Link>.
         </p>
         <GuideFilm
           id="Zytga7zsShI"

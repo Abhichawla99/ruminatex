@@ -36,13 +36,13 @@ A film that introduces a company, its mission or its work.
 A presenter or spokesperson video made with AI. Page: https://www.ruminatex.com/ai-avatar-videos
 
 ### UGC-style ads
-Ads in the style of creator videos.
+Ads in the style of creator videos. Page: https://www.ruminatex.com/ai-ugc-reels
 
 ### Review-style videos
 Review and testimonial-style videos.
 
 ### Product visuals
-Product films and stills.
+Product films and stills. Page: https://www.ruminatex.com/ai-product-videos
 
 ---
 
@@ -68,6 +68,8 @@ Brand and marketing managers, founders, communications teams and agency producer
 - [AI Pharma Commercials: Who Has Made Them](https://www.ruminatex.com/guides/ai-pharma-commercials): which drug brands have run AI-made ads, why they used animals, and the FDA rules that apply
 - [AI Medical Animation for Pharma and Labs](https://www.ruminatex.com/guides/ai-medical-animation): which medical animation jobs AI can do, what a mechanism of action animation costs from a 3D studio, and when to hire one instead
 - [AI Avatar Video Production for Companies](https://www.ruminatex.com/ai-avatar-videos): avatar kinds, tool prices, consent and disclosure rules for AI presenters
+- [AI UGC Ads Agency for Brands](https://www.ruminatex.com/ai-ugc-reels): AI UGC ad formats, agency, tool and creator prices, FTC, TikTok, Meta and New York disclosure rules, where AI UGC ads break
+- [AI Product Video Production for Brands](https://www.ruminatex.com/ai-product-videos): product video prices filmed, in 3D and with AI, which AI tools make product videos, where generated product shots go wrong, the mock-up rule
 - [Services](https://www.ruminatex.com/services)
 
 ### Guides
