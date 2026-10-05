@@ -97,8 +97,9 @@ export default function Page() {
           instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
           finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
-          when the film needs real people on camera. For company films, which ones AI can make and which need your staff
-          on camera is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>. If what
+          when the film needs real people on camera. If you are looking for an{' '}
+          <Link href="/ai-video-production-enterprise">AI corporate video production company</Link> for company films,
+          that page sets out which ones AI can make and which need your staff on camera. If what
           you need is an ad, <Link href="/ai-commercial-production">AI commercial production</Link> covers how to choose
           an AI commercial production company and what the ad costs.
         </p>

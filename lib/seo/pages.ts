@@ -53,10 +53,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
     title: 'AI Video Agency vs Traditional Production',
-    question: 'ai video vs traditional video production: which should my brand hire, and when should a brand hire an AI video production partner',
+    question: 'ai video vs traditional video production: which should my brand hire, can AI replace a video production agency, and when should a brand hire an AI video production partner',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-02',
+    updated: '2026-10-05',
   },
   {
     path: '/ai-brand-film-agency',
@@ -165,10 +165,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-enterprise',
     title: 'AI Corporate Video Production for Companies',
-    question: 'ai corporate video production: which company videos can be made with AI, and what do they cost',
+    question: 'ai corporate video production: which company videos can be made with AI, enterprise platform or studio, are AI videos good enough for enterprise use, and what do they cost',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-26',
+    updated: '2026-10-05',
   },
   {
     path: '/guides/brands-using-ai-commercials',
