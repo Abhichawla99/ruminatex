@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: which kind to hire, how an AI commercial is made and what it costs',
+    question: 'ai commercial production company: which kind to hire, how an AI commercial is made, what it costs, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-04',
+    updated: '2026-10-06',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -157,10 +157,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/markets/ai-video-production-canada',
     title: 'AI Video Production in Calgary and Canada',
-    question: 'ai video production calgary: who makes AI films here, what it costs in Canada and which Canadian ad rules apply',
+    question: 'ai video agency calgary: which Calgary firms make AI video and how they differ, what it costs in Canada and which Canadian ad rules apply',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-09-25',
+    updated: '2026-10-06',
   },
   {
     path: '/ai-video-production-enterprise',

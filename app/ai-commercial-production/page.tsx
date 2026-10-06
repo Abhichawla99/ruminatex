@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-04',
+  updated: '2026-10-06',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -72,6 +72,10 @@ const FAQS = [
   {
     q: 'Do actors get paid for AI commercials?',
     a: 'When a real performer\'s likeness is used, yes. Under the SAG-AFTRA 2025 Commercials Contract (ratified May 2025), a union performer must consent before a digital replica of them is created and give informed consent, based on a reasonably specific description of the use, before it is used; generating a performance with the replica pays 1.5 times the session fee plus the applicable holding and use fees (SAG-AFTRA, checked September 2026). A character generated from scratch is not a replica of anyone, though the contract also has terms on synthetic performers for producers who have signed it. If your brief needs a real actor or spokesperson, their consent and contract come first. This is not legal advice.',
+  },
+  {
+    q: 'What is AI VFX for commercial production, and who does it?',
+    a: `AI VFX means adding generated elements, such as a set extension, a crowd, weather or a product effect, to footage that a crew filmed. A production company or VFX house does it, because someone has to shoot the plates and composite the AI shots into them. A fully generated commercial has no filmed plates: every shot is made with AI, which is what ${studio} makes. If the ad needs your real store, staff or an athlete on camera, hire a crew that offers AI VFX; if the idea works as a made world, an AI-only studio can make the whole spot.`,
   },
   {
     q: 'When should a brand not make its commercial with AI?',

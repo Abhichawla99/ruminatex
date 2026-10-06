@@ -18,12 +18,12 @@ const PAGE = {
   path: '/markets/ai-video-production-canada',
   title: 'AI Video Production in Calgary and Canada',
   description:
-    'What an AI-only film studio in Calgary makes, what AI video costs in Canada at published prices, the Quebec French rule and Ad Standards preclearance for ads, who owns AI footage under Canadian law, and when to hire a Calgary camera crew instead.',
+    'What an AI-only film studio in Calgary makes, how the Calgary firms that sell AI video differ, what AI video costs in Canada at published prices, the Quebec French rule and Ad Standards preclearance for ads, who owns AI footage under Canadian law, and when to hire a Calgary camera crew instead.',
   published: '2026-03-08',
-  updated: '2026-09-25',
+  updated: '2026-10-06',
   keywords: [
-    'ai video production calgary',
     'ai video agency calgary',
+    'ai video production calgary',
     'ai marketing video calgary',
     'ai promo video calgary',
     'synthetic video content calgary',
@@ -38,6 +38,11 @@ const offerNames = OFFERS.map((o) => o.name.toLowerCase()).join(', ')
 const CROSSROAD = 'https://crossroadmedia.ca/ai-commercials'
 const LEMONLIGHT = 'https://www.lemonlight.com/blog/ai-video-production-cost/'
 const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost'
+const VSTRAT = 'https://www.vinc.ca/ai-video'
+const MAVEN = 'https://www.mavenmediagroup.ca/services/video-production-services'
+const UU = 'https://uudigital.agency/services/ai-video-production'
+const VALIANT = 'https://valiantdigital.ca/ai-agency-calgary'
+const IWEBGUY = 'https://i-webguy.ca/ai-video-development-in-calgary/'
 const QC_CHARTER = 'https://www.legisquebec.gouv.qc.ca/en/document/cs/C-11'
 const AD_STANDARDS = 'https://adstandards.ca/preclearance/advertising-preclearance/'
 const AD_STANDARDS_KIDS = 'https://adstandards.ca/preclearance/advertising-preclearance/childrens/childrens-code/'
@@ -48,6 +53,10 @@ const FAQS = [
   {
     q: 'Is there an AI video production company in Calgary?',
     a: `Yes. ${studio} is an AI film studio based in ${SITE.city}, founded in ${SITE.foundingYear}. Every frame it delivers is made with generative AI, with no crews, sets or location shoots, and it makes brand films, AI commercials, about-us films, avatar videos, UGC-style ads and product visuals for companies in Calgary and across Canada.`,
+  },
+  {
+    q: 'Which AI video agencies are in Calgary?',
+    a: `Calgary firms that describe an AI video offer on their own sites, as of October 2026: ${studio}, an AI-only film studio that generates every frame of brand films and commercials; V Strategies, a production company with crews that partnered with FrameSmiths for hybrid AI and filmed work; Maven Media Group, a production company with AI-based video packages; UUDigital, which sells AI promo videos for social and ads at published prices; Valiant Digital, an AI automation agency that makes video with AI platforms; and I Web Guy, which makes AI video ads for digital and LED screens. Pick by the job: fixed-price social promos, a hybrid shoot with your own people on camera, or a cinematic film with no shoot.`,
   },
   {
     q: 'How much does AI video production cost in Canada?',
@@ -91,6 +100,10 @@ export default function Page() {
           Canadian rules shape the ad more than the AI does: Quebec requires commercial advertising in French, and some
           product categories go through Ad Standards preclearance.
         </p>
+        <p>
+          Other Calgary firms that sell AI video are mostly production companies adding AI scenes to filmed work, or
+          content shops selling AI promos at a fixed price; the comparison is below.
+        </p>
       </GuideAnswer>
 
       <GuideSection eyebrow="What we make" title="What an AI studio in Calgary makes, and for whom">
@@ -119,7 +132,40 @@ export default function Page() {
         <GuideFilm id="d-s9SxA4Klk" />
       </GuideSection>
 
-      <GuideSection eyebrow="How it works from here" title="Working with an AI studio when you are not in Calgary" alt>
+      <GuideSection eyebrow="Calgary options" title="AI video agencies in Calgary, and how they differ" alt>
+        <p>
+          Search &ldquo;AI video agency Calgary&rdquo; and you get four different kinds of business under one name: a
+          production company with crews that now adds AI scenes, a social content shop selling AI promos at a fixed price,
+          an AI automation agency that also makes video with off-the-shelf platforms, and an AI-only film studio. These are the Calgary firms that describe an AI video offer on their own site, with what each
+          publishes.
+        </p>
+        <GuideTable
+          head={['Firm', 'What kind', 'What it says it makes', 'Published price']}
+          rows={[
+            [studio, 'AI-only film studio', 'Brand films, commercials, about-us films, avatar videos, UGC-style ads and product visuals, every frame generated', 'Quoted from the brief'],
+            [<a key="v" href={VSTRAT}>V Strategies, with FrameSmiths</a>, 'Production company with crews, partnered with an AI video agency', 'Commercials, brand films, corporate, training and campaign video; hybrid work that mixes AI environments with filmed footage', 'None published'],
+            [<a key="m" href={MAVEN}>Maven Media Group</a>, 'Production company with crews', 'Packages for "videos that are primarily AI-based", next to filming and event packages', 'No AI price; says most video projects run $5,000 to $15,000'],
+            [<a key="u" href={UU}>UUDigital</a>, 'Social and ad content shop', 'AI promo videos for social, web and ads in 9:16, 1:1 and 16:9', '$500 per video and up; monthly package of 4+ videos $1,200 a month and up'], // claims-ok: UUDigital AI video production page, linked in this row (their prices, not Ruminate X's)
+            [<a key="va" href={VALIANT}>Valiant Digital</a>, 'AI automation agency', 'AI-generated video "using leading AI video platforms" for promos, training and personalized messages', 'No video price'],
+            [<a key="i" href={IWEBGUY}>I Web Guy</a>, 'Web and digital shop', 'AI video ads for digital platforms and LED display screens', 'None published'],
+          ]}
+          caption="Read on each firm's own page on October 6, 2026. Prices are as published, in the currency each page uses (none states it). A missing row means we found no AI video page for that firm, not that it does no AI work."
+        />
+        <p>
+          If you need four social promos a month at a known price and the look can be
+          whatever the platforms produce, a fixed-price content shop fits. If the film needs your own staff or customers
+          on camera and you want AI only for the scenes you cannot shoot, hire a crew that does hybrid work. If you want
+          a cinematic brand film or commercial with no shoot at all, and you want one team responsible for the script,
+          the generated shots, the fixes to what breaks and the final mix, that is the job {studio} does.
+        </p>
+        <p>
+          Whoever you talk to, ask the same three things: who writes the script, what happens when a generated shot gets
+          your product or logo wrong, and who owns the finished film and project files. The{' '}
+          <Link href="/ai-video-production-agencies">agency hiring guide</Link> has the full list of questions.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="How it works from here" title="Working with an AI studio when you are not in Calgary">
         <p>
           A filmed production is local because the crew, gear and locations are. An AI production has none of those, so
           a brand in Toronto or Halifax works with a Calgary studio exactly as one in Calgary does. The steps are the ones
@@ -134,7 +180,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Cost" title="What AI video production costs in Canada">
+      <GuideSection eyebrow="Cost" title="What AI video production costs in Canada" alt>
         <p>
           Few Canadian studios publish prices. These are the published figures we could check, next to the national
           ranges on our <Link href="/blog/how-much-does-ai-video-production-cost">AI video production cost guide</Link>.
@@ -157,7 +203,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Canadian rules" title="Canadian rules that apply to an AI ad" alt>
+      <GuideSection eyebrow="Canadian rules" title="Canadian rules that apply to an AI ad">
         <p>
           <strong>French in Quebec.</strong> Section 58 of the{' '}
           <a href={QC_CHARTER}>Charter of the French Language</a> says commercial advertising must be in French. It can be
@@ -187,7 +233,7 @@ export default function Page() {
         <p>This section is not legal or regulatory advice. Your own counsel and, where it applies, your clearance body decide.</p>
       </GuideSection>
 
-      <GuideSection eyebrow="Proof" title="Films made this way">
+      <GuideSection eyebrow="Proof" title="Films made this way" alt>
         <p>
           {studio} publishes its films on the <Link href="/work">work page</Link>. This one is an original film the
           studio made, not client work.

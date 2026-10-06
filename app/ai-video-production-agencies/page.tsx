@@ -153,6 +153,13 @@ export default function Page() {
           shortlist it. Whether to hire anyone at all, or make the film yourself, is on{' '}
           <Link href="/comparison/ai-agency-vs-traditional-agency">AI video agency vs traditional production</Link>.
         </p>
+        <p>
+          If you are filming a commercial anyway and want AI for a set extension, a crowd or a product effect, you need
+          the right-hand column: a production company or VFX house that films the plates and adds the AI shots in post.
+          Our commercial page explains where{' '}
+          <Link href="/ai-commercial-production">AI VFX for commercial production</Link> ends and a fully generated
+          commercial begins.
+        </p>
       </GuideSection>
 
       <GuideSection eyebrow="The work" title="What an AI video agency does that a generator does not" alt>
