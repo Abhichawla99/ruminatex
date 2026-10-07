@@ -17,13 +17,14 @@ const PAGE = {
   path: '/guides/ai-pharma-commercials',
   title: 'AI Pharma Commercials: Who Has Made Them',
   description:
-    'Which drug brands have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter), the Puppramin spec ad, the Saphnelo and Lilly "is this AI?" threads, what FDA rules apply to AI imagery, and why both real campaigns used animals instead of patients.',
+    'Which drug brands have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter), the Puppramin spec ad, the Saphnelo, Icotyde and Lilly "is this AI?" questions, what FDA rules apply to AI imagery, and why both real campaigns used animals instead of patients.',
   published: '2026-10-01',
-  updated: '2026-10-01',
+  updated: '2026-10-07',
   keywords: [
     'ai generated pharma commercial',
     'which pharma company is using ai',
     'is saphnelo commercial ai generated',
+    'is the icotyde commercial made with ai',
     'ai generated pharma commercial actors',
     'can pharma ads use ai actors',
     'is it legal to use ai for ads',
@@ -38,6 +39,10 @@ const FIERCE_GILEAD = 'https://www.fiercepharma.com/marketing/otters-bears-and-p
 const PUPPRAMIN = 'https://curiousrefuge.com/ai-film-gallery/puppramin'
 const REDDIT_SAPHNELO = 'https://www.reddit.com/r/CommercialsIHate/comments/1sgve8r/saphnelo_pharma_ad_is_ai_generated/'
 const REDDIT_LILLY = 'https://www.reddit.com/r/RealOrAI/comments/1qd2n3u/help_is_this_eli_lilly_ad_real_or_ai/'
+const MEDIAPOST_ICOTYDE = 'https://www.mediapost.com/publications/article/416555/jj-reporting-25b-in-q2-sales-launches-campaign.html'
+const ISPOT_ICOTYDE = 'https://www.ispot.tv/brands/DQA/icotyde'
+const CURMUDGEON_ICOTYDE = 'http://www.thecommercialcurmudgeon.com/2026/08/this-icotyde-ad-has-to-be-ai.html'
+const AJMC_ICOTYDE = 'https://www.ajmc.com/view/fda-approves-icotrokinra-first-oral-il-23-inhibitor-for-plaque-psoriasis'
 const REDDIT_QUESTIONS = 'https://www.reddit.com/r/questions/comments/196xtw7/do_some_drug_companies_use_ai_to_make_their/'
 const IAB = 'https://www.iab.com/insights/the-ai-gap-widens/'
 const CFR = 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202/section-202.1'
@@ -58,6 +63,10 @@ const FAQS = [
   {
     q: 'Is the Saphnelo commercial AI generated?',
     a: 'Nobody has confirmed it. Viewers asked on Reddit (r/CommercialsIHate, "Saphnelo pharma ad is AI generated?") and on X whether AstraZeneca\'s Saphnelo lupus ad used AI, but as of October 2026 neither AstraZeneca nor any news outlet has said it did. Treat it as viewer speculation. The question shows that audiences already look for AI in polished pharma ads.',
+  },
+  {
+    q: 'Is the Icotyde commercial made with AI?',
+    a: 'Nobody has confirmed it. Johnson & Johnson\'s Icotyde psoriasis ad, "Unbelievable", launched on July 14, 2026 during Fox\'s World Cup semifinal and the MLB All-Star Game (MediaPost) and had aired nationally 6,354 times by October 7, 2026 (iSpot). Viewers took the stiff delivery and the unicorn outside the doctor\'s window as signs of AI, but as of October 2026 neither J&J nor any agency has said AI made it, and no news outlet has reported that it did.',
   },
   {
     q: 'Can pharma ads use AI actors?',
@@ -102,8 +111,8 @@ export default function Page() {
           Two drug brands have confirmed ads made with generative AI. AstraZeneca&apos;s Breztri asthma campaign
           (Edelman, September 2026) puts an AI-made llama, goat and oryx in an office, and Gilead Canada&apos;s Descovy ad
           &ldquo;Animal Attraction&rdquo; (The Local Collective) uses an AI-made bear and otter and won a 2026 Cannes
-          Pharma Lions bronze. Both used AI for animals, not patients. The Reddit threads asking whether Saphnelo or Eli
-          Lilly ads were AI are unconfirmed. FDA&apos;s drug-ad rules apply the same way whether the footage was filmed or
+          Pharma Lions bronze. Both used AI for animals, not patients. Viewer questions about whether the Saphnelo, Icotyde
+          and Eli Lilly ads were AI are unconfirmed. FDA&apos;s drug-ad rules apply the same way whether the footage was filmed or
           generated.
         </p>
       </GuideAnswer>
@@ -121,6 +130,7 @@ export default function Page() {
             ['Breztri, "put a LAMA to work" (2026)', 'AstraZeneca, Edelman', 'The whole production: a llama, a goat and an oryx as office co-workers', 'Connected TV, YouTube, display, social (US)', 'Confirmed'],
             ['Descovy, "Animal Attraction" (launched 2025)', 'Gilead Canada, The Local Collective', 'A realistic bear holding an otter in a river', 'Canada; bronze, Cannes Pharma Lions 2026', 'Confirmed'],
             ['"Puppramin" (May 2025)', 'PJ Accetturo, no client', 'A full parody drug ad with people, made in Veo 3', 'X, then news coverage', 'Spec ad, not a real drug'],
+            ['Icotyde, "Unbelievable" (July 2026)', 'Johnson & Johnson', 'Viewers asked whether the doctor and patient were generated', 'US national TV, 6,354 airings to October 7, 2026 (iSpot)', 'Unconfirmed speculation'],
             ['Saphnelo TV ad', 'AstraZeneca', 'Viewers asked whether the people were generated', 'US TV', 'Unconfirmed speculation'],
             ['An Eli Lilly ad', 'Eli Lilly', 'A Reddit user asked whether it was real or AI', 'Not identified', 'Unconfirmed speculation'],
           ]}
@@ -179,7 +189,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Is it AI?" title="Saphnelo, Lilly and the viewers already looking">
+      <GuideSection eyebrow="Is it AI?" title="Saphnelo, Icotyde, Lilly and the viewers already looking">
         <p>
           Viewers are already scanning pharma ads for AI. A thread in r/CommercialsIHate titled{' '}
           <a href={REDDIT_SAPHNELO}>&ldquo;Saphnelo pharma ad is AI generated?&rdquo;</a> drew more than 40 comments, and
@@ -188,6 +198,21 @@ export default function Page() {
           thread in r/questions asked <a href={REDDIT_QUESTIONS}>whether drug companies use AI to make their ads</a> (January
           2024). None of these suspicions has been confirmed by the companies or reported by a news outlet as of October
           2026.
+        </p>
+        <h3>Is the Icotyde commercial made with AI?</h3>
+        <p>
+          The most-watched case in 2026 is Johnson &amp; Johnson&apos;s ad for Icotyde, the once-daily psoriasis pill FDA{' '}
+          <a href={AJMC_ICOTYDE}>approved in March 2026</a>. The spot, &ldquo;Unbelievable&rdquo;, set to the EMF song,{' '}
+          <a href={MEDIAPOST_ICOTYDE}>launched on July 14</a> during Fox&apos;s coverage of the World Cup semifinal and the
+          MLB All-Star Game, and had <a href={ISPOT_ICOTYDE}>aired nationally 6,354 times</a> by October 7. A patient hears
+          &ldquo;good news&rdquo; from her doctor while a unicorn walks past the window. The Commercial Curmudgeon blog
+          titled its August review <a href={CURMUDGEON_ICOTYDE}>&ldquo;This Icotyde Ad HAS to be AI&rdquo;</a>, pointing
+          at the people, who it said talk and act as if a low-cost AI provider made them. Johnson &amp; Johnson has not said
+          AI was used, no agency has claimed the work, and no news outlet has reported it as of October 2026.
+        </p>
+        <p>
+          For a brand team the case shows that an ad can be judged as AI on stiff delivery alone, whether or not AI made
+          it. Performance direction and the disclosure decision belong in the same review.
         </p>
         <p>
           The lesson for a brand team: an undisclosed AI ad will be judged in threads like these whether or not AI was

@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: which kind to hire, how an AI commercial is made, what it costs, and AI VFX on a live-action shoot vs a fully generated ad',
+    question: 'ai commercial production company: which kind to hire, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-06',
+    updated: '2026-10-07',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -53,10 +53,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
     title: 'AI Video Agency vs Traditional Production',
-    question: 'ai video vs traditional video production: which should my brand hire, can AI replace a video production agency, and when should a brand hire an AI video production partner',
+    question: 'ai video vs traditional video production: which should my brand hire, should I use an AI video tool or hire an agency, can AI replace a video production agency, and what a 2-minute brand video costs either way',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-05',
+    updated: '2026-10-07',
   },
   {
     path: '/ai-brand-film-agency',
@@ -229,10 +229,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-pharma-commercials',
     title: 'AI Pharma Commercials: Who Has Made Them',
-    question: 'which pharma companies have made AI-generated commercials, is the saphnelo ad AI, and can drug ads use AI actors',
+    question: 'which pharma companies have made AI-generated commercials, are the saphnelo and icotyde ads AI, and can drug ads use AI actors',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-01',
+    updated: '2026-10-07',
   },
   {
     path: '/guides/ai-medical-animation',
