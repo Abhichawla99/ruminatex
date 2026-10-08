@@ -72,7 +72,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'can pharma, pharmacy, lab and medical companies use AI video, what will MLR ask, and what are the FDA rules for prescription drug TV and video ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-10-03',
+    updated: '2026-10-08',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -173,10 +173,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/brands-using-ai-commercials',
     title: 'Brands Using AI Commercials: What Happened',
-    question: 'what companies are using AI in their commercials, and how did audiences react',
+    question: 'what companies are using AI in their commercials, did Progressive use AI for an ad, and how did audiences react',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-09-26',
+    updated: '2026-10-08',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -229,10 +229,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-pharma-commercials',
     title: 'AI Pharma Commercials: Who Has Made Them',
-    question: 'which pharma companies have made AI-generated commercials, are the saphnelo and icotyde ads AI, and can drug ads use AI actors',
+    question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, and can drug ads use AI actors',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-07',
+    updated: '2026-10-08',
   },
   {
     path: '/guides/ai-medical-animation',

@@ -17,13 +17,17 @@ const PAGE = {
   path: '/guides/ai-pharma-commercials',
   title: 'AI Pharma Commercials: Who Has Made Them',
   description:
-    'Which drug brands have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter), the Puppramin spec ad, the Saphnelo, Icotyde and Lilly "is this AI?" questions, what FDA rules apply to AI imagery, and why both real campaigns used animals instead of patients.',
+    'Which drug brands and pharmacies have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter, Grubb\'s Pharmacy\'s apology in DC), the Saphnelo, Icotyde and Peak Blue Rx "is this AI?" questions, what FDA rules apply to AI imagery, and why both drug campaigns used animals instead of patients.',
   published: '2026-10-01',
-  updated: '2026-10-07',
+  updated: '2026-10-08',
   keywords: [
     'ai generated pharma commercial',
     'which pharma company is using ai',
     'is saphnelo commercial ai generated',
+    'saphnelo ai ad',
+    'grubbs pharmacy ai ad',
+    'ai pharmaceutical commercial',
+    'peak blue rx ai commercial',
     'is the icotyde commercial made with ai',
     'ai generated pharma commercial actors',
     'can pharma ads use ai actors',
@@ -43,6 +47,13 @@ const MEDIAPOST_ICOTYDE = 'https://www.mediapost.com/publications/article/416555
 const ISPOT_ICOTYDE = 'https://www.ispot.tv/brands/DQA/icotyde'
 const CURMUDGEON_ICOTYDE = 'http://www.thecommercialcurmudgeon.com/2026/08/this-icotyde-ad-has-to-be-ai.html'
 const AJMC_ICOTYDE = 'https://www.ajmc.com/view/fda-approves-icotrokinra-first-oral-il-23-inhibitor-for-plaque-psoriasis'
+const FIERCE_SAPHNELO_2022 = 'https://www.fiercepharma.com/marketing/az-rolls-out-first-dtc-ads-here-more-campaign-new-lupus-drug-saphnelo'
+const ISPOT_PEAK = 'https://www.ispot.tv/ad/gT7g/peak-blue-rx-same-results'
+const REDDIT_GRUBBS = 'https://www.reddit.com/r/washingtondc/comments/1wybf0b/grubbs_pharmacy_in_ne_apologizes_for_aigenerated/'
+const FEEDME_GRUBBS = 'https://www.readfeedme.com/p/feed-mes-first-dc-edition-black-book'
+const POPVILLE_GRUBBS = 'https://www.popville.com/2026/10/grubbs-pharmacy-also-a-good-spot-for-vaccines-plus-theyve-added-a-tea-lab/'
+const FTC_HEALTH = 'https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance'
+const HAWAII_PHARMACY = 'https://www.law.cornell.edu/regulations/hawaii/Haw-Code-R-SS-16-95-102'
 const REDDIT_QUESTIONS = 'https://www.reddit.com/r/questions/comments/196xtw7/do_some_drug_companies_use_ai_to_make_their/'
 const IAB = 'https://www.iab.com/insights/the-ai-gap-widens/'
 const CFR = 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202/section-202.1'
@@ -62,11 +73,19 @@ const FAQS = [
   },
   {
     q: 'Is the Saphnelo commercial AI generated?',
-    a: 'Nobody has confirmed it. Viewers asked on Reddit (r/CommercialsIHate, "Saphnelo pharma ad is AI generated?") and on X whether AstraZeneca\'s Saphnelo lupus ad used AI, but as of October 2026 neither AstraZeneca nor any news outlet has said it did. Treat it as viewer speculation. The question shows that audiences already look for AI in polished pharma ads.',
+    a: 'Nobody has confirmed it. Viewers asked on Reddit (r/CommercialsIHate, "Saphnelo pharma ad is AI generated?") and on X whether AstraZeneca\'s Saphnelo lupus ad used AI, but as of October 2026 neither AstraZeneca nor any news outlet has said it did. The threads do not say which Saphnelo spot they mean. AstraZeneca\'s first consumer campaign for Saphnelo, "Here for More", came out in May 2022 (Fierce Pharma), before video generators could make realistic people. Treat it as viewer speculation. The question shows that audiences already look for AI in polished pharma ads.',
   },
   {
     q: 'Is the Icotyde commercial made with AI?',
     a: 'Nobody has confirmed it. Johnson & Johnson\'s Icotyde psoriasis ad, "Unbelievable", launched on July 14, 2026 during Fox\'s World Cup semifinal and the MLB All-Star Game (MediaPost) and had aired nationally 6,354 times by October 7, 2026 (iSpot). Viewers took the stiff delivery and the unicorn outside the doctor\'s window as signs of AI, but as of October 2026 neither J&J nor any agency has said AI made it, and no news outlet has reported that it did.',
+  },
+  {
+    q: 'Did Grubb\'s Pharmacy use an AI ad?',
+    a: 'Yes, by its own account. Grubb\'s Pharmacy on Capitol Hill in Washington, DC, which calls itself the city\'s oldest pharmacy (established 1867), apologized in October 2026 for using AI-generated imagery in its marketing (Feed Me, October 7, 2026). The r/washingtondc post about the apology drew more than 1,100 comments, and the pharmacy\'s next Instagram post promised "non-AI marketing materials". It is the only case this guide has found of a pharmacy, rather than a drug maker, confirming an AI ad, and it ended in an apology.',
+  },
+  {
+    q: 'Is the Peak Blue Rx commercial AI?',
+    a: 'No public source says so. iSpot lists Peak Blue Rx\'s 60-second men\'s health TV spot "Same Results", published March 2, 2026, with no actors identified, and as of October 2026 neither the company nor any news outlet has said AI made it. People search the question because realistic pharma and telehealth ads now get checked for AI as a matter of course.',
   },
   {
     q: 'Can pharma ads use AI actors?',
@@ -111,8 +130,9 @@ export default function Page() {
           Two drug brands have confirmed ads made with generative AI. AstraZeneca&apos;s Breztri asthma campaign
           (Edelman, September 2026) puts an AI-made llama, goat and oryx in an office, and Gilead Canada&apos;s Descovy ad
           &ldquo;Animal Attraction&rdquo; (The Local Collective) uses an AI-made bear and otter and won a 2026 Cannes
-          Pharma Lions bronze. Both used AI for animals, not patients. Viewer questions about whether the Saphnelo, Icotyde
-          and Eli Lilly ads were AI are unconfirmed. FDA&apos;s drug-ad rules apply the same way whether the footage was filmed or
+          Pharma Lions bronze. Both used AI for animals, not patients. Viewer questions about whether the Saphnelo, Icotyde,
+          Peak Blue Rx and Eli Lilly ads were AI are unconfirmed. The one pharmacy case is Grubb&apos;s Pharmacy in Washington,
+          DC, which apologized for AI-generated imagery in October 2026. FDA&apos;s drug-ad rules apply the same way whether the footage was filmed or
           generated.
         </p>
       </GuideAnswer>
@@ -133,6 +153,8 @@ export default function Page() {
             ['Icotyde, "Unbelievable" (July 2026)', 'Johnson & Johnson', 'Viewers asked whether the doctor and patient were generated', 'US national TV, 6,354 airings to October 7, 2026 (iSpot)', 'Unconfirmed speculation'],
             ['Saphnelo TV ad', 'AstraZeneca', 'Viewers asked whether the people were generated', 'US TV', 'Unconfirmed speculation'],
             ['An Eli Lilly ad', 'Eli Lilly', 'A Reddit user asked whether it was real or AI', 'Not identified', 'Unconfirmed speculation'],
+            ['Peak Blue Rx, "Same Results" (March 2026)', 'Peak Blue Rx', 'People search whether it is AI; no source says so', 'US TV, 60 seconds (iSpot)', 'Unconfirmed speculation'],
+            ["Grubb's Pharmacy marketing (2026)", "Grubb's Pharmacy, Washington, DC", 'AI-generated imagery in its marketing', 'Its own channels', 'Confirmed by the pharmacy, which apologized (October 2026)'],
           ]}
         />
       </GuideSection>
@@ -215,14 +237,52 @@ export default function Page() {
           it. Performance direction and the disclosure decision belong in the same review.
         </p>
         <p>
-          The lesson for a brand team: an undisclosed AI ad will be judged in threads like these whether or not AI was
-          used. In <a href={IAB}>IAB&apos;s January 2026 survey</a> of 505 US Gen Z and Millennial consumers,
+          Peak Blue Rx, which sells men&apos;s health prescriptions, gets the same question for{' '}
+          <a href={ISPOT_PEAK}>&ldquo;Same Results&rdquo;</a>, a 60-second TV spot iSpot lists from March 2, 2026. No
+          source says AI made it. On Saphnelo, the threads do not say which spot they mean, and AstraZeneca&apos;s first
+          consumer campaign for the drug, &ldquo;Here for More&rdquo;, launched in{' '}
+          <a href={FIERCE_SAPHNELO_2022}>May 2022</a>, before generators could make realistic people.
+        </p>
+        <p>
+          An undisclosed AI ad will be judged in threads like these whether or not AI was used. In <a href={IAB}>IAB&apos;s January 2026 survey</a> of 505 US Gen Z and Millennial consumers,
           pharmaceutical and healthcare ads ranked with political ads as the categories where consumers most often said AI
           disclosure is very important, and more than half wanted AI video and AI images disclosed.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The rules" title="What FDA rules apply to an AI-made drug ad" alt>
+      <GuideSection eyebrow="A pharmacy" title="Grubb's Pharmacy: the AI ad a pharmacy apologized for" alt>
+        <p>
+          The one confirmed AI ad from a pharmacy that we have found ended in an apology. Grubb&apos;s Pharmacy at
+          326 East Capitol Street NE describes itself as Washington, DC&apos;s oldest pharmacy, established in 1867, and it
+          does retail, compounding, vaccinations and delivery. In October 2026 its head pharmacist, Michael Kim, posted an
+          apology for using AI-generated imagery in its marketing (<a href={FEEDME_GRUBBS}>Feed Me</a>, October 7, 2026).
+          The r/washingtondc post{' '}
+          <a href={REDDIT_GRUBBS}>&ldquo;Grubb&apos;s Pharmacy in NE apologizes for AI-generated ad&rdquo;</a> drew more
+          than 1,100 comments, with readers arguing over whether a boycott of a small local business went too far.
+        </p>
+        <p>
+          The pharmacy&apos;s next Instagram post, announcing a tea lab inside the store, said it still had to work out
+          &ldquo;creating non-AI marketing materials&rdquo; (quoted by <a href={POPVILLE_GRUBBS}>PoPville</a>, October 6,
+          2026). Nothing in the coverage says the imagery made a false health claim. The complaints were about
+          who made the pictures, at a 159-year-old pharmacy whose owners say they want to connect with their community
+          beyond dispensing medications.
+        </p>
+        <h3>Which rules apply to a pharmacy&apos;s ad</h3>
+        <p>
+          A pharmacy advertising its own services (vaccinations, delivery, compounding, a tea lab) is not running a
+          prescription drug ad, so the FDA rules below do not decide it. The FTC has primary responsibility for claims in
+          advertising of health products (<a href={FTC_HEALTH}>FTC Health Products Compliance Guidance</a>, December
+          2022), and the pharmacy&apos;s state board sets its own advertising rules. Hawaii&apos;s, for example, requires
+          that advertising of pharmacy services be truthful and not misleading, and defines exactly what a pharmacy must
+          do before it may advertise &ldquo;emergency prescription service&rdquo; (
+          <a href={HAWAII_PHARMACY}>Haw. Code R. 16-95-102</a>). Neither mentions AI. If the ad shows a generated
+          pharmacist or customer as if they were real staff or patients, the FTC rule against misleading endorsements
+          applies the same way it does to a drug maker. Read in October 2026; not legal advice, and your counsel and state
+          board decide.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="The rules" title="What FDA rules apply to an AI-made drug ad">
         <p>
           No FDA rule mentions AI. The rules that decide an AI drug ad are the ones for every broadcast drug ad, and the
           one most exposed by generated footage is the ban on distracting pictures during the risk statement.
@@ -263,7 +323,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Animals, not patients" title="Why both real campaigns avoided AI people">
+      <GuideSection eyebrow="Animals, not patients" title="Why both real campaigns avoided AI people" alt>
         <p>
           Breztri and Descovy both put AI on animals and kept generated humans out of the frame. The reasons are
           practical. A generated woman taking an inhaler looks like a patient describing a real result, and an MLR
@@ -273,12 +333,13 @@ export default function Page() {
         </p>
         <p>
           The same pattern showed up outside pharma: Coca-Cola&apos;s 2025 AI holiday ad swapped the generated people of
-          its criticised 2024 version for animals. The cases are on{' '}
+          its criticised 2024 version for animals, and Progressive&apos;s 2025 &ldquo;Drive Like an Animal&rdquo; insurance ad
+          generated animals at the wheel while keeping the real voice of its Flo actress. The cases are on{' '}
           <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it gets made" title="How an AI drug ad is built so it survives review" alt>
+      <GuideSection eyebrow="How it gets made" title="How an AI drug ad is built so it survives review">
         <p>
           {PRODUCTION.summary} For a pharma or pharmacy brand, {studio} plans the film around the review, not the
           generator:

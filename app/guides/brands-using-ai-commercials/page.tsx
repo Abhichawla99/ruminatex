@@ -18,9 +18,9 @@ const PAGE = {
   path: '/guides/brands-using-ai-commercials',
   title: 'Brands Using AI Commercials: What Happened',
   description:
-    'Eight AI commercials from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes and McDonald\'s: who made each one, with which tools, how long it took, and how audiences reacted. Sourced, with what it means for your own AI ad.',
+    'Ten AI ads from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized: who made each one, with which tools, how long it took, and how audiences reacted. Sourced, with what it means for your own AI ad.',
   published: '2026-09-26',
-  updated: '2026-09-26',
+  updated: '2026-10-08',
   keywords: [
     'brands that used ai commercials',
     'what companies are using ai in their commercials',
@@ -28,6 +28,10 @@ const PAGE = {
     'ai generated commercials examples',
     'what companies have made ai commercials',
     'can companies stop making ai generated ads',
+    'commercials using ai',
+    'are commercials using ai',
+    'companies using ai ads',
+    'did progressive use ai for an ad',
   ],
 }
 
@@ -42,12 +46,16 @@ const KALSHI = 'https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-
 const POPEYES = 'https://www.yahoo.com/entertainment/articles/popeyes-used-veo-3-diss-090324401.html'
 const MASHED_POPEYES = 'https://www.mashed.com/2095619/popeyes-ai-commercial-clowns/'
 const FORBES_COKE = 'https://www.forbes.com/sites/danidiplacido/2025/11/04/coca-cola-sparks-backlash-with-ai-generated-christmas-ad-again/'
+const PROGRESSIVE = 'https://progressive.mediaroom.com/news-releases/?item=122548'
+const DIVE_PROGRESSIVE = 'https://www.marketingdive.com/news/how-progressive-balances-ai-use-with-authenticity-as-scrutiny-persists/813339/'
+const FEEDME_GRUBBS = 'https://www.readfeedme.com/p/feed-mes-first-dc-edition-black-book'
+const REDDIT_GRUBBS = 'https://www.reddit.com/r/washingtondc/comments/1wybf0b/grubbs_pharmacy_in_ne_apologizes_for_aigenerated/'
 const NBC_MCD = 'https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590'
 
 const FAQS = [
   {
     q: 'What companies are using AI in their commercials?',
-    a: 'Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Each is sourced on this Ruminate X page.',
+    a: 'Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb\'s Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this Ruminate X page.',
   },
   {
     q: 'Why did people criticize the Coca-Cola AI Christmas ad?',
@@ -60,6 +68,10 @@ const FAQS = [
   {
     q: 'What are some examples of commercials using AI actors?',
     a: 'Coca-Cola\'s 2024 "Holidays Are Coming" remake filled the spot with AI-generated people, which drew much of the criticism; its 2025 version used generated animals and one Santa based on paintings Coca-Cola owns. McDonald\'s Netherlands\' 2025 Christmas ad used AI-generated characters and was pulled within a week. Ads that generate realistic people are the ones audiences have judged most harshly.',
+  },
+  {
+    q: 'Did Progressive use AI for an ad?',
+    a: 'Yes. Progressive\'s "Drive Like an Animal" ad for its Snapshot program, released on November 3, 2025, shows AI-generated animals driving and crashing cars, with the voice of Stephanie Courtney, the actress who plays Flo. Progressive\'s in-house agency Ninety6, its agency of record Arnold, and Monks made it. The idea dated from 2024 and was shelved as too slow and expensive to produce; AI made it fit the budget a year later. It drew negative comments on YouTube and Reddit, and Progressive said engagement was strong (Marketing Dive, February 2026).',
   },
   {
     q: 'Which AI commercials were made fastest?',
@@ -94,19 +106,21 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          Coca-Cola, Toys&quot;R&quot;Us, Moncler, Kalshi, Popeyes and McDonald&apos;s Netherlands have all released
-          commercials or brand films made mostly with generative AI between 2023 and 2025. The fast, funny, topical ones
+          Coca-Cola, Toys&quot;R&quot;Us, Moncler, Kalshi, Popeyes, Progressive and McDonald&apos;s Netherlands have all
+          released commercials or brand films made mostly with generative AI between 2023 and 2025. The fast, funny, topical ones
           (Kalshi in two days for about USD 2,000, Popeyes finished with less than three days to go) were made in days. The
           sentimental holiday ads that showed realistic AI-generated people (Coca-Cola in 2024, McDonald&apos;s
-          Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week.
+          Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week. In October 2026 a
+          neighbourhood pharmacy in Washington, DC apologized for its AI imagery, so the scrutiny reaches small businesses
+          too.
         </p>
       </GuideAnswer>
 
-      <GuideSection eyebrow="The cases" title="Eight AI commercials, who made them and what happened">
+      <GuideSection eyebrow="The cases" title="Ten AI ads, who made them and what happened">
         <GuideTable
           caption={
             <>
-              Each row from the source linked in the text below, read September 2026. Budgets are listed only where one
+              Each row from the source linked in the text below, read September and October 2026. Budgets are listed only where one
               was published; most brands do not publish them.
             </>
           }
@@ -119,7 +133,9 @@ export default function Page() {
             ['2025', 'Popeyes, "Wrap Battle"', 'AI filmmaker PJ Accetturo, Veo 3, Suno', 'Finished in under three days on Veo 3', 'Coverage split between "AI won" and "backfired"'],
             ['2025', 'Moncler, "From the Mountains to the City"', 'R/GA, Google Veo', 'Four weeks', 'Unveiled at Cannes Lions'],
             ['2025', 'Coca-Cola, "Holidays Are Coming" (animals)', 'Secret Level; a second version by Silverside', 'About 20 people, against at least 50 for a comparable filmed ad', 'Criticized again; Coca-Cola stood by it'],
+            ['2025', 'Progressive, "Drive Like an Animal"', 'Ninety6 (in-house), Arnold, Monks; Flo actress Stephanie Courtney on voice', 'Shelved in 2024 as too costly to produce; made a year later with AI', 'Negative comments on YouTube and Reddit; Progressive reported strong engagement'],
             ['2025', 'McDonald\'s Netherlands, Christmas ad', 'TBWA\\Neboko, The Sweetshop', 'Ten people, five weeks full-time', 'Pulled the following Wednesday'],
+            ['2026', "Grubb's Pharmacy (Washington, DC), marketing imagery", 'Not published', 'Not published', 'Head pharmacist apologized; more than 1,100 comments on r/washingtondc'],
           ]}
         />
       </GuideSection>
@@ -195,17 +211,43 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial" alt>
+      <GuideSection eyebrow="Animals and an apology" title="Progressive and Grubb's Pharmacy: a national ad and a local one" alt>
+        <p>
+          Progressive&apos;s &ldquo;Drive Like an Animal&rdquo;, released on{' '}
+          <a href={PROGRESSIVE}>November 3, 2025</a>, sells its Snapshot program with AI-generated animals behind the wheel.
+          The idea dated from 2024 and was shelved because it needed a long production and did not fit the budget; a year
+          later, rebuilt with AI, it did. Progressive&apos;s VP of integrated marketing, Meghan Walsh, called the
+          difference &ldquo;night and day&rdquo; (<a href={DIVE_PROGRESSIVE}>Marketing Dive, February 2026</a>). The
+          voice is Stephanie Courtney&apos;s, the actress who plays Flo, so the voice viewers know stayed real.
+          The spot drew negative comments on YouTube and Reddit, and Walsh said it also got strong engagement.
+        </p>
+        <p>
+          At the other end of the scale, Grubb&apos;s Pharmacy on Capitol Hill, which dates itself to 1867, apologized in
+          October 2026 for using AI-generated imagery in its marketing (<a href={FEEDME_GRUBBS}>Feed Me</a>). The
+          r/washingtondc post{' '}
+          <a href={REDDIT_GRUBBS}>&ldquo;Grubb&apos;s Pharmacy in NE apologizes for AI-generated ad&rdquo;</a> drew more
+          than 1,100 comments, and the pharmacy&apos;s next Instagram post promised &ldquo;non-AI marketing
+          materials&rdquo;. What the case means for pharmacies and the rules that apply to
+          their ads are on <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial">
         <ul>
           <li>
             <strong>Realistic people carry the most risk.</strong> The two harshest reactions, Coca-Cola 2024 and
-            McDonald&apos;s 2025, were ads full of generated people. Coca-Cola&apos;s own fix was to show animals, and
-            the first drug brands to run AI ads, AstraZeneca and Gilead, did the same (see{' '}
+            McDonald&apos;s 2025, were ads full of generated people. Coca-Cola&apos;s own fix was to show animals,
+            Progressive kept to animals and a real voice, and the first drug brands to run AI ads, AstraZeneca and Gilead,
+            did the same (see{' '}
             <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>).
           </li>
           <li>
             <strong>Sentiment raises the stakes.</strong> Holiday ads from brands people grew up with are judged on warmth.
             Generated footage that looks slightly off reads as cold.
+          </li>
+          <li>
+            <strong>Small brands get judged too.</strong> Grubb&apos;s Pharmacy had no national campaign, and its AI
+            imagery still drew a public apology and a thread of more than 1,100 comments.
           </li>
           <li>
             <strong>Speed is the clearest win.</strong> Kalshi and Popeyes used AI to answer a moment in days.

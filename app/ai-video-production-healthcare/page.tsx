@@ -19,7 +19,7 @@ const PAGE = {
   description:
     'How pharma, pharmacy, lab and medical companies use AI-made brand films and ads, what MLR reviewers ask about AI footage, the US and Canadian drug-ad rules that shape a video, and when to film real clinicians instead.',
   published: '2026-03-07',
-  updated: '2026-10-03',
+  updated: '2026-10-08',
   keywords: [
     'ai video for pharma marketing',
     'ai video production healthcare',
@@ -181,7 +181,9 @@ export default function Page() {
         </p>
         <p>
           <strong>Pharmacies, labs and clinics</strong> advertising their own services answer to other regulators, such
-          as state boards of pharmacy and provincial colleges. Ask yours; this page does not cover their rules.
+          as state boards of pharmacy and provincial colleges. Ask yours. Which rules reach a pharmacy&apos;s own ad, and the
+          Washington, DC pharmacy that apologized for its AI imagery in 2026, are on{' '}
+          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
         <p>
           All sources checked September 2026. This is not legal or regulatory advice. Your MLR team and counsel decide
