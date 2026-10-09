@@ -229,18 +229,18 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-pharma-commercials',
     title: 'AI Pharma Commercials: Who Has Made Them',
-    question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, and can drug ads use AI actors',
+    question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, can drug ads use AI actors, and what rules cover pharma celebrity endorsements',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-08',
+    updated: '2026-10-09',
   },
   {
     path: '/guides/ai-medical-animation',
     title: 'AI Medical Animation for Pharma and Labs',
-    question: 'can ai make medical animation, what does a mechanism of action animation cost, and when should pharma hire a 3D medical animation studio instead',
+    question: 'how much does medical animation cost per minute, can ai make medical animation, what does a mechanism of action animation cost, and when should pharma hire a 3D medical animation studio instead',
     kind: 'guide',
     published: '2026-10-03',
-    updated: '2026-10-03',
+    updated: '2026-10-09',
   },
   {
     path: '/ai-ugc-reels',

@@ -17,9 +17,9 @@ const PAGE = {
   path: '/guides/ai-pharma-commercials',
   title: 'AI Pharma Commercials: Who Has Made Them',
   description:
-    'Which drug brands and pharmacies have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter, Grubb\'s Pharmacy\'s apology in DC), the Saphnelo, Icotyde and Peak Blue Rx "is this AI?" questions, what FDA rules apply to AI imagery, and why both drug campaigns used animals instead of patients.',
+    'Which drug brands and pharmacies have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter, Grubb\'s Pharmacy\'s apology in DC), the Saphnelo, Icotyde and Peak Blue Rx "is this AI?" questions, what FDA rules apply to AI imagery, who may appear in a drug ad (actors, celebrities, AI people), and why both drug campaigns used animals instead of patients.',
   published: '2026-10-01',
-  updated: '2026-10-08',
+  updated: '2026-10-09',
   keywords: [
     'ai generated pharma commercial',
     'which pharma company is using ai',
@@ -31,6 +31,8 @@ const PAGE = {
     'is the icotyde commercial made with ai',
     'ai generated pharma commercial actors',
     'can pharma ads use ai actors',
+    'pharma celebrity endorsements',
+    'pharmaceutical commercial models',
     'is it legal to use ai for ads',
   ],
 }
@@ -64,6 +66,10 @@ const MEMO = 'https://www.whitehouse.gov/presidential-actions/2025/09/memorandum
 const AGENDA = 'https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0910-AJ14'
 const PHRMA = 'https://www.phrma.org/-/media/Project/PhRMA/PhRMA-Org/PhRMA-Org/PDF/P-R/PhRMA_Guiding_Principles_2018.pdf'
 const FTC_255 = 'https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255'
+const FTC_255_1 = 'https://www.law.cornell.edu/cfr/text/16/255.1'
+const FTC_465_2 = 'https://www.law.cornell.edu/cfr/text/16/465.2'
+const MERCK_DTC = 'https://www.merck.com/wp-content/uploads/sites/124/2025/12/Direct-To-Consumer_Advertising_MRK.pdf'
+const MMM_CELEBS = 'https://www.mmm-online.com/news/4-celeb-pharma-ads-shaq-nick-jonas-jesse-mccartney/'
 const CANADA_RX ='https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870/section-C.01.044.html'
 
 const FAQS = [
@@ -90,6 +96,10 @@ const FAQS = [
   {
     q: 'Can pharma ads use AI actors?',
     a: 'No US rule bans AI-generated people in a drug ad. The FDA rules govern what the ad claims and how the risks are presented, not how the pictures were made. A generated person shown as a patient or a doctor raises questions your MLR team has to answer: whether it needs an on-screen label, and whether viewers could take it for a real patient describing a real result. The two confirmed AI drug campaigns so far, Breztri and Descovy, used animals instead. This is not legal or regulatory advice.',
+  },
+  {
+    q: 'Can a pharma ad use a celebrity endorsement?',
+    a: 'Yes, if the celebrity\'s statements are true for them. Under the FTC Endorsement Guides (16 CFR 255.1), an endorsement must reflect the endorser\'s honest views, and a celebrity shown as using a product must have been a real user when they gave it. Merck\'s December 2025 policy on consumer drug ads goes further: celebrities in its product ads must have the condition and use the product. A generated person cannot meet that test, so it cannot give the endorsement. An AI copy of a real celebrity needs that person\'s consent, and what it says still has to be true for them. This is not legal advice.',
   },
   {
     q: 'Is it legal to use AI for a prescription drug ad?',
@@ -339,7 +349,42 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it gets made" title="How an AI drug ad is built so it survives review">
+      <GuideSection eyebrow="Who is on screen" title="Actors, celebrities and AI people in drug ads">
+        <p>
+          Most people in a drug commercial are paid actors playing patients and doctors. Merck&apos;s{' '}
+          <a href={MERCK_DTC}>December 2025 policy statement</a> on consumer broadcast ads shows the conventions a large
+          drug maker commits to: it identifies an actor portraying a physician, says when a physician in a product ad was
+          paid to appear, and says when a real patient is used. It also pledges to meet or exceed PhRMA&apos;s guidelines.
+        </p>
+        <h3>Pharma celebrity endorsements</h3>
+        <p>
+          A celebrity is held to more. Under the FTC&apos;s <a href={FTC_255_1}>Endorsement Guides, 16 CFR 255.1</a>, an
+          endorsement must reflect the endorser&apos;s honest views, and a celebrity presented as using a product must have
+          been a real user when the endorsement was given; the advertiser has to keep checking that it is still true.
+          Merck&apos;s policy says celebrities in its product ads must have the condition and use the product.
+        </p>
+        <p>
+          The recent campaigns follow that pattern. MM+M&apos;s <a href={MMM_CELEBS}>round-up of four celebrity pharma
+          ads</a> (October 2025) has Shaquille O&apos;Neal talking about his own sleep apnea for Eli Lilly, Jesse McCartney,
+          an allergy sufferer, using Zyrtec on tour, Nick Jonas for Beyond Type 1, the diabetes nonprofit he co-founded, and
+          Barbara Costello for Astellas, drawing on her family&apos;s history with geographic atrophy. Each one is tied to
+          the celebrity&apos;s own condition, family or cause. The Lilly spot sends viewers to a condition website and to their doctor rather than to
+          a named drug.
+        </p>
+        <h3>Where a generated person fits</h3>
+        <p>
+          An AI-generated person can stand in for an actor: someone in a scene, identified the way an actor playing a
+          doctor is. It cannot stand in for anyone whose authority comes from real experience. A generated person has no
+          condition and has never taken the drug, and the FTC&apos;s rule on reviews and testimonials,{' '}
+          <a href={FTC_465_2}>16 CFR 465.2</a>, bars testimonials that misrepresent that the testimonialist exists or used
+          the product. An AI copy of a real celebrity needs that person&apos;s consent and a contract; the SAG-AFTRA terms for union
+          performers are on <Link href="/ai-commercial-production">AI commercial production</Link>. {studio} recommends
+          boarding generated people as portrayals only and filming any patient, doctor or celebrity who speaks to results
+          with a crew. This is not legal advice; your MLR team and counsel decide.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="How it gets made" title="How an AI drug ad is built so it survives review" alt>
         <p>
           {PRODUCTION.summary} For a pharma or pharmacy brand, {studio} plans the film around the review, not the
           generator:

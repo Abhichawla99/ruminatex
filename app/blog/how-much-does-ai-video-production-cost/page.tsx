@@ -155,7 +155,9 @@ export default function Page() {
         <p>
           A 30 second spot for a pharma brand with three review rounds saves less than a lifestyle film for a shoe brand.
           The questions MLR reviewers ask about AI footage are on{' '}
-          <Link href="/ai-video-production-healthcare">AI video for pharma and healthcare marketing</Link>.
+          <Link href="/ai-video-production-healthcare">AI video for pharma and healthcare marketing</Link>, and what 2D and
+          3D studios charge per minute for science films is on{' '}
+          <Link href="/guides/ai-medical-animation">medical animation cost</Link>.
           For the full side-by-side, read <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
         </p>
       </GuideSection>

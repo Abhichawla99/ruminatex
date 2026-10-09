@@ -17,11 +17,13 @@ const PAGE = {
   path: '/guides/ai-medical-animation',
   title: 'AI Medical Animation for Pharma and Labs',
   description:
-    'Where AI medical animation works for pharma, biotech and lab marketing, where it gets the science wrong, what a mechanism of action (MOA) animation costs from a 3D studio, and when to hire one instead of an AI studio.',
+    'What medical animation costs per minute (whiteboard, 2D, 3D, mechanism of action) from the studios that publish prices, where AI medical animation works for pharma, biotech and lab marketing, where it gets the science wrong, and when to hire a 3D studio instead.',
   published: '2026-10-03',
-  updated: '2026-10-03',
+  updated: '2026-10-09',
   keywords: [
     'ai medical animation',
+    'how much does medical animation cost',
+    'medical animation cost',
     'can ai make medical animation',
     'medical animation companies',
     'mechanism of action animation cost',
@@ -39,6 +41,9 @@ const RUNWAY = 'https://runway.com/resources/medical-animation-video'
 const MICROVERSE_AI = 'https://microversestudios.com/ai-in-medical-animation-a-game-changer-or-not-quite-there-yet/' // claims-ok: the source article's own URL, Microverse Studios
 const MICROVERSE_PRICE = 'https://microversestudios.com/what-should-scientific-animation-cost/'
 const CDI_PRICE = 'https://cdistudio.io/pricing'
+const VOKA_PRICE = 'https://voka.io/medical-animation-cost/'
+const FLEARNING_PRICE = 'https://flearningstudio.com/medical-animation-cost/'
+const MOASTUDIO_PRICE = 'https://www.moastudio.net/cost'
 const REDDIT_RECOMMEND = 'https://www.reddit.com/r/generativeAI/comments/1vlmlzp/what_would_you_recommend_for_medical_animations/'
 const REDDIT_ANATOMY = 'https://www.reddit.com/r/medicalillustration/comments/1ren7bs/making_anatomically_accurate_videos_for/'
 
@@ -52,8 +57,12 @@ const FAQS = [
     a: 'Match the tool to who will judge the film. For HCP-facing or promotional mechanism of action work, a 3D medical animation studio that models the molecule from structural data. For patient education, a 2D studio or an AI tool with every frame checked by your medical reviewer. For a brand film or awareness film where the science is a backdrop, an AI studio such as Ruminate X. Self-serve generators suit drafts and storyboards.',
   },
   {
+    q: 'How much does medical animation cost?',
+    a: 'Studios that publish prices charge by the finished minute. F. Learning Studio lists $1,000 to $5,000 a minute for whiteboard, $2,000 to $8,000 for 2D and $8,000 to $15,000 for 3D (September 2026). VOKA, a Boston 3D studio, puts professional studios at $5,000 to $20,000 a minute and mechanism of action work at $20,000 a minute and up (June 2026). Microverse Studios published $35,000 to $45,000 for one minute of 3D scientific animation (March 2024). A video generator costs a monthly plan, but it does not model the science, so it cannot carry a claim.',
+  },
+  {
     q: 'How much does a mechanism of action animation cost?',
-    a: 'From 3D studios that publish prices: CDI Studio lists $15,000 for a 30 to 60 second 3D animation of one mechanism and $5,000 to $10,000 for 2D (pricing page, checked October 2026). Microverse Studios published $25,000 to $30,000 for 30 seconds, $35,000 to $45,000 for one minute and $55,000 to $65,000 for two minutes (March 2024). Runway describes complex 3D MOA work as well beyond five figures (September 2026).',
+    a: 'From 3D studios that publish prices: CDI Studio lists $15,000 for a 30 to 60 second 3D animation of one mechanism and $5,000 to $10,000 for 2D (pricing page, checked October 2026). Microverse Studios published $25,000 to $30,000 for 30 seconds, $35,000 to $45,000 for one minute and $55,000 to $65,000 for two minutes (March 2024). VOKA lists MOA animation at $20,000 a minute and up (June 2026).',
   },
   {
     q: 'What is a MOA in pharma?',
@@ -86,8 +95,9 @@ export default function Page() {
           AI can make medical animation that looks right in hours, but it draws molecules, cells and organs from what it
           has seen, not from structural data or your study, so the science is plausible rather than correct. Use it where
           the science is atmosphere: a brand film, a conference opener, a disease-awareness film. For a mechanism of action
-          (MOA) film that doctors or your MLR team will compare with the label, hire a 3D medical animation studio. CDI
-          Studio lists $15,000 for a 30 to 60 second 3D MOA, and Microverse Studios published $35,000 to $45,000 for one minute.
+          (MOA) film that doctors or your MLR team will compare with the label, hire a 3D medical animation studio.
+          Medical animation costs about $2,000 to $8,000 a finished minute in 2D and $8,000 to $20,000 or more in 3D from
+          studios that publish prices; CDI Studio lists $15,000 for a 30 to 60 second 3D MOA.
         </p>
       </GuideAnswer>
 
@@ -158,23 +168,48 @@ export default function Page() {
         <p>Checked October 2026. This is not legal or regulatory advice; your MLR team decides what a film may show.</p>
       </GuideSection>
 
-      <GuideSection eyebrow="Prices" title="What a mechanism of action animation costs" alt>
+      <GuideSection eyebrow="Prices" title="Medical animation cost: what studios charge per minute" alt>
+        <p>
+          Medical animation is priced by the finished minute, and the style sets the rate more than anything else. These
+          are the figures studios publish on their own pages. Each one sells the work it is pricing, so read them as
+          asking prices.
+        </p>
         <GuideTable
-          caption="Prices the studios publish on their own sites, read October 2026, with the date each was published where the page gives one. USD."
+          caption="Prices medical animation studios publish on their own sites, read October 2026, with the date each page gives. USD per finished minute unless stated."
           head={['Source', 'What', 'Price']}
           rows={[
-            [<a key="cdi" href={CDI_PRICE}>CDI Studio pricing</a>, '2D animation, 30 to 60 seconds, one mechanism', '$5,000'],
-            ['CDI Studio', '2D premium, 30 to 60 seconds, multi-scene', '$10,000'],
-            ['CDI Studio', '3D molecular and biological rendering, 30 to 60 seconds, one mechanism', '$15,000; longer multi-mechanism films scoped separately'],
-            [<a key="mv" href={MICROVERSE_PRICE}>Microverse Studios</a>, '3D scientific animation, 30 seconds', '$25,000 to $30,000 (March 2024)'],
-            ['Microverse Studios', 'One minute / two minutes / three minutes', '$35,000 to $45,000 / $55,000 to $65,000 / $75,000 to $105,000'],
+            [<a key="fl" href={FLEARNING_PRICE}>F. Learning Studio</a>, 'Whiteboard (patient pathways, consent, internal training)', '$1,000 to $5,000 a minute (September 2026)'],
+            ['F. Learning Studio', '2D (patient education, clinician training)', '$2,000 to $8,000 a minute'],
+            ['F. Learning Studio', '3D (anatomy, surgery, devices, MOA)', '$8,000 to $15,000 a minute'],
+            [<a key="moa" href={MOASTUDIO_PRICE}>MOA Studio</a>, 'Custom medical animation, by quality level', '$2,800 to $25,000 a minute'],
+            [<a key="voka" href={VOKA_PRICE}>VOKA</a>, 'Freelance / professional studio / high-end agency', '$1,500 to $4,000 / $5,000 to $20,000 / $25,000 and up a minute (June 2026)'],
+            ['VOKA', 'Simple procedure / mechanism of disease / surgery or device / biotech / MOA', '$7,500 / $10,000 / $12,500 / $15,000 / $20,000 a minute and up'],
+            [<a key="cdi" href={CDI_PRICE}>CDI Studio</a>, '2D, 30 to 60 seconds, one mechanism (per film)', '$5,000; $10,000 for multi-scene'],
+            ['CDI Studio', '3D molecular and biological, 30 to 60 seconds, one mechanism (per film)', '$15,000; longer multi-mechanism films scoped separately'],
+            [<a key="mv" href={MICROVERSE_PRICE}>Microverse Studios</a>, '3D scientific animation: 30 seconds / one minute / two minutes / three minutes (per film)', '$25,000 to $30,000 / $35,000 to $45,000 / $55,000 to $65,000 / $75,000 to $105,000 (March 2024)'],
             [<a key="rw" href={RUNWAY}>Runway</a>, 'Complex 3D MOA from a studio', '“Well beyond” five figures (September 2026)'],
           ]}
         />
+        <h3>How much do 4 minutes of animation cost?</h3>
         <p>
-          The money goes into the scientific script, modelling from structural data and review rounds with your medical
-          team. A generator skips the modelling, which is why it is cheap and why it cannot carry a claim. {studio} prices
-          films from the brief and does not publish a price list.
+          At VOKA&apos;s professional-studio range of $5,000 to $20,000 a minute, four minutes would be $20,000 to $80,000,
+          but per-minute rates fall as films get longer, because the models, script and review are built once. Microverse&apos;s
+          own prices show it: one minute is $35,000 to $45,000, three minutes $75,000 to $105,000, so the second and third minutes cost
+          less than the first. Ask any studio to quote the full length you need rather than a per-minute rate.
+        </p>
+        <h3>Why 3D medical animation costs so much</h3>
+        <p>
+          The money goes into the scientific script, modelling structures from published data, review rounds with your
+          medical team, rendering, and the usage licence. VOKA lists review rounds, regulatory support and licensing among
+          its 13 cost factors and says rush jobs almost always add 25 to 50%. A generator skips the modelling, which is why it is cheap and
+          why it cannot carry a claim.
+        </p>
+        <h3>What AI changes in the price</h3>
+        <p>
+          For a film where the science is a backdrop, AI removes the modelling and rendering, which are most of a 3D
+          studio&apos;s bill. You still pay for the script, the boards, the reruns when shots fail, the edit, the sound
+          and your own reviewers&apos; time. For a MOA film that must match the label, AI removes nothing, because the
+          shots would have to be modelled anyway. {studio} prices films from the brief and does not publish a price list.
         </p>
       </GuideSection>
 
