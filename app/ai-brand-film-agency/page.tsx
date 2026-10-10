@@ -10,6 +10,7 @@ import {
   GuideRelated,
   GuideSection,
   GuideTable,
+  film,
   guideMetadata,
 } from '@/components/guide/Guide'
 import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
@@ -18,13 +19,16 @@ const PAGE = {
   path: '/ai-brand-film-agency',
   title: 'AI Brand Film Production for Companies',
   description:
-    'What an AI brand film is, how one gets made without a shoot, what brand films cost with AI and with a crew, what still breaks, who owns it, and when a company should film real people instead.',
+    'What an AI brand film is, how one gets made without a shoot, what makes generated footage look cinematic, what brand films cost with AI and with a crew, what still breaks, who owns it, and when a company should film real people instead.',
   published: '2026-03-07',
-  updated: '2026-09-26',
+  updated: '2026-10-10',
   keywords: [
     'ai brand film',
     'ai brand film production company',
     'ai cinematic video production',
+    'cinematic brand film',
+    'cinematic brand storytelling agency',
+    'can i use ai to create a cinematic video',
     'ai marketing film production',
     'ai filmmaking agency',
     'ai video agency for brands',
@@ -36,6 +40,10 @@ const studio = SITE.name
 const brandFilm = OFFERS.find((o) => o.key === 'brand-film')!
 const aboutUs = OFFERS.find((o) => o.key === 'about-us')!
 const hundred = RELATED.find((r) => r.name === '100creatives')!
+const trail = film('LYA3Do3KEN0')
+const VEO = 'https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/veo/3-1-generate'
+const VEO_MAX_SECONDS = 8
+const trailShots = Math.ceil((trail.durationSeconds ?? 0) / VEO_MAX_SECONDS)
 
 const FAQS = [
   {
@@ -45,6 +53,10 @@ const FAQS = [
   {
     q: 'Which famous brands are using AI for brand films?',
     a: 'One public example is Moncler. The agency R/GA made an experimental film for Moncler with Google\'s Veo video model in four weeks, and it was unveiled at Cannes Lions in 2025 (R/GA, August 2025). Moncler did not publish a budget, and few brands do.',
+  },
+  {
+    q: 'Can I use AI to create a cinematic video?',
+    a: `Yes, for scenes of a made world: landscapes, weather, period settings, products in places they have never been. Generators such as Google's Veo 3.1 make clips of 4, 6 or 8 seconds at 24 frames per second, in 16:9 or 9:16 (Google Cloud documentation, October 2026), so a cinematic film is dozens of separate shots that someone has to keep in the same frame, lens, light and grade. Ruminate X makes brand films this way. Close-ups of real-looking people holding emotion are still the hardest shots to make convincing.`,
   },
   {
     q: 'How much does a brand film cost?',
@@ -138,7 +150,55 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title="What breaks in a longer AI film">
+      <GuideSection eyebrow="Cinematic" title="Cinematic AI brand films: what makes generated footage look like film">
+        <p>
+          A cinematic brand film is one where every shot looks chosen: a wide frame, a lens picked for the shot, light
+          that comes from somewhere in the scene, a camera that moves for a reason, shots held long enough to land, one
+          grade across the whole film, and sound built for it. Those are decisions a cinematographer and an editor make,
+          and you can check each one by pausing the film. A video generator gives you a good-looking clip. It does not keep
+          those decisions the same across 40 shots unless someone fixes them first and checks every take against them.
+        </p>
+        <p>
+          Generators make short clips, and that is where the work comes from. Google&apos;s <a href={VEO}>Veo 3.1 documentation</a> lists clips of 4, 6 or 8
+          seconds at 24 frames per second, in 16:9 or 9:16 only (checked October 2026). At{' '}
+          {VEO_MAX_SECONDS} seconds a clip, a film as long as {trail.title} ({trail.durationSeconds} seconds) needs at
+          least {trailShots} generated shots, and a film cut for pace uses many more. Each one is generated separately,
+          so each one can drift.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Clip lengths, frame rate and aspect ratios from Google&apos;s Veo 3.1 documentation, checked October 2026.
+              The defaults are what to look for when you review a studio&apos;s reel.
+            </>
+          }
+          head={['The choice', 'What a generator tends to do', 'What to ask a studio for']}
+          rows={[
+            ['Frame', 'Outputs 16:9 or 9:16; a 2.39:1 widescreen film is a crop of that', 'Shots framed for the final crop on the boards, so heads, hands and the product sit inside it'],
+            ['Lens and focus', 'Soft background blur on nearly every shot, changing from take to take', 'A lens and depth of field decided per shot in the brand world, held across the film'],
+            ['Light', 'Even, flattering light with no clear source; the time of day shifts between shots', 'Light that comes from a source in the scene (a window, the sun, a lamp), kept the same through a scene'],
+            ['Camera movement', 'A slow drifting push-in on shot after shot', 'Movement boarded for each shot, and a locked-off frame where the story needs stillness'],
+            ['Shot length', 'Clips of 4 to 8 seconds', 'Long moments planned as two or three shots with cuts, timed against the music or voiceover'],
+            ['Texture and grade', 'Clean, over-sharp images and smooth, plastic-looking skin', 'One grade across every shot, with texture added in finishing so shots from different passes match'],
+            ['Sound', 'Generated ambience or stock music', 'Voice, score and sound design built in the edit'],
+          ]}
+        />
+        <h3>Can I use AI to create a cinematic video?</h3>
+        <p>
+          Yes, when the film is built on a made world. Self-serve tools such as Higgsfield&apos;s Cinema Studio, Kling and
+          Luma sell cinematic generation directly, and they suit a creator making clips for their own channel. A brand
+          film adds the parts those tools leave to you: a script, the brand world fixed before generation, boards for every
+          shot, reruns of what drifts, and an edit, score and grade that make the shots one film. {studio} works through
+          those stages on every brand film.
+        </p>
+        <p>
+          A quick test for any reel, ours included: pick a film longer than 60 seconds and pause it on five frames from
+          different scenes. If the light, the lens look and the colour hold, someone directed it. If each frame looks like
+          a different generator setting, the shots were picked one at a time.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="The weak points" title="What breaks in a longer AI film" alt>
         <p>
           A brand film runs two to six times longer than a 30-second ad, so the weak points of generated footage show up
           more often:
@@ -160,7 +220,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Price" title="How much a brand film costs, filmed or made with AI" alt>
+      <GuideSection eyebrow="Price" title="How much a brand film costs, filmed or made with AI">
         <p>
           Filmed brand films are priced by shoot days, crew, locations and cast. AI brand films are priced by length,
           the number of distinct scenes, how exactly real people, places or products have to be reproduced, and review
@@ -194,7 +254,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="An example" title="Which brands are using AI for brand films">
+      <GuideSection eyebrow="An example" title="Which brands are using AI for brand films" alt>
         <p>
           The best-known case is Moncler. Google asked the agency R/GA for an ad that could only exist with AI, and{' '}
           <a href="https://rga.com/news/rga-used-ai-for-impossible-ad">
@@ -214,7 +274,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Rights and labels" title="Who owns an AI brand film" alt>
+      <GuideSection eyebrow="Rights and labels" title="Who owns an AI brand film">
         <p>
           <strong>Rights.</strong> Your contract decides what transfers to you: the film, the cutdowns, the project files,
           and licenses for music and voice. Ask whether the video models used allow commercial use. Whether copyright

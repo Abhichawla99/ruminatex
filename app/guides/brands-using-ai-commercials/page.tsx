@@ -18,10 +18,12 @@ const PAGE = {
   path: '/guides/brands-using-ai-commercials',
   title: 'Brands Using AI Commercials: What Happened',
   description:
-    'Ten AI ads from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized: who made each one, with which tools, how long it took, and how audiences reacted. Sourced, with what it means for your own AI ad.',
+    'Ten AI-generated commercials from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized: who made each one, with which tools, how long it took, how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-08',
+  updated: '2026-10-10',
   keywords: [
+    'ai-generated commercials',
+    'ai generated commercials',
     'brands that used ai commercials',
     'what companies are using ai in their commercials',
     'which famous brands are using ai',
@@ -32,6 +34,9 @@ const PAGE = {
     'are commercials using ai',
     'companies using ai ads',
     'did progressive use ai for an ad',
+    'do ai-generated ads actually work',
+    'why are commercials using ai now',
+    'are commercials using ai actors now',
   ],
 }
 
@@ -51,11 +56,17 @@ const DIVE_PROGRESSIVE = 'https://www.marketingdive.com/news/how-progressive-bal
 const FEEDME_GRUBBS = 'https://www.readfeedme.com/p/feed-mes-first-dc-edition-black-book'
 const REDDIT_GRUBBS = 'https://www.reddit.com/r/washingtondc/comments/1wybf0b/grubbs_pharmacy_in_ne_apologizes_for_aigenerated/'
 const NBC_MCD = 'https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590'
+const NIQ = 'https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/'
+const MIT_IDE = 'https://ide.mit.edu/insights/personalized-ai-video-ads'
 
 const FAQS = [
   {
     q: 'What companies are using AI in their commercials?',
     a: 'Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb\'s Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this Ruminate X page.',
+  },
+  {
+    q: 'Do AI-generated ads actually work?',
+    a: 'The evidence is split by the kind of ad. In NielsenIQ\'s December 2024 study of more than 2,000 viewers, people spotted most AI-generated ads, called them more "annoying," "boring" and "confusing" than conventional ads, and showed weaker memory activation on EEG even for AI ads rated high quality. In a WhatsApp experiment with more than 21,000 customers of an Indian online retailer, summarised by the MIT Initiative on the Digital Economy, AI avatar videos personalized to each customer got a 9.4% higher click-through rate than personalized image ads and 6.5% higher than a generic video, from a single exposure. Ruminate X reads that as: test an AI cut before spending media behind it, and keep realistic generated people out of ads that depend on warmth.',
   },
   {
     q: 'Why did people criticize the Coca-Cola AI Christmas ad?',
@@ -99,7 +110,7 @@ export default function Page() {
     >
       <GuideHero
         eyebrow="Guide · AI commercials"
-        title="Brands using AI commercials, and how audiences took them"
+        title="AI-generated commercials from big brands, and how audiences took them"
         dek="For the marketing lead whose CEO has asked why the brand is not doing an AI ad yet, or has seen the Coca-Cola backlash and wants to know why it should."
         updated={PAGE.updated}
       />
@@ -107,12 +118,13 @@ export default function Page() {
       <GuideAnswer>
         <p>
           Coca-Cola, Toys&quot;R&quot;Us, Moncler, Kalshi, Popeyes, Progressive and McDonald&apos;s Netherlands have all
-          released commercials or brand films made mostly with generative AI between 2023 and 2025. The fast, funny, topical ones
+          released AI-generated commercials or brand films between 2023 and 2025. The fast, funny, topical ones
           (Kalshi in two days for about USD 2,000, Popeyes finished with less than three days to go) were made in days. The
           sentimental holiday ads that showed realistic AI-generated people (Coca-Cola in 2024, McDonald&apos;s
           Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week. In October 2026 a
           neighbourhood pharmacy in Washington, DC apologized for its AI imagery, so the scrutiny reaches small businesses
-          too.
+          too. Whether AI ads work depends on the ad: NielsenIQ found viewers spot most of them and remember them less,
+          while a WhatsApp test summarised by MIT found personalized AI videos beat image ads on clicks.
         </p>
       </GuideAnswer>
 
@@ -232,7 +244,42 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial">
+      <GuideSection eyebrow="The evidence" title="Do AI-generated ads actually work?">
+        <p>
+          Two studies point different ways, and they tested different ads. In December 2024{' '}
+          <a href={NIQ}>NielsenIQ showed more than 2,000 people</a> a mix of AI-generated and conventional ads, from low to
+          high quality, and recorded brain activity (EEG) for about 150 of them. Viewers picked out most of the AI ads
+          without being told and described them as more &ldquo;annoying,&rdquo; &ldquo;boring&rdquo; and
+          &ldquo;confusing&rdquo; than the conventional ones. Even AI ads rated high quality produced weaker memory
+          activation. They did reinforce existing brand associations, and NIQ warned of a &ldquo;negative halo&rdquo;
+          that could pull down how people see the brand.
+        </p>
+        <p>
+          A field experiment <a href={MIT_IDE}>summarised by the MIT Initiative on the Digital Economy</a> found the
+          opposite for a narrower kind of ad. Madhav Kumar and Anuj Kapoor sent more than 21,000 customers of an Indian
+          online retailer a WhatsApp message with a personalized image ad, a generic video, or an AI avatar video whose
+          script was personalized to each customer. The personalized AI videos got a 9.4% higher click-through rate than
+          the image ads and 6.5% higher than the generic video. The authors note it was a single exposure, so part of the
+          lift may be novelty (checked October 2026).
+        </p>
+        <p>
+          Taken together, a brand spot that viewers recognise as AI-made risks being liked less and remembered less,
+          while a useful message that happens to be generated can still earn the click. For a commercial or brand film,
+          that points to briefs where the footage does not have to pass as filmed people (made worlds, animals,
+          products, stylised scenes), and to testing the AI cut against a filmed or static version before the media
+          budget goes behind it.
+        </p>
+        <h3>Why are commercials using AI now?</h3>
+        <p>
+          Cost and speed, on particular briefs. Progressive shelved &ldquo;Drive Like an Animal&rdquo; in 2024 because
+          it did not fit the budget, then made it with AI a year later. Kalshi&apos;s NBA Finals ad cost about USD 2,000
+          and took two days. Secret Level&apos;s founder put Coca-Cola&apos;s 2025 ad at about 20 people, against at
+          least 50 for a filmed ad of the same complexity. McDonald&apos;s Netherlands went the other way, with ten people
+          working five weeks.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial" alt>
         <ul>
           <li>
             <strong>Realistic people carry the most risk.</strong> The two harshest reactions, Coca-Cola 2024 and

@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-10-03',
+  updated: '2026-10-10',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -122,7 +122,9 @@ export default function Page() {
           ]}
         />
         <p>
-          {PRODUCTION.summary} That makes {studio} the middle column: it makes {offerList}.
+          {PRODUCTION.summary} That makes {studio} the middle column: it makes {offerList}. If you are after a
+          cinematic film rather than a set of clips, what that takes shot by shot (frame, lens, light, movement, grade) is
+          on <Link href="/ai-brand-film-agency">AI cinematic video production</Link> for brand films.
         </p>
         <h3>The companies you will find when you search</h3>
         <p>
