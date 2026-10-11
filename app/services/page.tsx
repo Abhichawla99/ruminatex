@@ -119,6 +119,13 @@ export default function ServicesPage() {
         <p className="text-[#888888] text-lg max-w-3xl leading-relaxed">
           Ruminate X offers AI video production services for brands that need cinema-grade brand films, AI commercials, product videos, fashion campaigns, and story-driven social content without the cost and drag of traditional production. If you&apos;re comparing video production services, this page shows what we make, who each service fits best, and where to go next based on your campaign intent.
         </p>
+        <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mt-6">
+          For a film of one product, its packaging and label held accurate from shot to shot, see{' '}
+          <Link href="/ai-product-videos" className="text-[#ebff00] hover:underline">AI product videos</Link>. For a presenter
+          or spokesperson who explains your product, trains your staff or speaks to customers, see{' '}
+          <Link href="/ai-avatar-videos" className="text-[#ebff00] hover:underline">AI avatar videos</Link>, including when a
+          real person on camera is the better choice.
+        </p>
       </section>
 
       {/* Services Detail */}
@@ -215,8 +222,8 @@ export default function ServicesPage() {
                 copy: 'For campaign teams comparing commercial production options, speed, and creative range.',
               },
               {
-                href: '/ai-product-video-agency',
-                title: 'Product Video Agency',
+                href: '/ai-product-videos',
+                title: 'AI Product Videos',
                 copy: 'For launches, demos, and product storytelling built to improve clarity and conversion.',
               },
               {

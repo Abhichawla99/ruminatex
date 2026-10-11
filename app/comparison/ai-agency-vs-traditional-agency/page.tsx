@@ -18,9 +18,9 @@ const PAGE = {
   path: '/comparison/ai-agency-vs-traditional-agency',
   title: 'AI Video Agency vs Traditional Production',
   description:
-    'An AI video agency against a traditional production company, or an AI tool run in-house, for a brand film or commercial: what each route costs in money and hours, what a 2-minute brand video costs either way, where AI footage still fails, and which one to hire.',
+    'An AI video agency against a traditional production company, or an AI tool run in-house, for a brand film or commercial: what each route costs in money and hours, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, where AI footage still fails, and which one to hire.',
   published: '2026-03-08',
-  updated: '2026-10-07',
+  updated: '2026-10-11',
   keywords: [
     'ai video vs traditional video',
     'can ai replace a video production agency',
@@ -32,6 +32,7 @@ const PAGE = {
     'should i use ai to produce a brand film instead of hiring a video production company',
     'how much cheaper is ai video production vs agency',
     'ai video agency pricing',
+    'ai video production agency pricing',
     'ai video agency vs traditional agency',
     'ai vs traditional video production',
     'benefits of ai video platforms over professional video production agencies',
@@ -49,6 +50,8 @@ const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-
 const RUNWAY = 'https://runway.com/pricing'
 const LEMONLIGHT_GEN = 'https://www.lemonlight.com/blog/ai-video-vs-traditional-video-production-an-honest-comparison/'
 const ARGUS = 'https://argushd.com/how-much-does-a-brand-video-cost/'
+const GENART = 'https://genartstudios.com/resources/ai-video-production-vs-traditional-agencies'
+const GOODFIRMS = 'https://www.goodfirms.co/resources/video-production-cost-ai-vs-professional'
 
 const FAQS = [
   {
@@ -61,7 +64,7 @@ const FAQS = [
   },
   {
     q: 'How much cheaper is AI video production vs an agency?',
-    a: 'Compared finished film to finished film, Lemonlight prices a polished 30 second AI video from USD 5,000 and puts that at about 60% below traditional production of the same quality, which it prices at USD 15,000 to 50,000 or more per video (March 2026). The bigger savings you see quoted, up to 99% or hundreds of times cheaper, compare a tool subscription or a do-it-yourself production with a filmed commercial. The script, edit, sound, licences and legal or MLR review cost about the same either way. Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), linked on this page
+    a: 'Compared finished film to finished film, Lemonlight prices a polished 30 second AI video from USD 5,000 and puts that at about 60% below traditional production of the same quality, which it prices at USD 15,000 to 50,000 or more per video (March 2026). AI studios\' own tables put an AI version of the same format at about a sixth to a third of the filmed price (Gen Art Studios, April 2026; a provider table on GoodFirms), and in a GoodFirms survey of 100+ marketers (June to July 2026) 88.3% said AI cost under 30% of professional production. The bigger savings you see quoted, up to 99% or hundreds of times cheaper, compare a tool subscription or a do-it-yourself production with a filmed commercial. The script, edit, sound, licences and legal or MLR review cost about the same either way. Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), Gen Art Studios table (April 2026) and GoodFirms survey (June-July 2026), all linked on this page
   },
   {
     q: 'Are AI-generated videos good enough for a brand?',
@@ -293,6 +296,47 @@ export default function Page() {
           the concept and script, reruns of the shots that fail, the edit, the sound mix, music and voice licences, and your
           legal or MLR review. If a quote from an AI studio looks like a tool subscription, ask which of those lines it
           covers.
+        </p>
+
+        <h3>How much cheaper AI is, by type of video</h3>
+        <p>
+          Two published tables price the same format both ways. <a href={GENART}>Gen Art Studios</a>, an AI studio, lists its
+          own range next to a traditional agency&apos;s for each deliverable. <a href={GOODFIRMS}>GoodFirms</a> publishes a
+          similar table from an AI production company it does not name. The last column is our arithmetic from their ranges.
+        </p>
+        <GuideTable
+          caption="AI-made against filmed, same format, read October 11, 2026. Prices in USD as published. Both sources sell or list AI production. Ruminate X publishes no price; it quotes each film from the brief."
+          head={['Format', 'Made with AI', 'Filmed', 'AI as a share of filmed', 'Source']}
+          rows={[
+            ['30-second social ad', '500 to 1,500', '3,000 to 8,000', 'about 17-19%', <a key="g1" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table (Apr 13 2026), linked
+            ['2-minute explainer', '1,500 to 4,000', '8,000 to 25,000', 'about 16-19%', <a key="g2" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table, linked
+            ['Brand anthem or sizzle reel', '3,000 to 8,000', '15,000 to 50,000+', 'about 16-20%', <a key="g3" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table, linked
+            ['Short-form video, 15 to 60 seconds', '300 to 1,200', '1,500 to 5,000', 'about 20-24%', <a key="f1" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
+            ['Product demonstration', '1,500 to 5,000', '5,000 to 15,000', 'about 30-33%', <a key="f2" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
+            ['30-second brand commercial', '8,000 to 30,000', '25,000 to 100,000+', 'about 30-32%', <a key="f3" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
+          ]}
+        />
+        <p>
+          On these tables an AI version costs between about a sixth and a third of the filmed one. The two sources
+          disagree most on brand work: Gen Art prices a brand anthem at USD 3,000 to 8,000, while the provider on GoodFirms
+          prices a 30-second brand commercial at USD 8,000 to 30,000. A commercial that runs in paid media carries more
+          reruns, a full sound mix, licences and review rounds than a social ad, and those lines cost about the same
+          whether the footage was filmed or generated.
+        </p>
+
+        <h3>What marketers who have bought both report</h3>
+        <p>
+          GoodFirms surveyed 100+ marketers, agency owners and creative directors in June and July 2026. 88.3% said AI
+          video cost less than 30% of professional production, and 47.1% said less than 10%. {/* claims-ok: GoodFirms AI vs professional video survey (June-July 2026), linked */}
+          The same survey found that 20% of professionally produced campaigns reached a click-through rate of 5% or more,
+          against none of the AI video campaigns; GoodFirms notes that the number of respondents varies by question. {/* claims-ok: GoodFirms survey, linked */}
+        </p>
+        <p>
+          Read the two numbers together before you put a saving in a budget. The cheaper film is the cheaper campaign only
+          if it does the job. Where a real person has to be believed, a customer, a clinician or your founder, the
+          survey&apos;s contributor examples favour the shoot, and so would we: that film belongs with a production
+          company. Where the film is a made world, a product, a place or a concept, the saving is real, and it comes from
+          the crew days, locations and talent you no longer pay for.
         </p>
       </GuideSection>
 
