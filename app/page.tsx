@@ -101,6 +101,7 @@ const services = [
     description:
       'Not a video. A film. We find the story at the core of your brand — the tension, the truth, the reason people should care — and we put it on screen. Cinema-grade storytelling that makes your brand impossible to forget.',
     category: 'Story-Driven Cinema',
+    href: '/ai-brand-film-agency',
   },
   {
     number: '02',
@@ -108,6 +109,7 @@ const services = [
     description:
       'The commercial Ridley Scott would make if he had no budget ceiling and no production constraints. Impossible worlds. Perfect physics. Sequences that shouldn\'t exist. AI lets us build the shot list first and worry about "how" second.',
     category: 'Cinematic Commercials',
+    href: '/ai-commercial-production',
   },
   {
     number: '03',
@@ -115,6 +117,7 @@ const services = [
     description:
       'Editorial precision. Aspirational by design. We shoot in locations that don\'t exist, in light that can\'t be replicated, with aesthetics that define the season — all without a single flight or location scout.',
     category: 'Fashion & Editorial',
+    href: '/ai-video-production-fashion',
   },
   {
     number: '04',
@@ -122,6 +125,7 @@ const services = [
     description:
       'Studio-quality storytelling compressed into 15 seconds. Every piece of social content we produce is a micro-film — with a hook, a narrative arc, and a reason to watch twice.',
     category: 'Story-First Social',
+    href: '/ai-ugc-reels',
   },
   {
     number: '05',
@@ -129,6 +133,7 @@ const services = [
     description:
       "A product launch is the opening scene of your brand's next chapter. We write it like one — with tension, build, and a payoff that hits. One shot at the first impression. We don't waste it.",
     category: 'Launch Campaigns',
+    href: '/ai-product-videos',
   },
 ]
 
@@ -493,7 +498,7 @@ export default function HomePage() {
             {services.map((service) => (
               <Link
                 key={service.number}
-                href="/services"
+                href={service.href}
                 className="group flex flex-col md:flex-row items-start md:items-center gap-6 py-8 hover:bg-[#0f0f0f] px-4 -mx-4 transition-colors duration-200"
               >
                 <span
