@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: which kind to hire, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
+    question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-07',
+    updated: '2026-10-12',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',

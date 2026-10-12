@@ -20,10 +20,11 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-07',
+  updated: '2026-10-12',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
+    'ai commercial production companies',
     'ai-driven commercial production',
     'ai vfx for commercial production',
     'best ai commercial production company',
@@ -76,6 +77,10 @@ const FAQS = [
     a: 'When a real performer\'s likeness is used, yes. Under the SAG-AFTRA 2025 Commercials Contract (ratified May 2025), a union performer must consent before a digital replica of them is created and give informed consent, based on a reasonably specific description of the use, before it is used; generating a performance with the replica pays 1.5 times the session fee plus the applicable holding and use fees (SAG-AFTRA, checked September 2026). A character generated from scratch is not a replica of anyone, though the contract also has terms on synthetic performers for producers who have signed it. If your brief needs a real actor or spokesperson, their consent and contract come first. This is not legal advice.',
   },
   {
+    q: 'Which companies offer AI commercial production?',
+    a: `In October 2026 a search for an AI commercial production company returns mostly small studios, such as Daydrm Studio (founded by Aaron Adler, represented to agencies by Dubay), MAW AI Studios in Islamabad (minimum budget USD 1,000 to 10,000 on DesignRush), Sadara Studio in Riyadh and GOAT Studios in La Plata, Argentina, alongside production companies that add AI to filmed work. ${studio} is an AI-only studio in ${SITE.city}. Ask each one for a shot where a face turns, a hand holds your kind of product and a logo is on screen, and for the number of review rounds in the quote.`,
+  },
+  {
     q: 'What is AI VFX for commercial production, and who does it?',
     a: `AI VFX means adding generated elements, such as a set extension, a crowd, weather or a product effect, to footage that a crew filmed. A production company or VFX house does it, because someone has to shoot the plates and composite the AI shots into them. A fully generated commercial has no filmed plates: every shot is made with AI, which is what ${studio} makes. If the ad needs your real store, staff or an athlete on camera, hire a crew that offers AI VFX; if the idea works as a made world, an AI-only studio can make the whole spot.`,
   },
@@ -122,7 +127,9 @@ export default function Page() {
         <p>
           Agree the list before production starts. The generated footage is the cheap part to repeat; every extra
           version still needs an edit, a mix and a check. If what you need is a longer film about the company rather than
-          one product, read <Link href="/ai-brand-film-agency">AI brand film production</Link>. If the test is a run of
+          one product, read <Link href="/ai-brand-film-agency">AI brand film production</Link>; for an about-us film or
+          an all-hands opener, read <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
+          If the test is a run of
           creator-style ads rather than one spot, the costs and disclosure rules are in{' '}
           <Link href="/ai-ugc-reels">AI UGC ads</Link>; for a product launch without a story, see{' '}
           <Link href="/ai-product-videos">AI product video production</Link>.
@@ -178,6 +185,58 @@ export default function Page() {
           <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>. For eight brands
           that already ran AI commercials, and how audiences took them, see{' '}
           <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
+        </p>
+        <h3>AI commercial production companies you will find in a search</h3>
+        <p>
+          A search for &quot;AI commercial production company&quot; in October 2026 returns small studios, most of them
+          through a directory profile, a marketplace listing or a trade-press item rather than their own site. Here is what four of them say about themselves, and where each one says it.
+        </p>
+        <GuideTable
+          caption="From each company's own profile or announcement, read October 12, 2026. Ruminate X has not worked with any of them; check reels and references yourself."
+          head={['Company', 'Based in', 'What it says it makes', 'Published terms', 'Source']}
+          rows={[
+            [
+              'Daydrm Studio',
+              'Not stated',
+              'An AI-native creative and production company founded by creative director Aaron Adler; live action combined with generated scenes, and its own engine, Daydrm.ai',
+              'Not published; sold to agencies through the rep firm Dubay since August 2026',
+              'LBB, August 28, 2026',
+            ],
+            [
+              'MAW AI Studios',
+              'Islamabad, Pakistan (remote)',
+              'AI commercials, brand films, music videos, explainers and product videos for brands in the US, UK and GCC; a division of MAW Motion Studios',
+              'Founded 2026; minimum budget USD 1,000 to 10,000; USD 100 an hour',
+              'DesignRush profile',
+            ],
+            [
+              'Sadara Studio',
+              'Riyadh, Saudi Arabia',
+              'AI commercials, animation and product photography; lists BMW X6, AlBaik and Arabian Oud among its clients',
+              'Project size confidential; no reviews yet',
+              'Clutch profile',
+            ],
+            [
+              'GOAT Studios',
+              'La Plata, Argentina',
+              'AI commercials from concept, script and boards to edit, colour, sound and optional AI voice-over; names Runway, Kling and ComfyUI as its tools',
+              'Contact for pricing; about one week',
+              'Contra listing',
+            ],
+            [
+              studio,
+              SITE.city,
+              `${commercial.name} and brand films, every frame made with AI`,
+              'Quoted from the brief',
+              'This site',
+            ],
+          ]}
+        />
+        <p>
+          Before you brief one of them, ask two things. A studio that combines live action with
+          generated scenes, as Daydrm describes, needs a shoot for part of your ad, so ask which shots it films. A
+          one-week schedule or an hourly rate tells you little until you know how many review rounds it includes and who
+          checks your product in every shot, which is where the five questions above come in.
         </p>
       </GuideSection>
 
