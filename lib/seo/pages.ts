@@ -258,4 +258,12 @@ export const SEO_PAGES: SeoPage[] = [
     published: '2026-03-08',
     updated: '2026-10-04',
   },
+  {
+    path: '/guides/video-production-brief',
+    title: 'How to Brief a Video Production Company',
+    question: 'how to brief a video production company: what a video brief should include, a video brief template and example, and what changes when the film is made with AI',
+    kind: 'guide',
+    published: '2026-10-13',
+    updated: '2026-10-13',
+  },
 ]

@@ -172,7 +172,8 @@ export default function Page() {
         <ol>
           <li>
             <strong>Brief.</strong> The product, the audience, the one message and where the film will run. Nothing is
-            generated until the brief is approved.
+            generated until the brief is approved. What to put in it, line by line, is in{' '}
+            <Link href="/guides/video-production-brief">how to brief a video production company</Link>.
           </li>
           <li>
             <strong>Brand world.</strong> Palette, light, texture, camera language and casting, locked before the first

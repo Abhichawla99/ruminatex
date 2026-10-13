@@ -30,6 +30,7 @@ const SHELVES: { title: string; note: string; paths: string[] }[] = [
       '/guides/brands-using-ai-commercials',
       '/guides/ai-pharma-commercials',
       '/guides/who-owns-ai-video',
+      '/guides/video-production-brief',
       '/faq-ai-video-production',
     ],
   },

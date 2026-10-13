@@ -221,7 +221,8 @@ export default function Page() {
         <p>
           {PRODUCTION.summary} {studio} quotes each film from the brief, and versions are one of the things that move the
           number: the cutdowns, ratios, languages and hooks a channel plan needs. More on what an AI commercial delivers is
-          on <Link href="/ai-commercial-production">AI commercial production</Link>.
+          on <Link href="/ai-commercial-production">AI commercial production</Link>, and the other lines of the brief
+          this list goes into are in <Link href="/guides/video-production-brief">the video brief template</Link>.
         </p>
       </GuideSection>
 
