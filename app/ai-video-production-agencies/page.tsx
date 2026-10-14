@@ -245,8 +245,9 @@ export default function Page() {
         <p>
           If a quote is far below the others, ask what it leaves out. The usual answers are the brand-world stage, the
           reruns on faces and product, and a real sound mix. Published prices at each level, from self-serve tools to
-          broadcast studios, are in <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production
-          costs</Link>, including how agencies charge: per video, per campaign or by the month. For a side-by-side with a traditional shoot, read{' '}
+          broadcast studios, are in our guide to{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">AI video production cost and agency pricing</Link>,
+          including how agencies charge: per video, per campaign or by the month. For a side-by-side with a traditional shoot, read{' '}
           <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency vs traditional agency</Link>.
         </p>
       </GuideSection>

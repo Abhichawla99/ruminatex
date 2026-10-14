@@ -18,12 +18,15 @@ const PAGE = {
   path: '/guides/brands-using-ai-commercials',
   title: 'Brands Using AI Commercials: What Happened',
   description:
-    'Ten AI-generated commercials from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized: who made each one, with which tools, how long it took, how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
+    'Ten AI-generated commercials from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-10',
+  updated: '2026-10-14',
   keywords: [
     'ai-generated commercials',
     'ai generated commercials',
+    'list of brands facing backlash for ai ads',
+    'brands facing backlash for ai ads',
+    'brands criticized for ai ads',
     'brands that used ai commercials',
     'what companies are using ai in their commercials',
     'which famous brands are using ai',
@@ -58,6 +61,11 @@ const REDDIT_GRUBBS = 'https://www.reddit.com/r/washingtondc/comments/1wybf0b/gr
 const NBC_MCD = 'https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590'
 const NIQ = 'https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/'
 const MIT_IDE = 'https://ide.mit.edu/insights/personalized-ai-video-ads'
+const ABC_GUESS = 'https://abc7news.com/post/controversy-stirs-ai-generated-models-new-guess-ads-appearing-vogue/17390923/'
+const LOEB_JCREW = 'https://www.loeb.com/en/insights/passle/2025/08/two-recent-genai-controversies-highlight-brandpr-risks-of-use'
+const STARTUPS_VALENTINO = 'https://startups.co.uk/news/valentino-ai-campaign-backlash/'
+const ADWEEK_AERIE = 'https://www.aeo-inc.com/2025/10/10/adweek-aerie-rejects-ai-in-ads-vowing-to-stay-100-real/'
+const CONVERSATION_HUMAN = 'https://theconversation.com/a-backlash-against-ai-imagery-in-ads-may-have-begun-as-brands-promote-human-made-269276'
 
 const FAQS = [
   {
@@ -87,6 +95,10 @@ const FAQS = [
   {
     q: 'Which AI commercials were made fastest?',
     a: 'Popeyes\' "Wrap Battle", a reply to McDonald\'s bringing back the Snack Wrap, was finished on Veo 3 alone after its director scrapped slower work with less than three days to go (TechRadar, July 2025). The Kalshi NBA Finals ad took two days (Mashable, June 2025). Both were quick, funny, reactive spots, the format AI suits best today.',
+  },
+  {
+    q: 'Which brands faced backlash for AI ads in 2025?',
+    a: 'Guess, for AI-generated models in its ad in the August 2025 issue of American Vogue (ABC News, August 2025); J.Crew, for campaign images on Instagram that turned out to be AI-generated and were credited to a digital artist only after people noticed (Loeb & Loeb, August 2025); Coca-Cola, for its second AI "Holidays Are Coming" ad in November 2025; Progressive, for "Drive Like an Animal" in November 2025; Valentino, for an Instagram video for its DeVain bag in December 2025 that was labelled as AI and still called "cheap" and "disturbing" (Startups.co.uk, December 2025); and McDonald\'s Netherlands, which pulled its AI Christmas ad within a week in December 2025. Each is sourced on this Ruminate X page.',
   },
   {
     q: 'Should my brand make an AI commercial after these backlashes?',
@@ -121,7 +133,8 @@ export default function Page() {
           released AI-generated commercials or brand films between 2023 and 2025. The fast, funny, topical ones
           (Kalshi in two days for about USD 2,000, Popeyes finished with less than three days to go) were made in days. The
           sentimental holiday ads that showed realistic AI-generated people (Coca-Cola in 2024, McDonald&apos;s
-          Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week. In October 2026 a
+          Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week. Fashion brands
+          joined the list in 2025: Guess, J.Crew and Valentino were criticized for AI-generated models and imagery. In October 2026 a
           neighbourhood pharmacy in Washington, DC apologized for its AI imagery, so the scrutiny reaches small businesses
           too. Whether AI ads work depends on the ad: NielsenIQ found viewers spot most of them and remember them less,
           while a WhatsApp test summarised by MIT found personalized AI videos beat image ads on clicks.
@@ -244,7 +257,51 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The evidence" title="Do AI-generated ads actually work?">
+      <GuideSection eyebrow="The backlash list" title="Brands that faced backlash for AI ads in 2025">
+        <p>
+          The 2025 backlashes were not only about holiday ads. Half of the cases below are fashion brands, where the
+          picture of a person wearing the product is most of what the ad sells. The table lists the cases from 2025 with
+          a source that reported both the ad and the reaction.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              From <a href={ABC_GUESS}>ABC News</a> (August 2025), <a href={LOEB_JCREW}>Loeb &amp; Loeb</a> (August 2025),{' '}
+              <a href={FORBES_COKE}>Forbes</a> (November 2025), <a href={DIVE_PROGRESSIVE}>Marketing Dive</a> (February
+              2026), <a href={STARTUPS_VALENTINO}>Startups.co.uk</a> (December 2025, reporting the BBC&apos;s story) and{' '}
+              <a href={NBC_MCD}>NBC News</a> (December 2025). Read October 2026.
+            </>
+          }
+          head={['When', 'Brand', 'What was AI', 'What critics said', 'What the brand did']}
+          rows={[
+            ['Aug 2025', 'Guess', 'Two AI-generated models, made by the London agency Seraphinne Vallora, in a print ad in American Vogue', 'Fake women in a fashion magazine; lost work for models and photographers; unrealistic beauty standards', 'No comment to ABC News; the agency said it was not trying to replace models'],
+            ['Aug 2025', 'J.Crew', 'Retro-style campaign images on Instagram, first posted with no AI label', 'Distorted feet, odd shadows and "AI slop"; whether real models should have been used', 'Credited a digital artist after people spotted it'],
+            ['Nov 2025', 'Coca-Cola', 'A second AI "Holidays Are Coming", with animals', 'A second year of criticism', 'Stood by it'],
+            ['Nov 2025', 'Progressive', '"Drive Like an Animal": AI-generated animals driving', 'Negative comments on YouTube and Reddit', 'Reported strong engagement'],
+            ['Dec 2025', 'Valentino', 'An Instagram video for the DeVain bag, labelled as AI', '"Cheap", "lazy", "disturbing"; out of step with a craft brand', 'No response reported'],
+            ['Dec 2025', "McDonald's Netherlands", 'A Christmas ad with AI-generated characters', 'Backlash on social media', 'Pulled it within a week'],
+          ]}
+        />
+        <p>
+          Three patterns run through the list. Realistic generated people drew the most anger, whether they were
+          models (Guess, J.Crew) or holiday crowds (Coca-Cola in 2024, McDonald&apos;s). Hiding the AI made it worse.
+          J.Crew&apos;s images became a story because a label appeared only after readers found the flaws. And a label
+          alone did not save a brand whose customers pay for craft: Valentino disclosed its AI use and was still called
+          cheap.
+        </p>
+        <h3>The brands that went the other way</h3>
+        <p>
+          In October 2025 Aerie, American Eagle&apos;s intimates brand, promised not to use generative AI to create images
+          of people or bodies in its campaigns and to ask its partners and creators for the same promise (
+          <a href={ADWEEK_AERIE}>Adweek, October 2025</a>). The same report notes Dove had pledged in 2024 never to use
+          AI-generated imagery to represent real bodies in its ads. By November 2025 Heineken, Polaroid and Cadbury were
+          running ads that celebrate their work as human-made (<a href={CONVERSATION_HUMAN}>The Conversation, November
+          2025</a>). For a brand selling to the same audience, &quot;made by people&quot; is now a claim a competitor can
+          make against you.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="The evidence" title="Do AI-generated ads actually work?" alt>
         <p>
           Two studies point different ways, and they tested different ads. In December 2024{' '}
           <a href={NIQ}>NielsenIQ showed more than 2,000 people</a> a mix of AI-generated and conventional ads, from low to
@@ -279,7 +336,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial" alt>
+      <GuideSection eyebrow="For your ad" title="What these cases mean for your own AI commercial">
         <ul>
           <li>
             <strong>Realistic people carry the most risk.</strong> The two harshest reactions, Coca-Cola 2024 and

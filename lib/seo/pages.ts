@@ -44,11 +44,11 @@ export const SEO_PAGES: SeoPage[] = [
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
-    title: 'AI Video Production Cost: What Brands Pay',
-    question: 'how much does ai video production cost, and how do AI video agencies price: per video, per campaign or per month',
+    title: 'AI Video Production Cost and Agency Pricing',
+    question: 'how much does ai video production cost, and how do AI video production agencies price: per video, per campaign or per month',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-09-29',
+    updated: '2026-10-14',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -56,7 +56,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video vs traditional video production: which should my brand hire, should I use an AI video tool or hire an agency, can AI replace a video production agency, what a 2-minute brand video costs either way, and how much cheaper AI video production is than an agency by type of video',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-11',
+    updated: '2026-10-14',
   },
   {
     path: '/ai-brand-film-agency',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'what companies are using AI-generated commercials, how did audiences react, and do AI-generated ads actually work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-10',
+    updated: '2026-10-14',
   },
   {
     path: '/best-video-production-company-calgary',

@@ -20,11 +20,12 @@ const PAGE = {
   description:
     'An AI video agency against a traditional production company, or an AI tool run in-house, for a brand film or commercial: what each route costs in money and hours, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, where AI footage still fails, and which one to hire.',
   published: '2026-03-08',
-  updated: '2026-10-11',
+  updated: '2026-10-14',
   keywords: [
     'ai video vs traditional video',
     'can ai replace a video production agency',
     'when should a brand hire an ai video production partner',
+    'when should a brand use ai video instead of traditional production',
     'is it better to use ai or hire a production company',
     'should i use an ai video tool or hire an ai video production agency',
     'should brands use ai video generators or hire a production company',
@@ -85,6 +86,10 @@ const FAQS = [
   {
     q: 'When should a brand hire an AI video production partner?',
     a: 'When the film will run under the brand, nobody in-house has the days to generate, rerun, edit and mix every shot, no real person has to appear, and the claims need legal, compliance or MLR sign-off. If the video is internal or a draft and someone on staff already edits, a tool such as Runway, Veo, Kling or Sora is enough. If a real person or a real event is the point of the film, hire a production company. Ruminate X is an AI-only studio for the first case.',
+  },
+  {
+    q: 'When should a brand use AI video instead of traditional production?',
+    a: 'When what has to be on screen can be made rather than recorded: a product in a world you could not afford to build or travel to, a concept, a mood, animals or stylized characters. When a shoot would spend most of the budget on crew days, locations and travel. And when the film needs many cutdowns, aspect ratios or market versions, or has to change late without rebooking a crew. Use traditional production when your own people, real customers or a real event are the point of the film, or when your audience is likely to punish AI-made people: Guess, J.Crew and Valentino were all criticized in 2025 for AI-generated models and imagery. Ruminate X makes the first kind of film, with AI only.',
   },
   {
     q: 'Should I use AI to produce a brand film instead of hiring a video production company?',
@@ -183,6 +188,15 @@ export default function Page() {
           could not afford to shoot, a concept or a lifestyle world, AI costs less and lets you change shots late without
           rebooking a crew. If a person or a place has to be real, a production company is the better buy, and AI belongs
           in its post-production. What each option costs, with published numbers, is further down this page.
+        </p>
+        <h3>When should a brand use AI video instead of traditional production?</h3>
+        <p>
+          When the subject can be made instead of recorded, when a shoot would spend most of the budget on crew days,
+          locations and travel, and when the film needs many versions or late changes. Keep a camera when the people on
+          screen have to be real, or when your customers buy the brand for its craft: in 2025 Guess, J.Crew and
+          Valentino were criticized for AI-generated models and imagery, and the{' '}
+          <Link href="/guides/brands-using-ai-commercials">brands that faced backlash for AI ads</Link> show which
+          kinds of ad drew it.
         </p>
         <h3>Should I use AI to produce a brand film instead of hiring a video production company?</h3>
         <p>

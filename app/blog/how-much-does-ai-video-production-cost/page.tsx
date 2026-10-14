@@ -17,17 +17,17 @@ import { PRODUCTION, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/blog/how-much-does-ai-video-production-cost',
-  title: 'AI Video Production Cost: What Brands Pay',
+  title: 'AI Video Production Cost and Agency Pricing',
   description:
-    'What AI video production costs in 2026 at each level, from self-serve tools to studios, with published prices and their sources, what drives the number, and how much cheaper it is than a traditional agency.',
+    'What AI video production costs in 2026 at each level, from self-serve tools to studios, how AI video production agencies price (per video, per campaign, per month) with their published prices and sources, what drives the number, and how much cheaper it is than a traditional agency.',
   published: '2026-02-22',
-  updated: '2026-09-29',
+  updated: '2026-10-14',
   keywords: [
     'how much does ai video production cost',
     'ai video production cost',
+    'ai video production agency pricing',
     'how much does it cost to make an ai video',
     'ai video agency pricing',
-    'ai video production agency pricing',
     'ai video agency pricing per month',
     'how much does an ai video subscription cost',
     'how much cheaper is ai video production vs agency',
@@ -44,6 +44,7 @@ const KALSHI = 'https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-
 const MAW = 'https://mawaistudios.com/'
 const SUPERSIDE = 'https://www.superside.com/pricing'
 const KNOWLIFY = 'https://knowlify.com/articles/explainer-video-agency-cost-guide'
+const VIDPROS = 'https://vidpros.com/ai-video-production-agency/'
 
 const FAQS = [
   {
@@ -64,7 +65,11 @@ const FAQS = [
   },
   {
     q: 'How much does an AI video subscription cost?',
-    a: 'Two different things go by that name. A self-serve AI video tool costs about $20 to $300 a month (Lemonlight, March 2026), and you make the videos yourself. An agency retainer or subscription buys finished work each month: MAW AI Studios lists a retainer from USD 3,000 a month for 4 to 8 assets, and Superside\'s creative subscriptions start at a USD 15,000 monthly minimum on an annual term (both checked September 2026). Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), MAW AI Studios and Superside pricing pages, all linked on this page
+    a: 'Two different things go by that name. A self-serve AI video tool costs about $20 to $300 a month (Lemonlight, March 2026), and you make the videos yourself. An agency retainer or subscription buys finished work each month: MAW AI Studios lists a retainer from USD 3,000 a month for 4 to 8 assets, and Superside\'s creative subscriptions start at a USD 15,000 monthly minimum plus a USD 1,000 monthly software fee on an annual term (both checked October 2026). Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), MAW AI Studios and Superside pricing pages, all linked on this page
+  },
+  {
+    q: 'How do AI video production agencies price their work?',
+    a: 'In three shapes: per video, per campaign, or per month. Published examples checked in October 2026: MAW AI Studios charges from USD 1,500 for one 15 to 60 second video, from USD 5,000 for a hero film with three cutdowns, and from USD 3,000 a month for 4 to 8 assets; Superside\'s subscriptions start at USD 15,000 a month plus a USD 1,000 software fee on an annual term, and its dedicated AI-native team at USD 30,000 a month; Vidpros, writing about avatar-led video in volume, puts campaign fees at USD 5,000 to 15,000 for 5 to 10 videos (October 2025). Ruminate X quotes each brand film and commercial from the brief.', // claims-ok: MAW AI Studios and Superside pricing pages (checked October 2026) and Vidpros AI video production agency guide (October 2025), all linked on this page
   },
   {
     q: 'What makes an AI video production quote go up?',
@@ -162,33 +167,55 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Agency pricing" title="AI video agency pricing: per video, per campaign or per month">
+      <GuideSection eyebrow="Agency pricing" title="AI video production agency pricing: per video, per campaign or per month">
         <p>
-          AI video agencies publish prices in three shapes: a price per video, a price per campaign, and a monthly fee
-          for a set amount of work. The figures below are each company&apos;s own, read on its site in September 2026.
+          AI video production agencies publish prices in three shapes: a price per video, a price per campaign, and a
+          monthly fee for a set amount of work. The figures below are each company&apos;s own, read on its site in
+          October 2026, except Knowlify (May 2026) and Vidpros (October 2025), whose guides carry those dates.
         </p>
         <GuideTable
           caption={
             <>
               Sources: <a href={MAW}>MAW AI Studios</a> packages, <a href={KNOWLIFY}>Knowlify</a> (May 2026, which sells
-              the first tier it describes) and <a href={SUPERSIDE}>Superside pricing</a>. USD. Checked September 2026.
+              the first tier it describes), <a href={VIDPROS}>Vidpros</a> (October 2025, describing avatar-led video in
+              volume) and <a href={SUPERSIDE}>Superside pricing</a>. USD. Checked October 2026.
             </>
           }
           head={['How they charge', 'Published price', 'What it buys', 'Who publishes it']}
           rows={[
-            ['Per video', 'From 1,500', 'One 15 to 60 second commercial', 'MAW AI Studios (Spark)'],
+            ['Per video', 'From 1,500', 'One 15 to 60 second video, storyboard approved first, 2 revision rounds', 'MAW AI Studios (Spark)'],
             ['Per project', '1,000 to 8,000', 'One finished video, delivered in days', 'Knowlify Studio'],
-            ['Per campaign', 'From 5,000', 'A hero film plus 30, 15 and 6 second cutdowns', 'MAW AI Studios (Ignite)'],
+            ['Per campaign', 'From 5,000', 'A hero film plus 3 cutdowns and a voiceover', 'MAW AI Studios (Ignite)'],
+            ['Per campaign, in volume', '5,000 to 15,000', '5 to 10 avatar-led videos with scripts and 2 to 3 revision rounds', 'Vidpros (guide)'],
             ['Monthly retainer', 'From 3,000 a month', '4 to 8 assets a month', 'MAW AI Studios (Genesis)'],
-            ['Creative subscription', '15,000 a month minimum, annual term', 'Design, video and photo production for a team', 'Superside'],
+            ['Creative subscription', '15,000 a month minimum plus 1,000 a month software fee, annual term', 'Design, video and motion work for a team', 'Superside (Flex)'],
+            ['Dedicated team', 'From 30,000 a month plus the software fee, 12-month term', 'A team assigned to one company', 'Superside (Dedicated AI-Native Team)'],
           ]}
         />
         <p>
           Knowlify puts AI video agencies at $500 to $8,000 {/* claims-ok: Knowlify explainer video agency cost guide (May 2026), linked in the table caption */} for a 60 to 90 second explainer, against $5,000 to $15,000
           at a mid-market studio and $15,000 to $50,000 at a premium agency. A single launch fits a per-video or campaign
-          price. A monthly fee only pays off when you will use the volume every month: ask what counts as one asset, how
-          many revision rounds each one gets, whether unused budget rolls over (Superside&apos;s Flex plan rolls it for
-          up to three months), and how long the music and voice licenses run.
+          price. A monthly fee only pays off when you will use the volume every month, and the larger ones lock you in:
+          Superside&apos;s plans run on an annual commitment, and Vidpros describes three to six month minimums as typical.
+        </p>
+        <h3>What an agency price does not tell you</h3>
+        <p>
+          The tiers above buy different things, so put each quote through the same six questions before you compare
+          the totals:
+        </p>
+        <ul>
+          <li>What counts as one asset: a 60 second film and a 6 second cutdown are both &quot;a video&quot; on some price lists.</li>
+          <li>How many revision rounds each asset gets, and what a round costs after that.</li>
+          <li>Whether shots that come back with a wrong face, hand, label or logo are rerun inside the price.</li>
+          <li>Which cutdowns, aspect ratios and languages are included.</li>
+          <li>How long the music and voice licenses run, and in which media and countries.</li>
+          <li>Whether unused budget rolls over (Superside&apos;s Flex budget carries over for up to three months) and what overages cost.</li>
+        </ul>
+        <p>
+          A brand film or a commercial that runs under your name is usually priced per project, because its length,
+          scenes, product shots and review rounds differ from the last one. That is how {studio} quotes. The{' '}
+          <Link href="/guides/video-production-brief">video production brief template</Link> lists what to send so two
+          agencies quote the same job.
         </p>
       </GuideSection>
 

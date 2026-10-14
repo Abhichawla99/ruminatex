@@ -413,11 +413,11 @@ AI video production represents the single biggest shift in content production si
   {
     slug: 'how-much-does-ai-video-production-cost',
     title: 'How Much Does AI Video Production Cost?',
-    excerpt: 'What AI video production costs at each level, from self-serve tools to studios, with published prices and their sources, and what drives the number.',
+    excerpt: 'What AI video production costs at each level, from self-serve tools to studios, AI video production agency pricing per video, per campaign and per month, with published prices and their sources, and what drives the number.',
     date: '2026-02-22',
     readTime: '8 min read',
     category: 'Pricing',
-    keywords: ['how much does ai video production cost', 'ai video production cost', 'ai video agency pricing'],
+    keywords: ['how much does ai video production cost', 'ai video production cost', 'ai video production agency pricing', 'ai video agency pricing'],
     content: '',
     ownPage: true,
   },
