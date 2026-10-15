@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-10-10',
+  updated: '2026-10-15',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -33,6 +33,9 @@ const PAGE = {
     'best ai video production agency',
     'ai video agency pricing',
     'hire ai-native production house for campaigns',
+    'what should i look for when hiring an ai video production company',
+    'hire ai video production company',
+    'hire ai video production agency',
   ],
 }
 
@@ -64,6 +67,10 @@ const FAQS = [
   {
     q: 'How do I hire an AI-native production house for campaigns?',
     a: `Brief it on everything the campaign needs: the hero film, the cutdowns and aspect ratios for each channel, any stills, the markets and languages, and how many review rounds your legal or medical team needs. An AI-native production house generates the footage instead of filming it, so ask to see a campaign in its reel where the same character, product and logo hold across every cut. ${studio} is an AI-native studio in ${SITE.city}; it quotes campaigns from the brief.`,
+  },
+  {
+    q: 'What should I look for when hiring an AI video production company?',
+    a: `Look at a finished film in its reel, not a montage of clips: the same character with the same face in every scene, hands holding a product with the packaging and logo correct, and on-screen text spelled right. Then check the proposal: what people make and what is generated, video and music models whose licences allow commercial use, a deliverables list, the number of review rounds, and an assignment of the finished film to you. ${studio}, an AI-only studio in ${SITE.city}, suggests asking every studio what it does when a shot will not come out right.`,
   },
   {
     q: 'Who owns a video made by an AI video production agency?',
@@ -270,7 +277,38 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Before you sign" title="Seven questions to ask an AI video production company" alt>
+      <GuideSection eyebrow="Before you sign" title="What to look for when hiring an AI video production company" alt>
+        <p>
+          Look in three places: the reel, the proposal and the contract. Each one shows whether people at the studio
+          will catch the shots the generator gets wrong, which is most of what you are paying for.
+        </p>
+        <h3>In the reel</h3>
+        <ul>
+          <li>
+            A finished film longer than a minute, not a montage of eight-second clips. Generators make short clips, so
+            a reel of clips shows what the tool can do, not what the studio can finish.
+          </li>
+          <li>The same character with the same face in every scene of one film, including a shot where the face turns.</li>
+          <li>Hands holding a product, and the product&apos;s packaging and logo readable and correct in every shot.</li>
+          <li>On-screen text that is spelled right. Good studios set type in the edit instead of generating it.</li>
+          <li>Work in your category. A pharma or lab buyer should ask how the studio handled a claim or a reviewer&apos;s note.</li>
+        </ul>
+        <h3>In the proposal and contract</h3>
+        <ul>
+          <li>A plain split of what people make (script, boards, edit, sound, grade) and what is generated.</li>
+          <li>The video and music models named, with licences that allow commercial use of the output.</li>
+          <li>A deliverables list: master, cutdowns, aspect ratios, captions, languages, and whether project files are included.</li>
+          <li>The number of review rounds, and what happens when a legal or medical reviewer asks for a change.</li>
+          <li>An assignment of the finished film to you. Who owns AI footage is covered in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.</li>
+        </ul>
+        <p>
+          Two signs to walk away from: a quote that does not ask where the film will run or who must approve it, and a
+          studio that cannot say what it does when a shot will not come out right. If you are not sure an AI studio is
+          the right kind of company at all,{' '}
+          <Link href="/comparison/ai-agency-vs-traditional-agency">AI agency or traditional production</Link> sets out
+          when a crew or a self-serve tool fits better.
+        </p>
+        <h3>Seven questions to ask an AI video production company</h3>
         <ol>
           <li>Show me a shot from your reel where a face turns, a hand holds a product, and a logo is on screen.</li>
           <li>Which parts of the film are made by people (script, boards, edit, sound) and which are generated?</li>

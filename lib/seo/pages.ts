@@ -29,10 +29,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-agencies',
     title: 'AI Video Production Agency: How to Hire One',
-    question: 'ai video production agency: what am I hiring and how do I pick one',
+    question: 'ai video production agency: what am I hiring, and what should I look for when hiring an AI video production company',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-10',
+    updated: '2026-10-15',
   },
   {
     path: '/ai-commercial-production',
@@ -61,10 +61,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-brand-film-agency',
     title: 'AI Brand Film Production for Companies',
-    question: 'ai brand film: what is it, what makes AI footage cinematic, how is it made and what does it cost',
+    question: 'ai brand films: what are they, which brands and studios make them, how is one made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-10',
+    updated: '2026-10-15',
   },
   {
     path: '/ai-video-production-healthcare',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'what companies are using AI-generated commercials, how did audiences react, and do AI-generated ads actually work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-14',
+    updated: '2026-10-15',
   },
   {
     path: '/best-video-production-company-calgary',

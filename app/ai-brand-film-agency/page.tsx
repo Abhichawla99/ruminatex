@@ -19,11 +19,13 @@ const PAGE = {
   path: '/ai-brand-film-agency',
   title: 'AI Brand Film Production for Companies',
   description:
-    'What an AI brand film is, how one gets made without a shoot, what makes generated footage look cinematic, what brand films cost with AI and with a crew, what still breaks, who owns it, and when a company should film real people instead.',
+    'What an AI brand film is, published examples (Toys"R"Us, Moncler) and the studios that make them, how one gets made without a shoot, what it costs with AI and with a crew, what still breaks, who owns it, and when to film real people instead.',
   published: '2026-03-07',
-  updated: '2026-10-10',
+  updated: '2026-10-15',
   keywords: [
+    'ai brand films',
     'ai brand film',
+    'ai brand film production',
     'ai brand film production company',
     'ai cinematic video production',
     'cinematic brand film',
@@ -52,7 +54,11 @@ const FAQS = [
   },
   {
     q: 'Which famous brands are using AI for brand films?',
-    a: 'One public example is Moncler. The agency R/GA made an experimental film for Moncler with Google\'s Veo video model in four weeks, and it was unveiled at Cannes Lions in 2025 (R/GA, August 2025). Moncler did not publish a budget, and few brands do.',
+    a: 'Two public examples. The Origin of Toys"R"Us, made by Toys"R"Us Studios and Native Foreign, was created almost entirely with OpenAI\'s Sora and premiered at Cannes Lions in 2024; hundreds of generated shots were cut to a couple dozen in a few weeks (WHP Global). Moncler\'s film with the agency R/GA was made with Google\'s Veo in four weeks and unveiled at Cannes Lions in 2025 (R/GA, August 2025). Neither brand published a budget.',
+  },
+  {
+    q: 'What is an AI film company?',
+    a: 'An AI film company makes films from generated footage instead of a shoot: it writes the film, fixes the look, generates and reruns each shot, then edits, scores and grades it. Some, such as Dreamachine, also combine AI with live action. Ruminate X, an AI film studio in Calgary, makes every frame with AI and does not film, so a brand film that needs real employees or customers on camera is better made by a crew.',
   },
   {
     q: 'Can I use AI to create a cinematic video?',
@@ -94,7 +100,9 @@ export default function Page() {
           of filmed. A studio still writes it, fixes the look of the brand world before anything is generated, reruns every
           shot where a face, a hand or the product drifts, then edits, scores and grades it. AI suits brand films built on
           a made world: landscapes, metaphors, period scenes, places you could never afford to shoot. It does not suit a
-          film that needs your own people on camera.
+          film that needs your own people on camera. Published examples include The Origin of Toys&quot;R&quot;Us
+          (2024, made almost entirely with OpenAI&apos;s Sora) and Moncler&apos;s film with R/GA (2025, made with
+          Google&apos;s Veo).
         </p>
       </GuideAnswer>
 
@@ -254,19 +262,92 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="An example" title="Which brands are using AI for brand films" alt>
+      <GuideSection eyebrow="Examples and studios" title="AI brand films: examples, and the studios that make them" alt>
         <p>
-          The best-known case is Moncler. Google asked the agency R/GA for an ad that could only exist with AI, and{' '}
-          <a href="https://rga.com/news/rga-used-ai-for-impossible-ad">
-            R/GA used Google&apos;s Veo model to make an experimental film with Moncler in four weeks
-          </a>
-          , unveiled at Cannes Lions (R/GA, August 2025). No budget was published.
+          Two brand films made almost entirely with AI come with first-hand accounts of how they were made. Both are
+          about a made world or a story from the past, and neither puts real employees or customers on screen.
         </p>
+        <GuideTable
+          caption={
+            <>
+              From{' '}
+              <a href="https://www.whp-global.com/blogs/brand-news/toysrus-studios-and-native-foreign-use-openais-sora-to-narrate-the-origin-story-of-beloved-toyrus-brand">
+                WHP Global, owner of Toys&quot;R&quot;Us
+              </a>{' '}
+              and <a href="https://rga.com/news/rga-used-ai-for-impossible-ad">R/GA (August 2025)</a>. Checked October
+              2026. Neither published a budget.
+            </>
+          }
+          head={['Film', 'Who made it', 'How it was made']}
+          rows={[
+            [
+              'The Origin of Toys"R"Us (2024)',
+              'Toys"R"Us Studios and the agency Native Foreign, directed by Nik Kleverov',
+              'Almost entirely with OpenAI\'s Sora, plus corrective visual effects. Hundreds of generated shots cut down to a couple dozen, in a few weeks. Original score by Aaron Marsh. Premiered at Cannes Lions 2024.',
+            ],
+            [
+              'From the Mountains to the City, Moncler (2025)',
+              'R/GA, for Google, with Moncler',
+              'Google\'s Veo model, in four weeks. Unveiled at Cannes Lions 2025.',
+            ],
+            [
+              `${trail.title} (${trail.kind ?? 'original'}, not client work)`,
+              studio,
+              `${trail.description} Every frame generated; no crew or location.`,
+            ],
+          ]}
+        />
         <p>
-          The film, titled From the Mountains to the City, shows a made world rather than real employees or customers. That is the
-          brief AI brand film production handles best today. Coca-Cola, Toys&quot;R&quot;Us, Kalshi and McDonald&apos;s
-          have also released AI ads; what each cost in time and how audiences took them is in{' '}
-          <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
+          In the Toys&quot;R&quot;Us film, a couple dozen shots on screen came from hundreds of generations, and some
+          still needed hand-made fixes. That ratio is where the weeks go, and it is
+          why a studio&apos;s quote follows the number of scenes more than the running time. Coca-Cola, Kalshi and
+          McDonald&apos;s have released AI ads rather than brand films; what each cost in time and how audiences took
+          them is in <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
+        </p>
+
+        <h3>What is an AI film company?</h3>
+        <p>
+          A studio that makes films from generated footage instead of a shoot. These are the companies a Google search
+          for &ldquo;ai brand films&rdquo; returned in the US on October 15, 2026, described from their own pages.
+        </p>
+        <GuideTable
+          caption="Each studio's own AI brand film page, read October 2026, in the order Google showed them. A blank in the last column means the page does not state it."
+          head={['Studio', 'Based', 'What its page says', 'Not published on the page']}
+          rows={[
+            [
+              <a key="d" href="https://www.dreamachine.ai/ai-brand-films">Dreamachine</a>,
+              'Not stated',
+              'Human-led, AI-driven brand films and commercials; five steps (idea, world building, generation, refinement, delivery); also mixes AI with live action',
+              'Prices, timelines, named clients',
+            ],
+            [
+              <a key="s" href="https://sbnmedia.in/ai-brand-films-ai-technology">SBN Media</a>,
+              'Mumbai',
+              'AI corporate videos and brand films for Indian companies, with named clients such as Roofix Fasteners',
+              'Prices, timelines',
+            ],
+            [
+              <a key="c" href="https://www.contenaissance.com/blog/ai-brand-films">Contenaissance</a>,
+              'Not stated',
+              'AI video, 3D environments and film direction, in six steps from discovery to versions for TV and social',
+              'Examples, prices, clients',
+            ],
+            [
+              <a key="k" href="https://www.kreativiz.com/ai-brand-films-and-commercials">KreatiViz</a>,
+              'UK',
+              'Brand films, commercials and product films with "no crew required"; the same company sells architectural CGI',
+              'Prices, timelines',
+            ],
+            [studio, SITE.city, PRODUCTION.summary, 'Prices (quoted from the brief)'],
+          ]}
+        />
+        <p>
+          Two things separate them: whether the studio also films, and whether it can show you a finished brand film
+          longer than a minute with the same character in every scene. Dreamachine and Contenaissance say they can
+          combine AI with a camera; {studio} does not film at all, so a brand film that needs your own people belongs
+          with a crew. The second is the test most AI reels fail, for the reasons in the section on what breaks above. The full
+          checklist is in{' '}
+          <Link href="/ai-video-production-agencies">what to look for when hiring an AI video production company</Link>.
         </p>
         <GuideFilm
           id="d-s9SxA4Klk"

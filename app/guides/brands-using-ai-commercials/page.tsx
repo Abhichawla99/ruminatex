@@ -14,13 +14,14 @@ import {
 } from '@/components/guide/Guide'
 import { PRODUCTION, SITE } from '@/lib/seo/facts'
 
+const TRIVAGO = 'https://company.trivago.com/trivago-unveils-a-bold-brand-refresh-and-ai-powered-tv-ads/'
 const PAGE = {
   path: '/guides/brands-using-ai-commercials',
   title: 'Brands Using AI Commercials: What Happened',
   description:
     'Ten AI-generated commercials from Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-14',
+  updated: '2026-10-15',
   keywords: [
     'ai-generated commercials',
     'ai generated commercials',
@@ -40,6 +41,7 @@ const PAGE = {
     'do ai-generated ads actually work',
     'why are commercials using ai now',
     'are commercials using ai actors now',
+    'is the trivago commercial ai',
   ],
 }
 
@@ -91,6 +93,10 @@ const FAQS = [
   {
     q: 'Did Progressive use AI for an ad?',
     a: 'Yes. Progressive\'s "Drive Like an Animal" ad for its Snapshot program, released on November 3, 2025, shows AI-generated animals driving and crashing cars, with the voice of Stephanie Courtney, the actress who plays Flo. Progressive\'s in-house agency Ninety6, its agency of record Arnold, and Monks made it. The idea dated from 2024 and was shelved as too slow and expensive to produce; AI made it fit the budget a year later. It drew negative comments on YouTube and Reddit, and Progressive said engagement was strong (Marketing Dive, February 2026).',
+  },
+  {
+    q: 'Is the trivago commercial AI?',
+    a: 'Partly. trivago announced on December 14, 2023 that it used AI tools to produce localized TV ads in more than ten languages, all featuring the same actor, with a voiceover tailored to each market; the campaign began in Denmark and Canada and reached the US around Christmas 2023. The announcement does not say the actor or scenes were generated. Its own page labels the French spot "AI usage" and the US spot "dubbed".',
   },
   {
     q: 'Which AI commercials were made fastest?',
@@ -219,6 +225,21 @@ export default function Page() {
         </p>
       </GuideSection>
 
+      <GuideSection eyebrow="Localized ads" title="Is the trivago commercial AI? One actor, AI voices in ten languages">
+        <p>
+          Partly. In <a href={TRIVAGO}>its December 14, 2023 announcement</a>, trivago said it used AI tools to produce
+          localized TV ads in more than ten languages, &ldquo;all featuring the same actor&rdquo;, the new &ldquo;trivago
+          guy&rdquo;, with a voiceover written for each market. The campaign started in Denmark and Canada in mid-December
+          2023 and reached the US around Christmas. On the same page trivago labels its French spot &ldquo;AI usage&rdquo;
+          and its US spot &ldquo;dubbed&rdquo;. The announcement does not say the actor or the scenes were generated.
+        </p>
+        <p>
+          That makes trivago a different case from Coca-Cola or McDonald&apos;s Netherlands. A real performance was filmed
+          once and AI made the other-language versions, so viewers were never asked to accept a generated person. It is
+          the narrowest use of AI in this guide.
+        </p>
+      </GuideSection>
+
       <GuideSection eyebrow="Brand films" title="Toys&quot;R&quot;Us and Moncler: AI brand films at Cannes">
         <p>
           Toys&quot;R&quot;Us and the agency Native Foreign made{' '}
@@ -231,8 +252,8 @@ export default function Page() {
         <p>
           A year later <a href={RGA}>R/GA made an experimental film for Moncler with Google&apos;s Veo in four weeks</a>,
           unveiled at Cannes Lions 2025. It shows a made world of mountains and city rather than real customers, the kind
-          of brief AI brand films handle best. More on that format is on{' '}
-          <Link href="/ai-brand-film-agency">AI brand film production</Link>.
+          of brief AI brand films handle best. More on that format, and the studios that make{' '}
+          <Link href="/ai-brand-film-agency">AI brand films</Link>, is on the brand film page.
         </p>
       </GuideSection>
 
