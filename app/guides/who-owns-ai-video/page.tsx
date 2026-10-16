@@ -20,8 +20,10 @@ const PAGE = {
   description:
     'Who owns an AI-generated commercial or brand film: what the US Copyright Office and courts decided, what Runway, OpenAI, Google and Kling terms say, where Canada stands, and the ownership clauses to put in your studio contract.',
   published: '2026-09-30',
-  updated: '2026-09-30',
+  updated: '2026-10-16',
   keywords: [
+    'ai video copyright',
+    'who owns ai-generated video content',
     'who owns the rights to AI created content',
     'can you copyright something that is AI-generated',
     'who owns the copyright to AI-generated content',
@@ -29,6 +31,7 @@ const PAGE = {
     'who owns ai generated commercial',
     'copyright office ai guidance',
     'how to avoid copyright issues with AI',
+    'ai video tools with clear ip ownership for generated content',
   ],
 }
 
@@ -46,6 +49,7 @@ const CIPPIC = 'https://www.cippic.ca/our-work/cippic-v-sahni'
 const RUNWAY = 'https://runway.com/terms-of-use'
 const OPENAI = 'https://openai.com/policies/terms-of-use/'
 const GOOGLE_CLOUD = 'https://cloud.google.com/terms/service-terms'
+const GOOGLE_INDEMNITY = 'https://cloud.google.com/terms/generative-ai-indemnified-services'
 const KLING = 'https://kling.ai/document-api/guides/protocols/paid-service'
 const COOLEY = 'https://www.cooley.com/news/insight/2024/2024-01-29-copyright-ownership-of-generative-ai-outputs-varies-around-the-world'
 
@@ -71,6 +75,10 @@ const FAQS = [
     a: 'It is unsettled. The Government of Canada\'s February 2025 report on its generative AI consultation says Canadian case law suggests authorship "must be attributed to a human who exercises skill and judgment", and that courts have not yet ruled on AI authorship specifically. A Federal Court challenge to a registration that lists an AI app as co-author (CIPPIC v. Sahni) was still waiting for a hearing date in September 2026. Canadian brands should rely on contracts, trademarks and licenses the same way US brands do.',
   },
   {
+    q: 'Which AI video tools give you clear IP ownership of generated content?',
+    a: 'In their terms (read September 30, 2026), Runway "does not claim ownership" of outputs, OpenAI assigns its rights in Sora output to you "if any", Google Cloud "does not assert any ownership rights" in Veo output, and Kling says the rights "still belong to you". None can make the output copyrightable: in the US, purely AI-generated material has no copyright owner. Google also lists Veo on Vertex AI among the services covered by its generative AI indemnity (July 2026). Free and consumer plans can carry different terms, so ask which tool and plan made each shot. This is not legal advice.',
+  },
+  {
     q: 'Can a competitor copy my AI commercial?',
     a: 'Copying the finished film still infringes the human-authored parts (script, edit, arrangement), and your logo and brand assets are protected by trademark, not copyright. A single generated shot on its own may not be protected in the US. The video tools also warn that similar output can be generated for other users: Runway\'s terms say outputs "may not be unique". A studio that builds a distinct brand world and sets your real logo and product from your files gives you more to protect than raw generated clips.',
   },
@@ -91,7 +99,7 @@ export default function Page() {
       ]}
     >
       <GuideHero
-        eyebrow="Guide · Rights"
+        eyebrow="Guide · AI video copyright"
         title="Who owns an AI video? Copyright for brands buying AI film"
         dek="For the brand manager or in-house counsel signing off on an AI commercial or brand film, who needs to know what the company will own, what nobody can own, and what to put in the studio contract."
         updated={PAGE.updated}
@@ -133,7 +141,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The tools" title="What the video model terms say about ownership" alt>
+      <GuideSection eyebrow="The tools" title="AI video tools with clear IP ownership: what the terms say" alt>
         <p>
           Every major video model disclaims ownership of what you generate or assigns it to you, &ldquo;if any&rdquo;. None
           can promise the output is protected, and several warn that other users can get similar output.
@@ -157,6 +165,13 @@ export default function Page() {
             ['Kling (API)', 'IP rights in the content "still belong to you"', '"not restricted"', 'Whether rights exist is "determined and handled by you"'],
           ]}
         />
+        <p>
+          Clear ownership of the output is a different promise from cover if someone claims the output infringes their
+          work. Google lists Veo, used through its Vertex AI API in generally available versions, and Google Vids among the
+          services covered by its extra generative AI indemnity (<a href={GOOGLE_INDEMNITY}>Google Cloud Generative AI
+          Indemnified Services</a>, last modified July 20, 2026, read October 16, 2026). That cover comes with Google
+          Cloud&apos;s terms and conditions, so your legal team reads them, not this page.
+        </p>
         <p>
           Two practical points follow. Ask your studio which models it used and on which plan, because free plans often
           carry different terms. And do not expect a generated shot to be exclusive to you: the parts that make a film

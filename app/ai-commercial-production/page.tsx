@@ -18,9 +18,9 @@ const PAGE = {
   path: '/ai-commercial-production',
   title: 'AI Commercial Production Company for Brands',
   description:
-    'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, commercial-use rights, and when to hire a crew instead.',
+    'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-12',
+  updated: '2026-10-16',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -36,6 +36,8 @@ const PAGE = {
     'do actors get paid for ai commercials',
     'ai commercial production for tech companies',
     'ai commercial production for fitness brands',
+    'ai commercials for fitness brands',
+    'what ai can i use to create a commercial',
   ],
 }
 
@@ -83,6 +85,14 @@ const FAQS = [
   {
     q: 'What is AI VFX for commercial production, and who does it?',
     a: `AI VFX means adding generated elements, such as a set extension, a crowd, weather or a product effect, to footage that a crew filmed. A production company or VFX house does it, because someone has to shoot the plates and composite the AI shots into them. A fully generated commercial has no filmed plates: every shot is made with AI, which is what ${studio} makes. If the ad needs your real store, staff or an athlete on camera, hire a crew that offers AI VFX; if the idea works as a made world, an AI-only studio can make the whole spot.`,
+  },
+  {
+    q: 'What AI can I use to create a commercial?',
+    a: `Video generators such as Google Veo, Runway, Kling and OpenAI Sora make the shots, a few seconds at a time, and many takes come out unusable. A commercial also needs a script, boards, your real product and logo set from your files, sound, a grade and the versions each channel needs, which the generators do not do. Brands that want to run it themselves pair a generator with an editor; brands that want a finished, aired spot hire an AI commercial production company such as ${studio}.`,
+  },
+  {
+    q: 'How do you make an AI commercial for a fitness brand?',
+    a: `Write the shot list so generation does what it is good at (landscapes, light, bodies in motion, a class moving together) and keep form shots wide or from behind, because generated squats, deadlifts and grips go wrong in close-up. A trainer checks every rep shown, the product and logo come from your files, and claim lines are set in the edit. On Meta, weight loss ads cannot show a close-up pinching fat or promise a result in a set time without qualifiers (Meta Health and Wellness ad standard, changed July 2026). If the ad sells a real athlete or your members' own results, film them.`,
   },
   {
     q: 'When should a brand not make its commercial with AI?',
@@ -296,29 +306,93 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="By industry" title="AI commercial production for fitness brands and tech companies">
-        <h3>AI commercials for fitness brands</h3>
+      <GuideSection eyebrow="Fitness brands" title="AI commercial production for fitness brands">
         <p>
-          Generators are strong at what fitness ads sell on: a runner on a ridge at first light, sweat and breath in cold
-          air, a wide shot of a body in motion. The trail running film further down this page is all generated. They are
-          weak at the close-up a coach would check. A squat with the knees caving in or a deadlift with a rounded back is
-          a wrong demonstration, and weights, bars and bottles slip through generated hands. Board form shots wide or from
-          behind, regenerate every rep a trainer would flag, and put the product in hand only where it can be corrected in
-          the edit. A generated body shown getting a result is a demonstration of your product, so it carries the same
-          claims as a filmed one (<Link href="/ai-product-videos">AI product videos</Link> covers the mock-up rule). If
-          the ad sells a real trainer, a real athlete or your members&apos; own results, film them.
+          Fitness ads sell bodies in motion, places and light, and generators are strong at all three: a runner on a ridge
+          at first light, breath in cold air, a wide shot of a class moving together. The trail running film further down
+          this page is all generated. They are weak at the close-up a coach would check. A squat with the knees caving in
+          or a deadlift with a rounded back is a wrong demonstration, and bars, dumbbells and bottles slip through
+          generated hands. So the shot list puts form shots wide or from behind, and every rep a trainer would flag gets
+          generated again.
         </p>
-        <h3>AI commercials for tech companies</h3>
+        <h3>An example shot list for a 20-second fitness ad</h3>
+        <GuideTable
+          caption="An example for an apparel or gym brand, written for this page. Shot lengths fit generators that make clips of a few seconds each."
+          head={['Shot', 'What generation does well', 'What gets checked or generated again']}
+          rows={[
+            ['Wide: a runner crests a ridge at first light (4 s)', 'Light, landscape, motion', 'Stride and foot strike; the logo on the apparel is set in the edit from your files'],
+            ['Medium: a class mid-movement in a studio (3 s)', 'Room, energy, sweat', 'Every body in frame: limbs, faces and form'],
+            ['Close: hands chalk up and grip a bar (2 s)', 'Texture, chalk dust', 'Fingers and grip, until the bar stays one bar'],
+            ['From behind: a squat at full depth (3 s)', 'Shape and effort without a face to hold', 'Knees, back and depth, checked by a trainer'],
+            ['Product: the shoe, bottle or app (3 s)', 'The light and place around the product', 'Label, colour and logo from your files; app screens are your own recordings'],
+            ['Close on a face, breath, then the end card (4 s)', 'Emotion, breath in cold air', 'The same person as earlier shots; end card and any claim line set in the edit'],
+          ]}
+        />
+        <h3>Results, bodies and before-and-after shots</h3>
         <p>
-          A generator cannot draw your real interface. Buttons, numbers and menu text come out as plausible nonsense, and a
-          wrong screen in a software ad is a wrong claim. In {studio}&apos;s pipeline the product screen is your own screen
-          recording, composited into the generated shot, and every number and word on it is set in the edit. Generation
-          does the rest: the people using the product, the place they work, and the idea behind products that have nothing
-          to film, such as security, data or an API. If the ad depends on your founder or engineers on camera, hire a crew.
+          A generated body shown getting a result is a claim about your product, the same as a filmed one. Under the FTC
+          Endorsement Guides, an ad that relates a consumer&apos;s experience with a key attribute of a product{' '}
+          <a href="https://www.law.cornell.edu/cfr/text/16/255.2">&ldquo;will likely be interpreted as representing that the endorser&apos;s experience is representative of what consumers will generally achieve&rdquo;</a>{' '}
+          (16 CFR 255.2(b)). A person who does not exist cannot give a testimonial at all; the{' '}
+          <Link href="/ai-ugc-reels">AI UGC ads page</Link> covers the FTC reviews rule.
+        </p>
+        <p>
+          Meta&apos;s{' '}
+          <a href="https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness">Health and Wellness ad standard</a>{' '}
+          (last changed July 22, 2026; read October 2026) bars weight loss and weight gain ads from showing a close-up of a
+          body area by pinching fat, from statements that attack someone&apos;s appearance, and from promising a specific
+          outcome in a set time without qualifiers. Ads for weight loss products and supplements must target people 18 or
+          older; ads for fitness services, equipment and health clubs are exempt from that age rule. A generator will make
+          any of those shots on request, so they come out of the script before anything is generated. This is not legal
+          advice.
+        </p>
+        <h3>When a fitness brand should film instead</h3>
+        <p>
+          If the ad sells a real trainer, a real athlete or your members&apos; own results, film them. If you need a new
+          short clip for the feed every day, a subscription service costs less than a commissioned commercial.{' '}
+          <a href="https://studioverse.io/fitness">Studioverse sells short social video to gyms and trainers from $33 for a basic 15-second video</a> (its own page, October 2026). {/* claims-ok: Studioverse fitness page, linked on this line */}
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Price" title="How much an AI commercial costs" alt>
+      <GuideSection eyebrow="Tech companies" title="AI commercial production for tech companies" alt>
+        <p>
+          A generator cannot draw your real interface. Buttons, numbers and menu text come out as plausible nonsense, and a
+          wrong screen in a software ad is a wrong claim about the product. In {studio}&apos;s pipeline the product screen
+          is your own screen recording, composited into the generated shot, and every number and word on it is set in the
+          edit. Generation does the rest: the people using the product, the place they work, and a picture for products
+          that have nothing to film, such as security, data or an API.
+        </p>
+        <h3>An example shot list for a 20-second software ad</h3>
+        <GuideTable
+          caption="An example for a support software company, written for this page. Generated screens are left blank and your recordings go in during the edit."
+          head={['Shot', 'What generation does', 'What comes from you or the edit']}
+          rows={[
+            ['Wide: a support lead at a desk at 7 a.m., tickets piling up on a second monitor (3 s)', 'The office, the light, the person', 'The monitor is blank in generation; your recording is tracked in'],
+            ['Over the shoulder: the queue clears on the dashboard (4 s)', 'Hands, desk, depth of field', 'The dashboard is your screen recording'],
+            ['Abstract: tickets as paper slips folding into one stack (4 s)', 'The idea, for a product with nothing physical to film', 'No numbers or words inside the generated image'],
+            ['Medium: the team leaving on time (3 s)', 'People and mood', 'Faces and hands checked across the group'],
+            ['Full screen: the real interface with one number highlighted (4 s)', 'Nothing', 'A real number your team can back up'],
+            ['End card: logo, line, URL (3 s)', 'Nothing', 'Logo from your files; type set in the edit'],
+          ]}
+        />
+        <h3>AI claims in a tech ad</h3>
+        <p>
+          Software ads now sell AI features, and the FTC treats those claims like any other. When it announced{' '}
+          <a href="https://www.ftc.gov/news-events/news/press-releases/2024/09/ftc-announces-crackdown-deceptive-ai-claims-schemes">Operation AI Comply</a>{' '}
+          on September 25, 2024, it acted against DoNotPay, which promoted &ldquo;the world&apos;s first robot lawyer&rdquo;
+          without testing whether its chatbot matched a lawyer&apos;s work, and its chair said &ldquo;there is no AI
+          exemption from the laws on the books.&rdquo; A generated shot of your product doing something it cannot yet do
+          is the same problem in pictures. Board the feature as it ships and show your own screen recording of it. This is
+          not legal advice.
+        </p>
+        <h3>When a tech company should film instead</h3>
+        <p>
+          If the ad depends on your founder, your engineers or a customer telling their own story, hire a crew. If the
+          whole ad is a product walkthrough, a screen recording with a voiceover may be all you need.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Price" title="How much an AI commercial costs">
         <p>
           Published prices for AI commercials cover a wide range, because the word covers everything from a one-person
           social spot to a broadcast campaign:
@@ -356,7 +430,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="AI in a live-action ad" title="AI VFX for commercial production">
+      <GuideSection eyebrow="AI in a live-action ad" title="AI VFX for commercial production" alt>
         <p>
           Some searches for AI commercial production come from teams who are filming anyway and want AI for a few shots:
           a set extension, a crowd, a product that transforms. That is AI VFX inside a live-action shoot, and it is a
@@ -373,7 +447,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Labels and rights" title="Disclosure and who owns the ad" alt>
+      <GuideSection eyebrow="Labels and rights" title="Disclosure and who owns the ad">
         <p>
           <strong>Labels.</strong>{' '}
           <a href="https://support.google.com/youtube/answer/14328491">YouTube&apos;s policy</a> asks creators to disclose

@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-12',
+    updated: '2026-10-16',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -56,7 +56,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video vs traditional video production: which should my brand hire, should I use an AI video tool or hire an agency, can AI replace a video production agency, what a 2-minute brand video costs either way, and how much cheaper AI video production is than an agency by type of video',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-14',
+    updated: '2026-10-16',
   },
   {
     path: '/ai-brand-film-agency',
@@ -224,7 +224,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'who owns the rights to an AI-generated commercial or brand film, and can it be copyrighted',
     kind: 'guide',
     published: '2026-09-30',
-    updated: '2026-09-30',
+    updated: '2026-10-16',
   },
   {
     path: '/guides/ai-pharma-commercials',

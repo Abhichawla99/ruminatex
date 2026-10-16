@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'An AI video agency against a traditional production company, or an AI tool run in-house, for a brand film or commercial: what each route costs in money and hours, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, where AI footage still fails, and which one to hire.',
   published: '2026-03-08',
-  updated: '2026-10-14',
+  updated: '2026-10-16',
   keywords: [
     'ai video vs traditional video',
     'can ai replace a video production agency',
@@ -29,6 +29,7 @@ const PAGE = {
     'is it better to use ai or hire a production company',
     'should i use an ai video tool or hire an ai video production agency',
     'should brands use ai video generators or hire a production company',
+    'difference between an ai video generator and an ai video production partner',
     'how much does it cost to produce a 2-minute brand video with ai vs traditional production',
     'should i use ai to produce a brand film instead of hiring a video production company',
     'how much cheaper is ai video production vs agency',
@@ -94,6 +95,10 @@ const FAQS = [
   {
     q: 'Should I use AI to produce a brand film instead of hiring a video production company?',
     a: 'Use AI when the brand film tells its story through a made world: mood, place, product or a concept. Hire a video production company when the story depends on real people, such as your founder, your team or customers speaking for themselves. In an AI brand film the palette, light, casting and camera language have to be fixed before generation starts, or the film drifts from shot to shot.',
+  },
+  {
+    q: 'What is the difference between an AI video generator and an AI video production partner?',
+    a: 'A generator such as Runway, Veo, Kling or Sora is software: you write the prompts, get clips a few seconds long, rerun the ones that fail, and do the edit, sound and versions yourself. Runway sells 52 to 791 seconds of Gen-4.5 a month for USD 15 to 95 (October 2026). An AI video production partner such as Ruminate X is a studio that uses those tools for you and hands over a finished film: it writes and boards the idea, generates and checks every shot, sets your real logo and product from your files, and answers your review rounds. Pick the generator when someone in-house has the days; pick the partner when the film runs in paid media or a launch.',
   },
   {
     q: 'Should I use an AI video tool or hire an AI video production agency?',
