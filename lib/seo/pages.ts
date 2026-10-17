@@ -45,10 +45,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/blog/how-much-does-ai-video-production-cost',
     title: 'AI Video Production Cost and Agency Pricing',
-    question: 'how much does ai video production cost, and how do AI video production agencies price: per video, per campaign or per month',
+    question: 'how much does ai video production cost for brands in 2026, what should a SaaS or enterprise team budget, and how do AI video production agencies price',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-10-14',
+    updated: '2026-10-17',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -172,11 +172,11 @@ export const SEO_PAGES: SeoPage[] = [
   },
   {
     path: '/guides/brands-using-ai-commercials',
-    title: 'Brands Using AI Commercials: What Happened',
-    question: 'what companies are using AI-generated commercials, how did audiences react, and do AI-generated ads actually work',
+    title: 'AI Commercials by Big Brands: What Happened',
+    question: 'which AI commercials have brands made, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-15',
+    updated: '2026-10-17',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -232,7 +232,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, can drug ads use AI actors, and what rules cover pharma celebrity endorsements',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-09',
+    updated: '2026-10-17',
   },
   {
     path: '/guides/ai-medical-animation',

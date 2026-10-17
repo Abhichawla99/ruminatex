@@ -19,7 +19,7 @@ const PAGE = {
   description:
     'Which drug brands and pharmacies have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter, Grubb\'s Pharmacy\'s apology in DC), the Saphnelo, Icotyde and Peak Blue Rx "is this AI?" questions, what FDA rules apply to AI imagery, who may appear in a drug ad (actors, celebrities, AI people), and why both drug campaigns used animals instead of patients.',
   published: '2026-10-01',
-  updated: '2026-10-09',
+  updated: '2026-10-17',
   keywords: [
     'ai generated pharma commercial',
     'which pharma company is using ai',
@@ -29,6 +29,9 @@ const PAGE = {
     'ai pharmaceutical commercial',
     'peak blue rx ai commercial',
     'is the icotyde commercial made with ai',
+    'is the icotyde commercial ai generated',
+    'does the icotyde commercial use ai',
+    'are the people in the icotyde commercial ai',
     'ai generated pharma commercial actors',
     'can pharma ads use ai actors',
     'pharma celebrity endorsements',
@@ -231,7 +234,7 @@ export default function Page() {
           2024). None of these suspicions has been confirmed by the companies or reported by a news outlet as of October
           2026.
         </p>
-        <h3>Is the Icotyde commercial made with AI?</h3>
+        <h3>Is the Icotyde commercial AI generated?</h3>
         <p>
           The most-watched case in 2026 is Johnson &amp; Johnson&apos;s ad for Icotyde, the once-daily psoriasis pill FDA{' '}
           <a href={AJMC_ICOTYDE}>approved in March 2026</a>. The spot, &ldquo;Unbelievable&rdquo;, set to the EMF song,{' '}

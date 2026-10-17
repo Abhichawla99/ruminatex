@@ -19,12 +19,15 @@ const PAGE = {
   path: '/blog/how-much-does-ai-video-production-cost',
   title: 'AI Video Production Cost and Agency Pricing',
   description:
-    'What AI video production costs in 2026 at each level, from self-serve tools to studios, how AI video production agencies price (per video, per campaign, per month) with their published prices and sources, what drives the number, and how much cheaper it is than a traditional agency.',
+    'What AI video production costs brands in 2026 at each level, from self-serve tools to studios, three worked budgets (a 20-person SaaS company, a consumer launch, an enterprise team), what AI video platforms charge for enterprise workflows, how AI video production agencies price, and what drives the number.',
   published: '2026-02-22',
-  updated: '2026-10-14',
+  updated: '2026-10-17',
   keywords: [
     'how much does ai video production cost',
+    'how much does ai video production cost for brands in 2026',
     'ai video production cost',
+    'how much should a saas company budget for ai video',
+    'ai video platform for enterprise workflows cost',
     'ai video production agency pricing',
     'how much does it cost to make an ai video',
     'ai video agency pricing',
@@ -45,11 +48,25 @@ const MAW = 'https://mawaistudios.com/'
 const SUPERSIDE = 'https://www.superside.com/pricing'
 const KNOWLIFY = 'https://knowlify.com/articles/explainer-video-agency-cost-guide'
 const VIDPROS = 'https://vidpros.com/ai-video-production-agency/'
+const SYNTHESIA = 'https://www.synthesia.io/pricing'
+const HEYGEN = 'https://www.heygen.com/pricing'
 
 const FAQS = [
   {
     q: 'How much does it cost to produce an AI video?',
     a: 'It depends on who makes it. Self-serve AI video tools cost about $20 to $300 a month (Lemonlight, March 2026), but you write, generate and edit yourself. Freelancers charge from about $500 for a simple short asset to $5,000 for a polished one. AI studios publish prices from USD 2,500 to 3,500 for a 15 to 60 second hero spot and GBP 15,000 to 45,000 for a broadcast commercial (Versely, September 2026). Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), linked on this page
+  },
+  {
+    q: 'How much does AI video production cost for brands in 2026?',
+    a: 'For a finished film made by someone else, published prices in 2026 start around USD 1,500 for one 15 to 60 second video (MAW AI Studios) and USD 2,500 for a hero spot at AI studios (Versely, September 2026), rise to about USD 5,000 for a hero film with three cutdowns, and reach GBP 15,000 to 45,000 for a broadcast commercial. Doing it yourself costs a tool subscription of USD 18 to 149 a month for presenter platforms such as Synthesia and HeyGen (October 2026) plus your own hours. Ruminate X quotes each brand film and commercial from the brief.', // claims-ok: MAW AI Studios, Versely, Synthesia and HeyGen pricing pages, all linked on this page
+  },
+  {
+    q: 'How much should a 20 person SaaS company budget for AI video?',
+    a: 'Add up what you will make, not a share of revenue. A typical first year for a 20-person SaaS company is one launch film with cutdowns plus a steady run of demo and onboarding videos. At October 2026 published prices that is about USD 5,000 for a studio-made hero film with three cutdowns (MAW AI Studios) plus USD 768 a year for one Synthesia Pro seat or USD 1,788 for one HeyGen Business seat, so roughly USD 5,800 to 6,800 before anyone\'s time. A screen-recorded product demo still needs your own recordings; generators cannot draw your real interface.', // claims-ok: MAW AI Studios, Synthesia and HeyGen pricing pages, linked on this page
+  },
+  {
+    q: 'How much does an AI video platform for enterprise workflows cost?',
+    a: 'Both of the large presenter platforms keep enterprise prices private. Synthesia lists Enterprise as custom pricing, with SSO, SCORM export and unlimited video minutes, above Pro at USD 89 a month (USD 64 billed yearly). HeyGen lists Enterprise as "Contact Sales" above Business at USD 149 a month plus USD 20 a seat, which already includes SSO and SCORM. Checked October 2026. Expect a quote tied to seats and volume, and ask about security reviews, data use and output ownership in writing.', // claims-ok: Synthesia and HeyGen pricing pages, linked on this page
   },
   {
     q: 'How much cheaper is AI video production than a traditional agency?',
@@ -88,7 +105,7 @@ export default function Page() {
     <Guide page={PAGE} faqs={FAQS} films={['LYA3Do3KEN0']}>
       <GuideHero
         eyebrow="Pricing"
-        title="How much does AI video production cost?"
+        title="How much does AI video production cost for brands in 2026?"
         dek="For the marketing lead or founder building a budget for an AI-made commercial or brand film, who keeps finding prices that run from a monthly subscription to a broadcast budget."
         updated={PAGE.updated}
       />
@@ -129,7 +146,67 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Against an agency" title="How much cheaper is AI video production than an agency?" alt>
+      <GuideSection eyebrow="Budgets" title="How much does AI video production cost for brands in 2026? Three budgets" alt>
+        <p>
+          Budget questions usually arrive with a company attached: a 20-person software company, a consumer brand with
+          a launch date, an enterprise team that needs video every week. Each row below is built only from prices
+          published on the pages linked in the caption, at the lowest tier that fits. Your own team&apos;s time is not in
+          the totals.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Arithmetic from published prices: <a href={MAW}>MAW AI Studios</a> packages, <a href={SYNTHESIA}>Synthesia
+              pricing</a> (Pro billed yearly), <a href={HEYGEN}>HeyGen pricing</a>, <a href={VERSELY}>Versely</a>
+              (September 2026) and <a href={SUPERSIDE}>Superside pricing</a>. USD unless marked. Checked October 2026.
+              These are examples to compare quotes against, not {studio} prices.
+            </>
+          }
+          head={['Who is budgeting', 'What they usually need in a year', 'Published prices that fit', 'What it adds up to']}
+          rows={[
+            ['A 20-person SaaS company', 'One launch film with cutdowns; a run of demo, onboarding and help videos', 'Hero film with 3 cutdowns and voiceover from 5,000 (MAW Ignite); one presenter seat at 768 a year (Synthesia Pro) or 1,788 a year (HeyGen Business)', 'About 5,800 to 6,800, plus your screen recordings and editing time'], // claims-ok: MAW AI Studios, Synthesia and HeyGen pricing pages, linked in the caption
+            ['A consumer brand launching a product', 'A hero spot, cutdowns in 9:16 and 1:1, hook variants for paid social', 'Hero spot from 2,500 at AI studios (Versely); hero plus 3 cutdowns from 5,000 (MAW Ignite); GBP 15,000 to 45,000 for a broadcast asset (Versely)', 'About 5,000 for social and web; five figures once it airs on TV'], // claims-ok: MAW AI Studios and Versely, linked in the caption
+            ['An enterprise comms or training team', 'Dozens of presenter videos a month, in several languages, with SSO and an LMS', 'HeyGen Business 149 a month plus 20 a seat (SSO, SCORM); Synthesia and HeyGen Enterprise by quote; an agency subscription from 15,000 a month plus a 1,000 software fee (Superside)', '2,748 a year for five HeyGen Business seats; an enterprise quote above that; six figures a year for an agency team'], // claims-ok: HeyGen, Synthesia and Superside pricing pages, linked in the caption
+          ]}
+        />
+        <p>
+          For the software company, a generator cannot draw your real interface, so a product demo is your own screen
+          recording, edited, with an AI presenter or AI scenes around it. Budget the recording
+          and the edit, not more generation credits. The <Link href="/ai-commercial-production">AI commercial
+          production</Link> page has a six-shot example of how a software ad is built.
+        </p>
+        <h3>AI video platform costs for enterprise workflows</h3>
+        <p>
+          Teams that will make the videos themselves are buying seats, minutes and admin controls. Published tiers,
+          read on each pricing page in October 2026:
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Sources: <a href={SYNTHESIA}>Synthesia pricing</a> and <a href={HEYGEN}>HeyGen pricing</a>, read October
+              2026. USD a month. Enterprise prices are not published by either company.
+            </>
+          }
+          head={['Plan', 'Price', 'Video allowance', 'SSO and SCORM']}
+          rows={[
+            ['Synthesia Starter', '29, or 18 billed yearly', 'About 12 minutes a month', 'No'],
+            ['Synthesia Pro', '89, or 64 billed yearly', 'About 60 minutes a month', 'No'],
+            ['Synthesia Enterprise', 'Custom', 'Unlimited minutes, custom editors and guests', 'Yes'],
+            ['HeyGen Pro', '49', '1,000 credits, videos up to 30 minutes', 'No'],
+            ['HeyGen Business', '149, plus 20 per extra seat', '1,500 credits, videos up to 60 minutes', 'Yes'],
+            ['HeyGen Enterprise', 'Contact sales', 'No maximum length', 'Yes, plus SCIM and MFA'],
+          ]}
+        />
+        <p>
+          Seats, minutes and the security review usually set the enterprise quote. Ask in
+          writing who owns the output, whether your scripts and footage train their models, and what happens to credits you
+          do not use in a month. The procurement questions we would put to
+          any platform or studio are on <Link href="/ai-video-production-enterprise">AI corporate video
+          production</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Against an agency" title="How much cheaper is AI video production than an agency?">
         <p>
           The published claims are large.{' '}
           <a href={LEMONLIGHT}>Lemonlight</a> says an expert-led 30 second AI video costs roughly 60% less {/* claims-ok: Lemonlight's published claim, linked here */} than traditional
@@ -167,7 +244,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Agency pricing" title="AI video production agency pricing: per video, per campaign or per month">
+      <GuideSection eyebrow="Agency pricing" title="AI video production agency pricing: per video, per campaign or per month" alt>
         <p>
           AI video production agencies publish prices in three shapes: a price per video, a price per campaign, and a
           monthly fee for a set amount of work. The figures below are each company&apos;s own, read on its site in
@@ -219,7 +296,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Doing it yourself" title="What an AI video costs when you make it yourself" alt>
+      <GuideSection eyebrow="Doing it yourself" title="What an AI video costs when you make it yourself">
         <p>
           A tool subscription is the smallest line. The larger ones are generations you throw away and hours. The
           director of the Kalshi ad reported 300 to 400 generations to get 15 usable clips, and he has more than 15 years
@@ -237,7 +314,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="What moves the number" title="What drives the price of an AI brand film or commercial">
+      <GuideSection eyebrow="What moves the number" title="What drives the price of an AI brand film or commercial" alt>
         <GuideTable
           caption="The cost drivers Ruminate X prices from, in the order they usually matter."
           head={['Driver', 'Why it costs more']}
@@ -261,7 +338,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Getting a quote" title="What to send to get an accurate AI video quote" alt>
+      <GuideSection eyebrow="Getting a quote" title="What to send to get an accurate AI video quote">
         <ol>
           <li>
             What the film is: a commercial, a <Link href="/ai-brand-film-agency">brand film</Link>, an about-us film, a
