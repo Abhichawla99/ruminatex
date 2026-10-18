@@ -318,6 +318,11 @@ export default function Page() {
           <li>How many review rounds are included, and how do you handle legal or medical review?</li>
           <li>Will the film be labelled as AI-made where the platform or the law requires it, and who does that?</li>
         </ol>
+        <p>
+          For creator-style paid social ads, the{' '}
+          <Link href="/ai-ugc-reels">AI UGC ad agencies a search turns up</Link>, what each sells and the questions to ask
+          about faces and consent are on the UGC ads page.
+        </p>
         <GuideFilm
           id="Zytga7zsShI"
           caption="Keen Footwear spec ad by Ruminate X (spec work, not commissioned). A product film where the shoe has to stay the same shoe in every shot."

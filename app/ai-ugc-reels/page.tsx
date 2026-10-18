@@ -19,13 +19,16 @@ const PAGE = {
   path: '/ai-ugc-reels',
   title: 'AI UGC Ads Agency for Brands',
   description:
-    'What an AI UGC ad is, what an AI UGC ads agency, a self-serve tool and real creators cost, whether AI UGC ads are legal (FTC, TikTok, Meta, New York), where they break, and how a studio makes them.',
+    'What an AI UGC ad is, the AI UGC ad agencies a search turns up and what each sells, what an agency, a self-serve tool and real creators cost, whether AI UGC ads are legal (FTC, TikTok, Meta, New York), and how a studio makes them.',
   published: '2026-03-08',
-  updated: '2026-10-04',
+  updated: '2026-10-18',
   keywords: [
     'ai ugc ads agency',
     'ai ugc ads',
     'ai ugc agency',
+    'ai ugc ad agency',
+    'best ai ugc ads agency',
+    'hardlaunch ugc agency',
     'are ai ugc ads legal',
     'can you do ugc content with ai',
     'do you have to disclose if an ad is ai',
@@ -38,6 +41,9 @@ const ugc = OFFERS.find((o) => o.key === 'ugc')!
 const short = film('zJgXuxFGU0U')
 
 const ADMIRAL = 'https://admiral.media/ai-ugc-agency'
+const UNREAL = 'https://www.unrealmediagrp.com/ai-ugc-agency'
+const HARDLAUNCH = 'https://hardlaunch.com'
+const SOCIAL_OPERATOR = 'https://socialoperator.ai/learn/best-ai-ugc-agencies-2026/'
 const CREATIFY_PRICING = 'https://creatify.ai/pricing'
 const COLLABSTR_UGC = 'https://collabstr.com/influencer-price-calculator/user-generated-content'
 const FTC_465 = 'https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-465/section-465.2'
@@ -61,7 +67,11 @@ const FAQS = [
   },
   {
     q: 'How much does an AI UGC ads agency cost?',
-    a: 'Published prices vary by model. Admiral Media lists AI UGC batches at EUR 10,000 for 20 video ads (EUR 500 each), EUR 16,000 for 40 and EUR 29,000 for 80, aimed at advertisers spending US$50,000 or more a month on paid media. A self-serve tool such as Creatify costs USD 39 or 99 a month for credits, and real UGC creators on Collabstr charge USD 195 on average (pages read October 2026). Ruminate X quotes UGC-style ads from the brief.',
+    a: 'Published prices vary by model. Admiral Media lists AI UGC batches at EUR 10,000 for 20 video ads (EUR 500 each), EUR 16,000 for 40 and EUR 29,000 for 80, aimed at advertisers spending US$50,000 or more a month on paid media. A self-serve tool such as Creatify costs USD 15 to 195 a month for credits, and real UGC creators on Collabstr charge USD 200 on average (pages read October 18, 2026). Ruminate X quotes UGC-style ads from the brief.',
+  },
+  {
+    q: 'Which AI UGC ad agencies are there?',
+    a: 'A US search for "ai ugc ads agency" in October 2026 turns up managed agencies such as Admiral Media (EUR 500 an ad in batches of 20) and Unreal Media Group (fixed price per written scope, synthetic performers disclosed), face-swap services such as HardLaunch (USD 99 to 1,499 a month for credits that put a new face on an existing creator video), self-serve tools such as Creatify, and ranked lists published by agencies that put themselves first. Ruminate X is an AI film studio that makes UGC-style ads alongside commercials and brand films.',
   },
   {
     q: 'Do AI UGC ads work?',
@@ -88,8 +98,8 @@ export default function Page() {
       <GuideAnswer>
         <p>
           An AI UGC ad is a scripted ad made to look like a creator&apos;s phone video, with a generated presenter. You can
-          make them yourself with a tool (Creatify is USD 39 to 99 a month), hire an AI UGC agency (Admiral Media lists EUR
-          500 a video in batches of 20), or pay real creators (USD 195 on average on Collabstr; pages read October 2026). They
+          make them yourself with a tool (Creatify is USD 15 to 195 a month), hire an AI UGC agency (Admiral Media lists EUR
+          500 a video in batches of 20), or pay real creators (USD 200 on average on Collabstr; pages read October 18, 2026). They
           are legal in the US when the presenter never poses as a real customer, and they need an AI label on TikTok and in
           ads that run in New York.
         </p>
@@ -123,15 +133,15 @@ export default function Page() {
           caption={
             <>
               From <a href={ADMIRAL}>Admiral Media</a>, <a href={CREATIFY_PRICING}>Creatify</a> and the{' '}
-              <a href={COLLABSTR_UGC}>Collabstr UGC price calculator</a>, read October 4, 2026. Each source sells what it
-              prices.
+              <a href={COLLABSTR_UGC}>Collabstr UGC price calculator</a>, read October 18, 2026 (Creatify cut its plan prices
+              after October 4). Each source sells what it prices.
             </>
           }
           head={['Option', 'Published price', 'Who writes, directs and fixes the shots']}
           rows={[
-            ['Self-serve tool (Creatify Starter / Pro)', 'USD 39 a month for 100 credits; USD 99 a month for 300 credits', 'Your team'],
-            ['AI UGC agency (Admiral Media)', 'EUR 10,000 for 20 ads (EUR 500 each), EUR 16,000 for 40, EUR 29,000 for 80; for advertisers spending US$50,000+ a month', 'The agency'],
-            ['Real UGC creators (Collabstr marketplace)', 'USD 195 on average per creator, across 1.3 million rates', 'The creator films; you brief and choose'],
+            ['Self-serve tool (Creatify Standard / Pro / Max / Business)', 'USD 15, 55, 95 or 195 a month, billed monthly, for 55, 280, 730 or 1,500 credits', 'Your team'],
+            ['AI UGC agency (Admiral Media)', 'EUR 10,000 for 20 ads up to 15 seconds (EUR 500 each), EUR 16,000 for 40 up to 30 seconds, EUR 29,000 for 80 up to 60 seconds; for advertisers spending US$50,000+ a month', 'The agency'],
+            ['Real UGC creators (Collabstr marketplace)', 'USD 200 on average, from more than 1.3 million data points', 'The creator films; you brief and choose'],
           ]}
         />
         <p>
@@ -144,7 +154,66 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US">
+      <GuideSection eyebrow="Who to hire" title="AI UGC ad agencies you will find in a search">
+        <p>
+          Search &ldquo;ai ugc ads agency&rdquo; or &ldquo;best ai ugc ads agency&rdquo; and the results mix four kinds of
+          company under one name: managed agencies that write and produce the ads, face-swap services that put a new face on
+          a video a real creator filmed, self-serve tools, and ranked lists written by agencies that place themselves first.
+          Each company below is described from its own page.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              From <a href={ADMIRAL}>Admiral Media</a>, <a href={UNREAL}>Unreal Media Group</a>,{' '}
+              <a href={HARDLAUNCH}>HardLaunch</a>, <a href={CREATIFY_PRICING}>Creatify</a> and{' '}
+              <a href={SOCIAL_OPERATOR}>Social Operator</a>, read October 18, 2026. Ruminate X from its own facts. Order is
+              not a ranking.
+            </>
+          }
+          head={['Company', 'What it sells', 'Published price', 'On disclosure']}
+          rows={[
+            ['Admiral Media', 'Managed AI UGC: scripting, AI production, post-production and human QA, with a creative strategist', 'EUR 10,000 to 29,000 a month for 20 to 80 ads; ideal client spends US$50,000+ a month on media', 'Calls AI UGC "scripted advertising"; no labelling practice stated'],
+            ['Unreal Media Group', 'Managed AI UGC for Meta, TikTok, Shorts and Reels, hook counts and voices set in a written scope', 'Fixed price per scope; none listed', '"Synthetic performers are disclosed as synthetic"'],
+            ['HardLaunch', 'AI face swap: replaces the person in an existing creator video and keeps the script, demo and timing; also makes the base videos', 'USD 99, 499 or 1,499 a month for 165, 1,000 or 3,000 credits; one credit is one second of face at 720p', 'Asks for consent for faces you bring; no labelling practice stated'],
+            ['Creatify', 'Self-serve tool: avatars, scripts and ad variants your team makes', 'USD 15 to 195 a month', 'Your team labels'],
+            ['Social Operator', 'Retainer agency for consumer tech; its own "best AI UGC agencies" list ranks it first', 'None for itself; its list says USD 8,000 to 12,000 a month is typical for brands with USD 5 to 50 million in annual recurring revenue', 'Its FAQ says policy is evolving'],
+            [studio, `${ugc.name} beside commercials and brand films, from one look`, 'Quoted from the brief', 'AI disclosure in the edit where the platform or law asks for it'],
+          ]}
+        />
+        <h3>Questions to ask an AI UGC agency before you sign</h3>
+        <ol>
+          <li>
+            <strong>Whose face is it?</strong> A licensed library avatar, a presenter designed for you, or a real creator
+            whose face was swapped. Library faces turn up in other brands&apos; ads.
+          </li>
+          <li>
+            <strong>Who agreed to what?</strong> For a face swap, ask for the written consent of the creator who filmed the
+            original and of the person whose face replaces theirs, and what each agreed the video can be used for.
+          </li>
+          <li>
+            <strong>Does any ad speak as a customer?</strong> Under the FTC rule cited below, a presenter who never used the
+            product cannot say they did. Ask to see the scripts before production.
+          </li>
+          <li>
+            <strong>Who labels the ads, and where?</strong> TikTok and New York have labelling rules; ask whether the agency
+            adds the disclosure or leaves it to you.
+          </li>
+          <li>
+            <strong>Hooks or variants?</strong> Twenty ads can mean twenty concepts or one script with twenty first lines. Ask
+            how many concepts the batch holds.
+          </li>
+          <li>
+            <strong>Who fixes the product?</strong> Ask how the agency keeps your pack and label exact, and who pays for
+            reruns when a hand or a label breaks.
+          </li>
+        </ol>
+        <p>
+          The same checks, for any AI production company, are in{' '}
+          <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US" alt>
         <GuideTable
           caption={
             <>
@@ -171,7 +240,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Where it breaks" title="Where AI UGC ads break, and what fixes them" alt>
+      <GuideSection eyebrow="Where it breaks" title="Where AI UGC ads break, and what fixes them">
         <GuideTable
           caption="Common failures in generated creator-style ads, and what a studio does about each."
           head={['Problem', 'What the viewer notices', 'Fix']}
@@ -190,7 +259,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it is made" title="How a studio makes UGC-style ads">
+      <GuideSection eyebrow="How it is made" title="How a studio makes UGC-style ads" alt>
         <ol>
           <li>
             <strong>Brief.</strong> The product, the audience, the offer, the claims your legal team has approved, the
