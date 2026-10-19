@@ -181,11 +181,11 @@ const intentPaths = [
       'For campaign teams that need ads, hero spots, and concept-driven commercial production.',
   },
   {
-    href: '/ai-product-video-agency',
-    eyebrow: 'Conversion Intent',
-    title: 'Product video agency',
+    href: '/ai-video-production-enterprise',
+    eyebrow: 'Company Intent',
+    title: 'AI corporate video production',
     description:
-      'For launches, demos, and product storytelling built to improve clarity, demand, and conversion.',
+      'For comms, HR and marketing leads who need an about-us film, a mission film or a conference opener without a shoot.',
   },
   {
     href: '/video-production-calgary',

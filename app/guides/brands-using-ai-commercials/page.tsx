@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'AI commercials from Svedka\'s 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-17',
+  updated: '2026-10-19',
   keywords: [
     'ai commercials',
     'ai commercial',
@@ -40,6 +40,11 @@ const PAGE = {
     'commercials using ai',
     'are commercials using ai',
     'companies using ai ads',
+    'companies using ai for ads',
+    'brands that use ai marketing',
+    'companies using ai for advertising',
+    'why are so many companies using ai for ads now',
+    'is coca-cola using ai ads',
     'did progressive use ai for an ad',
     'do ai-generated ads actually work',
     'why are commercials using ai now',
@@ -87,6 +92,10 @@ const FAQS = [
   {
     q: 'What companies are using AI in their commercials?',
     a: 'Svedka (a 30-second Super Bowl LX ad in February 2026, made by Silverside AI and described by Adweek as the first primarily AI-generated Super Bowl commercial), Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb\'s Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this Ruminate X page.',
+  },
+  {
+    q: 'Is Coca-Cola using AI ads?',
+    a: 'Yes. Coca-Cola ran "Masterpiece", an AI ad, in 2023, then remade its 1995 "Holidays Are Coming" ad with generative AI in 2024 (Secret Level, Silverside AI and Wild Card, four AI models) and again in 2025 with Secret Level, swapping the people for generated animals. Both holiday versions drew backlash: NBC News reported viewers calling the 2024 ad "soulless", and Forbes headlined the 2025 one "Coca-Cola Sparks Backlash With AI-Generated Christmas Ad, Again". "Masterpiece" did not draw one.',
   },
   {
     q: 'Do AI-generated ads actually work?',
@@ -166,7 +175,7 @@ export default function Page() {
         </p>
       </GuideAnswer>
 
-      <GuideSection eyebrow="The cases" title="Eleven AI commercials, who made them and what happened">
+      <GuideSection eyebrow="The cases" title="Companies using AI for ads: eleven commercials and what happened">
         <GuideTable
           caption={
             <>
@@ -418,7 +427,7 @@ export default function Page() {
           products, stylised scenes), and to testing the AI cut against a filmed or static version before the media
           budget goes behind it.
         </p>
-        <h3>Why are commercials using AI now?</h3>
+        <h3>Why are so many companies using AI for ads now?</h3>
         <p>
           Cost and speed, on particular briefs. Progressive shelved &ldquo;Drive Like an Animal&rdquo; in 2024 because
           it did not fit the budget, then made it with AI a year later. Kalshi&apos;s NBA Finals ad cost about USD 2,000

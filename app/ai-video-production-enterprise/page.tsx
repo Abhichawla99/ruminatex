@@ -20,9 +20,10 @@ const PAGE = {
   description:
     'Which corporate videos a company can make with AI and which still need a camera, enterprise AI video platforms against a studio, what corporate video costs filmed and with AI, and the consent and disclosure rules for AI presenters.',
   published: '2026-03-08',
-  updated: '2026-10-05',
+  updated: '2026-10-19',
   keywords: [
     'ai corporate video production',
+    'which company creates ai-generated video for corporate communications',
     'enterprise ai video production',
     'are ai-generated videos good enough for enterprise use',
     'corporate ai video production',
@@ -41,9 +42,16 @@ const brandFilm = OFFERS.find((o) => o.key === 'brand-film')!
 const hundred = RELATED.find((r) => r.name === '100creatives')!
 
 const SYNTHESIA_ENT = 'https://www.synthesia.io/enterprise'
+const LEADDE_POST = 'https://leadde.ai/blog/how-to-produce-a-corporate-video-with-ai'
+const SYNIMA = 'https://www.synima.com/ai-video-agency/'
+const STUDIO_351 = 'https://351studio.com/ai-video-production'
 const INVIDEO_ENT = 'https://invideo.io/enterprise'
 
 const FAQS = [
+  {
+    q: 'Which company creates AI-generated video for corporate communications?',
+    a: 'Three kinds of company do. Avatar platforms such as Synthesia and Leadde sell software your comms team uses to make training, update and onboarding videos itself. AI video agencies such as Synima (offices in London, New York, Los Angeles and Amsterdam) and 351 Studio make the videos for you. Ruminate X, an AI film studio in Calgary, makes about-us, mission and avatar films for companies with every frame generated and no shoot. If the message needs a real executive or employee on camera, a corporate video production company with a crew is the right hire.',
+  },
   {
     q: 'Are AI-generated videos good enough for enterprise use?',
     a: 'For training, internal updates, product stories, conference openers and brand films told through a made world, yes, when someone reviews every shot and sets the logo, names and on-screen text from the company\'s own files. Generated footage is still weakest at the same face across many shots, hands, exact packaging and text. Before rollout, an enterprise also needs the tool\'s or studio\'s answer on security, ownership of outputs, whether inputs train the model, commercial-use terms, consent for any real person\'s likeness, and disclosure. Ruminate X makes company films entirely with AI; anything that depends on a real executive or employee speaking should be filmed.',
@@ -153,6 +161,35 @@ export default function Page() {
             ['Brand consistency', 'Synthesia lists brand guardrails; invideo a brand "context engine"', 'How the look is locked before generation, and how logos and text are set'],
           ]}
         />
+        <h3>Which company creates AI-generated video for corporate communications?</h3>
+        <p>
+          Three kinds of company answer that search, and they sell different things. The table describes each from its
+          own page.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              Each row from the company&apos;s own page: <a href={SYNTHESIA_ENT}>Synthesia</a>,{' '}
+              <a href={LEADDE_POST}>Leadde</a> (its October 2026 corporate video post), <a href={SYNIMA}>Synima</a>,{' '}
+              <a href={STUDIO_351}>351 Studio</a>. Synthesia read October 5, 2026; the others October 19, 2026. None of them
+              publishes an enterprise price.
+            </>
+          }
+          head={['Company', 'Kind', 'What it says it does', 'Who makes the video']}
+          rows={[
+            ['Synthesia', 'Avatar platform', 'Enterprise plan with SOC 2, ISO 42001, SSO and brand guardrails', 'Your team'],
+            ['Leadde', 'Avatar platform', 'Ranks itself first for end-to-end corporate video workflows in its own 2026 list', 'Your team'],
+            ['Synima', 'AI video agency', 'Lists AI avatar production and AI learning and training services; offices in London, New York, Los Angeles and Amsterdam', 'The agency'],
+            ['351 Studio', 'AI video agency', 'Generative AI video for marketing, storytelling and advertising, with editing and post-production', 'The agency'],
+            [studio, 'AI film studio', `${aboutUs.name}, ${brandFilm.name.toLowerCase()} and ${avatar.name.toLowerCase()}, every frame generated; based in ${SITE.city}`, 'The studio'],
+          ]}
+        />
+        <p>
+          Pick by who should do the work. If your comms team will make a video a week, a platform seat is cheaper than any
+          agency. If the film carries the company to staff, candidates or customers once a year, an agency or studio
+          writes it, reruns the shots that fail and signs off the edit with you. If the message rests on a real person,
+          film it with a crew instead of hiring anyone in the table.
+        </p>
         <h3>Are AI-generated videos good enough for enterprise use?</h3>
         <p>
           For training, internal updates, product stories, conference openers and brand films told through a made world,

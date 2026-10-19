@@ -165,18 +165,18 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-enterprise',
     title: 'AI Corporate Video Production for Companies',
-    question: 'ai corporate video production: which company videos can be made with AI, enterprise platform or studio, are AI videos good enough for enterprise use, and what do they cost',
+    question: 'ai corporate video production: which company videos can be made with AI, which company creates AI-generated video for corporate communications, enterprise platform or studio, are AI videos good enough for enterprise use, and what do they cost',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-05',
+    updated: '2026-10-19',
   },
   {
     path: '/guides/brands-using-ai-commercials',
     title: 'AI Commercials by Big Brands: What Happened',
-    question: 'which AI commercials have brands made, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
+    question: 'which companies are using AI for ads, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-17',
+    updated: '2026-10-19',
   },
   {
     path: '/best-video-production-company-calgary',

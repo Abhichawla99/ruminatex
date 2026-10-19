@@ -124,7 +124,9 @@ export default function ServicesPage() {
           <Link href="/ai-product-videos" className="text-[#ebff00] hover:underline">AI product videos</Link>. For a presenter
           or spokesperson who explains your product, trains your staff or speaks to customers, see{' '}
           <Link href="/ai-avatar-videos" className="text-[#ebff00] hover:underline">AI avatar videos</Link>, including when a
-          real person on camera is the better choice.
+          real person on camera is the better choice. For about-us, mission and conference films for a company&apos;s own
+          staff, candidates or investors, see{' '}
+          <Link href="/ai-video-production-enterprise" className="text-[#ebff00] hover:underline">AI corporate video production</Link>.
         </p>
       </section>
 
