@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose a video production company in Calgary: camera crew, freelancer or AI studio, what Calgary firms publish as prices, what a real quote separates out, how to read reviews, and when an AI-only studio is the wrong hire.',
   published: '2026-03-08',
-  updated: '2026-09-27',
+  updated: '2026-10-20',
   keywords: [
     'video production calgary',
     'calgary video company',
@@ -28,7 +28,6 @@ const PAGE = {
     'video production company',
     'video production companies calgary',
     'best video production company calgary',
-    'ai video agency calgary',
   ],
 }
 
@@ -86,7 +85,9 @@ export default function Page() {
           Pick by what the video has to show. If it needs your own people, a customer, a venue or an event on camera,
           hire a Calgary crew: published local prices run $2,500 to $6,000 CAD for a lean one-day video and $6,000 to
           $15,000 for a polished two to three minute brand or corporate video (DCFOTOFILM, July 2026). {/* claims-ok: DCFOTOFILM Calgary cost guide, linked in the price table */} If
-          it is a cinematic brand film or ad that nobody could afford to shoot, an AI studio can make it. Either way,
+          it is a cinematic brand film or ad that nobody could afford to shoot, an AI studio can make it; the Calgary
+          firms that sell <Link href="/markets/ai-video-production-canada">AI video production in Calgary</Link> are
+          compared on a separate page. Either way,
           compare quotes that price pre-production, the shoot and post separately and state a fixed number of revisions.
         </p>
       </GuideAnswer>

@@ -20,13 +20,14 @@ const PAGE = {
   description:
     'What an AI-only film studio in Calgary makes, how the Calgary firms that sell AI video differ, what AI video costs in Canada at published prices, the Quebec French rule and Ad Standards preclearance for ads, who owns AI footage under Canadian law, and when to hire a Calgary camera crew instead.',
   published: '2026-03-08',
-  updated: '2026-10-06',
+  updated: '2026-10-20',
   keywords: [
-    'ai video agency calgary',
     'ai video production calgary',
+    'ai video agency calgary',
     'ai marketing video calgary',
     'ai promo video calgary',
     'synthetic video content calgary',
+    'how much does it cost to produce an ai video',
     'ai video agency canada',
     'ai commercial production company canada',
   ],
@@ -41,6 +42,7 @@ const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-
 const VSTRAT = 'https://www.vinc.ca/ai-video'
 const MAVEN = 'https://www.mavenmediagroup.ca/services/video-production-services'
 const UU = 'https://uudigital.agency/services/ai-video-production'
+const FRAMESMITHS = 'https://framesmiths.ai'
 const VALIANT = 'https://valiantdigital.ca/ai-agency-calgary'
 const IWEBGUY = 'https://i-webguy.ca/ai-video-development-in-calgary/'
 const QC_CHARTER = 'https://www.legisquebec.gouv.qc.ca/en/document/cs/C-11'
@@ -56,11 +58,15 @@ const FAQS = [
   },
   {
     q: 'Which AI video agencies are in Calgary?',
-    a: `Calgary firms that describe an AI video offer on their own sites, as of October 2026: ${studio}, an AI-only film studio that generates every frame of brand films and commercials; V Strategies, a production company with crews that partnered with FrameSmiths for hybrid AI and filmed work; Maven Media Group, a production company with AI-based video packages; UUDigital, which sells AI promo videos for social and ads at published prices; Valiant Digital, an AI automation agency that makes video with AI platforms; and I Web Guy, which makes AI video ads for digital and LED screens. Pick by the job: fixed-price social promos, a hybrid shoot with your own people on camera, or a cinematic film with no shoot.`,
+    a: `Calgary firms that describe an AI video offer on their own sites, as of October 2026: ${studio}, an AI-only film studio that generates every frame of brand films and commercials; FrameSmiths, an AI video agency that makes fully generated commercials and character animation as well as hybrid films that film real places, products and people and generate the rest; V Strategies, a production company with crews that partnered with FrameSmiths on hybrid work; Maven Media Group, a production company with AI-based video packages; UUDigital, which sells AI promo videos for social and ads at published prices; Valiant Digital, an AI automation agency that makes video with AI platforms; and I Web Guy, which makes AI video ads for digital and LED screens. Pick by the job: fixed-price social promos, a hybrid shoot with your own people on camera, or a cinematic film with no shoot.`,
   },
   {
     q: 'How much does AI video production cost in Canada?',
     a: 'Published prices vary by who makes the film. Crossroad Media in Surrey, BC says its AI commercials start at $2,500 and most 15 to 60 second spots land between $2,500 and $10,000 (checked September 2026). Self-serve AI tools cost about $20 to $300 a month and you do the work yourself; traditional filmed production starts around $15,000 (Lemonlight, March 2026). Ruminate X quotes each film from the brief.', // claims-ok: Crossroad Media AI commercials page and Lemonlight AI video cost guide, both linked on this page
+  },
+  {
+    q: 'How much does it cost to produce an AI video in Calgary?',
+    a: `It depends on what is being made and who makes it. UUDigital in Calgary publishes AI promo videos for social and ads from $500 a video and a monthly package of four or more from $1,200 a month (checked October 20, 2026). Crossroad Media in Surrey, BC puts most 15 to 60 second AI commercials at $2,500 to $10,000. FrameSmiths and ${studio}, the two Calgary studios that make cinematic AI commercials and films, do not publish prices and quote from the brief. A filmed production starts around $15,000 (Lemonlight, March 2026).`, // claims-ok: UUDigital, Crossroad Media and Lemonlight pages, all linked on this page
   },
   {
     q: 'Do AI video ads shown in Quebec have to be in French?',
@@ -143,14 +149,19 @@ export default function Page() {
           head={['Firm', 'What kind', 'What it says it makes', 'Published price']}
           rows={[
             [studio, 'AI-only film studio', 'Brand films, commercials, about-us films, avatar videos, UGC-style ads and product visuals, every frame generated', 'Quoted from the brief'],
-            [<a key="v" href={VSTRAT}>V Strategies, with FrameSmiths</a>, 'Production company with crews, partnered with an AI video agency', 'Commercials, brand films, corporate, training and campaign video; hybrid work that mixes AI environments with filmed footage', 'None published'],
+            [<a key="f" href={FRAMESMITHS}>FrameSmiths</a>, 'AI video agency', 'Fully generated commercials and character animation; hybrid films that film real places, products and people and generate the rest; product films, social cutdowns, 3D and VFX finishing', 'None published; quoted after a brief'],
+            [<a key="v" href={VSTRAT}>V Strategies</a>, 'Production company with crews, partnered with FrameSmiths', 'Commercials, brand films, corporate, training and campaign video; hybrid work that mixes AI environments with filmed footage', 'None published'],
             [<a key="m" href={MAVEN}>Maven Media Group</a>, 'Production company with crews', 'Packages for "videos that are primarily AI-based", next to filming and event packages', 'No AI price; says most video projects run $5,000 to $15,000'],
             [<a key="u" href={UU}>UUDigital</a>, 'Social and ad content shop', 'AI promo videos for social, web and ads in 9:16, 1:1 and 16:9', '$500 per video and up; monthly package of 4+ videos $1,200 a month and up'], // claims-ok: UUDigital AI video production page, linked in this row (their prices, not Ruminate X's)
             [<a key="va" href={VALIANT}>Valiant Digital</a>, 'AI automation agency', 'AI-generated video "using leading AI video platforms" for promos, training and personalized messages', 'No video price'],
             [<a key="i" href={IWEBGUY}>I Web Guy</a>, 'Web and digital shop', 'AI video ads for digital platforms and LED display screens', 'None published'],
           ]}
-          caption="Read on each firm's own page on October 6, 2026. Prices are as published, in the currency each page uses (none states it). A missing row means we found no AI video page for that firm, not that it does no AI work."
+          caption="Read on each firm's own page on October 6, 2026; FrameSmiths and UUDigital re-read October 20, 2026. Prices are as published, in the currency each page uses (none states it). A missing row means we found no AI video page for that firm, not that it does no AI work."
         />
+        <p>
+          FrameSmiths makes the closest work to {studio}&apos;s. It also offers hybrid films, where partner crews film your
+          real location, product or people and AI generates the rest; {studio} does not film at all.
+        </p>
         <p>
           If you need four social promos a month at a known price and the look can be
           whatever the platforms produce, a fixed-price content shop fits. If the film needs your own staff or customers
@@ -196,6 +207,15 @@ export default function Page() {
           ]}
           caption="Prices as published on each source page, checked September 2026. Crossroad Media does not state a currency. Scope differs between studios, so compare what each quote includes: script, revisions, music and voice licences, cutdowns."
         />
+        <h3>How much does it cost to produce an AI video in Calgary?</h3>
+        <p>
+          It depends on which of the four kinds of Calgary firm makes it. A social promo from a Calgary content shop has a
+          published price: <a href={UU}>UUDigital</a> starts at $500 a video, or $1,200 a month for four or more, {/* claims-ok: UUDigital AI video production page, linked here (their prices, not Ruminate X's) */}
+          with the script, AI generation, a human edit and exports in every ratio included. A cinematic commercial or
+          brand film costs more because each shot is generated many times and fixed by hand, and neither Calgary studio
+          that makes them, FrameSmiths or {studio}, publishes a price; both quote from the brief. The nearest published
+          figure for that work in Canada is Crossroad Media&apos;s $2,500 to $10,000 for most 15 to 60 second spots.
+        </p>
         <p>
           What moves a Canadian quote: length, the number of cutdowns and ratios, a French version, how many characters
           must stay consistent across shots, licensed music and voice, and how many review rounds your legal or regulatory

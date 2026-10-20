@@ -157,10 +157,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/markets/ai-video-production-canada',
     title: 'AI Video Production in Calgary and Canada',
-    question: 'ai video agency calgary: which Calgary firms make AI video and how they differ, what it costs in Canada and which Canadian ad rules apply',
+    question: 'ai video production calgary: which Calgary firms make AI video and how they differ, how much it costs to produce an AI video in Calgary and Canada, and which Canadian ad rules apply',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-06',
+    updated: '2026-10-20',
   },
   {
     path: '/ai-video-production-enterprise',
@@ -173,10 +173,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/brands-using-ai-commercials',
     title: 'AI Commercials by Big Brands: What Happened',
-    question: 'which companies are using AI for ads, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
+    question: 'which companies are using AI for ads, what TV commercials are AI, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-19',
+    updated: '2026-10-20',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -184,7 +184,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'video production calgary: how do I choose a Calgary video production company, crew or AI studio',
     kind: 'guide',
     published: '2026-03-08',
-    updated: '2026-09-27',
+    updated: '2026-10-20',
   },
   {
     path: '/affordable-video-production-calgary',

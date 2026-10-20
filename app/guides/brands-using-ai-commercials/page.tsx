@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'AI commercials from Svedka\'s 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-19',
+  updated: '2026-10-20',
   keywords: [
     'ai commercials',
     'ai commercial',
@@ -54,6 +54,11 @@ const PAGE = {
     'are ai commercials allowed',
     'is ai making tv commercials',
     'ai commercials on tv',
+    'what tv commercials are ai',
+    'why are there so many ai commercials on tv',
+    'are tv ads using ai now',
+    'which commercials are ai',
+    'are all commercials ai now',
     'svedka super bowl ai ad',
   ],
 }
@@ -86,12 +91,22 @@ const ADWEEK_SVEDKA_REACT = 'https://www.adweek.com/creativity/creatives-react-s
 const FTC_465 = 'https://www.law.cornell.edu/cfr/text/16/465.2'
 const NY_ADS = 'https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-law-requiring-disclosure-when-advertisements-include-ai'
 const EU_ART50 = 'https://artificialintelligenceact.eu/article/50/'
+const GALLUP_ADS = 'https://news.gallup.com/poll/713222/americans-aren-sold-businesses-using-ai-advertising.aspx'
+const TVTECH_WAYMARK = 'https://tvtechnology.com/news/fox-television-stations-partner-with-waymark-on-generative-ai-ads'
 const CONVERSATION_HUMAN = 'https://theconversation.com/a-backlash-against-ai-imagery-in-ads-may-have-begun-as-brands-promote-human-made-269276'
 
 const FAQS = [
   {
     q: 'What companies are using AI in their commercials?',
     a: 'Svedka (a 30-second Super Bowl LX ad in February 2026, made by Silverside AI and described by Adweek as the first primarily AI-generated Super Bowl commercial), Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb\'s Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this Ruminate X page.',
+  },
+  {
+    q: 'What TV commercials are AI?',
+    a: 'National TV ads made mostly with AI include Svedka\'s 30-second Super Bowl LX spot (February 2026, made by Silverside AI), Kalshi\'s ad that aired during the 2025 NBA Finals (made with Google Veo 3 for about USD 2,000), and trivago\'s localized TV ads from December 2023, which used AI voices to put one actor\'s ad into more than ten languages. Many more are local: TV stations sell small businesses ads generated with tools such as Waymark, which Fox Television Stations rolled out across its stations in 17 markets in 2023. Each is sourced on this Ruminate X page.',
+  },
+  {
+    q: 'Why are there so many AI commercials on TV?',
+    a: 'Part of the answer is local TV, where AI made a commercial cheap enough for businesses that never had one. Stations sell generated ads alongside airtime: Fox Television Stations put Waymark\'s generative AI ad tool in its stations in 17 markets in 2023, letting a local business make a commercial with a voice-over in five minutes or less (TV Technology, September 2023), and Gray Television and Spectrum Reach had also adopted the platform. National brands use AI for spots a shoot could not deliver in time or on budget, such as Kalshi\'s NBA Finals ad. In a Bentley University-Gallup survey in May 2026, 79% of US adults said they had seen an ad in the past 30 days that appeared to be made with AI.',
   },
   {
     q: 'Is Coca-Cola using AI ads?',
@@ -222,6 +237,31 @@ export default function Page() {
           (Progressive, Popeyes) and a neighbourhood pharmacy&apos;s imagery are all in the table above. What the cases
           share is that the idea and the script still came from people, and the AI part replaced a shoot or a CGI
           pipeline. Svedka&apos;s robots suited it because a robot that looks slightly unreal is supposed to.
+        </p>
+        <h3>What TV commercials are AI?</h3>
+        <p>
+          The national TV ads on this page that were made mostly with AI: Svedka&apos;s Super Bowl LX spot above,
+          Kalshi&apos;s ad during the 2025 NBA Finals (Veo 3, about USD 2,000, two days), and trivago&apos;s localized TV
+          ads from December 2023, where AI voices carried one actor&apos;s ad into more than ten languages (details below).
+          Coca-Cola&apos;s holiday remakes are widely called TV ads, but the sources we read describe the reaction online,
+          not where they aired, so they are in the table without that label.
+        </p>
+        <h3>Why are there so many AI commercials on TV?</h3>
+        <p>
+          Part of the answer is local TV, where AI made a commercial cheap enough for businesses that never had one.
+          Stations sell the ad and the airtime together: in September 2023 Fox Television Stations rolled out
+          Waymark&apos;s generative AI ad tool across its stations in 17 markets, so a local business can make a commercial
+          with a professional voice-over &ldquo;in five minutes or less&rdquo;, and Gray Television and Spectrum Reach had
+          also adopted the platform (<a href={TVTECH_WAYMARK}>TV Technology</a>). The other part is national brands using
+          AI for spots a shoot could not deliver in time or on budget, like Kalshi&apos;s.
+        </p>
+        <h3>Are TV ads using AI now?</h3>
+        <p>
+          Viewers think so. In the 2026 Bentley University-Gallup survey of 3,270 US adults (May 4 to 11, published
+          August 19), <a href={GALLUP_ADS}>79% said they had seen ads in the past 30 days that appeared to be made with
+          AI</a>. {/* claims-ok: Bentley-Gallup 2026, linked here */} Most did not like it: 49% viewed businesses using AI to make ads negatively, 32% were
+          neutral and 19% positive, and 66% of adults aged 18 to 29 were negative. Disclosure did not fix the part
+          people object to most: 62% said AI-created people or voices in ads are unacceptable even when disclosed.
         </p>
         <h3>Are AI commercials allowed?</h3>
         <p>
