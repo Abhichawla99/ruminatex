@@ -4,13 +4,12 @@ import { blogPosts } from '@/lib/blog'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/blog' },
-  title: 'Blog | AI Video Production Guides, Pricing & Strategy',
+  title: 'Blog | AI Video Production Guides and Strategy',
   description:
-    'Explore Ruminate X guides on AI video production, pricing, agency comparisons, Calgary video production, and brand video strategy for high-intent buyers and modern marketing teams.',
+    'Explore Ruminate X guides on AI video production, agency comparisons, Calgary video production, and brand video strategy for high-intent buyers and modern marketing teams.',
   keywords: [
     'AI video production blog',
     'AI video production guides',
-    'AI video production pricing',
     'AI video agency comparison',
     'video production Calgary blog',
     'brand video strategy guides',
@@ -20,6 +19,13 @@ export const metadata: Metadata = {
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const featuredResources = [
+  {
+    href: '/blog/how-much-does-ai-video-production-cost',
+    title: 'AI Video Production Cost and Agency Pricing',
+    description:
+      'What AI video studios, agencies and platforms charge per video, per campaign and per month, from their own published prices.',
+    type: 'Pricing Guide',
+  },
   {
     href: '/blog/how-much-does-video-production-cost-calgary',
     title: 'How Much Does Video Production Cost in Calgary?',
@@ -139,7 +145,9 @@ export default function BlogPage() {
           This is the resource hub for teams researching AI video production, comparing agency models,
           planning video campaigns, and pricing out the smartest way to produce brand content.
           If you&apos;re deciding between agencies, budgeting a campaign, or building a video strategy,
-          start with the section that matches your search intent.
+          start with the section that matches your search intent. The guide to{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">AI video production agency pricing</Link> lists what
+          studios, agencies and platforms publish, per video and per month.
         </p>
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-[#666666]">
           {['Pricing', 'Agency Comparisons', 'Calgary Video Production', 'Brand Strategy', 'AI Production Guides'].map((topic) => (

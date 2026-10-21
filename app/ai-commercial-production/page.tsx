@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-16',
+  updated: '2026-10-21',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -80,7 +80,7 @@ const FAQS = [
   },
   {
     q: 'Which companies offer AI commercial production?',
-    a: `In October 2026 a search for an AI commercial production company returns mostly small studios, such as Daydrm Studio (founded by Aaron Adler, represented to agencies by Dubay), MAW AI Studios in Islamabad (minimum budget USD 1,000 to 10,000 on DesignRush), Sadara Studio in Riyadh and GOAT Studios in La Plata, Argentina, alongside production companies that add AI to filmed work. ${studio} is an AI-only studio in ${SITE.city}. Ask each one for a shot where a face turns, a hand holds your kind of product and a logo is on screen, and for the number of review rounds in the quote.`,
+    a: `In October 2026 a search for an AI commercial production company returns mostly small studios, such as Daydrm Studio (founded by Aaron Adler, represented to agencies by Dubay), MAW AI Studios in Islamabad (minimum budget USD 1,000 to 10,000 on DesignRush), Sadara Studio in Riyadh and GOAT Studios in La Plata, Argentina, 45AI in Warsaw (part of the 45Avenue agency group) and Wobbleman in Tirana, Albania (both list a USD 5,000 minimum on Clutch), alongside production companies that add AI to filmed work. ${studio} is an AI-only studio in ${SITE.city}. Ask each one for a shot where a face turns, a hand holds your kind of product and a logo is on screen, and for the number of review rounds in the quote.`,
   },
   {
     q: 'What is AI VFX for commercial production, and who does it?',
@@ -199,10 +199,10 @@ export default function Page() {
         <h3>AI commercial production companies you will find in a search</h3>
         <p>
           A search for &quot;AI commercial production company&quot; in October 2026 returns small studios, most of them
-          through a directory profile, a marketplace listing or a trade-press item rather than their own site. Here is what four of them say about themselves, and where each one says it.
+          through a directory profile, a marketplace listing or a trade-press item rather than their own site. Here is what six of them say about themselves, and where each one says it.
         </p>
         <GuideTable
-          caption="From each company's own profile or announcement, read October 12, 2026. Ruminate X has not worked with any of them; check reels and references yourself."
+          caption="From each company's own profile or announcement, read October 12, 2026 (45AI and Wobbleman October 21, 2026). Ruminate X has not worked with any of them; check reels and references yourself."
           head={['Company', 'Based in', 'What it says it makes', 'Published terms', 'Source']}
           rows={[
             [
@@ -234,6 +234,20 @@ export default function Page() {
               'Contra listing',
             ],
             [
+              '45AI',
+              'Warsaw, Poland',
+              'AI commercials for online and TV, campaign systems and brand films; fully AI where the brief allows, hybrid when a brand ambassador or live footage is involved; part of the 45Avenue group with McCann Poland and Weber Shandwick',
+              'Founded 2024; minimum project USD 5,000; USD 50 to 99 an hour; no reviews yet',
+              'Clutch profile',
+            ],
+            [
+              'Wobbleman',
+              'Tirana, Albania',
+              'Generative AI commercials, brand campaigns and content, plus VFX and post-production; lists a Gigaclear UK TV campaign and work for Arsenal and TCL',
+              'Founded 2018; minimum project USD 5,000; USD 50 to 99 an hour; listed as a freelancer; no reviews yet',
+              'Clutch profile',
+            ],
+            [
               studio,
               SITE.city,
               `${commercial.name} and brand films, every frame made with AI`,
@@ -247,6 +261,11 @@ export default function Page() {
           generated scenes, as Daydrm describes, needs a shoot for part of your ad, so ask which shots it films. A
           one-week schedule or an hourly rate tells you little until you know how many review rounds it includes and who
           checks your product in every shot, which is where the five questions above come in.
+        </p>
+        <p>
+          A Clutch profile with no reviews tells you only what the studio says about itself. 45AI and Wobbleman both
+          list a USD 5,000 minimum and name the brands they have worked for; ask either one for the finished ad and a
+          contact at that brand before you compare quotes.
         </p>
       </GuideSection>
 
