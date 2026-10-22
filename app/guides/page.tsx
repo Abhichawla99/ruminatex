@@ -24,6 +24,7 @@ const SHELVES: { title: string; note: string; paths: string[] }[] = [
     note: 'What it costs, who to hire, and how an AI film gets made.',
     paths: [
       '/blog/how-much-does-ai-video-production-cost',
+      '/guides/ai-commercial-cost',
       '/ai-video-production-agencies',
       '/comparison/ai-agency-vs-traditional-agency',
       '/how-we-make-an-ai-brand-film',

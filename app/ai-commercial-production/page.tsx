@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-21',
+  updated: '2026-10-22',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -441,7 +441,9 @@ export default function Page() {
           {studio} quotes each commercial from the brief. What moves the number: length and the number of distinct
           scenes; how exactly your product, a place or a character has to be reproduced; how many cutdowns, ratios,
           languages and hooks you need; and review rounds, which run longer when a legal, medical or MLR team signs off
-          on claims. The full breakdown, with what each price tier buys, is in{' '}
+          on claims. Every published AI commercial price we found, set against what a filmed TV commercial costs line
+          by line, is in <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link>. The full
+          breakdown for other kinds of AI video, with what each price tier buys, is in{' '}
           <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>, along with
           how AI video agencies price retainers and subscriptions. Kalshi is
           one of eight AI ads, from Coca-Cola to McDonald&apos;s, whose time, team and audience reaction are compared in{' '}

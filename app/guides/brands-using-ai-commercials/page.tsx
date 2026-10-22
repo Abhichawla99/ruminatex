@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'AI commercials from Svedka\'s 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
   published: '2026-09-26',
-  updated: '2026-10-20',
+  updated: '2026-10-22',
   keywords: [
     'ai commercials',
     'ai commercial',
@@ -473,7 +473,9 @@ export default function Page() {
           it did not fit the budget, then made it with AI a year later. Kalshi&apos;s NBA Finals ad cost about USD 2,000
           and took two days. Secret Level&apos;s founder put Coca-Cola&apos;s 2025 ad at about 20 people, against at
           least 50 for a filmed ad of the same complexity. McDonald&apos;s Netherlands went the other way, with ten people
-          working five weeks.
+          working five weeks. What studios charge a brand for one, against a filmed spot line by line, is in{' '}
+          <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link>, and the studios themselves
+          are compared in <Link href="/ai-commercial-production">who makes AI commercials</Link>.
         </p>
       </GuideSection>
 

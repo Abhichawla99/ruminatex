@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What AI video production costs brands in 2026 at each level, from self-serve tools to studios, three worked budgets (a 20-person SaaS company, a consumer launch, an enterprise team), what AI video platforms charge for enterprise workflows, how AI video production agencies price, and what drives the number.',
   published: '2026-02-22',
-  updated: '2026-10-17',
+  updated: '2026-10-22',
   keywords: [
     'how much does ai video production cost',
     'how much does ai video production cost for brands in 2026',
@@ -330,7 +330,9 @@ export default function Page() {
         />
         <p>
           {PRODUCTION.summary} So {studio} prices none of the shoot lines above and all of the people lines. The{' '}
-          <Link href="/how-we-make-an-ai-brand-film">stages of an AI brand film</Link> show where the hours go.
+          <Link href="/how-we-make-an-ai-brand-film">stages of an AI brand film</Link> show where the hours go. For a
+          commercial in particular, the published prices and the lines of a filmed spot that AI drops are set side by
+          side in <Link href="/guides/ai-commercial-cost">AI commercial cost</Link>.
         </p>
         <GuideFilm
           id="LYA3Do3KEN0"

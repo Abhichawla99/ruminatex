@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-21',
+    updated: '2026-10-22',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -48,7 +48,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does ai video production cost for brands in 2026, what should a SaaS or enterprise team budget, and how do AI video production agencies price',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-10-17',
+    updated: '2026-10-22',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which companies are using AI for ads, what TV commercials are AI, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-20',
+    updated: '2026-10-22',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -265,5 +265,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-10-13',
     updated: '2026-10-13',
+  },
+  {
+    path: '/guides/ai-commercial-cost',
+    title: 'AI Commercial Cost: What Brands Pay in 2026',
+    question: 'how much does an ai commercial cost: published AI studio prices, AI vs a filmed TV commercial line by line, do actors get paid for AI commercials, and can AI make a commercial for me',
+    kind: 'guide',
+    published: '2026-10-22',
+    updated: '2026-10-22',
   },
 ]
