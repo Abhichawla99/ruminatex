@@ -127,6 +127,9 @@ export default function ServicesPage() {
           real person on camera is the better choice. For about-us, mission and conference films for a company&apos;s own
           staff, candidates or investors, see{' '}
           <Link href="/ai-video-production-enterprise" className="text-[#ebff00] hover:underline">AI corporate video production</Link>.
+          If you are a Canadian company comparing studios close to home, the Calgary firms that make AI video, and what
+          each publishes as a price, are in{' '}
+          <Link href="/markets/ai-video-production-canada" className="text-[#ebff00] hover:underline">AI video production in Calgary and Canada</Link>.
         </p>
       </section>
 

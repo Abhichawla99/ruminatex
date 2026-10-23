@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What an AI brand film is, published examples (Toys"R"Us, Moncler) and the studios that make them, how one gets made without a shoot, what it costs with AI and with a crew, what still breaks, who owns it, and when to film real people instead.',
   published: '2026-03-07',
-  updated: '2026-10-15',
+  updated: '2026-10-23',
   keywords: [
     'ai brand films',
     'ai brand film',
@@ -311,7 +311,7 @@ export default function Page() {
           for &ldquo;ai brand films&rdquo; returned in the US on October 15, 2026, described from their own pages.
         </p>
         <GuideTable
-          caption="Each studio's own AI brand film page, read October 2026, in the order Google showed them. A blank in the last column means the page does not state it."
+          caption="Each studio's own AI brand film page, read October 2026 (Serge Vane October 23), in the order Google showed them. A blank in the last column means the page does not state it."
           head={['Studio', 'Based', 'What its page says', 'Not published on the page']}
           rows={[
             [
@@ -338,16 +338,24 @@ export default function Page() {
               'Brand films, commercials and product films with "no crew required"; the same company sells architectural CGI',
               'Prices, timelines',
             ],
+            [
+              <a key="v" href="https://www.sergevane.com/ai-brand-films">Serge Vane</a>,
+              'London',
+              'Story-led AI brand films and campaign hero pieces for luxury, fashion and financial brands; fully AI, or live action shot in London and extended with AI; you approve a treatment, shot list and key frames before production; "full rights transferred" on delivery',
+              'Prices, timelines, named clients',
+            ],
             [studio, SITE.city, PRODUCTION.summary, 'Prices (quoted from the brief)'],
           ]}
         />
         <p>
           Two things separate them: whether the studio also films, and whether it can show you a finished brand film
-          longer than a minute with the same character in every scene. Dreamachine and Contenaissance say they can
+          longer than a minute with the same character in every scene. Dreamachine, Contenaissance and Serge Vane say they can
           combine AI with a camera; {studio} does not film at all, so a brand film that needs your own people belongs
           with a crew. The second is the test most AI reels fail, for the reasons in the section on what breaks above. The full
           checklist is in{' '}
-          <Link href="/ai-video-production-agencies">what to look for when hiring an AI video production company</Link>.
+          <Link href="/ai-video-production-agencies">what to look for when hiring an AI video production company</Link>,
+          and ten agencies that make AI ads and films for brands, including these, are compared in{' '}
+          <Link href="/blog/top-ai-video-agencies-2026">the top AI video agencies in 2026</Link>.
         </p>
         <GuideFilm
           id="d-s9SxA4Klk"

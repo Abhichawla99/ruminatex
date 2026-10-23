@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring, and what should I look for when hiring an AI video production company',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-22',
+    updated: '2026-10-23',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -64,7 +64,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai brand films: what are they, which brands and studios make them, how is one made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-15',
+    updated: '2026-10-23',
   },
   {
     path: '/ai-video-production-healthcare',
@@ -273,5 +273,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-10-22',
     updated: '2026-10-22',
+  },
+  {
+    path: '/blog/top-ai-video-agencies-2026',
+    title: 'Top 10 AI Video Agencies in 2026',
+    question: 'best ai-generated video ad agencies: which ai video production agency is the best, ten agencies compared from their own pages (who films, who publishes prices), and how to choose one',
+    kind: 'guide',
+    published: '2026-01-01',
+    updated: '2026-10-23',
   },
 ]
