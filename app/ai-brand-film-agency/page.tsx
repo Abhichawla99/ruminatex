@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-brand-film-agency',
@@ -114,7 +114,7 @@ export default function Page() {
           for paid social.
         </p>
         <p>
-          {studio} makes {brandFilm.name.toLowerCase()}, {brandFilm.plain}, and {aboutUs.name.toLowerCase()},{' '}
+          {studio} makes {inSentence(brandFilm.name)}, {brandFilm.plain}, and {inSentence(aboutUs.name)},{' '}
           {aboutUs.plain}. {PRODUCTION.summary} Because nothing has to be filmed, the film can go where a shoot budget
           cannot: a mountain at dawn, a factory in 1920, the inside of a cell. Which company films AI can make, and which
           need your staff on camera, is on <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.

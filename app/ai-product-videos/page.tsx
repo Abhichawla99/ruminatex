@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-product-videos',
@@ -182,7 +182,7 @@ export default function Page() {
           caption={`${spec.client} spec ad: a ${spec.durationSeconds}-second spec commercial by ${studio}, made without a shoot. Spec work, not client work.`}
         />
         <p>
-          {studio} makes {visuals.name.toLowerCase()}, {visuals.plain}. {PRODUCTION.summary} The full pipeline is in{' '}
+          {studio} makes {inSentence(visuals.name)}, {visuals.plain}. {PRODUCTION.summary} The full pipeline is in{' '}
           <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
         </p>
       </GuideSection>

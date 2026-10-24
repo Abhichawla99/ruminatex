@@ -55,6 +55,11 @@ export const OFFERS: Offer[] = [
   { key: 'product-visuals', name: 'Product visuals', plain: 'product films and stills', path: '/ai-product-videos' },
 ]
 
+/** An offer name for the middle of a sentence: "Brand films" becomes "brand films", "AI commercials" stays as it is. */
+export function inSentence(name: string): string {
+  return name.replace(/^[A-Z][a-z]/, (m) => m.toLowerCase())
+}
+
 /**
  * Who buys. Confirmed by Abhi, 2026-09-22: brands and companies of every kind,
  * including consumer brands, pharma, labs and medical companies.

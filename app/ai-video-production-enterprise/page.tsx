@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-video-production-enterprise',
@@ -126,8 +126,8 @@ export default function Page() {
           ]}
         />
         <p>
-          {studio} makes {aboutUs.name.toLowerCase()}, {aboutUs.plain}; {brandFilm.name.toLowerCase()}; and{' '}
-          {avatar.name.toLowerCase()}, {avatar.plain}. {PRODUCTION.summary}
+          {studio} makes {inSentence(aboutUs.name)}, {aboutUs.plain}; {inSentence(brandFilm.name)}; and{' '}
+          {inSentence(avatar.name)}, {avatar.plain}. {PRODUCTION.summary}
         </p>
         <GuideFilm
           id="d-s9SxA4Klk"
@@ -181,7 +181,7 @@ export default function Page() {
             ['Leadde', 'Avatar platform', 'Ranks itself first for end-to-end corporate video workflows in its own 2026 list', 'Your team'],
             ['Synima', 'AI video agency', 'Lists AI avatar production and AI learning and training services; offices in London, New York, Los Angeles and Amsterdam', 'The agency'],
             ['351 Studio', 'AI video agency', 'Generative AI video for marketing, storytelling and advertising, with editing and post-production', 'The agency'],
-            [studio, 'AI film studio', `${aboutUs.name}, ${brandFilm.name.toLowerCase()} and ${avatar.name.toLowerCase()}, every frame generated; based in ${SITE.city}`, 'The studio'],
+            [studio, 'AI film studio', `${aboutUs.name}, ${inSentence(brandFilm.name)} and ${inSentence(avatar.name)}, every frame generated; based in ${SITE.city}`, 'The studio'],
           ]}
         />
         <p>

@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-commercial-production',
@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-23',
+  updated: '2026-10-24',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -124,8 +124,9 @@ export default function Page() {
 
       <GuideSection eyebrow="What you get" title="What an AI commercial production company delivers">
         <p>
-          {studio} makes {commercial.name.toLowerCase()}: {commercial.plain}. {PRODUCTION.summary} A typical commercial
-          brief turns into:
+          An AI commercial production company delivers the finished ad and every version of it your media plan calls
+          for. {studio} makes {inSentence(commercial.name)}, {commercial.plain}. {PRODUCTION.summary} A typical
+          commercial brief turns into:
         </p>
         <ul>
           <li>the hero spot, at the length your media plan needs;</li>

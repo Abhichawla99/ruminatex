@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/best-video-production-company-calgary',
@@ -32,7 +32,7 @@ const PAGE = {
 }
 
 const studio = SITE.name
-const offerNames = OFFERS.map((o) => o.name.toLowerCase()).join(', ')
+const offerNames = OFFERS.map((o) => inSentence(o.name)).join(', ')
 
 const CLUTCH = 'https://clutch.co/agencies/video-production/calgary'
 const DCFOTOFILM = 'https://dcfotofilm.com/blog/video-production-cost-calgary'

@@ -11,7 +11,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-avatar-videos',
@@ -110,7 +110,7 @@ export default function Page() {
           ]}
         />
         <p>
-          {studio} makes {avatar.name.toLowerCase()}, {avatar.plain}.{' '}
+          {studio} makes {inSentence(avatar.name)}, {avatar.plain}.{' '}
           {PRODUCTION.summary} If the job is a stock avatar reading a policy update, you do not need a studio.
         </p>
       </GuideSection>

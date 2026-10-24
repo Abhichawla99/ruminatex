@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { BUYERS, OFFERS, inSentence, PRODUCTION, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/markets/ai-video-production-canada',
@@ -34,7 +34,7 @@ const PAGE = {
 }
 
 const studio = SITE.name
-const offerNames = OFFERS.map((o) => o.name.toLowerCase()).join(', ')
+const offerNames = OFFERS.map((o) => inSentence(o.name)).join(', ')
 
 const CROSSROAD = 'https://crossroadmedia.ca/ai-commercials'
 const LEMONLIGHT = 'https://www.lemonlight.com/blog/ai-video-production-cost/'

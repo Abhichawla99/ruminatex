@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
+import { OFFERS, inSentence, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-video-production-agencies',
@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-10-23',
+  updated: '2026-10-24',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -40,7 +40,7 @@ const PAGE = {
 }
 
 const studio = SITE.name
-const offerList = OFFERS.map((o) => o.name.toLowerCase()).join(', ')
+const offerList = OFFERS.map((o) => inSentence(o.name)).join(', ')
 const hundred = RELATED.find((r) => r.name === '100creatives')!
 
 const FAQS = [
@@ -100,8 +100,9 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          An AI video production agency, also sold as an AI media production company or AI video production services, writes, directs and delivers a finished film whose footage is generated with AI
-          instead of shot with a crew. You are paying for the judgment around the generator: the concept, the boards, the
+          An AI video production agency, or AI video agency, writes, directs and delivers a finished film whose footage
+          is generated with AI instead of shot with a crew. The same service is sold as an AI video production company,
+          an AI media production company or AI video production services. You are paying for the judgment around the generator: the concept, the boards, the
           shots rerun until faces, hands and your product hold up, the edit, sound and grade. Hire one when you need a
           finished commercial or <Link href="/ai-brand-film-agency">brand film</Link> and have no time or editor to make it with a tool yourself. Hire someone else
           when the film needs real people on camera. If you are looking for an{' '}
