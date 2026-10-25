@@ -18,9 +18,9 @@ const PAGE = {
   path: '/comparison/ai-agency-vs-traditional-agency',
   title: 'AI Video Agency vs Traditional Production',
   description:
-    'An AI video agency against a traditional production company, or an AI tool run in-house, for a brand film or commercial: what each route costs in money and hours, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, where AI footage still fails, and which one to hire.',
+    'When a brand should hire an AI video production partner, use an AI tool in-house, or hire a crew: what each costs for a commercial or brand film, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, and where AI footage still fails.',
   published: '2026-03-08',
-  updated: '2026-10-24',
+  updated: '2026-10-25',
   keywords: [
     'ai video vs traditional video',
     'can ai replace a video production agency',
@@ -162,6 +162,12 @@ export default function Page() {
           than polish, and someone on staff already edits. Hire a production company when a real person or a real event is
           the point of the film. If you have decided on a partner, the seven questions to ask before you sign are on{' '}
           <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>.
+        </p>
+        <p>
+          Company films raise their own version of the question: an about-us film, an all-hands opener, a recruiting or
+          investor video, where the people on screen are often your own staff. Which of those can be generated, whether
+          an AI avatar of your CEO is a good idea, and what employees notice are covered in{' '}
+          <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
         </p>
         <h3>Can AI replace a video production agency?</h3>
         <p>

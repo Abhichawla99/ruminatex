@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring, and what should I look for when hiring an AI video production company',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-24',
+    updated: '2026-10-25',
   },
   {
     path: '/ai-commercial-production',
@@ -61,10 +61,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-brand-film-agency',
     title: 'AI Brand Film Production for Companies',
-    question: 'ai brand films: what are they, which brands and studios make them, how is one made and what does it cost',
+    question: 'ai brand films: what are they, which brands and AI film production companies make them, how is one made and what does it cost',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-23',
+    updated: '2026-10-25',
   },
   {
     path: '/ai-video-production-healthcare',

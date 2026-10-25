@@ -21,12 +21,13 @@ const PAGE = {
   description:
     'What an AI brand film is, published examples (Toys"R"Us, Moncler) and the studios that make them, how one gets made without a shoot, what it costs with AI and with a crew, what still breaks, who owns it, and when to film real people instead.',
   published: '2026-03-07',
-  updated: '2026-10-23',
+  updated: '2026-10-25',
   keywords: [
     'ai brand films',
     'ai brand film',
     'ai brand film production',
     'ai brand film production company',
+    'ai film production company',
     'ai cinematic video production',
     'cinematic brand film',
     'cinematic brand storytelling agency',
@@ -57,8 +58,8 @@ const FAQS = [
     a: 'Two public examples. The Origin of Toys"R"Us, made by Toys"R"Us Studios and Native Foreign, was created almost entirely with OpenAI\'s Sora and premiered at Cannes Lions in 2024; hundreds of generated shots were cut to a couple dozen in a few weeks (WHP Global). Moncler\'s film with the agency R/GA was made with Google\'s Veo in four weeks and unveiled at Cannes Lions in 2025 (R/GA, August 2025). Neither brand published a budget.',
   },
   {
-    q: 'What is an AI film company?',
-    a: 'An AI film company makes films from generated footage instead of a shoot: it writes the film, fixes the look, generates and reruns each shot, then edits, scores and grades it. Some, such as Dreamachine, also combine AI with live action. Ruminate X, an AI film studio in Calgary, makes every frame with AI and does not film, so a brand film that needs real employees or customers on camera is better made by a crew.',
+    q: 'What is an AI film production company?',
+    a: 'An AI film production company makes films from generated footage instead of a shoot: it writes the film, fixes the look, generates and reruns each shot, then edits, scores and grades it. Some, such as Dreamachine, also combine AI with live action. Ruminate X, an AI film studio in Calgary, makes every frame with AI and does not film, so a brand film that needs real employees or customers on camera is better made by a crew.',
   },
   {
     q: 'Can I use AI to create a cinematic video?',
@@ -305,13 +306,13 @@ export default function Page() {
           them is in <Link href="/guides/brands-using-ai-commercials">brands using AI commercials</Link>.
         </p>
 
-        <h3>What is an AI film company?</h3>
+        <h3>What is an AI film production company?</h3>
         <p>
           A studio that makes films from generated footage instead of a shoot. These are the companies a Google search
           for &ldquo;ai brand films&rdquo; returned in the US on October 15, 2026, described from their own pages.
         </p>
         <GuideTable
-          caption="Each studio's own AI brand film page, read October 2026 (Serge Vane October 23), in the order Google showed them. A blank in the last column means the page does not state it."
+          caption="Each studio's own AI brand film page, read October 2026 (Serge Vane October 23), in the order Google showed them; AiCandy from B&T's launch report, read October 25, 2026. The last column lists what the source does not state."
           head={['Studio', 'Based', 'What its page says', 'Not published on the page']}
           rows={[
             [
@@ -343,6 +344,12 @@ export default function Page() {
               'London',
               'Story-led AI brand films and campaign hero pieces for luxury, fashion and financial brands; fully AI, or live action shot in London and extended with AI; you approve a treatment, shot list and key frames before production; "full rights transferred" on delivery',
               'Prices, timelines, named clients',
+            ],
+            [
+              <a key="a" href="https://www.bandt.com.au/marcus-tesoriero-kent-boswell-launch-australias-first-fully-ai-powered-film-production-company/">AiCandy</a>,
+              'Australia',
+              'Launched in July 2025 by Marcus Tesoriero and Kent Boswell as a "fully Ai-powered film production company" (B&T); TV commercials, brand platforms and long-form content, from an agency\'s script or a campaign it develops',
+              'Prices, named clients, whether it ever films',
             ],
             [studio, SITE.city, PRODUCTION.summary, 'Prices (quoted from the brief)'],
           ]}
