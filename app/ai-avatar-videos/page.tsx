@@ -17,9 +17,9 @@ const PAGE = {
   path: '/ai-avatar-videos',
   title: 'AI Avatar Video Production for Companies',
   description:
-    'When a company should use an AI avatar or spokesperson video, what avatar tools and studios cost, the consent a real person\'s avatar needs, and the disclosure rules for AI presenters in ads (YouTube, Meta, TikTok, New York, FTC).',
+    'When a company should use an AI avatar or spokesperson video, what avatar tools and studios cost, the consent a real person\'s avatar needs, and the disclosure rules for AI presenters in ads (YouTube, Meta, TikTok, New York, Pennsylvania, FTC).',
   published: '2026-09-30',
-  updated: '2026-09-30',
+  updated: '2026-10-26',
   keywords: [
     'ai avatar video production company',
     'ai spokesperson video for company',
@@ -44,6 +44,7 @@ const META_ADS_AI = 'https://www.meta.com/en-gb/help/artificial-intelligence/355
 const TIKTOK_AIGC = 'https://www.tiktok.com/support/faq_detail?id=7636670084747893268'
 const NY_SYNTHETIC = 'https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=A08887&term=2025&Summary=Y&Actions=Y&Text=Y'
 const NY_IN_EFFECT = 'https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-law-requiring-disclosure-when-advertisements-include-ai'
+const PA_ACT = 'https://www.palegis.us/legislation/bills/2025/sb806'
 const NY_REPLICA = 'https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=S07676&term=2023&Summary=Y&Actions=Y&Text=Y'
 const CA_AB2602 = 'https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240AB2602'
 const TN_ELVIS = 'https://wapp.capitol.tn.gov/apps/Billinfo/default.aspx?BillNumber=HB2091&ga=113'
@@ -69,7 +70,7 @@ const FAQS = [
   },
   {
     q: 'Do I have to disclose an AI avatar in an ad?',
-    a: 'Often, yes. New York\'s synthetic performer law, in effect since June 2026, requires whoever produces an ad to conspicuously disclose a synthetic performer they know is in it, with a USD 1,000 penalty for a first violation and 5,000 after. YouTube requires disclosure of photorealistic AI content, including making a real person appear to say something they did not, and TikTok requires a label on realistic AI-generated video of people. This is not legal advice; your legal team decides for each ad.',
+    a: 'Often, yes. New York\'s synthetic performer law, in effect since June 2026, requires whoever produces an ad to conspicuously disclose a synthetic performer they know is in it, with a USD 1,000 penalty for a first violation and 5,000 after. Pennsylvania\'s Artificial Intelligence Deceptive Advertising Act (Act 99 of 2026, signed October 22, 2026, in force 60 days later) requires a label saying the ad contains content modified or generated using AI when that content creates a false impression about the nature, origin or authenticity of what is sold, with fines up to USD 3,000. YouTube requires disclosure of photorealistic AI content, including making a real person appear to say something they did not, and TikTok requires a label on realistic AI-generated video of people. This is not legal advice; your legal team decides for each ad.',
   },
   {
     q: 'Can an AI avatar play a customer in a testimonial ad?',
@@ -95,7 +96,7 @@ export default function Page() {
           videos, a self-serve tool such as HeyGen or Synthesia (about USD 29 to 149 a month, September 2026) is the
           cheaper choice. A studio makes sense when the spokesperson has to carry an ad or a brand film. An avatar of a
           real person needs that person&apos;s recorded consent. Realistic AI presenters need disclosure on YouTube and
-          TikTok, and in ads in New York. An avatar must never pose as a real customer.
+          TikTok, in ads in New York, and in Pennsylvania ads where the presenter could mislead viewers about what is sold. An avatar must never pose as a real customer.
         </p>
       </GuideAnswer>
 
@@ -178,7 +179,8 @@ export default function Page() {
               From <a href={YOUTUBE_DISCLOSURE}>YouTube Help</a>, <a href={META_ADS_AI}>Meta Help</a>,{' '}
               <a href={TIKTOK_AIGC}>TikTok Support</a>, the <a href={NY_SYNTHETIC}>New York Assembly</a> (A.8887-B, Chapter 617;{' '}
               <a href={NY_IN_EFFECT}>in effect June 9, 2026</a>) and the FTC (<a href={FTC_REVIEWS}>reviews rule</a>,{' '}
-              <a href={FTC_ENDORSEMENT}>Endorsement Guides §255.2</a>), read September 30, 2026. Not legal advice.
+              <a href={FTC_ENDORSEMENT}>Endorsement Guides §255.2</a>), read September 30, 2026, and{' '}
+              <a href={PA_ACT}>Pennsylvania Senate Bill 806</a> (Act 99 of 2026), read October 26, 2026. Not legal advice.
             </>
           }
           head={['Where', 'The rule', 'What it means for an avatar video']}
@@ -187,6 +189,7 @@ export default function Page() {
             ['Meta', 'An AI info label appears next to Sponsored when an ad made with Meta\'s own AI tools includes an AI-generated photorealistic human; social issue and political ads must disclose digitally created people', 'Expect labels on Meta-made assets; political and issue ads must disclose'],
             ['TikTok', 'Creators must label all AI-generated content with realistic images, audio and video, including AI videos of real or fictional people; public figures may not be shown endorsing', 'Label every realistic avatar video; no celebrity look-alikes'],
             ['New York', 'Whoever produces an ad must conspicuously disclose a synthetic performer they know is in it; USD 1,000 first violation, 5,000 after', 'Disclose AI presenters in ads that run there'],
+            ['Pennsylvania', 'An ad may not use content significantly modified or generated by AI in a way that creates a false impression about the nature, origin or authenticity of what is sold without a clear and conspicuous label saying so; evidently fictional content and parody are exempt; fines up to USD 3,000. Signed October 22, 2026, in force 60 days later', 'Label an avatar that could mislead a viewer about the product or who stands behind it; your lawyer decides which ads that covers'],
             ['FTC (US)', 'No testimonials from people who do not exist, "such as AI-generated fake reviews"; ads showing "actual consumers" must use them or disclose', 'An avatar may present; it may not pose as a customer'],
           ]}
         />

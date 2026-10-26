@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-24',
+  updated: '2026-10-26',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -477,7 +477,13 @@ export default function Page() {
           <a href="https://support.google.com/youtube/answer/14328491">YouTube&apos;s policy</a> asks creators to disclose
           when they use AI to make or meaningfully alter realistic content, and exempts content that is clearly
           unrealistic, such as animation or a fantasy world. Meta, TikTok, ad networks and broadcasters each have their
-          own rules. Checked September 2026.
+          own rules. Checked September 2026. New York and Pennsylvania have passed laws that require labels on some AI ads: New York&apos;s{' '}
+          <a href="https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-law-requiring-disclosure-when-advertisements-include-ai">synthetic performer law</a>{' '}
+          (in effect June 9, 2026) for AI-generated people, and Pennsylvania&apos;s{' '}
+          <a href="https://www.palegis.us/legislation/bills/2025/sb806">Artificial Intelligence Deceptive Advertising Act</a>{' '}
+          (signed October 22, 2026, in force 60 days later) for AI content that creates a false impression about what is
+          being sold, with evidently fictional content exempt. Both laws, with the FTC and EU rules, are on{' '}
+          <Link href="/guides/brands-using-ai-commercials">AI commercials by big brands</Link>.
         </p>
         <p>
           <strong>Rights.</strong> Your contract decides what transfers to you: the final spot, the versions, the

@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'What an AI UGC ad is, the AI UGC ad agencies a search turns up and what each sells, what an agency, a self-serve tool and real creators cost, whether AI UGC ads are legal (FTC, TikTok, Meta, New York), and how a studio makes them.',
   published: '2026-03-08',
-  updated: '2026-10-18',
+  updated: '2026-10-26',
   keywords: [
     'ai ugc ads agency',
     'ai ugc ads',
@@ -32,6 +32,7 @@ const PAGE = {
     'are ai ugc ads legal',
     'can you do ugc content with ai',
     'do you have to disclose if an ad is ai',
+    'are ai-generated ugc ads allowed on meta and tiktok?',
     'ai ugc ads examples',
   ],
 }
@@ -51,11 +52,12 @@ const FTC_255 = 'https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/pa
 const TIKTOK_AIGC = 'https://www.tiktok.com/support/faq_detail?id=7636670084747893268'
 const META_ADS_AI = 'https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/'
 const NY_IN_EFFECT = 'https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-law-requiring-disclosure-when-advertisements-include-ai'
+const PA_ACT = 'https://www.palegis.us/legislation/bills/2025/sb806'
 
 const FAQS = [
   {
     q: 'Are AI UGC ads legal?',
-    a: 'Yes, with conditions. In the US, the FTC rule on consumer reviews and testimonials (16 CFR 465.2) bans testimonials that misrepresent that the person exists or used the product, and the Endorsement Guides (16 CFR 255.2(c)) say an ad presented as showing actual consumers must use actual consumers or clearly disclose that they are not. TikTok requires a label on realistic AI-generated video, and New York has required ads to disclose AI synthetic performers since June 9, 2026. An AI presenter can demonstrate a product; it cannot pose as a customer. This is not legal advice.',
+    a: 'Yes, with conditions. In the US, the FTC rule on consumer reviews and testimonials (16 CFR 465.2) bans testimonials that misrepresent that the person exists or used the product, and the Endorsement Guides (16 CFR 255.2(c)) say an ad presented as showing actual consumers must use actual consumers or clearly disclose that they are not. TikTok requires a label on realistic AI-generated video, and New York has required ads to disclose AI synthetic performers since June 9, 2026. Pennsylvania\'s Artificial Intelligence Deceptive Advertising Act (Act 99 of 2026, signed October 22, 2026, in force 60 days later) requires a label saying the ad contains content modified or generated using AI when that content creates a false impression about the nature, origin or authenticity of what is sold. An AI presenter can demonstrate a product; it cannot pose as a customer. This is not legal advice.',
   },
   {
     q: 'Can you do UGC content with AI?',
@@ -63,7 +65,11 @@ const FAQS = [
   },
   {
     q: 'Do you have to disclose if an ad is AI?',
-    a: 'Often. TikTok requires creators to label AI-generated content that contains realistic images, audio and video. Meta adds an "AI info" label next to Sponsored when an ad made with its own generative AI tools contains a photorealistic AI human, and political and social issue ads must disclose AI-made images, video or audio. New York requires ads to identify AI synthetic performers (in effect June 9, 2026). Your legal team decides for each ad; this is not legal advice.',
+    a: 'Often. TikTok requires creators to label AI-generated content that contains realistic images, audio and video. Meta adds an "AI info" label next to Sponsored when an ad made with its own generative AI tools contains a photorealistic AI human, and political and social issue ads must disclose AI-made images, video or audio. New York requires ads to identify AI synthetic performers (in effect June 9, 2026). Pennsylvania\'s Artificial Intelligence Deceptive Advertising Act (Act 99 of 2026, signed October 22, 2026, in force 60 days later) requires a label saying the ad contains content modified or generated using AI when that content creates a false impression about the nature, origin or authenticity of what is sold. Your legal team decides for each ad; this is not legal advice.',
+  },
+  {
+    q: 'Are AI-generated UGC ads allowed on Meta and TikTok?',
+    a: 'Yes, with labels. TikTok allows AI-generated content but requires creators to label realistic AI-generated images, audio and video, and does not allow AI content that shows a public figure endorsing a product. Meta runs ads made with AI and adds an "AI info" label next to Sponsored when an ad made with its own generative AI tools includes a photorealistic AI human; political and social issue ads must disclose AI-made media. On both, the ad still cannot present a generated presenter as a real customer, under the FTC reviews rule (16 CFR 465.2). Platform pages read October 4, 2026; this is not legal advice.',
   },
   {
     q: 'How much does an AI UGC ads agency cost?',
@@ -101,7 +107,8 @@ export default function Page() {
           make them yourself with a tool (Creatify is USD 15 to 195 a month), hire an AI UGC agency (Admiral Media lists EUR
           500 a video in batches of 20), or pay real creators (USD 200 on average on Collabstr; pages read October 18, 2026). They
           are legal in the US when the presenter never poses as a real customer, and they need an AI label on TikTok and in
-          ads that run in New York.
+          ads that run in New York, and in Pennsylvania once its AI ad label law takes effect, 60 days after its October 22,
+          2026 signing.
         </p>
       </GuideAnswer>
 
@@ -195,7 +202,7 @@ export default function Page() {
             product cannot say they did. Ask to see the scripts before production.
           </li>
           <li>
-            <strong>Who labels the ads, and where?</strong> TikTok and New York have labelling rules; ask whether the agency
+            <strong>Who labels the ads, and where?</strong> TikTok, New York and Pennsylvania have labelling rules; ask whether the agency
             adds the disclosure or leaves it to you.
           </li>
           <li>
@@ -220,7 +227,8 @@ export default function Page() {
               From the FTC rules on <a href={FTC_465}>consumer reviews and testimonials (16 CFR 465.2)</a> and{' '}
               <a href={FTC_255}>endorsements (16 CFR 255.2)</a>, <a href={TIKTOK_AIGC}>TikTok Support</a>,{' '}
               <a href={META_ADS_AI}>Meta Help</a> and the <a href={NY_IN_EFFECT}>New York Governor&apos;s office</a>, read
-              October 4, 2026. Not legal advice.
+              October 4, 2026, and <a href={PA_ACT}>Pennsylvania Senate Bill 806</a> (Act 99 of 2026), read October 26,
+              2026. Not legal advice.
             </>
           }
           head={['Where', 'The rule', 'What it means for an AI UGC ad']}
@@ -230,6 +238,7 @@ export default function Page() {
             ['TikTok', 'Creators must label all AI-generated content with realistic images, audio and video; no AI content showing public figures endorsing', 'Turn on the AI-generated content label; no celebrity look-alikes'],
             ['Meta', '"AI info" appears next to Sponsored when an ad made with Meta\'s generative AI tools includes a photorealistic AI human; political and social issue ads must disclose AI-made media', 'Expect the label on Meta-made assets; disclose in issue ads'],
             ['New York', 'Whoever produces an ad must identify AI synthetic performers, "digitally-created media that appear as a real person"; in effect June 9, 2026', 'Disclose the presenter in ads that run there'],
+            ['Pennsylvania', 'An ad may not use content significantly modified or generated by AI in a way that creates a false impression about the nature, origin or authenticity of what is sold without a clear and conspicuous label saying so, shown the first time that content appears; evidently fictional content, parody and text-only ads are exempt; fines up to $3,000. Signed October 22, 2026, in force 60 days later', 'Label any generated presenter or shot that could mislead a viewer about the product; your lawyer decides which ads that covers'], // claims-ok: Pennsylvania SB 806 (Act 99 of 2026), section 5(c), linked in the caption (PA_ACT)
           ]}
         />
         <p>

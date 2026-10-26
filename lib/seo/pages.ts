@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-24',
+    updated: '2026-10-26',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which companies are using AI for ads, what TV commercials are AI, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-22',
+    updated: '2026-10-26',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -216,7 +216,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai avatar video production company: when should a company use an AI avatar or spokesperson video, what does it cost, and tool or studio',
     kind: 'service',
     published: '2026-09-30',
-    updated: '2026-09-30',
+    updated: '2026-10-26',
   },
   {
     path: '/guides/who-owns-ai-video',
@@ -248,7 +248,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai ugc ads agency: which AI UGC ad agencies there are, what AI UGC ads cost, are they legal, and do you have to disclose an AI ad',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-18',
+    updated: '2026-10-26',
   },
   {
     path: '/ai-product-videos',
