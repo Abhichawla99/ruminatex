@@ -21,7 +21,7 @@ const PAGE = {
   description:
     'How much an AI commercial costs: published prices from AI studios (from about USD 1,500 for one spot to GBP 45,000 for a broadcast asset), what a filmed TV commercial costs line by line and which lines AI removes, whether actors get paid, and what the airtime costs on top.',
   published: '2026-10-22',
-  updated: '2026-10-22',
+  updated: '2026-10-27',
   keywords: [
     'how much does an ai commercial cost',
     'ai commercial cost',
@@ -136,7 +136,9 @@ export default function Page() {
           licensed for broadcast, a voice-over, extra ratios, a language version, a third round of changes. The Kalshi
           figure covers about two days of generation with Veo 3; it is not a studio quote with review rounds and
           versions in it. Six AI commercial studios, their minimums and their review counts are
-          compared in <Link href="/ai-commercial-production">who makes AI commercials</Link>.
+          compared in <Link href="/ai-commercial-production">who makes AI commercials</Link>. Agencies buying an AI
+          commercial for a client, uncredited, will find the partners that publish agency prices in{' '}
+          <Link href="/guides/white-label-ai-video-production">white-label AI video production</Link>.
         </p>
       </GuideSection>
 

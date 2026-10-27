@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what am I hiring, and what should I look for when hiring an AI video production company',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-25',
+    updated: '2026-10-27',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-26',
+    updated: '2026-10-27',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -272,7 +272,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does an ai commercial cost: published AI studio prices, AI vs a filmed TV commercial line by line, do actors get paid for AI commercials, and can AI make a commercial for me',
     kind: 'guide',
     published: '2026-10-22',
-    updated: '2026-10-22',
+    updated: '2026-10-27',
   },
   {
     path: '/blog/top-ai-video-agencies-2026',
@@ -281,5 +281,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-01-01',
     updated: '2026-10-23',
+  },
+  {
+    path: '/guides/white-label-ai-video-production',
+    title: 'White-Label AI Video Production for Agencies',
+    question: 'white label ai video production for agencies: how it works, which partners publish prices and credit terms, how integrated agencies price AI-enabled content against traditional production, and how to hire an ai-native production house for campaigns',
+    kind: 'guide',
+    published: '2026-10-27',
+    updated: '2026-10-27',
   },
 ]

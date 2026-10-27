@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-26',
+  updated: '2026-10-27',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -36,6 +36,7 @@ const PAGE = {
     'do actors get paid for ai commercials',
     'ai commercial production for tech companies',
     'ai commercial production for fitness brands',
+    'hire ai-native production house for campaigns',
     'ai commercials for fitness brands',
     'what ai can i use to create a commercial',
   ],
@@ -269,6 +270,14 @@ export default function Page() {
           contact at that brand before you compare quotes. For AI video ad agencies that sell ads in batches for paid
           social, and studios that also film, see{' '}
           <Link href="/blog/top-ai-video-agencies-2026">the top AI video agencies in 2026</Link>.
+        </p>
+        <h3>Hiring an AI-native production house for campaigns as an agency</h3>
+        <p>
+          An agency hiring a studio for a client campaign needs answers a brand does not: whether the studio will work
+          uncredited, sign an NDA before the client&apos;s brief is shared, take notes only through the agency producer,
+          and stay away from the client afterwards. Price the whole set (hero film, cutdowns, ratios, languages) rather
+          than the hero alone. Four partners&apos; published prices, timings and credit terms are compared in{' '}
+          <Link href="/guides/white-label-ai-video-production">white-label AI video production for agencies</Link>.
         </p>
       </GuideSection>
 

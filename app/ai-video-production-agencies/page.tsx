@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What an AI video production agency does, how it differs from an AI video tool, what drives the price, what still breaks in AI footage, who owns the result, and the questions to ask before you sign.',
   published: '2026-03-08',
-  updated: '2026-10-24',
+  updated: '2026-10-27',
   keywords: [
     'ai video production agency',
     'ai video production company',
@@ -324,7 +324,9 @@ export default function Page() {
         <p>
           For creator-style paid social ads, the{' '}
           <Link href="/ai-ugc-reels">AI UGC ad agencies a search turns up</Link>, what each sells and the questions to ask
-          about faces and consent are on the UGC ads page.
+          about faces and consent are on the UGC ads page. If you are an agency hiring a studio to make a client&apos;s
+          film under your name, the credit, NDA and pricing questions are different; they are covered in{' '}
+          <Link href="/guides/white-label-ai-video-production">white-label AI video production for agencies</Link>.
         </p>
         <GuideFilm
           id="Zytga7zsShI"
