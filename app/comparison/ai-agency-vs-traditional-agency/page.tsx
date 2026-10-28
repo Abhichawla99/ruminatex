@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'When a brand should hire an AI video production partner, use an AI tool in-house, or hire a crew: what each costs for a commercial or brand film, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, and where AI footage still fails.',
   published: '2026-03-08',
-  updated: '2026-10-25',
+  updated: '2026-10-28',
   keywords: [
     'ai video vs traditional video',
     'can ai replace a video production agency',
@@ -191,7 +191,10 @@ export default function Page() {
           The answer turns on whether your team has the hours for the rows a generator does not do. If it does, a
           tool and an in-house editor can stand in for the agency on internal and social video. If not, you are hiring a
           studio that works this way, such as {studio}, or a production agency that has added AI. If your film needs real
-          people or a real event on screen, keep the agency and its crew.
+          people or a real event on screen, keep the agency and its crew. For a short brand video where the choice is
+          a single freelancer, the{' '}
+          <Link href="/comparison/freelance-vs-ai-video">AI effects or VFX freelancer comparison</Link> splits it by
+          whether anything has been filmed.
         </p>
         <h3>Is it better to use AI or hire a production company?</h3>
         <p>

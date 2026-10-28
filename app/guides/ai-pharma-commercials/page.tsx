@@ -19,7 +19,7 @@ const PAGE = {
   description:
     'Which drug brands and pharmacies have run ads made with generative AI (AstraZeneca\'s Breztri llama, Gilead Canada\'s Descovy bear and otter, Grubb\'s Pharmacy\'s apology in DC), the Saphnelo, Icotyde and Peak Blue Rx "is this AI?" questions, what FDA rules apply to AI imagery, who may appear in a drug ad (actors, celebrities, AI people), and why both drug campaigns used animals instead of patients.',
   published: '2026-10-01',
-  updated: '2026-10-17',
+  updated: '2026-10-28',
   keywords: [
     'ai generated pharma commercial',
     'which pharma company is using ai',
@@ -28,6 +28,8 @@ const PAGE = {
     'grubbs pharmacy ai ad',
     'ai pharmaceutical commercial',
     'peak blue rx ai commercial',
+    'is the peak blue rx commercial ai',
+    'peak blue rx commercial',
     'is the icotyde commercial made with ai',
     'is the icotyde commercial ai generated',
     'does the icotyde commercial use ai',
@@ -94,7 +96,7 @@ const FAQS = [
   },
   {
     q: 'Is the Peak Blue Rx commercial AI?',
-    a: 'No public source says so. iSpot lists Peak Blue Rx\'s 60-second men\'s health TV spot "Same Results", published March 2, 2026, with no actors identified, and as of October 2026 neither the company nor any news outlet has said AI made it. People search the question because realistic pharma and telehealth ads now get checked for AI as a matter of course.',
+    a: 'Nobody has confirmed it. Viewers say Peak Blue Rx\'s 60-second men\'s health TV spot "Same Results" (listed by iSpot from March 2, 2026) looks AI-made, including a thread in r/CommercialsIHate, but as of October 28, 2026 Peak Blue Rx has not said whether AI was used, iSpot names no actors for the spot, and no news outlet has reported it. People search the question because realistic pharma and telehealth ads now get checked for AI as a matter of course.',
   },
   {
     q: 'Can pharma ads use AI actors?',
@@ -249,10 +251,17 @@ export default function Page() {
           For a brand team the case shows that an ad can be judged as AI on stiff delivery alone, whether or not AI made
           it. Performance direction and the disclosure decision belong in the same review.
         </p>
+        <h3>Is the Peak Blue Rx commercial AI?</h3>
         <p>
-          Peak Blue Rx, which sells men&apos;s health prescriptions, gets the same question for{' '}
-          <a href={ISPOT_PEAK}>&ldquo;Same Results&rdquo;</a>, a 60-second TV spot iSpot lists from March 2, 2026. No
-          source says AI made it. On Saphnelo, the threads do not say which spot they mean, and AstraZeneca&apos;s first
+          Peak Blue Rx sells generic versions of Viagra and Cialis online. Its 60-second TV spot{' '}
+          <a href={ISPOT_PEAK}>&ldquo;Same Results&rdquo;</a>, listed by iSpot from March 2, 2026, is the one people ask
+          about. A thread in r/CommercialsIHate titled &ldquo;Peak Blue commercial&rdquo; says the spot &ldquo;appears to be
+          made with AI&rdquo;, and Google&apos;s related searches ask about the commercial&apos;s AI actress, actor and
+          cast. Peak Blue Rx has not said whether AI was used, iSpot names no actors for the spot, and no news outlet has
+          reported it as of October 28, 2026. It is viewer suspicion, the same as Icotyde.
+        </p>
+        <p>
+          On Saphnelo, the threads do not say which spot they mean, and AstraZeneca&apos;s first
           consumer campaign for the drug, &ldquo;Here for More&rdquo;, launched in{' '}
           <a href={FIERCE_SAPHNELO_2022}>May 2022</a>, before generators could make realistic people.
         </p>

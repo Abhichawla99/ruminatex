@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: which kind to hire, the AI commercial production companies a search returns, how an AI commercial is made, what it costs, AI commercials for fitness brands and tech companies, and AI VFX on a live-action shoot vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-27',
+    updated: '2026-10-28',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -56,7 +56,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video vs traditional video production: which should my brand hire, should I use an AI video tool or hire an agency, can AI replace a video production agency, what a 2-minute brand video costs either way, and how much cheaper AI video production is than an agency by type of video',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-24',
+    updated: '2026-10-28',
   },
   {
     path: '/ai-brand-film-agency',
@@ -232,7 +232,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, can drug ads use AI actors, and what rules cover pharma celebrity endorsements',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-17',
+    updated: '2026-10-28',
   },
   {
     path: '/guides/ai-medical-animation',
@@ -289,5 +289,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-10-27',
     updated: '2026-10-27',
+  },
+  {
+    path: '/comparison/freelance-vs-ai-video',
+    title: 'Hire a Freelance Video Editor vs AI Production: Which Is Better?',
+    question: 'should i use ai effects or hire a vfx freelancer for a short brand video, is an ai video generator cheaper than a freelance video editor, and should i hire an ai video editor full time or as a freelancer',
+    kind: 'comparison',
+    published: '2026-03-08',
+    updated: '2026-10-28',
   },
 ]

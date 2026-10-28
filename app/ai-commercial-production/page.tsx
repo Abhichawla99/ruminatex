@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'How to choose an AI commercial production company, how an AI commercial gets made without a shoot, what it costs, what still breaks, example shot lists for fitness brands and tech companies, commercial-use rights, and when to hire a crew instead.',
   published: '2026-03-07',
-  updated: '2026-10-27',
+  updated: '2026-10-28',
   keywords: [
     'ai commercial production',
     'ai commercial production company',
@@ -467,7 +467,9 @@ export default function Page() {
         <p>
           Some searches for AI commercial production come from teams who are filming anyway and want AI for a few shots:
           a set extension, a crowd, a product that transforms. That is AI VFX inside a live-action shoot, and it is a
-          production company&apos;s or a VFX house&apos;s job, because someone has to film the plates.
+          production company&apos;s or a VFX house&apos;s job, because someone has to film the plates. For a shorter
+          brand video with footage already shot, a single artist may be enough: see{' '}
+          <Link href="/comparison/freelance-vs-ai-video">whether to use AI effects or hire a VFX freelancer</Link>.
         </p>
         <p>
           {studio} makes commercials where every shot is generated. If your idea only works with your real store, your
