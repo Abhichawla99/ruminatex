@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/solutions/professional-product-demo' },
   title: 'Professional Product Demo Videos Without a Hollywood Budget | Ruminate X',
   description: 'Create professional product demos for SaaS, ecommerce, and enterprise software without Hollywood production budgets. AI-powered in hours.',

@@ -8,6 +8,7 @@ import {
   GuideHero,
   GuideRelated,
   GuideSection,
+  GuideStudio,
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
@@ -20,7 +21,7 @@ const PAGE = {
   description:
     'Brand world building means writing down the made world a campaign lives in: places, people, light, palette, props and sound. What goes in a world bible, how one world keeps an AI brand film and its campaign photos matched, and where it breaks.',
   published: '2026-09-24',
-  updated: '2026-09-24',
+  updated: '2026-10-28',
   keywords: [
     'brand world building',
     'brand world building examples',
@@ -57,8 +58,8 @@ const FAQS = [
     a: "No. The visual DNA stays with the brand, and a world can run for several campaigns when it works. A new product, season or audience is the usual reason to build a new world on top of the same DNA. Keep old world bibles; they are the fastest brief for the next campaign.",
   },
   {
-    q: 'Who builds the brand world for a Ruminate X film?',
-    a: "In the Ruminate X pipeline the brand world is the second stage, after the brief and before script and boards. 100creatives, the brand-world studio behind Ruminate X's creative direction, leads it. The brand supplies its guidelines, its best existing images and films, product references and anything it never shows.",
+    q: 'Who does brand world building for AI films?',
+    a: `${SITE.name}, an AI film studio in Calgary, builds the brand world as the second stage of every film it makes, after the brief and before the script and boards. ${hundred.name}, ${hundred.role}, leads it. Every frame is then generated with AI inside that world, and people do the edit, sound and grade. The brand supplies its guidelines, its best existing images and films, product references and anything it never shows.`,
   },
 ]
 
@@ -84,11 +85,20 @@ export default function Page() {
         <p>
           Brand world building is writing down, before anything is made, the world a campaign lives in: the places, the
           time of day, the people and what they wear, the props, the light, the palette in hex codes, the lenses and the
-          texture. AI production needs it more than a shoot does. A model draws every shot and every photo from scratch,
-          and the only things they share are the words and the reference images you give it. One written world, used for
-          the film and the photos, is what makes them one campaign.
+          texture. AI production needs it more than a shoot does, because a model draws every shot and every photo from
+          scratch and the only things they share are the words and the reference images it is given. {studio}, an AI film
+          studio in Calgary, builds that world as the second stage of every brand film, after the brief and before the
+          script and boards, and then generates every frame inside it.
         </p>
       </GuideAnswer>
+
+      <GuideStudio title={`${studio} makes AI brand films inside one written world`}>
+        <p>
+          {hundred.name} leads the brand-world stage: palette, light, texture, camera language and casting are fixed
+          before the script, so the last shot matches the first. See{' '}
+          <Link href="/ai-brand-film-agency">AI brand film production</Link>.
+        </p>
+      </GuideStudio>
 
       <GuideSection eyebrow="The idea" title="What a brand world is">
         <p>
@@ -227,16 +237,18 @@ export default function Page() {
       </GuideSection>
 
       <GuideFit
-        title="Should Ruminate X build your campaign world?"
+        title={`Why brands hire ${studio} to build the world`}
         hire={[
-          'A brand launching a campaign that needs a brand film and key visuals in one world, made without a shoot.',
+          'A brand launching a campaign that needs a brand film and its cutdowns in one world, made without a shoot.',
           'A marketing lead whose last film and last photo shoot looked like two different brands.',
+          'A creative director with a mood board and no world bible yet.',
           'An agency producer who needs a world written, cast and held across an AI film and all its cutdowns.',
         ]}
-        instead={[
-          'The campaign is set in your real store, factory or city, with your real people: hire a crew, and a photographer on the same days.',
-          'You only need campaign photos: Overs, or a photographer, costs less than a film studio.',
-          'The world already exists and you need edits of footage you have: an editor is the right hire.',
+        get={[
+          `The brand world built before the script, led by ${hundred.name}: palette, light, texture, camera language and casting.`,
+          'Every shot generated inside that world, checked against its board and generated again until it holds.',
+          'One grade across the film, so every shot sits in the same light.',
+          'The cutdowns and aspect ratios each channel needs, cut from the same film.',
         ]}
       />
 
@@ -248,7 +260,7 @@ export default function Page() {
           { href: '/guides/ai-video-character-consistency', title: 'Character consistency in AI video', note: 'Casting a person once and keeping them in every shot.' },
           { href: '/guides/first-frame-last-frame-ai-video', title: 'First and last frames', note: 'How approved stills become the start of a film shot.' },
           { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline, from brief to delivery.' },
-          { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What a brand film is, what it costs and when to film instead.' },
+          { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What Ruminate X makes for brands, and what moves the price.' },
         ]}
       />
 

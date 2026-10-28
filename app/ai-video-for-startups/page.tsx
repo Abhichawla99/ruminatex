@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Video for Startups | Fast, Affordable Video Production | Ruminate X',
   description: 'AI-powered video production built for startups. Get launch videos, pitch decks, product demos & social content fast — without the agency price tag.',
   keywords: ['AI video for startups', 'startup video production', 'AI video agency for startups', 'affordable startup videos', 'AI product demo video', 'startup launch video'],
@@ -161,7 +163,7 @@ export default function AIVideoForStartupsPage() {
             Most AI video tools hand you an editor and leave you on your own. Ruminate X is a full-service creative partner. You get a dedicated team that understands startup positioning, product storytelling, and the specific content formats that drive acquisition and engagement at every stage of growth.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            We built our AI production pipeline to handle everything from <Link href="/ai-product-videos" className="text-[#ebff00] hover:underline">product videos</Link> and explainers to <Link href="/ai-video-ads" className="text-[#ebff00] hover:underline">paid ad creatives</Link> and social content. The AI handles speed and scale. Our creatives handle strategy and quality. Your startup gets a content engine that actually keeps up with your ambition — without draining the budget you need for product and growth.
+            We built our AI production pipeline to handle everything from <Link href="/ai-product-videos" className="text-[#ebff00] hover:underline">product videos</Link> and explainers to <Link href="/ai-commercial-production" className="text-[#ebff00] hover:underline">paid ad creatives</Link> and social content. The AI handles speed and scale. Our creatives handle strategy and quality. Your startup gets a content engine that actually keeps up with your ambition — without draining the budget you need for product and growth.
           </p>
         </div>
       </section>

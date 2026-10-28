@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/tools/best-ai-video-tools-comparison' },
   title: 'Best AI Video Generator Tools Compared 2026: Complete Guide | Ruminate X',
   description: 'Comparison of top AI video generators: Synthesia, InVideo, HeyGen, Pictory, Canva, and more. Pros, cons, pricing.',

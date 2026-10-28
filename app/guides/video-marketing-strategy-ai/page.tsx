@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/guides/video-marketing-strategy-ai' },
   title: 'AI Video Marketing Strategy: Planning Your Content Calendar | Ruminate X',
   description: 'Strategy guide for planning AI video content. Calendar templates, content types, and distribution channels.',

@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/markets/ai-video-production-uk' },
   title: "AI Video Production UK: Cinematic Brand Content for British Brands",
   description: "AI video production for UK brands. Serving London, Manchester, Birmingham, Edinburgh and beyond with broadcast-quality video at 80% less than UK agency rates.",
@@ -130,7 +132,7 @@ export default function Page() {
             {[
               { href: "/london", label: "AI Video Production London" },
               { href: "/comparison/ai-agency-vs-traditional-agency", label: "AI vs Traditional Agency" },
-              { href: "/guides/why-traditional-video-agencies-are-expensive", label: "Why UK Agencies Overcharge" },
+              { href: "/comparison/ai-agency-vs-traditional-agency", label: "Why UK Agencies Overcharge" },
               { href: "/roi-calculator", label: "Calculate UK Savings" },
               { href: "/markets/ai-video-production-australia", label: "AI Video Production Australia" },
               { href: "/contact", label: "Start a UK Project" },

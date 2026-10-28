@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Content Workflow Automation | Streamline Your Video Pipeline | Ruminate X',
   description: 'Automate your content workflow with AI. Ruminate X builds scalable video production pipelines that cut turnaround times and eliminate bottlenecks.',
   keywords: ['AI content workflow automation', 'AI video production pipeline', 'automated content creation', 'AI content operations', 'video workflow automation', 'scalable content production'],
@@ -161,7 +163,7 @@ export default function AIContentWorkflowAutomationPage() {
             Most automation tools give you templates and tell you to figure it out. Ruminate X builds, operates, and optimizes your entire content pipeline. We are not selling software — we are running the production engine so your team does not have to. Every workflow is custom-built around your brand, your content types, and your approval process.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            The automation handles the heavy lifting, but human creativity drives every decision that matters. Our creative strategists design the content frameworks. Our editors review every output. The AI accelerates production — it never replaces taste. Combined with our <Link href="/ai-video-agency" className="text-[#ebff00] hover:underline">AI video agency</Link> services and <Link href="/ai-short-form-video" className="text-[#ebff00] hover:underline">AI short form video</Link> capabilities, workflow automation becomes the backbone of a content operation that scales as fast as your ambition demands.
+            The automation handles the heavy lifting, but human creativity drives every decision that matters. Our creative strategists design the content frameworks. Our editors review every output. The AI accelerates production — it never replaces taste. Combined with our <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">AI video agency</Link> services and <Link href="/ai-ugc-reels" className="text-[#ebff00] hover:underline">AI short form video</Link> capabilities, workflow automation becomes the backbone of a content operation that scales as fast as your ambition demands.
           </p>
         </div>
       </section>

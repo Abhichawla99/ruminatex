@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Video Personalization | Tailored Video Content at Scale | Ruminate X',
   description: 'Deliver personalized AI video content for every audience segment. Ruminate X creates custom video variants at scale — faster, cheaper, and more relevant.',
   keywords: ['AI video personalization', 'personalized video content', 'AI personalized ads', 'dynamic video personalization', 'custom AI video', 'video personalization agency'],
@@ -161,7 +163,7 @@ export default function AIVideoPersonalizationPage() {
             Most video personalization tools stop at swapping a name or logo onto a template. That is not personalization — it is a gimmick that viewers see through immediately. Ruminate X takes a fundamentally different approach. We design modular creative systems where every component of the video — the opening hook, the narrative arc, the visual style, the voiceover tone, the closing CTA — can be dynamically assembled per audience segment.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            The result is video that feels intentionally crafted for each viewer, because it is. Our AI pipeline handles the production scale while our creative team ensures every variant maintains the storytelling quality and brand consistency that makes video effective in the first place. Whether you need personalized <Link href="/ai-video-ads" className="text-[#ebff00] hover:underline">AI video ads</Link> for paid campaigns or tailored content for your <Link href="/ai-content-workflow-automation" className="text-[#ebff00] hover:underline">content workflow</Link>, the principle is the same: relevance wins.
+            The result is video that feels intentionally crafted for each viewer, because it is. Our AI pipeline handles the production scale while our creative team ensures every variant maintains the storytelling quality and brand consistency that makes video effective in the first place. Whether you need personalized <Link href="/ai-commercial-production" className="text-[#ebff00] hover:underline">AI video ads</Link> for paid campaigns or tailored content for your <Link href="/ai-content-workflow-automation" className="text-[#ebff00] hover:underline">content workflow</Link>, the principle is the same: relevance wins.
           </p>
         </div>
       </section>

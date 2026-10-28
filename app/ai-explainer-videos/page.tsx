@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Explainer Videos | Clear, Engaging Video Content | Ruminate X',
   description: 'Create professional AI explainer videos that simplify complex ideas. Ruminate X delivers polished explainer content faster and more affordably than traditional production.',
   keywords: ['AI explainer videos', 'AI-generated explainer videos', 'explainer video agency', 'AI video explainers', 'automated explainer production', 'explainer video company'],
@@ -160,7 +162,7 @@ export default function AIExplainerVideosPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start Your Explainer</Link>
-          <Link href="/ai-video-agency" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">Explore AI Video Services</Link>
+          <Link href="/ai-video-production-agencies" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">Explore AI Video Services</Link>
         </div>
       </section>
     </>

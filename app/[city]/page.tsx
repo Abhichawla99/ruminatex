@@ -17,8 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!location) return {}
 
   return {
+    // One template for cities where Ruminate X has no office reads as doorway pages to Google; out of the index (Abhi, 2026-10-28).
+    robots: { index: false, follow: true },
     alternates: { canonical: `https://www.ruminatex.com/${location.slug}` },
-    title: `AI Video Production ${location.city} | Cinematic Brand Films | Ruminate X`,
+    title: `AI Video Production ${location.city} | Cinematic Brand Films`,
     description: `Ruminate X delivers AI-powered cinematic brand films and commercial production for brands in ${location.city}. ${location.description} No idea is impossible.`,
     keywords: location.keywords,
     openGraph: {

@@ -1,13 +1,49 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
+import {
+  Guide,
+  GuideAnswer,
+  GuideCta,
+  GuideFaq,
+  GuideFilm,
+  GuideFit,
+  GuideHero,
+  GuideRelated,
+  GuideSection,
+  GuideTable,
+  film,
+  guideMetadata,
+} from '@/components/guide/Guide'
+import { OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
-export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-ecommerce' },
-  title: 'AI Video Production for E-Commerce & DTC Brands | Ruminate X',
-  description:
-    "Scale your e-commerce brand's video content with AI-powered cinematic production. Brand films, product videos, social content, and ad campaigns — at 70% lower cost than traditional agencies.",
+const studio = SITE.name
+const city = SITE.city.split(',')[0]
+const offer = (key: string) => {
+  const found = OFFERS.find((o) => o.key === key)
+  if (!found) throw new Error(`Unknown offer "${key}". Add it to lib/seo/facts.ts first.`)
+  return found
+}
+const short = film('zJgXuxFGU0U')
+
+/** What Ruminate X makes for an ecommerce brand, from OFFERS, with what each one is for in a store. */
+const STORE_OFFERS = [
+  { key: 'product-visuals', what: 'Your product in generated settings, light and motion, with stills from the same look', where: 'Product pages, marketplace listings, ads, email' },
+  { key: 'commercial', what: 'A launch spot or product ad with a hook, a reason to buy and your end card', where: 'TV, streaming, YouTube, Meta, TikTok' },
+  { key: 'ugc', what: 'Creator-style ads in which a generated presenter delivers scripted ad lines', where: 'Reels, TikTok, Shorts' },
+  { key: 'review', what: 'Review and testimonial-style videos; the review in one has to come from a real customer', where: 'Paid social, product pages' },
+  { key: 'brand-film', what: 'A story-driven film about what the brand stands for', where: 'Homepage, launches, YouTube' },
+]
+
+const PAGE = {
+  path: '/ai-video-production-ecommerce',
+  title: 'AI Video Production for Ecommerce Brands',
+  description: `${studio} makes AI video for ecommerce and DTC brands: product films and stills, launch films, UGC-style ads, and the marketplace and social versions of each, with every frame generated and your real product, label and logo set in the edit from your files. What it costs, what an Amazon video ad allows, and where generated product shots break.`,
+  published: '2026-03-07',
+  updated: '2026-10-28',
   keywords: [
+    'ai video for ecommerce',
     'AI video production for ecommerce brands',
+    'ai e-commerce commercials',
+    'ai product video',
     'AI video for DTC brands',
     'ecommerce brand video production',
     'AI video agency for ecommerce',
@@ -17,182 +53,216 @@ export const metadata: Metadata = {
   ],
 }
 
-const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+const AMAZON_SBV = 'https://advertising.amazon.com/resources/ad-specs/sponsored-brands-video'
+const AMAZON_MODERATION = 'https://advertising.amazon.com/library/guides/sponsored-brands-display-ads-moderation'
 
-const useCases = [
+const FAQS = [
   {
-    title: 'Brand Films',
-    desc: 'Cinematic brand stories that communicate who you are — not just what you sell. The video that converts browsers into believers.',
+    q: 'What is AI video for ecommerce?',
+    a: `Product films, launch spots, UGC-style ads and product stills made with generative AI instead of a studio or location shoot, then cut into the versions each store, marketplace and social feed takes. ${studio}, an AI film studio in ${city}, makes AI video for ecommerce and DTC brands with every frame generated and your real product, label and logo set in the edit from your own files.`,
   },
   {
-    title: 'Product Launch Videos',
-    desc: 'Launch campaigns that create moments. Hero films, teaser content, and the full creative arc for product debuts.',
+    q: 'Who makes AI video for ecommerce brands?',
+    a: `${studio}, an AI film studio in ${city}, makes product films and stills, launch films, UGC-style ads and their marketplace and social versions for ecommerce and DTC brands. Every frame is generated with AI, people write, board, edit, mix and grade every film, and your product, label and logo are set in the edit from your own files. Before you hire any studio, ask to see a shot where a hand holds the product and the label reads correctly in the last frame; ${studio} boards and regenerates exactly those shots.`,
   },
   {
-    title: 'Ad Creative at Scale',
-    desc: 'Multiple creative variations, different cuts, A/B test versions — produced simultaneously at a fraction of traditional cost.',
+    q: 'How much does AI video production cost for an ecommerce brand?',
+    a: `${priceLine('commercial')}. Product films and stills, UGC-style ads and review-style videos are quoted from the brief as well. The price moves with running time, the number of scenes and stills, how exactly the product has to be reproduced, how many products and colourways appear, the versions, lengths and aspect ratios each placement needs, and how many review rounds your team takes. There is no studio day, set or crew to pay for.`,
   },
   {
-    title: 'Social Content Engine',
-    desc: 'High-volume, studio-quality content for every platform. Reels, TikTok, YouTube Shorts — consistently, week over week.',
+    q: 'What are AI e-commerce commercials?',
+    a: `Commercials for an online store or a DTC product made with generative AI: a hook, the product, a reason to buy and an end card, for TV, streaming, YouTube and paid social. ${studio} makes them with every frame generated, your product reproduced from your real product images and your label and logo set in the edit, then cuts them to each placement's length and ratio, down to a 16:9 cut of 45 seconds or less for an Amazon Sponsored Brands video ad.`,
   },
   {
-    title: 'Lifestyle & Aspirational',
-    desc: 'Your product in any environment, any aesthetic. AI enables locations and visuals no traditional shoot could achieve.',
+    q: 'Can I run AI product videos as Amazon video ads?',
+    a: 'Yes, if the video meets Amazon\'s rules for the format. Amazon\'s Sponsored Brands video ads take 16:9 only, 6 to 45 seconds long (20 seconds or less is highly recommended), with no black, colour or blurred bars. Its moderation guide for Sponsored Brands and display ads says videos cannot include customer reviews or star ratings, and superiority claims such as "the best" are rejected unless they can be substantiated (Amazon Ads, read October 28, 2026).',
   },
   {
-    title: 'Seasonal Campaigns',
-    desc: 'Full campaign suites for key moments — holiday, summer, new collection. Complete creative packages in weeks, not months.',
+    q: 'How do I brief an AI video for an ecommerce launch?',
+    a: `Send ${studio} the product, the launch date, the channels and marketplaces, the claims your team has approved, and your product files: label artwork, logo vectors and photos of the product from several angles. ${studio} comes back with a creative brief and a quote, and you see the script and the shot list before any frame is generated. Name every placement up front, from the 16:9 Amazon cut to the vertical cuts for Reels and TikTok, because the versions are part of the quote.`,
   },
 ]
 
-export default function EcommercePage() {
+export const metadata = guideMetadata(PAGE)
+
+export default function Page() {
   return (
-    <>
-      {/* Hero */}
-      <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'linear-gradient(#ebff00 1px, transparent 1px), linear-gradient(90deg, #ebff00 1px, transparent 1px)',
-            backgroundSize: '80px 80px',
-          }}
+    <Guide
+      page={PAGE}
+      faqs={FAQS}
+      films={[short.youtubeId]}
+      service={{
+        name: 'AI video production for ecommerce brands',
+        description: `${studio} makes product films and stills, launch films, UGC-style ads and their marketplace and social versions for ecommerce and DTC brands, with every frame generated by AI and the product, label and logo set in the edit from the brand's own files.`,
+        audience: ['ecommerce brands', 'DTC brands', 'consumer brands'],
+      }}
+    >
+      <GuideHero
+        eyebrow="Ecommerce and DTC"
+        title="AI video production for ecommerce brands"
+        dek={`For the ecommerce or DTC marketing lead who needs product films, a launch spot, UGC-style ads and the Amazon, Meta and TikTok cuts of each, and wants to know what ${studio} makes, what it costs and how the product stays exact.`}
+        updated={PAGE.updated}
+      />
+
+      <GuideAnswer>
+        <p>
+          AI video for ecommerce means product films, launch spots and creator-style ads made with generative AI instead of
+          a studio day, then cut into the versions each store, marketplace and feed takes. {studio}, an AI film studio in{' '}
+          {city}, makes AI video for ecommerce and DTC brands: every frame generated with AI, with the script, boards,
+          edit, sound and grade done by people, and your real product, label and logo set in the edit from your own files.
+          Each marketplace version follows that marketplace&apos;s rules; Amazon&apos;s Sponsored Brands video ads, for
+          example, run 6 to 45 seconds in 16:9 only and cannot show customer reviews or star ratings.
+        </p>
+      </GuideAnswer>
+
+      <GuideSection eyebrow="What you get" title="What AI video for an ecommerce brand includes">
+        <p>
+          {studio} makes every piece from one look, so the launch film, the product page and the ads show one product in
+          one world.
+        </p>
+        <GuideTable
+          caption={`What an ecommerce brief can ask ${studio} for. Every frame is generated; the product, label and logo come from your files.`}
+          head={['Deliverable', 'What it is', 'Where it runs']}
+          rows={[
+            ...STORE_OFFERS.map(({ key, what, where }) => {
+              const o = offer(key)
+              return [o.path ? <Link href={o.path}>{o.name}</Link> : o.name, what, where]
+            }),
+            ['Launch film', 'A short film that introduces a new product or collection in a world built for it', 'Launch pages, paid social, YouTube, streaming'],
+            ['Marketplace and social versions', 'The lengths, aspect ratios and cutdowns each placement takes, cut from the same film', 'Amazon, Meta, TikTok, YouTube, your store'],
+          ]}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
-            <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">E-Commerce & DTC</span>
-          </div>
-          <h1
-            style={{ ...displayStyle, fontSize: 'clamp(52px, 11vw, 150px)' }}
-            className="text-white leading-none mb-8 max-w-5xl"
-          >
-            EVERY PRODUCT<br />HAS ONE<br />
-            <span style={{ color: '#ebff00' }}>TRUE STORY.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            Most e-commerce video describes the product. Great e-commerce video makes people feel something about it. We are a cinematic story studio — we don&apos;t make product content, we make films that turn browsers into believers.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors"
-            >
-              Start a Project
-            </Link>
-            <Link
-              href="/work"
-              className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors"
-            >
-              See Our Work
-            </Link>
-          </div>
-        </div>
-      </section>
+        <p>
+          The product pieces are on <Link href="/ai-product-videos">AI product videos and stills</Link>, and the
+          creator-style ads, with the disclosure rules for Meta and TikTok, are on{' '}
+          <Link href="/ai-ugc-reels">AI UGC ads</Link>. {PRODUCTION.summary}
+        </p>
+      </GuideSection>
 
-      {/* Stats */}
-      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { stat: '70%', label: 'Cost savings vs. traditional agencies' },
-              { stat: '2–3 wks', label: 'From brief to delivery' },
-              { stat: '∞', label: 'Creative possibilities' },
-              { stat: '10×', label: 'More content per budget' },
-            ].map(({ stat, label }) => (
-              <div key={label} className="text-center">
-                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="Price" title="What AI video costs an ecommerce brand" alt>
+        <p>
+          {priceLine('commercial')}. Product films and stills, UGC-style ads and review-style videos are quoted from the
+          brief as well. The price moves with running time, the number of scenes and stills, how exactly the product has to be
+          reproduced, how many products and colourways appear, the versions, lengths and aspect ratios each placement
+          needs, and how many review rounds your team takes.
+        </p>
+        <p>
+          There is no studio day, set or crew in the quote. You send product files instead: label artwork, logo vectors
+          and photos of the product from several angles.
+        </p>
+      </GuideSection>
 
-      {/* Use Cases */}
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What We Create</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-16">
-          VIDEO FOR EVERY<br />STAGE OF GROWTH
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map(({ title, desc }) => (
-            <div key={title} className="border border-[#1a1a1a] p-8 hover:border-[#ebff00]/20 transition-colors">
-              <h3 style={{ ...displayStyle, fontSize: '28px', color: '#ebff00' }} className="mb-3">{title}</h3>
-              <p className="text-[#666666] text-sm leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GuideSection eyebrow="Marketplace versions" title="What an Amazon video ad allows">
+        <p>
+          Plan the Amazon cut at the brief. A vertical cut cannot be reused there, and a review-style cut cannot run there
+          at all.
+        </p>
+        <GuideTable
+          caption={
+            <>
+              From Amazon Ads&apos; <a href={AMAZON_SBV}>Sponsored Brands video specs</a> and its{' '}
+              <a href={AMAZON_MODERATION}>moderation guide for Sponsored Brands and display ads</a>, read October 28, 2026.
+            </>
+          }
+          head={['Sponsored Brands video', 'What Amazon says', 'What it means for the cut']}
+          rows={[
+            ['Length', '6 to 45 seconds; 20 seconds or less highly recommended', 'A short cut of the launch film, not the full film'],
+            ['Frame', '16:9 only, at 1280 x 720, 1920 x 1080 or 3840 x 2160; no black, colour or blurred bars', 'A widescreen version, never a vertical cut with bars'],
+            ['Sound', 'Videos start without audio by default', 'The product and the reason to buy read on screen with the sound off'],
+            ['Opening', 'Show the product in the first two seconds', 'The first shot is the product'],
+            ['Text', 'Keep text and other important information out of the lower right corner', 'Supers and the logo sit clear of that corner'],
+            ['Reviews', 'Videos cannot include customer reviews, including star ratings, even if the reviews are on Amazon', 'No review-style cut in Amazon video ads'],
+            ['Claims', 'Superiority claims such as "the best" are rejected unless they can be substantiated', 'Every claim on screen is one your team can support'],
+          ]}
+        />
+        <p>
+          Meta, TikTok and YouTube each take their own ratios, lengths and safe zones; the full list is in{' '}
+          <Link href="/guides/ad-campaign-deliverables">ad campaign deliverables</Link>.
+        </p>
+      </GuideSection>
 
-      {/* Why */}
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Advantage</p>
-              <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-8">
-                WHY E-COMMERCE<br />BRANDS CHOOSE<br />AI PRODUCTION
-              </h2>
-            </div>
-            <div className="space-y-8">
-              {[
-                {
-                  title: 'Volume Without Compromise',
-                  body: "The modern e-commerce brand needs more content than any traditional agency can sustainably produce. AI enables the volume your channels demand without sacrificing the quality your brand requires.",
-                },
-                {
-                  title: 'Speed to Market',
-                  body: 'Launch week is not a good time to be waiting on post-production. Our 2–3 week delivery timeline means you always have campaign content ready when you need it.',
-                },
-                {
-                  title: 'Creative Without Limits',
-                  body: "Traditional production is constrained by physical reality. AI production isn't. Any environment. Any visual. Any concept. If you can describe it, we can create it.",
-                },
-              ].map(({ title, body }) => (
-                <div key={title} className="border-l-2 border-[#ebff00]/30 pl-6">
-                  <h3 className="text-white font-bold mb-2 uppercase tracking-wide text-sm">{title}</h3>
-                  <p className="text-[#666666] text-sm leading-relaxed">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <GuideSection eyebrow="Where it breaks" title="Where generated product shots break" alt>
+        <GuideTable
+          caption={`Where generated product footage fails, and the fix ${studio} applies to each.`}
+          head={['Problem', 'What the shopper sees', 'The fix']}
+          rows={[
+            ['Colour and colourway', 'The navy reads as black, so the colourway in the ad is not the one in the cart', 'Check every shot against your product photos and regenerate the ones that drift'],
+            ['Size and scale', 'The bottle looks larger in the hand than it is', 'Lock the product to reference stills and check its scale against the hand in every shot'],
+            ['Label text', 'Letters melt, the product name is misspelled, small print turns to noise', 'Set the label from your artwork in the edit; never generate type'],
+            ['Hands and use', 'Fingers pass through the cap, the grip changes between cuts', 'Rerun the shot, or cut to an insert where hands are not needed'],
+            ['The vertical crop', 'A 9:16 crop of a 16:9 frame cuts the product in half', 'Generate the product shots again for the vertical frame instead of cropping'],
+          ]}
+        />
+        <p>
+          The full method for keeping a pack, label and logo exact is in{' '}
+          <Link href="/guides/ai-commercial-product-accuracy">product and label accuracy in AI commercials</Link>. The rule on
+          showing a product working, from the Supreme Court&apos;s Colgate-Palmolive case, is on{' '}
+          <Link href="/ai-product-videos">AI product videos</Link>.
+        </p>
+      </GuideSection>
 
-      {/* Blog link */}
-      <section className="border-t border-[#1a1a1a] py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#888888] text-sm mb-4">Want to learn more?</p>
-          <Link
-            href="/blog/ai-video-production-ecommerce-brands-guide"
-            className="inline-flex items-center gap-2 text-[#ebff00] hover:text-white transition-colors text-lg font-medium"
-          >
-            Read: AI Video Production for E-Commerce Brands — The Complete Guide
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
-      </section>
+      <GuideSection eyebrow="How it is made" title={`How ${studio} makes ecommerce video`}>
+        <ol>
+          <li>
+            <strong>Brief and product files.</strong> The product, the launch or channel, the claims your team has approved,
+            and your files: label artwork, logo vectors and photos of the product from several angles. Nothing is generated
+            until you approve the creative brief.
+          </li>
+          <li>
+            <strong>Brand world and boards.</strong> The palette, light and camera language fixed for your brand, then a
+            script and shot list you see before any frame is generated.
+          </li>
+          <li>
+            <strong>Generation passes.</strong> Each shot checked against your product photos and regenerated until it
+            holds. The product and the hands holding it get the most passes.
+          </li>
+          <li>
+            <strong>Edit and versions.</strong> Label, logo and on-screen text set from your files, then sound and grade,
+            and the Amazon, Meta, TikTok and YouTube versions cut from the same film.
+          </li>
+        </ol>
+        <GuideFilm
+          id={short.youtubeId}
+          caption={`${short.title}, a ${short.durationSeconds}-second vertical film from the ${studio} portfolio, shown for how a product holds up in a 9:16 frame.`}
+        />
+        <p>
+          Each stage of the pipeline is on <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>,
+          and the launch spot with its cutdowns is on <Link href="/ai-commercial-production">AI commercial production</Link>.
+        </p>
+      </GuideSection>
 
-      {/* CTA */}
-      <section className="border-t border-[#1a1a1a] py-24 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 5vw, 60px)' }} className="text-white leading-none mb-6">
-            YOUR BRAND.<br />
-            <span style={{ color: '#ebff00' }}>CINEMATIC QUALITY.<br />HALF THE COST.</span>
-          </h2>
-          <p className="text-[#888888] mb-8">
-            Tell us about your brand and what you want to create. We&apos;ll show you what&apos;s possible.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors"
-          >
-            Start a Project
-          </Link>
-        </div>
-      </section>
-    </>
+      <GuideFit
+        title={`Why ecommerce brands hire ${studio}`}
+        hire={[
+          'A DTC brand launching a product that needs a launch film, product page video and paid social ads in one look.',
+          'An ecommerce manager with a range of products or colourways that each need a product film and stills.',
+          'A performance marketer who needs fresh product ads and UGC-style cuts to test on Meta and TikTok.',
+          'A brand selling on Amazon that needs a 16:9 Sponsored Brands cut beside the vertical cuts for social.',
+        ]}
+        get={[
+          'A script and shot list you approve before anything is generated.',
+          'Your real product, label and logo set in the edit from your files, with the product given the most generation passes.',
+          'Product films and stills for product pages and feeds, from the same look as the ads.',
+          'The Amazon, Meta, TikTok and YouTube versions, cut from the same film.',
+        ]}
+      />
+
+      <GuideFaq faqs={FAQS} />
+
+      <GuideRelated
+        links={[
+          { href: '/ai-product-videos', title: 'AI product videos and stills', note: 'Product films and stills from your real product images, and the mock-up rule.' },
+          { href: '/ai-ugc-reels', title: 'AI UGC ads', note: 'Creator-style ads for Reels, TikTok and Shorts, and the disclosure rules.' },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'The launch spot and its cutdowns.' },
+          { href: '/guides/ad-campaign-deliverables', title: 'Ad campaign deliverables', note: 'Ratios, lengths and safe zones for every channel.' },
+          { href: '/ai-testimonial-videos', title: 'AI testimonial videos', note: 'What the FTC allows when a video ad quotes customer reviews.' },
+        ]}
+      />
+
+      <GuideCta
+        title="Tell us about the launch"
+        body="Send the product, the launch date, the channels and marketplaces, and the product files you have."
+      />
+    </Guide>
   )
 }

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/guides/screen-recording-automated-demos' },
   title: 'Automated Screen Recording & Demo Videos: SaaS Solutions | Ruminate X',
   description: 'Create automated screen recording videos for SaaS product demos. Screen recording + AI = professional demos in minutes.',
@@ -191,7 +193,6 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#1a1a1a]">
             {[
               { tool: 'Loom + AI Voiceover', detail: 'Record, add AI voiceover, publish. Fastest path for asynchronous demos.' },
-              { tool: 'Camtasia + Synthesia', detail: 'Screen recording combined with AI avatar presenter for professional talking-head demos.' },
               { tool: 'Deemo', detail: 'Built-in screen recording plus full AI automation pipeline in one platform.' },
               { tool: 'Descript', detail: 'Record, transcribe, edit the transcript, generate a new voiceover. Fastest for iteration.' },
             ].map(({ tool, detail }) => (

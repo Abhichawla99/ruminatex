@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
+
+const hundred = RELATED.find((r) => r.name === '100creatives')!
+const contests = RELATED.find((r) => r.name === 'AI Film Contests')!
 
 export const metadata: Metadata = {
   title: 'How We Make an AI Brand Film: Brief to Final Cut',
-  description: 'The Ruminate X pipeline, step by step: brief, brand world, script and boards, AI generation passes, edit and grade, delivery. How a brand film goes from an approved brief to a finished film with no crew, set or location shoot.',
+  description: 'The Ruminate X pipeline, step by step: brief, brand world, script and boards, AI generation passes, edit, sound and grade with your real logo and type set from your files, and delivery. How a brand film goes from an approved brief to a finished film with no crew, set or location shoot.',
   keywords: ['how to make an AI brand film', 'AI brand film process', 'AI brand film production process', 'AI video pipeline', 'how AI videos are made', 'AI commercial production process'],
   alternates: {
     canonical: 'https://www.ruminatex.com/how-we-make-an-ai-brand-film',
@@ -16,7 +20,7 @@ const articleSchema = {
   headline: 'How We Make an AI Brand Film',
   description: 'The Ruminate X production pipeline for AI brand films: brief, brand world, script and boards, generation passes, edit and grade, delivery.',
   datePublished: '2026-09-14',
-  dateModified: '2026-09-22',
+  dateModified: '2026-10-28',
   mainEntityOfPage: 'https://www.ruminatex.com/how-we-make-an-ai-brand-film',
   author: {
     '@type': 'Organization',
@@ -33,12 +37,12 @@ const articleSchema = {
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const steps = [
-  { step: '01', title: 'The Brief', desc: 'You bring the product, the audience, and the feeling the film has to leave behind. One call and one page later, we hand back a creative brief with references, tone, and the single message the film must land. Nothing gets generated until you approve it.' },
-  { step: '02', title: 'The Brand World', desc: 'Before any frame exists, we build the world the film lives in: palette, light, texture, camera language, casting archetypes. Our sister studio 100creatives leads this stage so the film looks like your brand instead of a demo reel. Lock the world and everything downstream stays consistent.' },
-  { step: '03', title: 'Script and Boards', desc: 'We write to the message, not to the tool. The script breaks into shots, each with framing, motion, and duration. You see the beat sheet and shot list before a single frame is generated, which is where most of the quality gets decided.' },
+  { step: '01', title: 'The Brief', desc: 'You bring the product, the audience, and the feeling the film has to leave behind. After a call, we hand back a creative brief with references, tone, and the single message the film must land. Nothing gets generated until you approve it.' },
+  { step: '02', title: 'The Brand World', desc: `Before any frame exists, we build the world the film lives in: palette, light, texture, camera language, casting archetypes. ${hundred.name}, ${hundred.role}, leads this stage so the film looks like your brand instead of a demo reel. Every shot after this is made inside that world.` },
+  { step: '03', title: 'Script and Boards', desc: 'We write the script to the single message in the brief. It breaks into shots, each with framing, motion, and duration. You see the beat sheet and shot list before a single frame is generated, which is where most of the quality gets decided.' },
   { step: '04', title: 'Generation Passes', desc: 'Every shot is generated, reviewed, and regenerated against the boards. We run multiple passes and keep only the takes that hold up on a big screen. Faces, hands, product details, and brand colors get extra passes because that is where AI footage usually breaks.' },
-  { step: '05', title: 'Edit, Sound, Grade', desc: 'Selected takes get cut to the rhythm of the script. Sound design, licensed music, and voiceover are layered in, then a color grade pulls every shot into one film. This is the stage where generated footage becomes something you would actually air.' },
-  { step: '06', title: 'Delivery and Revisions', desc: 'You receive a master plus the platform cuts the brief calls for, such as 16:9, 9:16 and 1:1, with captions. Your notes come back as a new cut. Turnaround is agreed with the brief, because it depends on length, versions and how many review rounds your team needs.' },
+  { step: '05', title: 'Edit, Sound, Grade', desc: 'Selected takes get cut to the rhythm of the script. Your real logo, product and on-screen text are set in the edit from your own brand files. Sound design, licensed music, and voiceover are layered in, then a color grade pulls every shot into one film, and a human editor reviews every frame.' },
+  { step: '06', title: 'Delivery and Revisions', desc: 'You receive a master plus the platform cuts the brief calls for, such as widescreen, vertical and square, with captions. Your notes come back as a new cut. Turnaround is agreed with the brief, because it depends on length, versions and how many review rounds your team needs.' },
 ]
 
 export default function HowWeMakeAIBrandFilmPage() {
@@ -58,7 +62,7 @@ export default function HowWeMakeAIBrandFilmPage() {
             HOW WE MAKE AN<br />AI BRAND FILM.<br /><span style={{ color: '#ebff00' }}>BRIEF TO BROADCAST.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#888888] max-w-2xl mb-12 leading-relaxed">
-            A brand film used to mean a production company, a shoot day, and a five-week edit. Our pipeline runs on generative AI with a creative director&apos;s hand on every frame. Here is exactly how a brief becomes a finished film, and where the craft comes in.
+            {SITE.name} is an AI film studio in Calgary. Every frame of our films is made with generative AI, and people write, board, edit, mix and grade every one. Here is how your brief becomes a finished film, stage by stage, and where the craft comes in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
@@ -67,31 +71,15 @@ export default function HowWeMakeAIBrandFilmPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#1a1a1a] py-12 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-8 max-w-xl mx-auto">
-            {[
-              { stat: '6', label: 'Stages in the pipeline' },
-              { stat: '0', label: 'Film crews, sets or location shoots' },
-            ].map(({ stat, label }) => (
-              <div key={label} className="text-center">
-                <p style={{ ...displayStyle, fontSize: 'clamp(32px, 4vw, 52px)', color: '#ebff00' }}>{stat}</p>
-                <p className="text-xs uppercase tracking-[0.15em] text-[#666666] mt-1">{label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Short Version</p>
-        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">SIX STAGES.<br />NO FILM CREW.</h2>
+        <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">EVERY FRAME GENERATED.<br />NO FILM CREW.</h2>
         <div className="max-w-3xl">
           <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            Ruminate X produces brand films with generative AI and a creative director&apos;s hand on every frame. The pipeline has six stages: brief, brand world, script and boards, generation passes, edit and sound, delivery. There are no shoots, no crews, and no location permits.
+            {SITE.name} makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and companies of every size. The pipeline runs in order: brief, brand world, script and boards, generation passes, edit, sound and grade, delivery. {PRODUCTION.summary}
           </p>
           <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            Every frame is reviewed by a human editor before delivery. World-building, boards, and the edit decide the quality, which is why we spend most of our time there. The full service overview lives on our <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand film agency</Link> page. If you are still choosing a studio, read <Link href="/ai-video-production-agencies" className="text-[#ebff00] hover:underline">how to hire an AI video production agency</Link>; if you are writing the brief, the <Link href="/guides/video-production-brief" className="text-[#ebff00] hover:underline">video brief template</Link> lists what to send. The same pipeline makes about-us and company films; which of those need a camera instead is on <Link href="/ai-video-production-enterprise" className="text-[#ebff00] hover:underline">AI corporate video production</Link>.
+            Every frame is reviewed by a human editor before delivery. World-building, boards, and the edit decide the quality, which is why we spend most of our time there. The full service overview lives on our <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand film agency</Link> page, and the same pipeline makes <Link href="/ai-commercial-production" className="text-[#ebff00] hover:underline">AI commercials</Link> and <Link href="/ai-corporate-video-production" className="text-[#ebff00] hover:underline">about-us and company films</Link>. If you are writing the brief, the <Link href="/guides/video-production-brief" className="text-[#ebff00] hover:underline">video brief template</Link> lists what to send.
           </p>
         </div>
       </section>
@@ -109,6 +97,7 @@ export default function HowWeMakeAIBrandFilmPage() {
               </div>
             ))}
           </div>
+          <Link href="/contact" className="mt-12 inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start with the brief</Link>
         </div>
       </section>
 
@@ -117,10 +106,10 @@ export default function HowWeMakeAIBrandFilmPage() {
         <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">THE BRAND WORLD<br />COMES FIRST</h2>
         <div className="max-w-3xl">
           <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            The brand world is the difference between a film that looks like your company and a film that looks like every AI reel online. It fixes the palette, the light, the textures, and the camera language before generation starts, so shot 40 matches shot 4.
+            The brand world is the difference between a film that looks like your company and a film that looks like every AI reel online. It fixes the palette, the light, the textures, and the camera language before generation starts, so the last shot matches the first.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            This stage is led by <Link href="https://www.100creatives.com" target="_blank" rel="noopener noreferrer" className="text-[#ebff00] hover:underline">100creatives</Link>, the brand-world studio behind Ruminate X&apos;s creative direction. Your brand rules and their world-building pass through the same pipeline, so the film arrives on-brand instead of being forced into brand afterward with overlays.
+            This stage is led by <Link href={hundred.url} target="_blank" rel="noopener noreferrer" className="text-[#ebff00] hover:underline">{hundred.name}</Link>, {hundred.role}. Your brand rules and their world-building pass through the same pipeline, so the film arrives on-brand instead of being forced into brand afterward with overlays. How to write that world down is in <Link href="/guides/brand-world-building" className="text-[#ebff00] hover:underline">brand world building</Link>.
           </p>
         </div>
       </section>
@@ -134,7 +123,7 @@ export default function HowWeMakeAIBrandFilmPage() {
               AI film technique moves fast, and the independent scene moves it fastest. Filmmakers compete in online contests and studio challenges, and new techniques (cleaner faces, longer coherent shots, sharper motion control) show up in public weeks before the tools ship them as features.
             </p>
             <p className="text-[#888888] text-lg leading-relaxed">
-              We track that scene through <Link href="https://aifilmcontests.com" target="_blank" rel="noopener noreferrer" className="text-[#ebff00] hover:underline">AI Film Contests</Link>, the contest tracker from the same creative ecosystem, so the bar our client work is measured against is always the current one, not last year&apos;s.
+              We track that scene through <Link href={contests.url} target="_blank" rel="noopener noreferrer" className="text-[#ebff00] hover:underline">{contests.name}</Link>, {contests.role}, so every {SITE.name} film is measured against the current bar.
             </p>
           </div>
         </div>
@@ -145,10 +134,10 @@ export default function HowWeMakeAIBrandFilmPage() {
         <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-8">WHAT MOVES<br />THE PRICE</h2>
         <div className="max-w-3xl">
           <p className="text-[#888888] text-lg leading-relaxed mb-6">
-            Ruminate X quotes each film from the brief. The price is set by length, the number of scenes, how exactly a real product has to be reproduced, the number of versions and languages, and how many review rounds your team needs.
+            {priceLine('brand-film')}. The price is set by length, the number of scenes, how exactly a real product has to be reproduced, the number of versions and languages, and how many review rounds your team needs, including MLR or legal review.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            There is no shoot to pay for: no crew, no location, no permits. Every creative stage above still happens, in-house, on our pipeline. For what AI films cost across the market, from tools to broadcast studios, read <Link href="/blog/how-much-does-ai-video-production-cost" className="text-[#ebff00] hover:underline">how much AI video production costs</Link>.
+            There is no shoot to pay for: no crew, no location, no permits. More on what moves the cost of an AI film is in <Link href="/blog/how-much-does-ai-video-production-cost" className="text-[#ebff00] hover:underline">how much AI video production costs</Link>.
           </p>
         </div>
       </section>
@@ -158,7 +147,7 @@ export default function HowWeMakeAIBrandFilmPage() {
           <h2 style={{ ...displayStyle, fontSize: 'clamp(36px, 6vw, 80px)' }} className="text-white leading-none mb-6">
             SEND A BRIEF.<br /><span style={{ color: '#ebff00' }}>GET A FILM.</span>
           </h2>
-          <p className="text-[#888888] mb-8">Send the product, the audience, and the feeling you&apos;re after. We come back with the creative brief, the brand world direction, and a quote.</p>
+          <p className="text-[#888888] mb-8">Send the product, the audience, and the feeling you&apos;re after. We come back with the creative brief, the brand world direction, and a quote, and nothing is generated until you approve the brief.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start a Project</Link>
             <Link href="/work" className="inline-flex items-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Our Work</Link>

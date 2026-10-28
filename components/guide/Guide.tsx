@@ -35,7 +35,7 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { portfolioItems, type PortfolioItem } from '@/lib/portfolio'
 import { FOUNDER, SITE } from '@/lib/seo/facts'
-import { absolute, articleLd, breadcrumbLd, faqLd, videoLd, type Crumb, type Faq, type PageMeta } from '@/lib/seo/schema'
+import { absolute, articleLd, breadcrumbLd, faqLd, serviceLd, videoLd, type Crumb, type Faq, type PageMeta, type ServiceMeta } from '@/lib/seo/schema'
 
 const display = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 const eyebrowClass = 'text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4'
@@ -82,12 +82,15 @@ export function Guide({
   faqs = [],
   films = [],
   trail,
+  service,
   children,
 }: {
   page: PageMeta
   faqs?: Faq[]
   films?: string[]
   trail?: Crumb[]
+  /** On service and industry pages: the service Ruminate X sells there, written as Service JSON-LD. */
+  service?: ServiceMeta
   children: ReactNode
 }) {
   const crumbs = trail ?? [
@@ -97,6 +100,7 @@ export function Guide({
   const ld = [
     articleLd(page),
     breadcrumbLd(crumbs),
+    ...(service ? [serviceLd(service, page.path)] : []),
     ...(faqs.length ? [faqLd(faqs)] : []),
     ...films.map((id) => videoLd(film(id))).filter((v) => v !== null),
   ]
@@ -200,14 +204,25 @@ export function GuideTable({ caption, head, rows }: { caption: ReactNode; head: 
   )
 }
 
-/** Who should hire us, and who should hire someone else. Assistants trust pages that say where they lose. */
-export function GuideFit({ title = 'Is Ruminate X the right fit?', hire, instead }: { title?: ReactNode; hire: ReactNode[]; instead: ReactNode[] }) {
-  const list = (items: ReactNode[], mark: string, markClass: string) => (
+/** What every Ruminate X film comes with. From the pipeline as published on /how-we-make-an-ai-brand-film. */
+const DEFAULT_GET: ReactNode[] = [
+  'Every frame made with generative AI, so there is no crew, set or location day to book.',
+  'People on every film: the script, the boards, the edit, the sound and the grade.',
+  'Your real logo, product and on-screen text set in the edit from your brand files.',
+  'The cutdowns and aspect ratios each channel needs, cut from the same film.',
+]
+
+/**
+ * Who Ruminate X is for, and what they get. Pages sell Ruminate X here; they do
+ * not send the reader to another studio, agency or tool.
+ */
+export function GuideFit({ title = `Why brands hire ${SITE.name}`, hire, get = DEFAULT_GET }: { title?: ReactNode; hire: ReactNode[]; get?: ReactNode[] }) {
+  const list = (items: ReactNode[]) => (
     <ul className="space-y-3 text-[#a3a3a3] leading-relaxed">
       {items.map((item, i) => (
         <li key={i} className="flex gap-3">
-          <span aria-hidden className={markClass}>
-            {mark}
+          <span aria-hidden className="text-[#ebff00]">
+            +
           </span>
           <span>{item}</span>
         </li>
@@ -222,16 +237,46 @@ export function GuideFit({ title = 'Is Ruminate X the right fit?', hire, instead
         </h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
           <div className="border border-[#1a1a1a] p-8">
-            <p className={eyebrowClass}>Hire {SITE.name} if</p>
-            {list(hire, '+', 'text-[#ebff00]')}
+            <p className={eyebrowClass}>{SITE.name} is built for</p>
+            {list(hire)}
           </div>
           <div className="border border-[#1a1a1a] p-8">
-            <p className="text-[#888888] text-xs uppercase tracking-[0.3em] mb-4">Hire someone else if</p>
-            {list(instead, '−', 'text-[#666666]')}
+            <p className={eyebrowClass}>What you get</p>
+            {list(get)}
           </div>
         </div>
+        <Link href="/contact" className="mt-10 inline-flex items-center justify-center bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">
+          Brief {SITE.name}
+        </Link>
       </div>
     </section>
+  )
+}
+
+/**
+ * The studio, in the first screen of a guide that answers a general question
+ * (an ad someone else made, a rule, a cost). Put it right after GuideAnswer so
+ * a reader who came for the answer learns who makes this kind of film.
+ */
+export function GuideStudio({ title, children }: { title: ReactNode; children: ReactNode }) {
+  return (
+    <aside className="guide-studio max-w-7xl mx-auto px-6 lg:px-8 pb-12">
+      <div className="max-w-3xl border border-[#ebff00]/40 bg-[#0b0b04] p-8">
+        <p className={eyebrowClass}>{SITE.name}</p>
+        <p className="text-white text-2xl leading-snug mb-4" style={display}>
+          {title}
+        </p>
+        <div className="text-[#a3a3a3] leading-relaxed mb-6 [&_a]:text-[#ebff00] [&_a:hover]:underline">{children}</div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/contact" className="inline-flex items-center justify-center bg-[#ebff00] text-[#080808] font-bold text-xs uppercase tracking-[0.2em] px-6 py-3 hover:bg-white transition-colors">
+            Start a project
+          </Link>
+          <Link href="/work" className="inline-flex items-center justify-center border border-white/20 text-white font-bold text-xs uppercase tracking-[0.2em] px-6 py-3 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">
+            See the work
+          </Link>
+        </div>
+      </div>
+    </aside>
   )
 }
 

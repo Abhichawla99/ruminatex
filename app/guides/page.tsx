@@ -100,7 +100,7 @@ export default function Page() {
       <GuideHero
         eyebrow="Guides"
         title="Guides for brands buying an AI film"
-        dek="For the brand manager, founder or agency producer about to hire a studio for an AI brand film or commercial. Each guide answers one question a buyer asks, with published prices and sources where they exist."
+        dek="For the brand manager, founder or agency producer about to hire a studio for an AI brand film or commercial. Each guide answers one question a buyer asks, and shows how Ruminate X, the AI film studio in Calgary, handles it."
         updated={updated}
       />
       {shelves.map((shelf) => (

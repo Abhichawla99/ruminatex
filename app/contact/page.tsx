@@ -3,9 +3,9 @@ import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/contact' },
-  title: 'Contact | Bring Us the Scene — Ruminate X Cinematic Story Studio',
+  title: 'Brief Ruminate X: Start an AI Film or Commercial',
   description:
-    'Tell us the story your brand has been trying to tell. The impossible shot. The scene in your head. Ruminate X is a cinematic story studio based in Calgary — we make films for brands worldwide.',
+    'Brief Ruminate X, the AI film studio in Calgary, on a brand film, AI commercial, pharma or medical film, company film, UGC-style ad or product film. Tell us what it has to do, where it runs and when.',
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }

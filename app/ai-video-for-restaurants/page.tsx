@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Video for Restaurants | Menu Videos, Reels & Promos | Ruminate X',
   description: 'AI-powered video production for restaurants. Menu showcases, social reels, promo videos & UGC-style content — delivered fast and at a fraction of traditional cost.',
   keywords: ['AI video for restaurants', 'restaurant video production', 'AI restaurant marketing', 'restaurant promo videos', 'AI food video', 'restaurant social media video'],
@@ -203,7 +205,7 @@ export default function AIVideoForRestaurantsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">Start Your Restaurant Video</Link>
-            <Link href="/ai-video-for-ecommerce" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Ecommerce Video</Link>
+            <Link href="/ai-video-production-ecommerce" className="inline-flex items-center justify-center gap-3 border border-white/20 text-white font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:border-[#ebff00] hover:text-[#ebff00] transition-colors">See Ecommerce Video</Link>
           </div>
         </div>
       </section>

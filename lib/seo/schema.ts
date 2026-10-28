@@ -16,6 +16,16 @@ export type PageMeta = {
   image?: string
 }
 
+/** A service Ruminate X sells, for Service JSON-LD on its page. */
+export type ServiceMeta = {
+  /** What a buyer calls it, e.g. 'AI commercial production'. */
+  name: string
+  /** One or two sentences: what Ruminate X makes, for whom. */
+  description: string
+  /** Who it is for, e.g. ['pharma companies', 'pharmacies']. */
+  audience?: string[]
+}
+
 export type Faq = { q: string; a: string }
 export type Crumb = { name: string; path: string }
 
@@ -50,6 +60,24 @@ export function articleLd(page: PageMeta) {
     image: absolute(page.image ?? SITE.ogImage),
     author: authorLd,
     publisher: publisherLd,
+  }
+}
+
+export function serviceLd(service: ServiceMeta, path: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${absolute(path)}#service`,
+    name: service.name,
+    serviceType: service.name,
+    description: service.description,
+    url: absolute(path),
+    provider: { '@id': SITE.orgId },
+    brand: { '@type': 'Brand', name: SITE.name },
+    areaServed: 'Worldwide',
+    ...(service.audience?.length
+      ? { audience: service.audience.map((a) => ({ '@type': 'BusinessAudience', name: a })) }
+      : {}),
   }
 }
 

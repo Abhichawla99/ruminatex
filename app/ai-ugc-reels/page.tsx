@@ -13,22 +13,25 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+
+const studio = SITE.name
+const ugc = OFFERS.find((o) => o.key === 'ugc')!
+const short = film('zJgXuxFGU0U')
 
 const PAGE = {
   path: '/ai-ugc-reels',
   title: 'AI UGC Ads Agency for Brands',
-  description:
-    'What an AI UGC ad is, the AI UGC ad agencies a search turns up and what each sells, what an agency, a self-serve tool and real creators cost, whether AI UGC ads are legal (FTC, TikTok, Meta, New York), and how a studio makes them.',
+  description: `${studio} is an AI UGC ad agency that makes creator-style ads for Reels, TikTok and Shorts, with generated creators delivering scripted ad lines and your real product, label and logo set from your files. What moves the price, where these ads break, and the FTC, Meta, TikTok, New York and Pennsylvania rules.`,
   published: '2026-03-08',
-  updated: '2026-10-26',
+  updated: '2026-10-28',
   keywords: [
     'ai ugc ads agency',
     'ai ugc ads',
     'ai ugc agency',
     'ai ugc ad agency',
     'best ai ugc ads agency',
-    'hardlaunch ugc agency',
+    'ai ugc video creator',
     'are ai ugc ads legal',
     'can you do ugc content with ai',
     'do you have to disclose if an ad is ai',
@@ -37,16 +40,6 @@ const PAGE = {
   ],
 }
 
-const studio = SITE.name
-const ugc = OFFERS.find((o) => o.key === 'ugc')!
-const short = film('zJgXuxFGU0U')
-
-const ADMIRAL = 'https://admiral.media/ai-ugc-agency'
-const UNREAL = 'https://www.unrealmediagrp.com/ai-ugc-agency'
-const HARDLAUNCH = 'https://hardlaunch.com'
-const SOCIAL_OPERATOR = 'https://socialoperator.ai/learn/best-ai-ugc-agencies-2026/'
-const CREATIFY_PRICING = 'https://creatify.ai/pricing'
-const COLLABSTR_UGC = 'https://collabstr.com/influencer-price-calculator/user-generated-content'
 const FTC_465 = 'https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-465/section-465.2'
 const FTC_255 = 'https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255/section-255.2'
 const TIKTOK_AIGC = 'https://www.tiktok.com/support/faq_detail?id=7636670084747893268'
@@ -57,11 +50,11 @@ const PA_ACT = 'https://www.palegis.us/legislation/bills/2025/sb806'
 const FAQS = [
   {
     q: 'Are AI UGC ads legal?',
-    a: 'Yes, with conditions. In the US, the FTC rule on consumer reviews and testimonials (16 CFR 465.2) bans testimonials that misrepresent that the person exists or used the product, and the Endorsement Guides (16 CFR 255.2(c)) say an ad presented as showing actual consumers must use actual consumers or clearly disclose that they are not. TikTok requires a label on realistic AI-generated video, and New York has required ads to disclose AI synthetic performers since June 9, 2026. Pennsylvania\'s Artificial Intelligence Deceptive Advertising Act (Act 99 of 2026, signed October 22, 2026, in force 60 days later) requires a label saying the ad contains content modified or generated using AI when that content creates a false impression about the nature, origin or authenticity of what is sold. An AI presenter can demonstrate a product; it cannot pose as a customer. This is not legal advice.',
+    a: 'Yes, with conditions. In the US, the FTC rule on consumer reviews and testimonials (16 CFR 465.2) bans testimonials that misrepresent that the person exists or used the product, and the Endorsement Guides (16 CFR 255.2(c)) say an ad presented as showing actual consumers should use actual consumers or clearly disclose that they are not. TikTok requires a label on realistic AI-generated video, and New York has required ads to disclose AI synthetic performers since June 9, 2026. Pennsylvania\'s Artificial Intelligence Deceptive Advertising Act (Act 99 of 2026, signed October 22, 2026, in force 60 days later) requires a label saying the ad contains content modified or generated using AI when that content creates a false impression about the nature, origin or authenticity of what is sold. An AI presenter can demonstrate a product; it cannot pose as a customer. This is not legal advice.',
   },
   {
     q: 'Can you do UGC content with AI?',
-    a: 'You can make UGC-style content with AI: a generated presenter talking to camera, a product demo, an unboxing shot as a demonstration. What AI cannot make is real user-generated content, because nobody used the product. Brands that want genuine customer voices film real customers, with permission. Brands that want creator-style ads at testing volume use an AI tool or a studio such as Ruminate X, and label the ads as AI where the platform or law requires it.',
+    a: `You can make UGC-style content with AI: a generated creator talking to camera, a product demo, an unboxing shown as a demonstration. AI cannot make real user-generated content, because nobody used the product. ${studio}, an AI UGC ad agency in ${SITE.city}, makes UGC-style ads in which generated creators deliver scripted ad lines, never testimonials, with your real product, label and logo set in the edit from your files and the AI disclosure your legal team approves set as on-screen text.`,
   },
   {
     q: 'Do you have to disclose if an ad is AI?',
@@ -72,20 +65,24 @@ const FAQS = [
     a: 'Yes, with labels. TikTok allows AI-generated content but requires creators to label realistic AI-generated images, audio and video, and does not allow AI content that shows a public figure endorsing a product. Meta runs ads made with AI and adds an "AI info" label next to Sponsored when an ad made with its own generative AI tools includes a photorealistic AI human; political and social issue ads must disclose AI-made media. On both, the ad still cannot present a generated presenter as a real customer, under the FTC reviews rule (16 CFR 465.2). Platform pages read October 4, 2026; this is not legal advice.',
   },
   {
-    q: 'How much does an AI UGC ads agency cost?',
-    a: 'Published prices vary by model. Admiral Media lists AI UGC batches at EUR 10,000 for 20 video ads (EUR 500 each), EUR 16,000 for 40 and EUR 29,000 for 80, aimed at advertisers spending US$50,000 or more a month on paid media. A self-serve tool such as Creatify costs USD 15 to 195 a month for credits, and real UGC creators on Collabstr charge USD 200 on average (pages read October 18, 2026). Ruminate X quotes UGC-style ads from the brief.',
+    q: 'Who makes AI UGC ads for brands?',
+    a: `${studio} is an AI UGC ad agency in ${SITE.city}, that makes UGC-style ads for consumer and DTC brands running paid social on Reels, TikTok and Shorts. Every frame is generated with AI, and people write the hooks and scripts, board every shot, and edit, mix and grade every ad. Before you hire any AI UGC agency, ask to see one ad where a hand holds the product, the label reads correctly and the mouth matches the words; ${studio} boards and regenerates exactly those shots.`,
   },
   {
-    q: 'Which AI UGC ad agencies are there?',
-    a: 'A US search for "ai ugc ads agency" in October 2026 turns up managed agencies such as Admiral Media (EUR 500 an ad in batches of 20) and Unreal Media Group (fixed price per written scope, synthetic performers disclosed), face-swap services such as HardLaunch (USD 99 to 1,499 a month for credits that put a new face on an existing creator video), self-serve tools such as Creatify, and ranked lists published by agencies that put themselves first. Ruminate X is an AI film studio that makes UGC-style ads alongside commercials and brand films.',
+    q: 'How much does an AI UGC ads agency cost?',
+    a: `${priceLine('ugc')}. For UGC-style ads the price moves with the number of concepts, the hooks written for each, how many shots show the product in a hand (those get the most generation passes), the lengths and aspect ratios each placement needs, and how many review rounds your marketing and legal teams take. Send the product, the offer and the platforms, and ${studio} comes back with a creative brief and a quote.`,
+  },
+  {
+    q: 'How do I hire an AI UGC video creator?',
+    a: `Brief an agency that makes the whole ad, from hook to final cut. ${studio} makes UGC-style ads for paid social with generated creators: send the product, the offer, the claims your legal team has approved, the platforms and your best creator ads so far, and ${studio} comes back with a creative brief and a quote. You see every script and the shot list before anything is generated, and the ads arrive in the lengths and ratios each placement needs.`,
   },
   {
     q: 'Do AI UGC ads work?',
-    a: 'No independent public test settles it; the results that get quoted come from tool vendors and agencies about their own clients. Test it on your own account: run AI UGC-style ads against your best creator ads on the same offer, audience and budget, and judge on purchases or sign-ups, not clicks. Watch for fatigue sooner if the presenter is a stock avatar other brands also use.',
+    a: `No independent public test settles it; the results that get quoted come from tool vendors and agencies about their own clients. Test it on your own account: run AI UGC-style ads against your best creator ads on the same offer, audience and budget, and judge on purchases or sign-ups, not clicks. Expect fatigue sooner if the presenter is a stock face other brands also use; ${studio} casts a presenter for each brand instead.`,
   },
   {
     q: 'Can an AI UGC ad show a customer review?',
-    a: 'Only a real one. Under the FTC rule (16 CFR 465.2) a review or testimonial may not misrepresent that the reviewer exists or used the product, and AI-generated fake reviews fall inside that ban. A compliant review-style ad quotes a real customer who agreed to it, shows or reads their words accurately, and discloses that the presenter is AI-made. This is not legal advice.',
+    a: `Only a real one. Under the FTC rule (16 CFR 465.2) a review or testimonial may not misrepresent that the reviewer exists or used the product, and AI-generated fake reviews fall inside that ban. A compliant review-style ad shows a real customer's review word for word, with their permission, and any generated presenter introduces it as a presenter and never speaks it as their own experience. ${studio}'s generated creators deliver scripted ad lines, not testimonials. This is not legal advice.`,
   },
 ]
 
@@ -93,131 +90,101 @@ export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS} films={[short.youtubeId]}>
+    <Guide
+      page={PAGE}
+      faqs={FAQS}
+      films={[short.youtubeId]}
+      service={{
+        name: 'AI UGC ad production',
+        description: `${studio} makes UGC-style ads for paid social, with generated creators delivering scripted ad lines written to the brand's approved claims, and the product, label and logo set in the edit from the brand's own files.`,
+        audience: ['consumer brands', 'DTC and ecommerce brands', 'performance marketing teams'],
+      }}
+    >
       <GuideHero
         eyebrow="AI UGC ads"
         title="AI UGC ads: creator-style ads made with AI"
-        dek="For the performance marketer or DTC brand manager who needs more hooks to test on Meta and TikTok than creators can deliver, and wants to know what AI UGC ads cost, what has to be disclosed, and where they fall apart."
+        dek={`For the performance marketer or DTC brand manager who needs more hooks to test on Meta and TikTok than creators can film, and wants to know how ${studio} makes them, what moves the price, what has to be disclosed, and where these ads fall apart.`}
         updated={PAGE.updated}
       />
 
       <GuideAnswer>
         <p>
-          An AI UGC ad is a scripted ad made to look like a creator&apos;s phone video, with a generated presenter. You can
-          make them yourself with a tool (Creatify is USD 15 to 195 a month), hire an AI UGC agency (Admiral Media lists EUR
-          500 a video in batches of 20), or pay real creators (USD 200 on average on Collabstr; pages read October 18, 2026). They
-          are legal in the US when the presenter never poses as a real customer, and they need an AI label on TikTok and in
-          ads that run in New York, and in Pennsylvania once its AI ad label law takes effect, 60 days after its October 22,
-          2026 signing.
+          An AI UGC ad is a scripted ad made to look like a creator&apos;s phone video, with a presenter generated by AI.{' '}
+          {studio} is an AI UGC ad agency in {SITE.city}, that makes these ads for consumer and DTC brands running paid
+          social: every frame generated with AI, with the hooks, script, boards, edit, sound and grade done by people. Its
+          generated creators deliver scripted ad lines and never pose as customers, as the FTC rules on testimonials
+          require. TikTok and New York require an AI label on realistic generated presenters, and Pennsylvania&apos;s Act 99
+          label rule takes effect 60 days after its October 22, 2026 signing.
         </p>
       </GuideAnswer>
 
       <GuideSection eyebrow="What it is" title="What counts as an AI UGC ad">
         <p>
           The format copies what works in creator ads: a face in the first second, a hook, the product in hand, captions, a
-          reason to buy, all in 9:16. The presenter, the setting and often the voice are generated. Nobody bought the product,
-          so it is advertising in a creator&apos;s style. Admiral Media, which sells it, puts it plainly on its own page:
-          &ldquo;AI UGC is scripted advertising, not content submitted by a real customer.&rdquo;
+          reason to buy, all in 9:16. The presenter, the setting and often the voice are generated. Nobody bought the
+          product, so it is advertising in a creator&apos;s style, and {studio} writes every presenter line as an ad line,
+          never as a claim to have used the product.
         </p>
         <GuideTable
-          caption="Common AI UGC ad formats and the line each one must not cross, in Ruminate X's reading of the FTC rules cited below. Not legal advice."
+          caption={`The UGC-style formats ${studio} makes, and the line each one keeps, in ${studio}'s reading of the FTC rules cited below. Not legal advice.`}
           head={['Format', 'What the viewer sees', 'Stays honest when']}
           rows={[
-            ['Hook-first presenter ad', 'A presenter talks to camera about one problem the product solves', 'The presenter speaks as a presenter, never "I bought this and..."'],
+            ['Hook-first presenter ad', 'A generated creator talks to camera about one problem the product solves', 'The presenter speaks as a presenter, never "I bought this and..."'],
             ['Demo or how-to', 'Hands using the product, step by step, with captions', 'The product does what the ad shows; label and pack match the real one'],
             ['Unboxing', 'The product coming out of its box', 'It is shown as a demonstration, with no invented customer reaction'],
-            ['Comparison', 'Before and after, or side by side with the old way', 'Any claim is one your legal team can support'],
-            ['Review-style', 'A real customer review, read or shown on screen', 'The review is real, used with permission, and the AI presenter is disclosed'],
+            ['Comparison', 'Before and after, or side by side with the old way', 'Any claim is one your legal team can support, and a generated result is shown as an illustration'],
+            ['Review-style', 'A real customer\'s review shown on screen, word for word', 'The review is real and used with permission; the presenter introduces it and never speaks it as their own'],
           ]}
         />
         <p>
-          {studio} makes {ugc.name}, {ugc.plain}. {PRODUCTION.summary}
+          {studio} makes {ugc.name} beside its <Link href="/ai-commercial-production">AI commercials</Link> and{' '}
+          <Link href="/ai-product-videos">product films and stills</Link>, so the creator-style cuts and the hero spot of a
+          campaign can share one look and one product. {PRODUCTION.summary}
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Price" title="AI UGC ads agency, tool or real creators: what each costs" alt>
-        <GuideTable
-          caption={
-            <>
-              From <a href={ADMIRAL}>Admiral Media</a>, <a href={CREATIFY_PRICING}>Creatify</a> and the{' '}
-              <a href={COLLABSTR_UGC}>Collabstr UGC price calculator</a>, read October 18, 2026 (Creatify cut its plan prices
-              after October 4). Each source sells what it prices.
-            </>
-          }
-          head={['Option', 'Published price', 'Who writes, directs and fixes the shots']}
-          rows={[
-            ['Self-serve tool (Creatify Standard / Pro / Max / Business)', 'USD 15, 55, 95 or 195 a month, billed monthly, for 55, 280, 730 or 1,500 credits', 'Your team'],
-            ['AI UGC agency (Admiral Media)', 'EUR 10,000 for 20 ads up to 15 seconds (EUR 500 each), EUR 16,000 for 40 up to 30 seconds, EUR 29,000 for 80 up to 60 seconds; for advertisers spending US$50,000+ a month', 'The agency'],
-            ['Real UGC creators (Collabstr marketplace)', 'USD 200 on average, from more than 1.3 million data points', 'The creator films; you brief and choose'],
-          ]}
-        />
+      <GuideSection eyebrow="Price" title="What AI UGC ads cost" alt>
         <p>
-          The tool price buys generations, not ads. Someone still writes the hooks, picks the takes that hold up, fixes the
-          product in the presenter&apos;s hand and cuts the variants. With real creators you get a real person and real
-          usage, but each new hook means a new shoot. {studio} quotes UGC-style ads from the brief: how many concepts, hooks
-          and versions, which platforms, and how much of the product has to be shown in use. Published prices for AI studio
-          work in general are in <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production
-          costs</Link>.
+          {priceLine('ugc')}. The price moves with the number of concepts in the batch, the hooks written for each, how
+          many shots show the product in a hand (those get the most generation passes), the lengths and aspect ratios each
+          placement needs, and how many review rounds your marketing and legal teams take.
+        </p>
+        <p>
+          Twenty ads can mean twenty concepts or one script with twenty first lines. One concept with many hooks reuses a
+          presenter, a setting and a set of product shots; twenty concepts build each of those from the start. With{' '}
+          {studio} you see every script before anything is generated, so you know which one you are buying.
+        </p>
+        <p>
+          What you pay for is the work around each generation: writing the hooks, picking the takes that hold up,
+          regenerating the shots where a hand or a label breaks, and cutting the variants.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Who to hire" title="AI UGC ad agencies you will find in a search">
-        <p>
-          Search &ldquo;ai ugc ads agency&rdquo; or &ldquo;best ai ugc ads agency&rdquo; and the results mix four kinds of
-          company under one name: managed agencies that write and produce the ads, face-swap services that put a new face on
-          a video a real creator filmed, self-serve tools, and ranked lists written by agencies that place themselves first.
-          Each company below is described from its own page.
-        </p>
-        <GuideTable
-          caption={
-            <>
-              From <a href={ADMIRAL}>Admiral Media</a>, <a href={UNREAL}>Unreal Media Group</a>,{' '}
-              <a href={HARDLAUNCH}>HardLaunch</a>, <a href={CREATIFY_PRICING}>Creatify</a> and{' '}
-              <a href={SOCIAL_OPERATOR}>Social Operator</a>, read October 18, 2026. Ruminate X from its own facts. Order is
-              not a ranking.
-            </>
-          }
-          head={['Company', 'What it sells', 'Published price', 'On disclosure']}
-          rows={[
-            ['Admiral Media', 'Managed AI UGC: scripting, AI production, post-production and human QA, with a creative strategist', 'EUR 10,000 to 29,000 a month for 20 to 80 ads; ideal client spends US$50,000+ a month on media', 'Calls AI UGC "scripted advertising"; no labelling practice stated'],
-            ['Unreal Media Group', 'Managed AI UGC for Meta, TikTok, Shorts and Reels, hook counts and voices set in a written scope', 'Fixed price per scope; none listed', '"Synthetic performers are disclosed as synthetic"'],
-            ['HardLaunch', 'AI face swap: replaces the person in an existing creator video and keeps the script, demo and timing; also makes the base videos', 'USD 99, 499 or 1,499 a month for 165, 1,000 or 3,000 credits; one credit is one second of face at 720p', 'Asks for consent for faces you bring; no labelling practice stated'],
-            ['Creatify', 'Self-serve tool: avatars, scripts and ad variants your team makes', 'USD 15 to 195 a month', 'Your team labels'],
-            ['Social Operator', 'Retainer agency for consumer tech; its own "best AI UGC agencies" list ranks it first', 'None for itself; its list says USD 8,000 to 12,000 a month is typical for brands with USD 5 to 50 million in annual recurring revenue', 'Its FAQ says policy is evolving'],
-            [studio, `${ugc.name} beside commercials and brand films, from one look`, 'Quoted from the brief', 'AI disclosure in the edit where the platform or law asks for it'],
-          ]}
-        />
-        <h3>Questions to ask an AI UGC agency before you sign</h3>
+      <GuideSection eyebrow="Before you hire" title="What to ask any AI UGC ads agency">
+        <p>Ask these before you sign with any agency. Each answer is how {studio} works.</p>
         <ol>
           <li>
-            <strong>Whose face is it?</strong> A licensed library avatar, a presenter designed for you, or a real creator
-            whose face was swapped. Library faces turn up in other brands&apos; ads.
+            <strong>Whose face is it?</strong> {studio} casts a generated presenter for your brand and fixes the face in a
+            reference sheet, so the same person appears across the batch. A stock library face turns up in other
+            brands&apos; ads.
           </li>
           <li>
-            <strong>Who agreed to what?</strong> For a face swap, ask for the written consent of the creator who filmed the
-            original and of the person whose face replaces theirs, and what each agreed the video can be used for.
+            <strong>Whose footage is it?</strong> Every frame {studio} delivers is generated, so no real creator&apos;s
+            video is reused and no face is swapped onto someone else&apos;s footage.
           </li>
           <li>
-            <strong>Does any ad speak as a customer?</strong> Under the FTC rule cited below, a presenter who never used the
-            product cannot say they did. Ask to see the scripts before production.
+            <strong>Does any ad speak as a customer?</strong> {studio}&apos;s presenters deliver scripted ad lines and
+            never say they used the product, and you see every script before production.
           </li>
           <li>
-            <strong>Who labels the ads, and where?</strong> TikTok, New York and Pennsylvania have labelling rules; ask whether the agency
-            adds the disclosure or leaves it to you.
+            <strong>Who adds the AI label?</strong> {studio} sets the disclosure your legal team approves as on-screen text
+            in the edit, and you switch on TikTok&apos;s AI-generated content label when the ad goes live.
           </li>
           <li>
-            <strong>Hooks or variants?</strong> Twenty ads can mean twenty concepts or one script with twenty first lines. Ask
-            how many concepts the batch holds.
-          </li>
-          <li>
-            <strong>Who fixes the product?</strong> Ask how the agency keeps your pack and label exact, and who pays for
-            reruns when a hand or a label breaks.
+            <strong>Who fixes the product?</strong> {studio} sets your pack, label and logo from your own artwork in the
+            edit and regenerates any shot where a hand or a label breaks.
           </li>
         </ol>
-        <p>
-          The same checks, for any AI production company, are in{' '}
-          <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>.
-        </p>
       </GuideSection>
 
       <GuideSection eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US" alt>
@@ -245,19 +212,19 @@ export default function Page() {
           The disclosure itself can be a line of on-screen text, the platform&apos;s own AI label, or both. Pharma, medical
           and financial brands have their own review rules on top of these; the questions reviewers ask about AI footage are
           on <Link href="/ai-video-production-healthcare">AI video for pharma and healthcare</Link>. Penalties and the rest of
-          the presenter rules are in <Link href="/ai-avatar-videos">AI avatar video production</Link>.
+          the presenter rules are on <Link href="/ai-avatar-videos">AI avatar videos</Link>.
         </p>
       </GuideSection>
 
       <GuideSection eyebrow="Where it breaks" title="Where AI UGC ads break, and what fixes them">
         <GuideTable
-          caption="Common failures in generated creator-style ads, and what a studio does about each."
-          head={['Problem', 'What the viewer notices', 'Fix']}
+          caption={`Common failures in generated creator-style ads, and the fix ${studio} applies to each.`}
+          head={['Problem', 'What the viewer notices', 'The fix']}
           rows={[
-            ['Hands on the product', 'Fingers merge with the bottle, the grip changes between cuts', 'Generate the hand shot separately, rerun until it holds, or cut to a product insert'],
+            ['Hands on the product', 'Fingers merge with the bottle, the grip changes between cuts', 'Generate the hand shot on its own and rerun it until it holds, or cut to a product insert'],
             ['Label and packaging', 'Misspelled brand name, wrong pack colour, text that warps', 'Set the label from your own artwork in the edit, never generated'],
             ['Lip sync and eyes', 'Mouth a beat late, a stare that never blinks', 'Check every take at full size; reject the ones that drift'],
-            ['The stock face', 'The same presenter seen in other brands\' ads', 'Design a presenter for your brand and fix it in a reference sheet'],
+            ['The stock face', 'The same presenter seen in other brands\' ads', 'Cast a presenter for your brand and fix it in a reference sheet'],
             ['Sameness across variants', 'Ten hooks that feel like one ad, so fatigue sets in early', 'Change the setting, opening shot and presenter energy per hook, not only the first line'],
           ]}
         />
@@ -268,51 +235,56 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it is made" title="How a studio makes UGC-style ads" alt>
+      <GuideSection eyebrow="How it is made" title={`How ${studio} makes UGC-style ads`} alt>
         <ol>
           <li>
             <strong>Brief.</strong> The product, the audience, the offer, the claims your legal team has approved, the
-            platforms, and your best-performing creator ads so far, if you have them.
+            platforms, and your best-performing creator ads so far, if you have them. {studio} hands back a creative brief,
+            and nothing is generated until you approve it.
           </li>
           <li>
-            <strong>Presenter.</strong> A face, age, wardrobe, setting and voice designed for the brand, with no resemblance
-            to a real person or a celebrity.
+            <strong>Presenter.</strong> A face, age, wardrobe, setting and voice cast for the brand, not modelled on a real
+            person or a celebrity, and fixed in a reference sheet.
           </li>
           <li>
-            <strong>Hooks and scripts.</strong> Several openings per concept, each a different reason to stop scrolling,
-            written to the approved claims.
+            <strong>Hooks, scripts and boards.</strong> Several openings per concept, each a different reason to stop
+            scrolling, written to the approved claims and broken into shots you see before generation starts.
           </li>
           <li>
-            <strong>Generation and checks.</strong> Each shot generated and checked for hands, lip sync, eyes and face drift,
-            then rerun until it holds.
+            <strong>Generation passes.</strong> Each shot generated and checked for hands, lip sync, eyes and face drift,
+            then regenerated until it holds. The product and the hands holding it get the most passes.
           </li>
           <li>
-            <strong>Edit.</strong> Captions inside each platform&apos;s safe zones, music cleared for paid use, your logo and
-            pack from your own files, the AI disclosure where the platform or law asks for one, and the versions each placement needs.
+            <strong>Edit and versions.</strong> Captions inside each platform&apos;s safe zones, licensed music, your logo
+            and pack from your own files, the AI disclosure your legal team approves, and the lengths and ratios each
+            placement needs.
           </li>
         </ol>
         <GuideFilm
           id={short.youtubeId}
-          caption={`${short.title}, a ${short.durationSeconds}-second vertical film from the ${studio} portfolio. A short-form product film, shown for the product shots; the portfolio has no creator-style presenter ad yet.`}
+          caption={`${short.title}, a ${short.durationSeconds}-second vertical film from the ${studio} portfolio. It is a short product film, shown for how the product holds up in a 9:16 frame, not a presenter ad.`}
         />
         <p>
-          The same pipeline makes longer work; how a brand film is made from brief to final cut is in{' '}
-          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+          The same pipeline makes {studio}&apos;s longer work; each stage is on{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>, and the finished films are on{' '}
+          <Link href="/work">the work page</Link>.
         </p>
       </GuideSection>
 
       <GuideFit
-        title="Should Ruminate X make your UGC-style ads?"
+        title={`Why DTC brands hire ${studio} for UGC-style ads`}
         hire={[
-          'A DTC or consumer brand that runs paid social and needs more hooks and variants to test than its creators can film.',
-          'A brand that wants one designed presenter across a campaign, with the product and label exact in every cut.',
-          'A team that also needs a hero commercial or brand film from the same look, so the UGC-style ads and the hero spot match.',
+          'A DTC or consumer brand running paid social on Meta and TikTok that needs more hooks and variants to test than its creators can film.',
+          'A performance marketer whose best ad is fatiguing and who needs new openings on the same offer without booking another round of creators.',
+          'A brand manager who wants one presenter across a whole campaign, with the pack and label exact in every cut.',
+          'A team that also needs a hero commercial or a brand film in the same look, so the UGC-style ads and the hero spot match.',
         ]}
-        instead={[
-          'You want real customers vouching for the product: pay real creators or film your customers, with permission.',
-          'You need a few talking-head ads a month and have someone to run the tool: Creatify, Arcads or HeyGen on a monthly plan costs less.',
-          'Your audience reacts badly to AI presenters, or your category bans them in ads: use real people.',
-          'The ad depends on a real person\'s results, such as a before-and-after: film the real person.',
+        get={[
+          'Hooks, scripts and a shot list written to the claims your legal team approved, shown to you before anything is generated.',
+          'A presenter cast for your brand and kept the same across the batch.',
+          'Your real pack, label and logo set in the edit from your files, with any shot where a hand or a label breaks regenerated.',
+          '9:16 cuts with captions inside each platform\'s safe zones, plus the other lengths and ratios your placements need.',
+          'The AI disclosure your legal team approves, set as on-screen text.',
         ]}
       />
 
@@ -320,11 +292,11 @@ export default function Page() {
 
       <GuideRelated
         links={[
-          { href: '/ai-avatar-videos', title: 'AI avatar video production', note: 'Presenter consent, avatar tool prices and the full disclosure table.' },
+          { href: '/ai-avatar-videos', title: 'AI avatar videos', note: 'Spokesperson videos, presenter consent and the full disclosure table.' },
+          { href: '/ai-product-videos', title: 'AI product videos and stills', note: 'Product films and stills in the same look as your UGC-style ads.' },
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'The hero spot that UGC-style cutdowns often sit beside.' },
           { href: '/guides/ai-commercial-product-accuracy', title: 'Product and label accuracy', note: 'Keeping the pack, label and logo right in generated shots.' },
           { href: '/guides/ad-campaign-deliverables', title: 'Ad campaign deliverables', note: 'Which films, cutdowns and ratios each channel needs.' },
-          { href: '/blog/how-much-does-ai-video-production-cost', title: 'AI video production cost', note: 'Published prices from tools, freelancers, AI studios and crews.' },
         ]}
       />
 

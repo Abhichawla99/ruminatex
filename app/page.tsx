@@ -2,73 +2,61 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
-import { FOUNDER, SITE } from '@/lib/seo/facts'
+import { FOUNDER, OFFERS, PRICES, PRODUCTION, SITE, STUDIO_LINE, inSentence, priceLine } from '@/lib/seo/facts'
+import { faqLd } from '@/lib/seo/schema'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/' },
-  title: 'Ruminate X — Cinema-Grade Brand Films & Story-Driven AI Commercials',
+  title: { absolute: 'Ruminate X: AI Film Studio for Brand Films and Commercials' },
   description:
-    'Ruminate X is an AI video agency that makes cinema-grade, story-driven brand films and AI commercials for brands that refuse to be forgettable. We treat every brief like a film. No crews. No limits.',
+    'Ruminate X is an AI film studio in Calgary that makes brand films, AI commercials, pharma and medical films, company films, UGC-style ads and product visuals. Every frame is made with AI. No crew, no set, no shoot.',
 }
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': ['Organization', 'ProfessionalService'],
-  '@id': 'https://www.ruminatex.com/#organization',
-  name: 'Ruminate X',
-  alternateName: ['Ruminate X AI Video Agency', 'Ruminate X AI Video Production Studio'],
-  url: 'https://www.ruminatex.com',
-  logo: 'https://www.ruminatex.com/favicon.svg',
-  description:
-    'Ruminate X is an AI film studio in Calgary, Canada, that makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame it delivers is made with generative AI. There are no film crews, sets or location shoots.',
+  '@id': SITE.orgId,
+  name: SITE.name,
+  alternateName: ['RuminateX', 'Ruminate X AI Film Studio'],
+  url: SITE.url,
+  logo: SITE.logo,
+  image: `${SITE.url}${SITE.ogImage}`,
+  description: `${STUDIO_LINE} ${PRODUCTION.summary}`,
   slogan: 'No idea is impossible.',
-  email: 'abhi@paperkites.co',
-  telephone: '+15878049266',
-  foundingDate: '2024',
+  email: SITE.email,
+  telephone: SITE.phone,
+  foundingDate: String(SITE.foundingYear),
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Calgary',
     addressRegion: 'Alberta',
     addressCountry: 'CA',
   },
-  areaServed: ['Worldwide', 'Canada', 'United States', 'United Kingdom', 'Australia'],
-  keywords: [
-    'AI Video Agency',
-    'AI Video Production Company',
-    'AI Video Production Studio',
-    'AI Commercials',
-    'Brand Film Production',
-    'AI Video Production',
-    'Cinematic Brand Films',
-    'AI Creative Studio',
-    'Video Production Calgary',
-  ],
+  areaServed: 'Worldwide',
   knowsAbout: [
-    'AI Video Production',
-    'AI Video Agency',
-    'AI Video Production Studio',
-    'AI Commercials',
-    'Brand Film Production',
-    'Cinematic Video Production',
-    'Social Media Video Production',
-    'E-Commerce Video Production',
-    'Fashion Video Production',
-    'Product Launch Videos',
-    'AI Creative Production',
-    'Generative AI Video',
-    'Video Marketing',
-    'Corporate Video Production',
+    'AI brand film production',
+    'AI commercial production',
+    'AI pharma commercials',
+    'AI video production for healthcare companies',
+    'AI corporate video production',
+    'AI avatar videos',
+    'AI UGC ads',
+    'AI product videos',
+    'Generative AI video production',
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'AI Video Production Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Films', description: 'Cinematic AI-produced brand films for global brands' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Commercials', description: 'AI commercials for TV, digital, and social media' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Content', description: 'High-volume AI social media video content' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Product Launch Videos', description: 'AI video campaigns for product launches' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fashion & Lifestyle Video', description: 'Editorial AI video for fashion and luxury brands' } },
-    ],
+    name: `${SITE.name} AI film services`,
+    itemListElement: OFFERS.map((o) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: o.name,
+        description: `${o.plain[0].toUpperCase()}${o.plain.slice(1)}, with every frame made with generative AI.`,
+        provider: { '@id': SITE.orgId },
+        ...(o.path ? { url: `${SITE.url}${o.path}` } : {}),
+      },
+    })),
   },
   // sameAs lists only Ruminate X's own profiles. Sibling studios are linked in copy, not here.
   sameAs: [SITE.instagram],
@@ -80,6 +68,39 @@ const organizationSchema = {
     url: FOUNDER.url,
   },
 }
+
+const offerList = OFFERS.map((o) => inSentence(o.name))
+
+const HOME_FAQS = [
+  {
+    q: 'What is Ruminate X?',
+    a: `${STUDIO_LINE} ${FOUNDER.name} founded it in ${SITE.foundingYear}.`,
+  },
+  {
+    q: 'What does Ruminate X make?',
+    a: `${offerList.slice(0, -1).join(', ')} and ${offerList[offerList.length - 1]}. ${PRODUCTION.summary}`,
+  },
+  {
+    q: 'How does Ruminate X make a film without a shoot?',
+    a: 'It starts from the brief, then fixes the brand world (palette, light, lenses, casting, texture) and boards every shot. Each shot is generated, checked against its board and generated again until it holds; faces, hands and the product get the most passes. Your real logo, label and on-screen text are set in the edit from your brand files. Then the film is edited, scored, mixed, graded and cut into the lengths and aspect ratios each channel needs.',
+  },
+  {
+    q: 'Can Ruminate X make an AI commercial for a pharma, pharmacy or medical brand?',
+    a: "Yes. Ruminate X makes AI commercials and films for pharma and pharmacy companies, labs and medical companies. Every claim, the important safety information and any fair-balance text are set in the edit from copy your medical, legal and regulatory reviewers approved, never drawn by the generator, and nothing airs until your reviewers sign off.",
+  },
+  {
+    q: 'How much does a Ruminate X film cost?',
+    a: `${priceLine('brand-film')}. Send what the film is for, where it will run, the lengths you need and the date it has to be ready. Length, the number of scenes, how exactly your product has to be reproduced, the number of versions and the review rounds move the number.`,
+  },
+  {
+    q: 'Where is Ruminate X based, and who does it work with?',
+    a: `${SITE.name} is in ${SITE.city}. Nothing is filmed, so a brand's location does not change how a film gets made: briefs, boards and review rounds all happen online. It makes films for consumer brands, pharma and pharmacy companies, labs, medical companies and companies of every size.`,
+  },
+  {
+    q: 'How do I start a project with Ruminate X?',
+    a: `Send the brief through ${SITE.url}/contact or email ${SITE.email}. Say what the film has to do, who has to see it, where it will run and when it has to be ready.`,
+  },
+]
 
 const tickerItems = [
   'BRAND FILMS',
@@ -99,7 +120,7 @@ const services = [
     number: '01',
     title: 'Brand Films',
     description:
-      'Not a video. A film. We find the story at the core of your brand — the tension, the truth, the reason people should care — and we put it on screen. Cinema-grade storytelling that makes your brand impossible to forget.',
+      'Not a video. A film. We find the story at the core of your brand, the tension and the reason people should care, and put it on screen with cinema-grade storytelling that makes your brand impossible to forget.',
     category: 'Story-Driven Cinema',
     href: '/ai-brand-film-agency',
   },
@@ -113,36 +134,60 @@ const services = [
   },
   {
     number: '03',
-    title: 'Fashion & Lifestyle',
+    title: 'Pharma & Medical Films',
     description:
-      'Editorial precision. Aspirational by design. We shoot in locations that don\'t exist, in light that can\'t be replicated, with aesthetics that define the season — all without a single flight or location scout.',
-    category: 'Fashion & Editorial',
-    href: '/ai-video-production-fashion',
+      'Commercials and brand films for pharma and pharmacy brands, labs and medical companies. Claims, safety information and fair balance are set in the edit from the copy your reviewers approved, so the generator never writes a word of it.',
+    category: 'Healthcare',
+    href: '/ai-video-production-healthcare',
   },
   {
     number: '04',
-    title: 'Social Content',
+    title: 'Company & About-Us Films',
     description:
-      'Studio-quality storytelling compressed into 15 seconds. Every piece of social content we produce is a micro-film — with a hook, a narrative arc, and a reason to watch twice.',
-    category: 'Story-First Social',
-    href: '/ai-ugc-reels',
+      'The film that introduces your company to customers, candidates, investors or your own people at the all-hands. Your mission, your work and your world on screen, without pulling anyone off the job for a shoot day.',
+    category: 'Corporate',
+    href: '/ai-corporate-video-production',
   },
   {
     number: '05',
-    title: 'Product Launches',
+    title: 'UGC-Style Ads',
     description:
-      "A product launch is the opening scene of your brand's next chapter. We write it like one — with tension, build, and a payoff that hits. One shot at the first impression. We don't waste it.",
-    category: 'Launch Campaigns',
+      'Ads in the style of creator videos for Reels, TikTok and Shorts, with a hook in the first second and alternative openings for your performance team to test. Scripted ad lines delivered by generated creators, with no fake reviews.',
+    category: 'Paid Social',
+    href: '/ai-ugc-reels',
+  },
+  {
+    number: '06',
+    title: 'Product Visuals',
+    description:
+      'Product films and stills built from your real product images. The label, the logo and every word on screen are set in the edit from your files, so the bottle in shot nine is the bottle in shot one.',
+    category: 'Product & Launch',
     href: '/ai-product-videos',
+  },
+  {
+    number: '07',
+    title: 'Avatar Videos',
+    description:
+      'A generated presenter or spokesperson who explains your product, trains your staff or speaks to customers, in your brand world and on your script.',
+    category: 'Presenter Video',
+    href: '/ai-avatar-videos',
+  },
+  {
+    number: '08',
+    title: 'Fashion & Lifestyle',
+    description:
+      'Editorial precision. Aspirational by design. Locations that don\'t exist, light that can\'t be replicated, and the look that defines the season, without a single flight or location scout.',
+    category: 'Fashion & Editorial',
+    href: '/ai-video-production-fashion',
   },
 ]
 
 const valueProps = [
   {
-    stat: '100×',
-    label: 'Faster than traditional production',
+    stat: '0',
+    label: 'Shoot days to book',
     description:
-      'AI-accelerated production means you get cinematic results in days, not months.',
+      'No crew, set, location, talent or travel. The shot list starts with the idea instead of the budget, and a scene that would need a helicopter costs the same as one at a desk.',
   },
   {
     stat: '∞',
@@ -151,69 +196,61 @@ const valueProps = [
       "No set. No budget ceiling. No 'that's not possible.' If you can imagine it, we make it real.",
   },
   {
-    stat: '10×',
-    label: 'More affordable',
+    stat: '100%',
+    label: 'Of every frame made with AI',
     description:
-      'Premium cinematic quality at a fraction of what a traditional agency would charge.',
+      'Every shot is boarded before it is generated, then checked against the board and generated again until faces, hands and your product hold. People write, cut, score, mix and grade every film.',
   },
 ]
 
 const intentPaths = [
   {
-    href: '/ai-video-production-agencies',
-    eyebrow: 'Commercial Intent',
-    title: 'AI video production agency',
-    description:
-      'A strong starting point for brands comparing agencies, capabilities, process, and fit.',
+    href: '/ai-commercial-production',
+    eyebrow: 'AI commercials',
+    title: 'AI commercial production',
+    description: 'Spots for TV, streaming and social, every frame generated, with the cutdowns and ratios your media plan needs.',
   },
   {
     href: '/ai-brand-film-agency',
-    eyebrow: 'Service Intent',
-    title: 'Brand film agency',
-    description:
-      'For teams looking for cinematic brand storytelling, founder films, and brand-defining creative.',
+    eyebrow: 'Brand films',
+    title: 'AI brand film production',
+    description: 'The story-driven film about what your brand stands for, made without a shoot.',
   },
   {
-    href: '/ai-commercial-production',
-    eyebrow: 'Service Intent',
-    title: 'AI commercial production',
-    description:
-      'For campaign teams that need ads, hero spots, and concept-driven commercial production.',
+    href: '/guides/ai-pharma-commercials',
+    eyebrow: 'Pharma & medical',
+    title: 'AI pharma commercials',
+    description: 'How drug and pharmacy brands are using AI ads, the FDA rules that apply, and how Ruminate X makes them.',
   },
   {
-    href: '/ai-video-production-enterprise',
-    eyebrow: 'Company Intent',
+    href: '/ai-video-production-agencies',
+    eyebrow: 'Hiring a studio',
+    title: 'AI video production agency',
+    description: 'What to look for in an AI video production agency, and how Ruminate X answers each point.',
+  },
+  {
+    href: '/ai-corporate-video-production',
+    eyebrow: 'Company films',
     title: 'AI corporate video production',
-    description:
-      'For comms, HR and marketing leads who need an about-us film, a mission film or a conference opener without a shoot.',
+    description: 'About-us, mission and all-hands films for comms, HR and marketing leads, without a shoot day.',
   },
   {
-    href: '/video-production-calgary',
-    eyebrow: 'Local Intent',
-    title: 'Video production Calgary',
-    description:
-      'For Calgary businesses searching for a local video production company with premium creative execution.',
-  },
-  {
-    href: '/best-video-production-company-calgary',
-    eyebrow: 'Comparison Intent',
-    title: 'Best video production company Calgary',
-    description:
-      'For buyers comparing top Calgary video production partners and evaluating who to shortlist.',
-  },
-  {
-    href: '/affordable-video-production-calgary',
-    eyebrow: 'Pricing Intent',
-    title: 'Affordable video production Calgary',
-    description:
-      'For brands balancing creative ambition with budget and looking for cost-efficient production options.',
+    href: '/blog/how-much-does-ai-video-production-cost',
+    eyebrow: 'Budgets',
+    title: 'What AI video production costs',
+    description: 'What moves the price of an AI film or commercial, and what a filmed shoot costs for the same job.',
   },
   {
     href: '/comparison/ai-agency-vs-traditional-agency',
-    eyebrow: 'Research Intent',
-    title: 'AI agency vs traditional agency',
-    description:
-      'For decision-makers weighing speed, cost, process, and creative tradeoffs before choosing a model.',
+    eyebrow: 'AI or a shoot',
+    title: 'AI studio vs traditional production',
+    description: 'When a brand should hire an AI production partner like Ruminate X instead of booking a shoot.',
+  },
+  {
+    href: '/best-video-production-company-calgary',
+    eyebrow: 'Calgary',
+    title: 'Video production company in Calgary',
+    description: 'Ruminate X is a Calgary studio. How to judge any Calgary video company, and what we make here.',
   },
 ]
 
@@ -229,6 +266,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd(HOME_FAQS)) }} />
 
       {/* ─── HERO ─────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
@@ -249,7 +287,7 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 border border-[#ebff00]/30 px-4 py-2 mb-10">
             <span className="w-1.5 h-1.5 bg-[#ebff00] rounded-full animate-pulse" />
             <span className="text-[#ebff00] text-xs uppercase tracking-[0.3em]">
-              Cinematic Story Studio · Calgary
+              AI Film Studio · Calgary
             </span>
           </div>
 
@@ -264,8 +302,9 @@ export default function HomePage() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#888888] max-w-xl mb-12 leading-relaxed">
-            We make cinema-grade, story-driven brand films and AI commercials for brands that refuse to be
-            forgettable. Every brief is treated like a film. Every frame is intentional.
+            Ruminate X makes cinema-grade brand films and AI commercials for consumer brands, pharma, labs and
+            medical companies. Every frame is made with AI, so there is no crew, set or location to book. Every
+            brief is treated like a film.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -289,9 +328,9 @@ export default function HomePage() {
           {/* Stats row */}
           <div className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-[#1a1a1a]">
             {[
-              { value: '100×', label: 'Faster than traditional' },
+              { value: '0', label: 'Crews, sets or location days' },
               { value: '∞', label: 'Creative possibilities' },
-              { value: '10×', label: 'More affordable' },
+              { value: '100%', label: 'Of every frame made with AI' },
             ].map(({ value, label }) => (
               <div key={label}>
                 <p
@@ -313,60 +352,65 @@ export default function HomePage() {
       </section>
 
       {/* ─── GEO POSITIONING BLOCK (LLM-readable, visually minimal) ── */}
-      <section aria-label="About Ruminate X — AI Video Agency" className="border-t border-[#1a1a1a] bg-[#050505] py-14">
+      <section aria-label="About Ruminate X, AI film studio" className="border-t border-[#1a1a1a] bg-[#050505] py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div>
               <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">About the Studio</p>
               <h2 className="text-white text-xl font-bold mb-4 leading-snug">
-                Ruminate X — Cinema-Grade AI Video Agency &amp; Story-Driven Production Studio
+                Ruminate X: the AI film studio for brand films and AI commercials
               </h2>
+              <p className="text-[#888888] text-sm leading-relaxed mb-4">{STUDIO_LINE}</p>
               <p className="text-[#888888] text-sm leading-relaxed mb-4">
-                Ruminate X is a cinematic AI video agency that produces story-driven brand films, AI commercials, and campaign content for brands that refuse to be ordinary. We treat every brief like a film production — narrative-first, visually obsessive, with zero compromises on craft. AI is our production method. Cinema is our standard.
+                Brands hire Ruminate X when the film they want would need a crew, a location, talent and weeks of
+                production, and they want it without a shoot. The story gets written and boarded first. Every shot is
+                then generated, checked and generated again until faces, hands and the product hold, and your real logo
+                and on-screen text go in during the edit.
               </p>
               <p className="text-[#666666] text-sm leading-relaxed">
-                Based in Calgary, Alberta — making cinema-grade brand films for brands in North America, the UK, Australia, and globally.
+                Founded in {SITE.foundingYear} by <Link href="/about" className="text-white hover:text-[#ebff00]">{FOUNDER.name}</Link>.
+                Based in {SITE.city}, making films for brands anywhere.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
               <div>
-                <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">Core Services</p>
+                <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">What We Make</p>
                 <ul className="space-y-2 text-[#888888]">
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Brand Films</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> AI Commercials</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Social Media Video</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Product Launch Videos</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Fashion &amp; Lifestyle Content</li>
+                  {OFFERS.map((o) => (
+                    <li key={o.key} className="flex items-start gap-2">
+                      <span className="text-[#ebff00] mt-0.5">·</span>
+                      {o.path ? <Link href={o.path} className="hover:text-[#ebff00]">{o.name}</Link> : o.name}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">Best For</p>
+                <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">Made For</p>
                 <ul className="space-y-2 text-[#888888]">
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> E-Commerce Brands</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> DTC &amp; Startups</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Fashion &amp; Luxury</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Enterprise &amp; Corporate</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Calgary Businesses</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Consumer brands</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> <Link href="/ai-video-production-healthcare" className="hover:text-[#ebff00]">Pharma &amp; pharmacy companies</Link></li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Labs &amp; medical companies</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> <Link href="/ai-corporate-video-production" className="hover:text-[#ebff00]">Companies of every size</Link></li>
                 </ul>
               </div>
               <div>
                 <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">Why Ruminate X</p>
                 <ul className="space-y-2 text-[#888888]">
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> 100× faster than traditional agencies</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> 10× more affordable</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Unlimited revisions</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> 140+ languages</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> 24–48 hour delivery</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Every frame made with generative AI</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> No crews, sets or location shoots</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Script, boards, edit, sound and grade by people</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Your real logo and type, set from your files</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Cutdowns and ratios for every channel</li>
                 </ul>
               </div>
               <div>
                 <p className="text-[#ebff00] text-xs uppercase tracking-[0.2em] mb-3">Studio Details</p>
                 <ul className="space-y-2 text-[#888888]">
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Type: AI Video Agency</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Type: AI film studio</li>
                   <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Location: Calgary, Alberta</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Serves: Global</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Pricing: From $500</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Founded: 2024</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Serves: brands anywhere</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Pricing: {PRICES.find((p) => p.offer === 'brand-film') ? `brand films and commercials from ${PRICES.find((p) => p.offer === 'brand-film')!.from}` : 'quoted from the brief'}</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Founded: {SITE.foundingYear}</li>
                 </ul>
               </div>
             </div>
@@ -588,20 +632,28 @@ export default function HomePage() {
             className="text-white leading-none mb-12"
             style={{ ...displayStyle, fontSize: 'clamp(48px, 7vw, 90px)' }}
           >
-            WE WORK WITH
+            WHO WE MAKE FILMS FOR
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
-              'E-Commerce Brands', 'DTC Startups', 'Fashion & Apparel',
-              'Luxury Brands', 'Tech Companies', 'Consumer Goods',
-              'Beauty & Wellness', 'Retail Brands', 'Enterprise', 'Food & Beverage',
-            ].map((industry) => (
-              <span
-                key={industry}
-                className="text-sm uppercase tracking-[0.15em] px-5 py-3 border border-[#1a1a1a] text-[#888888] hover:border-[#ebff00]/30 hover:text-[#ebff00] transition-colors cursor-default"
+              { label: 'Pharma & Pharmacy', href: '/ai-video-production-healthcare' },
+              { label: 'Labs & Medical', href: '/ai-video-production-healthcare' },
+              { label: 'Consumer Brands', href: '/ai-commercial-production' },
+              { label: 'E-Commerce Brands', href: '/ai-video-production-ecommerce' },
+              { label: 'Fashion & Apparel', href: '/ai-video-production-fashion' },
+              { label: 'Tech Companies', href: '/ai-commercial-production' },
+              { label: 'Companies & Enterprise', href: '/ai-corporate-video-production' },
+              { label: 'Food & Beverage', href: '/ai-commercial-production' },
+              { label: 'Beauty & Wellness', href: '/ai-product-videos' },
+              { label: 'Calgary Businesses', href: '/best-video-production-company-calgary' },
+            ].map(({ label, href }) => (
+              <Link
+                key={label}
+                href={href}
+                className="text-sm uppercase tracking-[0.15em] px-5 py-3 border border-[#1a1a1a] text-[#888888] hover:border-[#ebff00]/30 hover:text-[#ebff00] transition-colors"
               >
-                {industry}
-              </span>
+                {label}
+              </Link>
             ))}
           </div>
         </div>
@@ -611,21 +663,17 @@ export default function HomePage() {
       <section className="py-24 border-t border-[#1a1a1a] bg-[#050505]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
-            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Start With the Right Page</p>
+            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Start Here</p>
             <h2
               className="text-white leading-none mb-6"
               style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 84px)' }}
             >
-              PICK THE PATH
+              WHAT ARE YOU
               <br />
-              THAT MATCHES
-              <br />
-              YOUR SEARCH
+              MAKING?
             </h2>
             <p className="text-[#888888] text-lg leading-relaxed">
-              Different buyers arrive with different intent — agency research, commercial production,
-              Calgary-local vendor searches, pricing questions, or service-specific needs. These are the
-              strongest pages to start with depending on the job you need done.
+              Pick the film you need. Each page shows how Ruminate X makes it, what you get and what moves the price.
             </p>
           </div>
 
@@ -642,12 +690,30 @@ export default function HomePage() {
                 </h3>
                 <p className="text-sm text-[#888888] leading-relaxed mb-6">{item.description}</p>
                 <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-white/80 group-hover:text-[#ebff00] transition-colors duration-200">
-                  Explore page
+                  Read more
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FAQ (written as FAQPage JSON-LD above) ───────────────── */}
+      <section className="py-24 border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-3">Questions</p>
+          <h2 style={{ ...displayStyle, fontSize: 'clamp(48px, 7vw, 90px)' }} className="text-white leading-none mb-12">
+            ABOUT RUMINATE X
+          </h2>
+          <div className="max-w-3xl divide-y divide-[#1a1a1a] border-y border-[#1a1a1a]">
+            {HOME_FAQS.map(({ q, a }) => (
+              <div key={q} className="py-6">
+                <h3 className="text-white text-lg font-semibold mb-2">{q}</h3>
+                <p className="text-[#a3a3a3] leading-relaxed">{a}</p>
+              </div>
             ))}
           </div>
         </div>

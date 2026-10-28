@@ -21,22 +21,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ruminatex.com'),
   title: {
-    default: 'Ruminate X | AI Video Production Agency | Cinematic Brand Films',
+    default: 'Ruminate X: AI Film Studio for Brand Films and Commercials',
     template: '%s | Ruminate X',
   },
   description:
-    'Ruminate X is an AI-powered creative studio producing cinematic brand films, commercials, and creative content for e-commerce, fashion, and enterprise brands worldwide. No idea is impossible.',
+    'Ruminate X is an AI film studio in Calgary that makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs and medical companies. Every frame is made with AI. No idea is impossible.',
   keywords: [
+    'AI film studio',
     'AI video production agency',
-    'AI creative studio',
-    'cinematic brand films',
     'AI commercial production',
-    'brand video production',
-    'AI content creation',
-    'fashion video production',
-    'ecommerce video production',
-    'startup video production',
-    'AI brand content',
+    'AI brand film production',
+    'AI pharma commercials',
+    'AI corporate video production',
+    'AI UGC ads',
+    'AI product videos',
   ],
   authors: [{ name: 'Ruminate X' }],
   creator: 'Ruminate X',
@@ -51,23 +49,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.ruminatex.com',
     siteName: 'Ruminate X',
-    title: 'Ruminate X | AI Video Production Agency | Cinematic Brand Films',
+    title: 'Ruminate X: AI Film Studio for Brand Films and Commercials',
     description:
-      'AI-powered cinematic production for brands that dare to imagine differently. No idea is impossible.',
+      'Brand films and AI commercials for consumer brands, pharma, labs and medical companies. Every frame made with AI, no shoot.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ruminate X - AI Creative Studio',
+        alt: 'Ruminate X, AI film studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ruminate X | AI Video Production Agency',
+    title: 'Ruminate X: AI Film Studio for Brand Films and Commercials',
     description:
-      'AI-powered cinematic production for brands that dare to imagine differently.',
+      'Brand films and AI commercials for consumer brands, pharma, labs and medical companies. Every frame made with AI, no shoot.',
     images: ['/og-image.jpg'],
   },
   robots: {

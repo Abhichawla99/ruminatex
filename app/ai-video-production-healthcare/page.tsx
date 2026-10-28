@@ -11,15 +11,50 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, PRODUCTION, SITE } from '@/lib/seo/facts'
+import { BUYERS, OFFERS, PRODUCTION, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+
+const studio = SITE.name
+const city = SITE.city.split(',')[0]
+const joinAnd = (items: readonly string[]) =>
+  items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
+const offer = (key: string) => {
+  const found = OFFERS.find((o) => o.key === key)
+  if (!found) throw new Error(`Unknown offer "${key}". Add it to lib/seo/facts.ts first.`)
+  return found
+}
+
+/** What Ruminate X makes for healthcare buyers, from OFFERS, with what each one is for in this field. */
+const HEALTH_OFFERS = [
+  {
+    key: 'commercial',
+    use: 'Consumer ads for a pharmacy, clinic or lab service, disease-awareness spots that do not promote a product, and branded drug ads with the major statement typeset and timed to the voiceover, for TV, streaming, web and social. Your MLR team decides where awareness ends and promotion begins.',
+  },
+  {
+    key: 'brand-film',
+    use: 'What a pharma company, pharmacy group or lab stands for, for the homepage, investors, conferences and recruiting. Science appears as light, particles, scale and motion, the feeling of a cell rather than a specific receptor, and your medical reviewer checks every science shot.',
+  },
+  {
+    key: 'about-us',
+    use: 'A film that introduces a medical company, its mission or its work. Every frame is generated, so the film tells the story with generated people, places and products, not footage of your staff, labs or clinics.',
+  },
+  {
+    key: 'product-visuals',
+    use: "Product films and stills for a pharmacy's own range, a device, a test kit or a pack. The real product is set in the edit from your product files, so what is on screen is your product and not the generator's guess at it.",
+  },
+  {
+    key: 'avatar',
+    use: 'A generated presenter who reads approved copy, for training, internal updates and service explainers. A generated presenter never speaks as a clinician, and your reviewers decide whether the video carries an AI label.',
+  },
+]
+const healthOffers = joinAnd(HEALTH_OFFERS.map(({ key }) => inSentence(offer(key).name)))
+const healthBuyers = joinAnd(BUYERS.filter((b) => /pharma|labs|medical/.test(b)))
 
 const PAGE = {
   path: '/ai-video-production-healthcare',
-  title: 'AI Video for Pharma and Healthcare Marketing',
-  description:
-    'How pharma, pharmacy, lab and medical companies use AI-made brand films and ads, what MLR reviewers ask about AI footage, the US and Canadian drug-ad rules that shape a video, and when to film real clinicians instead.',
+  title: 'AI Video Production for Pharma and Healthcare',
+  description: `${studio} makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Plus the FDA and Health Canada rules that shape a drug or health video, and what breaks in AI medical imagery.`,
   published: '2026-03-07',
-  updated: '2026-10-08',
+  updated: '2026-10-28',
   keywords: [
     'ai video for pharma marketing',
     'ai video production healthcare',
@@ -33,9 +68,6 @@ const PAGE = {
   ],
 }
 
-const studio = SITE.name
-const healthBuyers = BUYERS.filter((b) => /pharma|labs|medical/.test(b)).join(', ')
-
 const CFR = 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-202/section-202.1'
 const CANADA_RX = 'https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870/section-C.01.044.html'
 const HC_ADS = 'https://www.canada.ca/en/health-canada/services/drugs-health-products/regulatory-requirements-advertising.html'
@@ -48,12 +80,20 @@ const AGENDA = 'https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&R
 
 const FAQS = [
   {
+    q: 'Who makes AI video for pharma and healthcare companies?',
+    a: `${studio}, an AI film studio in ${city}, makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and people write, board, edit, mix and grade every film. Your medical, legal and regulatory (MLR) reviewers sign off on every claim, and ${studio} sets each claim, the ISI and the fair-balance text in the edit from the copy they approved, never in the generator.`,
+  },
+  {
     q: 'Can I use AI to make a marketing video for a pharma or medical brand?',
-    a: 'Yes. Nothing in the US or Canadian drug-advertising rules forbids AI-generated footage; the rules govern what the ad says and how risk information is shown, whoever made the pictures. The video still goes through your medical, legal and regulatory (MLR) review, and your reviewers decide whether AI imagery of patients or clinicians needs a label. This is not legal or regulatory advice.',
+    a: `Yes. Nothing in the US or Canadian drug-advertising rules forbids AI-generated footage; the rules govern what the ad says and how risk information is shown, whoever made the pictures. The video still goes through your medical, legal and regulatory (MLR) review, and your reviewers decide whether AI imagery of patients or clinicians needs a label. ${studio} makes these films with every claim and the safety information set in the edit from the copy your reviewers approved. This is not legal or regulatory advice.`,
   },
   {
     q: 'Which AI tool is best for the pharmaceutical industry?',
-    a: 'It depends on the job. Avatar tools such as Synthesia and HeyGen suit training and internal updates, where a presenter reads a script. A cinematic brand film or a consumer ad needs a studio that directs generation, fixes the shots that fail and sets every claim and the safety information as edited text. Ruminate X makes the second kind, for pharma, pharmacy, lab and medical companies.',
+    a: `For a consumer ad, brand film or company film, the generator matters less than who directs it. Generators draw text as shapes and invent plausible anatomy, so a drug or health film needs a studio that checks every science shot against your references, regenerates the shots that fail, and typesets every claim, the ISI and the fair-balance text in the edit. ${studio}, an AI film studio in ${city}, makes films that way for ${healthBuyers}, and your MLR reviewers sign off on every claim.`,
+  },
+  {
+    q: 'How much does AI video production cost for a pharma or healthcare company?',
+    a: `${priceLine('commercial')}. The price moves with length, the number of scenes, how exactly your pack or device has to appear, the number of versions and cutdowns, and how many MLR review rounds your team needs. There is no shoot to pay for, but each review round is a new cut, so ${studio} plans the rounds into the schedule at the brief.`,
   },
   {
     q: 'Do AI-generated patients or doctors in an ad have to be disclosed?',
@@ -65,7 +105,7 @@ const FAQS = [
   },
   {
     q: 'What does "ISI" mean in pharma?',
-    a: 'ISI stands for Important Safety Information, the industry name for the block of risk information that runs with a drug ad or sits below it on a web page. FDA regulations do not use the term; they require a major statement of side effects and contraindications in broadcast ads and a brief summary of risks, and FDA\'s 2009 draft guidance on presenting risk information explains how to show it without distraction. In a video, the ISI is typeset in the edit from MLR-approved copy.',
+    a: `ISI stands for Important Safety Information, the industry name for the block of risk information that runs with a drug ad or sits below it on a web page. FDA regulations do not use the term; they require a major statement of side effects and contraindications in broadcast ads and a brief summary of risks, and FDA's 2009 draft guidance on presenting risk information explains how to show it without distraction. In a ${studio} film, the ISI is typeset in the edit from MLR-approved copy.`,
   },
   {
     q: 'Are pharmaceutical commercials going to be banned?',
@@ -75,91 +115,96 @@ const FAQS = [
     q: 'Can Canadian pharma companies run consumer video ads for prescription drugs?',
     a: 'Only in a narrow form. Section C.01.044 of Canada\'s Food and Drug Regulations limits prescription drug advertising to the general public to the brand, proper and common name, price and quantity. Whether a disease-awareness or brand film counts as drug advertising is a call for your regulatory team; PAAB and Ad Standards give advisory opinions on consumer messages (Health Canada, checked September 2026).',
   },
-  {
-    q: 'When should a healthcare company film instead of using AI?',
-    a: 'When a real clinician, researcher or patient has to speak for themselves, when the film documents a real lab, clinic or procedure, or when a regulator or reviewer needs footage of the actual product or device in use. Hire a medical production company for those. Ruminate X makes every frame with AI and does not film people.',
-  },
 ]
 
 export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide
+      page={PAGE}
+      faqs={FAQS}
+      service={{
+        name: 'AI video production for pharma and healthcare',
+        description: `${studio} makes ${healthOffers} for pharma companies, pharmacies, labs and medical companies, with every frame generated by AI and every claim, the ISI and the fair-balance text set in the edit from MLR-approved copy.`,
+        audience: ['pharma companies', 'pharmacies', 'labs', 'medical companies'],
+      }}
+    >
       <GuideHero
         eyebrow="Pharma, pharmacy, labs, medical"
         title="AI video production for pharma and healthcare marketing"
-        dek="For the pharma brand manager, pharmacy marketing lead, lab or diagnostics marketer, or medical company comms head who wants a cinematic film or ad made with AI and needs it to survive MLR review."
+        dek="For the pharma brand manager, pharmacy marketing lead, lab or diagnostics marketer, or medical company comms head who wants a film or ad made with AI and needs every claim in it to get through MLR."
         updated={PAGE.updated}
       />
 
       <GuideAnswer>
         <p>
-          Pharma, pharmacy, lab and medical companies use AI video for brand films, disease-awareness and service ads, and
-          science that no camera can film, such as a molecule binding or the inside of a cell. The footage is generated, but
-          every claim, the safety information and your logo are set as text in the edit, so reviewers approve exact words.
-          The drug-advertising rules in the US and Canada apply the same way whether the pictures were filmed or generated.
-          Film instead when a real clinician or patient has to appear as themselves.
+          AI video production for pharma and healthcare means making commercials and films with generative AI instead of a
+          shoot, then putting them through the same medical, legal and regulatory (MLR) review as filmed work. {studio},
+          an AI film studio in {city}, makes {healthOffers} for {healthBuyers}: every frame generated with AI, with the
+          script, boards, edit, sound and grade done by people. Your reviewers sign off on every claim, and {studio} sets
+          each claim, the ISI and the fair-balance text in the edit from the copy they approved, never in the generator. The
+          US and Canadian drug-advertising rules apply the same way whether the pictures were filmed or generated.
         </p>
       </GuideAnswer>
 
-      <GuideSection eyebrow="Uses" title="What AI video is used for in pharma, labs and medical">
+      <GuideSection eyebrow="What we make" title={`What ${studio} makes for pharma, pharmacy, lab and medical companies`}>
         <p>
-          {studio} makes films for {healthBuyers}. {PRODUCTION.summary} The briefs that fit an AI-only studio:
+          {studio} makes films for {healthBuyers}. {PRODUCTION.summary}
         </p>
         <ul>
-          <li>
-            <strong>Brand and company films.</strong> What a pharma company, pharmacy group or lab stands for, for the
-            homepage, investors, conferences and recruiting. See <Link href="/ai-brand-film-agency">AI brand film production</Link>.
-          </li>
-          <li>
-            <strong>Science visuals.</strong> A mechanism of action, a cell, an assay, a device working inside the body.
-            AI suits science visuals where the look matters more than exact molecular structure; for a figure that has to
-            match published data exactly, a 3D medical animator is safer. Which jobs{' '}
-            <Link href="/guides/ai-medical-animation">AI medical animation</Link> can do, and what a mechanism of action
-            animation costs from a 3D studio, is in its own guide.
-          </li>
-          <li>
-            <strong>Pharmacy and service ads.</strong> Consumer ads for a pharmacy, clinic or lab service, where the
-            product is the service rather than a prescription drug.
-          </li>
-          <li>
-            <strong>Disease awareness.</strong> Films about a condition that do not promote a product. Your MLR team
-            decides where awareness ends and promotion begins.
-          </li>
+          {HEALTH_OFFERS.map(({ key, use }) => {
+            const o = offer(key)
+            return (
+              <li key={key}>
+                <strong>{o.path ? <Link href={o.path}>{o.name}</Link> : o.name}.</strong> {use}
+              </li>
+            )
+          })}
         </ul>
       </GuideSection>
 
-      <GuideSection eyebrow="MLR review" title="What MLR reviewers will ask about AI footage" alt>
+      <GuideSection eyebrow="MLR review" title="How every claim gets through MLR" alt>
         <p>
-          Medical, legal and regulatory reviewers judge the finished film. Expect these questions, and ask your studio how
-          it answers each one before production starts:
+          Your medical, legal and regulatory reviewers sign off on every word and every frame. {studio} builds the film so
+          they can:
         </p>
         <ol>
           <li>
-            <strong>Is anyone on screen presented as a real patient or clinician?</strong> A generated doctor is not a
-            doctor. Decide early whether generated people carry a label, and never let one make a first-person claim about
-            a result.
+            <strong>Approved copy comes first.</strong> Your MLR team approves the script, the claims, the references, the
+            ISI and the fair-balance text before a frame is generated, so the pictures are made to fit approved words.
           </li>
           <li>
-            <strong>Is the science accurate?</strong> Generators invent plausible anatomy, cells and devices. Every
-            science shot should be checked against your reference images and data, and rerun when it is wrong.
+            <strong>Boards before generation.</strong> Reviewers see the script broken into shots, with framing, motion and
+            duration, before anything is generated, and can strike a shot that implies a claim the copy does not make.
           </li>
           <li>
-            <strong>Is every claim set as text you can approve word for word?</strong> Claims, references, the product
-            name and the safety information should be typeset in the edit, never drawn by a generator.
+            <strong>Every claim is set in the edit.</strong> Each claim, the product name, the ISI and the fair-balance text
+            are typeset in the edit from the approved copy, never drawn by the generator, so reviewers approve exact words.
           </li>
           <li>
-            <strong>Can a shot be changed without changing the rest?</strong> Regenerating one shot can shift faces,
-            light or props. Ask how the studio versions shots so an approved frame stays approved.
+            <strong>Calm shots under the major statement.</strong> The pictures behind the risk information are chosen to
+            sit still, because FDA bars visual elements likely to interfere with it.
           </li>
           <li>
-            <strong>Who owns the film and what is licensed?</strong> The contract should cover the final film, project
-            files, and licenses for the video models, music and voice.
+            <strong>Science checked against your references.</strong> Your reference images go in the brief, and your
+            medical reviewer sees every science shot at the board and rough-cut stages. A shot that reads as a wrong
+            mechanism is regenerated or cut.
+          </li>
+          <li>
+            <strong>No generated person speaks as a real one.</strong> Generated people are portrayals. None makes a
+            first-person claim about a result, and whether they carry an AI label is agreed with your reviewers at the
+            brief.
+          </li>
+          <li>
+            <strong>Notes come back as a new cut.</strong> Boards and reference frames lock the characters, sets and light,
+            so a shot regenerated after review still matches the frames already approved.
           </li>
         </ol>
         <p>
-          Review rounds are the part of a healthcare video budget that grows most. Plan for them in the schedule.
+          {priceLine('commercial')}, and the quote counts the MLR rounds your calendar needs, because each round is a new
+          cut. Ownership and licensing clauses for a commissioned AI film are in{' '}
+          <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
         </p>
       </GuideSection>
 
@@ -181,9 +226,9 @@ export default function Page() {
         </p>
         <p>
           <strong>Pharmacies, labs and clinics</strong> advertising their own services answer to other regulators, such
-          as state boards of pharmacy and provincial colleges. Ask yours. Which rules reach a pharmacy&apos;s own ad, and the
-          Washington, DC pharmacy that apologized for its AI imagery in 2026, are on{' '}
-          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
+          as US state boards of pharmacy and the colleges that regulate health professions in Canada. Ask yours. Which
+          rules reach a pharmacy&apos;s own ad, and the Washington, DC pharmacy that apologized for its AI imagery in 2026,
+          are on <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
         <p>
           All sources checked September 2026. This is not legal or regulatory advice. Your MLR team and counsel decide
@@ -224,40 +269,41 @@ export default function Page() {
           full risk information inside every broadcast ad.
         </p>
         <p>
-          For an AI film, that means the shots under the major statement are chosen to sit still, the ISI is typeset from
-          approved copy rather than generated, and the edit leaves time for a risk section that may get longer. Which drug
-          brands have already run AI-made ads, and why they used animals instead of patients, is on{' '}
+          In a {studio} film, the shots under the major statement are chosen to sit still, the ISI is typeset from approved
+          copy, and the edit leaves room for a risk section that may get longer. Which drug brands have already run AI-made
+          ads, and why they used animals instead of patients, is on{' '}
           <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title="What breaks in AI medical imagery">
+      <GuideSection eyebrow="The weak points" title={`What breaks in AI medical imagery, and how ${studio} fixes it`}>
         <GuideTable
-          caption="Where generated footage fails in pharma and medical work, and the fix to expect. These are the shots the Ruminate X pipeline gives extra generation passes and checks against the client's references."
-          head={['Problem', 'Why it matters here', 'The fix']}
+          caption={`Where generated footage fails in pharma and medical work. Faces, hands and the product get the most generation passes in the ${studio} pipeline, and every science shot is checked against your references.`}
+          head={['Problem', 'Why it matters here', `How ${studio} fixes it`]}
           rows={[
-            ['Anatomy and cells', 'An extra organ or a wrong cell shape is a scientific error on screen', 'Check every science shot against reference images; rerun, or brief a 3D medical animator for exact figures'],
-            ['Pills, packs and devices', 'A tablet or pen that is almost right is the wrong product', 'Work from real product images; composite the real pack or device in the edit'],
-            ['Claims, ISI and on-screen text', 'Warped words in a safety statement are unreviewable', 'Typeset every word in the edit from approved copy'],
-            ['People who look like patients or clinicians', 'Viewers may take them for real people giving real testimony', 'Decide on labels with MLR; never script a generated person as a real patient'],
-            ['Continuity between shots', 'A lab coat, room or light that changes reads as careless', 'Lock the look in boards; grade the shots together; regenerate what drifts'],
+            ['Anatomy and cells', 'An extra organ or a wrong cell shape is a scientific error on screen', 'Your medical reviewer checks every science shot against your reference images; a wrong shot is regenerated, or the scene is rewritten so it does not depend on exact structure'],
+            ['Pills, packs and devices', 'A tablet or pen that is almost right is the wrong product', 'The real tablet, pack or device is set in the edit from your product files'],
+            ['Claims, ISI and on-screen text', 'Warped words in a safety statement are unreviewable', 'Every word is typeset in the edit from approved copy'],
+            ['People who look like patients or clinicians', 'Viewers may take them for real people giving real testimony', 'Labels agreed with MLR at the brief; no generated person is scripted as a real patient'],
+            ['Continuity between shots', 'A lab coat, room or light that changes reads as careless', 'The look is locked in boards, the shots are graded together, and what drifts is regenerated'],
           ]}
         />
       </GuideSection>
 
       <GuideFit
-        title="Should Ruminate X make your healthcare film?"
+        title={`Why pharma and healthcare marketers hire ${studio}`}
         hire={[
-          'A pharma or biotech brand manager who needs a cinematic brand or disease-awareness film and has an MLR process for the claims.',
-          'A pharmacy group or clinic that needs a consumer ad or company film without booking a shoot in its stores.',
-          'A lab or diagnostics company that needs to show science no camera can film.',
-          'A medical company that needs an about-us or recruiting film built on a made world rather than its own staff.',
+          'A pharma or biotech brand manager with an MLR calendar and no budget for a shoot.',
+          'A pharmacy group or clinic that needs a consumer ad or company film without a shoot in its stores.',
+          'A lab or diagnostics company that needs to show its science at a scale no camera reaches.',
+          'A medical company that needs an about-us or recruiting film told with generated people, places and products.',
         ]}
-        instead={[
-          'A real clinician, researcher or patient must speak for themselves: hire a medical production company.',
-          'The film has to show your actual lab, clinic, procedure or device in use: film it.',
-          'The visual must be scientifically exact to published data: hire a 3D medical animation studio.',
-          'You need many short training or internal update videos: an avatar tool such as Synthesia or HeyGen costs less.',
+        get={[
+          'Every claim, the ISI and the fair-balance text typeset in the edit from copy your MLR team approved, never drawn by the generator.',
+          'Boards and a shot list your reviewers see before a frame is generated.',
+          'Calm shots under the major statement, and your real logo, pack or device set in the edit from your files.',
+          'Science shots checked against your references, and regenerated or cut when they read wrong.',
+          'The cutdowns and aspect ratios each channel needs, cut from the same film.',
         ]}
       />
 
@@ -265,17 +311,17 @@ export default function Page() {
 
       <GuideRelated
         links={[
-          { href: '/guides/ai-pharma-commercials', title: 'AI pharma commercials', note: 'Breztri, Descovy and the Puppramin spec ad, and the FDA rules behind them.' },
-          { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What a brand film is, what it costs, and when to film instead.' },
+          { href: '/guides/ai-pharma-commercials', title: 'AI pharma commercials', note: 'Breztri, Descovy, and whether the Saphnelo, Icotyde and Peak Blue Rx ads are AI.' },
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'How a 15 to 60 second AI ad gets made, and what breaks.' },
-          { href: '/blog/how-much-does-ai-video-production-cost', title: 'How much AI video production costs', note: 'Published prices, and why review rounds add cost.' },
+          { href: '/ai-brand-film-agency', title: 'AI brand film production', note: `What a brand film is, and how ${studio} makes one.` },
+          { href: '/guides/ai-medical-animation', title: 'Medical animation cost', note: 'What medical animation costs a minute, and which science shots AI can show.' },
           { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline, stage by stage.' },
         ]}
       />
 
       <GuideCta
         title="Send the brief and your review process"
-        body="Tell us the product or service, the audience (consumers or health professionals), the markets, and how many MLR rounds to plan for."
+        body={`Tell us the product or service, the audience (consumers or health professionals), the markets, and how many MLR rounds to plan for. ${studio} comes back with a creative brief and a quote.`}
       />
     </Guide>
   )

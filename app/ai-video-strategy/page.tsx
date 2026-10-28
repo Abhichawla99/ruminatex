@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Video Strategy | Data-Driven Video Planning for Brands | Ruminate X',
   description: 'Build an AI video strategy that drives results. Ruminate X helps brands plan, produce, and scale video content with AI-powered workflows.',
   keywords: ['AI video strategy', 'AI video marketing strategy', 'video content strategy AI', 'AI-powered video planning', 'video production strategy', 'AI video roadmap'],
@@ -161,7 +163,7 @@ export default function AIVideoStrategyPage() {
             Most agencies separate strategy from execution. You get a beautiful deck from one team and hope a different production team can bring it to life months later. At Ruminate X, the strategists who build your roadmap are the same team that operates the AI production pipeline. That means your strategy is grounded in what is actually producible, and your production is guided by what actually matters to the business.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            This tight loop between planning and production is what makes AI video strategy so powerful. We can iterate in real time — test a concept on Monday, review performance on Wednesday, and refine the creative by Friday. Traditional agencies take weeks to complete a single feedback cycle. We complete dozens. That speed compounds into a strategic advantage that grows every quarter. Whether you need <Link href="/ai-brand-videos" className="text-[#ebff00] hover:underline">AI brand videos</Link> or <Link href="/ai-video-ads" className="text-[#ebff00] hover:underline">AI video ads</Link>, every asset fits into a strategy designed to move your business forward.
+            This tight loop between planning and production is what makes AI video strategy so powerful. We can iterate in real time — test a concept on Monday, review performance on Wednesday, and refine the creative by Friday. Traditional agencies take weeks to complete a single feedback cycle. We complete dozens. That speed compounds into a strategic advantage that grows every quarter. Whether you need <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand videos</Link> or <Link href="/ai-commercial-production" className="text-[#ebff00] hover:underline">AI video ads</Link>, every asset fits into a strategy designed to move your business forward.
           </p>
         </div>
       </section>

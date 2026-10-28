@@ -11,34 +11,28 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, inSentence, PRODUCTION, SITE } from '@/lib/seo/facts'
-
-const PAGE = {
-  path: '/ai-avatar-videos',
-  title: 'AI Avatar Video Production for Companies',
-  description:
-    'When a company should use an AI avatar or spokesperson video, what avatar tools and studios cost, the consent a real person\'s avatar needs, and the disclosure rules for AI presenters in ads (YouTube, Meta, TikTok, New York, Pennsylvania, FTC).',
-  published: '2026-09-30',
-  updated: '2026-10-26',
-  keywords: [
-    'ai avatar video production company',
-    'ai spokesperson video for company',
-    'ai avatar video for business',
-    'how much does it cost to create an AI avatar',
-    'how can I create an AI spokesperson video',
-    'how do I make my own AI avatar for videos',
-    'which AI video production agency is the best',
-  ],
-}
+import { BUYERS, OFFERS, inSentence, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const avatar = OFFERS.find((o) => o.key === 'avatar')!
 
-const HEYGEN_PRICING = 'https://www.heygen.com/pricing'
-const SYNTHESIA_PRICING = 'https://www.synthesia.io/pricing'
-const DID_PRICING = 'https://www.d-id.com/pricing/studio/'
-const SYNTHESIA_CONSENT = 'https://help.synthesia.io/en/articles/9453224-how-do-i-create-my-personal-avatar'
-const HEYGEN_CONSENT = 'https://help.heygen.com/en/articles/12092609-recording-your-consent-video'
+const PAGE = {
+  path: '/ai-avatar-videos',
+  title: 'AI Avatar Video Production for Companies',
+  description: `${studio} makes AI avatar and spokesperson videos for brands and companies: a presenter cast for you and generated with AI, fronting ads, product films and company videos. What it delivers, what moves the price, the consent a real person's likeness needs, and the disclosure rules (YouTube, Meta, TikTok, New York, Pennsylvania, FTC).`,
+  published: '2026-09-30',
+  updated: '2026-10-28',
+  keywords: [
+    'ai avatar video production company',
+    'ai avatar video ads',
+    'ai spokesperson video for company',
+    'ai avatar video for business',
+    'how much does it cost to create an AI avatar',
+    'how can I create an AI spokesperson video',
+    'which AI video production agency is the best',
+  ],
+}
+
 const YOUTUBE_DISCLOSURE = 'https://support.google.com/youtube/answer/14328491'
 const META_ADS_AI = 'https://www.meta.com/en-gb/help/artificial-intelligence/355108217670024/'
 const TIKTOK_AIGC = 'https://www.tiktok.com/support/faq_detail?id=7636670084747893268'
@@ -54,19 +48,23 @@ const FTC_ENDORSEMENT = 'https://www.ecfr.gov/current/title-16/chapter-I/subchap
 const FAQS = [
   {
     q: 'How much does it cost to create an AI Avatar?',
-    a: 'With a self-serve tool, a personal avatar of yourself comes with a subscription: HeyGen\'s Creator plan is USD 29 a month and its Business plan lists five custom video avatars at USD 149 a month plus 20 per seat; Synthesia\'s Creator plan is USD 89 a month with five personal avatars, and its higher-quality Studio Express-1 avatar is a USD 1,000 a year add-on for annual plans (vendor pricing pages, September 2026). A studio-made spokesperson video is priced per film, by length, scenes and versions. Ruminate X quotes each one from the brief.',
+    a: `${priceLine('avatar')}. At ${studio}, an AI film studio in ${SITE.city}, the presenter is cast as part of a finished video, so the price follows the film: running time, the number of scenes, how many videos the same presenter carries, the versions and languages, voice licensing, and how many review rounds your legal or medical reviewers need. Send the script or the idea, where it will run and how many videos you need, and ${studio} comes back with a creative brief and a quote.`,
   },
   {
     q: 'How can I create an AI spokesperson video?',
-    a: 'Write the script first and decide who the spokesperson is: a stock avatar from a tool, a digital twin of a real person who has consented, or a generated character designed for your brand. For simple talking-head updates, type the script into HeyGen or Synthesia and export. For a spokesperson who appears in a designed world, in ads or a brand film, a studio such as Ruminate X writes, casts and generates the presenter, then edits, licenses the voice and sets your logo and text from your own files.',
+    a: `Write the script first and decide who the spokesperson is: a generated character designed for your brand, or a real person who has consented to an avatar of themselves. ${studio}, an AI film studio in ${SITE.city}, makes spokesperson videos with a generated presenter: it writes the script with you, casts and generates the presenter, places them in designed scenes, and delivers the edit with a licensed voice, music, captions, and your logo and on-screen text set from your own files.`,
   },
   {
-    q: 'How do I make my own AI avatar for videos?',
-    a: 'Record the source footage the tool asks for and a consent video. Synthesia says consent footage "must be recorded live" with an on-screen passcode, and that the person in the avatar must record their own consent; HeyGen requires a consent video for every video-based avatar, recorded by the person it represents (help pages, September 2026). You cannot make an avatar of a colleague, client or celebrity without that person taking part.',
+    q: 'Who makes AI avatar video ads?',
+    a: `${studio}, an AI film studio in ${SITE.city}, makes AI avatar video ads for brands: a spokesperson cast for your brand and generated with AI, speaking a script your legal team has approved in designed scenes, cut into the lengths and ratios each placement needs. Your logo, product and on-screen text are set in the edit from your own files, and the AI disclosure your legal team approves is set as on-screen text.`,
   },
   {
     q: 'Which AI video production agency is the best for avatar videos?',
-    a: 'The one whose avatar work you have seen hold up at the length and on the screen you need, and who answers four questions plainly: whose likeness is it and where is the consent, who licenses the voice, how will the video be labelled on each platform, and what happens to the avatar when the contract ends. For volume training videos, a self-serve tool is usually the better buy. For a cinematic spokesperson in ads or a brand film, compare studios such as Ruminate X on those four answers and on their finished films.',
+    a: `Judge any agency on finished avatar work at the length and on the screen you need, and on three answers: whose likeness the presenter is and where the consent is, who licenses the voice, and how the video will be labelled on each platform. ${studio} makes avatar videos with a presenter cast and generated for your brand, a voice cleared for your media plan, and the AI disclosure your legal team approves set as on-screen text, and it regenerates every shot until the face holds.`,
+  },
+  {
+    q: "Can an AI avatar use a real person's face or voice?",
+    a: 'Only with that person\'s consent, and a written agreement on what the avatar may say, where it runs and for how long. New York (General Obligations Law §5-302) and California (AB 2602) make a contract clause letting a digital replica do work the person would have done in person unenforceable if it lacks a reasonably specific description of the intended use and the person had no lawyer or union covering the terms. Tennessee\'s ELVIS Act makes using a person\'s voice or likeness to advertise products without their prior consent a civil wrong. You cannot make an avatar of a colleague, client or celebrity without that person taking part. This is not legal advice.',
   },
   {
     q: 'Do I have to disclose an AI avatar in an ad?',
@@ -82,76 +80,75 @@ export const metadata = guideMetadata(PAGE)
 
 export default function Page() {
   return (
-    <Guide page={PAGE} faqs={FAQS}>
+    <Guide
+      page={PAGE}
+      faqs={FAQS}
+      service={{
+        name: 'AI avatar video production',
+        description: `${studio} makes AI avatar and spokesperson videos for brands and companies: a presenter cast for the brand and generated with AI, speaking an approved script in designed scenes, for ads, product films and company videos.`,
+        audience: [...BUYERS],
+      }}
+    >
       <GuideHero
         eyebrow="AI avatar video production"
         title="AI avatar and spokesperson videos for companies"
-        dek="For the marketing, comms or HR lead weighing an AI presenter for ads, product explainers or company updates, who needs to know what it costs, whose face it can be, and what has to be disclosed."
+        dek={`For the marketing, comms or HR lead who wants an AI presenter to front ads, product films or company videos, and needs to know what ${studio} delivers, what moves the price, whose face it can be, and what has to be disclosed.`}
         updated={PAGE.updated}
       />
 
       <GuideAnswer>
         <p>
-          An AI avatar video puts a generated presenter on screen speaking your script. For a run of simple talking-head
-          videos, a self-serve tool such as HeyGen or Synthesia (about USD 29 to 149 a month, September 2026) is the
-          cheaper choice. A studio makes sense when the spokesperson has to carry an ad or a brand film. An avatar of a
-          real person needs that person&apos;s recorded consent. Realistic AI presenters need disclosure on YouTube and
-          TikTok, in ads in New York, and in Pennsylvania ads where the presenter could mislead viewers about what is sold. An avatar must never pose as a real customer.
+          An AI avatar video puts a generated presenter on screen speaking your script. {studio}, an AI film studio in{' '}
+          {SITE.city}, makes {inSentence(avatar.name)} for brands and companies: a presenter or spokesperson cast for you
+          and generated with AI, fronting ads, product films and company videos, with the script, boards, edit, sound and
+          grade done by people. The presenter can sell your product but never poses as a customer, an avatar of a real
+          person needs that person&apos;s consent, and a realistic AI presenter needs a label on YouTube and TikTok and in
+          ads that run in New York.
         </p>
       </GuideAnswer>
 
-      <GuideSection eyebrow="Options" title="Three kinds of AI avatar video, and who each suits">
+      <GuideSection eyebrow="What you get" title={`What ${studio} delivers`}>
+        <p>
+          {studio} delivers finished videos: the presenter cast for your brand and fixed in a reference sheet so shot 30
+          matches shot 1, the script written with you, the presenter placed in designed scenes, and the cut finished with
+          voice, music, captions, and your logo, product and on-screen text set from your own files.
+        </p>
         <GuideTable
-          caption="The kinds of avatar video companies commission, with the fit column in Ruminate X's view. Prices from the vendors' own pages, September 2026."
-          head={['Kind', 'What it is', 'Suits', 'Watch for']}
+          caption={`What ${studio} makes with a generated presenter.`}
+          head={['Where it runs', `What ${studio} makes`]}
           rows={[
-            ['Stock avatar in a tool', 'A ready-made presenter in HeyGen, Synthesia or D-ID reading your script', 'Training, onboarding, internal updates, many languages', 'Other companies use the same face; looks like a tool'],
-            ['Personal avatar (digital twin)', 'A copy of a real person, often an executive or trainer, made from their footage', 'Routine updates from a known face', 'Consent, what it may say, what happens when they leave'],
-            ['Designed spokesperson', 'A presenter generated for your brand, placed in scenes and cut like an ad', 'Ads, product films, a brand character across a campaign', 'Keeping the face the same across shots; disclosure'],
+            ['Ads', 'A spokesperson commercial or a run of presenter ads, cut into the lengths and ratios each placement needs'],
+            ['Product films and explainers', 'The presenter walks the viewer through the product, with the product reproduced from your real product images'],
+            ['Company videos', 'A presenter for an about-us film, an onboarding film or a company update, written with your comms team'],
+            ['Pharma, lab and medical films', 'A presenter in a mechanism-of-action or product film, with every claim set from copy your medical, legal and regulatory reviewers approved'],
           ]}
         />
         <p>
-          {studio} makes {inSentence(avatar.name)}, {avatar.plain}.{' '}
-          {PRODUCTION.summary} If the job is a stock avatar reading a policy update, you do not need a studio.
+          {studio} casts the presenter for your brand instead of using a stock library face that other companies also use.{' '}
+          {PRODUCTION.summary} For a presenter in a creator&apos;s style, see <Link href="/ai-ugc-reels">AI UGC ads</Link>;
+          for a spokesperson commercial, see <Link href="/ai-commercial-production">AI commercial production</Link>.
         </p>
       </GuideSection>
 
       <GuideSection eyebrow="Price" title="How much does it cost to create an AI avatar?" alt>
-        <GuideTable
-          caption={
-            <>
-              From <a href={HEYGEN_PRICING}>HeyGen</a>, <a href={SYNTHESIA_PRICING}>Synthesia</a> and{' '}
-              <a href={DID_PRICING}>D-ID</a> pricing pages, read September 30, 2026. USD. D-ID prices are the annual-billing
-              rates it shows. Synthesia&apos;s page gives two different avatar counts for its Starter plan, so it is left out.
-            </>
-          }
-          head={['Tool and plan', 'Price', 'Custom avatars included']}
-          rows={[
-            ['HeyGen Creator', '29 a month (24 billed annually)', '1 or more custom video avatars'],
-            ['HeyGen Business', '149 a month plus 20 per seat', '5 custom video avatars'],
-            ['Synthesia Creator', '89 a month', '5 personal avatars'],
-            ['Synthesia Studio Express-1 avatar', '1,000 a year add-on, annual plans only', 'A higher-quality studio avatar; up to 10 days to process'],
-            ['D-ID Pro', '16 a month billed annually', '3 personal avatars'],
-            ['D-ID Advanced', '108 a month billed annually', '5 personal avatars'],
-          ]}
-        />
         <p>
-          A tool subscription buys the ability to make videos; your team still writes, directs and checks them. A
-          studio-made avatar film is priced per film, by running time, the number of scenes, the versions and languages,
-          voice licensing and review rounds. {studio} quotes each film from the brief. Published prices for AI studio work
-          are in <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+          {priceLine('avatar')}. The presenter is cast as part of the video, so the price follows the film: running time,
+          the number of scenes, how many videos the same presenter has to carry, the versions and languages, voice
+          licensing, and how many review rounds your legal or medical reviewers need.
+        </p>
+        <p>
+          Send the script or the idea, where it will run and how many videos you need, and {studio} comes back with a
+          creative brief and a quote.
         </p>
       </GuideSection>
 
       <GuideSection eyebrow="Consent" title="Making an avatar of a real person">
         <p>
-          The tools will not build a personal avatar without the person taking part.{' '}
-          <a href={SYNTHESIA_CONSENT}>Synthesia</a> says consent footage &ldquo;must be recorded live and must include the
-          on-screen passcode&rdquo; and that the person represented &ldquo;must record their own consent video&rdquo;.{' '}
-          <a href={HEYGEN_CONSENT}>HeyGen</a> requires a consent video for every video-based avatar, recorded by the person
-          it represents.
+          A presenter who looks or sounds like a real person, whether your CEO, a doctor on your staff or a celebrity,
+          needs that person&apos;s consent before anything is made, and a written agreement on what the avatar may say,
+          where it runs, for how long, and what happens when the person leaves. US law adds contract rules for digital
+          replicas of real people:
         </p>
-        <p>US law adds contract rules for digital replicas of real people:</p>
         <ul>
           <li>
             <strong>New York</strong> (<a href={NY_REPLICA}>General Obligations Law §5-302</a>, contracts from January 1,
@@ -165,10 +162,8 @@ export default function Page() {
           </li>
         </ul>
         <p>
-          For an employee avatar, put in writing what it may say, where it runs, for how long, and what happens when the
-          employee leaves. Anything that rests on a leader&apos;s own credibility (results, layoffs, apologies) should be
-          filmed. More on company use is in <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
-          This is not legal advice.
+          More on presenters in company films is in{' '}
+          <Link href="/ai-corporate-video-production">AI corporate video production</Link>. This is not legal advice.
         </p>
       </GuideSection>
 
@@ -197,53 +192,54 @@ export default function Page() {
           Consented avatars of your own staff are still labelled on YouTube and TikTok when they look real. For regulated
           categories (pharma, medical, financial) your review team decides how a presenter is labelled; the questions
           reviewers ask about AI footage are on <Link href="/ai-video-production-healthcare">AI video for pharma and
-          healthcare</Link>. The same rules applied to creator-style ads, with what they cost, are on{' '}
-          <Link href="/ai-ugc-reels">AI UGC ads</Link>.
+          healthcare</Link>. The same rules applied to creator-style ads are on <Link href="/ai-ugc-reels">AI UGC ads</Link>.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it is made" title="How a studio makes an AI spokesperson video">
+      <GuideSection eyebrow="How it is made" title={`How ${studio} makes an AI spokesperson video`}>
         <ol>
           <li>
             <strong>Brief and script.</strong> Who watches, where it runs, how long, and what the presenter must and must
             not say. Claims are agreed with legal before anything is generated.
           </li>
           <li>
-            <strong>Casting the presenter.</strong> A designed face, age, wardrobe and voice for the brand, fixed in a
-            reference sheet so shot 30 matches shot 1. No resemblance to a real person unless that person has consented.
+            <strong>Casting the presenter.</strong> A face, age and wardrobe designed for the brand and fixed in a reference
+            sheet, so shot 30 matches shot 1.
           </li>
           <li>
-            <strong>Voice.</strong> A licensed voice actor, a licensed synthetic voice, or the consented voice of a real
-            person, cleared for every channel and territory in the media plan.
+            <strong>Voice.</strong> A voiceover licensed for where the video runs.
           </li>
           <li>
-            <strong>Generation and checks.</strong> Each shot is generated and checked for lip sync, eyes, hands and whether
-            the face has drifted, then rerun until it holds.
+            <strong>Generation passes.</strong> Each shot is generated and checked for lip sync, eyes, hands and whether
+            the face has drifted, then regenerated until it holds.
           </li>
           <li>
             <strong>Edit and brand.</strong> Cut, sound, grade, captions, and your logo, product and on-screen text set
-            from your own files, never generated. Then the platform labels and the versions each channel needs.
+            from your own files, never generated. Then the AI disclosure your legal team approves and the versions each
+            channel needs.
           </li>
         </ol>
         <p>
           Keeping one generated face the same across a series is the hardest part; the methods are in{' '}
           <Link href="/guides/ai-video-character-consistency">AI video character consistency</Link>. Who owns the finished
-          video, and the presenter, is in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
+          video, and the presenter, is in <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>. Each stage of
+          the pipeline is on <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
         </p>
       </GuideSection>
 
       <GuideFit
-        title="Should Ruminate X make your avatar video?"
+        title={`Why companies hire ${studio} for avatar videos`}
         hire={[
-          'A brand that wants a designed spokesperson to front a commercial or a product film, in scenes, not in front of a plain background.',
+          'A brand manager who wants a spokesperson to front a commercial or a product film in designed scenes instead of a plain backdrop.',
           'A marketing lead who needs one presenter to stay the same across a campaign of ads and cutdowns.',
-          'A pharma, lab or medical company that wants a presenter in a mechanism-of-action or product film, with a review process for every claim.',
+          'A pharma, lab or medical company that wants a presenter in a mechanism-of-action or product film, with every claim through medical, legal and regulatory review.',
+          'A comms or HR lead who wants a presenter for an about-us or onboarding film without putting an executive on camera.',
         ]}
-        instead={[
-          'You need dozens of training, policy or onboarding videos: HeyGen or Synthesia on a monthly plan costs far less.',
-          'The message rests on a real leader\'s credibility: film the leader.',
-          'You want real customers to vouch for the product: film real customers, with permission.',
-          'Your audience is likely to reject an AI presenter: film a person.',
+        get={[
+          'A presenter cast for your brand and fixed in a reference sheet, so the face holds across every shot and every video.',
+          'The script written to the claims your legal team approved, with the shot list shown to you before anything is generated.',
+          'Voice, music, captions, and your logo, product and on-screen text set in the edit from your files.',
+          'The AI disclosure your legal team approves, and the cutdowns and ratios each channel needs.',
         ]}
       />
 
@@ -251,17 +247,17 @@ export default function Page() {
 
       <GuideRelated
         links={[
-          { href: '/ai-video-production-enterprise', title: 'AI corporate video production', note: 'Which company films AI can make, and which need a camera.' },
+          { href: '/ai-corporate-video-production', title: 'AI corporate video production', note: 'About-us, mission and onboarding films, with a presenter or a voiceover.' },
+          { href: '/ai-ugc-reels', title: 'AI UGC ads', note: 'Creator-style ads with generated presenters, and the FTC rules on testimonials.' },
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'How an AI commercial is made, and actors and likeness rules.' },
-          { href: '/guides/who-owns-ai-video', title: 'Who owns an AI video', note: 'Copyright, tool terms and the contract clauses to ask for.' },
           { href: '/guides/ai-video-character-consistency', title: 'AI video character consistency', note: 'Keeping one face the same across a film or series.' },
-          { href: '/faq-ai-video-production', title: 'AI video production FAQ', note: 'Commercial use, legality, cost and quality in short answers.' },
+          { href: '/guides/who-owns-ai-video', title: 'Who owns an AI video', note: 'Copyright, model terms and the contract clauses to ask for.' },
         ]}
       />
 
       <GuideCta
         title="Tell us about the presenter"
-        body="Send the script or the idea, where it will run, how many videos and languages, and whether the presenter is a real person or designed for you."
+        body="Send the script or the idea, where it will run, how many videos you need, and who has to sign off the script."
       />
     </Guide>
   )

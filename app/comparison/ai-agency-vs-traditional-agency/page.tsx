@@ -9,30 +9,41 @@ import {
   GuideHero,
   GuideRelated,
   GuideSection,
+  GuideStudio,
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { PRODUCTION, SITE } from '@/lib/seo/facts'
+import { BUYERS, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
+
+const studio = SITE.name
+const listOf = (items: readonly string[]) =>
+  items.length < 2 ? items.join('') : `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`
+const brandBuyers = listOf(BUYERS.filter((b) => b !== 'companies of every size'))
+const hundred = RELATED.find((r) => r.name === '100creatives')!
+const adPrice = priceLine('commercial')
+const filmPrice = priceLine('brand-film')
+const AICP_2019 = 'https://aicp.com/news-roundup/news-from-aicp/aicp-introduces-updated-and-revised-bid-form'
 
 const PAGE = {
   path: '/comparison/ai-agency-vs-traditional-agency',
   title: 'AI Video Agency vs Traditional Production',
-  description:
-    'When a brand should hire an AI video production partner, use an AI tool in-house, or hire a crew: what each costs for a commercial or brand film, what a 2-minute brand video costs either way, how much cheaper AI is by type of video, and where AI footage still fails.',
+  description: `When a brand should hire an AI video production partner instead of a production company or an AI tool run in-house, what each route costs in money and staff hours, how a 2-minute brand video is priced either way, and how ${studio} makes commercials and brand films with every frame generated.`,
   published: '2026-03-08',
   updated: '2026-10-28',
   keywords: [
-    'ai video vs traditional video',
-    'can ai replace a video production agency',
     'when should a brand hire an ai video production partner',
-    'when should a brand use ai video instead of traditional production',
     'is it better to use ai or hire a production company',
+    'how much cheaper is ai video production vs agency',
+    'when should a brand use ai video instead of traditional production',
     'should i use an ai video tool or hire an ai video production agency',
-    'should brands use ai video generators or hire a production company',
     'difference between an ai video generator and an ai video production partner',
+    'ai video vs traditional video',
+    'should brands use ai video generators or hire a production company',
+    'can ai replace a video production agency',
+    'how much does ai video production cost compared to traditional video production',
+    'is ai video cheaper than paying a video agency per video',
     'how much does it cost to produce a 2-minute brand video with ai vs traditional production',
     'should i use ai to produce a brand film instead of hiring a video production company',
-    'how much cheaper is ai video production vs agency',
     'ai video agency vs traditional agency',
     'ai vs traditional video production',
     'benefits of ai video platforms over professional video production agencies',
@@ -41,74 +52,66 @@ const PAGE = {
   ],
 }
 
-const studio = SITE.name
-const LEMONLIGHT = 'https://www.lemonlight.com/blog/ai-video-production-cost/'
-const ADMIRAL = 'https://admiral.media/ai-creative-agency-pricing'
-const INVIDEO = 'https://invideo.io/faq/ai-film-production-vs-traditional-film-production-cost/'
-const PROMOMOTIONS = 'https://promomotions.com/blog/ai-video-ads-vs-agency-cost-comparison'
-const VERSELY = 'https://www.versely.studio/blog/how-much-does-an-ai-commercial-cost'
-const RUNWAY = 'https://runway.com/pricing'
-const LEMONLIGHT_GEN = 'https://www.lemonlight.com/blog/ai-video-vs-traditional-video-production-an-honest-comparison/'
-const ARGUS = 'https://argushd.com/how-much-does-a-brand-video-cost/'
-const GENART = 'https://genartstudios.com/resources/ai-video-production-vs-traditional-agencies'
-const GOODFIRMS = 'https://www.goodfirms.co/resources/video-production-cost-ai-vs-professional'
-
 const FAQS = [
   {
-    q: 'What is the difference between an AI video agency and a traditional video agency?',
-    a: 'A traditional production company films your commercial or brand film with a crew, cameras, talent and locations, then edits the footage. An AI video agency generates the footage with AI models instead, so there is no shoot; the script, boards, edit, sound and grade are still done by people. Ruminate X is an AI-only studio: every frame it delivers is generated.',
+    q: 'When should a brand hire an AI video production partner?',
+    a: `Hire one when the film runs under your brand in paid media, on your site or at a launch, nobody on your team has the days to generate, check and rerun every shot and then edit and mix it, and the people, places and product on screen can all be generated. ${studio}, an AI film studio in ${SITE.city}, is that partner for commercials, brand films and company films: every frame is generated with AI, people write, board, edit, mix and grade, and each round of legal, compliance or MLR notes comes back as a new cut.`,
   },
   {
-    q: 'Is AI video production cheaper than a traditional agency?',
-    a: 'Usually, because an AI film has no crew days, locations, travel, talent fees or reshoots. Lemonlight puts traditional production at about $15,000 to $50,000 or more per video (March 2026). The script, edit, sound, licensing and legal or MLR review still cost the same kind of money, so the saving is smaller on short films with heavy review. Ruminate X quotes each film from the brief.',
+    q: 'Is it better to use AI or hire a production company?',
+    a: `For a commercial, brand film or company film whose world can be made rather than recorded, AI is the better buy: there are no crew days, locations, travel or reshoots in the budget, and a shot can change late without rebooking anyone. Hire an AI production partner such as ${studio}, an AI film studio in ${SITE.city}, so your team approves the brief, the boards and the cuts while the studio writes, generates, edits, mixes and grades every frame. The one thing that still needs a camera crew is real people appearing as themselves.`,
   },
   {
     q: 'How much cheaper is AI video production vs an agency?',
-    a: 'Compared finished film to finished film, Lemonlight prices a polished 30 second AI video from USD 5,000 and puts that at about 60% below traditional production of the same quality, which it prices at USD 15,000 to 50,000 or more per video (March 2026). AI studios\' own tables put an AI version of the same format at about a sixth to a third of the filmed price (Gen Art Studios, April 2026; a provider table on GoodFirms), and in a GoodFirms survey of 100+ marketers (June to July 2026) 88.3% said AI cost under 30% of professional production. The bigger savings you see quoted, up to 99% or hundreds of times cheaper, compare a tool subscription or a do-it-yourself production with a filmed commercial. The script, edit, sound, licences and legal or MLR review cost about the same either way. Ruminate X quotes each film from the brief.', // claims-ok: Lemonlight AI video production cost guide (March 2026), Gen Art Studios table (April 2026) and GoodFirms survey (June-July 2026), all linked on this page
-  },
-  {
-    q: 'Are AI-generated videos good enough for a brand?',
-    a: 'For product, lifestyle, concept and world-building films, yes, when a studio reruns the shots that fail and finishes the film properly. Generated footage is still weakest at faces that must stay the same across shots, hands, exact product packaging, logos and on-screen text. A good AI studio fixes those with extra generation passes and by adding the real logo and type in the edit.',
-  },
-  {
-    q: 'Will videography be replaced by AI?',
-    a: 'Not for work that depends on real people and real events: interviews, testimonials from actual customers, documentaries, conferences, sport, and any film where your own staff or a real doctor must appear. AI replaces the shoot for films whose world can be made rather than recorded, which covers many commercials and brand films.',
-  },
-  {
-    q: 'What happens when I need to change an AI video after it is made?',
-    a: 'Changing a shot in an AI film means regenerating that shot and re-editing, with no crew to rebook, so late changes cost less than a reshoot. Changes to the script or the brand world ripple through many shots and still take real time. Agree the number of review rounds before production starts, whichever kind of company you hire.',
-  },
-  {
-    q: 'Can AI replace a video production agency?',
-    a: 'AI replaces the shoot: the crew, cameras, lights, locations and talent days. Someone still has to write the script, lock the look, rerun the shots that fail, set the logo and on-screen text from brand files, edit, mix, license the music and take the film through legal or MLR review. A brand team with those hours and an editor can do that with a tool such as Runway, Veo, Kling or Sora for internal or social video. Without those hours, hire an AI studio such as Ruminate X. When real people or real events must be on screen, hire a production agency with a crew.',
-  },
-  {
-    q: 'When should a brand hire an AI video production partner?',
-    a: 'When the film will run under the brand, nobody in-house has the days to generate, rerun, edit and mix every shot, no real person has to appear, and the claims need legal, compliance or MLR sign-off. If the video is internal or a draft and someone on staff already edits, a tool such as Runway, Veo, Kling or Sora is enough. If a real person or a real event is the point of the film, hire a production company. Ruminate X is an AI-only studio for the first case.',
+    a: `There is no single percentage, because the saving is the share of a filmed budget that pays for the shoot: crew, cameras and lights, locations and permits, studio, travel and on-camera talent. An AI film drops those lines and keeps the work people do either way, which is the script, boards, edit, sound mix, music and voice licences, and legal or MLR review. The gap is widest on films that would need several locations, a big cast or a built set, and narrowest on short films with many review rounds. ${studio}, an AI film studio in ${SITE.city}, generates every frame, so its quotes carry none of the shoot lines. ${adPrice}, and the number moves with length, scenes, how exactly the product must be reproduced, versions, languages and review rounds.`,
   },
   {
     q: 'When should a brand use AI video instead of traditional production?',
-    a: 'When what has to be on screen can be made rather than recorded: a product in a world you could not afford to build or travel to, a concept, a mood, animals or stylized characters. When a shoot would spend most of the budget on crew days, locations and travel. And when the film needs many cutdowns, aspect ratios or market versions, or has to change late without rebooking a crew. Use traditional production when your own people, real customers or a real event are the point of the film, or when your audience is likely to punish AI-made people: Guess, J.Crew and Valentino were all criticized in 2025 for AI-generated models and imagery. Ruminate X makes the first kind of film, with AI only.',
-  },
-  {
-    q: 'Should I use AI to produce a brand film instead of hiring a video production company?',
-    a: 'Use AI when the brand film tells its story through a made world: mood, place, product or a concept. Hire a video production company when the story depends on real people, such as your founder, your team or customers speaking for themselves. In an AI brand film the palette, light, casting and camera language have to be fixed before generation starts, or the film drifts from shot to shot.',
-  },
-  {
-    q: 'What is the difference between an AI video generator and an AI video production partner?',
-    a: 'A generator such as Runway, Veo, Kling or Sora is software: you write the prompts, get clips a few seconds long, rerun the ones that fail, and do the edit, sound and versions yourself. Runway sells 52 to 791 seconds of Gen-4.5 a month for USD 15 to 95 (October 2026). An AI video production partner such as Ruminate X is a studio that uses those tools for you and hands over a finished film: it writes and boards the idea, generates and checks every shot, sets your real logo and product from your files, and answers your review rounds. Pick the generator when someone in-house has the days; pick the partner when the film runs in paid media or a launch.',
+    a: `Use AI video when what has to be on screen can be made rather than recorded (a product in a world you could not afford to build or travel to, a concept, a mood, animals or stylized characters), when a shoot would spend most of the budget on crew days, locations and travel, and when the film needs many cutdowns, aspect ratios or market versions or has to change late. ${studio}, an AI film studio in ${SITE.city}, makes those commercials and brand films for ${brandBuyers}, with every frame generated and the script, boards, edit, sound and grade done by people.`,
   },
   {
     q: 'Should I use an AI video tool or hire an AI video production agency?',
-    a: 'Use a tool such as Runway, Veo, Kling or Sora when someone on your staff has the days to generate, review and rerun every shot, then edit and mix, and the video is internal, a draft or a social test. Runway\'s plans cost USD 15 to 95 a month for 52 to 791 seconds of its Gen-4.5 model (October 2026), and failed shots use up those seconds too. Hire an AI video production agency such as Ruminate X when the film runs in paid media or a launch, has claims to approve, and nobody in-house has those days.',
+    a: `Hire the agency when the film runs in paid media or at a launch, has claims to approve, and nobody on your staff has the days to generate, review and rerun every shot, then edit, mix and set the logo and type. A tool makes clips; the hours to rerun the failed takes and finish the film are your team's. ${studio}, an AI video production agency in ${SITE.city}, does all of that work: it writes and boards the film, generates and checks every shot, sets your real logo and product from your brand files, edits, mixes and grades, and returns each round of notes as a new cut.`,
+  },
+  {
+    q: 'What is the difference between an AI video generator and an AI video production partner?',
+    a: `A generator is software: you write the prompts, get clips a few seconds long, rerun the ones that fail, and do the edit, sound and versions yourself. An AI video production partner is a studio that does that work and hands over a finished film. ${studio}, an AI film studio in ${SITE.city}, is that kind of partner: it writes and boards the idea, generates and checks every shot, sets your real logo and product from your files, edits, mixes and grades, and answers each review round with a new cut.`,
+  },
+  {
+    q: 'What is the difference between an AI video agency and a traditional video agency?',
+    a: `A traditional production company films your commercial or brand film with a crew, cameras, talent and locations, then edits the footage. An AI video agency generates the footage instead, so there is no shoot; the script, boards, edit, sound and grade are still done by people. ${studio} is an AI video agency in ${SITE.city}. ${PRODUCTION.summary}`,
+  },
+  {
+    q: 'Should brands use AI video generators or hire a production company?',
+    a: `For a commercial or brand film whose world can be made, hire an AI production partner instead of either. A generator leaves the writing, reruns, edit, mix and logo work to your team, and a production company bills for crew days, locations and travel. ${studio}, an AI film studio in ${SITE.city}, generates every frame and has people write, board, edit, mix and grade the film, so your team approves the brief, the boards and the cuts.`,
+  },
+  {
+    q: 'Can AI replace a video production agency?',
+    a: `AI replaces the shoot: the crew, cameras, lights, locations and talent days. Someone still has to write the script, lock the look, rerun the shots that fail, set the logo and on-screen text from brand files, edit, mix, license the music and take the film through legal or MLR review. ${studio}, an AI film studio in ${SITE.city}, is a production partner that does all of that with every frame generated, so you drop the shoot without taking the rest of the agency's work in-house.`,
+  },
+  {
+    q: 'How much does AI video production cost compared to traditional video production?',
+    a: `In the US a filmed commercial is usually bid on the AICP bid form, whose sections run from prep and shoot crew, locations, studio, art department and equipment to talent, editorial, audio and finishing. An AI production drops the shoot lines (crew, locations, studio, equipment, props and wardrobe, and most talent) and keeps the director, editorial, audio, finishing and the music and voice licences, so it costs less wherever the shoot was the biggest part of the budget. ${studio}, an AI film studio in ${SITE.city}, generates every frame, so its quotes have no shoot lines. ${adPrice}, and length, scenes, product accuracy, versions, languages and review rounds move the number.`,
+  },
+  {
+    q: 'Is AI video cheaper than paying a video agency per video?',
+    a: `Per finished video, usually, because a video agency's price carries the shoot days (crew, cameras, locations, travel and talent) and an AI film has none. The gap narrows on short videos with heavy review, since the script, edit, mix, licences and legal or MLR rounds cost about the same either way. ${studio} is an AI film studio in ${SITE.city}. ${adPrice}, and the cutdowns, aspect ratios and new scenes come out of the same production, so a second version does not mean a second shoot.`,
   },
   {
     q: 'How much does it cost to produce a 2-minute brand video with AI vs traditional production?',
-    a: 'Published figures are wide. Argus HD (August 2026) prices filmed brand videos at USD 10,000 to 25,000 for one shoot day, 25,000 to 75,000 for one to three days and 75,000 to 200,000 or more for multi-location films with actors. invideo (July 2026) puts a filmed two-minute commercial at USD 100,000 to 500,000 against USD 1,500 for an AI film made with its tool, without naming a source for the filmed figure. An AI two-minute film costs more than a 30-second one because it has about four times the shots, each matched to the last. Ruminate X quotes each film from the brief.',
+    a: `A filmed brand video is priced mostly by shoot days, so a two-minute cut from the same days adds edit time but no crew days. An AI brand film is priced by its shots: at the same cutting pace, two minutes is four times the shots of a 30-second spot, and each shot has to keep the same face, wardrobe and light as the one before it, which is the slowest part of the work. ${studio}, an AI film studio in ${SITE.city}, makes brand films with every frame generated and no shoot days in the quote. ${filmPrice}, and length is one of the first things that moves the number.`,
   },
   {
-    q: 'When should a brand hire a traditional production company instead of an AI agency?',
-    a: 'When the film needs your founder, staff, real customers or a real clinician on camera; when it records something that happens, such as an event, a factory line or a store opening; when you are already filming and only want a few AI shots; or when your audience is likely to reject visibly AI-made work.',
+    q: 'Should I use AI to produce a brand film instead of hiring a video production company?',
+    a: `Yes, when the brand film tells its story through a made world: mood, place, product or a concept. The palette, light, casting and camera language have to be fixed before generation starts, or a two-minute film drifts from shot to shot. ${studio}, an AI film studio in ${SITE.city}, locks that brand world first, with ${hundred.name} leading the stage, then boards, generates, edits, mixes and grades the film.`,
+  },
+  {
+    q: 'Are AI-generated videos good enough for a brand?',
+    a: `For product, lifestyle, concept and world-building films, yes, when the studio reruns the shots that fail and finishes the film properly. Generated footage is weakest at faces that must stay the same across shots, hands, exact product packaging, logos and on-screen text. ${studio} gives faces, hands and the product the most generation passes and sets the real logo and type in the edit from your brand files; its Keen Footwear spec ad is a product film in which the shoe has to stay the same shoe in every shot.`,
+  },
+  {
+    q: 'What happens when I need to change an AI video after it is made?',
+    a: `Changing a shot in an AI film means regenerating that shot and re-editing, with no crew to rebook, so late changes cost less than a reshoot. Changes to the script or the brand world ripple through many shots and still take real time. At ${studio} the review rounds are counted into the quote, and each round of notes comes back as a new cut.`,
   },
 ]
 
@@ -126,21 +129,28 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          A traditional production company films your ad; an AI video agency generates it. Hire the AI agency when the
-          film&apos;s world can be made rather than recorded, such as a product in a place you could never afford to shoot,
-          a concept, a lifestyle film, and when you want to change shots without rebooking a crew. Hire a traditional
-          company when real people or real events have to be on screen. Both still need a script, an edit, a sound mix and
-          your approvals. If you have already chosen AI and need to pick who makes the film, the guide to hiring an{' '}
-          <Link href="/ai-video-production-agencies">AI video production agency</Link> covers what to look for in a reel
-          and a contract.
+          A traditional production company films your commercial or brand film with a crew; an AI video agency generates
+          every shot, so there are no crew days, locations or reshoots to pay for. {studio}, an AI film studio in{' '}
+          {SITE.city}, makes commercials, brand films and company films for {brandBuyers}: every frame generated with
+          AI, with the script, boards, edit, sound and grade done by people. Hire it as your AI production partner when
+          the film runs under your brand, your team does not have the days to generate, rerun, edit and mix every shot,
+          and everyone on screen can be generated.
         </p>
       </GuideAnswer>
 
+      <GuideStudio title={`${studio} makes AI commercials and brand films with no shoot to book`}>
+        <p>
+          Every frame is generated, so the quote has no crew days, locations or reshoots in it, and people write, board,
+          edit, mix and grade every film. See <Link href="/ai-commercial-production">AI commercial production</Link> and{' '}
+          <Link href="/ai-brand-film-agency">AI brand films</Link>.
+        </p>
+      </GuideStudio>
+
       <GuideSection eyebrow="Tool, studio or crew" title="When should a brand hire an AI video production partner?">
         <p>
-          A brand that wants an AI-made film has three choices: make it in-house with a generator such as Runway, Veo,
-          Kling or Sora; hire an AI studio that delivers the finished film; or hire a production company that films and
-          adds AI shots. Hire an AI video production partner when all four of these are true:
+          A brand that wants an AI-made film can run a generator in-house, book a production company that films and adds
+          AI shots, or hire an AI production partner that delivers the finished film. Hire the partner when all four of
+          these are true:
         </p>
         <ul>
           <li>
@@ -151,220 +161,165 @@ export default function Page() {
             Nobody on your team has the days to generate, review and rerun every shot, then edit, mix and grade. A
             30-second spot can mean dozens of shots, and many need several generations before they hold.
           </li>
-          <li>No real person has to appear: not your founder, a customer speaking for themselves, or a real clinician.</li>
+          <li>Everyone and everything on screen can be generated: the people, the places and the product.</li>
           <li>
             Claims, safety lines or product details have to pass legal, compliance or MLR review, and you want one company
             answerable for every frame.
           </li>
         </ul>
         <p>
-          Make it yourself with a tool when the video is internal, a draft, or high-volume social where speed matters more
-          than polish, and someone on staff already edits. Hire a production company when a real person or a real event is
-          the point of the film. If you have decided on a partner, the seven questions to ask before you sign are on{' '}
-          <Link href="/ai-video-production-agencies">how to hire an AI video production agency</Link>.
+          {studio} is that partner for commercials, brand films and company films. You approve the brief and the boards;
+          people at {studio} write, generate, edit, mix and grade the film, and each round of review notes comes back as
+          a new cut. Before you sign with any studio,{' '}
+          <Link href="/ai-video-production-agencies">what to look for in an AI video production agency</Link> lists the
+          checks, with how {studio} meets each one.
         </p>
         <p>
-          Company films raise their own version of the question: an about-us film, an all-hands opener, a recruiting or
-          investor video, where the people on screen are often your own staff. Which of those can be generated, whether
-          an AI avatar of your CEO is a good idea, and what employees notice are covered in{' '}
-          <Link href="/ai-video-production-enterprise">AI corporate video production</Link>.
+          About-us and company films are made the same way, with generated people, places and products telling the
+          story; see <Link href="/ai-corporate-video-production">AI corporate video production</Link>.
         </p>
+
         <h3>Can AI replace a video production agency?</h3>
         <p>
           AI replaces the shoot, which means the crew, cameras, lights, locations and talent days. The rest of a
-          production agency&apos;s job stays, and either your team does it or the company you hire does.
+          production agency&apos;s job stays, and {studio} does all of it.
         </p>
         <GuideTable
-          caption="A production agency's jobs on a commercial or brand film, and which of them a video generator does. Ruminate X's view from its own pipeline."
-          head={['The agency job', 'Does a generator do it?', 'Who does it when the film is made with AI']}
+          caption={`A production agency's jobs on a commercial or brand film, which of them a video generator does, and how ${studio} covers each one, from its own pipeline.`}
+          head={['The agency job', 'Does a generator do it?', `What ${studio} does`]}
           rows={[
-            ['Concept and script', 'It drafts; it cannot own the idea or answer for it', 'Your team or the studio'],
-            ['Casting and look: palette, light, wardrobe', 'It offers options; someone has to lock them before the first shot', 'An art director'],
-            ['Filming every shot', 'Yes. This is the part AI replaces', 'Generated shot by shot, many of them rerun'],
-            ['Choosing the usable takes', 'No', 'The studio, or your editor'],
-            ['Your product, logo and on-screen text', 'Not reliably: generated packaging and type drift', 'Set in the edit from your brand files'],
-            ['Edit, sound mix, music licences, grade', 'Tools help; a person cuts and mixes', 'An editor and a sound designer'],
-            ['Legal or MLR review and the changes it asks for', 'No', 'A producer, the studio\'s or yours'],
+            ['Concept and script', 'It drafts; it cannot own the idea or answer for it', 'Writes the script from your approved brief'],
+            ['Casting and look: palette, light, wardrobe', 'It offers options; someone has to lock them before the first shot', `Locks them in the brand-world stage, led by ${hundred.name}`],
+            ['Filming every shot', 'Yes. This is the part AI replaces', 'Generates each shot against the boards and reruns the ones that fail'],
+            ['Choosing the usable takes', 'No', 'Checks every take against its board and keeps only the ones that hold up'],
+            ['Your product, logo and on-screen text', 'Not reliably: generated packaging and type drift', 'Sets them in the edit from your brand files'],
+            ['Edit, sound mix, music licences, grade', 'Tools help; a person cuts and mixes', 'Cuts, mixes and grades the film, with licensed music and voice'],
+            ['Legal or MLR review and the changes it asks for', 'No', 'Turns each round of notes into a new cut'],
           ]}
         />
         <p>
-          The answer turns on whether your team has the hours for the rows a generator does not do. If it does, a
-          tool and an in-house editor can stand in for the agency on internal and social video. If not, you are hiring a
-          studio that works this way, such as {studio}, or a production agency that has added AI. If your film needs real
-          people or a real event on screen, keep the agency and its crew. For a short brand video where the choice is
-          a single freelancer, the{' '}
-          <Link href="/comparison/freelance-vs-ai-video">AI effects or VFX freelancer comparison</Link> splits it by
-          whether anything has been filmed.
+          {studio} does every row in the right-hand column, so your team approves the brief, the boards and the cuts and
+          runs none of the generation. For a short brand video where the other option is a single freelancer, the{' '}
+          <Link href="/comparison/freelance-vs-ai-video">AI effects or VFX freelancer comparison</Link> covers that
+          choice.
         </p>
+
         <h3>Is it better to use AI or hire a production company?</h3>
         <p>
-          It depends on what has to be on screen. If the film&apos;s world can be made, such as a product in a place you
-          could not afford to shoot, a concept or a lifestyle world, AI costs less and lets you change shots late without
-          rebooking a crew. If a person or a place has to be real, a production company is the better buy, and AI belongs
-          in its post-production. What each option costs, with published numbers, is further down this page.
+          For a film whose world can be made, such as a product in a place you could not afford to shoot, a concept or a
+          lifestyle world, AI skips the crew days, locations and travel and lets you change shots late without rebooking
+          anyone. An AI production partner such as {studio} also takes the generating, editing and mixing off your team,
+          which is the part a generator subscription leaves with you.
         </p>
+
         <h3>When should a brand use AI video instead of traditional production?</h3>
         <p>
           When the subject can be made instead of recorded, when a shoot would spend most of the budget on crew days,
-          locations and travel, and when the film needs many versions or late changes. Keep a camera when the people on
-          screen have to be real, or when your customers buy the brand for its craft: in 2025 Guess, J.Crew and
-          Valentino were criticized for AI-generated models and imagery, and the{' '}
-          <Link href="/guides/brands-using-ai-commercials">brands that faced backlash for AI ads</Link> show which
-          kinds of ad drew it.
+          locations and travel, and when the film needs many versions or late changes. One generated film can be cut into
+          the aspect ratios and market versions each channel needs, and a new scene can be generated without a second
+          shoot. {studio} makes those films for {brandBuyers}, and the{' '}
+          <Link href="/guides/brands-using-ai-commercials">brands that have run AI commercials</Link> show which kinds of
+          ad get made this way.
         </p>
+
         <h3>Should I use AI to produce a brand film instead of hiring a video production company?</h3>
         <p>
-          Ask whether the story is about a world or about people. Brand films built on mood, place and product, like the
-          trail running film at the end of this page, can be generated whole. Brand films built on your team, your
-          customers or your founder telling the story need a camera. If you go the AI route, the brand world (palette,
-          light, casting, camera language) has to be locked before generation, or a two-minute film drifts; how{' '}
-          {studio} does that is in <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>, and
-          what a brand film costs either way is on <Link href="/ai-brand-film-agency">AI brand film production</Link>.
+          Yes, when the story is about a world rather than particular people. Brand films built on mood, place and
+          product, like the trail running film at the end of this page, can be generated whole. The brand world (palette,
+          light, casting, camera language) has to be locked before generation, or a two-minute film drifts; at {studio},{' '}
+          {hundred.name} leads that stage, and the rest of the process is in{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>. {studio}&apos;s brand film
+          service is on <Link href="/ai-brand-film-agency">AI brand film production</Link>.
         </p>
+
         <h3>Should I use an AI video tool or hire an AI video production agency?</h3>
         <p>
-          Use the tool when someone already on your payroll has the days to run it. The subscription is the small cost.
-          On <a href={RUNWAY}>Runway&apos;s pricing page</a> (read October 7, 2026), the Standard plan at USD 15 a month buys
-          52 seconds of its Gen-4.5 model, Pro at USD 35 buys 187 seconds and Max at USD 95 buys 791 seconds. Those
-          seconds count every generation, including the ones you throw away. A shot where the face drifts, a hand warps or the label misspells is
-          generated again and paid again, and then someone still has to edit, mix, and set your logo and on-screen type
-          from brand files, because generators do not hold them.
+          A tool is priced as a subscription, and the subscription is the small cost. Every take that comes back with a
+          drifting face, a warped hand or a misspelled label is generated again, and someone still has to edit, mix, and
+          set your logo and on-screen type from brand files, because generators do not hold them.
         </p>
         <GuideTable
-          caption="The two routes for a brand film or commercial made with AI. Plan prices from Runway's pricing page and Lemonlight's April 2026 comparison, read October 7, 2026; the rest is Ruminate X's view from its own pipeline."
-          head={['', 'AI video tool, run in-house', 'AI video production agency']}
+          caption={`The two routes for a commercial or brand film made with AI, from ${studio}'s own pipeline.`}
+          head={['', 'AI video tool, run in-house', studio]}
           rows={[
-            ['What you pay', <span key="pay">A monthly plan: USD 15 to 95 on <a key="r" href={RUNWAY}>Runway</a>; <a key="l" href={LEMONLIGHT_GEN}>Lemonlight</a> puts generator subscriptions at USD 20 to 300 a month</span>, 'A quote for the finished film: the studio\'s hours, its generation costs, the edit, mix and licences'],
-            ['Who writes prompts, reviews takes and reruns failures', 'Your staff', 'The studio'],
-            ['Who edits, mixes and sets logo and type', 'Your editor', 'The studio'],
-            ['Who answers for a wrong frame in legal or MLR review', 'You', 'The studio, under the contract'],
-            ['Where it fits', 'Internal video, drafts, social tests, concept boards for a shoot', 'Paid media, a launch, a brand film, anything with claims to approve'],
+            ['What you pay', 'A monthly plan, plus the hours your staff spend running it', adPrice],
+            ['Who writes prompts, reviews takes and reruns failures', 'Your staff', studio],
+            ['Who edits, mixes and sets logo and type', 'Your editor', studio],
+            ['Who fixes a wrong frame caught in legal or MLR review', 'You', `${studio}, which reruns the shot and sends a new cut`],
           ]}
         />
         <p>
-          The return on a tool is high when the editor is on salary and has spare days. When those days have to be bought, compare the studio&apos;s quote with the editor&apos;s
-          day rate times the days, not with the subscription. If your video is internal and you have the editor, you do not
-          need {studio}. Who owns what a tool generates is set by its terms, which are compared in{' '}
-          <Link href="/guides/who-owns-ai-video">who owns AI-generated video</Link>.
+          When those days have to be bought, compare {studio}&apos;s quote with an editor&apos;s day rate times the days,
+          not with the subscription. Who owns what a tool generates is set by its terms;{' '}
+          <Link href="/guides/who-owns-ai-video">who owns AI-generated video</Link> covers them.
         </p>
-        <h3>How much does a 2-minute brand video cost with AI vs traditional production?</h3>
+
+        <h3>How much does it cost to produce a 2-minute brand video with AI vs traditional production?</h3>
         <p>
-          Few sources price a brand video by length. <a href={ARGUS}>Argus HD</a> (August 2026) prices filmed brand videos by
-          shoot days: USD 10,000 to 25,000 for one day with a small crew, 25,000 to 75,000 for one to three days, and 75,000
-          to 200,000 or more for two to five days across locations with professional actors. <a href={INVIDEO}>invideo</a>{' '}
-          (July 2026) sets a filmed two-minute commercial at USD 100,000 to 500,000 against USD 1,500 for an AI brand film
-          made with its tool, and names no source for the filmed figure. <a href={LEMONLIGHT}>Lemonlight</a> starts a
-          polished 30-second AI video at about USD 5,000.
-        </p>
-        <p>
-          Length changes an AI film&apos;s cost more than it changes a shoot&apos;s. At the same cutting pace, two minutes
-          is four times the shots of a 30-second spot, and every shot has to keep the same face, wardrobe and light as the one before it, which is the
-          slowest part of the work (<Link href="/guides/ai-video-character-consistency">character consistency in AI
-          video</Link>). Argus prices filmed work by shoot days, so a longer cut from the same days adds edit time and no
-          crew days. {studio}{' '}
-          publishes no price and quotes each film from the brief.
+          A filmed budget&apos;s crew, equipment, location and talent lines are paid by the day, so a two-minute cut from
+          the same shoot days adds edit time and no crew days. An AI brand film is priced by its shots. At the same
+          cutting pace, two minutes is four times the shots of a 30-second spot, and every shot has to keep the same face,
+          wardrobe and light as the one before it, which is the slowest part of the work (
+          <Link href="/guides/ai-video-character-consistency">character consistency in AI video</Link>). {filmPrice}, and
+          length is one of the first things that moves the number.
         </p>
       </GuideSection>
 
       <GuideSection eyebrow="Side by side" title="AI video vs traditional video production, line by line" alt>
         <GuideTable
-          caption="How the two kinds of company differ on a commercial or brand film, from the Ruminate X pipeline and the traditional production process. No turnaround figures: both depend on the brief and on your review rounds."
-          head={['', 'Traditional production company', 'AI video agency']}
+          caption={`How a filmed production and ${studio} differ on a commercial or brand film, from the ${studio} pipeline and the usual traditional process. No turnaround figures: both depend on the brief and on your review rounds.`}
+          head={['', 'Traditional production company', `${studio}, AI video agency`]}
           rows={[
-            ['Where the footage comes from', 'Filmed with a crew, cameras and lights', 'Generated with AI models, shot by shot'],
-            ['What you pay for', 'Crew days, equipment, locations, talent, travel, then post-production', 'Concept, boards, generation passes, edit, sound, grade'],
-            ['Real people on screen', 'Yes: actors, your staff, real customers', 'Generated characters or disclosed AI presenters'],
-            ['Your exact product', 'Filmed as it is', 'Rebuilt from product images; pack, logo and type composited in the edit'],
+            ['Where the footage comes from', 'Filmed with a crew, cameras and lights', 'Generated with AI, shot by shot, against approved boards'],
+            ['What you pay for', 'Crew days, equipment, locations, talent, travel, then post-production', 'Script, boards, generation passes, edit, sound, grade and versions'],
+            ['People on screen', 'Actors, your staff, real customers', 'Generated people, including AI presenters'],
+            ['Your exact product', 'Filmed as it is', 'Generated from your product images, with the label, logo and type set in the edit from your files'],
             ['Changing a shot late', 'A reshoot: rebook crew, talent, location', 'Regenerate the shot and re-edit'],
             ['Versions and ratios', 'Cut from the footage you shot; new scenes need a new shoot', 'Cut from the film; new scenes can be generated'],
-            ['Where it fails', 'Budget, weather, permits, the shot you could not afford', 'Faces across shots, hands, packaging, logos, on-screen text'],
+            ['Where it fails', 'Budget, weather, permits, the shot you could not afford', 'Faces across shots, hands, packaging, logos and text, which get the most passes and are fixed in the edit'],
           ]}
         />
         <p>
-          {PRODUCTION.summary} So {studio} sits in the right-hand column. When a film needs a camera, the
-          left-hand column is the right hire.
+          {PRODUCTION.summary} None of the crew days, locations or travel in the left-hand column appear in a {studio}{' '}
+          quote.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Cost" title="Is AI cheaper than a traditional agency?">
+      <GuideSection id="cost" eyebrow="Cost" title="How much does AI video production cost compared to traditional video production?">
         <p>
-          Usually. <a href={LEMONLIGHT}>Lemonlight</a> puts traditional production at about $15,000 to $50,000 or more per
-          video (March 2026), for a full crew, physical locations and post-production. An AI film has no crew days,
-          cameras, locations, talent or travel. It keeps the lines that belong to people: the idea, the script, the boards, the
-          edit, the mix, the grade, music and voice licenses, and your legal or MLR review.
+          In the US, production companies bid commercials on the <a href={AICP_2019}>AICP bid form</a>, which the
+          Association of Independent Commercial Producers revised in 2019 to put production and post-production on one
+          form. Its sections run from prep and shoot crew, locations, props and wardrobe, studio and art department to
+          equipment, director, talent, editorial, audio and finishing. An AI production drops the sections that pay for a
+          shoot day (crew, locations, studio, equipment, props and wardrobe, and most talent when the people on screen are
+          generated), keeps the director, editorial, audio, finishing and the licences for music and voice, and adds
+          generation passes and a brand-world stage. The{' '}
+          <Link href="/guides/commercial-production-budget-template">commercial production budget template</Link> shows,
+          section by section, which lines go, stay or get added.
         </p>
         <p>
-          That is why the saving is largest on films with many locations or an expensive look, and smallest on short films
-          that go through several review rounds. For the published prices at each level, from self-serve tools to
-          broadcast studios, read <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
-          It also sets out AI video agency pricing by the video, the campaign and the month, from a USD 1,500 single
-          commercial to a USD 15,000 monthly subscription minimum. {/* claims-ok: MAW AI Studios and Superside pricing pages, linked on the cost page */}
+          {adPrice}. With no shoot lines in it, the number moves with length, the number of scenes, how exactly the
+          product must be reproduced, versions and languages, and how many review rounds your legal or MLR team needs.
+          The saving is largest on films that would need several locations, a big cast or a built set, and smallest on
+          short films with many review rounds.
         </p>
 
         <h3>How much cheaper is AI video production vs an agency?</h3>
         <p>
-          The percentages published online range from about 60% to &quot;250x&quot;, and they measure different things. Before
-          you use one in a budget, check two things: what sits on the AI side (a software subscription, a performance ad
-          variant, or a finished film from a studio) and who is selling it.
-        </p>
-        <GuideTable
-          caption="Published AI-versus-agency cost claims, read September 28, 2026. Each links to its source. Ruminate X publishes no price; it quotes each film from the brief."
-          head={['Source', 'What it says', 'What it actually compares', 'What the source sells']}
-          rows={[
-            [<a key="l" href={LEMONLIGHT}>Lemonlight, March 2026</a>, 'AI video from USD 5,000 for a polished 30 second video, about 60% below traditional at USD 15,000 to 50,000+', 'A finished film against a finished film of the same quality', 'Video production, AI and filmed'], // claims-ok: Lemonlight AI video production cost guide, linked
-            [<a key="a" href={ADMIRAL}>Admiral Media, February 2026</a>, '70-90% cheaper; traditional USD 5,000 to 30,000 per asset; AI about EUR 200 per asset on a EUR 4,000 to 21,500 monthly retainer', 'High-volume performance ad variants against one-off filmed assets', 'AI performance creative'], // claims-ok: Admiral Media AI creative agency pricing (Feb 2026), linked
-            [<a key="i" href={INVIDEO}>invideo, July 2026</a>, 'Productions made with its tool cost USD 750 to 5,000 all-in, against USD 100,000 to 500,000 for a filmed two minute commercial: up to 99.7% less', "A tool user's own production against a traditional figure with no named source", 'An AI video tool'],
-            [<a key="p" href={PROMOMOTIONS}>PromoMotions, December 2025</a>, 'At one video a month, AI tools are 250x cheaper; a basic agency project costs USD 2,000 to 10,000', 'A monthly subscription against a finished agency video', 'An AI ad tool'], // claims-ok: PromoMotions AI video ads vs agency (Dec 2025), linked
-            [<a key="v" href={VERSELY}>Versely, September 2026</a>, 'Studio list prices: USD 2,500 for a hero spot (ArcaneWiz), USD 3,500 for a 60 second cinematic film (Gisteo), GBP 15,000 to 45,000 for a broadcast asset (Myth Labs)', 'AI studio prices, no comparison', 'An AI studio directory and studio'],
-          ]}
-        />
-        <p>
-          For a brand film or a commercial, the like-for-like line is the first one: a studio&apos;s finished film against a
-          production company&apos;s finished film. The large multiples leave out the work a marketing team pays for either way:
-          the concept and script, reruns of the shots that fail, the edit, the sound mix, music and voice licences, and your
-          legal or MLR review. If a quote from an AI studio looks like a tool subscription, ask which of those lines it
-          covers.
+          Published percentages measure different things. Before you put one in a budget, check what sits on the AI side:
+          a software subscription, a batch of performance ad variants, or a finished film from a studio. Only the last
+          compares like with like against a production company&apos;s finished film, and the bigger claims leave out what
+          a marketing team pays for either way: the concept and script, reruns of the shots that fail, the edit, the
+          sound mix, music and voice licences, and legal or MLR review. {studio} delivers the finished film, so compare
+          its quote with a production company&apos;s bid line by line.
         </p>
 
-        <h3>How much cheaper AI is, by type of video</h3>
+        <h3>Is AI video cheaper than paying a video agency per video?</h3>
         <p>
-          Two published tables price the same format both ways. <a href={GENART}>Gen Art Studios</a>, an AI studio, lists its
-          own range next to a traditional agency&apos;s for each deliverable. <a href={GOODFIRMS}>GoodFirms</a> publishes a
-          similar table from an AI production company it does not name. The last column is our arithmetic from their ranges.
-        </p>
-        <GuideTable
-          caption="AI-made against filmed, same format, read October 11, 2026. Prices in USD as published. Both sources sell or list AI production. Ruminate X publishes no price; it quotes each film from the brief."
-          head={['Format', 'Made with AI', 'Filmed', 'AI as a share of filmed', 'Source']}
-          rows={[
-            ['30-second social ad', '500 to 1,500', '3,000 to 8,000', 'about 17-19%', <a key="g1" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table (Apr 13 2026), linked
-            ['2-minute explainer', '1,500 to 4,000', '8,000 to 25,000', 'about 16-19%', <a key="g2" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table, linked
-            ['Brand anthem or sizzle reel', '3,000 to 8,000', '15,000 to 50,000+', 'about 16-20%', <a key="g3" href={GENART}>Gen Art Studios, April 2026</a>], // claims-ok: Gen Art Studios cost table, linked
-            ['Short-form video, 15 to 60 seconds', '300 to 1,200', '1,500 to 5,000', 'about 20-24%', <a key="f1" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
-            ['Product demonstration', '1,500 to 5,000', '5,000 to 15,000', 'about 30-33%', <a key="f2" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
-            ['30-second brand commercial', '8,000 to 30,000', '25,000 to 100,000+', 'about 30-32%', <a key="f3" href={GOODFIRMS}>Provider table on GoodFirms, 2026</a>], // claims-ok: provider estimates published by GoodFirms, linked
-          ]}
-        />
-        <p>
-          On these tables an AI version costs between about a sixth and a third of the filmed one. The two sources
-          disagree most on brand work: Gen Art prices a brand anthem at USD 3,000 to 8,000, while the provider on GoodFirms
-          prices a 30-second brand commercial at USD 8,000 to 30,000. A commercial that runs in paid media carries more
-          reruns, a full sound mix, licences and review rounds than a social ad, and those lines cost about the same
-          whether the footage was filmed or generated.
-        </p>
-
-        <h3>What marketers who have bought both report</h3>
-        <p>
-          GoodFirms surveyed 100+ marketers, agency owners and creative directors in June and July 2026. 88.3% said AI
-          video cost less than 30% of professional production, and 47.1% said less than 10%. {/* claims-ok: GoodFirms AI vs professional video survey (June-July 2026), linked */}
-          The same survey found that 20% of professionally produced campaigns reached a click-through rate of 5% or more,
-          against none of the AI video campaigns; GoodFirms notes that the number of respondents varies by question. {/* claims-ok: GoodFirms survey, linked */}
-        </p>
-        <p>
-          Read the two numbers together before you put a saving in a budget. The cheaper film is the cheaper campaign only
-          if it does the job. Where a real person has to be believed, a customer, a clinician or your founder, the
-          survey&apos;s contributor examples favour the shoot, and so would we: that film belongs with a production
-          company. Where the film is a made world, a product, a place or a concept, the saving is real, and it comes from
-          the crew days, locations and talent you no longer pay for.
+          Per finished video, usually, because the agency&apos;s price carries the shoot days and an AI film has none. The gap
+          narrows on short videos with heavy review, because the script, edit, mix, licences and review rounds cost about
+          the same either way. At {studio} the cutdowns, aspect ratios and any new scenes come out of the same production,
+          so a second version does not mean a second shoot.
         </p>
       </GuideSection>
 
@@ -382,22 +337,21 @@ export default function Page() {
         </p>
         <GuideFilm
           id="Zytga7zsShI"
-          caption="Keen Footwear spec ad by Ruminate X (spec work, not commissioned by Keen). The test for a product film: the shoe stays the same shoe in every shot."
+          caption={`Keen Footwear spec ad by ${studio} (spec work, not commissioned by Keen). The test for a product film: the shoe stays the same shoe in every shot.`}
         />
       </GuideSection>
 
-      <GuideSection eyebrow="Which to hire" title="Which one fits which job">
+      <GuideSection eyebrow="Which briefs" title={`The briefs ${studio} makes with every frame generated`}>
         <GuideTable
-          caption="Ruminate X's view of which kind of company fits common brand briefs."
-          head={['The brief', 'Hire', 'Why']}
+          caption={`Common brand briefs and how ${studio} makes each one. Each links to the page for that kind of film.`}
+          head={['The brief', `How ${studio} makes it`]}
           rows={[
-            ['Product launch commercial, no shoot budget', 'AI agency', 'The product can be placed in any world; versions come from one film'],
-            ['Brand film about what the company stands for', 'AI agency, if no real people must appear', 'A made world can carry the story; a documentary one cannot'],
-            ['Customer testimonial or case study', 'Traditional', 'Real customers speaking for themselves have to be filmed'],
-            ['Founder or team introduction', 'Traditional', 'Your people are the point of the film'],
-            ['Conference, event or factory coverage', 'Traditional', 'It records something that happens'],
-            ['Live-action shoot that needs a few impossible shots', 'Traditional, with AI VFX', 'Someone has to film the plates'],
-            ['Pharma or medical brand film with a mechanism or patient story', 'Either; AI if no real clinician or patient must appear', 'MLR reviews the claims either way; disclose AI-made people'],
+            [<Link key="ad" href="/ai-commercial-production">Product launch commercial, no shoot budget</Link>, 'The product is placed in the world the idea needs, and every cutdown comes from the same film.'],
+            [<Link key="bf" href="/ai-brand-film-agency">Brand film about what the company stands for</Link>, 'A made world carries the story, with the palette, light, casting and camera language locked before generation.'],
+            [<Link key="co" href="/ai-corporate-video-production">About-us or company film</Link>, 'The story is told with generated people, places and products.'],
+            [<Link key="ugc" href="/ai-ugc-reels">Creator-style ads for paid social</Link>, 'UGC-style ads with generated creators, cut for each placement.'],
+            [<Link key="pv" href="/ai-product-videos">Product film or stills</Link>, 'The product gets the most generation passes, and the real label and logo are set in the edit from your files.'],
+            [<Link key="hc" href="/ai-video-production-healthcare">Pharma, pharmacy or medical brand film</Link>, 'Generated people and settings, with the review rounds your MLR team needs counted into the quote.'],
           ]}
         />
       </GuideSection>
@@ -409,23 +363,17 @@ export default function Page() {
         </p>
         <GuideFilm
           id="LYA3Do3KEN0"
-          caption="The Love of Trail Running, an original Ruminate X film (not client work). Every shot generated."
+          caption={`The Love of Trail Running, an original ${studio} film (not client work). Every shot generated.`}
         />
       </GuideSection>
 
       <GuideFit
-        title="Ruminate X or a traditional production company?"
+        title={`Why brands hire ${studio} instead of booking a shoot`}
         hire={[
-          'You need a commercial or brand film and the idea works as a made world.',
-          'Your budget cannot cover the locations, cast or look the idea needs.',
-          'You want to be able to change shots late without a reshoot.',
-          'You are a pharma, pharmacy, lab or medical marketer and no real clinician or patient has to appear.',
-        ]}
-        instead={[
-          'Your founder, staff, a real customer or a real doctor must be on camera: hire a traditional production company.',
-          'The film records an event, a place or a process as it happens: hire a crew.',
-          'You are filming anyway and need a few AI shots: hire a production company with AI VFX.',
-          'Your audience is likely to reject visibly AI-made work: film it.',
+          'A brand manager whose launch film needs a world the budget could never pay to shoot.',
+          'A marketing lead who needs the commercial in every aspect ratio and wants to change shots after the first review without a reshoot.',
+          'A pharma, pharmacy, lab or medical marketer with an MLR calendar and no budget for a shoot.',
+          'A team that has tried a generator in-house and wants the reruns, edit and mix off its desk.',
         ]}
       />
 
@@ -433,11 +381,11 @@ export default function Page() {
 
       <GuideRelated
         links={[
-          { href: '/blog/how-much-does-ai-video-production-cost', title: 'How much AI video production costs', note: 'Published prices at each level, with sources.' },
-          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'What an AI commercial delivers and what still breaks.' },
-          { href: '/ai-video-production-agencies', title: 'How to hire an AI video production agency', note: 'Seven questions to ask before you sign.' },
-          { href: '/ai-brand-film-agency', title: 'AI brand films', note: 'For a film about what your brand stands for.' },
-          { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline stage by stage.' },
+          { href: '/ai-video-production-agencies', title: 'AI video production agency', note: `What ${studio} makes, how, and what to check before you hire any studio.` },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'Ads for TV, streaming, web and social, with every frame generated.' },
+          { href: '/ai-brand-film-agency', title: 'AI brand films', note: 'A story-driven film about what your brand stands for.' },
+          { href: '/guides/commercial-production-budget-template', title: 'Commercial production budget template', note: 'Which lines of a filmed budget an AI production drops, keeps or adds.' },
+          { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The pipeline, stage by stage.' },
         ]}
       />
 

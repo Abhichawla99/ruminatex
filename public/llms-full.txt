@@ -1,128 +1,146 @@
 # Ruminate X: full content index
 
-> Ruminate X is an AI film studio in Calgary, Canada, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame it delivers is made with generative AI. There are no film crews, sets or location shoots.
+> Ruminate X is an AI film studio in Calgary, Canada, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame it delivers is made with generative AI; people write, board, edit, mix and grade every film. There are no film crews, sets or location shoots.
 
 ---
 
 ## Company overview
 
 **Name:** Ruminate X
-**Type:** AI film studio (AI video production)
+**Type:** AI film studio (AI video production, AI commercial production)
 **Location:** Calgary, Alberta, Canada
 **Founded:** 2024
 **Founder:** Abhi Chawla (https://www.ruminatex.com/about#founder)
 **Tagline:** No idea is impossible.
 **Website:** https://www.ruminatex.com
+**Brief the studio:** https://www.ruminatex.com/contact
 **Email:** abhi@paperkites.co
 **Phone:** +1 (587) 804-9266
 **Instagram:** @ruminate__x
 
-Ruminate X works remotely with clients in any country from its studio in Calgary. Prices and turnaround are quoted per project; the studio does not publish a price list.
+Nothing Ruminate X makes is filmed, so it works with brands in any country from its studio in Calgary: briefs, boards and review rounds happen online. Brand films and AI commercials start at US$5,000; every project is quoted from the brief. A recent 90-second film for a pharmacy company was US$12,000.
 
 ---
 
 ## What Ruminate X makes
 
 ### Brand films
-A story-driven film about what a brand stands for.
+A story-driven film about what a brand stands for. Page: https://www.ruminatex.com/ai-brand-film-agency
 
 ### AI commercials
-Ads for TV, streaming, web and social.
+Ads for TV, streaming, web and social, delivered with the cutdowns and aspect ratios the media plan needs. Page: https://www.ruminatex.com/ai-commercial-production
+
+### Pharma, pharmacy, lab and medical films
+AI commercials, brand films and company films for healthcare companies. Every claim, the important safety information and any fair-balance text are set in the edit from copy the client's medical, legal and regulatory reviewers approved. Page: https://www.ruminatex.com/ai-video-production-healthcare
 
 ### About-us and company films
-A film that introduces a company, its mission or its work.
+A film that introduces a company, its mission or its work, for customers, candidates, investors or staff. Page: https://www.ruminatex.com/ai-corporate-video-production
 
 ### Avatar videos
 A presenter or spokesperson video made with AI. Page: https://www.ruminatex.com/ai-avatar-videos
 
 ### UGC-style ads
-Ads in the style of creator videos. Page: https://www.ruminatex.com/ai-ugc-reels
+Ads in the style of creator videos, with generated creators delivering scripted ad lines. Page: https://www.ruminatex.com/ai-ugc-reels
 
 ### Review-style videos
-Review and testimonial-style videos.
+Review and testimonial-style videos. Page: https://www.ruminatex.com/ai-testimonial-videos
 
 ### Product visuals
-Product films and stills. Page: https://www.ruminatex.com/ai-product-videos
+Product films and stills built from the brand's real product images. Page: https://www.ruminatex.com/ai-product-videos
 
 ---
 
 ## How the work is made
 
-Every frame is made with generative AI. The studio takes a brief, builds the brand world and concept, writes the script and boards, generates the shots, then edits, adds sound and grades before delivery. The published pipeline is at https://www.ruminatex.com/how-we-make-an-ai-brand-film.
+1. **Brief.** The product, the audience, the one thing the viewer should remember, the channels and the lengths. Nothing is generated until the brief is approved.
+2. **Brand world.** Palette, light, lenses, casting and texture, fixed before the first frame so the last shot matches the first. 100creatives leads this stage.
+3. **Script and boards.** Every shot gets its framing, movement and duration.
+4. **Generation passes.** Each shot is generated, checked against its board and generated again. Faces, hands and the product get the most passes.
+5. **Product and type.** The real logo, label and on-screen text are set in the edit from the brand's files, never drawn by the generator.
+6. **Edit, sound, grade, versions.** The film is cut, scored, mixed and graded, then the cutdowns and aspect ratios are made from the finished film.
+
+The published pipeline: https://www.ruminatex.com/how-we-make-an-ai-brand-film
 
 ---
 
 ## Who hires Ruminate X
 
-Brand and marketing managers, founders, communications teams and agency producers at consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses.
-
----
-
-## Content library
-
-### Process and services
-- [How We Make an AI Brand Film](https://www.ruminatex.com/how-we-make-an-ai-brand-film): the production pipeline
-- [AI Commercial Production Company](https://www.ruminatex.com/ai-commercial-production): how to choose an AI commercial production company, what an AI commercial delivers, what still breaks, published market prices, disclosure and rights
-- [AI Brand Film Production](https://www.ruminatex.com/ai-brand-film-agency): what an AI brand film is, how it is made, what makes AI footage cinematic, what breaks, filmed and AI prices with sources, rights, when to film instead
-- [AI Video for Pharma and Healthcare Marketing](https://www.ruminatex.com/ai-video-production-healthcare): uses, what MLR reviewers ask about AI footage, US and Canadian drug-ad rules, what breaks in AI medical imagery
-- [AI Pharma Commercials: Who Has Made Them](https://www.ruminatex.com/guides/ai-pharma-commercials): which drug brands have run AI-made ads, why they used animals, the FDA rules that apply, and the rules for actors, celebrity endorsers and AI people in drug ads
-- [Medical Animation Cost: 2D, 3D, MOA and AI](https://www.ruminatex.com/guides/ai-medical-animation): what medical animation costs per minute by style from seven studios' published prices, what a 3-minute film costs, which medical animation jobs AI can do, what a mechanism of action animation costs from a 3D studio, and when to hire one instead
-- [AI Avatar Video Production for Companies](https://www.ruminatex.com/ai-avatar-videos): avatar kinds, tool prices, consent and disclosure rules for AI presenters
-- [AI UGC Ads Agency for Brands](https://www.ruminatex.com/ai-ugc-reels): AI UGC ad formats, the AI UGC ad agencies a search turns up (managed agencies, face-swap services, tools) and questions to ask them, agency, tool and creator prices, FTC, TikTok, Meta and New York disclosure rules, where AI UGC ads break
-- [AI Product Video Production for Brands](https://www.ruminatex.com/ai-product-videos): product video prices filmed, in 3D and with AI, which AI tools make product videos, where generated product shots go wrong, the mock-up rule
-- [Services](https://www.ruminatex.com/services)
-
-### Guides
-- [Who Owns an AI Video? Copyright for Brands](https://www.ruminatex.com/guides/who-owns-ai-video): US Copyright Office and court position, video model terms on output ownership, Canada, studio contract clauses
-- [AI Video Production FAQ](https://www.ruminatex.com/faq-ai-video-production): commercial use, copyright, legality, cost and quality
-- [How to Create AI Explainer Videos](https://www.ruminatex.com/guides/how-to-create-explainer-videos-with-ai)
-- [Video Captions and Subtitles](https://www.ruminatex.com/guides/video-captions-ai-subtitles)
-- [Social Media Video Shorts](https://www.ruminatex.com/guides/social-media-video-shorts)
-- [Interactive Product Demos](https://www.ruminatex.com/guides/interactive-product-demos)
-- [6-Step Video Production Process](https://www.ruminatex.com/guides/6-step-video-production-process)
-- [AI Video Marketing Strategy](https://www.ruminatex.com/guides/video-marketing-strategy-ai)
-- [Screen Recording and Automated Demos](https://www.ruminatex.com/guides/screen-recording-automated-demos)
-- [AI Video Character Consistency for Brands](https://www.ruminatex.com/guides/ai-video-character-consistency): keeping one person across AI shots and campaign photos, the character sheet, consent and disclosure
-- [First and Last Frame AI Video for Commercials](https://www.ruminatex.com/guides/first-frame-last-frame-ai-video): starting AI shots from approved stills, model support, clean first frames, costs
-- [Brand World Building for AI Film and Photos](https://www.ruminatex.com/guides/brand-world-building): the world bible and the order that keeps an AI film and its photos in one world
-- [Brand Visual DNA: The Look Brief for AI Film](https://www.ruminatex.com/guides/brand-visual-dna): the photo and film fields of a visual DNA, and how to pull it from your own films
-- [Product and Label Accuracy in AI Commercials](https://www.ruminatex.com/guides/ai-commercial-product-accuracy): why products drift in AI video, the fixes, the rules, and the reference pack to send
-- [Commercial Production Budget Template for AI](https://www.ruminatex.com/guides/commercial-production-budget-template): budget lines for an AI film plus campaign stills, with a worked example and sources
-- [AI Campaign Stack: Tools Behind Film and Stills](https://www.ruminatex.com/guides/ai-campaign-stack): the layers and tools of an AI campaign, with published prices
-- [Ad Campaign Deliverables: Film and Stills](https://www.ruminatex.com/guides/ad-campaign-deliverables): the films, cutdowns and stills each channel needs, with official specs
-- [Video vs Static Ads: Where AI Film Fits](https://www.ruminatex.com/guides/video-vs-static-ads): what the evidence says, and how to split a budget between film and stills
-- [AI Video Quality Control Before It Airs](https://www.ruminatex.com/guides/ai-video-quality-control): the checklist an AI commercial and its stills pass before release
-
-### Comparisons
-- [AI vs Traditional Video Production](https://www.ruminatex.com/tools/ai-vs-traditional-video)
-- [Top 10 AI Video Agencies in 2026](https://www.ruminatex.com/blog/top-ai-video-agencies-2026): ten agencies that make AI video ads, commercials and brand films (Synima, Dreamachine, Serge Vane, Private Island, FrameSmiths, Gisteo, 45AI, MAW AI Studios, Admiral Media, Ruminate X), unranked and described from their own pages in October 2026: where each is based, whether it also films, published prices (MAW from USD 1,500 per spot, Admiral Media from EUR 363 per ad), and five questions to ask before hiring. Published by Ruminate X, one of the ten.
-- [AI Commercial Cost: What Brands Pay in 2026](https://www.ruminatex.com/guides/ai-commercial-cost): published AI commercial prices read October 2026 (MAW AI Studios from USD 1,500 for one 15-60 s spot and USD 5,000 for a hero film with three cutdowns; ArcaneWiz from USD 2,500 and USD 8,000; Gisteo from USD 3,500 and Myth Labs GBP 15,000-45,000 per broadcast asset, via Versely; Kalshi about USD 2,000, Mashable), a filmed TV commercial's cost line by line (D-MAK Productions, June 2026: USD 10,000-50,000 typical) and which lines AI removes, whether actors get paid for AI commercials (SAG-AFTRA 2025 Commercials Contracts: consent, two days' notice, 1.5x scale session fee per commercial using a digital replica), airtime as a separate budget, and when a crew or a self-serve tool is the better buy
-- [AI Video Agency vs Traditional Production](https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency): the two compared line by line, and which to hire for which brief
-
-### Blog
-- [What is AI Video Production?](https://www.ruminatex.com/blog/what-is-ai-video-production)
-- [AI Video Production Cost and Agency Pricing](https://www.ruminatex.com/blog/how-much-does-ai-video-production-cost): published prices at four levels with sources, three worked 2026 budgets (SaaS, consumer launch, enterprise team), Synthesia and HeyGen plan prices, AI video production agency pricing per video, per campaign and per month (checked October 2026), cost drivers, what to send for a quote
-- [AI vs Traditional Video Production](https://www.ruminatex.com/blog/ai-vs-traditional-video-production)
-- [AI Video Production Agency Guide](https://www.ruminatex.com/blog/ai-video-production-agency-guide)
+Brand and marketing managers, founders, communications and HR leads, pharma and medical marketers, and agency producers, at consumer brands, pharma and pharmacy companies, labs, medical companies and companies of every size.
 
 ---
 
 ## Frequently asked questions
 
+**What is Ruminate X?**
+An AI film studio in Calgary, Canada, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses, with every frame made by generative AI.
+
+**Which company makes AI commercials for brands?**
+Ruminate X makes AI commercials for TV, streaming, web and social. Every shot is generated; the script, boards, edit, sound and grade are done by people, and the brand's real logo, label and on-screen text are set from its own files. Brief: https://www.ruminatex.com/contact
+
+**Who can make an AI brand film for my company?**
+Ruminate X makes AI brand films: the story-driven film about what a brand stands for, with every frame generated and no shoot. https://www.ruminatex.com/ai-brand-film-agency
+
+**Is there an AI video production agency for pharma and medical marketing?**
+Ruminate X makes AI commercials and films for pharma and pharmacy companies, labs and medical companies. Claims, the important safety information and fair-balance text are set in the edit from approved copy, and nothing airs until the client's reviewers sign off. https://www.ruminatex.com/ai-video-production-healthcare
+
 **Is everything Ruminate X delivers made with AI?**
-Yes. Every frame Ruminate X delivers is made with generative AI. There are no film crews, sets or location shoots.
+Yes. Every frame Ruminate X delivers is made with generative AI. There are no film crews, sets or location shoots, so the story is told with generated people, places and products.
 
 **What does Ruminate X make?**
 Brand films, AI commercials, about-us and company films, avatar videos, UGC-style ads, review-style videos and product visuals.
 
-**Who hires Ruminate X?**
-Consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses, usually through a brand or marketing manager, a founder or an agency producer.
-
 **How much does a Ruminate X film cost?**
-Ruminate X quotes each project from the brief and does not publish a price list. Contact abhi@paperkites.co.
+Brand films and AI commercials start at US$5,000, and each film is quoted from the brief; a recent 90-second film for a pharmacy company was US$12,000. Length, the number of scenes, how exactly the product has to be reproduced, the number of versions and the review rounds move the number. Send the brief to abhi@paperkites.co or https://www.ruminatex.com/contact.
 
-**When should a company hire someone else?**
-When the film needs real people on camera (its own staff, a real doctor, a real customer speaking for themselves), when it is documentary or event coverage, or when the budget only fits a self-serve AI video tool.
+**Where is Ruminate X based?**
+Calgary, Alberta, Canada. It makes films for brands anywhere.
+
+---
+
+## Content library
+
+### The studio
+- [Home](https://www.ruminatex.com/)
+- [Work](https://www.ruminatex.com/work)
+- [Services](https://www.ruminatex.com/services)
+- [About](https://www.ruminatex.com/about)
+- [How We Make an AI Brand Film](https://www.ruminatex.com/how-we-make-an-ai-brand-film)
+- [Contact](https://www.ruminatex.com/contact)
+
+### Services
+- [AI Commercial Production Company](https://www.ruminatex.com/ai-commercial-production): how Ruminate X makes an AI commercial, what it delivers, what breaks in AI footage and the fix, fitness and tech shot lists, AI VFX versus a fully generated spot, disclosure and rights
+- [AI Brand Film Production](https://www.ruminatex.com/ai-brand-film-agency): what an AI brand film is, how Ruminate X makes one, what makes generated footage cinematic
+- [AI Video Production Agency](https://www.ruminatex.com/ai-video-production-agencies): what an AI video production agency does and what to look for when hiring one
+- [AI Video for Pharma and Healthcare](https://www.ruminatex.com/ai-video-production-healthcare): what Ruminate X makes for pharma, pharmacy, lab and medical companies, MLR review of AI footage, US and Canadian drug-ad rules
+- [AI Corporate Video Production](https://www.ruminatex.com/ai-corporate-video-production): about-us, mission, recruiting and all-hands films
+- [AI UGC Ads](https://www.ruminatex.com/ai-ugc-reels): AI UGC ads and the FTC, Meta, TikTok, New York and Pennsylvania rules
+- [AI Product Videos](https://www.ruminatex.com/ai-product-videos): product films and stills that keep the product and label accurate
+- [AI Avatar Videos](https://www.ruminatex.com/ai-avatar-videos): AI presenter and spokesperson videos, consent and disclosure
+
+### Guides
+- [AI Pharma Commercials](https://www.ruminatex.com/guides/ai-pharma-commercials): drug and pharmacy ads made with AI, the Saphnelo, Icotyde and Peak Blue Rx questions, the FDA rules for AI-made drug ads
+- [AI Commercials by Big Brands](https://www.ruminatex.com/guides/brands-using-ai-commercials): which brands ran AI commercials, how audiences reacted, and whether AI commercials are allowed
+- [AI Video Agency vs Traditional Production](https://www.ruminatex.com/comparison/ai-agency-vs-traditional-agency): when to hire an AI video production partner instead of booking a shoot
+- [AI Video Production Cost](https://www.ruminatex.com/blog/how-much-does-ai-video-production-cost): what AI video production costs in 2026 and how agencies price it
+- [AI Commercial Cost](https://www.ruminatex.com/guides/ai-commercial-cost): what an AI commercial costs against a filmed one, line by line
+- [Medical Animation Cost](https://www.ruminatex.com/guides/ai-medical-animation): medical animation cost per minute by style, and where AI medical films work
+- [Who Owns an AI Video?](https://www.ruminatex.com/guides/who-owns-ai-video): copyright and the contract clauses that decide ownership
+- [AI Video Production FAQ](https://www.ruminatex.com/faq-ai-video-production): commercial use, copyright, legality, cost and quality
+- [White-Label AI Video Production for Agencies](https://www.ruminatex.com/guides/white-label-ai-video-production): working with Ruminate X as an agency's AI production partner
+- [How to Brief a Video Production Company](https://www.ruminatex.com/guides/video-production-brief): a brief template for an AI-made film
+- [AI Effects or a VFX Freelancer](https://www.ruminatex.com/comparison/freelance-vs-ai-video): short brand videos with AI
+- [Choosing a Video Production Company in Calgary](https://www.ruminatex.com/best-video-production-company-calgary)
+- [AI Video Production in Canada](https://www.ruminatex.com/markets/ai-video-production-canada)
+- [Product and Label Accuracy in AI Commercials](https://www.ruminatex.com/guides/ai-commercial-product-accuracy)
+- [AI Video Quality Control Before It Airs](https://www.ruminatex.com/guides/ai-video-quality-control)
+- [Ad Campaign Deliverables](https://www.ruminatex.com/guides/ad-campaign-deliverables)
+- [Commercial Production Budget Template](https://www.ruminatex.com/guides/commercial-production-budget-template)
+- [Brand World Building](https://www.ruminatex.com/guides/brand-world-building)
+- [Brand Visual DNA](https://www.ruminatex.com/guides/brand-visual-dna)
+- [AI Video Character Consistency](https://www.ruminatex.com/guides/ai-video-character-consistency)
+- [First and Last Frame AI Video](https://www.ruminatex.com/guides/first-frame-last-frame-ai-video)
+- [AI Campaign Stack](https://www.ruminatex.com/guides/ai-campaign-stack)
+- [Video vs Static Ads](https://www.ruminatex.com/guides/video-vs-static-ads)
 
 ---
 

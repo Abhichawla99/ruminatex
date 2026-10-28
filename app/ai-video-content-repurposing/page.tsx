@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Video Content Repurposing | Turn One Video into Dozens | Ruminate X',
   description: 'Repurpose long-form video into short clips, reels, ads & social posts with AI. Ruminate X multiplies your content output without multiplying your budget.',
   keywords: ['AI video content repurposing', 'video repurposing service', 'repurpose video content', 'AI content repurposing', 'video content multiplication', 'AI video clips'],
@@ -161,7 +163,7 @@ export default function AIVideoContentRepurposingPage() {
             Automated clipping tools give you timestamped cuts with no creative direction. Ruminate X is a full-service content repurposing agency powered by AI. Every clip we deliver has been editorially selected for impact, formatted with your brand system, enhanced with professional captions and transitions, and organized into a publishable content strategy. The difference between a clip and a piece of content is craft — and that is exactly what we bring.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            We built our AI repurposing pipeline to understand narrative structure, not just silence gaps. It identifies hooks, punchlines, data points, and emotional peaks — the moments that actually stop a scroll. Combined with our creative team&apos;s editorial judgment, the result is repurposed content that performs as well as — or better than — original <Link href="/ai-short-form-video" className="text-[#ebff00] hover:underline">AI short-form video</Link> produced from scratch. Pair it with our <Link href="/ai-social-media-video" className="text-[#ebff00] hover:underline">AI social media video</Link> service for a complete content engine.
+            We built our AI repurposing pipeline to understand narrative structure, not just silence gaps. It identifies hooks, punchlines, data points and emotional peaks, the moments that stop a scroll. Combined with our creative team&apos;s editorial judgment, the result is repurposed content cut with the same care as <Link href="/ai-ugc-reels" className="text-[#ebff00] hover:underline">AI UGC-style ads</Link> made from scratch.
           </p>
         </div>
       </section>

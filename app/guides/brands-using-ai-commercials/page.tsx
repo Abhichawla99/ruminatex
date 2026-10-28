@@ -9,26 +9,31 @@ import {
   GuideHero,
   GuideRelated,
   GuideSection,
+  GuideStudio,
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { PRODUCTION, SITE } from '@/lib/seo/facts'
+import { PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const TRIVAGO = 'https://company.trivago.com/trivago-unveils-a-bold-brand-refresh-and-ai-powered-tv-ads/'
 const PAGE = {
   path: '/guides/brands-using-ai-commercials',
   title: 'AI Commercials by Big Brands: What Happened',
-  description:
-    'AI commercials from Svedka\'s 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald\'s, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, Pennsylvania\'s new AI ad label law, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work.',
+  description: `AI commercials from Svedka's 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald's, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, Pennsylvania's new AI ad label law, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work. ${SITE.name}, an AI film studio, makes AI commercials for brands.`,
   published: '2026-09-26',
-  updated: '2026-10-26',
+  updated: '2026-10-28',
   keywords: [
     'ai commercials',
     'ai commercial',
     'ai in commercials',
     'ai-generated commercials',
     'ai generated commercials',
+    'artificial intelligence commercials',
+    'ai generated ads',
+    'ai tv commercials',
+    'who makes the best ai commercials',
     'list of brands facing backlash for ai ads',
+    'list of brands facing backlash for ai ads 2025',
     'brands facing backlash for ai ads',
     'brands criticized for ai ads',
     'brands that used ai commercials',
@@ -69,7 +74,7 @@ const NBC_COKE = 'https://www.nbcnews.com/tech/innovation/coca-cola-causes-contr
 const THR_COKE = 'https://www.hollywoodreporter.com/business/digital/coke-new-ai-holiday-ad-video-1236416491/'
 const TOYS = 'https://www.prnewswire.com/news-releases/toysrus-studios-and-native-foreign-use-openais-sora-to-narrate-the-origin-story-of-beloved-toyrus-brand-302180332.html'
 const ENGADGET_TOYS = 'https://www.engadget.com/toys-r-us-uses-openais-sora-to-make-a-brand-film-about-its-origin-story-and-its-horrifying-214730500.html'
-const RGA = 'https://rga.com/news/rga-used-ai-for-impossible-ad'
+const ADWEEK_MONCLER = 'https://www.adweek.com/creativity/how-rga-used-ai-to-make-an-impossible-ad/'
 const KALSHI = 'https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-150507375.html'
 const POPEYES = 'https://www.yahoo.com/entertainment/articles/popeyes-used-veo-3-diss-090324401.html'
 const MASHED_POPEYES = 'https://www.mashed.com/2095619/popeyes-ai-commercial-clowns/'
@@ -77,53 +82,55 @@ const FORBES_COKE = 'https://www.forbes.com/sites/danidiplacido/2025/11/04/coca-
 const PROGRESSIVE = 'https://progressive.mediaroom.com/news-releases/?item=122548'
 const DIVE_PROGRESSIVE = 'https://www.marketingdive.com/news/how-progressive-balances-ai-use-with-authenticity-as-scrutiny-persists/813339/'
 const FEEDME_GRUBBS = 'https://www.readfeedme.com/p/feed-mes-first-dc-edition-black-book'
-const REDDIT_GRUBBS = 'https://www.reddit.com/r/washingtondc/comments/1wybf0b/grubbs_pharmacy_in_ne_apologizes_for_aigenerated/'
 const NBC_MCD = 'https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590'
 const NIQ = 'https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/'
 const MIT_IDE = 'https://ide.mit.edu/insights/personalized-ai-video-ads'
 const ABC_GUESS = 'https://abc7news.com/post/controversy-stirs-ai-generated-models-new-guess-ads-appearing-vogue/17390923/'
 const LOEB_JCREW = 'https://www.loeb.com/en/insights/passle/2025/08/two-recent-genai-controversies-highlight-brandpr-risks-of-use'
 const STARTUPS_VALENTINO = 'https://startups.co.uk/news/valentino-ai-campaign-backlash/'
-const ADWEEK_AERIE = 'https://www.aeo-inc.com/2025/10/10/adweek-aerie-rejects-ai-in-ads-vowing-to-stay-100-real/'
+const ADWEEK_AERIE = 'https://www.adweek.com/brand-marketing/aerie-rejects-ai-in-ads-vowing-to-stay-100-real/'
 const ADWEEK_SVEDKA = 'https://www.adweek.com/creativity/svedka-bets-on-ai-and-its-fembot-to-make-super-bowl-history/'
-const COMFY_SVEDKA = 'https://comfy.org/customers/svedka-silverside'
 const ADWEEK_SVEDKA_REACT = 'https://www.adweek.com/creativity/creatives-react-svedkas-forgettable-super-bowl-ad-proves-ai-isnt-an-idea/'
 const FTC_465 = 'https://www.law.cornell.edu/cfr/text/16/465.2'
 const NY_ADS = 'https://www.governor.ny.gov/news/governor-hochul-announces-first-nation-law-requiring-disclosure-when-advertisements-include-ai'
 const PA_ACT = 'https://www.palegis.us/legislation/bills/2025/sb806'
-const EU_ART50 = 'https://artificialintelligenceact.eu/article/50/'
+const EU_ART50 = 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50'
 const GALLUP_ADS = 'https://news.gallup.com/poll/713222/americans-aren-sold-businesses-using-ai-advertising.aspx'
-const TVTECH_WAYMARK = 'https://tvtechnology.com/news/fox-television-stations-partner-with-waymark-on-generative-ai-ads'
+const ADWEEK_FOX = 'https://www.adweek.com/tvspy/fox-stations-to-offer-ai-generated-commercials-through-new-partnership/'
 const CONVERSATION_HUMAN = 'https://theconversation.com/a-backlash-against-ai-imagery-in-ads-may-have-begun-as-brands-promote-human-made-269276'
 
 const FAQS = [
   {
     q: 'What companies are using AI in their commercials?',
-    a: 'Svedka (a 30-second Super Bowl LX ad in February 2026, made by Silverside AI and described by Adweek as the first primarily AI-generated Super Bowl commercial), Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (a brand film made with OpenAI\'s Sora, 2024), Moncler (a film made with Google\'s Veo by R/GA, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald\'s Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb\'s Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this Ruminate X page.',
+    a: `Svedka (a 30-second Super Bowl LX ad in February 2026, described by Adweek as the first primarily AI-generated Super Bowl commercial), Coca-Cola (the 2023 "Masterpiece" ad and AI versions of "Holidays Are Coming" in 2024 and 2025), Toys"R"Us (an AI brand film that premiered at Cannes Lions, 2024), Moncler (an experimental AI film shown at Cannes Lions, 2025), Kalshi (an ad aired during the 2025 NBA Finals), Popeyes (the "Wrap Battle" ad, 2025), Progressive (the "Drive Like an Animal" insurance ad, November 2025) and McDonald's Netherlands (a Christmas ad pulled within a week in December 2025). Smaller businesses use it too: Grubb's Pharmacy in Washington, DC apologized for AI-generated imagery in October 2026. Each is sourced on this ${studio} page.`,
+  },
+  {
+    q: 'Who makes the best AI commercials?',
+    a: `${studio}, an AI film studio in Calgary, makes AI commercials (ads for TV, streaming, web and social) for consumer brands, pharma and pharmacy companies and other businesses, with every frame generated by AI and the script, boards, edit, sound and grade done by people. Judge any studio, ${studio} included, on finished spots rather than single clips, and ask to see a shot where a face turns, a hand holds the product and a logo is on screen, because those are the shots generated footage most often gets wrong. ${studio} boards those shots, gives faces, hands and the product the most generation passes, and sets your real logo, product and on-screen text in the edit from your brand files.`,
   },
   {
     q: 'What TV commercials are AI?',
-    a: 'National TV ads made mostly with AI include Svedka\'s 30-second Super Bowl LX spot (February 2026, made by Silverside AI), Kalshi\'s ad that aired during the 2025 NBA Finals (made with Google Veo 3 for about USD 2,000), and trivago\'s localized TV ads from December 2023, which used AI voices to put one actor\'s ad into more than ten languages. Many more are local: TV stations sell small businesses ads generated with tools such as Waymark, which Fox Television Stations rolled out across its stations in 17 markets in 2023. Each is sourced on this Ruminate X page.',
+    a: `National TV ads made with AI include Svedka's 30-second Super Bowl LX spot (February 2026), Kalshi's ad that aired during the 2025 NBA Finals (made for about USD 2,000), and trivago's localized TV ads from December 2023, which used AI to carry one actor's ad into more than ten languages. Many more are local: TV stations sell small businesses ads generated with AI, and Fox Television Stations rolled a generative AI ad tool out across its stations in 17 markets in 2023. Each is sourced on this ${studio} page.`,
   },
   {
     q: 'Why are there so many AI commercials on TV?',
-    a: 'Part of the answer is local TV, where AI made a commercial cheap enough for businesses that never had one. Stations sell generated ads alongside airtime: Fox Television Stations put Waymark\'s generative AI ad tool in its stations in 17 markets in 2023, letting a local business make a commercial with a voice-over in five minutes or less (TV Technology, September 2023), and Gray Television and Spectrum Reach had also adopted the platform. National brands use AI for spots a shoot could not deliver in time or on budget, such as Kalshi\'s NBA Finals ad. In a Bentley University-Gallup survey in May 2026, 79% of US adults said they had seen an ad in the past 30 days that appeared to be made with AI.',
+    a: 'Part of the answer is local TV, where AI made a commercial cheap enough for businesses that never had one. Stations sell generated ads alongside airtime: Fox Television Stations put a generative AI ad tool in its stations in 17 markets in 2023, after Spectrum Reach and Gray Television had signed deals for the same platform earlier that year (Adweek, 2023). National brands use AI for spots a shoot could not deliver in time or on budget, such as Kalshi\'s NBA Finals ad. In a Bentley University-Gallup survey in May 2026, 79% of US adults said they had seen an ad in the past 30 days that appeared to be made with AI.',
   },
   {
     q: 'Is Coca-Cola using AI ads?',
-    a: 'Yes. Coca-Cola ran "Masterpiece", an AI ad, in 2023, then remade its 1995 "Holidays Are Coming" ad with generative AI in 2024 (Secret Level, Silverside AI and Wild Card, four AI models) and again in 2025 with Secret Level, swapping the people for generated animals. Both holiday versions drew backlash: NBC News reported viewers calling the 2024 ad "soulless", and Forbes headlined the 2025 one "Coca-Cola Sparks Backlash With AI-Generated Christmas Ad, Again". "Masterpiece" did not draw one.',
+    a: 'Yes. Coca-Cola ran "Masterpiece", an AI ad, in 2023, then remade its 1995 "Holidays Are Coming" ad with generative AI in 2024 (three studios, four AI models) and again in 2025, swapping the people for generated animals. Both holiday versions drew backlash: NBC News reported viewers calling the 2024 ad "soulless", and Forbes headlined the 2025 one "Coca-Cola Sparks Backlash With AI-Generated Christmas Ad, Again". "Masterpiece" did not draw one.',
   },
   {
     q: 'Do AI-generated ads actually work?',
-    a: 'The evidence is split by the kind of ad. In NielsenIQ\'s December 2024 study of more than 2,000 viewers, people spotted most AI-generated ads, called them more "annoying," "boring" and "confusing" than conventional ads, and showed weaker memory activation on EEG even for AI ads rated high quality. In a WhatsApp experiment with more than 21,000 customers of an Indian online retailer, summarised by the MIT Initiative on the Digital Economy, AI avatar videos personalized to each customer got a 9.4% higher click-through rate than personalized image ads and 6.5% higher than a generic video, from a single exposure. Ruminate X reads that as: test an AI cut before spending media behind it, and keep realistic generated people out of ads that depend on warmth.',
+    a: `The evidence is split by the kind of ad. In NielsenIQ's December 2024 study of more than 2,000 viewers, people spotted most AI-generated ads, called them more "annoying," "boring" and "confusing" than conventional ads, and showed weaker memory activation on EEG even for AI ads rated high quality. In a WhatsApp experiment with more than 21,000 customers of an Indian online retailer, summarised by the MIT Initiative on the Digital Economy, AI avatar videos personalized to each customer got a 9.4% higher click-through rate than personalized image ads and 6.5% higher than a generic video, from a single exposure. ${studio}'s reading is to test an AI cut before spending media behind it, and to keep realistic generated people out of ads that depend on warmth.`,
   },
   {
     q: 'Why did people criticize the Coca-Cola AI Christmas ad?',
-    a: 'Coca-Cola\'s 2024 AI remake of its 1995 "Holidays Are Coming" ad, made by Secret Level, Silverside AI and Wild Card with four generative AI models, was called "soulless" online, and critics attacked both how it looked and what it meant for the artists who would normally make it (NBC News, November 2024). For 2025 Coca-Cola made a new AI version with animals instead of people, because AI animal expressions had improved (The Hollywood Reporter, November 2025).',
+    a: 'Coca-Cola\'s 2024 AI remake of its 1995 "Holidays Are Coming" ad, made by three studios with four generative AI models, was called "soulless" online, and critics attacked both how it looked and what it meant for the artists who would normally make it (NBC News, November 2024). For 2025 Coca-Cola made a new AI version with animals instead of people, because AI animal expressions had improved (The Hollywood Reporter, November 2025).',
   },
   {
     q: 'Are AI commercials cheaper to make?',
-    a: 'Sometimes much cheaper, sometimes not. The Kalshi NBA Finals ad was made with Veo 3 for about USD 2,000 in two days (Mashable, June 2025). The production company behind McDonald\'s Netherlands\' AI Christmas ad said it took ten people five weeks full-time, more hours than a traditional shoot (NBC News, December 2025). A cinematic AI ad saves the crew, set and location, and keeps the writing, fixing, editing and review.',
+    a: `Sometimes much cheaper, sometimes not. Kalshi's NBA Finals ad was made for about USD 2,000 in two days (Mashable, June 2025). The production company behind McDonald's Netherlands' AI Christmas ad said it took ten people five weeks full-time, more hours than a traditional shoot (NBC News, December 2025). A cinematic AI ad saves the crew, set and location, and keeps the writing, fixing, editing and review. ${priceLine('commercial')}; the length, the number of scenes, how exactly the product must be reproduced, the versions and cutdowns, and the review rounds move the price.`,
   },
   {
     q: 'What are some examples of commercials using AI actors?',
@@ -131,7 +138,7 @@ const FAQS = [
   },
   {
     q: 'Did Progressive use AI for an ad?',
-    a: 'Yes. Progressive\'s "Drive Like an Animal" ad for its Snapshot program, released on November 3, 2025, shows AI-generated animals driving and crashing cars, with the voice of Stephanie Courtney, the actress who plays Flo. Progressive\'s in-house agency Ninety6, its agency of record Arnold, and Monks made it. The idea dated from 2024 and was shelved as too slow and expensive to produce; AI made it fit the budget a year later. It drew negative comments on YouTube and Reddit, and Progressive said engagement was strong (Marketing Dive, February 2026).',
+    a: 'Yes. Progressive\'s "Drive Like an Animal" ad for its Snapshot program, released on November 3, 2025, shows AI-generated animals driving and crashing cars, with the voice of Stephanie Courtney, the actress who plays Flo. The idea dated from 2024 and was shelved as too slow and expensive to produce; AI made it fit the budget a year later. It drew negative comments online, including on YouTube, and Progressive said engagement was strong (Marketing Dive, February 2026).',
   },
   {
     q: 'Is the trivago commercial AI?',
@@ -139,7 +146,7 @@ const FAQS = [
   },
   {
     q: 'Which AI commercials were made fastest?',
-    a: 'Popeyes\' "Wrap Battle", a reply to McDonald\'s bringing back the Snack Wrap, was finished on Veo 3 alone after its director scrapped slower work with less than three days to go (TechRadar, July 2025). The Kalshi NBA Finals ad took two days (Mashable, June 2025). Both were quick, funny, reactive spots, the format AI suits best today.',
+    a: 'Popeyes\' "Wrap Battle", a reply to McDonald\'s bringing back the Snack Wrap, was finished with a single video model after its director scrapped slower work with less than three days to go (TechRadar, July 2025). The Kalshi NBA Finals ad took two days (Mashable, June 2025). Both were quick, funny, reactive spots, the format AI suits best today.',
   },
   {
     q: 'Which brands faced backlash for AI ads in 2025?',
@@ -151,7 +158,7 @@ const FAQS = [
   },
   {
     q: 'Should my brand make an AI commercial after these backlashes?',
-    a: 'It depends on the ad. The public backlash in these cases landed on sentimental holiday ads from beloved brands that showed realistic generated people. Stylized worlds, animals, products and fast topical spots drew less of it. If your ad depends on warmth from real-looking people, or your audience includes the creative community, test it or film it. Ruminate X will tell you if a brief is the wrong one for AI.',
+    a: `It depends on the ad. The backlash in these cases landed on sentimental holiday ads from beloved brands that showed realistic generated people, and on fashion brands' AI-generated models and imagery. Stylized worlds, animals, products and fast topical spots drew less of it. ${studio} builds a brand world for each AI commercial and boards every shot, so you see where people appear and how close the camera gets before anything is generated; your real logo and product are set in the edit from your brand files. Test the finished cut against your current ads before the media budget goes behind it.`,
   },
 ]
 
@@ -178,40 +185,47 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          Coca-Cola, Toys&quot;R&quot;Us, Moncler, Kalshi, Popeyes, Progressive and McDonald&apos;s Netherlands all
-          released AI commercials or brand films between 2023 and 2025, and in February 2026 Svedka ran what Adweek called
-          the first primarily AI-generated Super Bowl commercial. The fast, funny, topical ones
-          (Kalshi in two days for about USD 2,000, Popeyes finished with less than three days to go) were made in days. The
-          sentimental holiday ads that showed realistic AI-generated people (Coca-Cola in 2024, McDonald&apos;s
-          Netherlands in 2025) drew the strongest backlash, and McDonald&apos;s pulled its ad within a week. Fashion brands
-          joined the list in 2025: Guess, J.Crew and Valentino were criticized for AI-generated models and imagery. In October 2026 a
-          neighbourhood pharmacy in Washington, DC apologized for its AI imagery, so the scrutiny reaches small businesses
-          too. Whether AI ads work depends on the ad: NielsenIQ found viewers spot most of them and remember them less,
-          while a WhatsApp test summarised by MIT found personalized AI videos beat image ads on clicks.
+          AI commercials are ads whose footage or voices are generated with artificial intelligence instead of filmed or
+          recorded. {studio}, an AI film studio in Calgary, makes AI commercials for consumer brands, pharma and pharmacy
+          companies and other businesses: every frame generated with AI, with the script, boards, edit, sound and grade
+          done by people. Coca-Cola, Toys&quot;R&quot;Us, Kalshi, Popeyes, Progressive and McDonald&apos;s Netherlands
+          released AI commercials between 2023 and 2025, and in February 2026 Svedka ran what Adweek called the first
+          primarily AI-generated Super Bowl commercial. The fast, topical spots were made in days (Kalshi&apos;s in two
+          days for about USD 2,000), while the sentimental holiday ads full of realistic generated people drew the
+          strongest backlash, and McDonald&apos;s Netherlands pulled its ad within a week.
         </p>
       </GuideAnswer>
+
+      <GuideStudio title={`${studio} makes AI commercials for brands`}>
+        <p>
+          {studio} boards every shot and shows you where generated people appear, and how close the camera gets, before
+          anything is generated. Faces, hands and the product get the most generation passes, and your real logo and
+          on-screen text are set in the edit from your brand files; see{' '}
+          <Link href="/ai-commercial-production">AI commercial production</Link>.
+        </p>
+      </GuideStudio>
 
       <GuideSection eyebrow="The cases" title="Companies using AI for ads: eleven commercials and what happened">
         <GuideTable
           caption={
             <>
-              Each row from the source linked in the text below, read September and October 2026. Budgets are listed only where one
-              was published; most brands do not publish them.
+              Each row from the source linked in the text below, read September and October 2026. Budgets and timings are
+              listed only where the source reports one; most brands do not publish them.
             </>
           }
-          head={['Year', 'Brand and ad', 'Made by, with', 'Time, team or cost', 'What happened']}
+          head={['Year', 'Brand and ad', 'Time, team or cost', 'What happened']}
           rows={[
-            ['2023', 'Coca-Cola, "Masterpiece"', 'Not named in the source read', 'Not published', 'Museum paintings come to life; no backlash reported'],
-            ['2024', 'Toys"R"Us, origin brand film', 'Native Foreign, OpenAI Sora, corrective VFX, original score', '"A few weeks"; hundreds of shots cut to a couple dozen', 'Premiered at Cannes Lions; Engadget called it horrifying'],
-            ['2024', 'Coca-Cola, "Holidays Are Coming" remake', 'Secret Level, Silverside AI, Wild Card; four AI models', 'Not published', 'Called "soulless" online; billions of impressions'],
-            ['2025', 'Kalshi, NBA Finals ad', 'Google Veo 3', 'About USD 2,000, two days', 'Aired during the NBA Finals'],
-            ['2025', 'Popeyes, "Wrap Battle"', 'AI filmmaker PJ Accetturo, Veo 3, Suno', 'Finished in under three days on Veo 3', 'Coverage split between "AI won" and "backfired"'],
-            ['2025', 'Moncler, "From the Mountains to the City"', 'R/GA, Google Veo', 'Four weeks', 'Unveiled at Cannes Lions'],
-            ['2025', 'Coca-Cola, "Holidays Are Coming" (animals)', 'Secret Level; a second version by Silverside', 'About 20 people, against at least 50 for a comparable filmed ad', 'Criticized again; Coca-Cola stood by it'],
-            ['2025', 'Progressive, "Drive Like an Animal"', 'Ninety6 (in-house), Arnold, Monks; Flo actress Stephanie Courtney on voice', 'Shelved in 2024 as too costly to produce; made a year later with AI', 'Negative comments on YouTube and Reddit; Progressive reported strong engagement'],
-            ['2025', 'McDonald\'s Netherlands, Christmas ad', 'TBWA\\Neboko, The Sweetshop', 'Ten people, five weeks full-time', 'Pulled the following Wednesday'],
-            ['2026', 'Svedka, Super Bowl LX spot (Fembot and Brobot)', 'Silverside AI, ComfyUI workflows; dance from a TikTok open call', 'Under a month, against about six for a campaign that size (Silverside case study)', 'Adweek\'s creative panel called it forgettable'],
-            ['2026', "Grubb's Pharmacy (Washington, DC), marketing imagery", 'Not published', 'Not published', 'Head pharmacist apologized; more than 1,100 comments on r/washingtondc'],
+            ['2023', 'Coca-Cola, "Masterpiece"', 'Not reported', 'Museum paintings come to life; no backlash reported'],
+            ['2024', 'Toys"R"Us, origin brand film', '"A few weeks"; hundreds of shots cut to a couple dozen', 'Premiered at Cannes Lions; Engadget called it horrifying'],
+            ['2024', 'Coca-Cola, "Holidays Are Coming" remake', 'Not reported', 'Called "soulless" online; billions of impressions'],
+            ['2025', 'Kalshi, NBA Finals ad', 'About USD 2,000, two days', 'Aired during the NBA Finals'],
+            ['2025', 'Popeyes, "Wrap Battle"', 'Finished in under three days', 'Coverage split between "AI won" and "backfired"'],
+            ['2025', 'Moncler, "From the Mountains to the City"', 'Four weeks', 'Shown to creative leaders at Cannes Lions'],
+            ['2025', 'Coca-Cola, "Holidays Are Coming" (animals)', 'About 20 people, against at least 50 for a comparable filmed ad', 'Criticized again; Coca-Cola stood by it'],
+            ['2025', 'Progressive, "Drive Like an Animal"', 'Shelved in 2024 as too costly to produce; made a year later with AI', 'Negative comments online, including on YouTube; Progressive reported strong engagement'],
+            ['2025', 'McDonald\'s Netherlands, Christmas ad', 'Ten people, five weeks full-time', 'Pulled the following Wednesday'],
+            ['2026', 'Svedka, Super Bowl LX spot (Fembot and Brobot)', 'Not reported', 'Adweek\'s creative panel called it forgettable'],
+            ['2026', "Grubb's Pharmacy (Washington, DC), marketing imagery", 'Not reported', 'The pharmacy apologized for the AI imagery'],
           ]}
         />
       </GuideSection>
@@ -219,18 +233,13 @@ export default function Page() {
       <GuideSection eyebrow="2026" title="AI commercials on TV in 2026: Svedka at the Super Bowl" alt>
         <p>
           On February 8, 2026, during Super Bowl LX, Svedka aired a 30-second spot in which its robot mascot, Fembot, and
-          a new character, Brobot, dance at a human party. Svedka called it the first AI-led Super Bowl ad; Adweek
-          described it as <a href={ADWEEK_SVEDKA}>the first primarily AI-generated Super Bowl commercial</a>. Silverside AI,
-          the studio behind Coca-Cola&apos;s AI holiday ads, made it.
+          her sidekick, Brobot, dance at a human party. Adweek described it as{' '}
+          <a href={ADWEEK_SVEDKA}>the first primarily AI-generated Super Bowl commercial</a>.
         </p>
         <p>
-          Svedka needed AI because, after Sazerac bought the brand, nobody had the CGI files for the original Fembot. Silverside rebuilt the character and her world from scratch with ComfyUI workflows, with separate teams on the
-          characters, the world and the story, and a final pass to clean up AI artifacts. Its{' '}
-          <a href={COMFY_SVEDKA}>case study</a> says a campaign of that scale used to take about six months and this one
-          took under one; the winning dance from a TikTok open call was mapped onto the robots in hours. People wrote the
-          storyline, and Sazerac&apos;s CMO is quoted in the same case study saying AI is not creative. Reviews were cool, and
-          Adweek&apos;s <a href={ADWEEK_SVEDKA_REACT}>creatives panel</a> headline called the ad forgettable and said AI
-          is not an idea.
+          The robots dance a routine by Jessica Rizzardi, whose TikTok dance won the brand&apos;s open call for routines
+          the robots could perform at the Super Bowl. Reviews were cool, and the headline on Adweek&apos;s{' '}
+          <a href={ADWEEK_SVEDKA_REACT}>creatives panel</a> called the ad forgettable and said AI is not an idea.
         </p>
         <h3>Is AI making TV commercials?</h3>
         <p>
@@ -241,20 +250,19 @@ export default function Page() {
         </p>
         <h3>What TV commercials are AI?</h3>
         <p>
-          The national TV ads on this page that were made mostly with AI: Svedka&apos;s Super Bowl LX spot above,
-          Kalshi&apos;s ad during the 2025 NBA Finals (Veo 3, about USD 2,000, two days), and trivago&apos;s localized TV
-          ads from December 2023, where AI voices carried one actor&apos;s ad into more than ten languages (details below).
+          The national TV ads on this page that were made with AI are Svedka&apos;s Super Bowl LX spot above,
+          Kalshi&apos;s ad during the 2025 NBA Finals (about USD 2,000, two days), and trivago&apos;s localized TV ads
+          from December 2023, where AI carried one actor&apos;s ad into more than ten languages (details below).
           Coca-Cola&apos;s holiday remakes are widely called TV ads, but the sources we read describe the reaction online,
           not where they aired, so they are in the table without that label.
         </p>
         <h3>Why are there so many AI commercials on TV?</h3>
         <p>
           Part of the answer is local TV, where AI made a commercial cheap enough for businesses that never had one.
-          Stations sell the ad and the airtime together: in September 2023 Fox Television Stations rolled out
-          Waymark&apos;s generative AI ad tool across its stations in 17 markets, so a local business can make a commercial
-          with a professional voice-over &ldquo;in five minutes or less&rdquo;, and Gray Television and Spectrum Reach had
-          also adopted the platform (<a href={TVTECH_WAYMARK}>TV Technology</a>). The other part is national brands using
-          AI for spots a shoot could not deliver in time or on budget, like Kalshi&apos;s.
+          Stations sell the ad and the airtime together: in September 2023 Fox Television Stations rolled out a generative
+          AI ad tool to its local advertisers in 17 markets, after Spectrum Reach and Gray Television had signed deals for
+          the same platform earlier that year (<a href={ADWEEK_FOX}>Adweek</a>). The other part is national brands using AI for spots a
+          shoot could not deliver in time or on budget, like Kalshi&apos;s.
         </p>
         <h3>Are TV ads using AI now?</h3>
         <p>
@@ -304,19 +312,18 @@ export default function Page() {
 
       <GuideSection eyebrow="Coca-Cola" title="Coca-Cola: three AI ads and two backlashes">
         <p>
-          In 2024 Coca-Cola remade its 1995 &ldquo;Holidays Are Coming&rdquo; ad with generative AI. Three studios,
-          Secret Level, Silverside AI and Wild Card, used four AI models.{' '}
-          <a href={NBC_COKE}>NBC News reported</a> that viewers called it &ldquo;soulless&rdquo; and &ldquo;devoid of any
-          actual creativity&rdquo;, and Coca-Cola answered that the films came from &ldquo;a collaboration of human
-          storytellers and the power of generative AI&rdquo; (November 2024).
+          In 2024 Coca-Cola remade its 1995 &ldquo;Holidays Are Coming&rdquo; ad with generative AI, made by three
+          studios using four AI models. <a href={NBC_COKE}>NBC News reported</a> that viewers called it
+          &ldquo;soulless&rdquo; and &ldquo;devoid of any actual creativity&rdquo;, and Coca-Cola answered that the films
+          came from &ldquo;a collaboration of human storytellers and the power of generative AI&rdquo; (November 2024).
         </p>
         <p>
-          For 2025 Coca-Cola hired Secret Level again, and{' '}
+          For 2025 Coca-Cola made a new AI version and{' '}
           <a href={THR_COKE}>told The Hollywood Reporter</a> that it replaced the people with animals because AI could
           now give animals expressions it could not the year before. The only person in the ad, Santa, was generated from
-          Haddon Sundblom paintings Coca-Cola owns. Secret Level&apos;s founder estimated the ad took about 20 people,
-          against at least 50 for a filmed ad of the same complexity. The same article says the 2024 spot racked up
-          billions of impressions despite, or because of, the backlash, and that Coca-Cola&apos;s 2023 AI ad
+          Haddon Sundblom paintings Coca-Cola owns. The founder of the studio that made it estimated the ad took about 20
+          people, against at least 50 for a filmed ad of the same complexity. The same article says the 2024 spot racked
+          up billions of impressions despite, or because of, the backlash, and that Coca-Cola&apos;s 2023 AI ad
           &ldquo;Masterpiece&rdquo; did not draw one. The 2025 ad drew criticism too:{' '}
           <a href={FORBES_COKE}>Forbes&apos; headline</a> read &ldquo;Coca-Cola Sparks Backlash With AI-Generated
           Christmas Ad, Again&rdquo; (November 2025).
@@ -325,28 +332,28 @@ export default function Page() {
 
       <GuideSection eyebrow="McDonald's" title="McDonald's Netherlands: pulled within a week" alt>
         <p>
-          McDonald&apos;s Netherlands released a 45-second AI Christmas ad, made by the agency TBWA\Neboko with the
-          production company The Sweetshop, on a Saturday in December 2025 and withdrew it the following Wednesday.{' '}
-          <a href={NBC_MCD}>NBC News reported</a> that McDonald&apos;s said the ad was meant to reflect the stressful
-          moments of the holidays, while recognising that for many guests the season is &ldquo;the most wonderful time of
-          the year&rdquo;. The Sweetshop&apos;s CEO wrote, in a LinkedIn post she later deleted, that the hours
-          &ldquo;far exceeded a traditional shoot. Ten people, five weeks, full-time.&rdquo;
+          McDonald&apos;s Netherlands released a 45-second AI Christmas ad on a Saturday in December 2025 and withdrew it
+          the following Wednesday. <a href={NBC_MCD}>NBC News reported</a> that McDonald&apos;s said the ad was meant to
+          reflect the stressful moments of the holidays, while recognising that for many guests the season is &ldquo;the
+          most wonderful time of the year&rdquo;. The CEO of the production company that made it wrote, in a LinkedIn
+          post she later deleted, that the hours &ldquo;far exceeded a traditional shoot. Ten people, five weeks,
+          full-time.&rdquo;
         </p>
         <p>
-          That number matters for anyone budgeting an AI ad. Generated footage removes the crew, the set and the location.
-          A polished, character-driven AI ad still takes a team weeks of generating, rejecting and fixing shots.
+          Generated footage removes the crew, the set and the location. A polished, character-driven AI ad still takes a
+          team weeks of generating, rejecting and fixing shots.
         </p>
       </GuideSection>
 
       <GuideSection eyebrow="The fast ones" title="Kalshi and Popeyes: topical ads in days">
         <p>
-          Kalshi&apos;s ad for the 2025 NBA Finals was made with Google Veo 3 for about USD 2,000 in two days, and its
-          director reported 300 to 400 generations to get 15 usable clips (<a href={KALSHI}>Mashable, June 2025</a>).
+          Kalshi&apos;s ad for the 2025 NBA Finals was made with AI for about USD 2,000 in two days, and its director
+          reported 300 to 400 generations to get 15 usable clips (<a href={KALSHI}>Mashable, June 2025</a>).
         </p>
         <p>
           Popeyes&apos; &ldquo;Wrap Battle&rdquo; was a rap diss track aimed at McDonald&apos;s, released after
-          McDonald&apos;s announced the return of the Snack Wrap a day after Popeyes launched its own wraps. AI filmmaker PJ
-          Accetturo scripted it, shaped the song with Suno and human helpers, and switched to Veo 3 alone when he had
+          McDonald&apos;s announced the return of the Snack Wrap a day after Popeyes launched its own wraps. Its director
+          scripted it, shaped the song with AI and human helpers, and switched to a single video model when he had
           &ldquo;less than 3 days&rdquo; left (<a href={POPEYES}>TechRadar, July 2025</a>). Reaction split: TechRadar&apos;s
           headline said AI won the rap battle; <a href={MASHED_POPEYES}>Mashed&apos;s</a> said the ad backfired.
         </p>
@@ -373,18 +380,18 @@ export default function Page() {
 
       <GuideSection eyebrow="Brand films" title="Toys&quot;R&quot;Us and Moncler: AI brand films at Cannes">
         <p>
-          Toys&quot;R&quot;Us and the agency Native Foreign made{' '}
-          <a href={TOYS}>what they called the first brand film made with OpenAI&apos;s Sora</a>, telling the
-          founder&apos;s origin story as a dream. It went from concept to finished film in &ldquo;a few weeks&rdquo;,
-          &ldquo;condensing hundreds of iterative shots down to a couple dozen&rdquo;, with corrective VFX and an original
-          score, and premiered at Cannes Lions in June 2024. <a href={ENGADGET_TOYS}>Engadget&apos;s headline</a> called it
-          horrifying.
+          Toys&quot;R&quot;Us released <a href={TOYS}>what it called the first brand film made with OpenAI&apos;s Sora</a>,
+          telling the founder&apos;s origin story as a dream. It went from concept to finished film in &ldquo;a few
+          weeks&rdquo;, &ldquo;condensing hundreds of iterative shots down to a couple dozen&rdquo;, with corrective VFX
+          and an original score, and premiered at Cannes Lions in June 2024. <a href={ENGADGET_TOYS}>Engadget&apos;s
+          headline</a> called it horrifying.
         </p>
         <p>
-          A year later <a href={RGA}>R/GA made an experimental film for Moncler with Google&apos;s Veo in four weeks</a>,
-          unveiled at Cannes Lions 2025. It shows a made world of mountains and city rather than real customers, the kind
-          of brief AI brand films handle best. More on that format, and the studios that make{' '}
-          <Link href="/ai-brand-film-agency">AI brand films</Link>, is on the brand film page.
+          A year later Moncler&apos;s experimental AI film &ldquo;From the Mountains to the City&rdquo;, made in four
+          weeks, was shown to creative leaders at Cannes Lions 2025 (<a href={ADWEEK_MONCLER}>Adweek</a>). It traces the
+          brand from its alpine roots to the city in a made world with no real customers in it, the kind of brief AI brand
+          films handle best. {studio} makes brand films of that kind; see{' '}
+          <Link href="/ai-brand-film-agency">AI brand films</Link>.
         </p>
       </GuideSection>
 
@@ -395,17 +402,14 @@ export default function Page() {
           The idea dated from 2024 and was shelved because it needed a long production and did not fit the budget; a year
           later, rebuilt with AI, it did. Progressive&apos;s VP of integrated marketing, Meghan Walsh, called the
           difference &ldquo;night and day&rdquo; (<a href={DIVE_PROGRESSIVE}>Marketing Dive, February 2026</a>). The
-          voice is Stephanie Courtney&apos;s, the actress who plays Flo, so the voice viewers know stayed real.
-          The spot drew negative comments on YouTube and Reddit, and Walsh said it also got strong engagement.
+          voice is Stephanie Courtney&apos;s, the actress who plays Flo, so the voice viewers know stayed real. The spot
+          drew negative comments online, including on YouTube, and Walsh said it also got strong engagement.
         </p>
         <p>
           At the other end of the scale, Grubb&apos;s Pharmacy on Capitol Hill, which dates itself to 1867, apologized in
-          October 2026 for using AI-generated imagery in its marketing (<a href={FEEDME_GRUBBS}>Feed Me</a>). The
-          r/washingtondc post{' '}
-          <a href={REDDIT_GRUBBS}>&ldquo;Grubb&apos;s Pharmacy in NE apologizes for AI-generated ad&rdquo;</a> drew more
-          than 1,100 comments, and the pharmacy&apos;s next Instagram post promised &ldquo;non-AI marketing
-          materials&rdquo;. What the case means for pharmacies and the rules that apply to
-          their ads are on <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
+          October 2026 for using AI-generated imagery in its marketing (<a href={FEEDME_GRUBBS}>Feed Me</a>). What the case
+          means for pharmacies, and the rules that apply to their ads, are on{' '}
+          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
       </GuideSection>
 
@@ -426,10 +430,10 @@ export default function Page() {
           }
           head={['When', 'Brand', 'What was AI', 'What critics said', 'What the brand did']}
           rows={[
-            ['Aug 2025', 'Guess', 'Two AI-generated models, made by the London agency Seraphinne Vallora, in a print ad in American Vogue', 'Fake women in a fashion magazine; lost work for models and photographers; unrealistic beauty standards', 'No comment to ABC News; the agency said it was not trying to replace models'],
+            ['Aug 2025', 'Guess', 'Two AI-generated models in a print ad in American Vogue', 'Fake women in a fashion magazine; lost work for models and photographers; unrealistic beauty standards', 'No comment to ABC News; the agency that made the models said it was not trying to replace models'],
             ['Aug 2025', 'J.Crew', 'Retro-style campaign images on Instagram, first posted with no AI label', 'Distorted feet, odd shadows and "AI slop"; whether real models should have been used', 'Credited a digital artist after people spotted it'],
             ['Nov 2025', 'Coca-Cola', 'A second AI "Holidays Are Coming", with animals', 'A second year of criticism', 'Stood by it'],
-            ['Nov 2025', 'Progressive', '"Drive Like an Animal": AI-generated animals driving', 'Negative comments on YouTube and Reddit', 'Reported strong engagement'],
+            ['Nov 2025', 'Progressive', '"Drive Like an Animal": AI-generated animals driving', 'Negative comments online, including on YouTube', 'Reported strong engagement'],
             ['Dec 2025', 'Valentino', 'An Instagram video for the DeVain bag, labelled as AI', '"Cheap", "lazy", "disturbing"; out of step with a craft brand', 'No response reported'],
             ['Dec 2025', "McDonald's Netherlands", 'A Christmas ad with AI-generated characters', 'Backlash on social media', 'Pulled it within a week'],
           ]}
@@ -475,18 +479,18 @@ export default function Page() {
           Taken together, a brand spot that viewers recognise as AI-made risks being liked less and remembered less,
           while a useful message that happens to be generated can still earn the click. For a commercial or brand film,
           that points to briefs where the footage does not have to pass as filmed people (made worlds, animals,
-          products, stylised scenes), and to testing the AI cut against a filmed or static version before the media
-          budget goes behind it.
+          products, stylised scenes), and to testing the AI cut against your current ads before the media budget goes
+          behind it.
         </p>
         <h3>Why are so many companies using AI for ads now?</h3>
         <p>
           Cost and speed, on particular briefs. Progressive shelved &ldquo;Drive Like an Animal&rdquo; in 2024 because
           it did not fit the budget, then made it with AI a year later. Kalshi&apos;s NBA Finals ad cost about USD 2,000
-          and took two days. Secret Level&apos;s founder put Coca-Cola&apos;s 2025 ad at about 20 people, against at
-          least 50 for a filmed ad of the same complexity. McDonald&apos;s Netherlands went the other way, with ten people
-          working five weeks. What studios charge a brand for one, against a filmed spot line by line, is in{' '}
-          <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link>, and the studios themselves
-          are compared in <Link href="/ai-commercial-production">who makes AI commercials</Link>.
+          and took two days. The founder of the studio behind Coca-Cola&apos;s 2025 ad put it at about 20 people, against
+          at least 50 for a filmed ad of the same complexity. McDonald&apos;s Netherlands went the other way, with ten
+          people working five weeks. What moves the price of one is in{' '}
+          <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link>, and how {studio} makes them is on{' '}
+          <Link href="/ai-commercial-production">AI commercial production</Link>.
         </p>
       </GuideSection>
 
@@ -505,15 +509,15 @@ export default function Page() {
           </li>
           <li>
             <strong>Small brands get judged too.</strong> Grubb&apos;s Pharmacy had no national campaign, and its AI
-            imagery still drew a public apology and a thread of more than 1,100 comments.
+            imagery still ended in a public apology.
           </li>
           <li>
             <strong>Speed is the clearest win.</strong> Kalshi and Popeyes used AI to answer a moment in days.
           </li>
           <li>
-            <strong>AI is not automatically cheap.</strong> Ten people for five weeks is a real budget. Price the fixing
-            and the review rounds, not only the generation. Published figures are in{' '}
-            <Link href="/blog/how-much-does-ai-video-production-cost">how much AI video production costs</Link>.
+            <strong>AI is not automatically cheap.</strong> Ten people for five weeks is a real budget, so price the fixing
+            and the review rounds, not only the generation. {priceLine('commercial')}, and what moves the price is in{' '}
+            <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link>.
           </li>
           <li>
             <strong>Disclose it.</strong> Every ad in the table was covered in the press as an AI ad. Say so yourself first.
@@ -532,16 +536,18 @@ export default function Page() {
       </GuideSection>
 
       <GuideFit
-        title="Should your brand make an AI commercial with Ruminate X?"
+        title={`Why brands hire ${studio} for AI commercials`}
         hire={[
-          'A marketing lead who needs a topical or seasonal spot faster than a shoot can be booked.',
-          'A consumer brand whose ad works as a made world, the product, animals or landscape rather than realistic people up close.',
-          'A brand manager who wants a cinematic hero film plus cutdowns without a location budget.',
+          'A marketing lead whose CEO wants an AI ad and has also seen the Coca-Cola backlash.',
+          'A consumer brand that needs a seasonal or topical spot before a shoot could be booked.',
+          'A brand manager who wants a cinematic hero spot plus cutdowns for TV, streaming and social, without a location budget.',
+          'A pharma or pharmacy marketer whose ad has to clear medical, legal and regulatory review before it airs.',
         ]}
-        instead={[
-          'The ad depends on warmth from realistic people, for a brand audiences are nostalgic about: film it with a crew.',
-          'Your customers or your own industry are likely to reject visibly AI-made work: film it, or test the AI cut first.',
-          'You need real customers or employees speaking for themselves: hire a production company with a crew.',
+        get={[
+          'The script and shot-by-shot boards before anything is generated, so you decide where people appear and how close the camera gets.',
+          'Faces, hands and the product given the most generation passes, and every take that fails generated again.',
+          'Your real logo, product and on-screen text set in the edit from your brand files.',
+          'The cutdowns and aspect ratios TV, streaming and social need, cut from the same spot.',
         ]}
       />
 
@@ -549,15 +555,15 @@ export default function Page() {
 
       <GuideRelated
         links={[
-          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'How an AI commercial is made and what breaks.' },
-          { href: '/blog/how-much-does-ai-video-production-cost', title: 'How much AI video production costs', note: 'Published prices at four levels.' },
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: `How ${studio} makes an AI commercial, and what breaks.` },
+          { href: '/guides/ai-commercial-cost', title: 'How much an AI commercial costs', note: 'What moves the price of an AI commercial.' },
           { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'The Moncler and Toys"R"Us format.' },
-          { href: '/ai-video-production-enterprise', title: 'AI corporate video production', note: 'Company films, and which ones still need a camera.' },
+          { href: '/ai-corporate-video-production', title: 'AI corporate video production', note: 'About-us and company films, every frame generated.' },
           { href: '/guides/ai-video-quality-control', title: 'AI video quality control', note: 'What to check before an AI ad airs.' },
         ]}
       />
 
-      <GuideCta title="Test your idea" body="Send the brief. We will say whether AI suits it, and where it would need a camera instead." />
+      <GuideCta title="Brief an AI commercial" body="Send the idea, where the ad will run and the date it has to air." />
     </Guide>
   )
 }

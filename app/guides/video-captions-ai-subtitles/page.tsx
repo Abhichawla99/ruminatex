@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/guides/video-captions-ai-subtitles' },
   title: 'Automated Video Captions & AI Subtitles: SEO Boost for YouTube & Beyond | Ruminate X',
   description: 'AI-generated captions and subtitles improve SEO, engagement, and accessibility. Learn how to auto-caption videos in 125+ languages.',

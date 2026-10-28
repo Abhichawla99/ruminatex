@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-automotive' },
   title: 'AI Video Production for Automotive Brands | Ruminate X',
   description: 'Cinematic AI-powered brand films and commercials for automotive brands, EV startups, and mobility companies. Impossible shots. Cinematic quality. A fraction of the cost.',

@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/markets/ai-video-production-australia' },
   title: "AI Video Production Australia: Broadcast-Quality for Aussie Brands",
   description: "AI video production for Australian brands. Serving Sydney, Melbourne, Brisbane, Perth and beyond. 80% less than Australian agency rates, delivered in 48 hours.",
@@ -131,7 +133,7 @@ export default function Page() {
             {[
               { href: "/sydney", label: "AI Video Production Sydney" },
               { href: "/comparison/ai-agency-vs-traditional-agency", label: "AI vs Traditional Agency" },
-              { href: "/solutions/cut-video-production-costs", label: "See Cost Savings" },
+              { href: "/comparison/ai-agency-vs-traditional-agency", label: "See Cost Savings" },
               { href: "/roi-calculator", label: "Calculate AU Savings" },
               { href: "/markets/ai-video-production-uk", label: "AI Video Production UK" },
               { href: "/contact", label: "Start an Australian Project" },

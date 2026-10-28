@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/guides/how-to-create-explainer-videos-with-ai' },
   title: 'How to Create AI Explainer Videos: Complete 6-Step Guide | Ruminate X',
   description: 'Step-by-step guide to creating explainer videos with AI. Learn the complete process from script to publish with examples.',

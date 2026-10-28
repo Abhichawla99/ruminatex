@@ -1,18 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { PRODUCTION, SITE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/services' },
-  title: 'Services | Cinema-Grade Brand Films, AI Commercials & Story-Driven Production',
+  title: 'AI Video Production Services: Brand Films, AI Commercials',
   description:
-    "Ruminate X makes cinema-grade brand films, AI commercials, and story-driven campaign content for brands that refuse to be ordinary. Every brief is treated like a film. Every frame is earned.",
+    'What Ruminate X makes: AI brand films, AI commercials, pharma and medical films, company films, UGC-style ads, product visuals and avatar videos. Every frame made with AI, with people writing, editing and grading every film.',
   keywords: [
     'AI video production services',
-    'brand film production',
+    'AI video production service',
+    'AI brand film production',
     'AI commercial production',
-    'fashion video content',
-    'social media video production',
-    'product launch video',
+    'AI pharma commercials',
+    'AI corporate video production',
+    'AI UGC ads',
+    'AI product videos',
+    'AI avatar videos',
   ],
 }
 
@@ -25,8 +29,8 @@ const services = [
     href: '/ai-brand-film-agency',
     tagline: 'Your brand has one true story. We find it.',
     description:
-      "Most brands are defined by what they sell. Great brands are defined by what they believe. A brand film is not a product showcase — it's a declaration. We dig into the tension at the heart of your brand, the reason you exist beyond revenue, the thing that makes your people get out of bed. Then we put it on screen with the craft of a feature film and the precision of a 30-second spot. The result is the single most powerful piece of marketing you will ever create.",
-    deliverables: ['Narrative Brand Film', 'Founder Story Film', 'Mission & Vision Film', 'Culture Documentary', 'Brand Anthem'],
+      "Most brands are defined by what they sell. Great brands are defined by what they believe. A brand film puts that belief on screen: the tension at the heart of the brand and the reason it exists beyond revenue, told with the craft of a feature film and the precision of a 30-second spot. Every frame is generated, so the film can go anywhere the story needs to go.",
+    deliverables: ['Narrative brand film', 'Mission and vision film', 'Brand anthem', 'Launch film', 'Cutdowns and aspect ratios for every channel'],
     idealFor: 'Brands ready to stop describing themselves and start showing who they are.',
     categories: ['Story-Driven', 'Cinematic', 'Brand Identity'],
   },
@@ -34,65 +38,94 @@ const services = [
     number: '02',
     title: 'AI Commercials',
     href: '/ai-commercial-production',
-    tagline: 'The commercial that shouldn\'t be possible. It is.',
+    tagline: "The commercial that shouldn't be possible. It is.",
     description:
-      "Picture the shot. The one that's been in your head since the brief dropped — the one your last production company said would cost $300K and take three months. We start there. AI removes every physical constraint that traditionally stood between a great idea and a great frame. Impossible environments. Perfect product physics. Sequences that bend reality without breaking believability. We write the shot list first. We figure out 'how' second. Always.",
-    deliverables: ['Hero Brand Commercial', 'TV & Streaming Spots (15/30/60 sec)', 'Digital Campaign Films', 'Product Story Ads', 'Concept & Experimental Films'],
-    idealFor: 'Brands with a creative vision that traditional production couldn\'t execute.',
+      "Picture the shot. The one that's been in your head since the brief dropped, the one your last production company said would cost $300K and take three months. We start there. AI removes every physical constraint between a great idea and a great frame: impossible environments, perfect product physics, sequences that bend reality without breaking believability. We write the shot list first and figure out 'how' second.",
+    deliverables: ['Hero commercial', 'TV and streaming spots (15, 30 and 60 seconds)', 'Social cutdowns in 9:16, 1:1 and 4:5', 'Alternative openings for hook tests', 'Captions, music and voice licensed for where it runs'],
+    idealFor: "Brands with a creative vision a shoot couldn't deliver, or couldn't deliver in time.",
     categories: ['Cinematic Commercials', 'Campaign', 'Story-Driven'],
   },
   {
     number: '03',
-    title: 'Fashion & Lifestyle',
-    href: '/ai-video-production-fashion',
-    tagline: 'The shoot that doesn\'t need a location.',
+    title: 'Pharma & Medical Films',
+    href: '/ai-video-production-healthcare',
+    tagline: 'Cinematic, with every claim approved.',
     description:
-      "The best fashion film you've ever seen probably cost a small fortune in locations, travel, talent, and light you could never recreate. We reproduce that feeling — that specific quality of editorial desire — without a single flight. AI gives us access to every location, every light, every aesthetic in existence. What we bring is the eye. The obsession with texture, movement, and the single frame that makes someone stop scrolling and start wanting.",
-    deliverables: ['Fashion Films', 'Seasonal Campaign Content', 'Lookbook & Editorial', 'Luxury Brand Films', 'Beauty & Product Films'],
-    idealFor: 'Fashion, beauty, luxury, and lifestyle brands who demand editorial precision.',
-    categories: ['Fashion', 'Editorial', 'Luxury'],
+      'AI commercials, brand films and company films for pharma and pharmacy companies, labs and medical companies. The pictures are generated; the claims are not. Every claim, the important safety information and any fair-balance text are set in the edit from the copy your medical, legal and regulatory reviewers approved, and nothing ships until they sign off.',
+    deliverables: ['Pharma and pharmacy commercials', 'Brand films for labs and medical companies', 'About-us films for healthcare companies', 'Product visuals', 'Versions for each channel, claims set from approved copy'],
+    idealFor: 'Pharma, pharmacy, lab and medical marketers with a review process for every claim.',
+    categories: ['Pharma', 'Pharmacy', 'Medical'],
   },
   {
     number: '04',
-    title: 'Social Content',
-    href: '/ai-social-media-video-agency',
-    tagline: 'A micro-film. Every single time.',
+    title: 'Company & About-Us Films',
+    href: '/ai-corporate-video-production',
+    tagline: 'Your company on screen, without a shoot day.',
     description:
-      "We refuse to make filler content. Every piece of social content we produce is built around a story — a hook that earns attention, a middle that builds tension or desire, an ending that lands. Fifteen seconds is a story. Sixty seconds is a film. We treat them both with the same seriousness, because your audience does too. High volume. No shortcuts. No templates.",
-    deliverables: ['TikTok Story Series', 'Instagram Reels', 'YouTube Shorts', 'Social Campaign Films', 'Always-On Content'],
-    idealFor: 'Brands that want to show up consistently without looking like they gave up.',
-    categories: ['Story-First Social', 'DTC', 'Campaign'],
+      "The film that introduces your company to customers, candidates, investors or your own people. Your mission and your work, told in a world built for the film, so nobody gets pulled off the job for a shoot, and a new office, product or headcount is a regenerated scene instead of a reshoot.",
+    deliverables: ['About-us film', 'Mission film', 'All-hands and conference opener', 'Recruiting film', 'Investor and board film'],
+    idealFor: 'Comms, HR and marketing leads who need a company film without taking the team off the job.',
+    categories: ['Corporate', 'Internal Comms', 'Recruiting'],
   },
   {
     number: '05',
-    title: 'Product Launches',
-    href: '/ai-product-video-agency',
-    tagline: 'Opening scene. Make it count.',
+    title: 'UGC-Style Ads',
+    href: '/ai-ugc-reels',
+    tagline: 'The creator ad, without the creator roster.',
     description:
-      "A launch is an act one. The scene that establishes the world, introduces the protagonist, and makes the audience lean forward. We write it, we shoot it, and we make sure it hits. From the teaser that builds dread and anticipation, to the hero film that delivers the payoff, to the post-launch content that keeps the story moving — we own the entire narrative arc of your launch.",
-    deliverables: ['Hero Launch Film', 'Teaser & Countdown Content', 'Product Story Commercials', 'Launch Day Campaign Assets', 'Post-Launch Content Arc'],
-    idealFor: 'Brands with one shot to make a first impression that sticks.',
-    categories: ['Launch Strategy', 'Narrative Campaign', 'Story Arc'],
+      'Ads in the style of creator videos for Reels, TikTok and Shorts: a hook in the first second, the product in hand and a clear line to the offer. The creators are generated and deliver scripted ad lines, so there are no fake reviews, and your performance team gets alternative openings to test.',
+    deliverables: ['Creator-style ads for Reels, TikTok and Shorts', 'Alternative hooks for testing', '9:16, 1:1 and 4:5 versions', 'Captions', 'AI labels where a platform requires them'],
+    idealFor: 'Performance marketers who need more creative to test every week.',
+    categories: ['Paid Social', 'Performance', 'DTC'],
+  },
+  {
+    number: '06',
+    title: 'Product Visuals',
+    href: '/ai-product-videos',
+    tagline: 'The product, exactly as it is.',
+    description:
+      'Product films and stills built from your real product images. Generation does the light, the place and the motion; your label, your logo and every word on screen are set in the edit from your files, so the product stays the same product in every shot.',
+    deliverables: ['Product hero film', 'Launch teaser', 'Product stills', 'E-commerce and marketplace video', 'Social cutdowns'],
+    idealFor: 'Brands launching a product without the budget or the time for a product shoot.',
+    categories: ['Product', 'Launch', 'E-Commerce'],
+  },
+  {
+    number: '07',
+    title: 'Avatar Videos',
+    href: '/ai-avatar-videos',
+    tagline: 'A presenter on your script, in your brand world.',
+    description:
+      "A generated presenter or spokesperson who explains your product, trains your staff or speaks to your customers. If the presenter is based on a real person, that person's consent and contract come first.",
+    deliverables: ['Product explainer with a presenter', 'Training and onboarding video', 'Customer-facing spokesperson video', 'Versions in each format you need'],
+    idealFor: 'Teams that need someone on screen without booking a presenter and a studio.',
+    categories: ['Presenter', 'Training', 'Explainer'],
+  },
+  {
+    number: '08',
+    title: 'Fashion & Lifestyle',
+    href: '/ai-video-production-fashion',
+    tagline: "The shoot that doesn't need a location.",
+    description:
+      "The best fashion film you've ever seen probably cost a small fortune in locations, travel, talent and light you could never recreate. We make that feeling, the specific quality of editorial desire, without a single flight. AI gives us every location, every light and every aesthetic. What we bring is the eye: the obsession with texture, movement and the single frame that makes someone stop scrolling and start wanting.",
+    deliverables: ['Fashion films', 'Seasonal campaign content', 'Lookbook and editorial', 'Luxury brand films', 'Beauty and product films'],
+    idealFor: 'Fashion, beauty, luxury and lifestyle brands who demand editorial precision.',
+    categories: ['Fashion', 'Editorial', 'Luxury'],
   },
 ]
 
 const serviceHubSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Ruminate X AI Video Production Services',
+  name: `${SITE.name} AI film services`,
   itemListElement: services.map((service, index) => ({
     '@type': 'ListItem',
     position: index + 1,
-    url: `https://www.ruminatex.com${service.href}`,
+    url: `${SITE.url}${service.href}`,
     item: {
       '@type': 'Service',
       name: service.title,
       description: service.description,
-      provider: {
-        '@type': 'Organization',
-        name: 'Ruminate X',
-        url: 'https://www.ruminatex.com',
-      },
+      provider: { '@id': SITE.orgId },
       areaServed: 'Worldwide',
       serviceType: service.title,
     },
@@ -117,19 +150,15 @@ export default function ServicesPage() {
           SERVICES
         </h1>
         <p className="text-[#888888] text-lg max-w-3xl leading-relaxed">
-          Ruminate X offers AI video production services for brands that need cinema-grade brand films, AI commercials, product videos, fashion campaigns, and story-driven social content without the cost and drag of traditional production. If you&apos;re comparing video production services, this page shows what we make, who each service fits best, and where to go next based on your campaign intent.
+          Ruminate X is an AI film studio in {SITE.city}. {PRODUCTION.summary} People write, board, edit, score and
+          grade every film, so what you get is a finished film made the way a production company would make it, minus
+          the crew, the set and the location day.
         </p>
         <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mt-6">
-          For a film of one product, its packaging and label held accurate from shot to shot, see{' '}
-          <Link href="/ai-product-videos" className="text-[#ebff00] hover:underline">AI product videos</Link>. For a presenter
-          or spokesperson who explains your product, trains your staff or speaks to customers, see{' '}
-          <Link href="/ai-avatar-videos" className="text-[#ebff00] hover:underline">AI avatar videos</Link>, including when a
-          real person on camera is the better choice. For about-us, mission and conference films for a company&apos;s own
-          staff, candidates or investors, see{' '}
-          <Link href="/ai-video-production-enterprise" className="text-[#ebff00] hover:underline">AI corporate video production</Link>.
-          If you are a Canadian company comparing studios close to home, the Calgary firms that make AI video, and what
-          each publishes as a price, are in{' '}
-          <Link href="/markets/ai-video-production-canada" className="text-[#ebff00] hover:underline">AI video production in Calgary and Canada</Link>.
+          Pick the film you need below. Each one links to the page that shows how Ruminate X makes it, what you get and
+          what moves the price. The whole pipeline, stage by stage, is in{' '}
+          <Link href="/how-we-make-an-ai-brand-film" className="text-[#ebff00] hover:underline">how we make an AI brand film</Link>,
+          and the films are on <Link href="/work" className="text-[#ebff00] hover:underline">the work page</Link>.
         </p>
       </section>
 
@@ -212,29 +241,29 @@ export default function ServicesPage() {
             RIGHT SERVICE PAGE
           </h2>
           <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-12">
-            Different search intents need different landing pages. If you&apos;re looking for a cinematic brand film agency, AI commercial production, product video support, or social-first creative, use the page below that matches the job you need done.
+            The four films brands brief Ruminate X for most. Each page shows the process, the deliverables and the questions buyers ask before they hire.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {[
               {
                 href: '/ai-brand-film-agency',
-                title: 'Brand Film Agency',
-                copy: 'For companies searching for a cinematic brand film partner with narrative depth.',
+                title: 'AI Brand Films',
+                copy: 'For brands that want the film about what they stand for, made without a shoot.',
               },
               {
                 href: '/ai-commercial-production',
                 title: 'AI Commercial Production',
-                copy: 'For campaign teams comparing commercial production options, speed, and creative range.',
+                copy: 'For campaign teams that need a spot for TV, streaming and social, plus every cutdown.',
               },
               {
-                href: '/ai-product-videos',
-                title: 'AI Product Videos',
-                copy: 'For launches, demos, and product storytelling built to improve clarity and conversion.',
+                href: '/ai-video-production-healthcare',
+                title: 'Pharma & Medical Films',
+                copy: 'For pharma, pharmacy, lab and medical marketers whose every claim goes through review.',
               },
               {
-                href: '/ai-social-media-video-agency',
-                title: 'Social Video Agency',
-                copy: 'For brands that need repeatable, story-led social video without template fatigue.',
+                href: '/ai-corporate-video-production',
+                title: 'Company & About-Us Films',
+                copy: 'For comms and HR leads who need the company film without pulling people off the job.',
               },
             ].map((item) => (
               <Link
@@ -259,10 +288,10 @@ export default function ServicesPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'The Brief', description: "Tell us the story you want to tell. The feeling you want to create. The scene in your head that no one else has been able to pull off. That's where we start — not with formats or deliverables, but with the idea." },
-              { step: '02', title: 'The Script', description: 'Every great film starts with a great script. We write the narrative arc, the visual language, the emotional throughline — before a single frame is rendered. Story first. Always.' },
-              { step: '03', title: 'The Shoot', description: 'This is where AI becomes our director of photography, our location scout, our VFX team. We execute the shot list with cinema-grade precision — no constraints, no compromises.' },
-              { step: '04', title: 'The Cut', description: 'We edit like a film editor — for rhythm, for emotion, for the exact moment the music and the image and the idea collide. What you receive is a finished film, not a draft.' },
+              { step: '01', title: 'The Brief', description: "Tell us what the film has to do, who has to see it, where it will run and when. The scene in your head that nobody has been able to pull off is where we start. Nothing is generated until the brief is approved." },
+              { step: '02', title: 'World & Boards', description: 'Palette, light, lenses, casting and texture are fixed before the first frame, so the last shot matches the first. Then the script, and a board for every shot with its framing, movement and length.' },
+              { step: '03', title: 'Generation', description: 'Each shot is generated, checked against its board and generated again until it holds. Faces, hands and your product get the most passes, because that is where AI footage goes wrong.' },
+              { step: '04', title: 'The Cut', description: 'Edit, voice, music, mix and grade. Your real logo and on-screen text go in from your brand files, then the cutdowns and aspect ratios are cut from the finished film.' },
             ].map(({ step, title, description }) => (
               <div key={step} className="border border-[#1a1a1a] p-8">
                 <span style={{ ...displayStyle, fontSize: '48px', color: '#ebff00' }} className="block mb-4">{step}</span>

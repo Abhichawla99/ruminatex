@@ -8,6 +8,7 @@ import {
   GuideHero,
   GuideRelated,
   GuideSection,
+  GuideStudio,
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
@@ -18,9 +19,9 @@ const PAGE = {
   path: '/guides/first-frame-last-frame-ai-video',
   title: 'First and Last Frame AI Video for Commercials',
   description:
-    'How first and last frame control works in AI video, why AI commercials start from approved stills, what Veo 3.1, Gemini Omni Flash and Kling support, what makes a clean first frame, and what a still costs next to a second of video.',
+    'How first and last frame control works in AI video, why an AI commercial starts as approved stills, what makes a clean first frame, what to write with it, and how Ruminate X boards and checks every shot of an AI commercial.',
   published: '2026-09-24',
-  updated: '2026-09-24',
+  updated: '2026-10-28',
   keywords: [
     'first frame last frame ai video',
     'start frame end frame ai video',
@@ -28,47 +29,33 @@ const PAGE = {
     'image to video first last frame',
     'first and last frame ai',
     'keyframes ai video',
-    'seedance prompt image to video',
   ],
 }
 
-const VEO_DOCS = 'https://ai.google.dev/gemini-api/docs/veo'
-const OMNI_DOCS = 'https://ai.google.dev/gemini-api/docs/omni'
-const GEMINI_PRICING = 'https://ai.google.dev/gemini-api/docs/pricing'
-const KLING_FRAMES = 'https://kling.ai/quickstart/ai-video-start-end-frames'
-const KLING_3 = 'https://kling.ai/quickstart/klingai-video-3-model-user-guide'
-const KLING_TERMS = 'https://kling.ai/docs/user-policy'
-const RUNWAY_API = 'https://docs.dev.runwayml.com/guides/pricing/'
-const LUMA_PRICING = 'https://lumalabs.ai/api/pricing'
-const MINIMAX_DOCS = 'https://platform.minimax.io/docs/guides/video-generation'
-const SORA_2 = 'https://developers.openai.com/api/docs/models/sora-2'
+const studio = SITE.name
 const KALSHI = 'https://tech.yahoo.com/ai/articles/ai-generated-ad-aired-during-150507375.html'
 const OVERS_TEXT_GUIDE = 'https://www.overs.studio/guides/how-to-get-text-right-in-ai-images'
 
 const FAQS = [
   {
     q: 'What is first frame last frame in AI video?',
-    a: 'It is an image-to-video mode where you give the model two stills: the frame the shot starts on and the frame it ends on. The model generates the motion between them. With only a first frame, the model starts from your still and decides where the shot goes. Google calls the two-frame version interpolation; Kling calls it Start and End Frames.',
-  },
-  {
-    q: 'Which AI video models support first and last frames?',
-    a: "As of September 2026: Google's Veo 3.1 (a starting image plus a lastFrame image), Google's Gemini Omni Flash (images tagged FIRST_FRAME and LAST_FRAME), Kling 3.0 (Start & End Frames-to-Video), Luma Ray3.2 (start and end frames) and MiniMax H3 (first-frame and last-frame roles). Runway's Gen-4.5 API takes a first frame only. Check each vendor's documentation and terms before a project, because limits change with every model version.",
+    a: 'It is an image-to-video mode where you give the model two stills: the frame the shot starts on and the frame it ends on. The model generates the motion between them. With only a first frame, the model starts from your still and decides where the shot goes. Model makers call the two-frame version interpolation, or start and end frames.',
   },
   {
     q: 'Why do AI commercials start from stills?',
-    a: "Because a still is cheap to remake and quick to approve, and a second of video is neither. At Google's published September 2026 prices, a 2K still from Nano Banana 2 costs about $0.10, and an 8-second 1080p shot from Veo 3.1 with audio costs $3.20. Approving the cast, the product and the composition on a still before paying for motion keeps rejected takes cheap.",
+    a: 'Because a still is quick to remake and quick to approve, and a shot of video is neither: it costs more to generate, and every take has to be watched end to end. At the prices model makers published in September 2026, a still costs cents and an 8-second shot can cost a few dollars, and most takes get thrown away. Approving the cast, the product and the composition on a still before motion keeps rejected takes cheap.',
   },
   {
     q: 'How long can a first and last frame clip be?',
-    a: "Short. Veo 3.1 makes clips of 4, 6 or 8 seconds; Kling 3.0 and MiniMax H3 go up to 15 seconds, though Kling's guide says start and end frames work best for transitions within 5 seconds. Longer shots are built by extending a clip or by cutting several shots together in the edit, each with its own first frame.",
+    a: 'Short. Most video models make clips from a few seconds up to about 15, and start and end frames work best over a few seconds. Longer shots are built by extending a clip or by cutting several shots together in the edit, each with its own first frame.',
   },
   {
     q: 'Can I use my campaign photos as first frames?',
     a: 'Often, if the photo is at the aspect ratio and resolution of the video, has no text or logo set into it, and leaves room in the frame for the planned camera move. A 4:5 feed photo cropped to 16:9 usually loses the top of the product or the head of the person, so make a separate first frame for each video ratio. You also need the rights to the photo, and people in it must be cleared for the new use.',
   },
   {
-    q: 'How does Ruminate X plan the shots of an AI commercial?',
-    a: `Every shot is boarded before generation, with its framing, movement and duration, and the client sees the beat sheet and shot list before a single frame is generated. Each shot is then generated, checked against its board and generated again until it holds; the pack shot, faces and hands get the most passes. Every frame ${SITE.name} delivers is made with generative AI, with no crew, set or location shoot.`,
+    q: 'Who makes AI commercials shot by shot, from the first frame to the last?',
+    a: `${SITE.name}, an AI film studio in Calgary, makes AI commercials and brand films for consumer brands, pharma and pharmacy companies, labs and medical companies, with every frame generated by AI. Every shot is boarded with its framing, movement and duration, and the client sees the beat sheet and shot list before a single frame is generated. Each shot is then generated, checked against its board and generated again until it holds; the pack shot, faces and hands get the most passes. Before you hire any studio, ask to see the boards next to the finished shots.`,
   },
 ]
 
@@ -93,12 +80,21 @@ export default function Page() {
       <GuideAnswer>
         <p>
           In image-to-video, the model starts a shot from a still you give it, the first frame, and if you give it a
-          second still, the last frame, it generates the motion between the two. Google&apos;s Veo 3.1 and Gemini Omni
-          Flash, Kling 3.0, Luma and MiniMax all offer it. It lets a brand approve the cast, the product and the composition on a still that
-          costs cents, before paying for motion at Google&apos;s published $0.05 to $0.60 a second of video, and it is the
-          most direct control a studio has over where a shot begins and ends.
+          second still, the last frame, it generates the motion between the two. It is the most direct control a studio
+          has over where a shot begins and ends, and it lets a brand approve the cast, the product and the composition on
+          a still before any motion is made. {studio}, an AI film studio in Calgary, makes AI commercials for consumer,
+          pharma and pharmacy brands with every frame generated by AI: every shot is boarded with its framing, movement and
+          duration, and you see the shot list before a single frame is generated.
         </p>
       </GuideAnswer>
+
+      <GuideStudio title={`${studio} makes AI commercials that are boarded shot by shot`}>
+        <p>
+          You approve the beat sheet and shot list first; then each shot is generated, checked against its board and
+          generated again until it holds, with faces, hands and the product getting the most passes. See{' '}
+          <Link href="/ai-commercial-production">AI commercial production</Link>.
+        </p>
+      </GuideStudio>
 
       <GuideSection eyebrow="The modes" title="Four ways to start an AI video shot">
         <GuideTable
@@ -116,57 +112,18 @@ export default function Page() {
           every shot with a face or the product from an approved first frame, so the parts of the ad that carry the brand
           start from a picture someone signed off.
         </p>
-      </GuideSection>
-
-      <GuideSection eyebrow="The models" title="What the main video models support" alt>
-        <GuideTable
-          caption={
-            <>
-              From each vendor&apos;s documentation and pricing page, checked September 2026:{' '}
-              <a href={VEO_DOCS} rel="noopener">Veo 3.1</a>, <a href={OMNI_DOCS} rel="noopener">Gemini Omni Flash</a>,{' '}
-              <a href={GEMINI_PRICING} rel="noopener">Gemini API pricing</a>,{' '}
-              <a href={KLING_3} rel="noopener">Kling 3.0</a>, <a href={RUNWAY_API} rel="noopener">Runway API pricing</a>,{' '}
-              <a href={LUMA_PRICING} rel="noopener">Luma API pricing</a> and{' '}
-              <a href={MINIMAX_DOCS} rel="noopener">MiniMax video generation</a>. Prices in USD.
-            </>
-          }
-          head={['Model', 'First and last frame', 'Clip length', 'Published price']}
-          rows={[
-            ['Veo 3.1 (Google)', 'A starting image, plus a lastFrame image for interpolation', '4, 6 or 8 seconds at 24 fps; 8 with reference images, 1080p or 4K', '$0.40 a second with audio at 720p or 1080p; Fast $0.10 to $0.30; Lite $0.05 to $0.08'],
-            ['Gemini Omni Flash (Google)', 'Images tagged FIRST_FRAME and LAST_FRAME', 'Extensions of 3 to 10 seconds, up to 40 seconds in total', 'About $0.10 a second at 720p'],
-            ['Kling 3.0', 'Start & End Frames-to-Video', '3 to 15 seconds, 720p or 1080p', 'App credits: 6 to 12 a second; no dollar price on the pages checked'],
-            ['Runway Gen-4.5', 'A first frame only, in the API', '2 to 10 seconds', '$0.12 a second in the API'],
-            ['Luma Ray3.2', 'Start and end frames, and several keyframes', '5 or 10 seconds; 10-second clips take no start or end frame', '$1.20 for a 5-second clip at 1080p'],
-            ['MiniMax H3', 'First-frame and last-frame roles', '4 to 15 seconds, 768P or 2K', '$0.08 a second at 768P; $0.13 at 2K'],
-          ]}
-        />
         <p>
-          Google now names Gemini Omni Flash its default video model and keeps Veo 3.1 for scene extension and last-frame
-          control. Both put an invisible SynthID watermark in every video they make. Veo 3.1 allows only adults in
-          image-to-video, interpolation and reference-image shots, which matters for any campaign with children in it.
-        </p>
-        <p>
-          <a href={KLING_FRAMES} rel="noopener">Kling&apos;s guide to start and end frames</a> has the most useful rule
-          for commercials: pick two similar images, because large differences between the first and last frame can make
-          the model cut to a new shot instead of moving smoothly. It also notes that many users make similar images first,
-          with an image model, and then use the feature.
-        </p>
-        <p>
-          Read the terms as closely as the features. OpenAI shut down its{' '}
-          <a href={SORA_2} rel="noopener">Sora 2 models and Videos API</a> on September 24, 2026. Kling&apos;s{' '}
-          <a href={KLING_TERMS} rel="noopener">user terms</a>, effective April 21, 2026, say outputs may not be used for
-          any commercial purpose without Kling&apos;s written permission, so get that permission, or a plan whose terms
-          grant it, before Kling footage goes into an ad.
+          Most current video models take a first frame, and several also take a last frame. Clips run from a few seconds
+          to about 15, so a 30-second commercial is many shots, each started, checked and cut on its own.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The reason" title="Why AI commercials start from approved stills">
+      <GuideSection eyebrow="The reason" title="Why AI commercials start from approved stills" alt>
         <p>
-          <strong>Money.</strong> At Google&apos;s published prices, a Nano Banana 2 still costs $0.067 at 1K and $0.101
-          at 2K. An 8-second 1080p shot from Veo 3.1 with audio costs $3.20. Most takes get thrown away: the director of
-          the Kalshi ad that aired during the 2025 NBA Finals reported 300 to 400 generations to get 15 usable clips (
-          <a href={KALSHI} rel="noopener">Mashable, June 2025</a>). A rejected still costs cents, and a rejected shot costs
-          dollars.
+          <strong>Money.</strong> Most takes get thrown away: the director of the Kalshi ad that aired during the 2025 NBA
+          Finals reported 300 to 400 generations to get 15 usable clips (
+          <a href={KALSHI} rel="noopener">Mashable, June 2025</a>). At the prices model makers published in September 2026,
+          a rejected still costs cents, and a rejected shot costs dollars.
         </p>
         <p>
           <strong>Approval.</strong> A frame is quick to approve: the product, the label, the cast, the wardrobe and the
@@ -174,21 +131,21 @@ export default function Page() {
           a clip.
         </p>
         <p>
-          <strong>Control.</strong> Google&apos;s own Veo documentation shows this workflow: make an image with Nano Banana
-          2, then use it as the starting frame for Veo 3.1. Anything the first frame leaves open, from the background to
-          the wardrobe, is left to the model.
+          <strong>Control.</strong> A first frame fixes the composition, the cast, the product and the light before the
+          model adds motion. Anything the first frame leaves open, from the background to the wardrobe, is left to the
+          model.
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The checklist" title="What makes a clean first frame" alt>
+      <GuideSection eyebrow="The checklist" title="What makes a clean first frame">
         <ol>
           <li>
-            <strong>Made at the delivery ratio.</strong> Veo 3.1 generates 16:9 or 9:16. Make a separate first frame for
-            each ratio you deliver; a 16:9 frame cropped to 9:16 usually cuts the product or a face.
+            <strong>Made at the delivery ratio.</strong> Make a separate first frame for each ratio you deliver; a 16:9
+            frame cropped to 9:16 usually cuts the product or a face.
           </li>
           <li>
-            <strong>At or above the output resolution.</strong> Google&apos;s Omni guide asks for high-resolution images.
-            A 1080p shot needs a first frame of at least 1920 by 1080 pixels.
+            <strong>At or above the output resolution.</strong> A 1080p shot needs a first frame of at least 1920 by 1080
+            pixels.
           </li>
           <li>
             <strong>Room to move.</strong> Leave space on the side the subject moves toward. A push-in needs detail at the
@@ -223,12 +180,11 @@ export default function Page() {
         </ol>
       </GuideSection>
 
-      <GuideSection eyebrow="The prompt" title="What to write with the frame">
+      <GuideSection eyebrow="The prompt" title="What to write with the frame" alt>
         <p>
           The still fixes what the shot looks like. The motion prompt says what happens: the camera move, the action, the
-          timing, what stays still and what the shot sounds like. Google&apos;s Omni guide puts it plainly: vague prompts
-          like &ldquo;make it move&rdquo; produce less compelling results than detailed descriptions of the camera
-          movement, the subject&apos;s motion and the surroundings.
+          timing, what stays still and what the shot sounds like. A vague prompt such as &ldquo;make it move&rdquo; leaves
+          all of that to the model.
         </p>
         <p>An example motion prompt, written for this page for a made-up shoe ad:</p>
         <p>
@@ -243,7 +199,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The stills" title="Where Overs comes in" alt>
+      <GuideSection eyebrow="The stills" title="Where Overs comes in">
         <p>
           The first frames of an AI commercial are stills, and often the campaign stills themselves, which is where{' '}
           {OVERS.name} comes in. It is {OVERS.relation}: {OVERS.plain}, built on {OVERS.origin}.
@@ -272,16 +228,18 @@ export default function Page() {
       </GuideSection>
 
       <GuideFit
-        title="Should Ruminate X make your commercial?"
+        title={`Why brands hire ${studio} to plan every shot`}
         hire={[
-          'A brand that needs a full commercial where every shot with the product or a face is planned, boarded and checked.',
-          'A marketing team with approved campaign stills that wants a film made from the same world.',
-          'A product that has to stay exact across many shots, where each take has to be checked against the real thing.',
+          'A brand manager who wants to sign off the cast, the product and the framing on boards before any motion is made.',
+          'An agency producer who needs every shot of a client commercial boarded with its framing, movement and duration.',
+          'A marketing team with approved campaign stills that wants a film made in the same world.',
+          'A product marketer whose pack has to stay exact across many shots, each checked against its board.',
         ]}
-        instead={[
-          'You need one five-second loop from a product photo: make the still yourself and animate it in Veo or Gemini Omni Flash.',
-          'The ad needs real footage of your store, team or customers: hire a crew.',
-          'You need dozens of quick variations a week for testing: a self-serve tool costs less than a studio.',
+        get={[
+          'The beat sheet and shot list to approve before a single frame is generated.',
+          'Every shot checked against its board and generated again until it holds; faces, hands and the product get the most passes.',
+          'Your real logo, product and on-screen text set in the edit from your brand files.',
+          'The cutdowns and aspect ratios each channel needs, cut from the same film.',
         ]}
       />
 

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/use-cases/educational-training-videos' },
   title: 'Educational & Training Videos: Rapid Corporate Learning Content | Ruminate X',
   description: 'Create training videos at scale. Auto-generate courses in 50+ languages. Deploy learning content 10x faster.',

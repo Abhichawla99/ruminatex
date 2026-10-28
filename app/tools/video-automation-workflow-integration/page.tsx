@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/tools/video-automation-workflow-integration' },
   title: 'Automate Video Production: Zapier, Slack & CMS Integration | Ruminate X',
   description: 'Integrate AI video generation into your workflow. Automate with Zapier, Slack, and CMS platforms.',

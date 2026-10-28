@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/solutions/multilingual-voiceovers' },
   title: 'Professional Voiceovers in 140+ Languages in Under 1 Hour | Ruminate X',
   description: 'Get AI-generated professional voiceovers in 140+ languages and accents. Create multilingual video content in under 1 hour.',

@@ -2,23 +2,31 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
+import { PRODUCTION } from '@/lib/seo/facts'
+import { videoLd } from '@/lib/seo/schema'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/work' },
-  title: 'Our Work | Cinema-Grade Brand Films & AI Commercials | Ruminate X',
+  title: 'Work: AI Brand Films and AI Commercials',
   description:
-    "The reel. Cinematic brand films, AI commercials, fashion editorials, and story-driven campaign content — every frame earned. Ruminate X is a cinematic story studio that makes films for brands.",
+    'Films by Ruminate X, the AI film studio in Calgary: brand films, commercials and social films with every frame made by AI. Spec and original work is labelled.',
   openGraph: {
-    title: 'Our Work | Ruminate X',
-    description: 'Cinema-grade brand films and AI commercials — every frame earned, every story real.',
+    title: 'Work: AI Brand Films and AI Commercials | Ruminate X',
+    description: 'Brand films and AI commercials by Ruminate X, every frame made with AI.',
   },
 }
 
 const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
+const kindLabel = { client: 'Client work', spec: 'Spec work', original: 'Original film' } as const
+
 export default function WorkPage() {
+  const ld = portfolioItems.map(videoLd).filter((v) => v !== null)
   return (
     <>
+      {ld.map((obj, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(obj) }} />
+      ))}
       {/* Hero */}
       <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">The Reel</p>
@@ -29,7 +37,7 @@ export default function WorkPage() {
           THE<br />FILMS.
         </h1>
         <p className="text-[#888888] text-lg max-w-xl">
-          Every frame earned. Every story real. These are the films we&apos;ve made for brands that refused to be ordinary.
+          Every frame earned. {PRODUCTION.summary} Spec and original films are marked as spec or original.
         </p>
       </section>
 
@@ -81,7 +89,10 @@ export default function WorkPage() {
                 <h2 style={{ ...displayStyle, fontSize: 'clamp(24px, 4vw, 40px)' }} className="text-white mb-1">
                   {video.title}
                 </h2>
-                <p className="text-[#888888] text-sm">{video.client}</p>
+                <p className="text-[#888888] text-sm">
+                  {video.client}
+                  {video.kind ? ` · ${kindLabel[video.kind]}` : ''}
+                </p>
               </div>
             </VideoModal>
           ))}
@@ -96,7 +107,7 @@ export default function WorkPage() {
             <span style={{ color: '#ebff00' }}>YOUR FILM?</span>
           </h2>
           <p className="text-[#888888] mb-8">
-            Tell us the scene in your head — the one your brand has been trying to tell. We start with story. Always.
+            Tell us the scene in your head, the one your brand has been trying to tell. We start with story. Always.
           </p>
           <Link
             href="/contact"

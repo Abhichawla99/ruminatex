@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/roi-calculator' },
   title: "AI Video Production ROI Calculator: See Your Potential Savings",
   description: "Interactive calculator to see your potential savings with AI video production. Input your costs and see savings instantly.",

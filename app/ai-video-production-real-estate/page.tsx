@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   alternates: { canonical: 'https://www.ruminatex.com/ai-video-production-real-estate' },
   title: 'AI Video Production for Real Estate Brands | Ruminate X',
   description: 'Cinematic AI-powered video production for luxury real estate developers, proptech companies, and hospitality real estate brands. Architectural films that sell.',

@@ -4,15 +4,15 @@ import { blogPosts } from '@/lib/blog'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/blog' },
-  title: 'Blog | AI Video Production Guides and Strategy',
+  title: 'Blog: Guides to AI Films and Commercials',
   description:
-    'Explore Ruminate X guides on AI video production, agency comparisons, Calgary video production, and brand video strategy for high-intent buyers and modern marketing teams.',
+    'Guides from Ruminate X, the AI film studio in Calgary: what AI video production costs, how to hire a studio, AI pharma commercials, brands that ran AI ads, and how an AI film gets made.',
   keywords: [
     'AI video production blog',
-    'AI video production guides',
-    'AI video agency comparison',
-    'video production Calgary blog',
-    'brand video strategy guides',
+    'AI commercial guides',
+    'AI video production cost',
+    'AI pharma commercials',
+    'video production Calgary',
   ],
 }
 
@@ -20,39 +20,40 @@ const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
 
 const featuredResources = [
   {
-    href: '/blog/how-much-does-ai-video-production-cost',
-    title: 'AI Video Production Cost and Agency Pricing',
-    description:
-      'What AI video studios, agencies and platforms charge per video, per campaign and per month, from their own published prices.',
-    type: 'Pricing Guide',
+    href: '/guides/ai-pharma-commercials',
+    title: 'AI Pharma Commercials',
+    description: 'Which drug and pharmacy ads were made with AI, the FDA rules that apply, and how Ruminate X makes AI pharma commercials.',
+    type: 'Pharma',
   },
   {
-    href: '/blog/how-much-does-video-production-cost-calgary',
-    title: 'How Much Does Video Production Cost in Calgary?',
-    description:
-      'A local-intent pricing guide for Calgary businesses comparing agency costs, timelines, and realistic budget ranges.',
-    type: 'Pricing Guide',
+    href: '/guides/brands-using-ai-commercials',
+    title: 'AI Commercials by Big Brands',
+    description: 'Coca-Cola, Kalshi, Svedka and the brands that faced backlash: what each AI commercial was, and how audiences took it.',
+    type: 'Case Studies',
+  },
+  {
+    href: '/blog/how-much-does-ai-video-production-cost',
+    title: 'AI Video Production Cost',
+    description: 'What AI video production costs for brands in 2026, how agencies price it, and what moves a Ruminate X quote.',
+    type: 'Pricing',
   },
   {
     href: '/blog/top-ai-video-agencies-2026',
     title: 'Top AI Video Agencies in 2026',
-    description:
-      'A commercial-investigation page for buyers comparing AI video agencies, positioning, and fit.',
-    type: 'Agency Comparison',
+    description: 'AI video agencies for ads, commercials and brand films. Published by Ruminate X, which lists itself first.',
+    type: 'Agencies',
   },
   {
-    href: '/blog/best-video-production-companies-calgary',
-    title: 'Video Production Companies in Calgary: A List',
-    description:
-      'Calgary video production companies by type, which ones publish prices, and which offer AI video.',
-    type: 'Local Comparison',
+    href: '/best-video-production-company-calgary',
+    title: 'Choosing a Video Production Company in Calgary',
+    description: 'How to judge a Calgary video company, and what Ruminate X makes for Calgary brands.',
+    type: 'Calgary',
   },
   {
-    href: '/blog/why-calgary-businesses-need-video-marketing',
-    title: 'Why Calgary Businesses Need Video Marketing',
-    description:
-      'A strategy article for local brands evaluating where video fits in their growth plan.',
-    type: 'Local Strategy',
+    href: '/video-production-calgary',
+    title: 'Video Production in Calgary',
+    description: 'What a Calgary video costs, and why a generated film leaves the shoot lines off the quote.',
+    type: 'Calgary',
   },
 ]
 
@@ -60,45 +61,45 @@ const commercialPages = [
   {
     href: '/ai-video-production-agencies',
     title: 'AI Video Production Agency',
-    description: 'For brands comparing agency capabilities, process, speed, and creative range.',
+    description: 'What an AI video production agency does, what to look for, and how Ruminate X works.',
+  },
+  {
+    href: '/ai-commercial-production',
+    title: 'AI Commercial Production',
+    description: 'How Ruminate X makes an AI commercial, and everything it delivers with it.',
   },
   {
     href: '/comparison/ai-agency-vs-traditional-agency',
-    title: 'AI Agency vs Traditional Agency',
-    description: 'For decision-makers weighing cost, speed, and production model tradeoffs.',
+    title: 'AI Studio vs Traditional Production',
+    description: 'When to hire an AI production partner instead of booking a shoot.',
   },
   {
     href: '/comparison/freelance-vs-ai-video',
-    title: 'Freelance Video vs AI Production',
-    description: 'For buyers comparing solo talent against a structured AI production partner.',
-  },
-  {
-    href: '/roi-calculator',
-    title: 'Video Production ROI Calculator',
-    description: 'For teams estimating savings and expected return before choosing a production path.',
+    title: 'AI Effects or a VFX Freelancer',
+    description: 'For a short brand video: a freelancer, a generator, or a studio that makes the whole film.',
   },
 ]
 
 const guides = [
   {
-    href: '/guides/how-to-create-explainer-videos-with-ai',
-    title: 'How to Create Explainer Videos With AI',
-    description: 'A practical guide for teams planning AI explainer workflows and scripts.',
+    href: '/guides/video-production-brief',
+    title: 'How to Brief a Video Production Company',
+    description: 'A brief template, with the lines an AI-made film adds.',
   },
   {
-    href: '/guides/video-marketing-strategy-ai',
-    title: 'AI Video Marketing Strategy',
-    description: 'A planning guide for brands building a modern video content engine.',
+    href: '/guides/ai-commercial-cost',
+    title: 'AI Commercial Cost',
+    description: 'An AI commercial against a filmed one, line by line.',
   },
   {
-    href: '/guides/6-step-video-production-process',
-    title: '6-Step Video Production Process',
-    description: 'A process-focused guide for buyers who want clarity before starting.',
+    href: '/guides/who-owns-ai-video',
+    title: 'Who Owns an AI Video?',
+    description: 'Copyright, and the contract clauses that decide what a brand owns.',
   },
   {
-    href: '/guides/why-traditional-video-agencies-are-expensive',
-    title: 'Why Traditional Video Agencies Are Expensive',
-    description: 'A cost-education guide for teams trying to understand agency pricing.',
+    href: '/how-we-make-an-ai-brand-film',
+    title: 'How We Make an AI Brand Film',
+    description: "Ruminate X's pipeline, from brief to delivery.",
   },
 ]
 
@@ -142,15 +143,14 @@ export default function BlogPage() {
           THE BLOG
         </h1>
         <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-6">
-          This is the resource hub for teams researching AI video production, comparing agency models,
-          planning video campaigns, and pricing out the smartest way to produce brand content.
-          If you&apos;re deciding between agencies, budgeting a campaign, or building a video strategy,
-          start with the section that matches your search intent. The guide to{' '}
-          <Link href="/blog/how-much-does-ai-video-production-cost">AI video production agency pricing</Link> lists what
-          studios, agencies and platforms publish, per video and per month.
+          Guides from Ruminate X, the AI film studio in Calgary, for brand, marketing and comms leads planning an AI
+          brand film or commercial: what it costs, how to hire a studio, how the film gets made, and what the brands
+          that already ran AI ads learned. Start with{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">what AI video production costs</Link> or{' '}
+          <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-[#666666]">
-          {['Pricing', 'Agency Comparisons', 'Calgary Video Production', 'Brand Strategy', 'AI Production Guides'].map((topic) => (
+          {['Pricing', 'Pharma & Medical', 'Hiring a Studio', 'Calgary', 'How It Gets Made'].map((topic) => (
             <span key={topic} className="border border-[#1a1a1a] px-3 py-2">
               {topic}
             </span>
@@ -179,21 +179,18 @@ export default function BlogPage() {
       <section className="border-t border-[#1a1a1a] bg-[#050505] py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
-            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Commercial Research Paths</p>
+            <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Hiring a Studio</p>
             <h2
               style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 84px)' }}
               className="text-white leading-none mb-6"
             >
-              START WHERE
+              HIRING AN
               <br />
-              YOUR BUYING
-              <br />
-              QUESTION LIVES
+              AI STUDIO?
             </h2>
             <p className="text-[#888888] text-lg leading-relaxed">
-              Buyers rarely search in a straight line. Some start with agency research. Others need a cost
-              comparison, a local Calgary option, or proof that AI is the right production model. These pages
-              are the strongest next clicks for commercial-intent visitors.
+              What an AI video production agency does, what an AI commercial includes, and when an AI film beats a
+              shoot, with how Ruminate X handles each.
             </p>
           </div>
 
@@ -256,16 +253,16 @@ export default function BlogPage() {
 
             <div className="mt-10 border border-[#1a1a1a] bg-[#050505] p-8">
               <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Need a Local Starting Point?</p>
-              <h3 className="text-white text-2xl font-semibold mb-3">Calgary video production pages worth reviewing next</h3>
+              <h3 className="text-white text-2xl font-semibold mb-3">Ruminate X is a Calgary studio</h3>
               <p className="text-sm text-[#888888] leading-relaxed mb-6">
-                If your search is local rather than category-wide, these pages are the strongest next steps for Calgary and Alberta buyers.
+                Brand films and commercials for Calgary and Alberta brands, made without a shoot.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  { href: '/video-production-calgary', label: 'Video Production Calgary' },
-                  { href: '/best-video-production-company-calgary', label: 'Best Video Production Company Calgary' },
-                  { href: '/affordable-video-production-calgary', label: 'Affordable Video Production Calgary' },
-                  { href: '/calgary-video-production-packages', label: 'Calgary Video Production Packages' },
+                  { href: '/video-production-calgary', label: 'Video production in Calgary' },
+                  { href: '/best-video-production-company-calgary', label: 'Choosing a Calgary video company' },
+                  { href: '/brand-film-production-calgary', label: 'Brand films in Calgary' },
+                  { href: '/commercial-video-production-calgary', label: 'Commercials in Calgary' },
                 ].map((item) => (
                   <Link
                     key={item.href}
@@ -290,8 +287,7 @@ export default function BlogPage() {
             READY TO CREATE?
           </h2>
           <p className="text-[#888888] mb-8">
-            If you&apos;ve done the research and want a production partner that moves fast without sacrificing taste,
-            the next step is simple.
+            Send Ruminate X the brief: what the film has to do, who has to see it, where it runs and when.
           </p>
           <Link
             href="/contact"

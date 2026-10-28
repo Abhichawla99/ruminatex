@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
+  // Out of the index (Abhi, 2026-10-28): off-offer, or a thin page Search Console never showed.
+  robots: { index: false, follow: true },
   title: 'AI Motion Content | Animated Brand Videos & Motion Graphics | Ruminate X',
   description: 'Create scroll-stopping AI motion content for your brand. Ruminate X delivers animated videos, motion graphics, and kinetic visuals at scale.',
   keywords: ['AI motion content', 'AI motion graphics', 'animated brand content', 'AI kinetic video', 'motion design AI', 'AI animated video production'],
@@ -161,7 +163,7 @@ export default function AIMotionContentPage() {
             Traditional motion design is expensive and slow. A single 15-second animated social post can take a freelancer three to five days. Multiply that by the volume most brands need — weekly posts, campaign variations, platform-specific edits — and the cost becomes prohibitive. That is why most brands settle for static content even though they know motion performs better.
           </p>
           <p className="text-[#888888] text-lg leading-relaxed">
-            Ruminate X eliminates that trade-off. Our AI production pipeline generates motion content from structured brand inputs — your colors, type system, imagery, and messaging guidelines. Once the system is trained on your brand, it produces assets with remarkable consistency and speed. Need 30 variations of an animated ad for A/B testing? Done in a day. Need a full quarter of social motion content planned and produced? We deliver it on a timeline that traditional studios would call impossible. Whether you are scaling <Link href="/ai-video-ads" className="text-[#ebff00] hover:underline">AI video ads</Link> or building a library of <Link href="/ai-brand-videos" className="text-[#ebff00] hover:underline">AI brand videos</Link>, motion content is the connective tissue that keeps your brand alive across every digital surface.
+            Ruminate X eliminates that trade-off. Our AI production pipeline generates motion content from structured brand inputs — your colors, type system, imagery, and messaging guidelines. Once the system is trained on your brand, it produces assets with remarkable consistency and speed. Need 30 variations of an animated ad for A/B testing? Done in a day. Need a full quarter of social motion content planned and produced? We deliver it on a timeline that traditional studios would call impossible. Whether you are scaling <Link href="/ai-commercial-production" className="text-[#ebff00] hover:underline">AI video ads</Link> or building a library of <Link href="/ai-brand-film-agency" className="text-[#ebff00] hover:underline">AI brand videos</Link>, motion content is the connective tissue that keeps your brand alive across every digital surface.
           </p>
         </div>
       </section>

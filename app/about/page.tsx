@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { FOUNDER, PRODUCTION, RELATED, SITE } from '@/lib/seo/facts'
+import { FOUNDER, OFFERS, PRODUCTION, RELATED, SITE, STUDIO_LINE } from '@/lib/seo/facts'
 
 export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ruminatex.com/about' },
-  title: 'About | Ruminate X — Cinematic Story Studio Making Films for Brands',
+  title: 'About Ruminate X: AI Film Studio in Calgary',
   description:
-    "Ruminate X is a cinematic story studio based in Calgary. We make films for brands — story-driven brand films, AI commercials, and campaign content that treats every brief with the seriousness of a feature production.",
+    'Ruminate X is an AI film studio in Calgary, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs and medical companies, with every frame made by AI.',
   keywords: [
-    'AI creative studio Calgary',
+    'Ruminate X',
+    'AI film studio Calgary',
     'AI video production Canada',
-    'cinematic brand film studio',
-    'AI content agency Canada',
+    'AI brand film studio',
+    'AI commercial production company Canada',
   ],
 }
 
@@ -54,11 +55,6 @@ const values = [
   },
 ]
 
-const cities = [
-  'New York', 'Los Angeles', 'London', 'Toronto',
-  'Dubai', 'Miami', 'San Francisco', 'Sydney',
-  'Singapore', 'Chicago', 'Paris', 'Amsterdam',
-]
 
 export default function AboutPage() {
   return (
@@ -105,9 +101,11 @@ export default function AboutPage() {
                 But capability without craft is just noise. Story is what separates a film from
                 a file. We bring both.
               </p>
+              <p>{STUDIO_LINE}</p>
               <p>
-                Based in Calgary. Making cinema for brands in New York, London, Dubai, Los Angeles,
-                and everywhere a great story deserves to be told.
+                Based in Calgary, making films for brands wherever a great story deserves to be told. See{' '}
+                <Link href="/how-we-make-an-ai-brand-film" className="text-[#ebff00] hover:underline">how we make an AI brand film</Link>{' '}
+                and <Link href="/work" className="text-[#ebff00] hover:underline">the work</Link>.
               </p>
             </div>
           </div>
@@ -180,22 +178,22 @@ export default function AboutPage() {
                 <span style={{ color: '#ebff00' }}>THE WORLD.</span>
               </h2>
               <p className="text-[#888888] leading-relaxed mb-6">
-                AI-powered production has no geographical boundaries. We create content for brands
-                in the world&apos;s most competitive markets — New York, London, Los Angeles, Dubai,
-                Toronto, and beyond — from our studio in Calgary.
+                Nothing we make is filmed, so where a brand is based doesn&apos;t change how its film gets made. Briefs,
+                boards and review rounds happen online, from our studio in Calgary.
               </p>
               <p className="text-[#888888] leading-relaxed">
                 Time zones don&apos;t slow us down. Neither does distance. What matters is the work.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {cities.map((city) => (
-                <div
-                  key={city}
+              {OFFERS.map((o) => (
+                <Link
+                  key={o.key}
+                  href={o.path ?? '/services'}
                   className="border border-[#1a1a1a] px-6 py-4 text-sm uppercase tracking-[0.2em] text-[#666666] hover:text-[#ebff00] hover:border-[#ebff00]/30 transition-colors"
                 >
-                  {city}
-                </div>
+                  {o.name}
+                </Link>
               ))}
             </div>
           </div>
