@@ -1,324 +1,199 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PRODUCTION, SITE } from '@/lib/seo/facts'
+import {
+  Guide,
+  GuideAnswer,
+  GuideCta,
+  GuideFaq,
+  GuideFilm,
+  GuideFit,
+  GuideHero,
+  GuideRelated,
+  GuideSection,
+  GuideTable,
+  guideMetadata,
+} from '@/components/guide/Guide'
+import { BUYERS, OFFERS, PRICES, PRODUCTION, REFERENCE_PROJECT, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
-export const metadata: Metadata = {
-  alternates: { canonical: 'https://www.ruminatex.com/services' },
-  title: 'AI Video Production Services: Brand Films, AI Commercials',
-  description:
-    'What Ruminate X makes: AI brand films, AI commercials, pharma and medical films, company films, UGC-style ads, product visuals and avatar videos. Every frame made with AI, with people writing, editing and grading every film.',
+const studio = SITE.name
+const offer = (key: string) => OFFERS.find((o) => o.key === key)!
+/** The published starting price for brand films and commercials. */
+const from = PRICES.find((p) => p.offer === 'commercial')!.from
+
+const PAGE = {
+  path: '/services',
+  title: 'AI Video Production Services',
+  description: `${studio} AI video production services: brand films, AI commercials, company films, UGC-style ads, product visuals and avatar videos for brands, pharma and medical companies. Every frame made with AI; brand films and commercials from ${from}.`,
+  published: '2026-03-07',
+  updated: '2026-10-30',
   keywords: [
-    'AI video production services',
-    'AI video production service',
-    'AI brand film production',
-    'AI commercial production',
-    'AI pharma commercials',
-    'AI corporate video production',
-    'AI UGC ads',
-    'AI product videos',
-    'AI avatar videos',
+    'ai video production services',
+    'ai video production service',
+    'ai video production for brands',
+    'ai agency video services',
+    'ai video production quote',
+    'best ai video production services',
+    'video production for brands',
   ],
 }
 
-const displayStyle = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
+/** One row per service: the offer from facts.ts, who asks for it, what they get. */
+const SERVICES: { key: string; who: string; get: string }[] = [
+  { key: 'brand-film', who: 'A brand or marketing manager who needs the story of the brand on screen', get: 'A story-driven film about what the brand stands for, plus cutdowns for each channel' },
+  { key: 'commercial', who: 'A founder or brand manager with a launch, a media plan or a spot to replace', get: 'A hero spot in 15, 30 or 60 seconds, social cutdowns, alternative openings for hook tests' },
+  { key: 'about-us', who: 'A comms, HR or marketing lead who needs a company film without a shoot day', get: 'An about-us, mission, recruiting, all-hands or investor film' },
+  { key: 'ugc', who: 'A performance marketer who needs more creative to test each week', get: 'Creator-style ads for Reels, TikTok and Shorts, in 9:16, 1:1 and 4:5, with AI labels where a platform asks for them' },
+  { key: 'product-visuals', who: 'A brand launching a product without a product shoot', get: 'A product hero film, a launch teaser, stills and marketplace video built from your real product images' },
+  { key: 'avatar', who: 'A team that needs a presenter on screen without booking one', get: 'A generated presenter or spokesperson on your approved script, for explainers, training or customer videos' },
+  { key: 'review', who: 'A brand that needs review or testimonial-style video', get: 'Review and testimonial-style videos' },
+]
 
-const services = [
+const FAQS = [
   {
-    number: '01',
-    title: 'Brand Films',
-    href: '/ai-brand-film-agency',
-    tagline: 'Your brand has one true story. We find it.',
-    description:
-      "Most brands are defined by what they sell. Great brands are defined by what they believe. A brand film puts that belief on screen: the tension at the heart of the brand and the reason it exists beyond revenue, told with the craft of a feature film and the precision of a 30-second spot. Every frame is generated, so the film can go anywhere the story needs to go.",
-    deliverables: ['Narrative brand film', 'Mission and vision film', 'Brand anthem', 'Launch film', 'Cutdowns and aspect ratios for every channel'],
-    idealFor: 'Brands ready to stop describing themselves and start showing who they are.',
-    categories: ['Story-Driven', 'Cinematic', 'Brand Identity'],
+    q: 'What AI video production services does Ruminate X offer?',
+    a: `${studio}, an AI film studio in ${SITE.city}, makes brand films, AI commercials, about-us and company films, UGC-style ads, product visuals, avatar videos and review-style videos for consumer brands, pharma and pharmacy companies, labs and medical companies. ${PRODUCTION.summary} People write the script, board every shot, edit, mix and grade each film, and the real logo, product and on-screen text are set in the edit from the brand's own files.`,
   },
   {
-    number: '02',
-    title: 'AI Commercials',
-    href: '/ai-commercial-production',
-    tagline: "The commercial that shouldn't be possible. It is.",
-    description:
-      "Picture the shot. The one that's been in your head since the brief dropped, the one your last production company said would cost $300K and take three months. We start there. AI removes every physical constraint between a great idea and a great frame: impossible environments, perfect product physics, sequences that bend reality without breaking believability. We write the shot list first and figure out 'how' second.",
-    deliverables: ['Hero commercial', 'TV and streaming spots (15, 30 and 60 seconds)', 'Social cutdowns in 9:16, 1:1 and 4:5', 'Alternative openings for hook tests', 'Captions, music and voice licensed for where it runs'],
-    idealFor: "Brands with a creative vision a shoot couldn't deliver, or couldn't deliver in time.",
-    categories: ['Cinematic Commercials', 'Campaign', 'Story-Driven'],
+    q: 'How much do AI video production services cost?',
+    a: `${priceLine('commercial')}. Brand films also start at ${from}. Company films, UGC-style ads, product visuals and avatar videos are quoted from the brief. What moves the number is running time, the number of distinct scenes, how exactly the product has to be reproduced, and how many cutdowns, aspect ratios and languages the media plan needs.`,
   },
   {
-    number: '03',
-    title: 'Pharma & Medical Films',
-    href: '/ai-video-production-healthcare',
-    tagline: 'Cinematic, with every claim approved.',
-    description:
-      'AI commercials, brand films and company films for pharma and pharmacy companies, labs and medical companies. The pictures are generated; the claims are not. Every claim, the important safety information and any fair-balance text are set in the edit from the copy your medical, legal and regulatory reviewers approved, and nothing ships until they sign off.',
-    deliverables: ['Pharma and pharmacy commercials', 'Brand films for labs and medical companies', 'About-us films for healthcare companies', 'Product visuals', 'Versions for each channel, claims set from approved copy'],
-    idealFor: 'Pharma, pharmacy, lab and medical marketers with a review process for every claim.',
-    categories: ['Pharma', 'Pharmacy', 'Medical'],
+    q: 'Can I get a quote for AI video production?',
+    a: `Yes. Send ${studio} the brief through ruminatex.com/contact or to ${SITE.email}: what the film is for, who will watch it, where it will run, the length, the cutdowns you need and the date. The quote comes back against that brief, with the stages and the review rounds written in. Brand films and commercials start at ${from}.`,
   },
   {
-    number: '04',
-    title: 'Company & About-Us Films',
-    href: '/ai-corporate-video-production',
-    tagline: 'Your company on screen, without a shoot day.',
-    description:
-      "The film that introduces your company to customers, candidates, investors or your own people. Your mission and your work, told in a world built for the film, so nobody gets pulled off the job for a shoot, and a new office, product or headcount is a regenerated scene instead of a reshoot.",
-    deliverables: ['About-us film', 'Mission film', 'All-hands and conference opener', 'Recruiting film', 'Investor and board film'],
-    idealFor: 'Comms, HR and marketing leads who need a company film without taking the team off the job.',
-    categories: ['Corporate', 'Internal Comms', 'Recruiting'],
+    q: 'Can Ruminate X put our own staff or a real customer in the video?',
+    a: `No. Every ${studio} frame is generated, so the people on screen are generated too. If the film needs a real employee, founder or customer to appear as themselves, it needs a camera. ${studio} can still make every other part of a campaign, and a real person can front an avatar video only with their written consent and a contract that covers the likeness.`,
   },
   {
-    number: '05',
-    title: 'UGC-Style Ads',
-    href: '/ai-ugc-reels',
-    tagline: 'The creator ad, without the creator roster.',
-    description:
-      'Ads in the style of creator videos for Reels, TikTok and Shorts: a hook in the first second, the product in hand and a clear line to the offer. The creators are generated and deliver scripted ad lines, so there are no fake reviews, and your performance team gets alternative openings to test.',
-    deliverables: ['Creator-style ads for Reels, TikTok and Shorts', 'Alternative hooks for testing', '9:16, 1:1 and 4:5 versions', 'Captions', 'AI labels where a platform requires them'],
-    idealFor: 'Performance marketers who need more creative to test every week.',
-    categories: ['Paid Social', 'Performance', 'DTC'],
+    q: 'Does Ruminate X make AI videos for pharma and medical companies?',
+    a: `Yes. ${studio} makes AI commercials, brand films and company films for pharma and pharmacy companies, labs and medical companies. The pictures are generated; every claim, the important safety information and any fair-balance text come from the copy your medical, legal and regulatory reviewers approved, and boards go to review before generation starts. Your own reviewers decide whether a film can run.`,
   },
   {
-    number: '06',
-    title: 'Product Visuals',
-    href: '/ai-product-videos',
-    tagline: 'The product, exactly as it is.',
-    description:
-      'Product films and stills built from your real product images. Generation does the light, the place and the motion; your label, your logo and every word on screen are set in the edit from your files, so the product stays the same product in every shot.',
-    deliverables: ['Product hero film', 'Launch teaser', 'Product stills', 'E-commerce and marketplace video', 'Social cutdowns'],
-    idealFor: 'Brands launching a product without the budget or the time for a product shoot.',
-    categories: ['Product', 'Launch', 'E-Commerce'],
-  },
-  {
-    number: '07',
-    title: 'Avatar Videos',
-    href: '/ai-avatar-videos',
-    tagline: 'A presenter on your script, in your brand world.',
-    description:
-      "A generated presenter or spokesperson who explains your product, trains your staff or speaks to your customers. If the presenter is based on a real person, that person's consent and contract come first.",
-    deliverables: ['Product explainer with a presenter', 'Training and onboarding video', 'Customer-facing spokesperson video', 'Versions in each format you need'],
-    idealFor: 'Teams that need someone on screen without booking a presenter and a studio.',
-    categories: ['Presenter', 'Training', 'Explainer'],
-  },
-  {
-    number: '08',
-    title: 'Fashion & Lifestyle',
-    href: '/ai-video-production-fashion',
-    tagline: "The shoot that doesn't need a location.",
-    description:
-      "The best fashion film you've ever seen probably cost a small fortune in locations, travel, talent and light you could never recreate. We make that feeling, the specific quality of editorial desire, without a single flight. AI gives us every location, every light and every aesthetic. What we bring is the eye: the obsession with texture, movement and the single frame that makes someone stop scrolling and start wanting.",
-    deliverables: ['Fashion films', 'Seasonal campaign content', 'Lookbook and editorial', 'Luxury brand films', 'Beauty and product films'],
-    idealFor: 'Fashion, beauty, luxury and lifestyle brands who demand editorial precision.',
-    categories: ['Fashion', 'Editorial', 'Luxury'],
+    q: 'What do I need to send to start an AI video?',
+    a: `The objective, the audience, the one message, where the film will run, the deliverables, the date and a budget range, plus your logo files, brand guidelines, product images and any approved claims. ${studio} turns that into a creative brief and a brand world before the first frame is generated. The brief guide on ruminatex.com lists each line with an example.`,
   },
 ]
 
-const serviceHubSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: `${SITE.name} AI film services`,
-  itemListElement: services.map((service, index) => ({
-    '@type': 'ListItem',
-    position: index + 1,
-    url: `${SITE.url}${service.href}`,
-    item: {
-      '@type': 'Service',
-      name: service.title,
-      description: service.description,
-      provider: { '@id': SITE.orgId },
-      areaServed: 'Worldwide',
-      serviceType: service.title,
-    },
-  })),
-}
+export const metadata = guideMetadata(PAGE)
 
 export default function ServicesPage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceHubSchema) }}
+    <Guide
+      page={PAGE}
+      faqs={FAQS}
+      films={['LYA3Do3KEN0']}
+      service={{
+        name: 'AI video production services',
+        description: `${studio} makes brand films, AI commercials, company films, UGC-style ads, product visuals and avatar videos with generative AI, written, boarded, edited, mixed and graded by people.`,
+        audience: [...BUYERS],
+      }}
+    >
+      <GuideHero
+        eyebrow="Services"
+        title="AI video production services"
+        dek="For the marketing lead, founder or comms lead who needs a finished film made with AI and wants to know what Ruminate X makes, who each service is for, what it costs and how it gets made."
+        updated={PAGE.updated}
       />
 
-      {/* Hero */}
-      <section className="pt-40 pb-16 max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">What We Do</p>
-        <h1
-          style={{ ...displayStyle, fontSize: 'clamp(60px, 12vw, 150px)' }}
-          className="text-white leading-none mb-6"
-        >
-          SERVICES
-        </h1>
-        <p className="text-[#888888] text-lg max-w-3xl leading-relaxed">
-          Ruminate X is an AI film studio in {SITE.city}. {PRODUCTION.summary} People write, board, edit, score and
-          grade every film, so what you get is a finished film made the way a production company would make it, minus
-          the crew, the set and the location day.
+      <GuideAnswer>
+        <p>
+          {studio} is an AI film studio in {SITE.city} that sells AI video production as finished films: brand films,
+          AI commercials, company films, UGC-style ads, product visuals and avatar videos, for consumer brands, pharma
+          and pharmacy companies, labs and medical companies. {PRODUCTION.summary} {priceLine('commercial')}; brand
+          films start at the same figure, and the other services are quoted from the brief.
         </p>
-        <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mt-6">
-          Pick the film you need below. Each one links to the page that shows how Ruminate X makes it, what you get and
-          what moves the price. The whole pipeline, stage by stage, is in{' '}
-          <Link href="/how-we-make-an-ai-brand-film" className="text-[#ebff00] hover:underline">how we make an AI brand film</Link>,
-          and the films are on <Link href="/work" className="text-[#ebff00] hover:underline">the work page</Link>.
+      </GuideAnswer>
+
+      <GuideSection eyebrow="What we make" title="AI video production services, and who each one is for">
+        <GuideTable
+          caption={`What ${studio} makes, from the studio's own list of services. Prices: brand films and commercials from ${from}; the rest quoted from the brief.`}
+          head={['Service', 'Who asks for it', 'What you get']}
+          rows={SERVICES.map((s) => {
+            const o = offer(s.key)
+            return [o.path ? <Link href={o.path}>{o.name}</Link> : o.name, s.who, s.get]
+          })}
+        />
+        <p>
+          Pharma, pharmacy, lab and medical films are made the same way, with one extra rule: the claims, the important
+          safety information and any fair-balance text come from approved copy and are set in the edit, never generated.
+          The <Link href="/ai-video-production-healthcare">AI video production for pharma and medical companies</Link>{' '}
+          page covers the review steps. Fashion, beauty and lifestyle brands have their own page on{' '}
+          <Link href="/ai-video-production-fashion">AI fashion films</Link>, and the{' '}
+          <Link href="/ai-corporate-video-production">AI corporate video production</Link> page covers company films. For
+          Calgary and the rest of Canada, see <Link href="/markets/ai-video-production-canada">AI video production in Calgary and Canada</Link>.
         </p>
-      </section>
+      </GuideSection>
 
-      {/* Services Detail */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 pb-32">
-        <div className="divide-y divide-[#1a1a1a]">
-          {services.map((service) => (
-            <div key={service.number} className="py-20">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                {/* Left */}
-                <div className="lg:col-span-4">
-                  <span style={{ ...displayStyle, fontSize: '80px', color: '#1a1a1a' }} className="block mb-4">
-                    {service.number}
-                  </span>
-                  <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 5vw, 60px)' }} className="text-white mb-3 leading-none">
-                    {service.title}
-                  </h2>
-                  <p className="text-[#ebff00] text-sm italic mb-6">{service.tagline}</p>
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {service.categories.map((cat) => (
-                      <span key={cat} className="text-xs uppercase tracking-[0.15em] px-3 py-1 border border-[#1a1a1a] text-[#666666]">
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-[#ebff00] hover:text-white transition-colors"
-                  >
-                    Explore {service.title}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
+      <GuideSection eyebrow="How it is made" title="How every Ruminate X film gets made" alt>
+        <p>
+          Each service runs through the same six stages, set out in full in{' '}
+          <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+        </p>
+        <ol>
+          <li><strong>The brief.</strong> You send the product, the audience and what the film has to do; {studio} hands back a creative brief.</li>
+          <li><strong>The brand world.</strong> Palette, light, texture, camera language and casting are fixed before any frame exists, so shot 40 looks like shot 1.</li>
+          <li><strong>Script and boards.</strong> The script breaks into shots, each with framing, motion and duration, and you approve the boards.</li>
+          <li><strong>Generation passes.</strong> Every shot is generated, checked against its board and regenerated until faces, hands and the product hold.</li>
+          <li><strong>Edit, sound and grade.</strong> Takes are cut to the script, your real logo, product and on-screen text are set from your files, then sound and grade.</li>
+          <li><strong>Delivery.</strong> A master plus the cutdowns and aspect ratios your media plan calls for.</li>
+        </ol>
+        <h3>Where AI footage breaks, and what is done about it</h3>
+        <p>
+          Generated footage fails in the same places on every job: faces that drift between shots, hands holding a
+          product, packaging and labels, logos, any text on screen, and continuity when a character or a room has to
+          stay the same across cuts. {studio} plans around those before generation starts. Characters and places are
+          defined in the brand world, shots that need the product are generated from your product images, and every
+          word, logo and claim is set in the edit instead of trusted to a model.
+        </p>
+        <GuideFilm id="LYA3Do3KEN0" caption="The Love of Trail Running, an original Ruminate X film: generated end to end, cut, scored and graded by people." />
+      </GuideSection>
 
-                {/* Right */}
-                <div className="lg:col-span-8">
-                  <p className="text-[#888888] leading-relaxed text-lg mb-10">{service.description}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">Deliverables</h4>
-                      <ul className="space-y-2">
-                        {service.deliverables.map((item) => (
-                          <li key={item} className="flex items-center gap-3 text-sm text-[#888888]">
-                            <span className="w-1 h-1 bg-[#ebff00] rounded-full flex-shrink-0" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-[0.2em] text-[#ebff00] mb-4">Ideal For</h4>
-                      <p className="text-sm text-[#888888] leading-relaxed mb-6">{service.idealFor}</p>
-                      <Link
-                        href={service.href}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-[#ebff00] transition-colors"
-                      >
-                        Visit the dedicated {service.title.toLowerCase()} page
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GuideSection eyebrow="Price" title="How much AI video production services cost">
+        <p>
+          {priceLine('commercial')}. Brand films also start at {from}. For scale, the reference project{' '}
+          {studio} publishes is {REFERENCE_PROJECT.what} at {REFERENCE_PROJECT.price}. Company films, UGC-style ads,
+          product visuals and avatar videos are quoted from the brief.
+        </p>
+        <p>
+          What moves a quote: running time and the number of distinct scenes; recurring characters that have to stay
+          consistent; how exactly your product or a real place has to be reproduced; the number of cutdowns, aspect
+          ratios and languages; and how many review rounds your legal or medical reviewers need. The guides on{' '}
+          <Link href="/guides/ai-commercial-cost">how much an AI commercial costs</Link> and{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">AI video production cost and agency pricing</Link>{' '}
+          set those prices against a filmed shoot.
+        </p>
+        <h3>How to get a quote</h3>
+        <p>
+          Send the brief to <Link href="/contact">{studio}</Link>: the objective, the audience, the message, where it
+          runs, the deliverables, the date and a budget range. The{' '}
+          <Link href="/guides/video-production-brief">video production brief</Link> guide has each line with an example.
+        </p>
+      </GuideSection>
 
-      {/* Service path chooser */}
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">Choose the Right Path</p>
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 72px)' }} className="text-white leading-none mb-6">
-            START WITH THE
-            <br />
-            RIGHT SERVICE PAGE
-          </h2>
-          <p className="text-[#888888] text-lg max-w-3xl leading-relaxed mb-12">
-            The four films brands brief Ruminate X for most. Each page shows the process, the deliverables and the questions buyers ask before they hire.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-            {[
-              {
-                href: '/ai-brand-film-agency',
-                title: 'AI Brand Films',
-                copy: 'For brands that want the film about what they stand for, made without a shoot.',
-              },
-              {
-                href: '/ai-commercial-production',
-                title: 'AI Commercial Production',
-                copy: 'For campaign teams that need a spot for TV, streaming and social, plus every cutdown.',
-              },
-              {
-                href: '/ai-video-production-healthcare',
-                title: 'Pharma & Medical Films',
-                copy: 'For pharma, pharmacy, lab and medical marketers whose every claim goes through review.',
-              },
-              {
-                href: '/ai-corporate-video-production',
-                title: 'Company & About-Us Films',
-                copy: 'For comms and HR leads who need the company film without pulling people off the job.',
-              },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="border border-[#1a1a1a] p-6 hover:border-[#ebff00]/40 hover:bg-[#0b0b0b] transition-colors"
-              >
-                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-[#888888] leading-relaxed">{item.copy}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideFit
+        title={`Who ${studio}'s ${inSentence(offer('brand-film').name)} and AI commercials are built for`}
+        hire={[
+          'A brand manager with a launch in a few weeks and no budget or time for a shoot.',
+          'A pharma or pharmacy marketer who needs every claim set from approved copy and boards reviewed before generation.',
+          'A comms or HR lead who needs a company film without taking the team off the job.',
+          'A performance marketer who needs new hooks and versions every week.',
+          'An agency producer who needs a finished AI film delivered to their client’s spec.',
+        ]}
+      />
 
-      {/* Process */}
-      <section className="border-t border-[#1a1a1a] py-24 bg-[#050505]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <p className="text-[#ebff00] text-xs uppercase tracking-[0.3em] mb-4">How We Work</p>
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(48px, 8vw, 100px)' }} className="text-white leading-none mb-16">
-            THE PROCESS
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'The Brief', description: "Tell us what the film has to do, who has to see it, where it will run and when. The scene in your head that nobody has been able to pull off is where we start. Nothing is generated until the brief is approved." },
-              { step: '02', title: 'World & Boards', description: 'Palette, light, lenses, casting and texture are fixed before the first frame, so the last shot matches the first. Then the script, and a board for every shot with its framing, movement and length.' },
-              { step: '03', title: 'Generation', description: 'Each shot is generated, checked against its board and generated again until it holds. Faces, hands and your product get the most passes, because that is where AI footage goes wrong.' },
-              { step: '04', title: 'The Cut', description: 'Edit, voice, music, mix and grade. Your real logo and on-screen text go in from your brand files, then the cutdowns and aspect ratios are cut from the finished film.' },
-            ].map(({ step, title, description }) => (
-              <div key={step} className="border border-[#1a1a1a] p-8">
-                <span style={{ ...displayStyle, fontSize: '48px', color: '#ebff00' }} className="block mb-4">{step}</span>
-                <h3 style={{ ...displayStyle, fontSize: '28px' }} className="text-white mb-4">{title}</h3>
-                <p className="text-[#666666] text-sm leading-relaxed">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <GuideFaq faqs={FAQS} />
 
-      {/* CTA */}
-      <section className="py-24 border-t border-[#1a1a1a] text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <h2 style={{ ...displayStyle, fontSize: 'clamp(40px, 6vw, 80px)' }} className="text-white leading-none mb-6">
-            WHAT SCENE<br />ARE YOU TRYING<br />
-            <span style={{ color: '#ebff00' }}>TO MAKE REAL?</span>
-          </h2>
-          <p className="text-[#888888] mb-8">Bring us the vision. The impossible shot. The story your brand has been trying to tell. We start there.</p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors"
-          >
-            Start a Project
-          </Link>
-        </div>
-      </section>
-    </>
+      <GuideRelated
+        links={[
+          { href: '/ai-commercial-production', title: 'AI commercial production', note: 'What an AI commercial includes, by industry, and how to brief one.' },
+          { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What a brand film is for and how much an AI brand film costs.' },
+          { href: '/how-we-make-an-ai-brand-film', title: 'How we make an AI brand film', note: 'The six stages, from brief to final cut.' },
+          { href: '/work', title: 'The work', note: 'Ruminate X films, each labelled original, spec or client.' },
+          { href: '/guides/video-production-brief', title: 'How to brief a video production company', note: 'What to send before the first call.' },
+        ]}
+      />
+
+      <GuideCta />
+    </Guide>
   )
 }

@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what an AI video production agency does, what to look for when hiring one, and how Ruminate X works',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-10-30',
   },
   {
     path: '/ai-commercial-production',
@@ -61,10 +61,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-brand-film-agency',
     title: 'AI Brand Film Production for Companies',
-    question: 'ai brand films: what they are, how Ruminate X makes one, what makes AI footage cinematic, and what it costs',
+    question: 'ai brand films: what they are, how Ruminate X makes one, what makes AI footage cinematic, and how much an AI brand film costs',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-28',
+    updated: '2026-10-30',
   },
   {
     path: '/ai-video-production-healthcare',
@@ -281,5 +281,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'comparison',
     published: '2026-03-08',
     updated: '2026-10-28',
+  },
+  {
+    path: '/services',
+    title: 'AI Video Production Services',
+    question: 'what AI video production services Ruminate X offers, who each is for, and what they cost',
+    kind: 'service',
+    published: '2026-03-07',
+    updated: '2026-10-30',
   },
 ]
