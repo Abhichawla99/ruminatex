@@ -38,7 +38,7 @@ const PAGE = {
   title: 'AI Video Production for Ecommerce Brands',
   description: `${studio} makes AI video for ecommerce and DTC brands: product films and stills, launch films, UGC-style ads, and the marketplace and social versions of each, with every frame generated and your real product, label and logo set in the edit from your files. What it costs, what an Amazon video ad allows, and where generated product shots break.`,
   published: '2026-03-07',
-  updated: '2026-10-28',
+  updated: '2026-10-31',
   keywords: [
     'ai video for ecommerce',
     'AI video production for ecommerce brands',
@@ -228,6 +228,8 @@ export default function Page() {
         <p>
           Each stage of the pipeline is on <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>,
           and the launch spot with its cutdowns is on <Link href="/ai-commercial-production">AI commercial production</Link>.
+          A 15-second product-drop ad, shot by shot, and where generated people can and cannot appear in one, is in{' '}
+          <Link href="/ai-commercial-production#ecommerce">AI commercials for e-commerce brands</Link>.
         </p>
       </GuideSection>
 

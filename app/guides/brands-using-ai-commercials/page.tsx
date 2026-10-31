@@ -21,7 +21,7 @@ const PAGE = {
   title: 'AI Commercials by Big Brands: What Happened',
   description: `AI commercials from Svedka's 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald's, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, Pennsylvania's new AI ad label law, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work. ${SITE.name}, an AI film studio, makes AI commercials for brands.`,
   published: '2026-09-26',
-  updated: '2026-10-28',
+  updated: '2026-10-31',
   keywords: [
     'ai commercials',
     'ai commercial',
@@ -201,7 +201,9 @@ export default function Page() {
           {studio} boards every shot and shows you where generated people appear, and how close the camera gets, before
           anything is generated. Faces, hands and the product get the most generation passes, and your real logo and
           on-screen text are set in the edit from your brand files; see{' '}
-          <Link href="/ai-commercial-production">AI commercial production</Link>.
+          <Link href="/ai-commercial-production">AI commercial production</Link>. For a store or DTC brand, the shot list
+          and the rule on AI actors are in{' '}
+          <Link href="/ai-commercial-production#ecommerce">AI commercials for e-commerce brands</Link>.
         </p>
       </GuideStudio>
 

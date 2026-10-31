@@ -32,15 +32,15 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what an AI video production agency does, what to look for when hiring one, and how Ruminate X works',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-30',
+    updated: '2026-10-31',
   },
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: how Ruminate X makes an AI commercial, what it delivers and costs, AI commercials for fitness brands and tech companies, and AI VFX vs a fully generated ad',
+    question: 'ai commercial production company: how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-28',
+    updated: '2026-10-31',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which companies are using AI for ads, what TV commercials are AI, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-28',
+    updated: '2026-10-31',
   },
   {
     path: '/best-video-production-company-calgary',
