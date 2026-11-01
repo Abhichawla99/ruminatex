@@ -233,7 +233,9 @@ export default function Page() {
           language, the kind of people on screen) is built next with <a href={hundred.url}>{hundred.name}</a>. Then the
           script breaks into a beat sheet and a shot list you see before any frame exists. Faces, hands, product details
           and brand colours get extra generation passes, and logos and on-screen text are set in the edit from your files.
-          Every stage is on <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>.
+          Every stage is on <Link href="/how-we-make-an-ai-brand-film">how we make an AI brand film</Link>. If the film
+          has an air date, put it in the brief: <Link href="/guides/how-long-does-an-ai-commercial-take">how long it takes
+          to make an AI commercial</Link> covers what each stage waits on.
         </p>
         <GuideFilm
           id="LYA3Do3KEN0"

@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-31',
+    updated: '2026-11-01',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -256,7 +256,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does an ai commercial cost, an AI vs a filmed TV commercial line by line, and do actors get paid for AI commercials',
     kind: 'guide',
     published: '2026-10-22',
-    updated: '2026-10-28',
+    updated: '2026-11-01',
   },
   {
     path: '/blog/top-ai-video-agencies-2026',
@@ -289,5 +289,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'service',
     published: '2026-03-07',
     updated: '2026-10-30',
+  },
+  {
+    path: '/guides/how-long-does-an-ai-commercial-take',
+    title: 'How Long Does an AI Commercial Take?',
+    question: 'how long does it take to make an ai commercial: the published ranges, what each stage waits on, what adds days, and how Ruminate X plans back from the air date',
+    kind: 'guide',
+    published: '2026-11-01',
+    updated: '2026-11-01',
   },
 ]

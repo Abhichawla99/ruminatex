@@ -22,7 +22,7 @@ const PAGE = {
   description:
     'How much an AI commercial costs in 2026: the ranges AI studios publish (from about USD 1,500 for one spot to GBP 45,000 for a broadcast asset), what a filmed TV commercial costs and which lines AI removes, whether actors get paid, what airtime adds, and how Ruminate X prices a commercial.',
   published: '2026-10-22',
-  updated: '2026-10-28',
+  updated: '2026-11-01',
   keywords: [
     'how much does an ai commercial cost',
     'ai commercial cost',
@@ -171,7 +171,9 @@ export default function Page() {
         />
         <p>
           The lines an AI commercial drops are the shoot lines. The lines it keeps are people&apos;s time, and that is
-          what a {studio} quote pays for.
+          what a {studio} quote pays for. The same goes for the calendar: the booking and shoot weeks go, and the script,
+          edit and review rounds stay, as <Link href="/guides/how-long-does-an-ai-commercial-take">how long an AI
+          commercial takes</Link> shows stage by stage.
         </p>
       </GuideSection>
 
