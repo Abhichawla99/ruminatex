@@ -26,10 +26,10 @@ const AICP_2019 = 'https://aicp.com/news-roundup/news-from-aicp/aicp-introduces-
 
 const PAGE = {
   path: '/comparison/ai-agency-vs-traditional-agency',
-  title: 'AI Video Agency vs Traditional Production',
-  description: `When a brand should hire an AI video production partner instead of a production company or an AI tool run in-house, what each route costs in money and staff hours, how a 2-minute brand video is priced either way, and how ${studio} makes commercials and brand films with every frame generated.`,
+  title: 'When to Hire an AI Video Production Partner',
+  description: `Hire an AI video production partner when the film runs under your brand, your team lacks the days to generate, rerun, edit and mix every shot, and everyone on screen can be generated. AI or a production company, a tool or an agency, and what each costs; ${studio} makes AI commercials and brand films with no shoot to book.`,
   published: '2026-03-08',
-  updated: '2026-10-28',
+  updated: '2026-11-02',
   keywords: [
     'when should a brand hire an ai video production partner',
     'is it better to use ai or hire a production company',
@@ -121,20 +121,20 @@ export default function Page() {
   return (
     <Guide page={PAGE} faqs={FAQS} films={['Zytga7zsShI', 'LYA3Do3KEN0']}>
       <GuideHero
-        eyebrow="AI vs traditional"
-        title="AI video agency vs traditional production company"
+        eyebrow="AI or a production company"
+        title="When to hire an AI video production partner instead of a production company"
         dek="For the marketing lead deciding whether this year's commercial or brand film gets shot or generated, and who to hire for it."
         updated={PAGE.updated}
       />
 
       <GuideAnswer>
         <p>
-          A traditional production company films your commercial or brand film with a crew; an AI video agency generates
-          every shot, so there are no crew days, locations or reshoots to pay for. {studio}, an AI film studio in{' '}
-          {SITE.city}, makes commercials, brand films and company films for {brandBuyers}: every frame generated with
-          AI, with the script, boards, edit, sound and grade done by people. Hire it as your AI production partner when
-          the film runs under your brand, your team does not have the days to generate, rerun, edit and mix every shot,
-          and everyone on screen can be generated.
+          Hire an AI video production partner when three things are true: the film runs under your brand, in paid media,
+          on your site or at a launch; nobody on your team has the days to generate, rerun, edit and mix every shot; and
+          everyone and everything on screen can be generated. {studio}, an AI film studio in {SITE.city}, is that partner
+          for commercials, brand films and company films for {brandBuyers}: every frame is generated with AI, people
+          write, board, edit, mix and grade the film, and there are no crew days, locations or reshoots in the quote.
+          A production company films with a crew, which you still need when real people must appear as themselves.
         </p>
       </GuideAnswer>
 

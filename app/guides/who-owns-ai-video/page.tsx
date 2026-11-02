@@ -19,12 +19,12 @@ const PAGE = {
   path: '/guides/who-owns-ai-video',
   title: 'Who Owns an AI Video? Copyright for Brands',
   description:
-    'Who owns an AI-generated commercial or brand film: what the US Copyright Office and courts decided, what the AI video model terms say, where Canada stands, and the ownership clauses to put in your studio contract.',
+    'Who owns AI-generated video content, such as a commercial or brand film: what the US Copyright Office and courts decided, what the AI video model terms say, where Canada stands, and the ownership clauses to put in your studio contract.',
   published: '2026-09-30',
-  updated: '2026-10-28',
+  updated: '2026-11-02',
   keywords: [
-    'ai video copyright',
     'who owns ai-generated video content',
+    'ai video copyright',
     'who owns the rights to AI created content',
     'can you copyright something that is AI-generated',
     'who owns the copyright to AI-generated content',
@@ -50,8 +50,8 @@ const CIPPIC = 'https://www.cippic.ca/our-work/cippic-v-sahni'
 
 const FAQS = [
   {
-    q: 'Who owns the rights to AI created content?',
-    a: 'In the US, nobody owns copyright in purely AI-generated material: the US Copyright Office said in January 2025 that copyright "does not extend to purely AI-generated material", and the courts require a human author (Thaler v. Perlmutter, D.C. Circuit, March 2025; the Supreme Court declined the case in March 2026). The tool companies do not claim the output either; Runway, OpenAI, Google Cloud and Kling all leave or assign it to the user. What a brand owns in an AI commercial is the human work in it, plus whatever its contract with the studio transfers. This is not legal advice.',
+    q: 'Who owns AI-generated video content?',
+    a: 'In the US, nobody owns copyright in purely AI-generated video or other material: the US Copyright Office said in January 2025 that copyright "does not extend to purely AI-generated material", and the courts require a human author (Thaler v. Perlmutter, D.C. Circuit, March 2025; the Supreme Court declined the case in March 2026). The tool companies do not claim the output either; Runway, OpenAI, Google Cloud and Kling all leave or assign it to the user. What a brand owns in an AI commercial is the human work in it, plus whatever its contract with the studio transfers. This is not legal advice.',
   },
   {
     q: 'Can you copyright something that is AI-generated?',

@@ -52,11 +52,11 @@ export const SEO_PAGES: SeoPage[] = [
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
-    title: 'AI Video Agency vs Traditional Production',
+    title: 'When to Hire an AI Video Production Partner',
     question: 'when should a brand hire an ai video production partner instead of a production company, should I use an AI video tool or hire an agency, and what a 2-minute brand video costs either way',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-11-02',
   },
   {
     path: '/ai-brand-film-agency',
@@ -208,7 +208,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'who owns the rights to an AI-generated commercial or brand film, and can it be copyrighted',
     kind: 'guide',
     published: '2026-09-30',
-    updated: '2026-10-28',
+    updated: '2026-11-02',
   },
   {
     path: '/guides/ai-pharma-commercials',
