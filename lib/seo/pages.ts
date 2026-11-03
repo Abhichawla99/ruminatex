@@ -69,10 +69,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-healthcare',
     title: 'AI Video Production for Pharma and Healthcare',
-    question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, and the FDA rules for drug ads',
+    question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, which biotech company videos AI can make, and the FDA rules for drug ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-10-28',
+    updated: '2026-11-03',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -224,7 +224,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does medical animation cost per minute, how much would a 3 minute animation cost, and can AI make medical films',
     kind: 'guide',
     published: '2026-10-03',
-    updated: '2026-10-28',
+    updated: '2026-11-03',
   },
   {
     path: '/ai-ugc-reels',

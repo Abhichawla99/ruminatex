@@ -19,7 +19,7 @@ const PAGE = {
   title: 'Medical Animation Cost: 2D, 3D, MOA and AI',
   description: `Medical animation costs about $2,000 to $8,000 a finished minute in 2D and $8,000 to $20,000 or more in 3D on the rate cards studios publish (October 2026). What a 3-minute film and a mechanism of action animation cost, where AI medical animation works for pharma, biotech and lab marketing, where it gets the science wrong, and how ${SITE.name} makes AI films for pharma, lab and medical companies.`,
   published: '2026-10-03',
-  updated: '2026-10-28',
+  updated: '2026-11-03',
   keywords: [
     'how much does medical animation cost',
     'medical animation cost',
@@ -187,7 +187,8 @@ export default function Page() {
           against the label, and surgical or device training by surgeons and trainers against the procedure. Every
           structure in those films has to be modelled from data. A brand film, conference opener or investor film is
           judged by your brand team, with the science as a backdrop, and a disease-awareness film by MLR for what it
-          implies.
+          implies. Which <Link href="/ai-video-production-healthcare#biotech">biotech company videos</Link> an AI studio can
+          make, and which need a camera or a 3D modeller, is set out format by format on the pharma and healthcare page.
         </p>
         <p>
           The line falls where a viewer could read the picture as a claim. A glowing particle drifting through light is a
