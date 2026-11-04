@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech and e-commerce brands, and AI VFX vs a fully generated ad',
+    question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-01',
+    updated: '2026-11-04',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -61,10 +61,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-brand-film-agency',
     title: 'AI Brand Film Production for Companies',
-    question: 'ai brand films: what they are, how Ruminate X makes one, what makes AI footage cinematic, and how much an AI brand film costs',
+    question: 'ai brand films and ai film production companies: what they are, which kind makes films for brands, how Ruminate X makes one, what makes AI footage cinematic, and how much an AI brand film costs',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-10-30',
+    updated: '2026-11-04',
   },
   {
     path: '/ai-video-production-healthcare',
