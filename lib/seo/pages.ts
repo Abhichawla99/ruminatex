@@ -45,18 +45,18 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/blog/how-much-does-ai-video-production-cost',
     title: 'AI Video Production Cost and Agency Pricing',
-    question: 'how much does ai video production cost for brands in 2026, how do AI video production agencies price, and what moves a Ruminate X quote',
+    question: 'how much does ai video production cost for brands in 2026, how much should a 2, 3 or 5 minute video cost, how do AI video production agencies price, and what moves a Ruminate X quote',
     kind: 'guide',
     published: '2026-02-22',
-    updated: '2026-10-28',
+    updated: '2026-11-05',
   },
   {
     path: '/comparison/ai-agency-vs-traditional-agency',
     title: 'When to Hire an AI Video Production Partner',
-    question: 'when should a brand hire an ai video production partner instead of a production company, should I use an AI video tool or hire an agency, and what a 2-minute brand video costs either way',
+    question: 'when should a brand hire an ai video production partner instead of a production company, should I use an AI video tool or hire an agency, what AI video outsourcing hands to the studio, and what a 2-minute brand video costs either way',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-11-02',
+    updated: '2026-11-05',
   },
   {
     path: '/ai-brand-film-agency',
