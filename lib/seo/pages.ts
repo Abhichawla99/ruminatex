@@ -69,10 +69,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-video-production-healthcare',
     title: 'AI Video Production for Pharma and Healthcare',
-    question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, which biotech company videos AI can make, and the FDA rules for drug ads',
+    question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, which biotech company videos AI can make, what video ads for GLP-1, TRT and HRT clinics can say and show, and the FDA rules for drug ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-11-03',
+    updated: '2026-11-07',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -181,10 +181,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/best-video-production-company-calgary',
     title: 'Best Video Production Company in Calgary',
-    question: 'best video production company in calgary: how to choose a Calgary video production company, and what Ruminate X makes for Calgary brands',
+    question: 'best video production company in calgary: how to choose a Calgary video production company, where to get an AI promo, marketing or synthetic video made in Calgary, and what Ruminate X makes for Calgary brands',
     kind: 'guide',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-11-07',
   },
   {
     path: '/faq-ai-video-production',

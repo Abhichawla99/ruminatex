@@ -247,7 +247,9 @@ export default function Page() {
           <a href={ISPOT_PEAK}>&ldquo;Same Results&rdquo;</a>, listed by iSpot from March 2, 2026, is the one people ask
           about, and Google&apos;s related searches ask about the commercial&apos;s AI actress, actor and cast. Peak Blue Rx
           has not said whether AI was used, iSpot names no actors for the spot, and no news outlet has reported it as of
-          October 28, 2026. It is viewer suspicion, the same as Icotyde.
+          October 28, 2026. It is viewer suspicion, the same as Icotyde. Online men&apos;s health, weight-loss and hormone
+          brands advertise under extra rules from FDA and the ad platforms; what those rules mean for the video itself is
+          in <Link href="/ai-video-production-healthcare#clinics">video ads for GLP-1, TRT and HRT clinics</Link>.
         </p>
         <p>
           Viewers also say they want to be told. In <a href={IAB}>IAB&apos;s January 2026 survey</a> of 505 US Gen Z and

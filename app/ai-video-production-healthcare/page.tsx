@@ -52,9 +52,9 @@ const healthBuyers = joinAnd(BUYERS.filter((b) => /pharma|labs|medical/.test(b))
 const PAGE = {
   path: '/ai-video-production-healthcare',
   title: 'AI Video Production for Pharma and Healthcare',
-  description: `${studio} makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Plus the biotech company videos an AI studio can make, the FDA and Health Canada rules that shape a drug or health video, and what breaks in AI medical imagery.`,
+  description: `${studio} makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Plus biotech company videos, ads for GLP-1, TRT and HRT clinics, the FDA and Health Canada rules that shape a drug or health video, and what breaks in AI medical imagery.`,
   published: '2026-03-07',
-  updated: '2026-11-03',
+  updated: '2026-11-07',
   keywords: [
     'ai video for pharma marketing',
     'ai video production healthcare',
@@ -67,6 +67,9 @@ const PAGE = {
     'pharma video production',
     'biotech video production',
     'biotech company video',
+    'video ads for glp-1 clinics',
+    'ai video generation for healthcare ads',
+    'weight loss clinic marketing',
   ],
 }
 
@@ -80,6 +83,11 @@ const VONJO = 'https://www.fda.gov/media/191036/download'
 const FDA_SEPT = 'https://www.fda.gov/news-events/press-announcements/fda-launches-crackdown-deceptive-drug-advertising'
 const IRB_ADS = 'https://www.fda.gov/regulatory-information/search-fda-guidance-documents/recruiting-study-subjects'
 const AGENDA = 'https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=0910-AJ14'
+const FDA_TELEHEALTH_LETTERS = 'https://www.fda.gov/news-events/press-announcements/fda-warns-30-telehealth-companies-against-illegal-marketing-compounded-glp-1s'
+const FDA_TELEHEALTH_RULES = 'https://www.fda.gov/drugs/human-drug-compounding/fda-telehealth-companies-what-know-when-promoting-compounded-drugs'
+const META_RX = 'https://transparency.meta.com/policies/ad-standards/restricted-goods-services/drugs-pharmaceuticals/'
+const META_HEALTH = 'https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/'
+const GOOGLE_RX = 'https://support.google.com/adspolicy/answer/15598647'
 
 const FAQS = [
   {
@@ -109,6 +117,10 @@ const FAQS = [
   {
     q: 'Do AI-generated patients or doctors in an ad have to be disclosed?',
     a: 'Platform rules apply: YouTube asks for disclosure when realistic content is made or meaningfully altered with AI (YouTube Help, checked September 2026). Beyond that, whether an AI-generated person who looks like a patient or clinician needs a super on screen is a question for your MLR team and counsel. A label stops viewers reading a realistic generated doctor as a real one.',
+  },
+  {
+    q: 'Can an AI video ad be made for a GLP-1, TRT or HRT clinic?',
+    a: `Yes, with the claims kept inside what FDA and the ad platforms allow. ${studio}, an AI film studio in ${city}, makes video ads for medical clinics with generated people and settings, and sets every claim and disclosure in the edit from copy the clinic's counsel approved. FDA's page for telehealth companies promoting compounded drugs says an ad must not call a compounded drug a generic or the same as an approved drug, call it FDA-approved, claim it is clinically proven to work like an approved drug, or say it comes from an FDA-approved pharmacy (FDA, checked November 2026). Meta also requires telehealth advertisers of prescription drugs to be certified with LegitScript and bars side-by-side weight-loss before-and-after images. This is not legal or regulatory advice.`,
   },
   {
     q: "What are the FDA's rules for prescription drug ads?",
@@ -217,7 +229,58 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="MLR review" title="How every claim gets through MLR">
+      <GuideSection id="clinics" eyebrow="Clinics" title="Video ads for GLP-1, TRT and HRT clinics">
+        <p>
+          A weight-loss, testosterone or hormone clinic, in person or telehealth, usually needs short video ads for Meta,
+          Google and YouTube, and sometimes a TV spot. {studio} makes them with generated people and settings, and sets
+          every claim, price and disclosure in the edit from the copy your counsel approved. Two sets of rules decide what
+          those ads can say and show before anyone looks at the pictures.
+        </p>
+        <h3>What FDA has told telehealth companies about compounded drugs</h3>
+        <p>
+          On March 3, 2026 FDA announced <a href={FDA_TELEHEALTH_LETTERS}>warning letters to 30 telehealth companies</a>{' '}
+          over compounded GLP-1 marketing, citing claims that implied the compounded drug was the same as an approved one
+          and drugs branded with the telehealth company&apos;s own name without saying who compounded them. FDA&apos;s page{' '}
+          <a href={FDA_TELEHEALTH_RULES}>for telehealth companies promoting compounded drugs</a> (current as of June 15,
+          2026, checked November 2026) lists five practices it treats as false or misleading:
+        </p>
+        <ol>
+          <li>Branding that implies the telehealth company is the compounder.</li>
+          <li>Calling a compounded drug a generic of, or the same as, an FDA-approved drug.</li>
+          <li>Saying a compounded drug is FDA-approved or has been evaluated by FDA for safety and effectiveness.</li>
+          <li>Saying it is clinically proven to produce the same result as an approved drug.</li>
+          <li>Saying it comes from an FDA-approved or FDA-licensed pharmacy. FDA does not approve or license any facility.</li>
+        </ol>
+        <p>
+          In a video those rules reach past the voiceover. A super that names an approved drug next to your product, a
+          generated pen or vial dressed to look like a branded one, and an &ldquo;FDA&rdquo; badge on screen all
+          carry a claim. {studio} boards every shot so your reviewers can strike those before anything is generated. FDA&apos;s page
+          covers other compounded drugs as well as GLP-1s, so a clinic prescribing compounded hormones should read it
+          the same way. A clinic that prescribes only FDA-approved products works under the prescription
+          drug ad rules further down this page.
+        </p>
+        <h3>The platform gates</h3>
+        <p>
+          Meta&apos;s <a href={META_RX}>drugs and pharmaceuticals policy</a> requires online pharmacies and telehealth
+          providers advertising prescription drugs to be certified with LegitScript, authorized by Meta, and to target
+          only people 18 or older in the United States, Canada or New Zealand. Its{' '}
+          <a href={META_HEALTH}>health and wellness policy</a> bars side-by-side before-and-after weight-loss comparisons
+          and ads that try to make people feel bad about their bodies. Google requires{' '}
+          <a href={GOOGLE_RX}>certification for prescription drug services</a>, including online pharmacies and
+          telemedicine providers (all checked November 2026). Certification is the clinic&apos;s job and comes before the
+          media buy; the creative still has to pass review ad by ad.
+        </p>
+        <h3>What a generated clinic ad shows</h3>
+        <p>
+          Generated people are portrayals. In a {studio} clinic ad none of them tells the viewer how much weight they lost
+          or how their levels changed, no frame sets a before body beside an after body, and a generated person in scrubs
+          never speaks as your clinician. What the ad can carry is the service, the process (a consult, a prescription
+          when appropriate, follow-up) and the price, all typeset from approved copy. {priceLine('commercial')}. This is
+          not legal or regulatory advice; your counsel decides what each ad says.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="MLR review" title="How every claim gets through MLR" alt>
         <p>
           Your medical, legal and regulatory reviewers sign off on every word and every frame. {studio} builds the film so
           they can:
@@ -261,7 +324,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The rules" title="US and Canadian rules that shape a drug or health ad" alt>
+      <GuideSection eyebrow="The rules" title="US and Canadian rules that shape a drug or health ad">
         <p>
           <strong>United States, prescription drugs on TV.</strong> Under{' '}
           <a href={CFR}>21 CFR 202.1(e)(1)(ii)</a>, a consumer TV or radio ad for a prescription drug must present the
@@ -289,7 +352,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads">
+      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads" alt>
         <p>
           A video ad for a prescription drug carries three things the creative has to make room for, whether the pictures
           are filmed or generated:
@@ -329,7 +392,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title={`What breaks in AI medical imagery, and how ${studio} fixes it`} alt>
+      <GuideSection eyebrow="The weak points" title={`What breaks in AI medical imagery, and how ${studio} fixes it`}>
         <GuideTable
           caption={`Where generated footage fails in pharma and medical work. Faces, hands and the product get the most generation passes in the ${studio} pipeline, and every science shot is checked against your references.`}
           head={['Problem', 'Why it matters here', `How ${studio} fixes it`]}
