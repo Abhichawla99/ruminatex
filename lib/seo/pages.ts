@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech and e-commerce brands, and AI VFX vs a fully generated ad',
+    question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech, AI infrastructure and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-04',
+    updated: '2026-11-08',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -229,10 +229,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-ugc-reels',
     title: 'AI UGC Ads Agency for Brands',
-    question: 'ai ugc ads agency: what AI UGC ads are, how Ruminate X makes them, what they cost, and the disclosure rules on Meta and TikTok',
+    question: 'ai ugc ads agency: what AI UGC ads are, how Ruminate X makes them, what they cost, and whether AI UGC (synthetic UGC) is legal: the disclosure rules on Meta, TikTok and the FTC',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-11-08',
   },
   {
     path: '/ai-product-videos',

@@ -24,7 +24,7 @@ const PAGE = {
   title: 'AI UGC Ads Agency for Brands',
   description: `${studio} is an AI UGC ad agency that makes creator-style ads for Reels, TikTok and Shorts, with generated creators delivering scripted ad lines and your real product, label and logo set from your files. What moves the price, where these ads break, and the FTC, Meta, TikTok, New York and Pennsylvania rules.`,
   published: '2026-03-08',
-  updated: '2026-10-28',
+  updated: '2026-11-08',
   keywords: [
     'ai ugc ads agency',
     'ai ugc ads',
@@ -33,6 +33,8 @@ const PAGE = {
     'best ai ugc ads agency',
     'ai ugc video creator',
     'are ai ugc ads legal',
+    'is ai ugc legal',
+    'synthetic ugc',
     'can you do ugc content with ai',
     'do you have to disclose if an ad is ai',
     'are ai-generated ugc ads allowed on meta and tiktok?',
@@ -123,7 +125,9 @@ export default function Page() {
           The format copies what works in creator ads: a face in the first second, a hook, the product in hand, captions, a
           reason to buy, all in 9:16. The presenter, the setting and often the voice are generated. Nobody bought the
           product, so it is advertising in a creator&apos;s style, and {studio} writes every presenter line as an ad line,
-          never as a claim to have used the product.
+          never as a claim to have used the product. Some marketers call this synthetic UGC; the rules are the same
+          whatever it is called, and the <a href="#rules">rules section below</a> answers whether AI UGC is legal on each
+          platform.
         </p>
         <GuideTable
           caption={`The UGC-style formats ${studio} makes, and the line each one keeps, in ${studio}'s reading of the FTC rules cited below. Not legal advice.`}
@@ -187,7 +191,7 @@ export default function Page() {
         </ol>
       </GuideSection>
 
-      <GuideSection eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US" alt>
+      <GuideSection id="rules" eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US" alt>
         <GuideTable
           caption={
             <>
