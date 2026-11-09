@@ -17,10 +17,13 @@ import { PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 const PAGE = {
   path: '/guides/ai-pharma-commercials',
   title: 'AI Pharma Commercials: Who Has Made Them',
-  description: `No one has confirmed that the Saphnelo, Icotyde or Peak Blue Rx commercials are AI. The confirmed AI pharma ads are AstraZeneca's Breztri llama and Gilead Canada's Descovy bear and otter, and Grubb's Pharmacy apologized for AI imagery in its marketing. Plus the FDA rules for AI drug ads, who may appear in one, and how ${SITE.name} makes AI commercials for pharma and pharmacy brands.`,
+  description: `Johnson & Johnson has not said its Icotyde commercial is AI, and as of November 2026 no one has confirmed the Saphnelo or Peak Blue Rx ads are AI either. The confirmed AI pharma ads are AstraZeneca's Breztri llama and Gilead Canada's Descovy bear and otter, and Grubb's Pharmacy apologized for AI imagery in its marketing. Plus the FDA rules for AI drug ads, who may appear in one, and how ${SITE.name} makes AI commercials for pharma and pharmacy brands.`,
   published: '2026-10-01',
-  updated: '2026-10-28',
+  updated: '2026-11-09',
   keywords: [
+    'icotyde commercial ai',
+    'is the icotyde commercial ai',
+    'is the icotyde commercial ai generated',
     'ai generated pharma commercial',
     'which pharma company is using ai',
     'is saphnelo commercial ai generated',
@@ -34,7 +37,6 @@ const PAGE = {
     'is the peak blue rx commercial ai',
     'peak blue rx commercial',
     'is the icotyde commercial made with ai',
-    'is the icotyde commercial ai generated',
     'does the icotyde commercial use ai',
     'are the people in the icotyde commercial ai',
     'ai generated pharma commercial actors',
@@ -77,16 +79,16 @@ const CANADA_RX ='https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.,_c._870
 
 const FAQS = [
   {
+    q: 'Is the Icotyde commercial AI?',
+    a: 'No one has confirmed it. As of November 9, 2026, Johnson & Johnson has not said AI was used in its Icotyde psoriasis ad, "Unbelievable", no agency has claimed the work, and no news outlet has reported that it was AI generated. The spot launched on July 14, 2026 during Fox\'s World Cup semifinal and the MLB All-Star Game (MediaPost) and is still on air: iSpot counts 3,904 national airings between October 9 and November 8, 2026. A patient hears "good news" from her doctor while a unicorn walks past the window, and viewers ask whether the people in it are AI. Treat it as viewer suspicion until J&J says otherwise.',
+  },
+  {
     q: 'Which pharma company is using AI in its commercials?',
     a: 'AstraZeneca is the clearest case. Its September 2026 asthma campaign for the Breztri inhaler shows a llama, a goat and an oryx working in an office, and the whole production was created with AI (MediaPost, September 2026). Gilead Canada\'s "Animal Attraction" ad for Descovy, with an AI-generated bear and otter, won a bronze at the 2026 Cannes Pharma Lions (Fierce Pharma, July 2026). Both used AI for animals, not patients.',
   },
   {
     q: 'Is the Saphnelo commercial AI generated?',
     a: 'No one has confirmed that the Saphnelo ad is AI. As of October 2026, neither AstraZeneca nor any news outlet has said AI was used in a Saphnelo lupus commercial. AstraZeneca\'s first consumer campaign for Saphnelo, "Here for More", came out in May 2022 (Fierce Pharma), before video generators could make realistic people, so a spot from that campaign predates the tools. Until AstraZeneca says otherwise, treat it as viewer speculation.',
-  },
-  {
-    q: 'Is the Icotyde commercial made with AI?',
-    a: 'No one has confirmed that the Icotyde commercial is AI generated or uses AI at all. Johnson & Johnson\'s Icotyde psoriasis ad, "Unbelievable", launched on July 14, 2026 during Fox\'s World Cup semifinal and the MLB All-Star Game (MediaPost) and had aired nationally 6,354 times by October 7, 2026 (iSpot). It shows a patient hearing "good news" from her doctor while a unicorn walks past the window, and viewers ask whether the people in it are AI. As of October 2026 neither J&J nor any agency has said AI made it, and no news outlet has reported that it did.',
   },
   {
     q: 'Is the Peak Blue Rx commercial AI?',
@@ -138,7 +140,7 @@ export default function Page() {
       <GuideHero
         eyebrow="Guide · Pharma"
         title="AI pharma commercials: which drug brands have made them"
-        dek="For anyone asking whether the Saphnelo, Icotyde or Peak Blue Rx ad is AI, and for the pharma brand manager deciding whether to make one: what is confirmed, what the FDA rules say and what MLR will ask."
+        dek="For anyone asking whether the Icotyde, Saphnelo or Peak Blue Rx ad is AI, and for the pharma brand manager deciding whether to make one: what is confirmed, what the FDA rules say and what MLR will ask."
         updated={PAGE.updated}
       />
 
@@ -147,8 +149,9 @@ export default function Page() {
           Two drug brands have confirmed AI pharmaceutical commercials, and both used AI for animals rather than patients.
           AstraZeneca&apos;s Breztri asthma campaign (September 2026) puts an AI-made llama, goat and oryx in an office, and
           Gilead Canada&apos;s Descovy ad &ldquo;Animal Attraction&rdquo; uses an AI-made bear and otter and won a 2026
-          Cannes Pharma Lions bronze. As of October 2026, no one has confirmed that the Saphnelo, Icotyde or Peak Blue Rx
-          commercials were made with AI, and the one pharmacy case, Grubb&apos;s Pharmacy in Washington, DC, ended in an
+          Cannes Pharma Lions bronze. As of November 9, 2026, no one has confirmed that the Icotyde commercial is AI.
+          Johnson &amp; Johnson has not said so and no outlet has reported it. The same holds for the Saphnelo and Peak
+          Blue Rx commercials, and the one pharmacy case, Grubb&apos;s Pharmacy in Washington, DC, ended in an
           apology for AI-generated imagery. {studio}, an AI film studio in {city}, makes AI commercials for pharma and
           pharmacy brands: every frame generated with AI, with the script, boards, edit, sound and grade done by people, and
           every claim and the safety information set in the edit from copy your reviewers approved.
@@ -167,7 +170,7 @@ export default function Page() {
         <GuideTable
           caption={
             <>
-              Read October 2026. &ldquo;Confirmed&rdquo; means the company or its agency said AI was used;
+              Read October 2026; the Icotyde row checked November 9, 2026. &ldquo;Confirmed&rdquo; means the company or its agency said AI was used;
               &ldquo;unconfirmed&rdquo; means people ask, and neither the company nor any news outlet has said so.
             </>
           }
@@ -176,7 +179,7 @@ export default function Page() {
             ['Breztri, "put a LAMA to work" (2026)', 'AstraZeneca', 'The whole production: a llama, a goat and an oryx as office co-workers', 'Connected TV, YouTube, display, social (US)', 'Confirmed'],
             ['Descovy, "Animal Attraction" (launched 2025)', 'Gilead Canada', 'A realistic bear holding an otter in a river', 'Canada; bronze, Cannes Pharma Lions 2026', 'Confirmed'],
             ["Grubb's Pharmacy marketing (2026)", "Grubb's Pharmacy, Washington, DC", 'AI-generated imagery in its marketing', 'Its own channels', 'Confirmed by the pharmacy, which apologized (October 2026)'],
-            ['Icotyde, "Unbelievable" (July 2026)', 'Johnson & Johnson', 'People ask whether the doctor and patient are AI', 'US national TV, 6,354 airings to October 7, 2026 (iSpot)', 'Unconfirmed'],
+            ['Icotyde, "Unbelievable" (July 2026)', 'Johnson & Johnson', 'People ask whether the doctor and patient are AI', 'US national TV, still on air: 3,904 airings October 9 to November 8, 2026 (iSpot)', 'Unconfirmed'],
             ['Saphnelo TV ad', 'AstraZeneca', 'People ask whether it is AI', 'US TV', 'Unconfirmed'],
             ['Peak Blue Rx, "Same Results" (March 2026)', 'Peak Blue Rx', 'People ask whether its actors are AI', 'US TV, 60 seconds (iSpot)', 'Unconfirmed'],
           ]}
@@ -214,11 +217,28 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Is it AI?" title="Is the Saphnelo, Icotyde or Peak Blue Rx ad AI?" alt>
+      <GuideSection eyebrow="Is it AI?" title="Is the Icotyde, Saphnelo or Peak Blue Rx ad AI?" alt>
         <p>
-          People now check polished pharma ads for AI, and three get asked about by name: Saphnelo, Icotyde and Peak Blue
-          Rx. As of October 2026, none of the three companies has said AI was used, and no news outlet has reported that it
-          was.
+          People now check polished pharma ads for AI, and three get asked about by name: Icotyde, Saphnelo and Peak Blue
+          Rx. Icotyde draws the most searches. None of the three companies has said AI was used, and no news outlet has
+          reported that it was (checked November 9, 2026).
+        </p>
+        <h3 id="icotyde">Is the Icotyde commercial AI?</h3>
+        <p>
+          Icotyde is Johnson &amp; Johnson&apos;s once-daily psoriasis pill, which FDA{' '}
+          <a href={AJMC_ICOTYDE}>approved in March 2026</a>. Its spot, &ldquo;Unbelievable&rdquo;, set to the EMF song,{' '}
+          <a href={MEDIAPOST_ICOTYDE}>launched on July 14</a> during Fox&apos;s coverage of the World Cup semifinal and the
+          MLB All-Star Game, and had <a href={ISPOT_ICOTYDE}>aired nationally 6,354 times</a> by October 7; iSpot counts 3,904 more national
+          airings between October 9 and November 8, so it is still on air. A patient hears
+          &ldquo;good news&rdquo; from her doctor while a unicorn walks past the window, and searchers ask whether the
+          people in the Icotyde commercial are AI. Johnson &amp; Johnson has not said AI was used, no agency has claimed the
+          work, and no news outlet has reported it as of November 9, 2026. iSpot credits no actors and no agency for the
+          spot. Until J&amp;J says otherwise, treat &ldquo;is the Icotyde commercial AI generated?&rdquo; as viewer
+          suspicion with no confirmation behind it.
+        </p>
+        <p>
+          For a brand team the case shows that an ad can be read as AI whether or not AI made it. Performance direction and
+          the disclosure decision belong in the same review.
         </p>
         <h3>Is the Saphnelo ad AI?</h3>
         <p>
@@ -226,20 +246,6 @@ export default function Page() {
           consumer campaign for the drug, &ldquo;Here for More&rdquo;, launched in{' '}
           <a href={FIERCE_SAPHNELO_2022}>May 2022</a>, before generators could make realistic people. A spot from that
           campaign predates the tools.
-        </p>
-        <h3>Is the Icotyde commercial AI generated?</h3>
-        <p>
-          Icotyde is Johnson &amp; Johnson&apos;s once-daily psoriasis pill, which FDA{' '}
-          <a href={AJMC_ICOTYDE}>approved in March 2026</a>. Its spot, &ldquo;Unbelievable&rdquo;, set to the EMF song,{' '}
-          <a href={MEDIAPOST_ICOTYDE}>launched on July 14</a> during Fox&apos;s coverage of the World Cup semifinal and the
-          MLB All-Star Game, and had <a href={ISPOT_ICOTYDE}>aired nationally 6,354 times</a> by October 7. A patient hears
-          &ldquo;good news&rdquo; from her doctor while a unicorn walks past the window, and searchers ask whether the
-          people in the Icotyde commercial are AI. Johnson &amp; Johnson has not said AI was used, no agency has claimed the
-          work, and no news outlet has reported it as of October 2026.
-        </p>
-        <p>
-          For a brand team the case shows that an ad can be read as AI whether or not AI made it. Performance direction and
-          the disclosure decision belong in the same review.
         </p>
         <h3>Is the Peak Blue Rx commercial AI?</h3>
         <p>

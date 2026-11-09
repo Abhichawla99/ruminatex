@@ -213,10 +213,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-pharma-commercials',
     title: 'AI Pharma Commercials: Who Has Made Them',
-    question: 'which pharma companies and pharmacies have made AI-generated ads, are the saphnelo, icotyde and peak blue rx ads AI, the FDA rules for AI drug ads, and who makes AI pharma commercials',
+    question: 'which pharma companies and pharmacies have made AI-generated ads, is the icotyde commercial AI, are the saphnelo and peak blue rx ads AI, the FDA rules for AI drug ads, and who makes AI pharma commercials',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-10-28',
+    updated: '2026-11-09',
   },
   {
     path: '/guides/ai-medical-animation',

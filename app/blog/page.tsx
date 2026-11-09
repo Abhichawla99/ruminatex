@@ -33,8 +33,8 @@ const featuredResources = [
   },
   {
     href: '/blog/how-much-does-ai-video-production-cost',
-    title: 'AI Video Production Cost',
-    description: 'What AI video production costs for brands in 2026, how agencies price it, and what moves a Ruminate X quote.',
+    title: 'AI Video Production Cost and Agency Pricing',
+    description: 'What AI video production costs for brands in 2026, how agencies price it per video, campaign or month, and what moves a Ruminate X quote.',
     type: 'Pricing',
   },
   {
@@ -146,7 +146,7 @@ export default function BlogPage() {
           Guides from Ruminate X, the AI film studio in Calgary, for brand, marketing and comms leads planning an AI
           brand film or commercial: what it costs, how to hire a studio, how the film gets made, and what the brands
           that already ran AI ads learned. Start with{' '}
-          <Link href="/blog/how-much-does-ai-video-production-cost">what AI video production costs</Link> or{' '}
+          <Link href="/blog/how-much-does-ai-video-production-cost">AI video production agency pricing</Link> or{' '}
           <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
         </p>
         <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-[#666666]">
