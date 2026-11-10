@@ -21,7 +21,7 @@ const PAGE = {
   title: 'AI Commercials by Big Brands: What Happened',
   description: `AI commercials from Svedka's 2026 Super Bowl ad back to Coca-Cola, Toys"R"Us, Moncler, Kalshi, Popeyes, McDonald's, Progressive and a DC pharmacy that apologized, whether AI commercials are allowed (FTC, New York, Pennsylvania's new AI ad label law, EU AI Act), the list of brands that faced backlash for AI ads in 2025 (Guess, J.Crew, Valentino and more), how audiences reacted, and what the NIQ and MIT studies found about whether AI ads work. ${SITE.name}, an AI film studio, makes AI commercials for brands.`,
   published: '2026-09-26',
-  updated: '2026-10-31',
+  updated: '2026-11-10',
   keywords: [
     'ai commercials',
     'ai commercial',
@@ -31,6 +31,8 @@ const PAGE = {
     'artificial intelligence commercials',
     'ai generated ads',
     'ai tv commercials',
+    'is the dior ad ai',
+    'dior ai ad',
     'who makes the best ai commercials',
     'list of brands facing backlash for ai ads',
     'list of brands facing backlash for ai ads 2025',
@@ -97,6 +99,8 @@ const PA_ACT = 'https://www.palegis.us/legislation/bills/2025/sb806'
 const EU_ART50 = 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50'
 const GALLUP_ADS = 'https://news.gallup.com/poll/713222/americans-aren-sold-businesses-using-ai-advertising.aspx'
 const ADWEEK_FOX = 'https://www.adweek.com/tvspy/fox-stations-to-offer-ai-generated-commercials-through-new-partnership/'
+const FC_DIOR = 'https://www.fastcompany.com/91636722/dior-holiday-ad-is-triggering-yet-another-ai-debate'
+const FC_PRADA = 'https://www.fastcompany.com/91632291/prada-ad-luxury-brands-all-in-on-handmade-ads'
 const CONVERSATION_HUMAN = 'https://theconversation.com/a-backlash-against-ai-imagery-in-ads-may-have-begun-as-brands-promote-human-made-269276'
 
 const FAQS = [
@@ -139,6 +143,10 @@ const FAQS = [
   {
     q: 'Did Progressive use AI for an ad?',
     a: 'Yes. Progressive\'s "Drive Like an Animal" ad for its Snapshot program, released on November 3, 2025, shows AI-generated animals driving and crashing cars, with the voice of Stephanie Courtney, the actress who plays Flo. The idea dated from 2024 and was shelved as too slow and expensive to produce; AI made it fit the budget a year later. It drew negative comments online, including on YouTube, and Progressive said engagement was strong (Marketing Dive, February 2026).',
+  },
+  {
+    q: 'Is the Dior ad AI?',
+    a: 'Unconfirmed. Dior\'s "Night in Color" holiday film, directed by French animator Sylvain Chomet and presented as hand-drawn animation with a behind-the-scenes video, drew claims of AI use soon after release: viewers pointed to warped lettering, a lazy eye and a misplaced finger bone. The Business of Fashion, Cartoon Brew and Fast Company asked Dior about it, and several days later none had a response (Fast Company, November 6, 2026). As of November 10, 2026 Dior has not said whether AI was used.',
   },
   {
     q: 'Is the trivago commercial AI?',
@@ -456,6 +464,30 @@ export default function Page() {
           running ads that celebrate their work as human-made (<a href={CONVERSATION_HUMAN}>The Conversation, November
           2025</a>). For a brand selling to the same audience, &quot;made by people&quot; is now a claim a competitor can
           make against you.
+        </p>
+      </GuideSection>
+
+      <GuideSection id="dior" eyebrow="Luxury, 2026" title="Is the Dior ad AI? Luxury holiday ads in 2026">
+        <p>
+          Unconfirmed. Dior&apos;s &quot;Night in Color&quot; holiday film, directed by French animator Sylvain Chomet and
+          inspired by Christian Dior&apos;s friendship with Marlene Dietrich, was presented as hand-drawn animation, with a
+          behind-the-scenes video about craft. Soon after release, viewers pointed to warped lettering, a lazy eye and a
+          misplaced finger bone. The Business of Fashion, Cartoon Brew and Fast Company asked Dior about it, and
+          several days later none had an answer (<a href={FC_DIOR}>Fast Company, November 6, 2026</a>). As of November 10,
+          2026, Dior has not said whether AI was used.
+        </p>
+        <p>
+          The film landed a week after Prada&apos;s &quot;Drawing Prada&quot; campaign, whose animation was hand-drawn by
+          animator John Pomeroy, with his sketches shown in the campaign images (
+          <a href={FC_PRADA}>Fast Company, October 30, 2026</a>). Valentino, in the table above, labelled its AI video
+          and was still called cheap; Dior presented its film as hand-drawn and now faces a question it has not answered.
+        </p>
+        <p>
+          For a luxury brand that wants a generated ad anyway, what holds up in close-up (hardware, leather, monograms,
+          faces) and how to present it are on <Link href="/ai-video-production-fashion#luxury">AI luxury commercials</Link>.
+          Tech companies and e-commerce brands have their own sections on the commercial page:{' '}
+          <Link href="/ai-commercial-production#tech">AI commercials for tech companies</Link> and{' '}
+          <Link href="/ai-commercial-production#ecommerce">AI commercials for e-commerce brands</Link>.
         </p>
       </GuideSection>
 

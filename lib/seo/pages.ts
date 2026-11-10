@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech, AI infrastructure and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-08',
+    updated: '2026-11-10',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which companies are using AI for ads, what TV commercials are AI, how did audiences react, are AI commercials allowed, and do AI-generated ads work',
     kind: 'guide',
     published: '2026-09-26',
-    updated: '2026-10-31',
+    updated: '2026-11-10',
   },
   {
     path: '/best-video-production-company-calgary',
@@ -297,5 +297,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-11-01',
     updated: '2026-11-01',
+  },
+  {
+    path: '/ai-video-production-fashion',
+    title: 'AI Luxury Commercials and Fashion Films',
+    question: 'ai luxury commercials: who makes them, what holds up in close-up (hardware, leather, monograms, faces), what the 2026 Dior and Prada holiday ads mean for disclosure, and what an AI luxury or fashion film costs',
+    kind: 'industry',
+    published: '2026-03-07',
+    updated: '2026-11-10',
   },
 ]
