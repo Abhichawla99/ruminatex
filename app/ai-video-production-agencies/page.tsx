@@ -135,7 +135,9 @@ export default function Page() {
         <p>
           Every one of these goes through the same pipeline, from brief to delivery, and each has its own page. The
           full list, with who each one is for and what it costs, is on{' '}
-          <Link href="/services">AI video production services</Link>.
+          <Link href="/services">AI video production services</Link>. For a launch, {studio} cuts{' '}
+          <Link href="/ai-brand-film-agency#trailers">cinematic AI video for brand campaigns and trailers</Link> from
+          the same generated footage as the brand film or commercial.
         </p>
         <GuideTable
           caption="Each service links to its own page."

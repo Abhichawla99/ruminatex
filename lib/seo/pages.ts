@@ -61,10 +61,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-brand-film-agency',
     title: 'AI Brand Film Production for Companies',
-    question: 'ai brand films and ai film production companies: what they are, which kind makes films for brands, how Ruminate X makes one, what makes AI footage cinematic, and how much an AI brand film costs',
+    question: 'ai brand films and ai film production companies: what they are, which kind makes films for brands, how Ruminate X makes one, what makes AI footage cinematic, where to buy cinematic AI video for brand campaigns and trailers, and how much an AI brand film costs',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-04',
+    updated: '2026-11-11',
   },
   {
     path: '/ai-video-production-healthcare',
