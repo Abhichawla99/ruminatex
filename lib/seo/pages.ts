@@ -229,10 +229,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-ugc-reels',
     title: 'AI UGC Ads Agency for Brands',
-    question: 'ai ugc ads agency: what AI UGC ads are, how Ruminate X makes them, what they cost, and whether AI UGC (synthetic UGC) is legal: the disclosure rules on Meta, TikTok and the FTC',
+    question: 'ai ugc agency: what an AI UGC agency does, what AI UGC ads are, how Ruminate X makes them, what AI UGC costs, and whether AI UGC (synthetic UGC) is legal: the disclosure rules on Meta, TikTok and the FTC',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-11-08',
+    updated: '2026-11-12',
   },
   {
     path: '/ai-product-videos',

@@ -24,12 +24,15 @@ const PAGE = {
   title: 'AI UGC Ads Agency for Brands',
   description: `${studio} is an AI UGC ad agency that makes creator-style ads for Reels, TikTok and Shorts, with generated creators delivering scripted ad lines and your real product, label and logo set from your files. What moves the price, where these ads break, and the FTC, Meta, TikTok, New York and Pennsylvania rules.`,
   published: '2026-03-08',
-  updated: '2026-11-08',
+  updated: '2026-11-12',
   keywords: [
     'ai ugc ads agency',
     'ai ugc ads',
     'ai ugc agency',
+    'what does an ai ugc agency do',
+    'how much does ai ugc cost',
     'ai ugc ad agency',
+    'ai ugc studio',
     'best ai ugc ads agency',
     'ai ugc video creator',
     'are ai ugc ads legal',
@@ -67,11 +70,15 @@ const FAQS = [
     a: 'Yes, with labels. TikTok allows AI-generated content but requires creators to label realistic AI-generated images, audio and video, and does not allow AI content that shows a public figure endorsing a product. Meta runs ads made with AI and adds an "AI info" label next to Sponsored when an ad made with its own generative AI tools includes a photorealistic AI human; political and social issue ads must disclose AI-made media. On both, the ad still cannot present a generated presenter as a real customer, under the FTC reviews rule (16 CFR 465.2). Platform pages read October 4, 2026; this is not legal advice.',
   },
   {
+    q: 'What does an AI UGC agency do?',
+    a: `An AI UGC agency makes creator-style ads for a brand from brief to final cut: it writes the hooks and scripts, casts a generated presenter, generates and checks every shot, edits in the real product, label and logo, sets the AI disclosure, and delivers the lengths and ratios each placement needs. ${studio}, an AI UGC agency in ${SITE.city}, shows you the brief, the presenter, every script and the shot list before anything is generated, and its presenters deliver scripted ad lines, never testimonials.`,
+  },
+  {
     q: 'Who makes AI UGC ads for brands?',
     a: `${studio} is an AI UGC ad agency in ${SITE.city}, that makes UGC-style ads for consumer and DTC brands running paid social on Reels, TikTok and Shorts. Every frame is generated with AI, and people write the hooks and scripts, board every shot, and edit, mix and grade every ad. Before you hire any AI UGC agency, ask to see one ad where a hand holds the product, the label reads correctly and the mouth matches the words; ${studio} boards and regenerates exactly those shots.`,
   },
   {
-    q: 'How much does an AI UGC ads agency cost?',
+    q: 'How much does AI UGC cost?',
     a: `${priceLine('ugc')}. For UGC-style ads the price moves with the number of concepts, the hooks written for each, how many shots show the product in a hand (those get the most generation passes), the lengths and aspect ratios each placement needs, and how many review rounds your marketing and legal teams take. Send the product, the offer and the platforms, and ${studio} comes back with a creative brief and a quote.`,
   },
   {
@@ -104,7 +111,7 @@ export default function Page() {
     >
       <GuideHero
         eyebrow="AI UGC ads"
-        title="AI UGC ads: creator-style ads made with AI"
+        title="AI UGC agency: creator-style ads made with AI"
         dek={`For the performance marketer or DTC brand manager who needs more hooks to test on Meta and TikTok than creators can film, and wants to know how ${studio} makes them, what moves the price, what has to be disclosed, and where these ads fall apart.`}
         updated={PAGE.updated}
       />
@@ -147,7 +154,32 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Price" title="What AI UGC ads cost" alt>
+      <GuideSection id="agency" eyebrow="The agency's job" title="What does an AI UGC agency do?" alt>
+        <p>
+          An AI UGC agency makes the whole ad for you: the hooks and scripts, a generated presenter, the shots, the edit
+          with your real product, the disclosure and the versions each placement needs. {studio} is an AI UGC agency in{' '}
+          {SITE.city}. This is what it does at each step, and what you see and approve before the next one starts.
+        </p>
+        <GuideTable
+          caption={`How ${studio} runs a batch of UGC-style ads. Nothing is generated until you approve the brief, the presenter and the scripts.`}
+          head={['Step', `What ${studio} does`, 'What you approve or get']}
+          rows={[
+            ['Brief', 'Reads your offer, audience, approved claims and your best creator ads, and writes a creative brief with the concepts', 'You approve the brief'],
+            ['Presenter', 'Casts a generated presenter for your brand (face, age, wardrobe, setting, voice), not modelled on a real person, and fixes it in a reference sheet', 'You approve the presenter, and the same face runs across the batch'],
+            ['Hooks and scripts', 'Writes several openings per concept to your approved claims, with the presenter speaking as a presenter, never as a customer', 'You approve every script and the shot list'],
+            ['Shots', 'Generates each shot and checks hands, lip sync, eyes and the label, then regenerates the ones that break', 'You review cuts, not raw generations'],
+            ['Edit', 'Captions inside each platform\'s safe zones, licensed music, your pack, label and logo from your files, and the disclosure line your legal team approves', 'You approve the final cut in each review round'],
+            ['Versions', 'Cuts the lengths, ratios and hook variants each placement needs from the same footage', 'Files ready to upload; you switch on the platform\'s AI label at launch'],
+          ]}
+        />
+        <p>
+          With a self-serve generator account, your team does every row of that table itself: writing the hooks, picking
+          the takes, rerunning the hand that melts into the bottle, setting the label and cutting the variants. The next
+          section says what that work costs and what moves the price.
+        </p>
+      </GuideSection>
+
+      <GuideSection eyebrow="Price" title="What AI UGC ads cost">
         <p>
           {priceLine('ugc')}. The price moves with the number of concepts in the batch, the hooks written for each, how
           many shots show the product in a hand (those get the most generation passes), the lengths and aspect ratios each
@@ -164,7 +196,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Before you hire" title="What to ask any AI UGC ads agency">
+      <GuideSection eyebrow="Before you hire" title="What to ask any AI UGC ads agency" alt>
         <p>Ask these before you sign with any agency. Each answer is how {studio} works.</p>
         <ol>
           <li>
@@ -191,7 +223,7 @@ export default function Page() {
         </ol>
       </GuideSection>
 
-      <GuideSection id="rules" eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US" alt>
+      <GuideSection id="rules" eyebrow="Rules" title="Are AI UGC ads legal? Disclosure on TikTok, Meta and in the US">
         <GuideTable
           caption={
             <>
@@ -220,7 +252,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="Where it breaks" title="Where AI UGC ads break, and what fixes them">
+      <GuideSection eyebrow="Where it breaks" title="Where AI UGC ads break, and what fixes them" alt>
         <GuideTable
           caption={`Common failures in generated creator-style ads, and the fix ${studio} applies to each.`}
           head={['Problem', 'What the viewer notices', 'The fix']}
@@ -239,7 +271,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="How it is made" title={`How ${studio} makes UGC-style ads`} alt>
+      <GuideSection eyebrow="How it is made" title={`How ${studio} makes UGC-style ads`}>
         <ol>
           <li>
             <strong>Brief.</strong> The product, the audience, the offer, the claims your legal team has approved, the

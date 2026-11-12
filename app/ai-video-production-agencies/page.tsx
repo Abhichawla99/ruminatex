@@ -315,7 +315,7 @@ export default function Page() {
           its board until it holds up, and the logo and type go in at the edit.
         </p>
         <p>
-          For creator-style paid social, {studio}&apos;s <Link href="/ai-ugc-reels">AI UGC ads</Link> are made the same
+          For creator-style paid social, {studio} works as an <Link href="/ai-ugc-reels#agency">AI UGC agency</Link>: the ads are made the same
           way, with generated creators. Agencies commissioning a film for a client will find the credit and pricing
           questions in <Link href="/guides/white-label-ai-video-production">white-label AI video production for agencies</Link>.
         </p>

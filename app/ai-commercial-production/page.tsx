@@ -189,7 +189,7 @@ export default function Page() {
           and a check, so it is part of the quote. If what you need is a longer film about the company rather than one
           product, see <Link href="/ai-brand-film-agency">AI brand film production</Link>; for an about-us film or an
           all-hands opener, <Link href="/ai-corporate-video-production">AI corporate video production</Link>. For a run
-          of creator-style ads rather than one spot, see <Link href="/ai-ugc-reels">AI UGC ads</Link>; for a product
+          of creator-style ads rather than one spot, see what {studio} does as an <Link href="/ai-ugc-reels#agency">AI UGC agency</Link>; for a product
           launch without a story, <Link href="/ai-product-videos">AI product video production</Link>. A watch, fragrance,
           jewellery or leather-goods house judged in close-up has its own page:{' '}
           <Link href="/ai-video-production-fashion#luxury">AI luxury commercials</Link>.
