@@ -248,7 +248,8 @@ export default function Page() {
           Every price on this page is for making the commercial. Showing it costs money on top: a YouTube or social
           placement is bought in the platform&apos;s ad manager at a budget you set, and TV time is bought from the
           station or network. A buyer who has USD 20,000 for a launch should decide the media split before asking for
-          quotes.
+          quotes. For a drug ad, what MLR review, the FDA major statement and the channel versions add on top is on{' '}
+          <Link href="/guides/pharmaceutical-commercial-cost">pharmaceutical commercial cost</Link>.
         </p>
       </GuideSection>
 

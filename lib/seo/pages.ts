@@ -72,7 +72,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, which biotech company videos AI can make, what video ads for GLP-1, TRT and HRT clinics can say and show, and the FDA rules for drug ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-11-07',
+    updated: '2026-11-13',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -216,7 +216,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which pharma companies and pharmacies have made AI-generated ads, is the icotyde commercial AI, are the saphnelo and peak blue rx ads AI, the FDA rules for AI drug ads, and who makes AI pharma commercials',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-11-09',
+    updated: '2026-11-13',
   },
   {
     path: '/guides/ai-medical-animation',
@@ -305,5 +305,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'industry',
     published: '2026-03-07',
     updated: '2026-11-10',
+  },
+  {
+    path: '/guides/pharmaceutical-commercial-cost',
+    title: 'Pharmaceutical Commercial Cost in 2026',
+    question: 'how much does a pharmaceutical commercial cost to make, what MLR review, the FDA major statement and channel versions add, how much actors in medical commercials make, and what Ruminate X charges for an AI pharma commercial',
+    kind: 'guide',
+    published: '2026-11-13',
+    updated: '2026-11-13',
   },
 ]

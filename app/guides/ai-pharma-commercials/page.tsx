@@ -10,16 +10,20 @@ import {
   GuideSection,
   GuideStudio,
   GuideTable,
+  GuideFilm,
+  film,
   guideMetadata,
 } from '@/components/guide/Guide'
 import { PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+
+const trail = film('LYA3Do3KEN0')
 
 const PAGE = {
   path: '/guides/ai-pharma-commercials',
   title: 'AI Pharma Commercials: Who Has Made Them',
   description: `Johnson & Johnson has not said its Icotyde commercial is AI, and as of November 2026 no one has confirmed the Saphnelo or Peak Blue Rx ads are AI either. The confirmed AI pharma ads are AstraZeneca's Breztri llama and Gilead Canada's Descovy bear and otter, and Grubb's Pharmacy apologized for AI imagery in its marketing. Plus the FDA rules for AI drug ads, who may appear in one, and how ${SITE.name} makes AI commercials for pharma and pharmacy brands.`,
   published: '2026-10-01',
-  updated: '2026-11-09',
+  updated: '2026-11-13',
   keywords: [
     'icotyde commercial ai',
     'is the icotyde commercial ai',
@@ -131,6 +135,7 @@ export default function Page() {
     <Guide
       page={PAGE}
       faqs={FAQS}
+      films={[trail.youtubeId]}
       trail={[
         { name: 'Home', path: '/' },
         { name: 'Guides', path: '/guides' },
@@ -416,8 +421,14 @@ export default function Page() {
         <p>
           AI takes the shoot out of a drug ad. The approved claims, the major statement typeset and timed to the
           voiceover, the exact pack and the review rounds all stay, so an AI drug ad costs the same to review as a filmed
-          one. {priceLine('commercial')}, and the number of MLR rounds is one of the things that sets the price.
+          one. {priceLine('commercial')}, and the number of MLR rounds is one of the things that sets the price. What
+          each of those lines adds to a drug ad, and why airtime is the bigger budget, is on{' '}
+          <Link href="/guides/pharmaceutical-commercial-cost">pharmaceutical commercial cost</Link>.
         </p>
+        <GuideFilm
+          id={trail.youtubeId}
+          caption={`${trail.title}, a ${studio} original film (${trail.durationSeconds} seconds), shown for the craft a drug ad depends on: faces in close-up, people in motion and light that holds from shot to shot. Every frame generated with AI.`}
+        />
         <p>
           What MLR reviewers ask about AI footage, shot by shot, is on{' '}
           <Link href="/ai-video-production-healthcare">AI video production for pharma and healthcare</Link>, and every
