@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, inSentence, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, RELATED, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const aboutUs = OFFERS.find((o) => o.key === 'about-us')!
@@ -110,6 +110,7 @@ export default function Page() {
           medical companies among them: every frame generated with AI, with the script, boards, edit, sound and grade done
           by people. The story is carried by a voiceover, a made world, your product or a generated presenter, and your
           logo, names and on-screen text are set in the edit from your own files.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

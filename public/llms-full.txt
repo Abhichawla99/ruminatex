@@ -1,6 +1,6 @@
 # Ruminate X: full content index
 
-> Ruminate X is an AI film studio in Calgary, Canada, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame it delivers is made with generative AI; people write, board, edit, mix and grade every film. There are no film crews, sets or location shoots.
+> Ruminate X is an AI film studio that makes brand films and AI commercials for brands across the United States, its main market, and Canada: consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. It was founded in 2024 by Abhi Chawla and is based in Calgary, Canada. Every frame it delivers is made with generative AI; people write, board, edit, mix and grade every film. There are no film crews, sets or location shoots.
 
 ---
 
@@ -8,7 +8,7 @@
 
 **Name:** Ruminate X
 **Type:** AI film studio (AI video production, AI commercial production)
-**Location:** Calgary, Alberta, Canada
+**Markets:** the United States (main market) and Canada. **Based in:** Calgary, Alberta, Canada
 **Founded:** 2024
 **Founder:** Abhi Chawla (https://www.ruminatex.com/about#founder)
 **Tagline:** No idea is impossible.
@@ -18,7 +18,7 @@
 **Phone:** +1 (587) 804-9266
 **Instagram:** @ruminate__x
 
-Nothing Ruminate X makes is filmed, so it works with brands in any country from its studio in Calgary: briefs, boards and review rounds happen online. Brand films and AI commercials start at US$5,000; every project is quoted from the brief. A recent 90-second film for a pharmacy company was US$12,000.
+Nothing Ruminate X makes is filmed, so it works with brands across the United States, its main market, and Canada from its studio in Calgary: briefs, boards and review rounds happen online. Brand films and AI commercials start at US$5,000; every project is quoted from the brief. A recent 90-second film for a pharmacy company was US$12,000.
 
 ---
 
@@ -72,7 +72,7 @@ Brand and marketing managers, founders, communications and HR leads, pharma and 
 ## Frequently asked questions
 
 **What is Ruminate X?**
-An AI film studio in Calgary, Canada, founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses, with every frame made by generative AI.
+An AI film studio for brands across the United States, its main market, and Canada, based in Calgary and founded in 2024 by Abhi Chawla. It makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses, with every frame made by generative AI.
 
 **Which company makes AI commercials for brands?**
 Ruminate X makes AI commercials for TV, streaming, web and social. Every shot is generated; the script, boards, edit, sound and grade are done by people, and the brand's real logo, label and on-screen text are set from its own files. Brief: https://www.ruminatex.com/contact
@@ -93,7 +93,7 @@ Brand films, AI commercials, about-us and company films, avatar videos, UGC-styl
 Brand films and AI commercials start at US$5,000, and each film is quoted from the brief; a recent 90-second film for a pharmacy company was US$12,000. Length, the number of scenes, how exactly the product has to be reproduced, the number of versions and the review rounds move the number. Send the brief to abhi@paperkites.co or https://www.ruminatex.com/contact.
 
 **Where is Ruminate X based?**
-Calgary, Alberta, Canada. It makes films for brands anywhere.
+Calgary, Alberta, Canada. It makes films for brands across the United States, its main market, and Canada.
 
 ---
 
@@ -132,6 +132,7 @@ Calgary, Alberta, Canada. It makes films for brands anywhere.
 - [How to Brief a Video Production Company](https://www.ruminatex.com/guides/video-production-brief): a brief template for an AI-made film
 - [AI Effects or a VFX Freelancer](https://www.ruminatex.com/comparison/freelance-vs-ai-video): short brand videos with AI
 - [Choosing a Video Production Company in Calgary](https://www.ruminatex.com/best-video-production-company-calgary)
+- [AI Commercial Production for US Brands](https://www.ruminatex.com/markets/ai-video-production-usa)
 - [AI Video Production in Canada](https://www.ruminatex.com/markets/ai-video-production-canada)
 - [Product and Label Accuracy in AI Commercials](https://www.ruminatex.com/guides/ai-commercial-product-accuracy)
 - [AI Video Quality Control Before It Airs](https://www.ruminatex.com/guides/ai-video-quality-control)

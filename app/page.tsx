@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { portfolioItems, getYoutubeThumbnail } from '@/lib/portfolio'
 import VideoModal from '@/components/VideoModal'
-import { FOUNDER, OFFERS, PRICES, PRODUCTION, SITE, STUDIO_LINE, inSentence, priceLine } from '@/lib/seo/facts'
+import { FOUNDER, MARKETS, OFFERS, PRICES, PRODUCTION, SITE, STUDIO_LINE, inSentence, priceLine } from '@/lib/seo/facts'
 import { faqLd } from '@/lib/seo/schema'
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ const organizationSchema = {
     addressRegion: 'Alberta',
     addressCountry: 'CA',
   },
-  areaServed: 'Worldwide',
+  areaServed: MARKETS.served.map((name) => ({ '@type': 'Country', name })),
   knowsAbout: [
     'AI brand film production',
     'AI commercial production',
@@ -94,7 +94,7 @@ const HOME_FAQS = [
   },
   {
     q: 'Where is Ruminate X based, and who does it work with?',
-    a: `${SITE.name} is in ${SITE.city}. Nothing is filmed, so a brand's location does not change how a film gets made: briefs, boards and review rounds all happen online. It makes films for consumer brands, pharma and pharmacy companies, labs, medical companies and companies of every size.`,
+    a: `${SITE.name} is based in ${SITE.city}. ${MARKETS.line} It makes films for consumer brands, pharma and pharmacy companies, labs, medical companies and companies of every size.`,
   },
   {
     q: 'How do I start a project with Ruminate X?',
@@ -369,7 +369,7 @@ export default function HomePage() {
               </p>
               <p className="text-[#666666] text-sm leading-relaxed">
                 Founded in {SITE.foundingYear} by <Link href="/about" className="text-white hover:text-[#ebff00]">{FOUNDER.name}</Link>.
-                Based in {SITE.city}, making films for brands anywhere.
+                Based in {SITE.city}, making films for brands across the United States and Canada.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">

@@ -11,7 +11,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const city = SITE.city.split(',')[0]
@@ -97,6 +97,7 @@ export default function Page() {
           testimonials (16 CFR Part 465), a business may not create or run a testimonial that misrepresents that the person
           exists or used the product, so a generated person cannot give one. The review has to come from a real customer
           with a real experience.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

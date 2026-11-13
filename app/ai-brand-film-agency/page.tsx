@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRICES, PRODUCTION, RELATED, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRICES, PRODUCTION, RELATED, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const BRAND_FILM_FROM = PRICES.find((p) => p.offer === 'brand-film')!.from
 
@@ -136,6 +136,8 @@ export default function Page() {
           script, boards, edit, sound and grade done by people. AI suits a brand film told as a made world, with
           landscapes, metaphor, history or science no camera can film. {studio}&apos;s own film {trail.title} runs{' '}
           {trail.durationSeconds} seconds, every shot generated.
+          {' '}{MARKETS.line}{' '}
+          US brands: <Link href="/markets/ai-video-production-usa">AI commercial production for US brands</Link>.
         </p>
       </GuideAnswer>
 

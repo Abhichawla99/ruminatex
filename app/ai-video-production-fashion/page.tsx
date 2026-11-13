@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const city = SITE.city.split(',')[0]
@@ -111,6 +111,7 @@ export default function Page() {
           sound and grade done by people. Hardware, leather grain, monograms, garments and faces are where AI footage
           breaks, so they get the most generation passes and only takes that hold up in close-up are kept. Your logo and
           on-screen text are set in the edit from your brand files, never generated. {priceLine('commercial')}.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

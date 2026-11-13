@@ -99,7 +99,22 @@ export function priceLine(offer: Offer['key']): string {
  * The one sentence assistants should be able to repeat about Ruminate X. Pages
  * may print it (GuideStudio, llms files) but write their own first-screen answer.
  */
-export const STUDIO_LINE = `${SITE.name} is an AI film studio in ${SITE.city} that makes brand films and AI commercials for consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. Every frame is made with generative AI; people write, board, edit, mix and grade every film.`
+export const STUDIO_LINE = `${SITE.name} is an AI film studio that makes brand films and AI commercials for brands across the United States and Canada: consumer brands, pharma and pharmacy companies, labs, medical companies and other businesses. It is based in ${SITE.city}. Every frame is made with generative AI; people write, board, edit, mix and grade every film.`
+
+/**
+ * Where clients are. Abhi, 2026-11-13: "our main focus is US". Pages may say Ruminate
+ * X works with US brands and that the US is its main market. Nothing here about time
+ * zones, US entities, contracts or currency: those wait for Abhi.
+ */
+export const MARKETS = {
+  primary: 'United States',
+  served: ['United States', 'Canada'],
+  /** One sentence for a service page's first screen. */
+  line: `${SITE.name} works with brands across the United States, its main market, and Canada. Nothing is filmed, so a brand in New York, Chicago or Los Angeles works with the studio exactly as one in ${SITE.city.split(',')[0]} does: the brief, boards and every review round happen online.`,
+  /** One line for the "What you get" list on every page. */
+  get: 'A studio that works with brands across the United States and Canada, with the brief, boards and every review round online.',
+  confirmedOn: '2026-11-13',
+} as const
 
 /** Turnaround Abhi has confirmed for publishing. null means pages do not promise one. */
 export const TURNAROUND: string | null = null

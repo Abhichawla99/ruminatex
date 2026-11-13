@@ -34,7 +34,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { portfolioItems, type PortfolioItem } from '@/lib/portfolio'
-import { FOUNDER, SITE } from '@/lib/seo/facts'
+import { FOUNDER, MARKETS, SITE } from '@/lib/seo/facts'
 import { absolute, articleLd, breadcrumbLd, faqLd, serviceLd, videoLd, type Crumb, type Faq, type PageMeta, type ServiceMeta } from '@/lib/seo/schema'
 
 const display = { fontFamily: 'var(--font-bebas-neue), sans-serif' }
@@ -242,7 +242,7 @@ export function GuideFit({ title = `Why brands hire ${SITE.name}`, hire, get = D
           </div>
           <div className="border border-[#1a1a1a] p-8">
             <p className={eyebrowClass}>What you get</p>
-            {list(get)}
+            {list([...get, MARKETS.get])}
           </div>
         </div>
         <Link href="/contact" className="mt-10 inline-flex items-center justify-center bg-[#ebff00] text-[#080808] font-bold text-sm uppercase tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors">

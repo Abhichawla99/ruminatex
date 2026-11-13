@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRODUCTION, REFERENCE_PROJECT, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRODUCTION, REFERENCE_PROJECT, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const city = SITE.city.split(',')[0]
@@ -174,6 +174,8 @@ export default function Page() {
           the ISI and the fair-balance text in the edit from the copy they approved, never in the generator.{' '}
           {priceLine('commercial')}. The US and Canadian drug-advertising rules apply the same way whether the pictures were
           filmed or generated.
+          {' '}{MARKETS.line}{' '}
+          US brands: <Link href="/markets/ai-video-production-usa">AI commercial production for US brands</Link>.
         </p>
       </GuideAnswer>
 

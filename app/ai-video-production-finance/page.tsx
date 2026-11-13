@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const city = SITE.city.split(',')[0]
@@ -133,6 +133,7 @@ export default function Page() {
           is set in the edit from the copy they approved, never drawn by the generator. In the US, an investment
           adviser&apos;s ad answers to the SEC marketing rule and a broker-dealer&apos;s to FINRA Rule 2210, which requires
           a registered principal to approve each retail communication before it is used or filed.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

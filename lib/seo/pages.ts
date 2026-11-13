@@ -155,6 +155,14 @@ export const SEO_PAGES: SeoPage[] = [
     updated: '2026-10-28',
   },
   {
+    path: '/markets/ai-video-production-usa',
+    title: 'AI Commercial Production Company for US Brands',
+    question: 'ai commercial production company in usa: which AI-native studio a US brand should hire for an ad campaign or brand film, what it costs, and which US rules apply to an AI ad',
+    kind: 'service',
+    published: '2026-11-13',
+    updated: '2026-11-13',
+  },
+  {
     path: '/markets/ai-video-production-canada',
     title: 'AI Video Production in Calgary and Canada',
     question: 'ai video production in canada: what Ruminate X, an AI film studio in Calgary, makes for Canadian brands, what it costs, and which Canadian ad rules apply',

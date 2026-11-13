@@ -234,6 +234,7 @@ export default function Page() {
 
       <GuideRelated
         links={[
+          { href: '/markets/ai-video-production-usa', title: 'AI commercial production for US brands', note: 'How a US brand works with Ruminate X, and the US rules for AI ads.' },
           { href: '/ai-commercial-production', title: 'AI commercial production', note: 'Commercials for TV, streaming and social, with every frame generated.' },
           { href: '/ai-brand-film-agency', title: 'AI brand film production', note: 'What a brand film is for, and how it differs from an ad.' },
           { href: '/ai-video-production-healthcare', title: 'AI video for pharma and healthcare', note: 'Films for pharma, pharmacy, lab and medical companies, and the review they go through.' },

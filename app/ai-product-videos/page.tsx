@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const visuals = OFFERS.find((o) => o.key === 'product-visuals')!
@@ -91,6 +91,7 @@ export default function Page() {
           shoot. {studio}, an AI film studio in {SITE.city}, makes {visuals.plain} for brands: every frame generated with
           AI, with the script, boards, edit, sound and grade done by people. The product is reproduced from your real
           product images, and the label, logo and on-screen text are set in the edit from your own files, never generated.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

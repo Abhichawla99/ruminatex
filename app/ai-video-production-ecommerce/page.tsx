@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+import { MARKETS, OFFERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const city = SITE.city.split(',')[0]
@@ -112,6 +112,7 @@ export default function Page() {
           edit, sound and grade done by people, and your real product, label and logo set in the edit from your own files.
           Each marketplace version follows that marketplace&apos;s rules; Amazon&apos;s Sponsored Brands video ads, for
           example, run 6 to 45 seconds in 16:9 only and cannot show customer reviews or star ratings.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

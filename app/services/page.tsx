@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRICES, PRODUCTION, REFERENCE_PROJECT, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRICES, PRODUCTION, REFERENCE_PROJECT, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const offer = (key: string) => OFFERS.find((o) => o.key === key)!
@@ -101,6 +101,8 @@ export default function ServicesPage() {
           AI commercials, company films, UGC-style ads, product visuals and avatar videos, for consumer brands, pharma
           and pharmacy companies, labs and medical companies. {PRODUCTION.summary} {priceLine('commercial')}; brand
           films start at the same figure, and the other services are quoted from the brief.
+          {' '}{MARKETS.line}{' '}
+          US brands: <Link href="/markets/ai-video-production-usa">AI commercial production for US brands</Link>.
         </p>
       </GuideAnswer>
 

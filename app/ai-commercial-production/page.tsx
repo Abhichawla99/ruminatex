@@ -12,7 +12,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRODUCTION, RELATED, SITE, STUDIO_LINE, inSentence, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRODUCTION, RELATED, SITE, STUDIO_LINE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/ai-commercial-production',
@@ -169,6 +169,8 @@ export default function Page() {
           generated with AI, with the script, boards, edit, sound and grade done by people. You get the master spot and
           the cutdowns and aspect ratios each channel needs, all cut from the same film, with your real logo, product and
           on-screen text set in the edit from your brand files.
+          {' '}{MARKETS.line}{' '}
+          US brands: <Link href="/markets/ai-video-production-usa">AI commercial production for US brands</Link>.
         </p>
       </GuideAnswer>
 

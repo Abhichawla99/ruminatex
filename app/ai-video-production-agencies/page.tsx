@@ -13,7 +13,7 @@ import {
   film,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, PRODUCTION, RELATED, SITE, inSentence, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRODUCTION, RELATED, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const listOf = (items: readonly string[]) =>
@@ -128,6 +128,7 @@ export default function Page() {
           production agency that makes {mainOffers} for {brandBuyers}: every frame generated with AI, with the script,
           boards, edit, sound and grade done by people. Nothing is generated until you approve the brief, and you see
           the script and the shot list before the first frame is made.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 

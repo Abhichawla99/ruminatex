@@ -1,4 +1,4 @@
-import { FOUNDER, SITE } from './facts'
+import { FOUNDER, MARKETS, SITE } from './facts'
 import { getVideoUrl, getYoutubeThumbnail, type PortfolioItem } from '@/lib/portfolio'
 
 export type PageMeta = {
@@ -74,7 +74,7 @@ export function serviceLd(service: ServiceMeta, path: string) {
     url: absolute(path),
     provider: { '@id': SITE.orgId },
     brand: { '@type': 'Brand', name: SITE.name },
-    areaServed: 'Worldwide',
+    areaServed: MARKETS.served.map((name) => ({ '@type': 'Country', name })),
     ...(service.audience?.length
       ? { audience: service.audience.map((a) => ({ '@type': 'BusinessAudience', name: a })) }
       : {}),

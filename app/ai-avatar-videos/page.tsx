@@ -11,7 +11,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, OFFERS, inSentence, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, OFFERS, PRODUCTION, SITE, inSentence, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const avatar = OFFERS.find((o) => o.key === 'avatar')!
@@ -104,6 +104,7 @@ export default function Page() {
           grade done by people. The presenter can sell your product but never poses as a customer, an avatar of a real
           person needs that person&apos;s consent, and a realistic AI presenter needs a label on YouTube and TikTok and in
           ads that run in New York.
+          {' '}{MARKETS.line}
         </p>
       </GuideAnswer>
 
