@@ -456,7 +456,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          {/* Hero featured video — full width, tall */}
+          {/* Hero featured video: full width, tall */}
           {featuredVideos[0] && (
             <VideoModal
               youtubeId={featuredVideos[0].youtubeId}
@@ -467,7 +467,7 @@ export default function HomePage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getYoutubeThumbnail(featuredVideos[0].youtubeId)}
-                alt={`${featuredVideos[0].title} — ${featuredVideos[0].client}`}
+                alt={`${featuredVideos[0].title}, ${featuredVideos[0].client}`}
                 className="absolute inset-0 w-full h-full object-cover opacity-75 group-hover:opacity-55 group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
@@ -493,7 +493,7 @@ export default function HomePage() {
             </VideoModal>
           )}
 
-          {/* Remaining featured videos — 3-column grid */}
+          {/* Remaining featured videos: 3-column grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {featuredVideos.slice(1).map((video) => (
               <VideoModal
@@ -505,7 +505,7 @@ export default function HomePage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={getYoutubeThumbnail(video.youtubeId)}
-                  alt={`${video.title} — ${video.client}`}
+                  alt={`${video.title}, ${video.client}`}
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent" />

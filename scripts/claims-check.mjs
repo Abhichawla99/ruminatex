@@ -60,6 +60,8 @@ const ALLOWED_LINK_DOMAINS = [
   'ruminatex.com', '100creatives.com', 'aifilmcontests.com', 'overs.studio', 'instagram.com',
   // video embeds, thumbnails, schema vocabulary
   'youtube.com', 'youtube-nocookie.com', 'youtu.be', 'schema.org',
+  // site infrastructure in app/layout.tsx (fonts, analytics), never cited in copy
+  'fonts.googleapis.com', 'fonts.gstatic.com', 'google-analytics.com', 'googletagmanager.com',
   // laws, regulators, courts and standards bodies outside .gov
   'law.cornell.edu', 'finra.org', 'palegis.us', 'adstandards.ca', 'paab.ca', 'asa.org.uk', 'cippic.ca', 'sagaftra.org', 'aicp.com', 'atsc.org', 'tech.ebu.ch', 'iab.com',
   // platform policy, help and ad-spec pages
@@ -88,7 +90,8 @@ const LIST_PAGES = new Set(['app/blog/top-ai-video-agencies-2026/page.tsx'])
 function linkAllowed(url) {
   let host
   try {
-    host = new URL(url).hostname.replace(/^www\./, '')
+    // A template literal (`https://www.ruminatex.com${item.href}`) ends the URL at its first ${.
+    host = new URL(url.split('${')[0]).hostname.replace(/^www\./, '')
   } catch {
     return true
   }

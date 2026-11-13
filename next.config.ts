@@ -57,6 +57,75 @@ const MERGED: [target: string, sources: string[]][] = [
   ['/best-video-production-company-calgary', [
     '/blog/best-video-production-companies-calgary',
   ]],
+  // 2026-11-13 (Abhi: "fix all that's needed"): legacy pages that were noindexed on 10-28
+  // but still served claims facts.ts does not hold (48-hour delivery, 140+ languages,
+  // "80% less", savings and speed multipliers, tool comparisons). No Search Console
+  // impressions in the 28 days to 11-10. Each goes to the page that sells the same thing.
+  ['/services', [
+    '/solutions/fast-explainer-videos',
+    '/solutions/multilingual-voiceovers',
+    '/markets/ai-video-production-australia',
+    '/markets/ai-video-production-uk',
+    '/use-cases/real-estate-video-tours',
+    '/guides/how-to-create-explainer-videos-with-ai',
+  ]],
+  ['/ai-product-videos', [
+    '/solutions/professional-product-demo',
+    '/guides/interactive-product-demos',
+  ]],
+  ['/ai-video-production-ecommerce', [
+    '/use-cases/ecommerce-product-videos',
+  ]],
+  ['/ai-corporate-video-production', [
+    '/use-cases/educational-training-videos',
+  ]],
+  ['/comparison/ai-agency-vs-traditional-agency', [
+    '/tools/best-ai-video-tools-comparison',
+  ]],
+  ['/guides/ai-commercial-cost', [
+    '/roi-calculator',
+  ]],
+  ['/guides', [
+    '/guides/video-captions-ai-subtitles',
+    '/guides/video-marketing-strategy-ai',
+  ]],
+  // The rest of the 10-28 noindexed pages: boilerplate stat blocks ("80% savings",
+  // "3-5 days", unlimited revisions, engagement multipliers) with no source and no
+  // Search Console demand (/ai-video-strategy 9 impressions; the rest none).
+  ['/services', [
+    '/ai-video-for-restaurants',
+    '/ai-video-production-real-estate',
+    '/ai-content-workflow-automation',
+    '/ai-video-production-youtube-creators',
+    '/ai-video-strategy',
+    '/tools/video-automation-workflow-integration',
+    '/ai-video-personalization',
+    '/ai-video-for-startups',
+    '/ai-video-production-small-business',
+    '/ai-video-content-repurposing',
+    '/ai-video-production-hospitality',
+  ]],
+  ['/ai-commercial-production', [
+    '/ai-video-production-automotive',
+    '/ai-video-production-saas',
+    '/use-cases/saas-video-production',
+  ]],
+  ['/ai-product-videos', [
+    '/ai-motion-content',
+    '/guides/screen-recording-automated-demos',
+  ]],
+  ['/ai-brand-film-agency', [
+    '/ai-video-production-nonprofits',
+  ]],
+  ['/ai-corporate-video-production', [
+    '/ai-explainer-videos',
+  ]],
+  ['/how-we-make-an-ai-brand-film', [
+    '/guides/6-step-video-production-process',
+  ]],
+  ['/ai-ugc-reels', [
+    '/guides/social-media-video-shorts',
+  ]],
   ['/video-production-calgary', [
     '/video-production-downtown-calgary',
     '/video-production-se-calgary',

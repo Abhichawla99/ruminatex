@@ -23,7 +23,7 @@ export default function ContactPage() {
           LET&apos;S MAKE<br />YOUR FILM.
         </h1>
         <p className="text-[#888888] text-lg max-w-xl">
-          Tell us the scene in your head — the one that&apos;s never been put on screen. The shot you thought was impossible. We start there.
+          Tell us the scene in your head, the one that&apos;s never been put on screen. The shot you thought was impossible. We start there.
         </p>
       </section>
 
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 <p>AI Commercials & Campaign Films</p>
                 <p>Fashion & Luxury Editorials</p>
                 <p>Product Launch Films</p>
-                <p>Social Content — Story-First</p>
+                <p>Social Content: Story-First</p>
               </div>
             </div>
 

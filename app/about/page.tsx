@@ -31,15 +31,15 @@ const founderSchema = {
 const values = [
   {
     title: 'Story First',
-    description: "Before the shot list, before the format, before the platform — the story. Every project starts with the narrative truth your brand needs to tell. If the story isn't right, nothing else matters.",
+    description: "Before the shot list, before the format, before the platform: the story. Every project starts with the narrative truth your brand needs to tell. If the story isn't right, nothing else matters.",
   },
   {
     title: 'Every Frame Earned',
-    description: "We don't render filler. Every single frame in every film we produce exists because it earns its place — it advances the story, creates the feeling, or lands the moment. Cinema is not a style. It's a standard.",
+    description: "We don't render filler. Every single frame in every film we produce exists because it earns its place. It advances the story, creates the feeling, or lands the moment. Cinema is not a style. It's a standard.",
   },
   {
     title: 'The Impossible Shot',
-    description: "The scene you thought was out of reach — the location that doesn't exist, the physics that can't be filmed, the aesthetic that costs a million dollars — that's our starting point. We build the shot list first and solve the 'how' second.",
+    description: "The scene you thought was out of reach (the location that doesn't exist, the physics that can't be filmed, the aesthetic that costs a million dollars) is our starting point. We build the shot list first and solve the 'how' second.",
   },
   {
     title: 'Craft at Speed',
@@ -47,11 +47,11 @@ const values = [
   },
   {
     title: 'No Compromise',
-    description: "Traditional agencies compromise. Budgets force cuts. Crews have limits. Schedules slip. We operate without those constraints — which means the version you imagined is the version that gets made.",
+    description: "Traditional agencies compromise. Budgets force cuts. Crews have limits. Schedules slip. We operate without those constraints, which means the version you imagined is the version that gets made.",
   },
   {
     title: 'The Audience Decides',
-    description: "Beautiful films that don't move people are screensavers. Every story we tell is designed to create a specific feeling in a specific viewer at a specific moment. That's not art direction — that's craft.",
+    description: "Beautiful films that don't move people are screensavers. Every story we tell is designed to create a specific feeling in a specific viewer at a specific moment. That's craft.",
   },
 ]
 

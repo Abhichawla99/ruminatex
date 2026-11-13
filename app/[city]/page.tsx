@@ -94,7 +94,7 @@ export default async function CityPage({ params }: Props) {
               <p className="text-[#888888] leading-relaxed mb-6">{location.marketContext}</p>
               <p className="text-[#888888] leading-relaxed">
                 Based in Calgary, Canada, Ruminate X serves {location.city} brands with the same
-                cinematic quality as any local studio — but with AI production capabilities that
+                cinematic quality as any local studio, but with AI production capabilities that
                 make the impossible achievable at a fraction of local agency costs.
               </p>
             </div>
@@ -191,7 +191,7 @@ export default async function CityPage({ params }: Props) {
             <span style={{ color: '#ebff00' }}>BRING US THE SCENE.</span>
           </h2>
           <p className="text-[#888888] mb-8">
-            Tell us the story your brand has been trying to tell. We make films for brands in {location.city} — and everywhere a great story deserves to be told.
+            Tell us the story your brand has been trying to tell. We make films for brands in {location.city} and everywhere a great story deserves to be told.
           </p>
           <Link
             href="/contact"
