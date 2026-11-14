@@ -305,7 +305,8 @@ export default function Page() {
             say the ad contains content modified or generated using AI, appear the first time that content is shown, and
             run in the same medium as that content. Evidently fictional content, parody and text-only ads are exempt.
             The state attorney general or a district attorney can sue, and a court can award a civil fine of up to $3,000 {/* claims-ok: Pennsylvania SB 806 (Act 99 of 2026), section 5(c), PA_ACT */}
-            plus attorney fees and court costs.
+            plus attorney fees and court costs. Which shots need a label in which state, and how it is placed in a
+            video, is in our guide to <Link href="/guides/ai-ad-labeling-laws">AI ad labeling laws in the US</Link>.
           </li>
           <li>
             In the EU, <a href={EU_ART50}>Article 50 of the AI Act</a> applies from August 2, 2026: content that is a

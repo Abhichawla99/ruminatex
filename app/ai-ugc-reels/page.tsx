@@ -123,7 +123,8 @@ export default function Page() {
           social: every frame generated with AI, with the hooks, script, boards, edit, sound and grade done by people. Its
           generated creators deliver scripted ad lines and never pose as customers, as the FTC rules on testimonials
           require. TikTok and New York require an AI label on realistic generated presenters, and Pennsylvania&apos;s Act 99
-          label rule takes effect 60 days after its October 22, 2026 signing.
+          label rule takes effect 60 days after its October 22, 2026 signing (
+          <Link href="/guides/ai-ad-labeling-laws">AI ad labeling laws in the US</Link>).
           {' '}{MARKETS.line}
         </p>
       </GuideAnswer>

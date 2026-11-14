@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai video production agency: what an AI video production agency does, what to look for when hiring one, and how Ruminate X works',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-31',
+    updated: '2026-11-14',
   },
   {
     path: '/ai-commercial-production',
@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech, AI infrastructure and e-commerce brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-10',
+    updated: '2026-11-14',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -64,7 +64,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai brand films and ai film production companies: what they are, which kind makes films for brands, how Ruminate X makes one, what makes AI footage cinematic, where to buy cinematic AI video for brand campaigns and trailers, and how much an AI brand film costs',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-11',
+    updated: '2026-11-14',
   },
   {
     path: '/ai-video-production-healthcare',
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai corporate video production: which company films can be made with AI, which company creates AI-generated video for corporate communications, and what it costs',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-11-14',
   },
   {
     path: '/guides/brands-using-ai-commercials',
@@ -321,5 +321,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'guide',
     published: '2026-11-13',
     updated: '2026-11-13',
+  },
+  {
+    path: '/guides/ai-ad-labeling-laws',
+    title: 'AI Ad Labeling Laws in the US',
+    question: 'do AI ads have to be labeled in the US: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
+    kind: 'guide',
+    published: '2026-11-14',
+    updated: '2026-11-14',
   },
 ]

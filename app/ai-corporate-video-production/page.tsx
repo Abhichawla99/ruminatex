@@ -24,7 +24,7 @@ const PAGE = {
   title: 'AI Corporate Video Production for Companies',
   description: `${studio} creates AI-generated video for corporate communications: about-us, mission, recruiting and all-hands films with every frame made with AI. Which company films it makes, what they cost, how a studio differs from an enterprise AI video platform, and the consent and disclosure rules for AI presenters.`,
   published: '2026-03-08',
-  updated: '2026-10-28',
+  updated: '2026-11-14',
   keywords: [
     'ai corporate video production',
     'which company creates ai-generated video for corporate communications',
@@ -104,11 +104,11 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          AI corporate video production means making a company&apos;s films (about-us films, mission and values films,
-          conference openers, recruiting pieces, product stories) with generated footage instead of a film crew. {studio},
-          an AI film studio in {SITE.city}, makes {inSentence(aboutUs.name)} for companies of every size, pharma, labs and
-          medical companies among them: every frame generated with AI, with the script, boards, edit, sound and grade done
-          by people. The story is carried by a voiceover, a made world, your product or a generated presenter, and your
+          {studio} is an AI film studio that makes {inSentence(aboutUs.name)} for companies across the United States and
+          Canada, of every size, pharma, labs and medical companies among them. AI corporate video production means
+          making a company&apos;s films (about-us films, mission and values films, conference openers, recruiting
+          pieces, product stories) with generated footage instead of a film crew; at {studio}, based in {SITE.city}, the
+          script, boards, edit, sound and grade are done by people. The story is carried by a voiceover, a made world, your product or a generated presenter, and your
           logo, names and on-screen text are set in the edit from your own files.
           {' '}{MARKETS.line}
         </p>

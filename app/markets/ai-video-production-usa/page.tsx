@@ -186,6 +186,10 @@ export default function Page() {
           arrangement, edit) is what can be owned. Our guide to <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>{' '}
           covers the contract clauses.
         </p>
+        <p>
+          Which shots need an AI label in New York and Pennsylvania, and how it is placed in a video, is in our guide to{' '}
+          <Link href="/guides/ai-ad-labeling-laws">AI ad labeling laws in the US</Link>.
+        </p>
         <p>This section is not legal or regulatory advice. Your counsel and, for a drug ad, your MLR team decide.</p>
       </GuideSection>
 
