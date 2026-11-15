@@ -166,8 +166,8 @@ export default function Page() {
       <GuideStudio title={`${studio} makes AI commercials for pharma and pharmacy brands`}>
         <p>
           Every frame is generated, there is no shoot, and your medical, legal and regulatory reviewers sign off on every
-          claim and the safety information before anything airs. See{' '}
-          <Link href="/ai-video-production-healthcare">AI video production for pharma and healthcare</Link>.
+          claim and the safety information before anything airs. Which pharma formats are made with AI and which need a
+          camera is on <Link href="/ai-video-production-healthcare">pharmaceutical video production</Link>.
         </p>
       </GuideStudio>
 

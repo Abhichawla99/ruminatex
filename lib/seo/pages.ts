@@ -68,11 +68,11 @@ export const SEO_PAGES: SeoPage[] = [
   },
   {
     path: '/ai-video-production-healthcare',
-    title: 'AI Video Production for Pharma and Healthcare',
-    question: 'ai video production for pharma and healthcare: what Ruminate X makes for pharma, pharmacy, lab and medical companies, how AI footage gets through MLR, which biotech company videos AI can make, what video ads for GLP-1, TRT and HRT clinics can say and show, and the FDA rules for drug ads',
+    title: 'Pharmaceutical Video Production with AI',
+    question: 'pharmaceutical video production company: what Ruminate X makes for pharma, pharmacy, lab and medical companies, which pharma video formats AI can make and which need a camera, what it costs, how AI footage gets through MLR, which biotech company videos AI can make, what video ads for GLP-1, TRT and HRT clinics can say and show, and the FDA rules for drug ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-11-13',
+    updated: '2026-11-15',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -208,7 +208,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai avatar video production: when a company should use an AI presenter or spokesperson video, what it costs, and the consent and disclosure rules',
     kind: 'service',
     published: '2026-09-30',
-    updated: '2026-10-28',
+    updated: '2026-11-15',
   },
   {
     path: '/guides/who-owns-ai-video',
@@ -240,7 +240,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai ugc agency: what an AI UGC agency does, what AI UGC ads are, how Ruminate X makes them, what AI UGC costs, and whether AI UGC (synthetic UGC) is legal: the disclosure rules on Meta, TikTok and the FTC',
     kind: 'service',
     published: '2026-03-08',
-    updated: '2026-11-12',
+    updated: '2026-11-15',
   },
   {
     path: '/ai-product-videos',
@@ -312,7 +312,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai luxury commercials: who makes them, what holds up in close-up (hardware, leather, monograms, faces), what the 2026 Dior and Prada holiday ads mean for disclosure, and what an AI luxury or fashion film costs',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-11-10',
+    updated: '2026-11-15',
   },
   {
     path: '/guides/pharmaceutical-commercial-cost',

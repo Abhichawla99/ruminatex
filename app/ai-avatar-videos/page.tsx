@@ -21,7 +21,7 @@ const PAGE = {
   title: 'AI Avatar Video Production for Companies',
   description: `${studio} makes AI avatar and spokesperson videos for brands and companies: a presenter cast for you and generated with AI, fronting ads, product films and company videos. What it delivers, what moves the price, the consent a real person's likeness needs, and the disclosure rules (YouTube, Meta, TikTok, New York, Pennsylvania, FTC).`,
   published: '2026-09-30',
-  updated: '2026-10-28',
+  updated: '2026-11-15',
   keywords: [
     'ai avatar video production company',
     'ai avatar video ads',
@@ -98,10 +98,10 @@ export default function Page() {
 
       <GuideAnswer>
         <p>
-          An AI avatar video puts a generated presenter on screen speaking your script. {studio}, an AI film studio in{' '}
-          {SITE.city}, makes {inSentence(avatar.name)} for brands and companies: a presenter or spokesperson cast for you
-          and generated with AI, fronting ads, product films and company videos, with the script, boards, edit, sound and
-          grade done by people. The presenter can sell your product but never poses as a customer, an avatar of a real
+          {studio} is an AI film studio that makes {inSentence(avatar.name)} for brands and companies across the{' '}
+          {MARKETS.served.join(' and ')}: a presenter or spokesperson cast for you and generated with AI, fronting ads, product films and
+          company videos. An AI avatar video puts that generated presenter on screen speaking your script, and the script,
+          boards, edit, sound and grade are done by people. The presenter can sell your product but never poses as a customer, an avatar of a real
           person needs that person&apos;s consent, and a realistic AI presenter needs a label on YouTube and TikTok and in
           ads that run in New York.
           {' '}{MARKETS.line}

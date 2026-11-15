@@ -125,7 +125,7 @@ export default function Page() {
         </ul>
         <p>
           For pharma, pharmacy, lab and medical brands, the film goes through your MLR review: see{' '}
-          <Link href="/ai-video-production-healthcare">AI video for pharma and healthcare</Link> and{' '}
+          <Link href="/ai-video-production-healthcare">pharmaceutical video production</Link> and{' '}
           <Link href="/guides/pharmaceutical-commercial-cost">what a pharmaceutical commercial costs</Link>.
         </p>
       </GuideSection>

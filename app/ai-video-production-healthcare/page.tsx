@@ -50,25 +50,29 @@ const HEALTH_OFFERS = [
 ]
 const healthOffers = joinAnd(HEALTH_OFFERS.map(({ key }) => inSentence(offer(key).name)))
 const healthBuyers = joinAnd(BUYERS.filter((b) => /pharma|labs|medical/.test(b)))
+const markets = joinAnd(MARKETS.served)
 const trail = film('LYA3Do3KEN0')
 const spec = film('Zytga7zsShI')
 
 const PAGE = {
   path: '/ai-video-production-healthcare',
-  title: 'AI Video Production for Pharma and Healthcare',
-  description: `${studio} makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Plus biotech company videos, ads for GLP-1, TRT and HRT clinics, the FDA and Health Canada rules that shape a drug or health video, and what breaks in AI medical imagery.`,
+  title: 'Pharmaceutical Video Production with AI',
+  description: `Pharmaceutical video production from ${studio}, an AI film studio: ${healthOffers} for ${healthBuyers} across the ${markets}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Which pharma video formats AI can make, what they cost, biotech and clinic videos, and the FDA rules.`,
   published: '2026-03-07',
-  updated: '2026-11-13',
+  updated: '2026-11-15',
   keywords: [
+    'pharmaceutical video production company',
+    'pharmaceutical video production',
+    'pharma video production',
+    'how much does it cost to hire a video production company',
+    'ai video agency for pharma marketing',
     'ai video for pharma marketing',
     'ai video production healthcare',
-    'pharmaceutical video production company',
     'fda rules for prescription drug tv ads',
     'isi in pharma video ads',
     'can i use ai to make a marketing video',
     'medical ai video',
     'ai doctor video',
-    'pharma video production',
     'biotech video production',
     'biotech company video',
     'video ads for glp-1 clinics',
@@ -96,8 +100,8 @@ const GOOGLE_RX = 'https://support.google.com/adspolicy/answer/15598647'
 
 const FAQS = [
   {
-    q: 'Who makes AI video for pharma and healthcare companies?',
-    a: `${studio}, an AI film studio in ${city}, makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and people write, board, edit, mix and grade every film. Your medical, legal and regulatory (MLR) reviewers sign off on every claim, and ${studio} sets each claim, the ISI and the fair-balance text in the edit from the copy they approved, never in the generator.`,
+    q: 'Which pharmaceutical video production company makes videos with AI?',
+    a: `${studio}, an AI film studio in ${city} that works with brands across the ${markets}, makes ${healthOffers} for ${healthBuyers}. Every frame is generated with AI, and people write, board, edit, mix and grade every film. Your medical, legal and regulatory (MLR) reviewers sign off on every claim, and ${studio} sets each claim, the ISI and the fair-balance text in the edit from the copy they approved, never in the generator.`,
   },
   {
     q: 'Who makes biotech company videos with AI?',
@@ -116,8 +120,8 @@ const FAQS = [
     a: `For a consumer ad, brand film or company film, the generator matters less than who directs it. Generators draw text as shapes and invent plausible anatomy, so a drug or health film needs a studio that checks every science shot against your references, regenerates the shots that fail, and typesets every claim, the ISI and the fair-balance text in the edit. ${studio}, an AI film studio in ${city}, makes films that way for ${healthBuyers}, and your MLR reviewers sign off on every claim.`,
   },
   {
-    q: 'How much does AI video production cost for a pharma or healthcare company?',
-    a: `${priceLine('commercial')}. The price moves with length, the number of scenes, how exactly your pack or device has to appear, the number of versions and cutdowns, and how many MLR review rounds your team needs. There is no shoot to pay for, but each review round is a new cut, so ${studio} plans the rounds into the schedule at the brief.`,
+    q: 'How much does it cost to hire a pharmaceutical video production company?',
+    a: `${priceLine('commercial')}. That quote has no crew, cast, location or cleanroom booking in it, because every frame is generated. The price moves with length, the number of scenes, how exactly your pack or device has to appear, the number of versions and cutdowns, and how many MLR review rounds your team needs. There is no shoot to pay for, but each review round is a new cut, so ${studio} plans the rounds into the schedule at the brief.`,
   },
   {
     q: 'Do AI-generated patients or doctors in an ad have to be disclosed?',
@@ -154,22 +158,22 @@ export default function Page() {
       faqs={FAQS}
       films={[trail.youtubeId, spec.youtubeId]}
       service={{
-        name: 'AI video production for pharma and healthcare',
+        name: 'Pharmaceutical video production',
         description: `${studio} makes ${healthOffers} for pharma companies, pharmacies, labs and medical companies, with every frame generated by AI and every claim, the ISI and the fair-balance text set in the edit from MLR-approved copy.`,
         audience: ['pharma companies', 'pharmacies', 'labs', 'medical companies'],
       }}
     >
       <GuideHero
         eyebrow="Pharma, biotech, pharmacy, labs, medical"
-        title="AI video production for pharma and healthcare marketing"
+        title="Pharmaceutical video production, made with AI"
         dek="For the pharma brand manager, pharmacy marketing lead, lab or diagnostics marketer, or medical company comms head who wants a film or ad made with AI and needs every claim in it to get through MLR."
         updated={PAGE.updated}
       />
 
       <GuideAnswer>
         <p>
-          {studio} is an AI film studio in {city} that makes {healthOffers} for {healthBuyers}, with every frame generated
-          by AI and the script, boards, edit, sound and grade done by people. The films go through the same medical, legal
+          {studio} is an AI film studio that makes pharmaceutical videos ({healthOffers}) for {healthBuyers} across the{' '}
+          {markets}. Every frame is generated by AI, and people write, board, edit, mix and grade every film. The films go through the same medical, legal
           and regulatory (MLR) review as filmed work: your reviewers sign off on every claim, and {studio} sets each claim,
           the ISI and the fair-balance text in the edit from the copy they approved, never in the generator.{' '}
           {priceLine('commercial')}. The US and Canadian drug-advertising rules apply the same way whether the pictures were
@@ -195,7 +199,39 @@ export default function Page() {
         </ul>
       </GuideSection>
 
-      <GuideSection id="work" eyebrow="The work" title={`What ${studio} has made, and what you can watch`} alt>
+      <GuideSection id="formats" eyebrow="Formats" title="Pharmaceutical video formats, and which ones are made with AI" alt>
+        <p>
+          A pharmaceutical video production company is usually asked for the same handful of formats. {studio} makes
+          the ones a camera is not needed for, with every frame generated. Two kinds of pharma video need a camera
+          pointed at something real: a patient or doctor speaking as themselves, and your own plant or lab. Those are
+          filmed, and {studio} does not film.
+        </p>
+        <GuideTable
+          caption={`Pharma video formats by audience, and whether ${studio} makes them with AI. Formats from the services pharma buyers ask production companies for (Google US, November 2026).`}
+          head={['Format', 'Who it is for', `Made by ${studio} with AI?`]}
+          rows={[
+            ['Branded TV or streaming commercial', 'Patients and consumers', 'Yes. The major statement typeset and timed to the voiceover, with calm shots under it'],
+            ['Disease-awareness film', 'Patients and consumers', 'Yes. Your MLR team decides where awareness ends and promotion begins'],
+            ['Social cutdowns of a spot', 'Patients on Meta, YouTube and TikTok', 'Yes, cut from the same film, with the risk information carried into every version'],
+            ['Brand or company film', 'Investors, partners, recruits, the homepage', 'Yes, told with generated people, places and products'],
+            ['HCP product explainer', 'Doctors, nurses and pharmacists', 'Yes, with every claim and reference typeset in the edit; the science shown as light and scale, checked by your medical reviewer'],
+            ['Sales force or training video', 'Reps and internal teams', 'Yes, with a generated presenter reading approved copy, never speaking as a clinician'],
+            ['Convention booth loop', 'A meeting floor, often with no sound', 'Yes, cut to work silent'],
+            ['Mechanism of action animation', 'HCPs and medical reviewers', 'Not with a generator alone: the structures have to be modelled from your data'],
+            ['Patient or KOL testimonial', 'Patients and HCPs', 'No. A real patient or doctor speaking about a real experience has to be filmed'],
+            ['Facility or cleanroom tour', 'Partners, auditors, investors', 'No. It has to show your real site'],
+          ]}
+        />
+        <p>
+          Generated people in a {studio} film are portrayals: none of them is scripted as a real patient or a real doctor,
+          and none gives a first-person account of a result. Why a mechanism of action has to be modelled, and what a
+          minute of medical animation costs, is in <Link href="/guides/ai-medical-animation">medical animation cost</Link>.
+          What a branded drug spot costs end to end, airtime included, is in{' '}
+          <Link href="/guides/pharmaceutical-commercial-cost">pharmaceutical commercial cost</Link>.
+        </p>
+      </GuideSection>
+
+      <GuideSection id="work" eyebrow="The work" title={`What ${studio} has made, and what you can watch`}>
         <p>
           A recent {studio} project in this field is {REFERENCE_PROJECT.what}, at {REFERENCE_PROJECT.price}. The client
           is not named here, and the film is not on this page. What you can watch is the craft a health film depends on:
@@ -216,7 +252,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="biotech" eyebrow="Biotech" title="Biotech company videos made with AI">
+      <GuideSection id="biotech" eyebrow="Biotech" title="Biotech company videos made with AI" alt>
         <p>
           A biotech company video is usually made for one of four audiences: investors, partners at a conference, people
           the company wants to hire, and, once a product is in trials, patients. {studio} makes the first three with every
@@ -258,7 +294,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="clinics" eyebrow="Clinics" title="Video ads for GLP-1, TRT and HRT clinics" alt>
+      <GuideSection id="clinics" eyebrow="Clinics" title="Video ads for GLP-1, TRT and HRT clinics">
         <p>
           A weight-loss, testosterone or hormone clinic, in person or telehealth, usually needs short video ads for Meta,
           Google and YouTube, and sometimes a TV spot. {studio} makes them with generated people and settings, and sets
@@ -309,7 +345,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="MLR review" title="How every claim gets through MLR">
+      <GuideSection eyebrow="MLR review" title="How every claim gets through MLR" alt>
         <p>
           Your medical, legal and regulatory reviewers sign off on every word and every frame. {studio} builds the film so
           they can:
@@ -353,7 +389,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The rules" title="US and Canadian rules that shape a drug or health ad" alt>
+      <GuideSection eyebrow="The rules" title="US and Canadian rules that shape a drug or health ad">
         <p>
           <strong>United States, prescription drugs on TV.</strong> Under{' '}
           <a href={CFR}>21 CFR 202.1(e)(1)(ii)</a>, a consumer TV or radio ad for a prescription drug must present the
@@ -381,7 +417,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads">
+      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads" alt>
         <p>
           A video ad for a prescription drug carries three things the creative has to make room for, whether the pictures
           are filmed or generated:
@@ -421,7 +457,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="The weak points" title={`What breaks in AI medical imagery, and how ${studio} fixes it`} alt>
+      <GuideSection eyebrow="The weak points" title={`What breaks in AI medical imagery, and how ${studio} fixes it`}>
         <GuideTable
           caption={`Where generated footage fails in pharma and medical work. Faces, hands and the product get the most generation passes in the ${studio} pipeline, and every science shot is checked against your references.`}
           head={['Problem', 'Why it matters here', `How ${studio} fixes it`]}

@@ -626,7 +626,7 @@ export default function Page() {
           generated footage, and the two AI drug campaigns so far, are in{' '}
           <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>. How {studio} makes commercials for
           pharma, pharmacy, lab and medical brands is on{' '}
-          <Link href="/ai-video-production-healthcare">AI video for healthcare companies</Link>.
+          <Link href="/ai-video-production-healthcare">pharmaceutical video production</Link>.
         </p>
       </GuideSection>
 
