@@ -229,10 +229,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-medical-animation',
     title: 'Medical Animation Cost: 2D, 3D, MOA and AI',
-    question: 'how much does medical animation cost per minute, how much would a 3 minute animation cost, and can AI make medical films',
+    question: 'how much does medical animation cost per minute, how much would a 3 minute animation cost, how long it takes, and can AI make medical films',
     kind: 'guide',
     published: '2026-10-03',
-    updated: '2026-11-03',
+    updated: '2026-11-22',
   },
   {
     path: '/ai-ugc-reels',

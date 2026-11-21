@@ -12,18 +12,20 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
+import { BUYERS, MARKETS, PRODUCTION, SITE, priceLine } from '@/lib/seo/facts'
 
 const PAGE = {
   path: '/guides/ai-medical-animation',
   title: 'Medical Animation Cost: 2D, 3D, MOA and AI',
   description: `Medical animation costs about $2,000 to $8,000 a finished minute in 2D and $8,000 to $20,000 or more in 3D on the rate cards studios publish (October 2026). What a 3-minute film and a mechanism of action animation cost, where AI medical animation works for pharma, biotech and lab marketing, where it gets the science wrong, and how ${SITE.name} makes AI films for pharma, lab and medical companies.`,
   published: '2026-10-03',
-  updated: '2026-11-03',
+  updated: '2026-11-22',
   keywords: [
     'how much does medical animation cost',
     'medical animation cost',
     'medical animation pricing',
+    'moa animation cost',
+    'how long does medical animation take',
     'ai medical animation',
     'how much would a 3 minute animation cost',
     'can ai make medical animation',
@@ -41,6 +43,8 @@ const joinAnd = (items: readonly string[]) =>
   items.length > 1 ? `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}` : items.join('')
 const scienceBuyers = joinAnd(BUYERS.filter((b) => /pharma|labs|medical/.test(b)))
 
+const usMarket = MARKETS.served.join(' and ')
+
 const CFR_201_57 = 'https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-201/subpart-B/section-201.57'
 
 const FAQS = [
@@ -51,6 +55,10 @@ const FAQS = [
   {
     q: 'How much would a 3 minute medical animation cost?',
     a: `At the per-minute rates medical animation studios publish, three minutes comes to about $6,000 to $24,000 in 2D and $24,000 to $60,000 in 3D, or $46,800 to $64,800 where 3D is priced at $260 to $360 a second. At the high end, one studio's 2024 rate card prices three minutes of 3D scientific animation at $75,000 to $105,000 (rate cards checked October 2026). Longer films cost less per minute, because the models, script and review are built once, so ask for a quote on the full length. ${priceLine('brand-film')}, at the length you need.`,
+  },
+  {
+    q: 'How long does medical animation take?',
+    a: `Medical animation studios that publish timelines quote about six to ten weeks for a one to two minute film (published timelines, checked November 2026), and a mechanism of action film that goes through several rounds of scientific and MLR review takes longer. Most of that time is the scientific script, modelling and review. ${studio} plans an AI film for a pharma, lab or medical company back from the date you need it, with your medical reviewer booked for the boards and the rough cut. It does not promise a turnaround before it has read the brief.`,
   },
   {
     q: 'How much does a mechanism of action animation cost?',
@@ -95,11 +103,11 @@ export default function Page() {
           Medical animation studios that publish rate cards charge about $2,000 to $8,000 a finished minute for 2D and
           $8,000 to $20,000 or more for 3D, with mechanism of action (MOA) work at $20,000 a minute and up (rate cards
           checked October 2026). A 3-minute film comes to about $6,000 to $24,000 in 2D and $24,000 to over $100,000 in
-          3D, depending on the studio. AI can make medical animation that looks right, but it draws molecules, cells and
-          organs from images it has seen, not from structural data or your study, so the science comes out plausible
-          rather than correct. {studio}, an AI film studio in {city}, makes AI films for {scienceBuyers} in which the
-          science sets the scene: every frame generated with AI, with the script, boards, edit, sound and grade done by
-          people.
+          3D, depending on the studio. {studio} is an AI film studio that makes AI films for {scienceBuyers} across the{' '}
+          {usMarket}, in which the science sets the scene: every frame generated with AI, with the script, boards, edit,
+          sound and grade done by people. {priceLine('brand-film')}. AI draws molecules, cells and organs from images it
+          has seen, not from structural data or your study, so a MOA your reviewers will check against the label still
+          has to be modelled.
         </p>
       </GuideAnswer>
 
@@ -107,7 +115,7 @@ export default function Page() {
         <p>
           Brand films, conference openers and disease-awareness films with the science as the backdrop, every frame
           generated, and every science shot checked by your medical reviewer at the boards and the rough cut. See{' '}
-          <Link href="/ai-video-production-healthcare">AI video production for pharma and healthcare</Link>.
+          <Link href="/ai-video-production-healthcare">pharmaceutical video production</Link>.
         </p>
       </GuideStudio>
 
@@ -139,6 +147,14 @@ export default function Page() {
           three minutes of 3D scientific animation at $75,000 to $105,000, against $35,000 to $45,000 for one minute, so the
           second and third minutes cost less than the first. Per-minute rates fall as films get longer because the models,
           script and review are built once. Ask any studio to quote the full length you need rather than a per-minute rate.
+        </p>
+        <h3>How long does medical animation take?</h3>
+        <p>
+          Studios that publish timelines quote about six to ten weeks for a one to two minute film (published timelines,
+          checked November 2026). The scientific script, the modelling and your reviewers&apos; rounds take most of it, so
+          a MOA film with several rounds of scientific and MLR review runs longer. Book your medical reviewer for the
+          script, the boards and the rough cut before work starts; a round that waits a week moves the delivery date by a
+          week.
         </p>
         <h3>Why 3D medical animation costs so much</h3>
         <p>
