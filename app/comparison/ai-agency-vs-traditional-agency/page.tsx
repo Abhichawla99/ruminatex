@@ -13,7 +13,7 @@ import {
   GuideTable,
   guideMetadata,
 } from '@/components/guide/Guide'
-import { BUYERS, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
+import { BUYERS, PRICES, PRODUCTION, RELATED, SITE, priceLine } from '@/lib/seo/facts'
 
 const studio = SITE.name
 const listOf = (items: readonly string[]) =>
@@ -22,14 +22,15 @@ const brandBuyers = listOf(BUYERS.filter((b) => b !== 'companies of every size')
 const hundred = RELATED.find((r) => r.name === '100creatives')!
 const adPrice = priceLine('commercial')
 const filmPrice = priceLine('brand-film')
+const startsAt = PRICES.find((p) => p.offer === 'commercial')!.from
 const AICP_2019 = 'https://aicp.com/news-roundup/news-from-aicp/aicp-introduces-updated-and-revised-bid-form'
 
 const PAGE = {
   path: '/comparison/ai-agency-vs-traditional-agency',
   title: 'When to Hire an AI Video Production Partner',
-  description: `Hire an AI video production partner when the film runs under your brand, your team lacks the days to generate, rerun, edit and mix every shot, and everyone on screen can be generated. AI or a production company, a tool or an agency, and what each costs; ${studio} makes AI commercials and brand films with no shoot to book.`,
+  description: `Hire an AI video production partner when the film runs under your brand, your team lacks the days to rerun, edit and mix every shot, and everyone on screen can be generated. ${studio} makes AI commercials and brand films from ${startsAt}, with no shoot to book.`,
   published: '2026-03-08',
-  updated: '2026-11-05',
+  updated: '2026-11-21',
   keywords: [
     'when should a brand hire an ai video production partner',
     'is it better to use ai or hire a production company',
@@ -56,7 +57,7 @@ const PAGE = {
 const FAQS = [
   {
     q: 'When should a brand hire an AI video production partner?',
-    a: `Hire one when the film runs under your brand in paid media, on your site or at a launch, nobody on your team has the days to generate, check and rerun every shot and then edit and mix it, and the people, places and product on screen can all be generated. ${studio}, an AI film studio in ${SITE.city}, is that partner for commercials, brand films and company films: every frame is generated with AI, people write, board, edit, mix and grade, and each round of legal, compliance or MLR notes comes back as a new cut.`,
+    a: `Hire one when the film runs under your brand in paid media, on your site or at a launch, nobody on your team has the days to generate, check and rerun every shot and then edit and mix it, and the people, places and product on screen can all be generated. ${studio}, an AI film studio in ${SITE.city}, is that partner for commercials, brand films and company films: every frame is generated with AI, people write, board, edit, mix and grade, and each round of legal, compliance or MLR notes comes back as a new cut. ${adPrice}.`,
   },
   {
     q: 'Is it better to use AI or hire a production company?',
@@ -139,7 +140,8 @@ export default function Page() {
           everyone and everything on screen can be generated. {studio}, an AI film studio in {SITE.city}, is that partner
           for commercials, brand films and company films for {brandBuyers}: every frame is generated with AI, people
           write, board, edit, mix and grade the film, and there are no crew days, locations or reshoots in the quote.
-          A production company films with a crew, which you still need when real people must appear as themselves.
+          {adPrice}. A production company films with a crew, which you still need when real people must appear as
+          themselves.
         </p>
       </GuideAnswer>
 

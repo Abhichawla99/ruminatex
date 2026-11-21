@@ -38,7 +38,7 @@ const PAGE = {
   title: 'AI Video Production for Ecommerce Brands',
   description: `${studio} makes AI video for ecommerce and DTC brands: product films and stills, launch films, UGC-style ads, and the marketplace and social versions of each, with every frame generated and your real product, label and logo set in the edit from your files. What it costs, what an Amazon video ad allows, and where generated product shots break.`,
   published: '2026-03-07',
-  updated: '2026-11-15',
+  updated: '2026-11-21',
   keywords: [
     'ai video for ecommerce',
     'AI video production for ecommerce brands',
@@ -110,7 +110,7 @@ export default function Page() {
           product films, launch spots and creator-style ads made with generative AI instead of a studio day, then cut into
           the versions each store, marketplace and feed takes. Every frame is generated with AI, the script, boards, edit,
           sound and grade are done by people, and your real product, label and logo are set in the edit from your own files.
-          Each marketplace version follows that marketplace&apos;s rules; Amazon&apos;s Sponsored Brands video ads, for
+          {priceLine('commercial')}; product films, stills and UGC-style ads are quoted from the brief. Each marketplace version follows that marketplace&apos;s rules; Amazon&apos;s Sponsored Brands video ads, for
           example, run 6 to 45 seconds in 16:9 only and cannot show customer reviews or star ratings.
           {' '}{MARKETS.line}
         </p>

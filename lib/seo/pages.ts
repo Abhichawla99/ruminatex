@@ -56,7 +56,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'when should a brand hire an ai video production partner instead of a production company, should I use an AI video tool or hire an agency, what AI video outsourcing hands to the studio, and what a 2-minute brand video costs either way',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-11-05',
+    updated: '2026-11-21',
   },
   {
     path: '/ai-brand-film-agency',
@@ -288,7 +288,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'should i use ai effects or hire a vfx freelancer for a short brand video, is an ai video generator cheaper than a freelance video editor, and should i hire an ai video editor full time or as a freelancer',
     kind: 'comparison',
     published: '2026-03-08',
-    updated: '2026-10-28',
+    updated: '2026-11-21',
   },
   {
     path: '/services',
@@ -328,6 +328,14 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'do AI ads have to be labeled in the US: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
     kind: 'guide',
     published: '2026-11-14',
-    updated: '2026-11-14',
+    updated: '2026-11-21',
+  },
+  {
+    path: '/ai-video-production-ecommerce',
+    title: 'AI Video Production for Ecommerce Brands',
+    question: 'ai video production for e-commerce brands: product films, launch spots and UGC-style ads made with AI, what an AI e-commerce commercial costs, what an Amazon video ad allows, and where generated product shots break',
+    kind: 'industry',
+    published: '2026-03-07',
+    updated: '2026-11-21',
   },
 ]

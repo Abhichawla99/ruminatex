@@ -32,7 +32,7 @@ const PAGE = {
   title: 'Hire a Freelance Video Editor vs AI Production: Which Is Better?',
   description: `Whether to use AI effects, hire a VFX freelancer or video editor, or have ${studio} make a short brand video with AI: what each route costs in money and staff hours, US wage data for editors and effects artists, and where AI shots break.`,
   published: '2026-03-08',
-  updated: '2026-10-28',
+  updated: '2026-11-21',
   keywords: [
     'should i use ai effects or hire a vfx freelancer for a short brand video',
     'is an ai video generator cheaper than a freelance video editor',
@@ -46,7 +46,7 @@ const PAGE = {
 const FAQS = [
   {
     q: 'Should I use AI effects or hire a VFX freelancer for a short brand video?',
-    a: `If nothing has been filmed, you need neither. ${studio}, an AI film studio in ${SITE.city}, makes the whole short brand video with AI, every frame generated, with the script, boards, edit, sound and grade done by people, so you do not brief and manage a freelancer or run a generator yourself. A VFX freelancer works on footage someone has already shot, and AI effects tools still need someone to direct every take, rerun the ones that fail, edit and mix.`,
+    a: `If nothing has been filmed, you need neither. ${studio}, an AI film studio in ${SITE.city}, makes the whole short brand video with AI, every frame generated, with the script, boards, edit, sound and grade done by people, so you do not brief and manage a freelancer or run a generator yourself. A VFX freelancer works on footage someone has already shot, and AI effects tools still need someone to direct every take, rerun the ones that fail, edit and mix. ${price}.`,
   },
   {
     q: 'Is an AI video generator cheaper than a freelance video editor?',
@@ -87,7 +87,7 @@ export default function Page() {
           AI effects means generated shots or AI fixes on filmed footage; a VFX freelancer adds effects to footage someone
           has already shot. For a short brand video with nothing filmed, {studio}, an AI film studio in {SITE.city}, makes
           the whole video with AI, so you neither hire and manage a freelancer nor run a generator: every frame generated,
-          with the script, boards, edit, sound and grade done by people. For comparison, US film and video editors earned
+          with the script, boards, edit, sound and grade done by people. {price}. For comparison, US film and video editors earned
           a median <a href={BLS_EDITORS}>USD 36.26 an hour</a> and special effects artists and animators{' '}
           <a href={BLS_VFX}>USD 49.06</a> in Bureau of Labor Statistics 2025 wage data, and a generator subscription
           leaves the reruns, edit and mix to your team.

@@ -22,7 +22,7 @@ const PAGE = {
   title: 'AI Ad Labeling Laws in the US',
   description: `Do AI ads have to be labeled in the US? No federal law requires it, but New York requires a disclosure when an ad shows a synthetic performer, Pennsylvania's Act 99 requires one when AI content could mislead about the product, and Meta, Google and TikTok have their own rules. ${studio} makes AI commercials and sets the label in the edit.`,
   published: '2026-11-14',
-  updated: '2026-11-14',
+  updated: '2026-11-21',
   keywords: [
     'do ai ads have to be labeled',
     'do ai ads have to be labeled in the us',
@@ -63,7 +63,7 @@ const FAQS = [
   },
   {
     q: 'Does Pennsylvania require AI labels on ads?',
-    a: 'Yes, from 60 days after October 22, 2026. Act 99 of 2026, the Artificial Intelligence Deceptive Advertising Act, says an advertiser may not run an ad that uses AI-generated or significantly AI-modified images, video, audio or text in a way that creates a false impression about the nature, origin or authenticity of what is sold, without a clear and conspicuous statement that the ad contains content modified or generated using AI. The statement appears the first time the synthetic content does, in the same medium, and is hard to remove where that is technically feasible. Evidently fictional content, parody and text-only content are exempt. The Attorney General or a district attorney enforces it, with a civil fine of up to USD 3,000 plus attorney fees. This is not legal advice.',
+    a: 'Yes, from December 21, 2026, 60 days after its October 22, 2026 approval. Act 99 of 2026, the Artificial Intelligence Deceptive Advertising Act, says an advertiser may not run an ad that uses AI-generated or significantly AI-modified images, video, audio or text in a way that creates a false impression about the nature, origin or authenticity of what is sold, without a clear and conspicuous statement that the ad contains content modified or generated using AI. The statement appears the first time the synthetic content does, in the same medium, and is hard to remove where that is technically feasible. Evidently fictional content, parody and text-only content are exempt. The Attorney General or a district attorney enforces it, with a civil fine of up to USD 3,000 plus attorney fees. This is not legal advice.',
   },
   {
     q: 'Do AI ads have to be labeled on Facebook?',
@@ -106,7 +106,7 @@ export default function Page() {
           New York requires a conspicuous disclosure when an ad shows a synthetic performer, a generated person (General
           Business Law 396-b, in force since June 9, 2026). Pennsylvania&apos;s Act 99 of 2026 requires a clear statement
           that the ad contains AI-generated or AI-modified content when that content could create a false impression about
-          the product, from 60 days after its October 22, 2026 approval. Meta, Google and TikTok add their own labels, and
+          the product, from December 21, 2026, 60 days after its October 22 approval. Meta, Google and TikTok add their own labels, and
           the FTC bans misleading ads and fake testimonials whether or not they are labeled.
         </p>
       </GuideAnswer>
@@ -176,7 +176,8 @@ export default function Page() {
 
       <GuideSection id="pennsylvania" eyebrow="Pennsylvania" title="Pennsylvania's AI Deceptive Advertising Act (Act 99)">
         <p>
-          <a href={PA_ACT}>SB 806</a> was approved on October 22, 2026 as Act 99 of 2026 and takes effect 60 days later.
+          <a href={PA_ACT}>SB 806</a> was approved on October 22, 2026 as Act 99 of 2026 and takes effect 60 days later, on December 21, 2026. We found no Attorney
+          General guidance on how it will be enforced as of November 21, 2026.
           From the <a href={PA_TEXT}>enacted text (Printer&apos;s No. 1808)</a>, read November 14, 2026:
         </p>
         <ul>
