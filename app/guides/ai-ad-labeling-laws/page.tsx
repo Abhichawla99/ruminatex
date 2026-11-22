@@ -20,11 +20,17 @@ const price = priceLine('commercial')
 const PAGE = {
   path: '/guides/ai-ad-labeling-laws',
   title: 'AI Ad Labeling Laws in the US',
-  description: `Do AI ads have to be labeled in the US? No federal law requires it, but New York requires a disclosure when an ad shows a synthetic performer, Pennsylvania's Act 99 requires one when AI content could mislead about the product, and Meta, Google and TikTok have their own rules. ${studio} makes AI commercials and sets the label in the edit.`,
+  description: `Are AI ads legal in the US? Yes, if the claims are true, no generated person poses as a customer and the ad carries the AI label a state or platform requires. No federal law requires it, but New York requires a disclosure when an ad shows a synthetic performer, Pennsylvania's Act 99 requires one when AI content could mislead about the product, and Meta, Google and TikTok have their own rules. ${studio} makes AI commercials and sets the label in the edit.`,
   published: '2026-11-14',
-  updated: '2026-11-21',
+  updated: '2026-11-23',
   keywords: [
     'do ai ads have to be labeled',
+    'do ads have to say if they use ai',
+    'are ai ads legal',
+    'are ai commercials legal',
+    'do commercials have to disclose ai',
+    'are adverts allowed to use ai',
+    'are ai ads illegal',
     'do ai ads have to be labeled in the us',
     'do ads have to disclose ai',
     'ny synthetic performer law',
@@ -50,11 +56,15 @@ const EU_ART50 = 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50'
 
 const FAQS = [
   {
+    q: 'Are AI ads legal?',
+    a: `Yes. We found no US law that bans an ad because its pictures or voice were generated with AI (checked November 2026). An AI ad has to meet the same rules as any other ad, plus a few of its own: every claim has to be true and the product has to look and work as shown; a generated person may present or act but may not pose as a real customer, because the FTC's reviews rule (16 CFR 465.2) bans testimonials that misrepresent that the reviewer exists or used the product; a real person's face or voice needs their permission; and the ad carries an AI disclosure where New York, Pennsylvania or the platform requires one. ${studio}, an AI film studio that makes commercials for US brands, builds those checks into the script, boards and edit. This is not legal advice.`,
+  },
+  {
     q: 'Do AI ads have to be labeled in the US?',
     a: `Sometimes. No federal law requires a label on an AI-generated commercial ad (checked November 2026); the FTC polices deception instead. Two states have label laws: New York's General Business Law 396-b, in force since June 9, 2026, requires a conspicuous disclosure when an ad shows a synthetic performer (a generated person), and Pennsylvania's Act 99 of 2026, in force 60 days after its October 22, 2026 approval, requires a clear "made with AI" disclosure when AI content in an ad could create a false impression about the product. Meta, Google and TikTok add their own labels. ${studio}, an AI film studio that makes commercials for US brands, sets the disclosure in the edit. This is not legal advice.`,
   },
   {
-    q: 'Do ads have to disclose AI?',
+    q: 'Do ads have to say if they use AI?',
     a: `Only in some cases, and the trigger is what the AI shows, not the fact that AI was used. In the US, a generated person in an ad that runs in New York needs a disclosure; AI content that could mislead about what is sold needs one in Pennsylvania; an AI script, an AI-written caption or a clearly animated world usually needs none. Whatever the label says, the FTC still bans an ad that misleads, and its reviews rule (16 CFR 465.2) bans testimonials from people who do not exist, labeled or not. This is not legal advice.`,
   },
   {
@@ -120,7 +130,45 @@ export default function Page() {
         </p>
       </GuideStudio>
 
-      <GuideSection id="federal" eyebrow="Federal" title="Is there a federal AI label law for ads?">
+      <GuideSection id="legal" eyebrow="The short answer" title="Are AI ads legal?">
+        <p>
+          Yes. A US ad is not illegal because its footage, people or voice were generated; we found no federal or state
+          law that bans AI in commercials (checked November 23, 2026). An AI ad has to meet the rules every ad meets, and
+          five of them matter more when the pictures are generated:
+        </p>
+        <ol>
+          <li>
+            <strong>The claims are true.</strong> A generated shot of the product doing something it cannot do is a
+            false claim, however it was made.
+          </li>
+          <li>
+            <strong>No generated person poses as a customer.</strong> The FTC&apos;s{' '}
+            <a href={FTC_465}>rule on consumer reviews and testimonials (16 CFR 465.2)</a> makes it a violation to create a
+            testimonial that misrepresents that the testimonialist exists or used the product. A generated presenter is
+            legal; a generated &quot;customer&quot; describing their results is not, labeled or not.
+          </li>
+          <li>
+            <strong>Real people only with their permission.</strong> A recognizable person&apos;s face or voice needs
+            their consent and a contract. A character generated from scratch
+            copies nobody.
+          </li>
+          <li>
+            <strong>The label where one is required.</strong> New York and Pennsylvania, below, and the platform rules
+            further down.
+          </li>
+          <li>
+            <strong>Rights you can use.</strong> The terms of the AI models used allow commercial use, and the footage
+            copies nobody&apos;s work or trademark. Who owns the result is covered in{' '}
+            <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
+          </li>
+        </ol>
+        <p>
+          The same answer covers &quot;are AI commercials legal&quot; for TV and streaming, and a prescription drug ad
+          made with AI still needs FDA&apos;s major statement and fair balance. This is not legal advice.
+        </p>
+      </GuideSection>
+
+      <GuideSection id="federal" eyebrow="Federal" title="Is there a federal AI label law for ads?" alt>
         <p>
           Not for commercial ads, as of November 2026. The Federal Trade Commission has no rule that requires a label on
           AI footage. It polices what the ad claims and who it says is speaking, and two of its rules decide most AI
@@ -144,7 +192,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="new-york" eyebrow="New York" title="New York's synthetic performer law (GBL 396-b)" alt>
+      <GuideSection id="new-york" eyebrow="New York" title="New York's synthetic performer law (GBL 396-b)">
         <p>
           <a href={NY_LAW}>Section 396-b of the General Business Law</a> took effect on June 9, 2026 (<a href={NY_AP}>AP</a>).
           Read November 14, 2026:
@@ -174,10 +222,10 @@ export default function Page() {
         </ul>
       </GuideSection>
 
-      <GuideSection id="pennsylvania" eyebrow="Pennsylvania" title="Pennsylvania's AI Deceptive Advertising Act (Act 99)">
+      <GuideSection id="pennsylvania" eyebrow="Pennsylvania" title="Pennsylvania's AI Deceptive Advertising Act (Act 99)" alt>
         <p>
           <a href={PA_ACT}>SB 806</a> was approved on October 22, 2026 as Act 99 of 2026 and takes effect 60 days later, on December 21, 2026. We found no Attorney
-          General guidance on how it will be enforced as of November 21, 2026.
+          General guidance on how it will be enforced as of November 23, 2026.
           From the <a href={PA_TEXT}>enacted text (Printer&apos;s No. 1808)</a>, read November 14, 2026:
         </p>
         <ul>
@@ -212,7 +260,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="platforms" eyebrow="Platforms" title="Meta, Google and TikTok labels" alt>
+      <GuideSection id="platforms" eyebrow="Platforms" title="Meta, Google and TikTok labels">
         <ul>
           <li>
             <strong>Meta (Facebook, Instagram).</strong> <a href={META_ADS}>Meta labels ad images</a> created or
@@ -238,7 +286,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="checklist" eyebrow="By shot" title="Does my ad need an AI label? A shot-by-shot table">
+      <GuideSection id="checklist" eyebrow="By shot" title="Does my ad need an AI label? A shot-by-shot table" alt>
         <GuideTable
           caption="From the New York and Pennsylvania statute texts, the FTC rules and platform pages linked on this page, read November 14, 2026. Not legal advice."
           head={['What the AI made', 'New York (GBL 396-b)', 'Pennsylvania (Act 99)', 'FTC']}
@@ -254,7 +302,7 @@ export default function Page() {
         />
       </GuideSection>
 
-      <GuideSection id="how" eyebrow="In the edit" title={`How ${studio} places the label in a film`} alt>
+      <GuideSection id="how" eyebrow="In the edit" title={`How ${studio} places the label in a film`}>
         <p>
           {PRODUCTION.summary} So every {studio} commercial with a person on screen shows a synthetic performer, and the
           question is only where the ad runs. The label is handled like the legal line in any ad:
@@ -287,7 +335,7 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection id="eu" eyebrow="Outside the US" title="If the campaign also runs in the EU">
+      <GuideSection id="eu" eyebrow="Outside the US" title="If the campaign also runs in the EU" alt>
         <p>
           <a href={EU_ART50}>Article 50(4) of the EU AI Act</a> requires anyone deploying AI to make deepfake video, audio
           or images to disclose that the content was artificially generated or manipulated, with a lighter duty for

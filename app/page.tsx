@@ -369,7 +369,7 @@ export default function HomePage() {
               </p>
               <p className="text-[#666666] text-sm leading-relaxed">
                 Founded in {SITE.foundingYear} by <Link href="/about" className="text-white hover:text-[#ebff00]">{FOUNDER.name}</Link>.
-                Based in {SITE.city}, making films for brands across the United States and Canada.
+                Based in {SITE.city}, making films for brands across <Link href="/markets/ai-video-production-usa" className="text-white hover:text-[#ebff00]">the United States</Link> and Canada.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
@@ -408,7 +408,7 @@ export default function HomePage() {
                 <ul className="space-y-2 text-[#888888]">
                   <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Type: AI film studio</li>
                   <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Location: Calgary, Alberta</li>
-                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Serves: brands anywhere</li>
+                  <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Serves: <Link href="/markets/ai-video-production-usa" className="hover:text-[#ebff00]">brands in the United States</Link> and Canada</li>
                   <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Pricing: {PRICES.find((p) => p.offer === 'brand-film') ? `brand films and commercials from ${PRICES.find((p) => p.offer === 'brand-film')!.from}` : 'quoted from the brief'}</li>
                   <li className="flex items-start gap-2"><span className="text-[#ebff00] mt-0.5">·</span> Founded: {SITE.foundingYear}</li>
                 </ul>

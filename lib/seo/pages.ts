@@ -37,10 +37,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/ai-commercial-production',
     title: 'AI Commercial Production Company for Brands',
-    question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech, AI infrastructure and e-commerce brands, and AI VFX vs a fully generated ad',
+    question: 'ai commercial production company: what one is, how to hire a company to make an AI commercial, how Ruminate X makes one, what it delivers and costs, AI commercials for fitness, tech, AI infrastructure and e-commerce brands, AI commercial production for New York and other US brands, and AI VFX vs a fully generated ad',
     kind: 'service',
     published: '2026-03-07',
-    updated: '2026-11-14',
+    updated: '2026-11-23',
   },
   {
     path: '/blog/how-much-does-ai-video-production-cost',
@@ -325,10 +325,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-ad-labeling-laws',
     title: 'AI Ad Labeling Laws in the US',
-    question: 'do AI ads have to be labeled in the US: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
+    question: 'are AI ads legal, and do ads have to say if they use AI: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
     kind: 'guide',
     published: '2026-11-14',
-    updated: '2026-11-21',
+    updated: '2026-11-23',
   },
   {
     path: '/ai-video-production-ecommerce',
