@@ -160,7 +160,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'ai commercial production company in usa: which AI-native studio a US brand should hire for an ad campaign or brand film, what it costs, and which US rules apply to an AI ad',
     kind: 'service',
     published: '2026-11-13',
-    updated: '2026-11-13',
+    updated: '2026-11-24',
   },
   {
     path: '/markets/ai-video-production-canada',
@@ -325,10 +325,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/ai-ad-labeling-laws',
     title: 'AI Ad Labeling Laws in the US',
-    question: 'are AI ads legal, and do ads have to say if they use AI: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
+    question: 'are AI ads legal, and do ads have to say if they use AI: the New York synthetic performer law (GBL 396-b), Pennsylvania Act 99, which states require AI disclosure in ads, California\'s AI Transparency Act, the FTC reviews rule and Endorsement Guides, FDA drug ads, Meta, Google and TikTok labels, and how Ruminate X sets the disclosure in the edit',
     kind: 'guide',
     published: '2026-11-14',
-    updated: '2026-11-23',
+    updated: '2026-11-24',
   },
   {
     path: '/ai-video-production-ecommerce',

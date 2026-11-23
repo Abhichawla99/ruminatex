@@ -22,7 +22,7 @@ const PAGE = {
   title: 'AI Ad Labeling Laws in the US',
   description: `Are AI ads legal in the US? Yes, if the claims are true, no generated person poses as a customer and the ad carries the AI label a state or platform requires. No federal law requires it, but New York requires a disclosure when an ad shows a synthetic performer, Pennsylvania's Act 99 requires one when AI content could mislead about the product, and Meta, Google and TikTok have their own rules. ${studio} makes AI commercials and sets the label in the edit.`,
   published: '2026-11-14',
-  updated: '2026-11-23',
+  updated: '2026-11-24',
   keywords: [
     'do ai ads have to be labeled',
     'do ads have to say if they use ai',
@@ -38,6 +38,9 @@ const PAGE = {
     'n.y. gen bus law 396-b',
     'do ai ads have to be labeled on facebook',
     'is it legal to use ai in commercials',
+    'which states require ai disclosure in ads',
+    'does california require ai labels on ads',
+    'california ai transparency act',
   ],
 }
 
@@ -53,6 +56,7 @@ const META_ADS = 'https://www.meta.com/help/artificial-intelligence/355108217670
 const TIKTOK = 'https://www.tiktok.com/community-guidelines/en/integrity-authenticity'
 const FDA_PLAIN = 'https://www.govinfo.gov/content/pkg/FR-2023-11-21/pdf/2023-25428.pdf'
 const EU_ART50 = 'https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50'
+const CA_AITA = 'https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=BPC&division=8.&title=&part=&chapter=25.&article='
 
 const FAQS = [
   {
@@ -74,6 +78,14 @@ const FAQS = [
   {
     q: 'Does Pennsylvania require AI labels on ads?',
     a: 'Yes, from December 21, 2026, 60 days after its October 22, 2026 approval. Act 99 of 2026, the Artificial Intelligence Deceptive Advertising Act, says an advertiser may not run an ad that uses AI-generated or significantly AI-modified images, video, audio or text in a way that creates a false impression about the nature, origin or authenticity of what is sold, without a clear and conspicuous statement that the ad contains content modified or generated using AI. The statement appears the first time the synthetic content does, in the same medium, and is hard to remove where that is technically feasible. Evidently fictional content, parody and text-only content are exempt. The Attorney General or a district attorney enforces it, with a civil fine of up to USD 3,000 plus attorney fees. This is not legal advice.',
+  },
+  {
+    q: 'Which states require AI disclosure in ads?',
+    a: 'Two, as of November 24, 2026. New York requires a conspicuous disclosure when a commercial ad shows a synthetic performer (General Business Law 396-b, in force since June 9, 2026). Pennsylvania requires a clear "made with AI" statement when AI content in an ad could create a false impression about the product (Act 99 of 2026, from December 21, 2026). California\'s AI Transparency Act is often listed with them, but it puts its duties on the companies that make AI models and on large online platforms, not on advertisers: from January 1, 2027, platforms with more than 2 million monthly users must show users the provenance data embedded in AI-generated content. Political ads fall under separate state laws. This is not legal advice.',
+  },
+  {
+    q: 'Does California require AI labels on ads?',
+    a: 'Not on the advertiser, as of November 24, 2026. California\'s AI Transparency Act (Business and Professions Code 22757 and after) requires a company whose generative AI system is publicly available in California to embed a latent disclosure (the provider, the system and its version) in the images, video and audio the system makes, and to offer a free tool that detects it. From January 1, 2027, a large online platform (a social network, file-sharing site, messaging platform or search engine with more than 2 million monthly users) must detect that provenance data and show users whether the content was generated or substantially altered by AI and by which system. So an AI ad may show a provenance notice on a large platform even when the ad itself carries no label. The Attorney General, a city attorney or a county counsel enforces it against the companies it covers. This is not legal advice.',
   },
   {
     q: 'Do AI ads have to be labeled on Facebook?',
@@ -116,7 +128,8 @@ export default function Page() {
           New York requires a conspicuous disclosure when an ad shows a synthetic performer, a generated person (General
           Business Law 396-b, in force since June 9, 2026). Pennsylvania&apos;s Act 99 of 2026 requires a clear statement
           that the ad contains AI-generated or AI-modified content when that content could create a false impression about
-          the product, from December 21, 2026, 60 days after its October 22 approval. Meta, Google and TikTok add their own labels, and
+          the product, from December 21, 2026, 60 days after its October 22 approval. California&apos;s AI Transparency Act
+          puts its duties on AI model makers and, from January 1, 2027, on large platforms, not on advertisers. Meta, Google and TikTok add their own labels, and
           the FTC bans misleading ads and fake testimonials whether or not they are labeled.
         </p>
       </GuideAnswer>
@@ -257,6 +270,43 @@ export default function Page() {
           The act turns on whether the AI content could mislead about what is sold. A generated shot of a real product
           doing something it cannot do is the case it was written for. Whether a generated backdrop behind a real product
           counts is a judgment for your counsel.
+        </p>
+      </GuideSection>
+
+      <GuideSection id="california" eyebrow="California" title="California's AI Transparency Act: provenance data, not an ad label">
+        <p>
+          California comes up in every search about AI labels, so here is what its law does. The{' '}
+          <a href={CA_AITA}>California AI Transparency Act</a> (Business and Professions Code 22757 to 22757.6, as amended
+          by AB 853 in 2025 and SB 1000, effective September 30, 2026; read November 24, 2026) does not require a brand
+          to put a label in its ad. It works one layer down, on the files:
+        </p>
+        <ul>
+          <li>
+            <strong>AI model makers.</strong> A covered provider, a company whose generative AI system is publicly
+            available in California, must embed a latent disclosure in the image, video and audio its system creates or
+            alters: the provider&apos;s name, the system&apos;s name and version, and when the content was made. It must
+            also offer a free tool that checks content for that data.
+          </li>
+          <li>
+            <strong>Large online platforms, from January 1, 2027.</strong> A social media, file-sharing or messaging
+            platform or a search engine with more than 2 million unique monthly users must detect provenance data that
+            meets a widely adopted standard and give users an interface that shows whether the content was generated or
+            substantially altered by AI and the name of the system that made it.
+          </li>
+          <li>
+            <strong>Capture devices, from January 1, 2028.</strong> Cameras and phones sold in California get duties of
+            their own.
+          </li>
+          <li>
+            <strong>Penalty.</strong> USD 5,000 per violation, collected by the Attorney General, a city attorney or a
+            county counsel from the companies the act covers.
+          </li>
+        </ul>
+        <p>
+          For an advertiser the practical effect starts in 2027: an ad cut from AI-generated footage may reach California
+          viewers on a large platform with a notice that AI made it, whatever the ad itself says. That is one more reason
+          to put your own disclosure in the ad, worded the way your counsel wants, rather than leave the platform to word
+          it. California&apos;s separate rules for election ads are outside this guide. This is not legal advice.
         </p>
       </GuideSection>
 
