@@ -409,7 +409,9 @@ export default function Page() {
           <strong>Pharmacies, labs and clinics</strong> advertising their own services answer to other regulators, such
           as US state boards of pharmacy and the colleges that regulate health professions in Canada. Ask yours. Which
           rules reach a pharmacy&apos;s own ad, and the Washington, DC pharmacy that apologized for its AI imagery in 2026,
-          are on <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>.
+          are on <Link href="/guides/ai-pharma-commercials">AI pharma commercials</Link>. What a pharmacy commercial costs
+          to make, with a recent pharmacy film&apos;s price, is on{' '}
+          <Link href="/guides/pharmaceutical-commercial-cost#pharmacy">pharmacy advertising costs</Link>.
         </p>
         <p>
           All sources checked September 2026. This is not legal or regulatory advice. Your MLR team and counsel decide

@@ -282,7 +282,7 @@ export default function Page() {
           non-AI marketing materials&rdquo; (quoted by <a href={POPVILLE_GRUBBS}>PoPville</a>, October 6, 2026). The
           apology was for using AI to make the pictures, not for any health claim in them.
         </p>
-        <h3>Which rules apply to a pharmacy&apos;s ad</h3>
+        <h3 id="pharmacy-rules">Which rules apply to a pharmacy&apos;s ad</h3>
         <p>
           A pharmacy advertising its own services (vaccinations, delivery, compounding, a tea lab) is not running a
           prescription drug ad, so the FDA rules below do not decide it. The FTC has primary responsibility for claims in
@@ -293,7 +293,8 @@ export default function Page() {
           <a href={HAWAII_PHARMACY}>Haw. Code R. 16-95-102</a>). Neither mentions AI. If the ad shows a generated
           pharmacist or customer as if they were real staff or patients, the FTC rule against misleading endorsements
           applies the same way it does to a drug maker. Read in October 2026; not legal advice, and your counsel and state
-          board decide.
+          board decide. What a pharmacy commercial costs to make, and what a prescription price ad may say, is on{' '}
+          <Link href="/guides/pharmaceutical-commercial-cost#pharmacy">pharmacy advertising costs</Link>.
         </p>
       </GuideSection>
 

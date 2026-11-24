@@ -317,10 +317,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/guides/pharmaceutical-commercial-cost',
     title: 'Pharmaceutical Commercial Cost in 2026',
-    question: 'how much does a pharmaceutical commercial cost to make, what MLR review, the FDA major statement and channel versions add, how much actors in medical commercials make, and what Ruminate X charges for an AI pharma commercial',
+    question: 'how much does a pharmaceutical commercial cost to make, what MLR review, the FDA major statement and channel versions add, how much actors in medical commercials make, how much pharmacy advertising costs and what a pharmacy price ad may say, and what Ruminate X charges for an AI pharma or pharmacy commercial',
     kind: 'guide',
     published: '2026-11-13',
-    updated: '2026-11-13',
+    updated: '2026-11-25',
   },
   {
     path: '/guides/ai-ad-labeling-laws',
