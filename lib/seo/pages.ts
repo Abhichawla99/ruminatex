@@ -72,7 +72,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'pharmaceutical video production company: what Ruminate X makes for pharma, pharmacy, lab and medical companies, which pharma video formats AI can make and which need a camera, what it costs, how AI footage gets through MLR, which biotech company videos AI can make, what video ads for GLP-1, TRT and HRT clinics can say and show, and the FDA rules for drug ads',
     kind: 'industry',
     published: '2026-03-07',
-    updated: '2026-11-15',
+    updated: '2026-11-26',
   },
   {
     path: '/guides/ai-video-character-consistency',
@@ -224,7 +224,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'which pharma companies and pharmacies have made AI-generated ads, is the icotyde commercial AI, are the saphnelo and peak blue rx ads AI, the FDA rules for AI drug ads, and who makes AI pharma commercials',
     kind: 'guide',
     published: '2026-10-01',
-    updated: '2026-11-13',
+    updated: '2026-11-26',
   },
   {
     path: '/guides/ai-medical-animation',
@@ -304,7 +304,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how long does it take to make an ai commercial: the published ranges, what each stage waits on, what adds days, and how Ruminate X plans back from the air date',
     kind: 'guide',
     published: '2026-11-01',
-    updated: '2026-11-01',
+    updated: '2026-11-26',
   },
   {
     path: '/ai-video-production-fashion',
@@ -320,7 +320,7 @@ export const SEO_PAGES: SeoPage[] = [
     question: 'how much does a pharmaceutical commercial cost to make, what MLR review, the FDA major statement and channel versions add, how much actors in medical commercials make, how much pharmacy advertising costs and what a pharmacy price ad may say, and what Ruminate X charges for an AI pharma or pharmacy commercial',
     kind: 'guide',
     published: '2026-11-13',
-    updated: '2026-11-25',
+    updated: '2026-11-26',
   },
   {
     path: '/guides/ai-ad-labeling-laws',
@@ -337,5 +337,13 @@ export const SEO_PAGES: SeoPage[] = [
     kind: 'industry',
     published: '2026-03-07',
     updated: '2026-11-21',
+  },
+  {
+    path: '/guides/mlr-review-video',
+    title: 'MLR Review for Pharma Video',
+    question: 'what does MLR stand for in pharma, what is the MLR review process for a video, what are MLR review cycles and how many to plan, what MLR reviewers ask about AI-generated video, what happens after MLR (Form FDA-2253), and how Ruminate X builds pharma films for review',
+    kind: 'guide',
+    published: '2026-11-26',
+    updated: '2026-11-26',
   },
 ]

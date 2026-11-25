@@ -59,7 +59,7 @@ const PAGE = {
   title: 'Pharmaceutical Video Production with AI',
   description: `Pharmaceutical video production from ${studio}, an AI film studio: ${healthOffers} for ${healthBuyers} across the ${markets}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Which pharma video formats AI can make, what they cost, biotech and clinic videos, and the FDA rules.`,
   published: '2026-03-07',
-  updated: '2026-11-15',
+  updated: '2026-11-26',
   keywords: [
     'pharmaceutical video production company',
     'pharmaceutical video production',
@@ -384,7 +384,8 @@ export default function Page() {
         </ol>
         <p>
           {priceLine('commercial')}, and the quote counts the MLR rounds your calendar needs, because each round is a new
-          cut. Ownership and licensing clauses for a commissioned AI film are in{' '}
+          cut. What MLR stands for, what reviewers see at each stage of a video and what a review cycle is are on{' '}
+          <Link href="/guides/mlr-review-video">MLR review for pharma video</Link>. Ownership and licensing clauses for a commissioned AI film are in{' '}
           <Link href="/guides/who-owns-ai-video">who owns an AI video</Link>.
         </p>
       </GuideSection>

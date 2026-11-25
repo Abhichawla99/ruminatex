@@ -22,7 +22,7 @@ const PAGE = {
   description:
     'How much a pharmaceutical commercial costs to make: what MLR review, the FDA major statement, risk-section shots, the exact pack and channel versions add to a drug ad, what pharmacy advertising costs, and what Ruminate X charges for an AI pharma or pharmacy commercial.',
   published: '2026-11-13',
-  updated: '2026-11-25',
+  updated: '2026-11-26',
   keywords: [
     'how much does a pharmaceutical commercial cost',
     'how much does it cost to make a pharma commercial',
@@ -205,7 +205,8 @@ export default function Page() {
         <p>
           {PRODUCTION.summary} There is no crew, cast, location or set on the invoice. Script, boards, edit, music, sound,
           grade and the review rounds are, because a drug ad needs them however the pictures are made. Turnaround is set
-          with you at the brief around your MLR calendar.
+          with you at the brief around your MLR calendar. What reviewers see and approve in each round, stage by stage, is
+          on <Link href="/guides/mlr-review-video">MLR review for pharma video</Link>.
         </p>
       </GuideSection>
 

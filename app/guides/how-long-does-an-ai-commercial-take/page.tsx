@@ -21,7 +21,7 @@ const PAGE = {
   title: 'How Long Does an AI Commercial Take?',
   description: `AI studios that publish timelines quote a few days to a week for a spot of up to 30 seconds and one to three weeks for a full commercial (checked November 2026). What each stage waits on, the approvals that set the date, what adds days, and how ${SITE.name} plans an AI commercial back from the day it airs.`,
   published: '2026-11-01',
-  updated: '2026-11-01',
+  updated: '2026-11-26',
   keywords: [
     'how long does it take to make an ai commercial',
     'how long does an ai commercial take',
@@ -181,7 +181,8 @@ export default function Page() {
           </li>
           <li>
             <strong>Review rounds nobody planned.</strong> Legal, medical and MLR review are the longest waits in a
-            regulated ad. Put them in the brief so each round is in the schedule.
+            regulated ad. Put them in the brief so each round is in the schedule. What MLR reviewers see at each stage
+            of a video, and what a review cycle is, is on <Link href="/guides/mlr-review-video">MLR review for pharma video</Link>.
           </li>
           <li>
             <strong>A product that must match its pack in many shots.</strong> Close-ups of a label or device take the most

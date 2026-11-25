@@ -23,7 +23,7 @@ const PAGE = {
   title: 'AI Pharma Commercials: Who Has Made Them',
   description: `Johnson & Johnson has not said its Icotyde commercial is AI, and as of November 2026 no one has confirmed the Saphnelo or Peak Blue Rx ads are AI either. The confirmed AI pharma ads are AstraZeneca's Breztri llama and Gilead Canada's Descovy bear and otter, and Grubb's Pharmacy apologized for AI imagery in its marketing. Plus the FDA rules for AI drug ads, who may appear in one, and how ${SITE.name} makes AI commercials for pharma and pharmacy brands.`,
   published: '2026-10-01',
-  updated: '2026-11-13',
+  updated: '2026-11-26',
   keywords: [
     'icotyde commercial ai',
     'is the icotyde commercial ai',
@@ -424,7 +424,8 @@ export default function Page() {
           voiceover, the exact pack and the review rounds all stay, so an AI drug ad costs the same to review as a filmed
           one. {priceLine('commercial')}, and the number of MLR rounds is one of the things that sets the price. What
           each of those lines adds to a drug ad, and why airtime is the bigger budget, is on{' '}
-          <Link href="/guides/pharmaceutical-commercial-cost">pharmaceutical commercial cost</Link>.
+          <Link href="/guides/pharmaceutical-commercial-cost">pharmaceutical commercial cost</Link>. The MLR review
+          process for a video, stage by stage, and how many review cycles to plan for are on <Link href="/guides/mlr-review-video">MLR review for pharma video</Link>.
         </p>
         <GuideFilm
           id={trail.youtubeId}
