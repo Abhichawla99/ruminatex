@@ -22,7 +22,7 @@ const PAGE = {
   description:
     'How much a pharmaceutical commercial costs to make: what MLR review, the FDA major statement, risk-section shots, the exact pack and channel versions add to a drug ad, what pharmacy advertising costs, and what Ruminate X charges for an AI pharma or pharmacy commercial.',
   published: '2026-11-13',
-  updated: '2026-11-26',
+  updated: '2026-11-27',
   keywords: [
     'how much does a pharmaceutical commercial cost',
     'how much does it cost to make a pharma commercial',
@@ -199,7 +199,10 @@ export default function Page() {
           <li>Length, and how many scenes and settings the story needs.</li>
           <li>How exactly the pack, pen, inhaler or device has to appear, and in how many shots.</li>
           <li>How many MLR rounds your team runs, and how much each round tends to change.</li>
-          <li>How long the risk section is, and how many versions need their own.</li>
+          <li>
+            How long the risk section is, and how many versions need their own (what the major statement must do in each
+            cut is on <Link href="/guides/isi-pharma-video-ads">ISI in pharma video ads</Link>).
+          </li>
           <li>The cutdowns and aspect ratios the media plan buys.</li>
         </ol>
         <p>

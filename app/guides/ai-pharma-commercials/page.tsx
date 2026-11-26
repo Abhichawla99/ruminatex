@@ -23,7 +23,7 @@ const PAGE = {
   title: 'AI Pharma Commercials: Who Has Made Them',
   description: `Johnson & Johnson has not said its Icotyde commercial is AI, and as of November 2026 no one has confirmed the Saphnelo or Peak Blue Rx ads are AI either. The confirmed AI pharma ads are AstraZeneca's Breztri llama and Gilead Canada's Descovy bear and otter, and Grubb's Pharmacy apologized for AI imagery in its marketing. Plus the FDA rules for AI drug ads, who may appear in one, and how ${SITE.name} makes AI commercials for pharma and pharmacy brands.`,
   published: '2026-10-01',
-  updated: '2026-11-26',
+  updated: '2026-11-27',
   keywords: [
     'icotyde commercial ai',
     'is the icotyde commercial ai',
@@ -309,7 +309,9 @@ export default function Page() {
             drug must state its major side effects and contraindications. Since the 2023 final rule (
             <a href={CCN_RULE}>88 FR 80958</a>, compliance date November 20, 2024), that statement must use
             consumer-friendly language, run as audio and on-screen text at the same time, be easy to read, and carry no
-            audio or visual elements &ldquo;likely to interfere with comprehension&rdquo;.
+            audio or visual elements &ldquo;likely to interfere with comprehension&rdquo;. Each condition, and what it
+            means for a 60, 30 and 15-second cut, is on <Link href="/guides/isi-pharma-video-ads">ISI in pharma video
+            ads</Link>.
           </li>
           <li>
             <strong>Distracting visuals.</strong> On September 9, 2025 FDA posted untitled letters over TV ads, including{' '}

@@ -20,7 +20,7 @@ const PAGE = {
   description:
     'What MLR stands for in pharma, the MLR review process for a video stage by stage, what an MLR review cycle is and how many to plan, what reviewers ask about AI-generated footage, and how Ruminate X builds pharma films so every claim gets through review.',
   published: '2026-11-26',
-  updated: '2026-11-26',
+  updated: '2026-11-27',
   keywords: [
     'mlr review process',
     'what is the mlr review process',
@@ -179,7 +179,9 @@ export default function Page() {
           the major statement of side effects and contraindications in a clear, conspicuous and neutral way: spoken, shown
           as text at the same time, readable, and with no sound or picture likely to interfere with it (
           <a href={CFR_202}>21 CFR 202.1(e)(1)(ii)</a>, checked November 2026). In an AI film that means calm, boarded shots
-          under the risk section, which is why reviewers see that section at the storyboard stage.
+          under the risk section, which is why reviewers see that section at the storyboard stage. The five conditions
+          for the major statement, and how they play out in each cutdown, are on{' '}
+          <Link href="/guides/isi-pharma-video-ads">ISI in pharma video ads</Link>.
         </p>
       </GuideSection>
 

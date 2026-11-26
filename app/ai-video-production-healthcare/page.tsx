@@ -59,7 +59,7 @@ const PAGE = {
   title: 'Pharmaceutical Video Production with AI',
   description: `Pharmaceutical video production from ${studio}, an AI film studio: ${healthOffers} for ${healthBuyers} across the ${markets}. Every frame is generated with AI, and every claim, the ISI and the fair-balance text are set in the edit from MLR-approved copy. Which pharma video formats AI can make, what they cost, biotech and clinic videos, and the FDA rules.`,
   published: '2026-03-07',
-  updated: '2026-11-26',
+  updated: '2026-11-27',
   keywords: [
     'pharmaceutical video production company',
     'pharmaceutical video production',
@@ -69,7 +69,6 @@ const PAGE = {
     'ai video for pharma marketing',
     'ai video production healthcare',
     'fda rules for prescription drug tv ads',
-    'isi in pharma video ads',
     'can i use ai to make a marketing video',
     'medical ai video',
     'ai doctor video',
@@ -136,8 +135,8 @@ const FAQS = [
     a: 'A consumer TV or video ad for a prescription drug must state the major side effects and contraindications (the major statement) and keep a fair balance between benefit and risk information (21 CFR 202.1). Since November 20, 2024 the major statement must be in plain language, spoken and shown as on-screen text at the same time, easy to read, and free of sounds or visuals likely to interfere with understanding it. The rules apply the same way to AI-generated footage. This is not legal or regulatory advice.',
   },
   {
-    q: 'What does "ISI" mean in pharma?',
-    a: `ISI stands for Important Safety Information, the industry name for the block of risk information that runs with a drug ad or sits below it on a web page. FDA regulations do not use the term; they require a major statement of side effects and contraindications in broadcast ads and a brief summary of risks, and FDA's 2009 draft guidance on presenting risk information explains how to show it without distraction. In a ${studio} film, the ISI is typeset in the edit from MLR-approved copy.`,
+    q: 'How does an AI pharma video handle the ISI?',
+    a: `In a ${studio} film the important safety information (ISI) and the major statement are approved by your MLR team before anything is generated, typeset in the edit from that copy (never drawn by the generator), and run over calm, boarded shots so nothing on screen competes with them. Every cutdown and aspect ratio keeps its own risk section. ${studio} is an AI film studio in ${city} that makes pharma, pharmacy, lab and medical films across the United States and Canada. This is not legal or regulatory advice.`,
   },
   {
     q: 'Are pharmaceutical commercials going to be banned?',
@@ -420,29 +419,17 @@ export default function Page() {
         </p>
       </GuideSection>
 
-      <GuideSection eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads" alt>
+      <GuideSection id="fda-rules" eyebrow="ISI and fair balance" title="FDA rules for prescription drug TV and video ads" alt>
         <p>
-          A video ad for a prescription drug carries three things the creative has to make room for, whether the pictures
-          are filmed or generated:
+          A consumer TV ad that names a prescription drug and what it treats must carry a major statement of its main
+          side effects and contraindications, spoken and shown as on-screen text at the same time, readable, and with no
+          sound or picture likely to interfere with it (<a href={CCN_RULE}>88 FR 80958</a>, compliance date November 20,
+          2024), plus a fair balance of benefit and risk across the whole ad (21 CFR 202.1(e)(5)). FDA&apos;s{' '}
+          <a href={RISK_GUIDANCE}>2009 draft guidance on presenting risk information</a> names &ldquo;busy scenes,
+          frequent scene changes, moving camera angles&rdquo; as things that can pull attention from it. Each of the five
+          conditions, adequate provision, reminder ads and the ISI in every cutdown are explained on{' '}
+          <Link href="/guides/isi-pharma-video-ads">ISI in pharma video ads</Link>.
         </p>
-        <ul>
-          <li>
-            <strong>The major statement.</strong> The major side effects and contraindications, spoken in the ad. Under
-            the 2023 final rule (<a href={CCN_RULE}>88 FR 80958</a>, compliance date November 20, 2024) it must use
-            consumer-friendly language, run as audio and on-screen text at the same time, be easy to read, and have no
-            audio or visual elements likely to interfere with comprehension.
-          </li>
-          <li>
-            <strong>Fair balance.</strong> Risk information has to be weighed fairly against the benefit claims across the
-            whole ad, not only in the major statement (21 CFR 202.1(e)(5)).
-          </li>
-          <li>
-            <strong>The ISI.</strong> Important Safety Information is the industry name for the risk block that runs with
-            or below the ad. FDA&apos;s <a href={RISK_GUIDANCE}>2009 draft guidance on presenting risk information</a>{' '}
-            names &ldquo;busy scenes, frequent scene changes, moving camera angles&rdquo; as things that can pull attention
-            from risk information.
-          </li>
-        </ul>
         <p>
           FDA enforces the distraction standard. On September 9, 2025 it announced about 100 cease-and-desist letters
           and thousands of letters warning drug companies to remove misleading ads (<a href={FDA_SEPT}>FDA</a>), and posted untitled letters over TV
