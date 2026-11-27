@@ -21,10 +21,10 @@ export const SEO_PAGES: SeoPage[] = [
   {
     path: '/how-we-make-an-ai-brand-film',
     title: 'How We Make an AI Brand Film: Brief to Final Cut',
-    question: 'how does Ruminate X make an AI brand film, from brief to final cut',
+    question: 'how to make an AI brand film: the six stages Ruminate X runs from brief to final cut, what you approve at each, where AI footage breaks and how it is fixed, and how video production companies use AI',
     kind: 'guide',
     published: '2026-09-14',
-    updated: '2026-10-28',
+    updated: '2026-11-28',
   },
   {
     path: '/ai-video-production-agencies',
